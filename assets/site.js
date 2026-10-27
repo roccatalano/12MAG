@@ -133,5 +133,13 @@
   }
 
   /* ---------- print ---------- */
-  document.querySelectorAll('[data-print]').forEach(b => b.addEventListener('click', () => window.print()));
+  document.querySelectorAll('[data-print]').forEach(b => b.addEventListener('click', () => {
+    const mode = b.dataset.print;
+    document.querySelectorAll('.sheet').forEach(sh => { if (mode) { sh.classList.toggle('bw', mode === 'bw'); sh.classList.toggle('colour', mode !== 'bw'); } });
+    window.print();
+  }));
+  // preview toggle: hovering/focusing a print button shows that version
+  document.querySelectorAll('[data-print]').forEach(b => ['mouseenter','focus'].forEach(ev => b.addEventListener(ev, () => {
+    document.querySelectorAll('.sheet').forEach(sh => { sh.classList.toggle('bw', b.dataset.print === 'bw'); sh.classList.toggle('colour', b.dataset.print !== 'bw'); });
+  })));
 })();

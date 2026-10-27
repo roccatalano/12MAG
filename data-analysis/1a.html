@@ -7,7 +7,7 @@
 <meta name="description" content="12MAG 1A: categorical (nominal, ordinal) and numerical (discrete, continuous) data, with VCAA exam practice.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/style.css?v=2">
 </head>
 <body>
 <header class="top"><div class="top-in">
@@ -147,8 +147,17 @@
         <div class="after" hidden>
           <div class="verdict"></div>
           <div class="report">
-            <b>Solution.</b> Both variables sort people into groups. <i>Budget preference</i> uses dollar amounts, but its values are the categories “less than $50” and “more than $50”, so it is categorical (in fact ordinal). Answer: <b>A</b>.
-            <span class="src">Teacher solution. VCAA 2024 Exam 1 examiner report not yet added.</span>
+            <b>How students went</b> (VCAA 2024 Exam 1 report, % choosing each option):
+            <div class="dist">
+              <b>A</b><div class="b ans"><i style="width:79%"></i></div><span>79%</span>
+              <b>B</b><div class="b"><i style="width:3%"></i></div><span>3%</span>
+              <b>C</b><div class="b"><i style="width:16%"></i></div><span>16%</span>
+              <b>D</b><div class="b"><i style="width:2%"></i></div><span>2%</span>
+            </div>
+            <b>What the examiners said:</b>
+            <blockquote>“Both payment preference and a budget preference are categorical variables.”</blockquote>
+            <b>Common mistake:</b> 16% chose C. <i>Budget preference</i> mentions dollars, but its values are the groups “less than $50” and “more than $50”, so it is categorical (in fact ordinal), not numerical.
+            <span class="src">VCAA 2024 Exam 1 marking guidelines and sample responses, Question 2</span>
           </div>
           <button class="btn ghost retry" hidden style="margin-top:10px">Try again</button>
         </div>
@@ -171,7 +180,7 @@
           <div class="verdict"></div>
           <div class="report">
             <b>Solution.</b> Aerobic, boxing and circuit are names with no order, so exercise type is nominal. Short, medium and long have a natural order, so recovery time is ordinal. Answer: <b>B</b>.
-            <span class="src">Teacher solution. VCAA 2024 NHT Exam 1 examiner report not yet added.</span>
+            <span class="src">Answer B confirmed by the VCAA 2024 NHT Exam 1 assessment guide (answers only, no % data). Working: teacher solution.</span>
           </div>
           <button class="btn ghost retry" hidden style="margin-top:10px">Try again</button>
         </div>
@@ -287,7 +296,7 @@
           <div class="verdict"></div>
           <div class="report">
             <b>Solution.</b> <i>Type</i> puts each home into a category (apartment or house) and the categories have no natural order, so it is <b>nominal</b>.
-            <span class="src">Teacher solution. VCAA 2025 Exam 2 examiner report not yet added.</span>
+            <span class="src">Answer “Nominal” (1 mark) from the VCAA 2025 Exam 2 assessment guide, Question 1b. Working: teacher solution.</span>
           </div>
         </div>
       </div>
@@ -307,22 +316,22 @@
       <li>Numbers grouped into ordered categories (under 50 years, 50 years or over) are <b>ordinal</b>.</li>
       <li><b>Discrete</b> data is counted. <b>Continuous</b> data is measured.</li>
     </ul>
-    <p>Print the A4 page below for your bound reference. Add your own examples in the notes box.</p>
-    <p><button class="btn" data-print>Print A4 reference sheet</button></p>
+    <p>Print the A4 page below and glue it into your bound reference.</p>
+    <p class="print-btns"><button class="btn" data-print="colour">Print colour version</button> <button class="btn ghost" data-print="bw">Print black &amp; white version</button></p>
 
     <div class="sheet-wrap">
-      <div class="sheet">
+      <div class="sheet colour">
         <div class="sh-head"><h2>1A · Types of data</h2><span>12MAG · Data Analysis · Bound reference</span></div>
         <svg class="tree" viewBox="0 0 620 220" role="img" aria-label="Classification tree">
-          <style>.n{fill:#fff;stroke:#000;stroke-width:1.6}.l{stroke:#000;stroke-width:1.4;fill:none}.t{font:600 15px Inter,Arial,sans-serif;text-anchor:middle}.s{font:12px Inter,Arial,sans-serif;fill:#333;text-anchor:middle}</style>
+          <style>.n{fill:var(--sf1);stroke:var(--sk);stroke-width:1.6}.n2{fill:var(--sf2);stroke:var(--sk);stroke-width:1.6}.l{stroke:var(--sl);stroke-width:1.4;fill:none}.t{font:600 15px Inter,Arial,sans-serif;text-anchor:middle;fill:#000}.s{font:12px Inter,Arial,sans-serif;fill:#333;text-anchor:middle}</style>
           <path class="l" d="M310 46 V62 H155 V82 M310 62 H465 V82 M155 118 V134 H80 V154 M155 134 H230 V154 M465 118 V134 H390 V154 M465 134 H540 V154"/>
           <rect class="n" x="250" y="10" width="120" height="36" rx="6"/><text class="t" x="310" y="33">Data</text>
           <rect class="n" x="85" y="82" width="140" height="36" rx="6"/><text class="t" x="155" y="105">Categorical</text>
           <rect class="n" x="395" y="82" width="140" height="36" rx="6"/><text class="t" x="465" y="105">Numerical</text>
-          <rect class="n" x="22" y="154" width="116" height="36" rx="6"/><text class="t" x="80" y="177">Nominal</text>
-          <rect class="n" x="172" y="154" width="116" height="36" rx="6"/><text class="t" x="230" y="177">Ordinal</text>
-          <rect class="n" x="332" y="154" width="116" height="36" rx="6"/><text class="t" x="390" y="177">Discrete</text>
-          <rect class="n" x="482" y="154" width="116" height="36" rx="6"/><text class="t" x="540" y="177">Continuous</text>
+          <rect class="n2" x="22" y="154" width="116" height="36" rx="6"/><text class="t" x="80" y="177">Nominal</text>
+          <rect class="n2" x="172" y="154" width="116" height="36" rx="6"/><text class="t" x="230" y="177">Ordinal</text>
+          <rect class="n2" x="332" y="154" width="116" height="36" rx="6"/><text class="t" x="390" y="177">Discrete</text>
+          <rect class="n2" x="482" y="154" width="116" height="36" rx="6"/><text class="t" x="540" y="177">Continuous</text>
           <text class="s" x="80" y="210">names only</text><text class="s" x="230" y="210">natural order</text><text class="s" x="390" y="210">counted</text><text class="s" x="540" y="210">measured</text>
         </svg>
         <h4>Definitions and tests</h4>
@@ -348,13 +357,12 @@
               <li>Number labels (postcodes, 1 = yes) are <b>categorical</b>.</li>
               <li>Grouped numbers, e.g. age (under 50 years, 50 years or over), are <b>ordinal</b>. Only 31% got this right (VCAA 2016 Exam 1 Q2).</li>
               <li>Two ordered categories (low, high) are still <b>ordinal</b>. 24% wrongly called no/yes ordinal (VCAA 2020 Exam 1 Q10).</li>
+              <li>Dollar values grouped into ranges (less than $50, more than $50) are <b>categorical</b>. 16% called this numerical (VCAA 2024 Exam 1 Q2).</li>
               <li>Read “respectively” carefully: the order of the answer matches the order of the variables.</li>
             </ul>
           </div>
         </div>
-        <h4>My notes and examples</h4>
-        <div class="notes" style="min-height:62mm"></div>
-        <div class="foot">Examples and statistics: VCAA 2016 Exam 1 report; VCAA 2020 Exam 1 report; VCAA 2024 NHT Exam 1; VCAA 2023 NHT Exam 2; VCAA 2016 Exam 1 report Q7. © VCAA, used for educational purposes.</div>
+        <div class="foot">Examples and statistics: VCAA 2016 Exam 1 report; VCAA 2020 Exam 1 report; VCAA 2024 Exam 1 report; VCAA 2024 NHT Exam 1; VCAA 2023 NHT Exam 2; VCAA 2016 Exam 1 report Q7. © VCAA, used for educational purposes.</div>
       </div>
     </div>
 
@@ -363,7 +371,7 @@
 
   </main>
 </div>
-<script src="../assets/site.js"></script>
+<script src="../assets/site.js?v=2"></script>
 <script>
   // print should show the reference sheet even if another step is open
   window.addEventListener('beforeprint', () => { if (window.goStep) window.goStep('reference', false); });
