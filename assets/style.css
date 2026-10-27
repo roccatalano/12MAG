@@ -228,3 +228,4 @@ table.data input.in-wrong{border-color:var(--bad);background:var(--bad-soft)}
 .sheet.colour .stepsbox table th{background:#fff}
 .sheet .c3{fill:#ddd}.sheet .c4{fill:#888}.sheet .c5{fill:#eee}
 .sheet.colour .c3{fill:#e3f3f4}
+.tb{margin:14px 0;padding:10px 14px;border:1px dashed #9aa6af;border-radius:8px;font-size:.93rem;background:#fff}
