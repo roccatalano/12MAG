@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1A Types of Data</title>
+<meta name="description" content="12MAG 1A: categorical (nominal, ordinal) and numerical (discrete, continuous) data, with VCAA exam practice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="../">12MAG <span>Study Hub</span></a>
+  <span class="crumb">/ <a href="../#data">Data Analysis</a> / 1A</span>
+</div></header>
+
+<div class="lesson" data-lesson-id="1a">
+  <aside class="rail">
+    <h1>1A Types of data</h1>
+    <div class="sub">Data Analysis · Chapter 1</div>
+    <ol class="steps">
+      <li><button data-go="learn"><span class="dot"></span>Learn</button></li>
+      <li><button data-go="explore"><span class="dot"></span>Explore</button></li>
+      <li><button data-go="watch"><span class="dot"></span>Watch</button></li>
+      <li><button data-go="practice"><span class="dot"></span>Exam practice</button></li>
+      <li><button data-go="reference"><span class="dot"></span>Reference sheet</button></li>
+    </ol>
+    <div class="progress"><span>0 of 5 sections done</span><div class="bar"><i></i></div></div>
+  </aside>
+
+  <main class="content">
+
+  <!-- ================= LEARN ================= -->
+  <section class="sec" id="learn">
+    <div class="kicker">Step 1 · Learn</div>
+    <h2>What kind of data is it?</h2>
+    <p>Every statistics question starts with the <b>variables</b>: the things we record about each person or object. Before you can choose a graph or a calculation, you need to know what <i>type</i> of variable you have. VCAA asks this directly almost every year.</p>
+
+    <div class="box key">
+      <h3>By the end of this page you can</h3>
+      <ul class="tight">
+        <li>tell <b>categorical</b> data from <b>numerical</b> data</li>
+        <li>split categorical data into <b>nominal</b> and <b>ordinal</b></li>
+        <li>split numerical data into <b>discrete</b> and <b>continuous</b></li>
+      </ul>
+    </div>
+
+    <h3>1. Categorical or numerical?</h3>
+    <div class="def">
+      <div class="box"><span class="h">Categorical</span>Puts each person or thing into a group or category, like <i>gender (boy, girl)</i> or <i>dominant hand (left, right)</i>.</div>
+      <div class="box"><span class="h">Numerical</span>Is a count or a measurement, like <i>foot length, in centimetres</i>.</div>
+    </div>
+    <div class="box warn">
+      <b>Quick test:</b> would it make sense to find the average? You can average foot lengths, so foot length is numerical. You cannot average “left” and “right”, so dominant hand is categorical.<br><br>
+      <b>Watch out:</b> numbers used as labels (a postcode, a jersey number, “1 = yes, 2 = no”) are still <b>categorical</b>, because averaging them means nothing.
+    </div>
+
+    <h3>2. Splitting categorical data</h3>
+    <div class="def">
+      <div class="box"><span class="h">Nominal</span>The categories are just names, with no natural order. <i>Type of tree (fruit, not fruit)</i> is nominal.</div>
+      <div class="box"><span class="h">Ordinal</span>The categories have a natural order. <i>Height of tree (short, medium, tall)</i> is ordinal.</div>
+    </div>
+    <div class="box warn">
+      <b>The trap VCAA loves:</b> numerical data that has been grouped into ordered categories becomes <b>ordinal</b>. In 2016, 45% of students called <i>age (under 50 years, 50 years or over)</i> nominal. The examiners said:
+      <blockquote>“The variable age (under 50 years, 50 years or over) is ordinal because the process of allocating each of the people to one of these two categories ‘under 50 years’ or ‘50 years or over’ orders the group of people by age.”</blockquote>
+      <span class="src">VCAA 2016 Exam 1 report, Question 2</span>
+    </div>
+    <p>Two categories can still be ordinal: <i>low, high</i> has an order. Two categories like <i>no, yes</i> do not.</p>
+
+    <h3>3. Splitting numerical data</h3>
+    <div class="def">
+      <div class="box"><span class="h">Discrete</span>Is <b>counted</b>. It can only take particular values, usually whole numbers. <i>The number of billionaires in a country</i> is discrete.</div>
+      <div class="box"><span class="h">Continuous</span>Is <b>measured</b>. It can take any value in a range, limited only by how accurately we measure. <i>Circumference of a tree, in metres</i> is continuous.</div>
+    </div>
+
+    <h3>4. Put it together</h3>
+    <svg class="tree" viewBox="0 0 620 230" role="img" aria-label="Classification tree: data splits into categorical and numerical. Categorical splits into nominal and ordinal. Numerical splits into discrete and continuous.">
+      <style>.n{fill:#fff;stroke:#00838F;stroke-width:2}.n2{fill:#e3f3f4;stroke:#00838F;stroke-width:1.5}.l{stroke:#9aa6af;stroke-width:2;fill:none}.t{font:600 15px Inter,system-ui,sans-serif;fill:#1d2328;text-anchor:middle}.s{font:12px Inter,system-ui,sans-serif;fill:#5f6b75;text-anchor:middle}</style>
+      <path class="l" d="M310 46 V62 H155 V82 M310 62 H465 V82 M155 118 V134 H80 V154 M155 134 H230 V154 M465 118 V134 H390 V154 M465 134 H540 V154"/>
+      <rect class="n" x="250" y="10" width="120" height="36" rx="8"/><text class="t" x="310" y="33">Data</text>
+      <rect class="n" x="85" y="82" width="140" height="36" rx="8"/><text class="t" x="155" y="105">Categorical</text>
+      <rect class="n" x="395" y="82" width="140" height="36" rx="8"/><text class="t" x="465" y="105">Numerical</text>
+      <rect class="n2" x="22" y="154" width="116" height="36" rx="8"/><text class="t" x="80" y="177">Nominal</text>
+      <rect class="n2" x="172" y="154" width="116" height="36" rx="8"/><text class="t" x="230" y="177">Ordinal</text>
+      <rect class="n2" x="332" y="154" width="116" height="36" rx="8"/><text class="t" x="390" y="177">Discrete</text>
+      <rect class="n2" x="482" y="154" width="116" height="36" rx="8"/><text class="t" x="540" y="177">Continuous</text>
+      <text class="s" x="80" y="210">names only</text><text class="s" x="230" y="210">natural order</text>
+      <text class="s" x="390" y="210">counted</text><text class="s" x="540" y="210">measured</text>
+    </svg>
+    <p>Work top to bottom: first decide <b>categorical or numerical</b>, then go one level down.</p>
+    <span class="src">Examples above use variables from VCAA 2023 NHT Exams 1 and 2 and VCAA 2016 Exam 1.</span>
+
+    <div class="next"><span></span><button class="btn" data-next>Next: Explore →</button></div>
+  </section>
+
+  <!-- ================= EXPLORE ================= -->
+  <section class="sec" id="explore" hidden>
+    <div class="kicker">Step 2 · Explore</div>
+    <h2>Sort the variables</h2>
+    <p>Every variable below comes from a real VCAA exam. Choose its type. You get instant feedback, so keep going until they are all green.</p>
+    <p class="score"></p>
+    <div class="sorter">
+      <div class="item" data-type="Nominal" data-why="Boy and girl are names with no order." data-hint="Is it categorical? Do the categories have an order?"><div class="v">gender: boy, girl</div><div class="from">VCAA 2023 NHT Exam 2, Q1</div><div class="fb"></div></div>
+      <div class="item" data-type="Continuous" data-why="Length is measured, so it can be any value in a range." data-hint="Is this counted or measured?"><div class="v">foot length, in centimetres</div><div class="from">VCAA 2023 NHT Exam 2, Q1</div><div class="fb"></div></div>
+      <div class="item" data-type="Nominal" data-why="Left and right have no natural order." data-hint="Could you put left and right in order?"><div class="v">longest foot: left, right</div><div class="from">VCAA 2023 NHT Exam 2, Q1</div><div class="fb"></div></div>
+      <div class="item" data-type="Ordinal" data-why="Short, medium, tall has a natural order." data-hint="Do these categories go in an order?"><div class="v">height of tree (short, medium, tall)</div><div class="from">VCAA 2023 NHT Exam 1, Q1</div><div class="fb"></div></div>
+      <div class="item" data-type="Nominal" data-why="Yes and no are categories with no order." data-hint="Is this a category or a measurement?"><div class="v">deciduous tree (yes, no)</div><div class="from">VCAA 2023 NHT Exam 1, Q1</div><div class="fb"></div></div>
+      <div class="item" data-type="Continuous" data-why="Circumference is measured in metres." data-hint="Is this counted or measured?"><div class="v">circumference at 1.5 m above ground, in metres</div><div class="from">VCAA 2023 NHT Exam 1, Q1</div><div class="fb"></div></div>
+      <div class="item" data-type="Discrete" data-why="You count billionaires: 0, 1, 2, … no values in between." data-hint="Can you have 2.5 billionaires?"><div class="v">number of billionaires (in a country)</div><div class="from">VCAA 2016 Exam 1 report, Q7</div><div class="fb"></div></div>
+      <div class="item" data-type="Nominal" data-why="Fruit and not fruit are names with no order." data-hint="Do the categories have an order?"><div class="v">type of tree (fruit, not fruit)</div><div class="from">VCAA 2023 NHT Exam 1, Q1</div><div class="fb"></div></div>
+    </div>
+    <div class="next"><button class="btn ghost" data-prev>← Back</button><button class="btn" data-next>Next: Watch →</button></div>
+  </section>
+
+  <!-- ================= WATCH ================= -->
+  <section class="sec" id="watch" hidden>
+    <div class="kicker">Step 3 · Watch</div>
+    <h2>Video lesson</h2>
+    <p>Watch this if anything in Learn felt unclear, or to see more examples worked through.</p>
+    <a class="vid" href="https://www.maffsguru.com/videos/classifying-data/" target="_blank" rel="noopener">
+      <span class="play"></span>
+      <span><b>Classifying data</b><br><span class="src" style="margin:0">Maffs Guru · General Maths Units 3 &amp; 4 · opens in a new tab</span></span>
+    </a>
+    <div class="next"><button class="btn ghost" data-prev>← Back</button><button class="btn" data-next>Next: Exam practice →</button></div>
+  </section>
+
+  <!-- ================= PRACTICE ================= -->
+  <section class="sec" id="practice" hidden>
+    <div class="kicker">Step 4 · Exam practice</div>
+    <h2>Real VCAA exam questions</h2>
+    <p>Attempt each question before checking. After you answer, you will see the solution and, where we have it, what the examiners said about how students went.</p>
+
+    <!-- Q1 -->
+    <div class="q" data-answer="A">
+      <div class="q-head"><b>Question 1</b><span>VCAA 2024 Exam 1, Q2 · 1 mark</span></div>
+      <div class="q-body">
+        <div class="stem">
+          <p>Freddie organised a function at work. He surveyed the staff about their preferences.</p>
+          <p>He asked them about their <i>payment preference</i> (cash or electronic payment) and their <i>budget preference</i> (less than $50 or more than $50).</p>
+          <p>The variables in this survey, <i>payment preference</i> and <i>budget preference</i>, are</p>
+        </div>
+        <div class="opts">
+          <button class="opt" data-k="A"><b>A.</b>both categorical variables.</button>
+          <button class="opt" data-k="B"><b>B.</b>both numerical variables.</button>
+          <button class="opt" data-k="C"><b>C.</b>categorical and numerical variables, respectively.</button>
+          <button class="opt" data-k="D"><b>D.</b>numerical and categorical variables, respectively.</button>
+        </div>
+        <div class="after" hidden>
+          <div class="verdict"></div>
+          <div class="report">
+            <b>Solution.</b> Both variables sort people into groups. <i>Budget preference</i> uses dollar amounts, but its values are the categories “less than $50” and “more than $50”, so it is categorical (in fact ordinal). Answer: <b>A</b>.
+            <span class="src">Teacher solution. VCAA 2024 Exam 1 examiner report not yet added.</span>
+          </div>
+          <button class="btn ghost retry" hidden style="margin-top:10px">Try again</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="q" data-answer="B">
+      <div class="q-head"><b>Question 2</b><span>VCAA 2024 NHT Exam 1, Q2 · 1 mark</span></div>
+      <div class="q-body">
+        <div class="stem"><p>The variables exercise type (aerobic, boxing, circuit) and recovery time (short, medium, long) are</p></div>
+        <div class="opts">
+          <button class="opt" data-k="A"><b>A.</b>a nominal variable and a numerical variable respectively.</button>
+          <button class="opt" data-k="B"><b>B.</b>a nominal variable and an ordinal variable respectively.</button>
+          <button class="opt" data-k="C"><b>C.</b>an ordinal variable and a nominal variable respectively.</button>
+          <button class="opt" data-k="D"><b>D.</b>both ordinal variables.</button>
+          <button class="opt" data-k="E"><b>E.</b>both nominal variables.</button>
+        </div>
+        <div class="after" hidden>
+          <div class="verdict"></div>
+          <div class="report">
+            <b>Solution.</b> Aerobic, boxing and circuit are names with no order, so exercise type is nominal. Short, medium and long have a natural order, so recovery time is ordinal. Answer: <b>B</b>.
+            <span class="src">Teacher solution. VCAA 2024 NHT Exam 1 examiner report not yet added.</span>
+          </div>
+          <button class="btn ghost retry" hidden style="margin-top:10px">Try again</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="q" data-answer="A">
+      <div class="q-head"><b>Question 3</b><span>VCAA 2020 Exam 1, Q10 · 1 mark</span></div>
+      <div class="q-body">
+        <div class="stem">
+          <p>The data in Table 2 was collected in a study of the association between the variables frequency of nightmares (low, high) and snores (no, yes).</p>
+          <p><b>Table 2</b></p>
+          <table class="data">
+            <tr><th rowspan="2">Frequency of nightmares</th><th colspan="2">Snores</th><th rowspan="2">Total</th></tr>
+            <tr><th>No</th><th>Yes</th></tr>
+            <tr><td>low</td><td class="n">80</td><td class="n">58</td><td class="n">138</td></tr>
+            <tr><td>high</td><td class="n">11</td><td class="n">12</td><td class="n">23</td></tr>
+            <tr><td>Total</td><td class="n">91</td><td class="n">70</td><td class="n">161</td></tr>
+          </table>
+          <span class="src">Data: adapted from RA Hicks and J Bautista, ‘Snoring and nightmares’, Perceptual and Motor Skills, 1 October 1993</span>
+          <p style="margin-top:12px">The variables in this study, frequency of nightmares (low, high) and snores (no, yes), are</p>
+        </div>
+        <div class="opts">
+          <button class="opt" data-k="A"><b>A.</b>ordinal and nominal respectively.</button>
+          <button class="opt" data-k="B"><b>B.</b>nominal and ordinal respectively.</button>
+          <button class="opt" data-k="C"><b>C.</b>both numerical.</button>
+          <button class="opt" data-k="D"><b>D.</b>both ordinal.</button>
+          <button class="opt" data-k="E"><b>E.</b>both nominal.</button>
+        </div>
+        <div class="after" hidden>
+          <div class="verdict"></div>
+          <div class="report">
+            <b>How students went</b> (VCAA 2020 Exam 1 report, % choosing each option):
+            <div class="dist">
+              <b>A</b><div class="b ans"><i style="width:57%"></i></div><span>57%</span>
+              <b>B</b><div class="b"><i style="width:5%"></i></div><span>5%</span>
+              <b>C</b><div class="b"><i style="width:3%"></i></div><span>3%</span>
+              <b>D</b><div class="b"><i style="width:24%"></i></div><span>24%</span>
+              <b>E</b><div class="b"><i style="width:11%"></i></div><span>11%</span>
+            </div>
+            <b>Common mistake:</b> 24% chose D (both ordinal). Low and high have an order, but no and yes do not, so <i>snores</i> is nominal.
+            <span class="src">VCAA 2020 Exam 1 examiner report, Question 10 (statistics table)</span>
+          </div>
+          <button class="btn ghost retry" hidden style="margin-top:10px">Try again</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="q" data-answer="B">
+      <div class="q-head"><b>Question 4</b><span>VCAA 2016 Exam 1, Q2 · 1 mark</span></div>
+      <div class="q-body">
+        <div class="stem"><p>The variables blood pressure (low, normal, high) and age (under 50 years, 50 years or over) are</p></div>
+        <div class="opts">
+          <button class="opt" data-k="A"><b>A.</b>both nominal variables.</button>
+          <button class="opt" data-k="B"><b>B.</b>both ordinal variables.</button>
+          <button class="opt" data-k="C"><b>C.</b>a nominal variable and an ordinal variable respectively.</button>
+          <button class="opt" data-k="D"><b>D.</b>an ordinal variable and a nominal variable respectively.</button>
+          <button class="opt" data-k="E"><b>E.</b>a continuous variable and an ordinal variable respectively.</button>
+        </div>
+        <div class="after" hidden>
+          <div class="verdict"></div>
+          <div class="report">
+            <b>How students went</b> (VCAA 2016 Exam 1 report, % choosing each option):
+            <div class="dist">
+              <b>A</b><div class="b"><i style="width:8%"></i></div><span>8%</span>
+              <b>B</b><div class="b ans"><i style="width:31%"></i></div><span>31%</span>
+              <b>C</b><div class="b"><i style="width:10%"></i></div><span>10%</span>
+              <b>D</b><div class="b"><i style="width:45%"></i></div><span>45%</span>
+              <b>E</b><div class="b"><i style="width:5%"></i></div><span>5%</span>
+            </div>
+            <b>What the examiners said:</b>
+            <blockquote>“Both variables are ordinal. However, many students incorrectly identified the variable age (under 50 years, 50 years or over) as nominal. The variable age (under 50 years, 50 years or over) is ordinal because the process of allocating each of the people to one of these two categories ‘under 50 years’ or ‘50 years or over’ orders the group of people by age.”</blockquote>
+            <span class="src">VCAA 2016 Exam 1 examiner report, Question 2</span>
+          </div>
+          <button class="btn ghost retry" hidden style="margin-top:10px">Try again</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q5 typed -->
+    <div class="q" data-accept="nominal">
+      <div class="q-head"><b>Question 5</b><span>VCAA 2025 Exam 2, Q1b · 1 mark · type your answer</span></div>
+      <div class="q-body">
+        <div class="stem">
+          <p>Table 1, below, shows the prices in dollars, <i>price</i>, for a sample of 20 homes sold in an inner Melbourne suburb during 2017.</p>
+          <p>The type of home sold is either an apartment or a house.</p>
+          <p><b>Table 1</b></p>
+          <div class="cols2">
+          <table class="data">
+            <tr><th>Price ($)</th><th>Type</th></tr>
+            <tr><td class="n">350 000</td><td>apartment</td></tr><tr><td class="n">490 000</td><td>apartment</td></tr>
+            <tr><td class="n">500 000</td><td>apartment</td></tr><tr><td class="n">620 000</td><td>apartment</td></tr>
+            <tr><td class="n">720 000</td><td>apartment</td></tr><tr><td class="n">830 000</td><td>apartment</td></tr>
+            <tr><td class="n">875 000</td><td>apartment</td></tr><tr><td class="n">995 000</td><td>apartment</td></tr>
+            <tr><td class="n">1 100 000</td><td>apartment</td></tr><tr><td class="n">1 520 000</td><td>apartment</td></tr>
+          </table>
+          <table class="data">
+            <tr><th>Price ($)</th><th>Type</th></tr>
+            <tr><td class="n">800 000</td><td>house</td></tr><tr><td class="n">840 000</td><td>house</td></tr>
+            <tr><td class="n">920 000</td><td>house</td></tr><tr><td class="n">920 000</td><td>house</td></tr>
+            <tr><td class="n">1 010 000</td><td>house</td></tr><tr><td class="n">1 263 000</td><td>house</td></tr>
+            <tr><td class="n">1 398 000</td><td>house</td></tr><tr><td class="n">1 460 000</td><td>house</td></tr>
+            <tr><td class="n">1 540 000</td><td>house</td></tr><tr><td class="n">1 540 000</td><td>house</td></tr>
+          </table>
+          </div>
+          <span class="src">Data: Adapted from &lt;www.kaggle.com/datasets/anthonypino/melbourne-housing-market&gt;</span>
+          <p style="margin-top:12px"><b>b.</b> State whether the variable <i>type</i> is numerical, nominal or ordinal.</p>
+        </div>
+        <div class="typed"><input type="text" placeholder="numerical, nominal or ordinal" aria-label="Your answer"><button class="btn check">Check</button></div>
+        <div class="after" hidden>
+          <div class="verdict"></div>
+          <div class="report">
+            <b>Solution.</b> <i>Type</i> puts each home into a category (apartment or house) and the categories have no natural order, so it is <b>nominal</b>.
+            <span class="src">Teacher solution. VCAA 2025 Exam 2 examiner report not yet added.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="next"><button class="btn ghost" data-prev>← Back</button><button class="btn" data-next>Next: Reference sheet →</button></div>
+  </section>
+
+  <!-- ================= REFERENCE ================= -->
+  <section class="sec" id="reference" hidden>
+    <div class="kicker">Step 5 · Reference sheet</div>
+    <h2>Summary</h2>
+    <ul class="tight">
+      <li><b>Categorical</b> data puts things into groups. <b>Numerical</b> data is a count or a measurement.</li>
+      <li>Ask: <b>does an average make sense?</b> If not, it is categorical, even when the labels are numbers.</li>
+      <li><b>Nominal</b> categories have no order. <b>Ordinal</b> categories have a natural order, even if there are only two (low, high).</li>
+      <li>Numbers grouped into ordered categories (under 50 years, 50 years or over) are <b>ordinal</b>.</li>
+      <li><b>Discrete</b> data is counted. <b>Continuous</b> data is measured.</li>
+    </ul>
+    <p>Print the A4 page below for your bound reference. Add your own examples in the notes box.</p>
+    <p><button class="btn" data-print>Print A4 reference sheet</button></p>
+
+    <div class="sheet-wrap">
+      <div class="sheet">
+        <div class="sh-head"><h2>1A · Types of data</h2><span>12MAG · Data Analysis · Bound reference</span></div>
+        <svg class="tree" viewBox="0 0 620 220" role="img" aria-label="Classification tree">
+          <style>.n{fill:#fff;stroke:#000;stroke-width:1.6}.l{stroke:#000;stroke-width:1.4;fill:none}.t{font:600 15px Inter,Arial,sans-serif;text-anchor:middle}.s{font:12px Inter,Arial,sans-serif;fill:#333;text-anchor:middle}</style>
+          <path class="l" d="M310 46 V62 H155 V82 M310 62 H465 V82 M155 118 V134 H80 V154 M155 134 H230 V154 M465 118 V134 H390 V154 M465 134 H540 V154"/>
+          <rect class="n" x="250" y="10" width="120" height="36" rx="6"/><text class="t" x="310" y="33">Data</text>
+          <rect class="n" x="85" y="82" width="140" height="36" rx="6"/><text class="t" x="155" y="105">Categorical</text>
+          <rect class="n" x="395" y="82" width="140" height="36" rx="6"/><text class="t" x="465" y="105">Numerical</text>
+          <rect class="n" x="22" y="154" width="116" height="36" rx="6"/><text class="t" x="80" y="177">Nominal</text>
+          <rect class="n" x="172" y="154" width="116" height="36" rx="6"/><text class="t" x="230" y="177">Ordinal</text>
+          <rect class="n" x="332" y="154" width="116" height="36" rx="6"/><text class="t" x="390" y="177">Discrete</text>
+          <rect class="n" x="482" y="154" width="116" height="36" rx="6"/><text class="t" x="540" y="177">Continuous</text>
+          <text class="s" x="80" y="210">names only</text><text class="s" x="230" y="210">natural order</text><text class="s" x="390" y="210">counted</text><text class="s" x="540" y="210">measured</text>
+        </svg>
+        <h4>Definitions and tests</h4>
+        <table>
+          <tr><th style="width:18%">Type</th><th>Meaning</th><th style="width:38%">VCAA example</th></tr>
+          <tr><td><b>Nominal</b></td><td>Categories that are just names, no order</td><td>exercise type (aerobic, boxing, circuit); snores (no, yes)</td></tr>
+          <tr><td><b>Ordinal</b></td><td>Categories with a natural order</td><td>recovery time (short, medium, long); blood pressure (low, normal, high)</td></tr>
+          <tr><td><b>Discrete</b></td><td>Counted; only particular values</td><td>number of billionaires in a country</td></tr>
+          <tr><td><b>Continuous</b></td><td>Measured; any value in a range</td><td>foot length, in centimetres</td></tr>
+        </table>
+        <div class="g2">
+          <div>
+            <h4>Decision steps</h4>
+            <ul>
+              <li>Does an average make sense? <b>No</b> → categorical. <b>Yes</b> → numerical.</li>
+              <li>Categorical: is there a natural order? <b>Yes</b> → ordinal. <b>No</b> → nominal.</li>
+              <li>Numerical: counted → discrete. Measured → continuous.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Exam traps</h4>
+            <ul>
+              <li>Number labels (postcodes, 1 = yes) are <b>categorical</b>.</li>
+              <li>Grouped numbers, e.g. age (under 50 years, 50 years or over), are <b>ordinal</b>. Only 31% got this right (VCAA 2016 Exam 1 Q2).</li>
+              <li>Two ordered categories (low, high) are still <b>ordinal</b>. 24% wrongly called no/yes ordinal (VCAA 2020 Exam 1 Q10).</li>
+              <li>Read “respectively” carefully: the order of the answer matches the order of the variables.</li>
+            </ul>
+          </div>
+        </div>
+        <h4>My notes and examples</h4>
+        <div class="notes" style="min-height:62mm"></div>
+        <div class="foot">Examples and statistics: VCAA 2016 Exam 1 report; VCAA 2020 Exam 1 report; VCAA 2024 NHT Exam 1; VCAA 2023 NHT Exam 2; VCAA 2016 Exam 1 report Q7. © VCAA, used for educational purposes.</div>
+      </div>
+    </div>
+
+    <div class="next"><button class="btn ghost" data-prev>← Back</button><button class="btn" data-next>Finish 1A ✓</button></div>
+  </section>
+
+  </main>
+</div>
+<script src="../assets/site.js"></script>
+<script>
+  // print should show the reference sheet even if another step is open
+  window.addEventListener('beforeprint', () => { if (window.goStep) window.goStep('reference', false); });
+</script>
+</body>
+</html>
