@@ -176,6 +176,12 @@ table.data td.n{text-align:right;font-variant-numeric:tabular-nums}
   @page{size:A4;margin:0}
 }
 
+/* ---- reference sheet tree (scoped so it never affects the Learn diagram) ---- */
+.sheet svg .n{fill:var(--sf1);stroke:var(--sk);stroke-width:1.6}
+.sheet svg .n2{fill:var(--sf2);stroke:var(--sk);stroke-width:1.6}
+.sheet svg .l{stroke:var(--sl);stroke-width:1.4;fill:none}
+.sheet svg .t{font:600 15px Inter,Arial,sans-serif;text-anchor:middle;fill:#000}
+.sheet svg .s{font:12px Inter,Arial,sans-serif;fill:#333;text-anchor:middle}
 /* ---- reference sheet: colour version ---- */
 .sheet .tag{display:block;font-size:8.5pt;letter-spacing:.08em;text-transform:uppercase;color:#555}
 .sheet .sh-head>div h2{margin:0}
