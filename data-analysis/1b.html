@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1B Categorical Data Displays</title>
+<meta name="description" content="12MAG 1B: frequency tables, bar charts and segmented bar charts for categorical data, with VCAA exam practice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css?v=5">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="../">12MAG <span>Study Hub</span></a>
+  <span class="crumb">/ <a href="../#data">Data Analysis</a> / 1B</span>
+</div></header>
+
+<div class="lesson" data-lesson-id="1b">
+  <aside class="rail">
+    <h1>1B Displaying categorical data</h1>
+    <div class="sub">Data Analysis · Chapter 1</div>
+    <ol class="steps">
+      <li><button data-go="learn"><span class="dot"></span>Learn</button></li>
+      <li><button data-go="explore"><span class="dot"></span>Explore</button></li>
+      <li><button data-go="watch"><span class="dot"></span>Watch</button></li>
+      <li><button data-go="practice"><span class="dot"></span>Exam practice</button></li>
+      <li><button data-go="reference"><span class="dot"></span>Reference sheet</button></li>
+    </ol>
+    <div class="progress"><span>0 of 5 sections done</span><div class="bar"><i></i></div></div>
+  </aside>
+
+  <main class="content">
+
+  <!-- ================= LEARN ================= -->
+  <section class="sec" id="learn">
+    <div class="kicker">Step 1 · Learn</div>
+    <h2>Organising and picturing categorical data</h2>
+    <p>Once you know a variable is categorical (1A), the next job is to <b>organise</b> it in a frequency table, <b>display</b> it in a bar chart or segmented bar chart, and <b>describe</b> what it shows.</p>
+
+    <div class="box key">
+      <h3>By the end of this page you can</h3>
+      <ul class="tight">
+        <li>build a <b>frequency table</b> with counts and percentages</li>
+        <li>draw and read a <b>bar chart</b> and a <b>percentage segmented bar chart</b></li>
+        <li>identify the <b>mode</b> and describe the distribution in a sentence using percentages</li>
+      </ul>
+    </div>
+
+    <h3>1. The frequency table</h3>
+    <p>A frequency table lists every category, how many times it occurs (the <b>frequency</b> or number), and usually the <b>percentage frequency</b>. Here is the dominant hand of 10 students from a VCAA exam:</p>
+    <table class="data">
+      <tr><th>Dominant hand</th><th>Number</th><th>Percentage (%)</th></tr>
+      <tr><td>left</td><td class="n">3</td><td class="n">30</td></tr>
+      <tr><td>right</td><td class="n">7</td><td class="n">70</td></tr>
+      <tr><th>Total</th><th class="n">10</th><th class="n">100</th></tr>
+    </table>
+    <span class="src">Data: VCAA 2023 NHT Exam 2, Table 1</span>
+    <div class="box key" style="margin-top:14px">
+      <b>Percentage frequency</b> = <span style="white-space:nowrap">(count ÷ total) × 100</span><br>
+      Left: 3 ÷ 10 × 100 = 30%. The percentages must add to 100 (allow for rounding).
+    </div>
+    <div class="box warn">
+      <b>Always include the Total row,</b> and write numbers, not tally marks. The 2023 examiners said: <blockquote>“A few students omitted the total or wrote tally marks instead of numbers, which was not accepted.”</blockquote>
+      <span class="src">VCAA 2023 Exam 2 report, Question 2ai</span>
+    </div>
+
+    <h3>2. The bar chart</h3>
+    <p>A bar chart has one bar per category. Bar <b>height</b> shows the frequency (or percentage). Bars are the same width and have <b>gaps</b> between them, because the categories are separate groups.</p>
+    <svg class="tree" viewBox="0 0 420 220" role="img" aria-label="Bar chart of dominant hand: left 3, right 7">
+      <g font-family="Inter,system-ui,sans-serif" font-size="12" fill="#5f6b75">
+        <line x1="60" y1="20" x2="60" y2="180" stroke="#9aa6af"/><line x1="60" y1="180" x2="400" y2="180" stroke="#9aa6af"/>
+        <g text-anchor="end"><text x="52" y="184">0</text><text x="52" y="140">2</text><text x="52" y="96">4</text><text x="52" y="52">6</text><text x="52" y="30">7</text></g>
+        <g stroke="#e3e7ea"><line x1="60" y1="136" x2="400" y2="136"/><line x1="60" y1="92" x2="400" y2="92"/><line x1="60" y1="48" x2="400" y2="48"/></g>
+        <rect x="110" y="114" width="80" height="66" fill="#00838F"/><rect x="260" y="26" width="80" height="154" fill="#00838F"/>
+        <g text-anchor="middle" fill="#1d2328"><text x="150" y="198">left</text><text x="300" y="198">right</text><text x="230" y="215" font-weight="600">dominant hand</text></g>
+        <text x="16" y="110" transform="rotate(-90 16 110)" text-anchor="middle" font-weight="600" fill="#1d2328">number</text>
+      </g>
+    </svg>
+
+    <h3>3. The percentage segmented bar chart</h3>
+    <p>A segmented bar chart stacks all the categories into <b>one bar</b> that goes from 0 to 100%. Each segment's <b>length</b> is that category's percentage, and a <b>key</b> tells you which segment is which.</p>
+    <svg class="tree" viewBox="0 0 420 230" role="img" aria-label="Percentage segmented bar chart: right 70 percent at the bottom, left 30 percent on top">
+      <g font-family="Inter,system-ui,sans-serif" font-size="12" fill="#5f6b75">
+        <line x1="90" y1="20" x2="90" y2="200" stroke="#9aa6af"/>
+        <g text-anchor="end"><text x="82" y="204">0</text><text x="82" y="150">30</text><text x="82" y="78">70</text><text x="82" y="24">100</text></g>
+        <rect x="130" y="74" width="110" height="126" fill="#00838F"/><rect x="130" y="20" width="110" height="54" fill="#9fd3d8"/>
+        <text x="185" y="141" text-anchor="middle" fill="#fff" font-weight="600">right 70%</text><text x="185" y="51" text-anchor="middle" fill="#1d2328" font-weight="600">left 30%</text>
+        <rect x="285" y="40" width="14" height="14" fill="#9fd3d8"/><text x="306" y="52" fill="#1d2328">left</text>
+        <rect x="285" y="64" width="14" height="14" fill="#00838F"/><text x="306" y="76" fill="#1d2328">right</text>
+        <text x="300" y="30" fill="#1d2328" font-weight="600">Key</text>
+        <text x="30" y="110" transform="rotate(-90 30 110)" text-anchor="middle" font-weight="600" fill="#1d2328">percentage (%)</text>
+      </g>
+    </svg>
+    <div class="box warn">
+      <b>Reading a segment:</b> subtract the bottom of the segment from the top. If a segment runs from 56% to 74%, it is 74 − 56 = <b>18%</b>, not 74%. To combine two categories, find each segment's size and add them.
+      <span class="src">Method from the VCAA 2024 Exam 1 report, Question 1 (“Blue 74 − 56 = 18”)</span>
+    </div>
+
+    <h3>4. Describing the distribution</h3>
+    <ul class="tight">
+      <li>The <b>mode</b> (modal category) is the category with the highest frequency. Here it is <i>right</i>.</li>
+      <li>Describe in a sentence, quoting <b>percentages</b> and naming the variable:</li>
+    </ul>
+    <div class="box">
+      <b>Sentence frame</b> (teacher frame)<br>
+      “The majority of the <i>[group]</i> (<i>[%]</i>) <i>[category]</i>, while only <i>[%]</i> <i>[other category]</i>.”<br><br>
+      <i>Example:</i> The majority of the students (70%) are right-handed, while only 30% are left-handed.
+    </div>
+
+    <div class="next"><span></span><button class="btn" data-next>Next: Explore →</button></div>
+  </section>
+
+  <!-- ================= EXPLORE ================= -->
+  <section class="sec" id="explore" hidden>
+    <div class="kicker">Step 2 · Explore</div>
+    <h2>Build it yourself</h2>
+    <p>These are the 10 students from VCAA 2023 NHT Exam 2, Table 1. Count the <b>longest foot</b> for each category, then check. When your counts are right, the percentages and both charts appear.</p>
+    <table class="data">
+      <tr><th>Name</th><th>Longest foot</th></tr>
+      <tr><td>David</td><td>left</td></tr><tr><td>Lars</td><td>left</td></tr><tr><td>Zach</td><td>right</td></tr><tr><td>Josh</td><td>left</td></tr><tr><td>Lang</td><td>left</td></tr>
+      <tr><td>Scotty</td><td>right</td></tr><tr><td>Edward</td><td>left</td></tr><tr><td>Caitlin</td><td>left</td></tr><tr><td>Caroline</td><td>right</td></tr><tr><td>Maggie</td><td>right</td></tr>
+    </table>
+    <span class="src">Data: VCAA 2023 NHT Exam 2, Table 1 (adapted from MC Meyer, ‘Wider Shoes for Wider Feet?’, Journal of Statistics Education, 2006)</span>
+
+    <div class="box" id="build">
+      <table class="data">
+        <tr><th>Longest foot</th><th>Number</th><th>Percentage (%)</th></tr>
+        <tr><td>left</td><td><input id="bl" inputmode="numeric" aria-label="number left"></td><td class="n" id="pl">?</td></tr>
+        <tr><td>right</td><td><input id="br" inputmode="numeric" aria-label="number right"></td><td class="n" id="pr">?</td></tr>
+        <tr><th>Total</th><th class="n">10</th><th class="n">100</th></tr>
+      </table>
+      <button class="btn" id="bcheck" style="margin-top:8px">Check my counts</button>
+      <div id="bmsg" class="verdict" hidden></div>
+      <div class="chartbox" id="bcharts" hidden>
+        <div class="seg-toggle"><button aria-pressed="true" data-v="bar">Bar chart</button><button aria-pressed="false" data-v="seg">Segmented bar chart</button></div>
+        <svg id="bsvg" viewBox="0 0 420 230" style="width:100%;max-width:520px;height:auto" role="img" aria-label="Chart of longest foot"></svg>
+        <p id="bdesc" style="margin:8px 0 0"></p>
+      </div>
+    </div>
+    <div class="next"><button class="btn ghost" data-prev>← Back</button><button class="btn" data-next>Next: Watch →</button></div>
+  </section>
+
+  <!-- ================= WATCH ================= -->
+  <section class="sec" id="watch" hidden>
+    <div class="kicker">Step 3 · Watch</div>
+    <h2>Video lesson</h2>
+    <p>Watch this for more worked examples of frequency tables, bar charts and segmented bar charts.</p>
+    <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/T6bFzr-YBr0?rel=0" title="Displaying and describing the distributions of categorical variables (YouTube)" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+    <span class="src">Displaying and describing the distributions of categorical variables · YouTube · <a href="https://www.youtube.com/watch?v=T6bFzr-YBr0" target="_blank" rel="noopener">open on YouTube</a> if the video does not load</span>
+    <div class="next"><button class="btn ghost" data-prev>← Back</button><button class="btn" data-next>Next: Exam practice →</button></div>
+  </section>
+
+  <!-- ================= PRACTICE ================= -->
+  <section class="sec" id="practice" hidden>
+    <div class="kicker">Step 4 · Exam practice</div>
+    <h2>Real VCAA exam questions</h2>
+    <p>Attempt each question before checking. After you answer, you will see the solution and, where we have it, what the examiners said.</p>
+
+    <!-- Q1 -->
+    <div class="q" data-answer="B">
+      <div class="q-head"><b>Question 1</b><span>VCAA 2024 Exam 1, Q1 · 1 mark</span></div>
+      <div class="q-body">
+        <div class="stem">
+          <p>A group of students were asked to name their favourite colour.</p>
+          <p>The results are displayed in the percentage segmented bar chart below.</p>
+          <img class="fig" src="../assets/img/1b/2024-e1-q1.png" alt="Percentage segmented bar chart of favourite colour. From the bottom: pink 0 to 35, green 35 to 56, blue 56 to 74, yellow 74 to 88, red 88 to 100.">
+          <p>The percentage of students who named blue as their favourite colour is closest to</p>
+        </div>
+        <div class="opts">
+          <button class="opt" data-k="A"><b>A.</b>14%</button>
+          <button class="opt" data-k="B"><b>B.</b>18%</button>
+          <button class="opt" data-k="C"><b>C.</b>26%</button>
+          <button class="opt" data-k="D"><b>D.</b>74%</button>
+        </div>
+        <div class="after" hidden>
+          <div class="verdict"></div>
+          <div class="report">
+            <b>How students went</b> (VCAA 2024 Exam 1 report, % choosing each option):
+            <div class="dist">
+              <b>A</b><div class="b"><i style="width:18%"></i></div><span>18%</span>
+              <b>B</b><div class="b ans"><i style="width:78%"></i></div><span>78%</span>
+              <b>C</b><div class="b"><i style="width:3%"></i></div><span>3%</span>
+              <b>D</b><div class="b"><i style="width:1%"></i></div><span>1%</span>
+            </div>
+            <b>Examiners' working:</b> <blockquote>“Blue 74 − 56 = 18”</blockquote>
+            <b>Common mistake:</b> 18% chose A (14%), which is the size of the <i>yellow</i> segment (88 − 74). Check the key carefully before reading a segment.
+            <span class="src">VCAA 2024 Exam 1 marking guidelines and sample responses, Question 1</span>
+          </div>
+          <button class="btn ghost retry" hidden style="margin-top:10px">Try again</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="q" data-answer="C">
+      <div class="q-head"><b>Question 2</b><span>VCAA 2025 NHT Exam 1, Q2 · 1 mark</span></div>
+      <div class="q-body">
+        <div class="stem">
+          <p>Passengers on a tram were surveyed for reasons why they travelled by tram. Each reason, along with the percentage of surveyed passengers who gave that reason, is displayed in the segmented bar chart below.</p>
+          <img class="fig" src="../assets/img/1b/2025-nht-e1-q2.png" alt="Percentage segmented bar chart of reasons for travelling by tram. From the bottom: less stress 0 to 22, lower cost 22 to 48, parking problems 48 to 68, no car 68 to 82, near tram stop 82 to 100.">
+          <p>The combined percentage of surveyed passengers who gave the reason ‘lower cost’ or ‘no car’ is closest to</p>
+        </div>
+        <div class="opts">
+          <button class="opt" data-k="A"><b>A.</b>14%</button>
+          <button class="opt" data-k="B"><b>B.</b>26%</button>
+          <button class="opt" data-k="C"><b>C.</b>40%</button>
+          <button class="opt" data-k="D"><b>D.</b>66%</button>
+        </div>
+        <div class="after" hidden>
+          <div class="verdict"></div>
+          <div class="report">
+            <b>Solution.</b> Lower cost: 48 − 22 = 26%. No car: 82 − 68 = 14%. Combined: 26 + 14 = 40%. Answer: <b>C</b>. Options A and B are each segment on its own.
+            <span class="src">Answer C from the VCAA 2025 NHT Exam 1 assessment guide (answers only, no % data). Working: teacher solution.</span>
+          </div>
+          <button class="btn ghost retry" hidden style="margin-top:10px">Try again</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="q" data-multi>
+      <div class="q-head"><b>Question 3</b><span>VCAA 2023 Exam 2, Q2a i · 1 mark · fill the table</span></div>
+      <div class="q-body">
+        <div class="stem">
+          <p><b>a.</b> The following data shows the sizes of a sample of 20 oysters rated as small, medium or large.</p>
+          <table class="data">
+            <tr><td>small</td><td>small</td><td>large</td><td>medium</td><td>medium</td></tr>
+            <tr><td>medium</td><td>large</td><td>small</td><td>medium</td><td>medium</td></tr>
+            <tr><td>small</td><td>medium</td><td>small</td><td>small</td><td>medium</td></tr>
+            <tr><td>medium</td><td>medium</td><td>medium</td><td>small</td><td>large</td></tr>
+          </table>
+          <p style="margin-top:12px"><b>i.</b> Use the data above to complete the following frequency table.</p>
+          <p><b>Table 2</b></p>
+          <table class="data">
+            <tr><th rowspan="2">Size</th><th colspan="2">Frequency</th></tr>
+            <tr><th>Number</th><th>Percentage (%)</th></tr>
+            <tr><td>small</td><td><input data-ans="7" inputmode="numeric" aria-label="small number"></td><td class="n">35</td></tr>
+            <tr><td>medium</td><td><input data-ans="10" inputmode="numeric" aria-label="medium number"></td><td class="n">50</td></tr>
+            <tr><td>large</td><td><input data-ans="3" inputmode="numeric" aria-label="large number"></td><td class="n">15</td></tr>
+            <tr><td>Total</td><td><input data-ans="20" inputmode="numeric" aria-label="total number"></td><td class="n">100</td></tr>
+          </table>
+        </div>
+        <button class="btn check">Check</button>
+        <div class="after" hidden>
+          <div class="verdict"></div>
+          <div class="report">
+            <b>Answer:</b> small 7, medium 10, large 3, Total 20.<br>
+            <b>How students went:</b> 95% scored the mark.<br>
+            <b>What the examiners said:</b>
+            <blockquote>“This question was well done. A few students omitted the total or wrote tally marks instead of numbers, which was not accepted.”</blockquote>
+            <span class="src">VCAA 2023 Exam 2 report, Question 2ai</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="q" data-reveal>
+      <div class="q-head"><b>Question 4</b><span>VCAA 2023 Exam 2, Q2a ii · 1 mark · draw on paper</span></div>
+      <div class="q-body">
+        <div class="stem">
+          <p><b>ii.</b> Use the percentages in Table 2 to construct a percentage segmented bar chart below. A key has been provided.</p>
+          <p class="src" style="margin-top:0">Key: small, medium, large. Draw a 0–100% axis on paper, then reveal the model answer.</p>
+        </div>
+        <button class="btn reveal">I've drawn it: show the answer</button>
+        <div class="after" hidden>
+          <div class="report" style="border:0;padding-top:0">
+            <svg viewBox="0 0 380 230" style="width:100%;max-width:400px;height:auto" role="img" aria-label="Model answer: small 0 to 35, medium 35 to 85, large 85 to 100">
+              <g font-family="Inter,system-ui,sans-serif" font-size="12" fill="#5f6b75">
+                <line x1="70" y1="20" x2="70" y2="200" stroke="#9aa6af"/>
+                <g text-anchor="end"><text x="62" y="204">0</text><text x="62" y="141">35</text><text x="62" y="51">85</text><text x="62" y="24">100</text></g>
+                <rect x="100" y="137" width="100" height="63" fill="#00838F"/><rect x="100" y="47" width="100" height="90" fill="#9fd3d8"/><rect x="100" y="20" width="100" height="27" fill="#e3f3f4" stroke="#00838F"/>
+                <g text-anchor="middle" fill="#1d2328" font-weight="600"><text x="150" y="172" fill="#fff">small 35%</text><text x="150" y="96">medium 50%</text><text x="150" y="38">large 15%</text></g>
+                <text x="240" y="40" fill="#1d2328" font-weight="600">Key</text>
+                <rect x="240" y="50" width="14" height="14" fill="#00838F"/><text x="260" y="62" fill="#1d2328">small</text>
+                <rect x="240" y="72" width="14" height="14" fill="#9fd3d8"/><text x="260" y="84" fill="#1d2328">medium</text>
+                <rect x="240" y="94" width="14" height="14" fill="#e3f3f4" stroke="#00838F"/><text x="260" y="106" fill="#1d2328">large</text>
+                <text x="22" y="110" transform="rotate(-90 22 110)" text-anchor="middle" font-weight="600" fill="#1d2328">percentage (%)</text>
+              </g>
+            </svg>
+            <b>Check yours:</b> ☐ segment boundaries at 35 and 85 ☐ segments shaded to match the key ☐ bar reaches 100.<br>
+            <b>How students went:</b> 84% scored the mark. The examiners said: <blockquote>“This question was well done.”</blockquote>
+            <span class="src">VCAA 2023 Exam 2 report, Question 2aii. Model chart drawn by teacher from the report's percentages.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="q" data-multi>
+      <div class="q-head"><b>Question 5</b><span>VCAA 2024 NHT Exam 2, Q2a · 2 marks · fill the table</span></div>
+      <div class="q-body">
+        <div class="stem">
+          <p>In the year 2021 there were 12 days where a new moon appeared in Sydney Harbour.</p>
+          <p>For these 12 days the occurrence of the highest high tides (HHT) and lowest low tides (LLT) occurred before, on or after the appearance of the new moon.</p>
+          <p>These records are displayed in the table below.</p>
+          <p><b>Table 3</b></p>
+          <div style="overflow-x:auto">
+          <table class="data">
+            <tr><th>LLT</th><td>on</td><td>before</td><td>before</td><td>after</td><td>after</td><td>after</td></tr>
+            <tr><th></th><td>after</td><td>after</td><td>after</td><td>after</td><td>after</td><td>after</td></tr>
+            <tr><th>HHT</th><td>on</td><td>before</td><td>before</td><td>before</td><td>after</td><td>after</td></tr>
+            <tr><th></th><td>after</td><td>on</td><td>on</td><td>after</td><td>after</td><td>after</td></tr>
+          </table>
+          </div>
+          <span class="src">Data: http://www.bom.gov.au/australia/tides/</span>
+          <p style="margin-top:12px"><b>a.</b> Use the data from Table 3 to complete the following frequency table.</p>
+          <p><b>Table 4</b></p>
+          <table class="data">
+            <tr><th rowspan="2">Occurrence</th><th colspan="2">Frequency</th></tr>
+            <tr><th>LLT</th><th>HHT</th></tr>
+            <tr><td>before</td><td><input data-ans="2" inputmode="numeric" aria-label="LLT before"></td><td><input data-ans="3" inputmode="numeric" aria-label="HHT before"></td></tr>
+            <tr><td>on</td><td><input data-ans="1" inputmode="numeric" aria-label="LLT on"></td><td><input data-ans="3" inputmode="numeric" aria-label="HHT on"></td></tr>
+            <tr><td>after</td><td><input data-ans="9" inputmode="numeric" aria-label="LLT after"></td><td><input data-ans="6" inputmode="numeric" aria-label="HHT after"></td></tr>
+            <tr><td>Total</td><td class="n">12</td><td class="n">12</td></tr>
+          </table>
+        </div>
+        <button class="btn check">Check</button>
+        <div class="after" hidden>
+          <div class="verdict"></div>
+          <div class="report">
+            <b>Answer:</b> LLT: before 2, on 1, after 9. HHT: before 3, on 3, after 6.<br>
+            <b>Marking:</b> 1 mark for the LLT column all correct, 1 mark for the HHT column all correct. Check each column adds to 12.
+            <span class="src">VCAA 2024 NHT Exam 2 assessment guide, Question 2a</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="next"><button class="btn ghost" data-prev>← Back</button><button class="btn" data-next>Next: Reference sheet →</button></div>
+  </section>
+
+  <!-- ================= REFERENCE ================= -->
+  <section class="sec" id="reference" hidden>
+    <div class="kicker">Step 5 · Reference sheet</div>
+    <h2>Summary</h2>
+    <ul class="tight">
+      <li>A <b>frequency table</b> lists each category with its number and percentage, plus a <b>Total</b> row.</li>
+      <li><b>Percentage</b> = count ÷ total × 100. Percentages add to 100.</li>
+      <li>A <b>bar chart</b> has one bar per category, with gaps between bars.</li>
+      <li>A <b>percentage segmented bar chart</b> is one 0–100% bar. Segment size = top − bottom.</li>
+      <li>The <b>mode</b> is the most frequent category. Describe using <b>percentages</b> and name the variable.</li>
+    </ul>
+    <p>Print the A4 page below and glue it into your bound reference.</p>
+    <p class="print-btns"><button class="btn" data-print="colour">Print colour version</button> <button class="btn ghost" data-print="bw">Print black &amp; white version</button></p>
+
+    <div class="sheet-wrap">
+      <div class="sheet colour">
+        <div class="sh-head"><div><span class="tag">Data Analysis · 1B</span><h2>Displaying categorical data</h2></div><span>12MAG · Bound reference</span></div>
+
+        <div class="g2" style="gap:5mm">
+          <div class="stepsbox">
+            <h4>Frequency table</h4>
+            <table>
+              <tr><th>Category</th><th>Number</th><th>%</th></tr>
+              <tr><td>left</td><td>3</td><td>30</td></tr>
+              <tr><td>right</td><td>7</td><td>70</td></tr>
+              <tr><td><b>Total</b></td><td><b>10</b></td><td><b>100</b></td></tr>
+            </table>
+            <p style="margin:6px 0 0"><b>% = count ÷ total × 100</b><br>3 ÷ 10 × 100 = 30%</p>
+          </div>
+          <div class="stepsbox">
+            <h4>Describe it</h4>
+            <ol>
+              <li>Name the <b>mode</b> (most frequent category).</li>
+              <li>Quote <b>percentages</b>, not just counts.</li>
+              <li>Name the variable and the group.</li>
+            </ol>
+            <p style="margin:6px 0 0"><i>“The majority of the students (70%) are right-handed, while only 30% are left-handed.”</i></p>
+          </div>
+        </div>
+
+        <div class="g2" style="gap:5mm;margin-top:3mm">
+          <div>
+            <h4>Bar chart</h4>
+            <svg viewBox="0 0 300 160" style="width:100%" role="img" aria-label="Bar chart">
+              <g font-family="Inter,Arial,sans-serif" font-size="11" fill="#000">
+                <line x1="40" y1="10" x2="40" y2="130" stroke="#000"/><line x1="40" y1="130" x2="290" y2="130" stroke="#000"/>
+                <rect class="c1" x="75" y="80" width="60" height="50"/><rect class="c1" x="185" y="13" width="60" height="117"/>
+                <text x="105" y="145" text-anchor="middle">left</text><text x="215" y="145" text-anchor="middle">right</text>
+                <text x="34" y="134" text-anchor="end">0</text><text x="34" y="84" text-anchor="end">3</text><text x="34" y="17" text-anchor="end">7</text>
+                <text x="160" y="158" text-anchor="middle" font-size="9">gaps between bars · height = frequency</text>
+              </g>
+            </svg>
+          </div>
+          <div>
+            <h4>Percentage segmented bar chart</h4>
+            <svg viewBox="0 0 300 160" style="width:100%" role="img" aria-label="Segmented bar chart">
+              <g font-family="Inter,Arial,sans-serif" font-size="11" fill="#000">
+                <line x1="40" y1="10" x2="40" y2="130" stroke="#000"/>
+                <rect class="c1" x="70" y="46" width="80" height="84" stroke="#000"/><rect class="c2" x="70" y="10" width="80" height="36" stroke="#000"/>
+                <text x="34" y="134" text-anchor="end">0</text><text x="34" y="50" text-anchor="end">70</text><text x="34" y="14" text-anchor="end">100</text>
+                <rect class="c2" x="170" y="20" width="12" height="12" stroke="#000"/><text x="188" y="30">left</text>
+                <rect class="c1" x="170" y="40" width="12" height="12" stroke="#000"/><text x="188" y="50">right</text>
+                <text x="170" y="80">segment size =</text><text x="170" y="95" font-weight="700">top − bottom</text>
+                <text x="170" y="112">left: 100 − 70 = 30%</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="g2" style="margin-top:3mm">
+          <div class="stepsbox">
+            <h4>Which display?</h4>
+            <ul>
+              <li><b>Bar chart</b>: compare frequencies of categories.</li>
+              <li><b>Segmented bar chart</b>: show each category as a share of 100%. Needs a <b>key</b>.</li>
+              <li>Both display <b>one categorical variable</b>.</li>
+            </ul>
+          </div>
+          <div class="trapsbox">
+            <h4>⚠ Exam traps</h4>
+            <ul>
+              <li>Segment size is <b>top − bottom</b>: blue 74 − 56 = 18%. 18% picked the wrong segment (VCAA 2024 Exam 1 Q1).</li>
+              <li>“A <b>or</b> B” means <b>add</b> the two segment sizes (VCAA 2025 NHT Exam 1 Q2).</li>
+              <li>Frequency tables need a <b>Total</b> and <b>numbers, not tally marks</b> (VCAA 2023 Exam 2 report).</li>
+              <li>Check each column adds to the total before moving on.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="foot">Data and statistics: VCAA 2023 NHT Exam 2 Table 1; VCAA 2024 Exam 1 report; VCAA 2025 NHT Exam 1; VCAA 2023 Exam 2 report. © VCAA, used for educational purposes.</div>
+      </div>
+    </div>
+
+    <div class="next"><button class="btn ghost" data-prev>← Back</button><button class="btn" data-next>Finish 1B ✓</button></div>
+  </section>
+
+  </main>
+</div>
+<script src="../assets/site.js?v=5"></script>
+<script>
+  window.addEventListener('beforeprint', () => { if (window.goStep) window.goStep('reference', false); });
+  // Explore: build the table, then draw the charts
+  (function () {
+    const L = document.getElementById('bl'), R = document.getElementById('br');
+    const msg = document.getElementById('bmsg'), box = document.getElementById('bcharts'), svg = document.getElementById('bsvg');
+    let view = 'bar';
+    const draw = () => {
+      const l = 6, r = 4, f = 'font-family="Inter,system-ui,sans-serif" font-size="12"';
+      if (view === 'bar') {
+        const h = v => v * 24;
+        svg.innerHTML = `<g ${f} fill="#5f6b75"><line x1="60" y1="20" x2="60" y2="180" stroke="#9aa6af"/><line x1="60" y1="180" x2="400" y2="180" stroke="#9aa6af"/>
+          ${[0,2,4,6].map(v=>`<text x="52" y="${184-h(v)}" text-anchor="end">${v}</text><line x1="60" x2="400" y1="${180-h(v)}" y2="${180-h(v)}" stroke="#eef1f3"/>`).join('')}
+          <rect x="110" y="${180-h(l)}" width="80" height="${h(l)}" fill="#00838F"/><rect x="260" y="${180-h(r)}" width="80" height="${h(r)}" fill="#00838F"/>
+          <g text-anchor="middle" fill="#1d2328"><text x="150" y="198">left</text><text x="300" y="198">right</text><text x="230" y="218" font-weight="600">longest foot</text></g>
+          <text x="18" y="100" transform="rotate(-90 18 100)" text-anchor="middle" font-weight="600" fill="#1d2328">number</text></g>`;
+      } else {
+        const y = p => 200 - p * 1.8;
+        svg.innerHTML = `<g ${f} fill="#5f6b75"><line x1="90" y1="20" x2="90" y2="200" stroke="#9aa6af"/>
+          ${[0,60,100].map(v=>`<text x="82" y="${y(v)+4}" text-anchor="end">${v}</text>`).join('')}
+          <rect x="130" y="${y(60)}" width="110" height="${60*1.8}" fill="#00838F"/><rect x="130" y="${y(100)}" width="110" height="${40*1.8}" fill="#9fd3d8"/>
+          <text x="185" y="${y(30)+4}" text-anchor="middle" fill="#fff" font-weight="600">left 60%</text><text x="185" y="${y(80)+4}" text-anchor="middle" fill="#1d2328" font-weight="600">right 40%</text>
+          <text x="285" y="34" fill="#1d2328" font-weight="600">Key</text>
+          <rect x="285" y="44" width="14" height="14" fill="#00838F"/><text x="306" y="56" fill="#1d2328">left</text>
+          <rect x="285" y="66" width="14" height="14" fill="#9fd3d8"/><text x="306" y="78" fill="#1d2328">right</text>
+          <text x="30" y="110" transform="rotate(-90 30 110)" text-anchor="middle" font-weight="600" fill="#1d2328">percentage (%)</text></g>`;
+      }
+    };
+    document.getElementById('bcheck').addEventListener('click', () => {
+      const ok = L.value.trim() === '6' && R.value.trim() === '4';
+      L.classList.toggle('in-right', L.value.trim() === '6'); L.classList.toggle('in-wrong', L.value.trim() !== '6');
+      R.classList.toggle('in-right', R.value.trim() === '4'); R.classList.toggle('in-wrong', R.value.trim() !== '4');
+      msg.hidden = false; msg.className = 'verdict ' + (ok ? 'good' : 'bad');
+      msg.innerHTML = ok ? '<b>Correct.</b> 6 + 4 = 10. Now each percentage is count ÷ 10 × 100.' : '<b>Not quite.</b> Count again: your two numbers must add to 10.';
+      if (ok) {
+        document.getElementById('pl').textContent = '60'; document.getElementById('pr').textContent = '40';
+        box.hidden = false; draw();
+        document.getElementById('bdesc').innerHTML = '<b>Describe it:</b> The mode is <i>left</i>. The majority of the students (60%) have a longer left foot, while 40% have a longer right foot.';
+      }
+    });
+    box.querySelectorAll('.seg-toggle button').forEach(b => b.addEventListener('click', () => {
+      view = b.dataset.v; box.querySelectorAll('.seg-toggle button').forEach(x => x.setAttribute('aria-pressed', x === b)); draw();
+    }));
+  })();
+</script>
+</body>
+</html>

@@ -103,6 +103,31 @@
     inp.addEventListener('keydown', e => { if (e.key === 'Enter') check(); });
   });
 
+
+  /* ---------- multi-box answers (tables) ---------- */
+  document.querySelectorAll('.q[data-multi]').forEach(q => {
+    const inputs = [...q.querySelectorAll('input[data-ans]')];
+    const fb = q.querySelector('.after');
+    q.querySelector('.check').addEventListener('click', () => {
+      let right = 0;
+      inputs.forEach(i => {
+        const ok = i.value.trim().replace(/%$/, '') === i.dataset.ans;
+        i.classList.toggle('in-right', ok); i.classList.toggle('in-wrong', !ok); if (ok) right++;
+      });
+      const v = q.querySelector('.verdict');
+      const all = right === inputs.length;
+      v.className = 'verdict ' + (all ? 'good' : 'bad');
+      v.innerHTML = all ? '<b>Correct.</b> All ' + inputs.length + ' boxes right.' : '<b>' + right + ' of ' + inputs.length + ' boxes right.</b> Red boxes need another look.';
+      fb.hidden = false;
+    });
+  });
+
+  /* ---------- self-check (reveal after attempt) ---------- */
+  document.querySelectorAll('.q[data-reveal]').forEach(q => {
+    const btn = q.querySelector('.reveal'); const fb = q.querySelector('.after');
+    btn.addEventListener('click', () => { fb.hidden = false; btn.hidden = true; });
+  });
+
   /* ---------- sorter ---------- */
   const sorter = document.querySelector('.sorter');
   if (sorter) {

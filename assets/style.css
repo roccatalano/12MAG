@@ -213,3 +213,16 @@ table.data td.n{text-align:right;font-variant-numeric:tabular-nums}
 .sheet.colour .trapsbox b{color:#92400E}
 .sheet ol{margin:0;padding-left:1.2em}
 .sheet ol li{margin:2px 0}
+
+/* ---- table inputs ---- */
+table.data input{width:4.5em;font:inherit;padding:4px 6px;border:1px solid var(--line);border-radius:6px;text-align:right}
+table.data input.in-right{border-color:var(--good);background:var(--good-soft)}
+table.data input.in-wrong{border-color:var(--bad);background:var(--bad-soft)}
+.q img.fig{display:block;max-width:100%;width:440px;height:auto;margin:8px 0 12px}
+.chartbox{border:1px solid var(--line);border-radius:var(--radius);padding:12px;margin-top:12px}
+.seg-toggle{display:flex;gap:6px;margin-bottom:8px}
+.seg-toggle button{appearance:none;border:1px solid var(--line);background:#fff;border-radius:999px;padding:4px 12px;font:inherit;font-size:.88rem;cursor:pointer}
+.seg-toggle button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+.sheet .c1{fill:#555}.sheet .c2{fill:#fff}
+.sheet.colour .c1{fill:#00838F}.sheet.colour .c2{fill:#9fd3d8}
+.sheet.colour .stepsbox table th{background:#fff}
