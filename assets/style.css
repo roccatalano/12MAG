@@ -175,3 +175,35 @@ table.data td.n{text-align:right;font-variant-numeric:tabular-nums}
   .sheet-wrap{padding:0;background:none}
   @page{size:A4;margin:0}
 }
+
+/* ---- reference sheet: colour version ---- */
+.sheet .tag{display:block;font-size:8.5pt;letter-spacing:.08em;text-transform:uppercase;color:#555}
+.sheet .sh-head>div h2{margin:0}
+.sheet.colour{--cat:#C2410C;--cat-f:#FFEDD5;--num:#1D4ED8;--num-f:#DBEAFE}
+.sheet.colour .sh-head{background:linear-gradient(90deg,#00838F,#006972);color:#fff;border:0;border-radius:6px;padding:8px 12px;margin-bottom:10px;align-items:center}
+.sheet.colour .sh-head h2,.sheet.colour .sh-head .tag{color:#fff}
+.sheet.colour .sh-head .tag{opacity:.85}
+.sheet.colour rect.dat{fill:#e3f3f4;stroke:#00838F;stroke-width:2}
+.sheet.colour rect.cat{fill:var(--cat);stroke:var(--cat)}
+.sheet.colour rect.num{fill:var(--num);stroke:var(--num)}
+.sheet.colour rect.cat+text,.sheet.colour rect.num+text{fill:#fff}
+.sheet.colour rect.nom,.sheet.colour rect.ord{fill:var(--cat-f);stroke:var(--cat)}
+.sheet.colour rect.dis,.sheet.colour rect.con{fill:var(--num-f);stroke:var(--num)}
+.sheet.colour .l{stroke:#8a96a0}
+.sheet.colour table{border-collapse:separate;border-spacing:0 3px}
+.sheet.colour td,.sheet.colour th{border:0}
+.sheet.colour th{background:none;color:#006972;font-size:8.5pt;text-transform:uppercase;letter-spacing:.05em;border-bottom:1.5px solid #00838F}
+.sheet.colour tr.nom td,.sheet.colour tr.ord td{background:var(--cat-f)}
+.sheet.colour tr.dis td,.sheet.colour tr.con td{background:var(--num-f)}
+.sheet.colour tr.nom td:first-child,.sheet.colour tr.ord td:first-child{border-left:5px solid var(--cat);color:var(--cat)}
+.sheet.colour tr.dis td:first-child,.sheet.colour tr.con td:first-child{border-left:5px solid var(--num);color:var(--num)}
+.sheet.colour .g2>div{border-radius:6px;padding:2px 10px 8px}
+.sheet.colour .stepsbox{background:#e3f3f4}
+.sheet.colour .trapsbox{background:#FEF3C7;border-left:5px solid #D97706}
+.sheet.colour .trapsbox h4{color:#92400E;border-bottom-color:#D97706}
+.sheet.colour .stepsbox h4{border-bottom-color:#00838F}
+.sheet.colour .stepsbox ol{padding-left:1.3em}
+.sheet.colour .stepsbox li::marker{color:#00838F;font-weight:700}
+.sheet.colour .trapsbox b{color:#92400E}
+.sheet ol{margin:0;padding-left:1.2em}
+.sheet ol li{margin:2px 0}

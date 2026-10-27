@@ -7,7 +7,7 @@
 <meta name="description" content="12MAG 1A: categorical (nominal, ordinal) and numerical (discrete, continuous) data, with VCAA exam practice.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/style.css?v=2">
+<link rel="stylesheet" href="../assets/style.css?v=3">
 </head>
 <body>
 <header class="top"><div class="top-in">
@@ -321,38 +321,38 @@
 
     <div class="sheet-wrap">
       <div class="sheet colour">
-        <div class="sh-head"><h2>1A · Types of data</h2><span>12MAG · Data Analysis · Bound reference</span></div>
+        <div class="sh-head"><div><span class="tag">Data Analysis · 1A</span><h2>Types of data</h2></div><span>12MAG · Bound reference</span></div>
         <svg class="tree" viewBox="0 0 620 220" role="img" aria-label="Classification tree">
           <style>.n{fill:var(--sf1);stroke:var(--sk);stroke-width:1.6}.n2{fill:var(--sf2);stroke:var(--sk);stroke-width:1.6}.l{stroke:var(--sl);stroke-width:1.4;fill:none}.t{font:600 15px Inter,Arial,sans-serif;text-anchor:middle;fill:#000}.s{font:12px Inter,Arial,sans-serif;fill:#333;text-anchor:middle}</style>
           <path class="l" d="M310 46 V62 H155 V82 M310 62 H465 V82 M155 118 V134 H80 V154 M155 134 H230 V154 M465 118 V134 H390 V154 M465 134 H540 V154"/>
-          <rect class="n" x="250" y="10" width="120" height="36" rx="6"/><text class="t" x="310" y="33">Data</text>
-          <rect class="n" x="85" y="82" width="140" height="36" rx="6"/><text class="t" x="155" y="105">Categorical</text>
-          <rect class="n" x="395" y="82" width="140" height="36" rx="6"/><text class="t" x="465" y="105">Numerical</text>
-          <rect class="n2" x="22" y="154" width="116" height="36" rx="6"/><text class="t" x="80" y="177">Nominal</text>
-          <rect class="n2" x="172" y="154" width="116" height="36" rx="6"/><text class="t" x="230" y="177">Ordinal</text>
-          <rect class="n2" x="332" y="154" width="116" height="36" rx="6"/><text class="t" x="390" y="177">Discrete</text>
-          <rect class="n2" x="482" y="154" width="116" height="36" rx="6"/><text class="t" x="540" y="177">Continuous</text>
+          <rect class="n dat" x="250" y="10" width="120" height="36" rx="6"/><text class="t" x="310" y="33">Data</text>
+          <rect class="n cat" x="85" y="82" width="140" height="36" rx="6"/><text class="t" x="155" y="105">Categorical</text>
+          <rect class="n num" x="395" y="82" width="140" height="36" rx="6"/><text class="t" x="465" y="105">Numerical</text>
+          <rect class="n2 nom" x="22" y="154" width="116" height="36" rx="6"/><text class="t" x="80" y="177">Nominal</text>
+          <rect class="n2 ord" x="172" y="154" width="116" height="36" rx="6"/><text class="t" x="230" y="177">Ordinal</text>
+          <rect class="n2 dis" x="332" y="154" width="116" height="36" rx="6"/><text class="t" x="390" y="177">Discrete</text>
+          <rect class="n2 con" x="482" y="154" width="116" height="36" rx="6"/><text class="t" x="540" y="177">Continuous</text>
           <text class="s" x="80" y="210">names only</text><text class="s" x="230" y="210">natural order</text><text class="s" x="390" y="210">counted</text><text class="s" x="540" y="210">measured</text>
         </svg>
         <h4>Definitions and tests</h4>
         <table>
           <tr><th style="width:18%">Type</th><th>Meaning</th><th style="width:38%">VCAA example</th></tr>
-          <tr><td><b>Nominal</b></td><td>Categories that are just names, no order</td><td>exercise type (aerobic, boxing, circuit); snores (no, yes)</td></tr>
-          <tr><td><b>Ordinal</b></td><td>Categories with a natural order</td><td>recovery time (short, medium, long); blood pressure (low, normal, high)</td></tr>
-          <tr><td><b>Discrete</b></td><td>Counted; only particular values</td><td>number of billionaires in a country</td></tr>
-          <tr><td><b>Continuous</b></td><td>Measured; any value in a range</td><td>foot length, in centimetres</td></tr>
+          <tr class="nom"><td><b>Nominal</b></td><td>Categories that are just names, no order</td><td>exercise type (aerobic, boxing, circuit); snores (no, yes)</td></tr>
+          <tr class="ord"><td><b>Ordinal</b></td><td>Categories with a natural order</td><td>recovery time (short, medium, long); blood pressure (low, normal, high)</td></tr>
+          <tr class="dis"><td><b>Discrete</b></td><td>Counted; only particular values</td><td>number of billionaires in a country</td></tr>
+          <tr class="con"><td><b>Continuous</b></td><td>Measured; any value in a range</td><td>foot length, in centimetres</td></tr>
         </table>
         <div class="g2">
-          <div>
+          <div class="stepsbox">
             <h4>Decision steps</h4>
-            <ul>
+            <ol>
               <li>Does an average make sense? <b>No</b> → categorical. <b>Yes</b> → numerical.</li>
               <li>Categorical: is there a natural order? <b>Yes</b> → ordinal. <b>No</b> → nominal.</li>
               <li>Numerical: counted → discrete. Measured → continuous.</li>
-            </ul>
+            </ol>
           </div>
-          <div>
-            <h4>Exam traps</h4>
+          <div class="trapsbox">
+            <h4>⚠ Exam traps</h4>
             <ul>
               <li>Number labels (postcodes, 1 = yes) are <b>categorical</b>.</li>
               <li>Grouped numbers, e.g. age (under 50 years, 50 years or over), are <b>ordinal</b>. Only 31% got this right (VCAA 2016 Exam 1 Q2).</li>
@@ -371,7 +371,7 @@
 
   </main>
 </div>
-<script src="../assets/site.js?v=2"></script>
+<script src="../assets/site.js?v=3"></script>
 <script>
   // print should show the reference sheet even if another step is open
   window.addEventListener('beforeprint', () => { if (window.goStep) window.goStep('reference', false); });
