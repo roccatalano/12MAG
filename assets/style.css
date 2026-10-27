@@ -226,3 +226,5 @@ table.data input.in-wrong{border-color:var(--bad);background:var(--bad-soft)}
 .sheet .c1{fill:#555}.sheet .c2{fill:#fff}
 .sheet.colour .c1{fill:#00838F}.sheet.colour .c2{fill:#9fd3d8}
 .sheet.colour .stepsbox table th{background:#fff}
+.sheet .c3{fill:#ddd}.sheet .c4{fill:#888}.sheet .c5{fill:#eee}
+.sheet.colour .c3{fill:#e3f3f4}
