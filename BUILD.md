@@ -51,6 +51,19 @@ In progress: none
 4. **Exam practice** — 4–6 VCAA questions, **verbatim**, cited (`VCAA 2024 Exam 1, Q3`). **Never write or alter questions.** Priority: current Study Design VCAA 2023–2026 (`Past Exams\Current Study Design\<year>\vcaa\`), then past-design VCAA where it adds report data. MC → `.q[data-answer]` with % bars from the report; typed → `data-accept`; tables → `data-multi`; drawings → `data-reveal`. Exam 2 parts show % per mark + average. Quote examiner comments verbatim. Files: `-report` = external assessment report (statistics); `-guide` = marking scheme. NHT reports give answers only — say so. Figures: crop from the paper at ~220 dpi, trimmed to white, into `assets/img/<code>/`.
 5. **Reference sheet** — A4, colour + black & white versions (same markup, `.sheet.colour`/`.sheet.bw`), no notes box, must print on ONE page. Panels: key content, worked mini-example, display/decision box, ⚠ Exam traps with report statistics, sources footer "© VCAA, used for educational purposes".
 
+## SOCS progression (Rocco, 28 Oct 2026)
+Every page that describes a **numerical distribution** uses SOCS (Shape, Outliers, Centre, Spread) and shows it growing. Copy the `.socs` card from `data-analysis/1c.html`: move the newly taught tool for each letter into its teal "now" line, keep the earlier tools, and leave later ones as grey tagged lines. Update the SOCS sentence frame (teacher frame), label the worked example S · O · C · S, and put a SOCS panel on the reference sheet.
+
+| Page | S Shape | O Outliers | C Centre | S Spread |
+|---|---|---|---|---|
+| 1C | symmetric / positively / negatively skewed | “possible outlier at …” by eye (gap) | interval holding the middle value; modal interval | lowest to highest (by eye) |
+| 1D | same, from dot and stem plots | exact value of a possible outlier | exact mode and median from the plot | exact min and max |
+| 1E | shape on a log scale | outliers on a log scale | interval on the log scale, converted back | — |
+| 1F | — | — | mean, median, mode; median when skewed or outliers | range, IQR, standard deviation |
+| 1G | from a boxplot | fences Q1 − 1.5 × IQR, Q3 + 1.5 × IQR | median from a boxplot | IQR and range from a boxplot |
+| 1H | approximately normal (bell-shaped) | — | mean | standard deviation, 68–95–99.7% |
+| 2C | compare shapes | compare outliers | compare medians | compare IQRs/ranges (parallel boxplots, back-to-back stem plots) |
+
 ## Site wiring
 - Link the card on `index.html` (change `card soon` div → `<a class="card" href="data-analysis/<code>.html" data-lesson="<code>">` with "Ready").
 - Bump `?v=` on CSS/JS links when shared assets change.

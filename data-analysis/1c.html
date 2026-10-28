@@ -7,7 +7,7 @@
 <meta name="description" content="12MAG 1C: frequency tables and histograms for numerical data, and describing shape, centre, spread and outliers, with VCAA exam practice.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/style.css?v=10">
+<link rel="stylesheet" href="../assets/style.css?v=11">
 </head>
 <body>
 <header class="top"><div class="top-in">
@@ -104,16 +104,24 @@
     </div>
     <div class="tb">📘 <b>In your textbook:</b> Cambridge 1C, <b>Example 8</b> “Constructing a histogram from a frequency table” (p. 16). Calculator steps: <b>CAS 1</b> “How to construct a histogram” (TI-Nspire p. 16, ClassPad p. 18).</div>
 
-    <h3>4. Describing the distribution</h3>
-    <p>Describe four features, in this order:</p>
-    <div class="def">
-      <div class="box"><span class="h">Shape</span>Is it symmetric, or does it have a long tail on one side (skewed)?</div>
-      <div class="box"><span class="h">Outliers</span>Values that sit well away from the main body of the data, often after a gap.</div>
+    <h3>4. Describing the distribution: SOCS</h3>
+    <p>Describe every numerical distribution with <b>SOCS</b>, in this order. In 1C you describe each feature <b>by eye</b>; later subtopics add exact tools for each letter.</p>
+    <div class="socs">
+      <div class="box"><span class="L">S</span><span class="h">Shape</span>
+        <div class="now">Symmetric, positively skewed or negatively skewed</div>
+        <div class="later"><span>1H</span> approximately normal (bell-shaped)</div></div>
+      <div class="box"><span class="L">O</span><span class="h">Outliers</span>
+        <div class="now">“a possible outlier at …” or “no outliers”: spot a value cut off by a gap</div>
+        <div class="later"><span>1G</span> confirm with the fences Q<sub>1</sub> − 1.5 × IQR and Q<sub>3</sub> + 1.5 × IQR</div></div>
+      <div class="box"><span class="L">C</span><span class="h">Centre</span>
+        <div class="now">The interval holding the middle value; the modal (tallest) interval</div>
+        <div class="later"><span>1D</span> exact mode and median from dot and stem plots<br><span>1F</span> mean, median and mode, and which one to use</div></div>
+      <div class="box"><span class="L">S</span><span class="h">Spread</span>
+        <div class="now">Roughly where the values start and finish (lowest to highest interval)</div>
+        <div class="later"><span>1F</span> range, IQR and standard deviation</div></div>
     </div>
-    <div class="def">
-      <div class="box"><span class="h">Centre</span>The middle value: half the data is below it, half above. Find the interval holding the middle value.</div>
-      <div class="box"><span class="h">Spread</span>How far the data stretches: from the lowest interval to the highest.</div>
-    </div>
+    <p class="src" style="margin-top:0">Teal-edged line = what you use now (1C). Grey tagged lines = coming later; you will see SOCS grow on each data page.</p>
+    <p><b>S · Shape.</b> Look for the long tail:</p>
     <div class="shapes">
       <figure><svg class="sketch" viewBox="0 0 160 84" role="img" aria-label="sketch of a symmetric histogram"><rect class="sk" x="5.0" y="71" width="21.4" height="9"/><rect class="sk" x="26.4" y="53" width="21.4" height="27"/><rect class="sk" x="47.9" y="26" width="21.4" height="54"/><rect class="sk" x="69.3" y="8" width="21.4" height="72"/><rect class="sk" x="90.7" y="26" width="21.4" height="54"/><rect class="sk" x="112.1" y="53" width="21.4" height="27"/><rect class="sk" x="133.6" y="71" width="21.4" height="9"/><line x1="2" x2="158" y1="80" y2="80" stroke="#000" stroke-width="1.5"/></svg><figcaption><b>Symmetric</b>tails equal on both sides</figcaption></figure>
       <figure><svg class="sketch" viewBox="0 0 160 84" role="img" aria-label="sketch of a positively skewed histogram"><rect class="sk" x="5.0" y="53" width="18.8" height="27"/><rect class="sk" x="23.8" y="8" width="18.8" height="72"/><rect class="sk" x="42.5" y="17" width="18.8" height="63"/><rect class="sk" x="61.2" y="35" width="18.8" height="45"/><rect class="sk" x="80.0" y="53" width="18.8" height="27"/><rect class="sk" x="98.8" y="62" width="18.8" height="18"/><rect class="sk" x="117.5" y="71" width="18.8" height="9"/><rect class="sk" x="136.2" y="71" width="18.8" height="9"/><line x1="2" x2="158" y1="80" y2="80" stroke="#000" stroke-width="1.5"/></svg><figcaption><b>Positively skewed</b>long tail to the right (high values)</figcaption></figure>
@@ -125,15 +133,18 @@
     <svg class="tree" data-chart='{"type":"hist","edges":["0.2","0.4","0.6","0.8","1.0","1.2","1.4","1.6","1.8","2.0","2.2"],"vals":[3,8,8,3,2,1,4,1,0,1],"max":8,"step":2,"xlabel":"volume (m³)","ylabel":"frequency"}' role="img" aria-label="Histogram of trunk volume for 31 black cherry trees: 3, 8, 8, 3, 2, 1, 4, 1, 0, 1"></svg>
     <span class="src">Data: VCAA 2023 NHT Exam 1, Questions 2–4 (‘Black Cherry Trees’, Wolfram Data Repository)</span>
     <ul class="tight" style="margin-top:10px">
-      <li><b>Shape:</b> the peak is on the left and the tail runs to the right → <b>positively skewed</b>.</li>
-      <li><b>Outliers:</b> the tree in 2.0–2.2 is cut off from the rest by an empty interval → a <b>possible outlier</b>.</li>
-      <li><b>Centre:</b> 31 trees, so the middle tree is the 16th. Counting up: 3, then 3 + 8 = 11, then 11 + 8 = 19. The 16th tree is in <b>0.6 to 0.8 m³</b>.</li>
-      <li><b>Spread:</b> volumes range from about <b>0.2 to 2.2 m³</b>.</li>
+      <li><b>S · Shape:</b> the peak is on the left and the tail runs to the right → <b>positively skewed</b>.</li>
+      <li><b>O · Outliers:</b> the tree in 2.0–2.2 m³ is cut off from the rest by an empty interval → a <b>possible outlier</b> at 2.0–2.2 m³.</li>
+      <li><b>C · Centre:</b> 31 trees, so the middle tree is the 16th. Counting up: 3, then 3 + 8 = 11, then 11 + 8 = 19. The 16th tree is in <b>0.6–0.8 m³</b>.</li>
+      <li><b>S · Spread:</b> volumes range from about <b>0.2 to 2.2 m³</b>.</li>
     </ul>
     <div class="box">
-      <b>Sentence frame</b> (teacher frame)<br>
-      “The distribution of <i>[variable]</i> is <i>[shape]</i> with <i>[a possible outlier at … / no outliers]</i>. The centre is in <i>[interval]</i>, and values range from about <i>[low]</i> to <i>[high]</i>.”<br><br>
-      <i>Example:</i> The distribution of volume is positively skewed with a possible outlier at 2.0–2.2 m³. The centre is in 0.6–0.8 m³, and volumes range from about 0.2 to 2.2 m³.
+      <b>SOCS sentence frame, 1C level</b> (teacher frame)<br>
+      <b>S</b> “The distribution of <i>[variable]</i> is <i>[shape]</i>,<br>
+      <b>O</b> with <i>[a possible outlier at … / no outliers]</i>.<br>
+      <b>C</b> The centre is in <i>[interval]</i>,<br>
+      <b>S</b> and values range from about <i>[low]</i> to <i>[high]</i>.”<br><br>
+      <i>Example:</i> The distribution of volume is positively skewed, with a possible outlier at 2.0–2.2 m³. The centre is in 0.6–0.8 m³, and volumes range from about 0.2 to 2.2 m³.
     </div>
     <div class="box warn">
       <b>Name the shape, then mention outliers.</b> On a 2020 shape question the examiners said: <blockquote>“Most students recognised the distribution was positively skewed. It was acceptable to add that there were no outliers.”</blockquote>
@@ -151,7 +162,7 @@
   <section class="sec" id="explore" hidden>
     <div class="kicker">Step 2 · Explore</div>
     <h2>Histogram lab</h2>
-    <p>Pick a VCAA data set. Switch between a frequency and a percentage axis, slide the cut-off to count the values below it, then decide the shape.</p>
+    <p>Pick a VCAA data set. Switch between a frequency and a percentage axis, slide the cut-off to count the values below it, then do the first two letters of SOCS.</p>
     <div class="box" id="lab">
       <div class="seg-toggle" id="lset"><button aria-pressed="true" data-d="gdp">GDP per capita (41 countries)</button><button aria-pressed="false" data-d="tree">Cherry tree volume (31 trees)</button></div>
       <div class="seg-toggle" id="laxis"><button aria-pressed="true" data-a="f">Frequency axis</button><button aria-pressed="false" data-a="p">Percentage axis</button></div>
@@ -159,9 +170,9 @@
       <span class="src" id="lsrc"></span>
       <div class="lab-row"><label for="lcut">Count the values below:</label><input type="range" id="lcut" min="0" max="7" value="2"><span class="lab-out" id="lcutv"></span></div>
       <p id="lcount" style="margin:4px 0 12px"></p>
-      <p style="margin:0 0 6px"><b>What is the shape?</b></p>
+      <p style="margin:0 0 6px"><b>S · What is the shape?</b></p>
       <div class="seg-toggle" id="lshape"><button aria-pressed="false" data-s="sym">Symmetric</button><button aria-pressed="false" data-s="pos">Positively skewed</button><button aria-pressed="false" data-s="neg">Negatively skewed</button></div>
-      <p style="margin:8px 0 6px"><b>Is there a possible outlier?</b></p>
+      <p style="margin:8px 0 6px"><b>O · Is there a possible outlier?</b></p>
       <div class="seg-toggle" id="lout"><button aria-pressed="false" data-o="yes">Yes</button><button aria-pressed="false" data-o="no">No</button></div>
       <div id="lmsg" class="verdict" hidden></div>
     </div>
@@ -389,7 +400,7 @@
       <li>Few values → list each value. Many values → group into <b>equal intervals</b> (lower end included).</li>
       <li>A <b>histogram</b> has a number scale and touching bars. Total = sum of the bar heights.</li>
       <li><b>Percentage</b> = (sum of the bars you need) ÷ total × 100.</li>
-      <li>Describe <b>shape</b>, <b>outliers</b>, <b>centre</b> and <b>spread</b>. Skew is named after the long tail.</li>
+      <li>Describe with <b>SOCS</b>: <b>S</b>hape, <b>O</b>utliers, <b>C</b>entre, <b>S</b>pread. Skew is named after the long tail.</li>
     </ul>
     <p>Print the A4 page below and glue it into your bound reference.</p>
     <p class="print-btns"><button class="btn" data-print="colour">Print colour version</button> <button class="btn ghost" data-print="bw">Print black &amp; white version</button></p>
@@ -414,7 +425,7 @@
           </div>
           <div>
             <h4>Histogram</h4>
-            <p style="margin:0 0 2px;font-size:9pt">Number scale · bars touch · height = frequency</p>
+            <p style="margin:0 0 2px;font-size:9pt">Numerical data · number scale · bars touch (bar chart = categorical, gaps)</p>
             <svg style="width:100%" data-chart='{"type":"hist","edges":[0,1000,2000,3000,4000,5000,6000,7000],"vals":[2,11,12,5,3,6,2],"max":15,"step":3,"xlabel":"GDP per capita ($ per year)","ylabel":"frequency","fs":11,"sheet":true}' role="img" aria-label="Histogram"></svg>
           </div>
         </div>
@@ -436,19 +447,20 @@
               <figure><svg class="sketch" viewBox="0 0 160 84" role="img" aria-label="positively skewed"><rect class="sk" x="5.0" y="53" width="18.8" height="27"/><rect class="sk" x="23.8" y="8" width="18.8" height="72"/><rect class="sk" x="42.5" y="17" width="18.8" height="63"/><rect class="sk" x="61.2" y="35" width="18.8" height="45"/><rect class="sk" x="80.0" y="53" width="18.8" height="27"/><rect class="sk" x="98.8" y="62" width="18.8" height="18"/><rect class="sk" x="117.5" y="71" width="18.8" height="9"/><rect class="sk" x="136.2" y="71" width="18.8" height="9"/><line x1="2" x2="158" y1="80" y2="80" stroke="#000" stroke-width="1.5"/></svg><figcaption><b>Positive</b> tail → right</figcaption></figure>
               <figure><svg class="sketch" viewBox="0 0 160 84" role="img" aria-label="negatively skewed"><rect class="sk" x="5.0" y="71" width="18.8" height="9"/><rect class="sk" x="23.8" y="71" width="18.8" height="9"/><rect class="sk" x="42.5" y="62" width="18.8" height="18"/><rect class="sk" x="61.2" y="53" width="18.8" height="27"/><rect class="sk" x="80.0" y="35" width="18.8" height="45"/><rect class="sk" x="98.8" y="17" width="18.8" height="63"/><rect class="sk" x="117.5" y="8" width="18.8" height="72"/><rect class="sk" x="136.2" y="53" width="18.8" height="27"/><line x1="2" x2="158" y1="80" y2="80" stroke="#000" stroke-width="1.5"/></svg><figcaption><b>Negative</b> tail → left</figcaption></figure>
             </div>
-            <p style="margin:2px 0 0;font-size:9.5pt"><b>Describe:</b> shape · outliers · centre · spread.<br><i>“Positively skewed with a possible outlier at 2.0–2.2 m³. Centre in 0.6–0.8 m³; values range from about 0.2 to 2.2 m³.”</i></p>
+            <p style="margin:2px 0 0;font-size:9.5pt"><b>SOCS example:</b> <i>“Positively skewed with a possible outlier at 2.0–2.2 m³. Centre in 0.6–0.8 m³; values range from about 0.2 to 2.2 m³.”</i></p>
           </div>
         </div>
 
         <div class="g2" style="margin-top:3mm">
           <div class="stepsbox">
-            <h4>Which display?</h4>
+            <h4>SOCS: describe a distribution</h4>
             <ul>
-              <li><b>Histogram</b>: one <b>numerical</b> variable (counts or measurements).</li>
-              <li><b>Bar chart</b>: one <b>categorical</b> variable (gaps between bars).</li>
-              <li><b>Outlier</b>: a value well away from the rest, usually after an empty interval.</li>
-              <li>“Skewed” is only for <b>one</b> variable, never a scatterplot (2014 report).</li>
+              <li><b>S</b>hape: symmetric / positively skewed / negatively skewed. Name the <b>long tail</b>; “skewed” is for one variable only.</li>
+              <li><b>O</b>utliers: “a possible outlier at …” or “no outliers”. Look for a value cut off by a gap.</li>
+              <li><b>C</b>entre: the interval holding the middle value.</li>
+              <li><b>S</b>pread: about where values start and finish.</li>
             </ul>
+            <p style="margin:4px 0 0;font-size:9pt"><i>Coming: 1D exact values · 1F mean, median, mode, range, IQR, SD · 1G outlier fences · 1H normal.</i></p>
           </div>
           <div class="trapsbox">
             <h4>⚠ Exam traps</h4>

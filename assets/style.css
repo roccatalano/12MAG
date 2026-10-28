@@ -244,3 +244,13 @@ table.data input.in-wrong{border-color:var(--bad);background:var(--bad-soft)}
 .lab-row input[type=range]{flex:1 1 200px;accent-color:var(--accent)}
 .lab-out{font-weight:600}
 @media(max-width:600px){.shapes{grid-template-columns:1fr 1fr 1fr;gap:4px}.shapes figure{font-size:.78rem}}
+
+/* ---- SOCS progression card (1C onward) ---- */
+.socs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:12px 0}
+.socs .box{margin:0;position:relative;padding-top:10px}
+.socs .L{display:block;font-size:1.9rem;font-weight:700;line-height:1;color:var(--accent)}
+.socs .h{display:block;font-weight:700;margin:2px 0 6px}
+.socs .now{font-weight:600;font-size:.92rem;border-left:3px solid var(--accent);padding-left:7px;margin-bottom:8px}
+.socs .later{font-size:.85rem;color:#6b7680}
+.socs .later span{display:inline-block;font-size:.72rem;font-weight:700;border:1px solid #b9c2c9;border-radius:999px;padding:0 6px;margin:2px 4px 2px 0;color:#5f6b75}
+@media(max-width:820px){.socs{grid-template-columns:1fr 1fr}}
