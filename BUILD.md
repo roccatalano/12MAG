@@ -39,7 +39,7 @@ Each run builds **exactly one** subtopic page, checks it, pushes it, and ticks i
 ## Locking
 Before starting, check the "In progress" line. If it names a subtopic started less than 50 minutes ago, STOP (another run is working). Otherwise set it to `In progress: <code> <ISO time>` and push before building. Clear it when done.
 
-In progress: 1C 2026-10-28T00:27Z
+In progress: none
 
 ## Page recipe (every page)
 1. **Learn** — own-words notes (never copied from Cambridge), key-ideas box, definition cards, warn boxes quoting VCAA examiner reports verbatim with citation, sentence frames marked "(teacher frame)".
