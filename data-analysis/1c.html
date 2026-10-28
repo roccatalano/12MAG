@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1C Numerical Data Displays</title>
+<meta name="description" content="12MAG 1C: frequency tables and histograms for numerical data, and describing shape, centre, spread and outliers, with VCAA exam practice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css?v=10">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="../">12MAG <span>Study Hub</span></a>
+  <span class="crumb">/ <a href="../#data">Data Analysis</a> / 1C</span>
+</div></header>
+
+<div class="lesson" data-lesson-id="1c">
+  <aside class="rail">
+    <h1>1C Displaying numerical data</h1>
+    <div class="sub">Data Analysis · Chapter 1</div>
+    <ol class="steps">
+      <li><button data-go="learn"><span class="dot"></span>Learn</button></li>
+      <li><button data-go="explore"><span class="dot"></span>Explore</button></li>
+      <li><button data-go="watch"><span class="dot"></span>Watch</button></li>
+      <li><button data-go="practice"><span class="dot"></span>Exam practice</button></li>
+      <li><button data-go="reference"><span class="dot"></span>Reference sheet</button></li>
+    </ol>
+    <div class="progress"><span>0 of 5 sections done</span><div class="bar"><i></i></div></div>
+  </aside>
+
+  <main class="content">
+
+  <!-- ================= LEARN ================= -->
+  <section class="sec" id="learn">
+    <div class="kicker">Step 1 · Learn</div>
+    <h2>Organising and picturing numerical data</h2>
+    <p>Numerical data (1A) is organised in a <b>frequency table</b>, displayed in a <b>histogram</b>, and then described by its <b>shape</b>, any <b>outliers</b>, its <b>centre</b> and its <b>spread</b>.</p>
+
+    <div class="box key">
+      <h3>By the end of this page you can</h3>
+      <ul class="tight">
+        <li>build a <b>frequency table</b> for numerical data, grouping it into intervals when needed</li>
+        <li>read a <b>histogram</b>: count values, find totals and percentages</li>
+        <li>describe a distribution as <b>symmetric</b>, <b>positively skewed</b> or <b>negatively skewed</b>, name any <b>outliers</b>, and estimate the <b>centre</b> and <b>spread</b></li>
+      </ul>
+    </div>
+
+    <h3>1. Frequency table: a few different values</h3>
+    <p>When a discrete variable only takes a handful of values, list each value with its count. Here are the shoe sizes of 46 adults from a VCAA exam:</p>
+    <div style="overflow-x:auto">
+    <table class="data">
+      <tr><th>Shoe size</th><th>Number</th><th>Percentage (%)</th></tr>
+      <tr><td>5</td><td class="n">2</td><td class="n">4.3</td></tr>
+      <tr><td>6</td><td class="n">4</td><td class="n">8.7</td></tr>
+      <tr><td>7</td><td class="n">7</td><td class="n">15.2</td></tr>
+      <tr><td>8</td><td class="n">12</td><td class="n">26.1</td></tr>
+      <tr><td>9</td><td class="n">9</td><td class="n">19.6</td></tr>
+      <tr><td>10</td><td class="n">6</td><td class="n">13.0</td></tr>
+      <tr><td>11</td><td class="n">3</td><td class="n">6.5</td></tr>
+      <tr><td>12</td><td class="n">2</td><td class="n">4.3</td></tr>
+      <tr><td>13</td><td class="n">1</td><td class="n">2.2</td></tr>
+      <tr><th>Total</th><th class="n">46</th><th class="n">100</th></tr>
+    </table>
+    </div>
+    <span class="src">Data: counted from the dot plot in VCAA 2026 NHT Exam 1, Questions 2–3</span>
+    <p>Percentage = count ÷ total × 100, so size 8 is 12 ÷ 46 × 100 = 26.1%. The rounded percentages add to 99.9, which is fine: say “100 (allow for rounding)”.</p>
+    <p>A histogram of this data has one bar per shoe size. The bars <b>touch</b> because the scale is numerical, and each label sits under the middle of its bar.</p>
+    <svg class="tree" data-chart='{"type":"hist","cats":[5,6,7,8,9,10,11,12,13],"vals":[2,4,7,12,9,6,3,2,1],"max":14,"step":2,"xlabel":"shoe size","ylabel":"frequency"}' role="img" aria-label="Histogram of shoe size: 5 has 2, 6 has 4, 7 has 7, 8 has 12, 9 has 9, 10 has 6, 11 has 3, 12 has 2, 13 has 1"></svg>
+    <div class="tb">📘 <b>In your textbook:</b> Cambridge 1C, <b>Example 6</b> “Constructing a frequency table for discrete numerical data taking a small number of values” (p. 14).</div>
+
+    <h3>2. Grouped frequency table: lots of different values</h3>
+    <p>When the data has many different values (usually continuous data, like money or volume), group it into <b>equal-width intervals</b>. Here is GDP per capita, in dollars per year, for 41 African countries, read from a VCAA histogram:</p>
+    <div style="overflow-x:auto">
+    <table class="data">
+      <tr><th>GDP per capita ($ per year)</th><th>Number</th><th>Percentage (%)</th></tr>
+      <tr><td>0 to less than 1000</td><td class="n">2</td><td class="n">4.9</td></tr>
+      <tr><td>1000 to less than 2000</td><td class="n">11</td><td class="n">26.8</td></tr>
+      <tr><td>2000 to less than 3000</td><td class="n">12</td><td class="n">29.3</td></tr>
+      <tr><td>3000 to less than 4000</td><td class="n">5</td><td class="n">12.2</td></tr>
+      <tr><td>4000 to less than 5000</td><td class="n">3</td><td class="n">7.3</td></tr>
+      <tr><td>5000 to less than 6000</td><td class="n">6</td><td class="n">14.6</td></tr>
+      <tr><td>6000 to less than 7000</td><td class="n">2</td><td class="n">4.9</td></tr>
+      <tr><th>Total</th><th class="n">41</th><th class="n">100</th></tr>
+    </table>
+    </div>
+    <span class="src">Data: VCAA 2024 NHT Exam 1, Question 1 (World Bank data). Interval wording follows that question's options, e.g. “greater than or equal to 1000 but less than 2000”.</span>
+    <div class="box key" style="margin-top:14px">
+      <b>Which interval does a boundary value go in?</b> Each interval includes its <b>lower</b> end but not its upper end. A country with exactly $2000 goes in “2000 to less than 3000”. (teacher note)
+    </div>
+    <div class="tb">📘 <b>In your textbook:</b> Cambridge 1C, <b>Example 7</b> “Constructing a grouped frequency table” (p. 15).</div>
+
+    <h3>3. The histogram</h3>
+    <p>A histogram is the standard display for numerical data:</p>
+    <ul class="tight">
+      <li>the horizontal axis is a <b>number scale</b>, labelled with the variable (and units)</li>
+      <li>each bar covers one interval, and the bars <b>touch</b> (no gaps, unless an interval has no data)</li>
+      <li>bar <b>height</b> is the frequency (or the percentage frequency)</li>
+    </ul>
+    <svg class="tree" data-chart='{"type":"hist","edges":[0,1000,2000,3000,4000,5000,6000,7000],"vals":[2,11,12,5,3,6,2],"max":15,"step":3,"xlabel":"GDP per capita (dollars per year)","ylabel":"frequency","fs":11}' role="img" aria-label="Histogram of GDP per capita for 41 African countries"></svg>
+    <div class="box warn">
+      <b>Reading a histogram:</b> add the bar heights to get the total. To find a percentage, add the heights of the bars you need, then divide by the <b>total</b>, not by the number of bars. Below $2000: (2 + 11) ÷ 41 × 100 = 31.7%.
+      <span class="src">Method: teacher. Data: VCAA 2024 NHT Exam 1, Question 1</span>
+    </div>
+    <div class="tb">📘 <b>In your textbook:</b> Cambridge 1C, <b>Example 8</b> “Constructing a histogram from a frequency table” (p. 16). Calculator steps: <b>CAS 1</b> “How to construct a histogram” (TI-Nspire p. 16, ClassPad p. 18).</div>
+
+    <h3>4. Describing the distribution</h3>
+    <p>Describe four features, in this order:</p>
+    <div class="def">
+      <div class="box"><span class="h">Shape</span>Is it symmetric, or does it have a long tail on one side (skewed)?</div>
+      <div class="box"><span class="h">Outliers</span>Values that sit well away from the main body of the data, often after a gap.</div>
+    </div>
+    <div class="def">
+      <div class="box"><span class="h">Centre</span>The middle value: half the data is below it, half above. Find the interval holding the middle value.</div>
+      <div class="box"><span class="h">Spread</span>How far the data stretches: from the lowest interval to the highest.</div>
+    </div>
+    <div class="shapes">
+      <figure><svg class="sketch" viewBox="0 0 160 84" role="img" aria-label="sketch of a symmetric histogram"><rect class="sk" x="5.0" y="71" width="21.4" height="9"/><rect class="sk" x="26.4" y="53" width="21.4" height="27"/><rect class="sk" x="47.9" y="26" width="21.4" height="54"/><rect class="sk" x="69.3" y="8" width="21.4" height="72"/><rect class="sk" x="90.7" y="26" width="21.4" height="54"/><rect class="sk" x="112.1" y="53" width="21.4" height="27"/><rect class="sk" x="133.6" y="71" width="21.4" height="9"/><line x1="2" x2="158" y1="80" y2="80" stroke="#000" stroke-width="1.5"/></svg><figcaption><b>Symmetric</b>tails equal on both sides</figcaption></figure>
+      <figure><svg class="sketch" viewBox="0 0 160 84" role="img" aria-label="sketch of a positively skewed histogram"><rect class="sk" x="5.0" y="53" width="18.8" height="27"/><rect class="sk" x="23.8" y="8" width="18.8" height="72"/><rect class="sk" x="42.5" y="17" width="18.8" height="63"/><rect class="sk" x="61.2" y="35" width="18.8" height="45"/><rect class="sk" x="80.0" y="53" width="18.8" height="27"/><rect class="sk" x="98.8" y="62" width="18.8" height="18"/><rect class="sk" x="117.5" y="71" width="18.8" height="9"/><rect class="sk" x="136.2" y="71" width="18.8" height="9"/><line x1="2" x2="158" y1="80" y2="80" stroke="#000" stroke-width="1.5"/></svg><figcaption><b>Positively skewed</b>long tail to the right (high values)</figcaption></figure>
+      <figure><svg class="sketch" viewBox="0 0 160 84" role="img" aria-label="sketch of a negatively skewed histogram"><rect class="sk" x="5.0" y="71" width="18.8" height="9"/><rect class="sk" x="23.8" y="71" width="18.8" height="9"/><rect class="sk" x="42.5" y="62" width="18.8" height="18"/><rect class="sk" x="61.2" y="53" width="18.8" height="27"/><rect class="sk" x="80.0" y="35" width="18.8" height="45"/><rect class="sk" x="98.8" y="17" width="18.8" height="63"/><rect class="sk" x="117.5" y="8" width="18.8" height="72"/><rect class="sk" x="136.2" y="53" width="18.8" height="27"/><line x1="2" x2="158" y1="80" y2="80" stroke="#000" stroke-width="1.5"/></svg><figcaption><b>Negatively skewed</b>long tail to the left (low values)</figcaption></figure>
+    </div>
+    <p class="src" style="margin-top:0">Sketches only (not real data). <b>The skew is named after the tail, not the peak.</b> A peak on the left means the tail goes right: positively skewed.</p>
+
+    <p><b>Worked example.</b> The volume, in m³, of the trunks of 31 black cherry trees:</p>
+    <svg class="tree" data-chart='{"type":"hist","edges":["0.2","0.4","0.6","0.8","1.0","1.2","1.4","1.6","1.8","2.0","2.2"],"vals":[3,8,8,3,2,1,4,1,0,1],"max":8,"step":2,"xlabel":"volume (m³)","ylabel":"frequency"}' role="img" aria-label="Histogram of trunk volume for 31 black cherry trees: 3, 8, 8, 3, 2, 1, 4, 1, 0, 1"></svg>
+    <span class="src">Data: VCAA 2023 NHT Exam 1, Questions 2–4 (‘Black Cherry Trees’, Wolfram Data Repository)</span>
+    <ul class="tight" style="margin-top:10px">
+      <li><b>Shape:</b> the peak is on the left and the tail runs to the right → <b>positively skewed</b>.</li>
+      <li><b>Outliers:</b> the tree in 2.0–2.2 is cut off from the rest by an empty interval → a <b>possible outlier</b>.</li>
+      <li><b>Centre:</b> 31 trees, so the middle tree is the 16th. Counting up: 3, then 3 + 8 = 11, then 11 + 8 = 19. The 16th tree is in <b>0.6 to 0.8 m³</b>.</li>
+      <li><b>Spread:</b> volumes range from about <b>0.2 to 2.2 m³</b>.</li>
+    </ul>
+    <div class="box">
+      <b>Sentence frame</b> (teacher frame)<br>
+      “The distribution of <i>[variable]</i> is <i>[shape]</i> with <i>[a possible outlier at … / no outliers]</i>. The centre is in <i>[interval]</i>, and values range from about <i>[low]</i> to <i>[high]</i>.”<br><br>
+      <i>Example:</i> The distribution of volume is positively skewed with a possible outlier at 2.0–2.2 m³. The centre is in 0.6–0.8 m³, and volumes range from about 0.2 to 2.2 m³.
+    </div>
+    <div class="box warn">
+      <b>Name the shape, then mention outliers.</b> On a 2020 shape question the examiners said: <blockquote>“Most students recognised the distribution was positively skewed. It was acceptable to add that there were no outliers.”</blockquote>
+      <span class="src">VCAA 2020 Exam 2 report, Question 1a (Further Mathematics; the display was a stem plot)</span>
+    </div>
+    <div class="box warn">
+      <b>Only use “skewed” for one variable.</b> <blockquote>“The term ‘skewed’ only applies to univariate data plots, whereas this question referred to a bivariate data plot.”</blockquote>
+      <span class="src">VCAA 2014 Exam 2 report, Question 2c (Further Mathematics)</span>
+    </div>
+    <div class="tb">📘 <b>In your textbook:</b> Cambridge 1C, “Shape” (p. 21), “Centre” and “Spread” (p. 22), “Outliers” (p. 23), then <b>Example 9</b> “Describing the features of a distribution from a histogram” (p. 23). Practise with Exercise 1C (pp. 24–28).</div>
+    <div class="next"><span></span><button class="btn" data-next>Next: Explore →</button></div>
+  </section>
+
+  <!-- ================= EXPLORE ================= -->
+  <section class="sec" id="explore" hidden>
+    <div class="kicker">Step 2 · Explore</div>
+    <h2>Histogram lab</h2>
+    <p>Pick a VCAA data set. Switch between a frequency and a percentage axis, slide the cut-off to count the values below it, then decide the shape.</p>
+    <div class="box" id="lab">
+      <div class="seg-toggle" id="lset"><button aria-pressed="true" data-d="gdp">GDP per capita (41 countries)</button><button aria-pressed="false" data-d="tree">Cherry tree volume (31 trees)</button></div>
+      <div class="seg-toggle" id="laxis"><button aria-pressed="true" data-a="f">Frequency axis</button><button aria-pressed="false" data-a="p">Percentage axis</button></div>
+      <svg id="lsvg" viewBox="0 0 420 260" style="width:100%;max-width:560px;height:auto" role="img" aria-label="Histogram for the chosen data set"></svg>
+      <span class="src" id="lsrc"></span>
+      <div class="lab-row"><label for="lcut">Count the values below:</label><input type="range" id="lcut" min="0" max="7" value="2"><span class="lab-out" id="lcutv"></span></div>
+      <p id="lcount" style="margin:4px 0 12px"></p>
+      <p style="margin:0 0 6px"><b>What is the shape?</b></p>
+      <div class="seg-toggle" id="lshape"><button aria-pressed="false" data-s="sym">Symmetric</button><button aria-pressed="false" data-s="pos">Positively skewed</button><button aria-pressed="false" data-s="neg">Negatively skewed</button></div>
+      <p style="margin:8px 0 6px"><b>Is there a possible outlier?</b></p>
+      <div class="seg-toggle" id="lout"><button aria-pressed="false" data-o="yes">Yes</button><button aria-pressed="false" data-o="no">No</button></div>
+      <div id="lmsg" class="verdict" hidden></div>
+    </div>
+    <div class="next"><button class="btn ghost" data-prev>← Back</button><button class="btn" data-next>Next: Watch →</button></div>
+  </section>
+
+  <!-- ================= WATCH ================= -->
+  <section class="sec" id="watch" hidden>
+    <div class="kicker">Step 3 · Watch</div>
+    <h2>Video lesson</h2>
+    <p>Watch this for more worked examples of frequency tables, histograms and describing shape.</p>
+    <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/Lhpn2f6ffEE?rel=0" title="Displaying and describing the distributions of numerical variables (YouTube)" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+    <span class="src">Displaying and describing the distributions of numerical variables · MaffsGuru · YouTube · <a href="https://www.youtube.com/watch?v=Lhpn2f6ffEE" target="_blank" rel="noopener">open on YouTube</a> if the video does not load</span>
+    <div class="next"><button class="btn ghost" data-prev>← Back</button><button class="btn" data-next>Next: Exam practice →</button></div>
+  </section>
+
+  <!-- ================= PRACTICE ================= -->
+  <section class="sec" id="practice" hidden>
+    <div class="kicker">Step 4 · Exam practice</div>
+    <h2>Real VCAA exam questions</h2>
+    <p>Attempt each question before checking. After you answer, you will see the solution and, where we have it, what the examiners said.</p>
+
+    <!-- Q1 -->
+    <div class="q" data-answer="C">
+      <div class="q-head"><b>Question 1</b><span>VCAA 2025 NHT Exam 1, Q4 · 1 mark</span></div>
+      <div class="q-body">
+        <div class="stem">
+          <p><i>Use the following information to answer Questions 1 and 2 on this page (Questions 4 and 5 in the exam).</i></p>
+          <p>The <i>systolic blood pressure</i> of 50 people was recorded. The results are summarised in the histogram below.</p>
+          <img class="fig" src="../assets/img/1c/2025-nht-e1-q4.png" alt="Histogram of systolic blood pressure for 50 people, in intervals of 5 from 95 to 150. Frequencies: 4, 6, 8, 10, 8, 5, 4, 2, 1, 1, 1.">
+          <p>For this group of people, the distribution of their <i>systolic blood pressure</i> is best described as</p>
+        </div>
+        <div class="opts">
+          <button class="opt" data-k="A"><b>A.</b>symmetric.</button>
+          <button class="opt" data-k="B"><b>B.</b>bell-shaped.</button>
+          <button class="opt" data-k="C"><b>C.</b>positively skewed.</button>
+          <button class="opt" data-k="D"><b>D.</b>negatively skewed.</button>
+        </div>
+        <div class="after" hidden>
+          <div class="verdict"></div>
+          <div class="report">
+            <b>Solution.</b> The peak is at 110–115 and the bars trail off to the right, out to 150. The long tail is on the high side, so the distribution is <b>positively skewed</b> (C).
+            <span class="src">Answer C from the VCAA 2025 NHT Exam 1 assessment guide (answers only, no % data). Working: teacher solution.</span>
+          </div>
+          <button class="btn ghost retry" hidden style="margin-top:10px">Try again</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="q" data-answer="C">
+      <div class="q-head"><b>Question 2</b><span>VCAA 2025 NHT Exam 1, Q5 · 1 mark</span></div>
+      <div class="q-body">
+        <div class="stem">
+          <p class="src" style="margin-top:0">Uses the histogram in Question 1.</p>
+          <p>The percentage of these people with a <i>systolic blood pressure</i> less than 120 is closest to</p>
+        </div>
+        <div class="opts">
+          <button class="opt" data-k="A"><b>A.</b>36%</button>
+          <button class="opt" data-k="B"><b>B.</b>41%</button>
+          <button class="opt" data-k="C"><b>C.</b>72%</button>
+          <button class="opt" data-k="D"><b>D.</b>82%</button>
+        </div>
+        <div class="after" hidden>
+          <div class="verdict"></div>
+          <div class="report">
+            <b>Solution.</b> The bars below 120 are 4 + 6 + 8 + 10 + 8 = 36 people. 36 ÷ 50 × 100 = <b>72%</b> (C). Option A is the count, not the percentage.
+            <span class="src">Answer C from the VCAA 2025 NHT Exam 1 assessment guide (answers only, no % data). Working: teacher solution.</span>
+          </div>
+          <button class="btn ghost retry" hidden style="margin-top:10px">Try again</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="q" data-answer="C">
+      <div class="q-head"><b>Question 3</b><span>VCAA 2022 Exam 1, Q1 · 1 mark</span></div>
+      <div class="q-body">
+        <div class="stem">
+          <p><i>Use the following information to answer Questions 3 and 4 on this page (Questions 1 and 2 in the exam).</i></p>
+          <p>The histogram below displays the distribution of <i>skull width</i>, in millimetres, for 46 female possums.</p>
+          <img class="fig" src="../assets/img/1c/2022-e1-q1.png" alt="Histogram of skull width in millimetres for 46 female possums, intervals of 1 mm from 49 to 68. Most bars are between 54 and 60 with a peak of 11 at 56 to 57; low bars stretch left to 49; one bar of height 1 at 67 to 68 is separated by a gap.">
+          <p>The shape of the distribution is best described as</p>
+        </div>
+        <div class="opts">
+          <button class="opt" data-k="A"><b>A.</b>negatively skewed.</button>
+          <button class="opt" data-k="B"><b>B.</b>approximately symmetric.</button>
+          <button class="opt" data-k="C"><b>C.</b>negatively skewed with a possible outlier.</button>
+          <button class="opt" data-k="D"><b>D.</b>positively skewed with a possible outlier.</button>
+          <button class="opt" data-k="E"><b>E.</b>approximately symmetric with a possible outlier.</button>
+        </div>
+        <div class="after" hidden>
+          <div class="verdict"></div>
+          <div class="report">
+            <b>How students went</b> (VCAA 2022 Exam 1 report, % choosing each option):
+            <div class="dist">
+              <b>A</b><div class="b"><i style="width:1%"></i></div><span>1%</span>
+              <b>B</b><div class="b"><i style="width:1%"></i></div><span>1%</span>
+              <b>C</b><div class="b ans"><i style="width:36%"></i></div><span>36%</span>
+              <b>D</b><div class="b"><i style="width:8%"></i></div><span>8%</span>
+              <b>E</b><div class="b"><i style="width:54%"></i></div><span>54%</span>
+            </div>
+            <b>What the examiners said:</b>
+            <blockquote>“The centre of this distribution is in the group 56–57. Disregarding the possible outlier, we can see that the graph is more spread to the left of the centre than it is to the right. That is, the lower tail is longer than the upper tail. Therefore, we say that the shape of the distribution is negatively skewed (skewed to the left), with a possible outlier.”</blockquote>
+            <b>Common mistake:</b> 54% chose E. Cover up the outlier first, then look at the tails of what is left: the lower tail is longer.
+            <span class="src">VCAA 2022 Exam 1 report (Further Mathematics), Question 1</span>
+          </div>
+          <button class="btn ghost retry" hidden style="margin-top:10px">Try again</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="q" data-answer="B">
+      <div class="q-head"><b>Question 4</b><span>VCAA 2022 Exam 1, Q2 · 1 mark</span></div>
+      <div class="q-body">
+        <div class="stem">
+          <p class="src" style="margin-top:0">Uses the histogram in Question 3.</p>
+          <p>The percentage of the 46 possums with a <i>skull width</i> of less than 55 mm is closest to</p>
+        </div>
+        <div class="opts">
+          <button class="opt" data-k="A"><b>A.</b>12%</button>
+          <button class="opt" data-k="B"><b>B.</b>26%</button>
+          <button class="opt" data-k="C"><b>C.</b>39%</button>
+          <button class="opt" data-k="D"><b>D.</b>61%</button>
+          <button class="opt" data-k="E"><b>E.</b>74%</button>
+        </div>
+        <div class="after" hidden>
+          <div class="verdict"></div>
+          <div class="report">
+            <b>How students went</b> (VCAA 2022 Exam 1 report, % choosing each option):
+            <div class="dist">
+              <b>A</b><div class="b"><i style="width:7%"></i></div><span>7%</span>
+              <b>B</b><div class="b ans"><i style="width:85%"></i></div><span>85%</span>
+              <b>C</b><div class="b"><i style="width:7%"></i></div><span>7%</span>
+              <b>D</b><div class="b"><i style="width:1%"></i></div><span>1%</span>
+              <b>E</b><div class="b"><i style="width:0%"></i></div><span>0%</span>
+            </div>
+            <b>Solution.</b> Bars below 55: 1 + 1 + 2 + 1 + 2 + 5 = 12 possums. 12 ÷ 46 × 100 = 26.1%, closest to <b>26%</b> (B). Option A (12%) is the count, not the percentage.
+            <span class="src">Statistics: VCAA 2022 Exam 1 report (Further Mathematics), Question 2 (no written comment). Working: teacher solution.</span>
+          </div>
+          <button class="btn ghost retry" hidden style="margin-top:10px">Try again</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="q" data-answer="D">
+      <div class="q-head"><b>Question 5</b><span>VCAA 2025 Exam 1, Q1 · 1 mark</span></div>
+      <div class="q-body">
+        <div class="stem">
+          <p><i>Use the following information to answer Questions 5 and 6 on this page (Questions 1 and 2 in the exam).</i></p>
+          <p>At a fruit shop, customers can buy avocados in bags.</p>
+          <p>The <i>bag size</i> ranges from one to six avocados per bag.</p>
+          <p>The histogram below shows the number of customers who bought each <i>bag size</i> on a particular day.</p>
+          <img class="fig" src="../assets/img/1c/2025-e1-q1.png" style="width:340px" alt="Histogram of bag size (number of avocados) against number of customers: size 1, 4 customers; size 2, 11; size 3, 3; size 4, 9; size 5, 5; size 6, 7.">
+          <p>The median <i>bag size</i> bought by customers on the day was</p>
+        </div>
+        <div class="opts">
+          <button class="opt" data-k="A"><b>A.</b>2</button>
+          <button class="opt" data-k="B"><b>B.</b>3</button>
+          <button class="opt" data-k="C"><b>C.</b>3.5</button>
+          <button class="opt" data-k="D"><b>D.</b>4</button>
+        </div>
+        <div class="after" hidden>
+          <div class="verdict"></div>
+          <div class="report">
+            <b>How students went</b> (VCAA 2025 Exam 1 report, % choosing each option):
+            <div class="dist">
+              <b>A</b><div class="b"><i style="width:4%"></i></div><span>4%</span>
+              <b>B</b><div class="b"><i style="width:5%"></i></div><span>5%</span>
+              <b>C</b><div class="b"><i style="width:17%"></i></div><span>17%</span>
+              <b>D</b><div class="b ans"><i style="width:75%"></i></div><span>75%</span>
+            </div>
+            <b>Examiners' working:</b> <blockquote>“Sum all columns = 4 + 11 + 3 + 9 + 5 + 7 = 39<br>The median is the 20th value.<br>The 20th value is in the fourth column (bag size 4).”</blockquote>
+            <b>Common mistake:</b> 17% chose C (3.5), the middle of the axis (1 to 6). The median is the middle <i>customer</i>: count up the bars 4, 15, 18, 27 until you pass 20. (The median is covered fully in 1F.)
+            <span class="src">VCAA 2025 Exam 1 report, Question 1</span>
+          </div>
+          <button class="btn ghost retry" hidden style="margin-top:10px">Try again</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="q" data-answer="D">
+      <div class="q-head"><b>Question 6</b><span>VCAA 2025 Exam 1, Q2 · 1 mark</span></div>
+      <div class="q-body">
+        <div class="stem">
+          <p class="src" style="margin-top:0">Uses the histogram in Question 5.</p>
+          <p>The total number of avocados sold in bags was</p>
+        </div>
+        <div class="opts">
+          <button class="opt" data-k="A"><b>A.</b>39</button>
+          <button class="opt" data-k="B"><b>B.</b>134</button>
+          <button class="opt" data-k="C"><b>C.</b>136</button>
+          <button class="opt" data-k="D"><b>D.</b>138</button>
+        </div>
+        <div class="after" hidden>
+          <div class="verdict"></div>
+          <div class="report">
+            <b>How students went</b> (VCAA 2025 Exam 1 report, % choosing each option):
+            <div class="dist">
+              <b>A</b><div class="b"><i style="width:20%"></i></div><span>20%</span>
+              <b>B</b><div class="b"><i style="width:2%"></i></div><span>2%</span>
+              <b>C</b><div class="b"><i style="width:1%"></i></div><span>1%</span>
+              <b>D</b><div class="b ans"><i style="width:76%"></i></div><span>76%</span>
+            </div>
+            <b>Examiners' working:</b> <blockquote>“Total = 1 × 4 + 2 × 11 + 3 × 3 + 4 × 9 + 5 × 5 + 6 × 7 = 138”</blockquote>
+            <b>Common mistake:</b> 20% chose A (39), which is the number of <i>customers</i>. Each customer bought a bag, so multiply each bag size by its number of customers.
+            <span class="src">VCAA 2025 Exam 1 report, Question 2</span>
+          </div>
+          <button class="btn ghost retry" hidden style="margin-top:10px">Try again</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="next"><button class="btn ghost" data-prev>← Back</button><button class="btn" data-next>Next: Reference sheet →</button></div>
+  </section>
+
+  <!-- ================= REFERENCE ================= -->
+  <section class="sec" id="reference" hidden>
+    <div class="kicker">Step 5 · Reference sheet</div>
+    <h2>Summary</h2>
+    <ul class="tight">
+      <li>Few values → list each value. Many values → group into <b>equal intervals</b> (lower end included).</li>
+      <li>A <b>histogram</b> has a number scale and touching bars. Total = sum of the bar heights.</li>
+      <li><b>Percentage</b> = (sum of the bars you need) ÷ total × 100.</li>
+      <li>Describe <b>shape</b>, <b>outliers</b>, <b>centre</b> and <b>spread</b>. Skew is named after the long tail.</li>
+    </ul>
+    <p>Print the A4 page below and glue it into your bound reference.</p>
+    <p class="print-btns"><button class="btn" data-print="colour">Print colour version</button> <button class="btn ghost" data-print="bw">Print black &amp; white version</button></p>
+
+    <div class="sheet-wrap">
+      <div class="sheet colour">
+        <div class="sh-head"><div><span class="tag">Data Analysis · 1C</span><h2>Displaying numerical data</h2></div><span>12MAG · Bound reference</span></div>
+
+        <div class="g2" style="gap:5mm">
+          <div class="stepsbox">
+            <h4>Grouped frequency table</h4>
+            <table>
+              <tr><th>GDP ($)</th><th>Number</th><th>%</th></tr>
+              <tr><td>0 – &lt;1000</td><td>2</td><td>4.9</td></tr>
+              <tr><td>1000 – &lt;2000</td><td>11</td><td>26.8</td></tr>
+              <tr><td>2000 – &lt;3000</td><td>12</td><td>29.3</td></tr>
+              <tr><td>3000 – &lt;4000</td><td>5</td><td>12.2</td></tr>
+              <tr><td>… to 7000</td><td>11</td><td>26.8</td></tr>
+              <tr><td><b>Total</b></td><td><b>41</b></td><td><b>100</b></td></tr>
+            </table>
+            <p style="margin:5px 0 0;font-size:9.5pt">Equal-width intervals. A value on a boundary goes in the <b>higher</b> interval (lower end included).</p>
+          </div>
+          <div>
+            <h4>Histogram</h4>
+            <p style="margin:0 0 2px;font-size:9pt">Number scale · bars touch · height = frequency</p>
+            <svg style="width:100%" data-chart='{"type":"hist","edges":[0,1000,2000,3000,4000,5000,6000,7000],"vals":[2,11,12,5,3,6,2],"max":15,"step":3,"xlabel":"GDP per capita ($ per year)","ylabel":"frequency","fs":11,"sheet":true}' role="img" aria-label="Histogram"></svg>
+          </div>
+        </div>
+
+        <div class="g2" style="gap:5mm;margin-top:3mm">
+          <div class="stepsbox">
+            <h4>Reading a histogram</h4>
+            <ol>
+              <li><b>Total</b> = add all the bar heights (2 + 11 + … = 41).</li>
+              <li><b>Count</b> = add the bars you need. Below $2000: 2 + 11 = 13.</li>
+              <li><b>%</b> = count ÷ total × 100 = 13 ÷ 41 × 100 = 31.7%.</li>
+              <li><b>Middle value</b> of <i>n</i>: count up the bars to the (<i>n</i> + 1) ÷ 2 th value. 41 → 21st → 2000–3000.</li>
+            </ol>
+          </div>
+          <div>
+            <h4>Shape: name the long tail</h4>
+            <div class="shapes">
+              <figure><svg class="sketch" viewBox="0 0 160 84" role="img" aria-label="symmetric"><rect class="sk" x="5.0" y="71" width="21.4" height="9"/><rect class="sk" x="26.4" y="53" width="21.4" height="27"/><rect class="sk" x="47.9" y="26" width="21.4" height="54"/><rect class="sk" x="69.3" y="8" width="21.4" height="72"/><rect class="sk" x="90.7" y="26" width="21.4" height="54"/><rect class="sk" x="112.1" y="53" width="21.4" height="27"/><rect class="sk" x="133.6" y="71" width="21.4" height="9"/><line x1="2" x2="158" y1="80" y2="80" stroke="#000" stroke-width="1.5"/></svg><figcaption><b>Symmetric</b></figcaption></figure>
+              <figure><svg class="sketch" viewBox="0 0 160 84" role="img" aria-label="positively skewed"><rect class="sk" x="5.0" y="53" width="18.8" height="27"/><rect class="sk" x="23.8" y="8" width="18.8" height="72"/><rect class="sk" x="42.5" y="17" width="18.8" height="63"/><rect class="sk" x="61.2" y="35" width="18.8" height="45"/><rect class="sk" x="80.0" y="53" width="18.8" height="27"/><rect class="sk" x="98.8" y="62" width="18.8" height="18"/><rect class="sk" x="117.5" y="71" width="18.8" height="9"/><rect class="sk" x="136.2" y="71" width="18.8" height="9"/><line x1="2" x2="158" y1="80" y2="80" stroke="#000" stroke-width="1.5"/></svg><figcaption><b>Positive</b> tail → right</figcaption></figure>
+              <figure><svg class="sketch" viewBox="0 0 160 84" role="img" aria-label="negatively skewed"><rect class="sk" x="5.0" y="71" width="18.8" height="9"/><rect class="sk" x="23.8" y="71" width="18.8" height="9"/><rect class="sk" x="42.5" y="62" width="18.8" height="18"/><rect class="sk" x="61.2" y="53" width="18.8" height="27"/><rect class="sk" x="80.0" y="35" width="18.8" height="45"/><rect class="sk" x="98.8" y="17" width="18.8" height="63"/><rect class="sk" x="117.5" y="8" width="18.8" height="72"/><rect class="sk" x="136.2" y="53" width="18.8" height="27"/><line x1="2" x2="158" y1="80" y2="80" stroke="#000" stroke-width="1.5"/></svg><figcaption><b>Negative</b> tail → left</figcaption></figure>
+            </div>
+            <p style="margin:2px 0 0;font-size:9.5pt"><b>Describe:</b> shape · outliers · centre · spread.<br><i>“Positively skewed with a possible outlier at 2.0–2.2 m³. Centre in 0.6–0.8 m³; values range from about 0.2 to 2.2 m³.”</i></p>
+          </div>
+        </div>
+
+        <div class="g2" style="margin-top:3mm">
+          <div class="stepsbox">
+            <h4>Which display?</h4>
+            <ul>
+              <li><b>Histogram</b>: one <b>numerical</b> variable (counts or measurements).</li>
+              <li><b>Bar chart</b>: one <b>categorical</b> variable (gaps between bars).</li>
+              <li><b>Outlier</b>: a value well away from the rest, usually after an empty interval.</li>
+              <li>“Skewed” is only for <b>one</b> variable, never a scatterplot (2014 report).</li>
+            </ul>
+          </div>
+          <div class="trapsbox">
+            <h4>⚠ Exam traps</h4>
+            <ul>
+              <li><b>Set the outlier aside, then compare the tails.</b> 54% called the possum skulls “approximately symmetric with a possible outlier”; the answer was negatively skewed with a possible outlier (VCAA 2022 Exam 1 Q1, 36% correct).</li>
+              <li><b>Count × value</b> for a total: 20% gave 39 customers instead of 138 avocados (VCAA 2025 Exam 1 Q2).</li>
+              <li>The middle value is the middle <b>data value</b>, not the middle of the axis: 17% chose 3.5 (VCAA 2025 Exam 1 Q1).</li>
+              <li>Percent means <b>÷ total</b>: 12 possums is 26%, not 12% (VCAA 2022 Exam 1 Q2).</li>
+            </ul>
+          </div>
+        </div>
+        <div class="foot">Data and statistics: VCAA 2024 NHT Exam 1 Q1; VCAA 2023 NHT Exam 1 Qs 2–4; VCAA 2022 Exam 1 report; VCAA 2025 Exam 1 report; VCAA 2014 Exam 2 report. © VCAA, used for educational purposes.</div>
+      </div>
+    </div>
+
+    <div class="next"><button class="btn ghost" data-prev>← Back</button><button class="btn" data-next>Finish 1C ✓</button></div>
+  </section>
+
+  </main>
+</div>
+<script src="../assets/site.js?v=6"></script>
+<script src="../assets/charts.js?v=8"></script>
+<script>
+  window.addEventListener('beforeprint', () => { if (window.goStep) window.goStep('reference', false); });
+  // Explore: histogram lab
+  (function () {
+    const D = {
+      gdp: { edges: [0,1000,2000,3000,4000,5000,6000,7000], vals: [2,11,12,5,3,6,2], fmax: 15, fstep: 3,
+             xlabel: 'GDP per capita (dollars per year)', unit: v => '$' + v, fs: 11, shape: 'pos', out: 'no',
+             src: 'Data: VCAA 2024 NHT Exam 1, Question 1 (World Bank data)',
+             why: 'The peak is at $2000–$3000 and the bars trail off to the right. There is a small bump at $5000–$6000, but no bar is cut off from the rest by an empty interval, so there is no clear outlier.' },
+      tree: { edges: ['0.2','0.4','0.6','0.8','1.0','1.2','1.4','1.6','1.8','2.0','2.2'], vals: [3,8,8,3,2,1,4,1,0,1], fmax: 8, fstep: 2,
+             xlabel: 'volume (m³)', unit: v => v + ' m³', shape: 'pos', out: 'yes',
+             src: 'Data: VCAA 2023 NHT Exam 1, Questions 2–4 (‘Black Cherry Trees’, Wolfram Data Repository)',
+             why: 'The peak is on the left (0.4–0.8 m³) with a long tail to the right. The tree at 2.0–2.2 m³ sits after an empty interval, so it is a possible outlier.' }
+    };
+    let ds = 'gdp', ax = 'f', pick = {};
+    const svg = document.getElementById('lsvg'), cut = document.getElementById('lcut');
+    const sum = a => a.reduce((s, v) => s + v, 0);
+    const draw = () => {
+      const d = D[ds], n = sum(d.vals), k = +cut.value;
+      const vals = ax === 'f' ? d.vals : d.vals.map(v => Math.round(1000 * v / n) / 10);
+      drawChart(svg, { type: 'hist', edges: d.edges, vals, hl: d.vals.map((_, i) => i < k),
+        max: ax === 'f' ? d.fmax : 30, step: ax === 'f' ? d.fstep : 5, xlabel: d.xlabel,
+        ylabel: ax === 'f' ? 'frequency' : 'percentage (%)', fs: d.fs });
+      const c = sum(d.vals.slice(0, k));
+      document.getElementById('lcutv').textContent = d.unit(d.edges[k]);
+      document.getElementById('lcount').innerHTML = k === 0
+        ? 'Slide right to shade the bars below the cut-off.'
+        : `Below ${d.unit(d.edges[k])}: ${d.vals.slice(0, k).join(' + ')} = <b>${c}</b> of ${n} values = ${c} ÷ ${n} × 100 = <b>${(100 * c / n).toFixed(1)}%</b>`;
+      document.getElementById('lsrc').textContent = d.src;
+    };
+    const verdict = () => {
+      const d = D[ds], m = document.getElementById('lmsg');
+      if (!pick.s || !pick.o) { m.hidden = true; return; }
+      const ok = pick.s === d.shape && pick.o === d.out;
+      m.hidden = false; m.className = 'verdict ' + (ok ? 'good' : 'bad');
+      m.innerHTML = (ok ? '<b>Correct.</b> ' : '<b>Not quite.</b> ') + (ok ? d.why : (pick.s !== d.shape ? 'Look at which side has the long tail.' : 'Is any bar cut off from the rest by an empty interval?'));
+    };
+    const reset = () => { pick = {}; document.querySelectorAll('#lshape button,#lout button').forEach(b => b.setAttribute('aria-pressed', false)); verdict(); };
+    const group = (id, fn) => document.querySelectorAll('#' + id + ' button').forEach(b => b.addEventListener('click', () => {
+      document.querySelectorAll('#' + id + ' button').forEach(x => x.setAttribute('aria-pressed', x === b)); fn(b);
+    }));
+    group('lset', b => { ds = b.dataset.d; cut.max = D[ds].vals.length; cut.value = Math.min(2, cut.max); reset(); draw(); });
+    group('laxis', b => { ax = b.dataset.a; draw(); });
+    group('lshape', b => { pick.s = b.dataset.s; verdict(); });
+    group('lout', b => { pick.o = b.dataset.o; verdict(); });
+    cut.addEventListener('input', draw);
+    draw();
+  })();
+</script>
+</body>
+</html>

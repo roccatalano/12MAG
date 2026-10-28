@@ -229,3 +229,18 @@ table.data input.in-wrong{border-color:var(--bad);background:var(--bad-soft)}
 .sheet .c3{fill:#ddd}.sheet .c4{fill:#888}.sheet .c5{fill:#eee}
 .sheet.colour .c3{fill:#e3f3f4}
 .tb{margin:14px 0;padding:10px 14px;border:1px dashed #9aa6af;border-radius:8px;font-size:.93rem;background:#fff}
+
+/* ---- 1C: shape sketches + histogram lab ---- */
+.shapes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:10px 0}
+.shapes figure{margin:0;text-align:center;font-size:.9rem}
+.shapes figcaption b{display:block}
+.sketch{width:100%;max-width:170px;height:auto}
+.sketch .sk{fill:#00838F;stroke:#fff;stroke-width:1}
+.sheet .sketch .sk{fill:#888;stroke:#000}
+.sheet.colour .sketch .sk{fill:#00838F;stroke:#fff}
+.sheet .shapes{gap:4px;margin:2px 0}
+.sheet .shapes figure{font-size:8.5pt}
+.lab-row{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin:8px 0}
+.lab-row input[type=range]{flex:1 1 200px;accent-color:var(--accent)}
+.lab-out{font-weight:600}
+@media(max-width:600px){.shapes{grid-template-columns:1fr 1fr 1fr;gap:4px}.shapes figure{font-size:.78rem}}

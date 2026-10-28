@@ -27,6 +27,22 @@
         o += `<rect ${sheet ? 'class="c1"' : 'fill="#00838F"'} x="${(cx - bw / 2).toFixed(1)}" y="${y(v).toFixed(1)}" width="${bw.toFixed(1)}" height="${(B - y(v)).toFixed(1)}" stroke="${sheet ? '#000' : 'none'}"/>`;
         o += `<text x="${cx.toFixed(1)}" y="${B + 16}" text-anchor="middle" fill="${ink}">${c}</text>`;
       });
+    } else if (s.type === 'hist') {
+      // histogram: touching bars. s.edges = interval boundaries (labels on edges),
+      // or s.cats = one label per bar (discrete values, labels centred). s.hl = optional highlight flags.
+      const n = s.vals.length, bw = (R - L - 8) / n, x0 = L + 4;
+      s.vals.forEach((v, i) => {
+        const on = !s.hl || s.hl[i];
+        const f = sheet ? `class="${on ? 'c1' : 'c3'}"` : `fill="${on ? '#00838F' : '#cfe9ec'}"`;
+        if (v > 0) o += `<rect ${f} x="${(x0 + i * bw).toFixed(1)}" y="${y(v).toFixed(1)}" width="${bw.toFixed(1)}" height="${(B - y(v)).toFixed(1)}" stroke="${sheet ? '#000' : '#fff'}" stroke-width="1"/>`;
+      });
+      const every = s.every || 1;
+      if (s.cats) s.cats.forEach((c, i) => { o += `<text x="${(x0 + (i + 0.5) * bw).toFixed(1)}" y="${B + 16}" text-anchor="middle" fill="${ink}">${c}</text>`; });
+      else s.edges.forEach((e, i) => {
+        const xx = (x0 + i * bw).toFixed(1);
+        o += `<line x1="${xx}" x2="${xx}" y1="${B}" y2="${B + 4}" stroke="${ink}"/>`;
+        if (i % every === 0) o += `<text x="${xx}" y="${B + 17}" text-anchor="middle" fill="${ink}" font-size="${s.fs || 12}">${e}</text>`;
+      });
     } else {
       const bx = L + 50, bw = 110; let acc = 0;
       s.cats.forEach((c, i) => {
