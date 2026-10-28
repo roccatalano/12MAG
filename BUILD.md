@@ -37,7 +37,7 @@ Each run builds **exactly one** subtopic page, checks it, pushes it, and ticks i
 (Recursion, Matrices and Networks are added here after Data Analysis is finished and Rocco has reviewed it.)
 
 ## Locking
-Before starting, check the "In progress" line. If it names a subtopic started less than 25 minutes ago, STOP (another run is working). Otherwise set it to `In progress: <code> <ISO time>` and push before building. Clear it when done.
+Before starting, check the "In progress" line. If it names a subtopic started less than 50 minutes ago, STOP (another run is working). Otherwise set it to `In progress: <code> <ISO time>` and push before building. Clear it when done.
 
 In progress: none
 
