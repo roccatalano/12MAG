@@ -52,7 +52,7 @@ In progress: none
 5. **Reference sheet** — A4, colour + black & white versions (same markup, `.sheet.colour`/`.sheet.bw`), no notes box, must print on ONE page. Panels: key content, worked mini-example, display/decision box, ⚠ Exam traps with report statistics, sources footer "© VCAA, used for educational purposes".
 
 ## SOCS progression (Rocco, 28 Oct 2026)
-Every page that describes a **numerical distribution** uses SOCS (Shape, Outliers, Centre, Spread) and shows it growing. Copy the `.socs` card from `data-analysis/1c.html`: move the newly taught tool for each letter into its teal "now" line, keep the earlier tools, and leave later ones as grey tagged lines. Update the SOCS sentence frame (teacher frame), label the worked example S · O · C · S, and put a SOCS panel on the reference sheet.
+Every page that describes a **numerical distribution** uses SOCS (Shape, Outliers, Centre, Spread). Follow the 1C Learn flow (Rocco: flow matters most): a short roadmap (`ol.road`) of the page's moves, numbered h3s that match it, ONE worked data set carried through, then one `.lstep` per SOCS letter (letter badge + one-line instruction, then a short paragraph on the example), a "Put it together" teacher frame, and a single grey `.socs-next` line saying what later pages add. Teach only the new tool in full; earlier tools get one line. No extra definition cards or progression grids. Reference sheet: panels in the same order as the Learn headings, with a "Describe: SOCS" panel.
 
 | Page | S Shape | O Outliers | C Centre | S Spread |
 |---|---|---|---|---|
