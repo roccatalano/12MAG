@@ -74,19 +74,19 @@
     <div style="overflow-x:auto">
     <table class="data">
       <tr><th>GDP per capita ($ per year)</th><th>Number</th><th>Percentage (%)</th></tr>
-      <tr><td>0 to less than 1000</td><td class="n">2</td><td class="n">4.9</td></tr>
-      <tr><td>1000 to less than 2000</td><td class="n">11</td><td class="n">26.8</td></tr>
-      <tr><td>2000 to less than 3000</td><td class="n">12</td><td class="n">29.3</td></tr>
-      <tr><td>3000 to less than 4000</td><td class="n">5</td><td class="n">12.2</td></tr>
-      <tr><td>4000 to less than 5000</td><td class="n">3</td><td class="n">7.3</td></tr>
-      <tr><td>5000 to less than 6000</td><td class="n">6</td><td class="n">14.6</td></tr>
-      <tr><td>6000 to less than 7000</td><td class="n">2</td><td class="n">4.9</td></tr>
+      <tr><td>$0–$999</td><td class="n">2</td><td class="n">4.9</td></tr>
+      <tr><td>$1000–$1999</td><td class="n">11</td><td class="n">26.8</td></tr>
+      <tr><td>$2000–$2999</td><td class="n">12</td><td class="n">29.3</td></tr>
+      <tr><td>$3000–$3999</td><td class="n">5</td><td class="n">12.2</td></tr>
+      <tr><td>$4000–$4999</td><td class="n">3</td><td class="n">7.3</td></tr>
+      <tr><td>$5000–$5999</td><td class="n">6</td><td class="n">14.6</td></tr>
+      <tr><td>$6000–$6999</td><td class="n">2</td><td class="n">4.9</td></tr>
       <tr><th>Total</th><th class="n">41</th><th class="n">100</th></tr>
     </table>
     </div>
-    <span class="src">Data: VCAA 2024 NHT Exam 1, Question 1 (World Bank data). Interval wording follows that question's options, e.g. “greater than or equal to 1000 but less than 2000”.</span>
+    <span class="src">Data: VCAA 2024 NHT Exam 1, Question 1 (World Bank data). The question's options word the same intervals as “greater than or equal to 1000 but less than 2000”.</span>
     <div class="box key" style="margin-top:14px">
-      <b>Which interval does a boundary value go in?</b> Each interval includes its <b>lower</b> end but not its upper end. A country with exactly $2000 goes in “2000 to less than 3000”. (teacher note)
+      <b>Which interval does a boundary value go in?</b> Each interval includes its <b>lower</b> end but not its upper end. So $1000–$1999 covers everything from $1000 up to (but not including) $2000, and a country with exactly $2000 goes in $2000–$2999. (teacher note)
     </div>
     <div class="tb">📘 <b>In your textbook:</b> Cambridge 1C, <b>Example 7</b> “Constructing a grouped frequency table” (p. 15).</div>
 
@@ -403,14 +403,14 @@
             <h4>Grouped frequency table</h4>
             <table>
               <tr><th>GDP ($)</th><th>Number</th><th>%</th></tr>
-              <tr><td>0 – &lt;1000</td><td>2</td><td>4.9</td></tr>
-              <tr><td>1000 – &lt;2000</td><td>11</td><td>26.8</td></tr>
-              <tr><td>2000 – &lt;3000</td><td>12</td><td>29.3</td></tr>
-              <tr><td>3000 – &lt;4000</td><td>5</td><td>12.2</td></tr>
-              <tr><td>… to 7000</td><td>11</td><td>26.8</td></tr>
+              <tr><td>$0–$999</td><td>2</td><td>4.9</td></tr>
+              <tr><td>$1000–$1999</td><td>11</td><td>26.8</td></tr>
+              <tr><td>$2000–$2999</td><td>12</td><td>29.3</td></tr>
+              <tr><td>$3000–$3999</td><td>5</td><td>12.2</td></tr>
+              <tr><td>$4000–$6999</td><td>11</td><td>26.8</td></tr>
               <tr><td><b>Total</b></td><td><b>41</b></td><td><b>100</b></td></tr>
             </table>
-            <p style="margin:5px 0 0;font-size:9.5pt">Equal-width intervals. A value on a boundary goes in the <b>higher</b> interval (lower end included).</p>
+            <p style="margin:5px 0 0;font-size:9.5pt">Equal-width intervals. $1000–$1999 means $1000 up to (not including) $2000; exactly $2000 goes in $2000–$2999.</p>
           </div>
           <div>
             <h4>Histogram</h4>
@@ -426,7 +426,7 @@
               <li><b>Total</b> = add all the bar heights (2 + 11 + … = 41).</li>
               <li><b>Count</b> = add the bars you need. Below $2000: 2 + 11 = 13.</li>
               <li><b>%</b> = count ÷ total × 100 = 13 ÷ 41 × 100 = 31.7%.</li>
-              <li><b>Middle value</b> of <i>n</i>: count up the bars to the (<i>n</i> + 1) ÷ 2 th value. 41 → 21st → 2000–3000.</li>
+              <li><b>Middle value</b> of <i>n</i>: count up the bars to the (<i>n</i> + 1) ÷ 2 th value. 41 → 21st → $2000–$2999.</li>
             </ol>
           </div>
           <div>
@@ -479,7 +479,7 @@
       gdp: { edges: [0,1000,2000,3000,4000,5000,6000,7000], vals: [2,11,12,5,3,6,2], fmax: 15, fstep: 3,
              xlabel: 'GDP per capita (dollars per year)', unit: v => '$' + v, fs: 11, shape: 'pos', out: 'no',
              src: 'Data: VCAA 2024 NHT Exam 1, Question 1 (World Bank data)',
-             why: 'The peak is at $2000–$3000 and the bars trail off to the right. There is a small bump at $5000–$6000, but no bar is cut off from the rest by an empty interval, so there is no clear outlier.' },
+             why: 'The peak is at $2000–$2999 and the bars trail off to the right. There is a small bump at $5000–$5999, but no bar is cut off from the rest by an empty interval, so there is no clear outlier.' },
       tree: { edges: ['0.2','0.4','0.6','0.8','1.0','1.2','1.4','1.6','1.8','2.0','2.2'], vals: [3,8,8,3,2,1,4,1,0,1], fmax: 8, fstep: 2,
              xlabel: 'volume (m³)', unit: v => v + ' m³', shape: 'pos', out: 'yes',
              src: 'Data: VCAA 2023 NHT Exam 1, Questions 2–4 (‘Black Cherry Trees’, Wolfram Data Repository)',
