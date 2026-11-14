@@ -17,7 +17,7 @@ The standalone **Year 12 General Maths (12MAG) course planner** (GitHub Pages: r
 4. Extract an item fully (verbatim text, figure data, answer) the first time a lesson uses it; save to the item bank so it is never re-extracted.
 
 ## 12MAG (VCE General Maths 3&4, 2027) — current rules (Rocco, 14 Nov 2026)
-These replace older rules in `Planning\CLAUDE.md` on the G: drive where they disagree.
+These replace all older 12MAG rules (old Planning\CLAUDE.md, project docs).
 1. **Never write questions.** Copy verbatim and cite the source. Adapt only when unavoidable and label it "adapted".
 2. **Every lesson gets:** guided slides, guided worksheet, bound reference entry. (Lesson handouts and log-book labels are discontinued.)
 3. **Lesson shape:** CFAT (if any) → Do Now → APK → Learn + Example/You try pairs → CAS → exit tasks → check-in → homework.
@@ -32,6 +32,9 @@ These replace older rules in `Planning\CLAUDE.md` on the G: drive where they dis
 12. **Check every slide visually** (all steps shown + mid-reveal) before handing over. Finished resources go in `lessons/` here and flat into `01 Lesson materials` on G:.
 
 ## Source files (G: drive)
-Root: `G:\Shared drives\1. EKC CURRICULUM\1. KLA Folders\MATHEMATICS\VCE Maths\General Maths U3 & 4\12MAG 2027\`
-The folder is being reorganised — see `docs/CLEANUP.md`. New structure: `12MAG 2027\Version 2\`. ALL made materials go flat into `01 Lesson materials\`, named `<subchapters> <type>.<ext>` (e.g. `1C-1E slides.pdf`, `CFAT 1.1.1 (1A-1E).pdf`, `Ch1 test.pdf`): no lesson numbers or weeks in names, because lessons are merged/split on the planner only. Sources: `02 Sources\` (VCAA current 2023-26 named `2025 E1.pdf`, `2025 NHT E2 report.docx`…; VCAA past 2016-2022 = originals of the Edrolo reprints, for % correct). Claude can create/overwrite files on G: but cannot move, rename or delete them.
-
+Root: `G:\Shared drives\1. EKC CURRICULUM\1. KLA Folders\MATHEMATICS\VCE Maths\General Maths U3 & 4\12MAG Course Planner\` (the old `12MAG 2027` folder is archived — don't use it).
+- `00 Admin\` Study Design, curriculum grid, Cambridge sample planner.
+- `01 Lesson materials\` ALL made materials, flat, named `<subchapters> <type>.<ext>` (e.g. `1C-1E slides.pdf`, `CFAT 1.1.1 (1A-1E).pdf`, `Ch1 test.pdf`). No lesson numbers or weeks in names: lessons are merged/split on the planner only.
+- `02 Sources\` VCAA current 2023-26 (`2025 E1.pdf`, `2025 NHT E2 report.docx`…), VCAA past 2016-2022 (originals of the Edrolo reprints, for % correct), Textbooks (Cambridge U3&4 + U1&2, Edrolo U3&4 + U1&2, Jacaranda, Mathspace), Insight, Bound references, CAS guides, RESERVED (commercial trials, Cambridge tests, Nelson — not used in class).
+- `03 Item bank\` items extracted on first use. `04 Archive\` old material. `Planning\`.
+Claude can create/overwrite files on G: but cannot move, rename or delete them.
