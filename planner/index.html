@@ -179,7 +179,7 @@ function nests(l){const c=cfs(l),n=a=>(a||[]).reduce((t,g)=>t+(g.items?g.items.l
    +nest('apk','APK (prior knowledge)',l.apk?.length?`<ul class="apk">${l.apk.map(x=>`<li><span class="ak ${x.kind=='Exam'?'ex':''}">${x.kind=='Exam'?'Exam Q':'Skill'}</span> ${esc(x.text)}<div class="sub">${esc(x.ref)}</div></li>`).join('')}</ul>`:'',l.apk?.length)
    +nest('wedo','Worked examples &amp; you trys',l.weDo?.length?`<ol class="wedo">${l.weDo.map(x=>`<li><span class="sub">${esc(x.sub)}</span> <b>Example ${x.n}</b> · ${esc(x.title)}${x.video?`<span class="cgo" title="${esc(x.video)}">▶ video</span>`:''}<div class="${x.youTry&&x.youTry!='TBM'?'ytry':'ytry none'}">${x.youTry=='TBM'?'You try: to be mapped':x.youTry?'You try: '+esc(x.youTry):'No you try'}</div></li>`).join('')}</ol>${l.weDoNote?`<div class="sub">${esc(l.weDoNote)}</div>`:''}`:'',l.weDo?.length)
    +nest('exit','Exit tasks',l.exit?.length?`<ul class="apk">${l.exit.map(x=>`<li><span class="ak ex">${/Exam 1/.test(x.src)?'Exam 1':'Exam 2'}</span> ${esc(x.ref)}<div class="sub">${esc(x.src)}</div></li>`).join('')}</ul>`:'',l.exit?.length)
-   +nest('hw','Homework',l.homework?.sets?.length?l.homework.sets.map(s=>`<h4>${esc(s.title)}</h4>${s.items.length?`<ul class="apk">${s.items.map(i=>`<li class="hwrow"><span class="hws">${esc(i.skill)}</span><b>${esc(i.q)}</b></li>`).join('')}</ul>`:''}${s.note?`<div class="sub">${esc(s.note)}</div>`:''}`).join(''):'',l.homework?.source=='slides'?'from slides':l.homework?.sets?.length?l.homework.sets.length+' exercise'+(l.homework.sets.length>1?'s':''):null)}
+   +nest('hw','Coursework',l.homework?.sets?.length?l.homework.sets.map(s=>`<h4>${esc(s.title)}</h4>${s.items.length?`<ul class="apk">${s.items.map(i=>`<li class="hwrow"><span class="hws">${esc(i.skill)}</span><b>${esc(i.q)}</b></li>`).join('')}</ul>`:''}${s.note?`<div class="sub">${esc(s.note)}</div>`:''}`).join(''):'',l.homework?.source=='slides'?'from slides':l.homework?.sets?.length?l.homework.sets.length+' exercise'+(l.homework.sets.length>1?'s':''):null)}
 const ytId=u=>{const m=String(u).match(/[?&]v=([\w-]{11})/)||String(u).match(/youtu\.be\/([\w-]{11})/);return m?m[1]:''};
 const ytStart=u=>{const m=String(u).match(/[?&]t=(\d+)/);return m?m[1]:''};
 function vids(arr){return (arr||[]).map(v=>{const id=ytId(v.url);return `<div class="vid"><button class="yt" data-yt="${id}" data-start="${ytStart(v.url)}" aria-label="Play ${esc(v.title)}"><img loading="lazy" src="https://i.ytimg.com/vi/${id}/mqdefault.jpg" alt=""></button><div class="vt">${esc(v.title)}</div><a href="${esc(v.url)}" target="_blank" rel="noopener">Open on YouTube ↗</a></div>`}).join('')||'<div class="empty">No video</div>'}
@@ -206,12 +206,12 @@ const DECKS={};
 function deckOf(l){const m=(l.materials||[]).find(x=>x.kind=='Guided slides'&&x.file);return m?m.file:null}
 function shapePane(l){
   if(l.type=='check')return `<div class="seqhead"><h3 style="margin-top:0">Coursework check + chapter test</h3></div><ol class="shape">
-    <li><span class="sphase ph-cfat">Check</span><span>Coursework checklist: CFATs, bound reference, guided notes, homework</span></li>
+    <li><span class="sphase ph-cfat">Check</span><span>Coursework checklist: CFATs, bound reference, guided notes, Cambridge coursework exercises</span></li>
     <li><span class="sphase ph-exit">Test</span><span>Chapter test: Mathspace topic assessment</span></li></ol>`;
   const f=deckOf(l);
   if(!f)return `<div class="seqhead"><h3 style="margin-top:0">Lesson shape</h3></div><div class="seqempty">Slides not made yet.<br>The lesson shape appears here once the slide deck exists.</div>`;
   return `<div class="seqhead"><h3 style="margin-top:0">Lesson shape <span class="sub" style="text-transform:none;letter-spacing:0">· from the slides</span></h3><a class="sub" href="${esc(f)}" target="_blank" rel="noopener">Open slides ↗</a></div><div data-deck="${esc(f)}"><div class="sub">Reading the slides…</div></div>`}
-const PH=[[/^CFAT/i,'CFAT','ph-cfat'],[/^Do Now/i,'Do Now','ph-do-now'],[/^APK/i,'APK','ph-apk'],[/^Learn/i,'Learn','ph-new'],[/^Worked example/i,'Example','ph-guided'],[/^You try/i,'You try','ph-apply'],[/^CAS/i,'CAS','ph-guided'],[/^Exit/i,'Exit task','ph-exit'],[/^Check-in/i,'Check-in','ph-learning'],[/^Homework/i,'Homework','ph-learning']];
+const PH=[[/^CFAT/i,'CFAT','ph-cfat'],[/^Do Now/i,'Do Now','ph-do-now'],[/^APK/i,'APK','ph-apk'],[/^Learn/i,'Learn','ph-new'],[/^Worked example/i,'Example','ph-guided'],[/^You try/i,'You try','ph-apply'],[/^CAS/i,'CAS','ph-guided'],[/^Exit/i,'Exit task','ph-exit'],[/^Check-in/i,'Check-in','ph-learning'],[/^Homework/i,'Coursework','ph-learning']];
 function outline(doc){
   return [...doc.querySelectorAll('section.slide')].map((s,i)=>{
     const pill=(s.querySelector('.pill')?.textContent||'').replace(/\s+/g,' ').trim();
@@ -224,7 +224,7 @@ function fillDecks(){document.querySelectorAll('[data-deck]').forEach(async el=>
   try{ if(!DECKS[f])DECKS[f]=outline(new DOMParser().parseFromString(await (await fetch(f,{cache:'no-store'})).text(),'text/html'));
     const O=DECKS[f], cnt=k=>O.filter(x=>x.label==k).length;
     const sum=['CFAT','Do Now','APK','Example','You try','CAS','Exit task'].filter(k=>cnt(k)).map(k=>`${k} ×${cnt(k)}`).join(' · ');
-    el.innerHTML=`<div class="sub" style="margin:6px 0 2px">${O.length} slides · ${sum}</div><ol class="shape">${O.map(x=>`<li><span class="sphase ${x.cls}">${x.n} · ${esc(x.label)}</span><span>${esc(x.label=='Title'||x.label=='Intro'||x.label=='Success criteria'?x.head:x.pill.replace(/^(Worked example|You try|Learn|CAS|APK)\s*·?\s*/i,'')+(x.head&&!/^(Show what you know|How did you go\?|Homework)$/.test(x.head)?' — '+x.head:''))}</span></li>`).join('')}</ol>`;
+    el.innerHTML=`<div class="sub" style="margin:6px 0 2px">${O.length} slides · ${sum}</div><ol class="shape">${O.map(x=>`<li><span class="sphase ${x.cls}">${x.n} · ${esc(x.label)}</span><span>${esc(x.label=='Title'||x.label=='Intro'||x.label=='Success criteria'?x.head:x.pill.replace(/^(Worked example|You try|Learn|CAS|APK)\s*·?\s*/i,'')+(x.head&&!/^(Show what you know|How did you go\?|Homework|Coursework)$/.test(x.head)?' — '+x.head:''))}</span></li>`).join('')}</ol>`;
   }catch(e){el.innerHTML='<div class="empty">Could not read the slide file.</div>'}})}
 function detail(l){
   return `<div class="detail" data-for="${l.id}"><div>
