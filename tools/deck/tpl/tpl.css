@@ -63,7 +63,7 @@
 .T .cmdt{background:#fff8e1;border:2px solid #f2b705;border-radius:999px;padding:7px 18px;font-size:18px;color:#5a4100;white-space:nowrap}
 .T .cmdt b{font-weight:900;letter-spacing:.1em;color:#8a6100}
 /* distractor letter inline with its heading */
-.T .dl{display:inline-block;margin-left:8px;background:var(--dis);color:#fff;border-radius:6px;padding:0 8px;letter-spacing:0}
+.T .dl{margin-left:0!important;margin-right:6px;display:inline-block;margin-left:8px;background:var(--dis);color:#fff;border-radius:6px;padding:0 8px;letter-spacing:0}
 /* formulas */
 .frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 4px;font-size:.92em}
 .frac>span:first-child{border-bottom:2px solid currentColor;padding:0 6px}

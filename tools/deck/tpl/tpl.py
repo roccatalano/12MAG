@@ -88,8 +88,9 @@ def qslide(kind,pill,head,given,steps,answer,src,stat=None,mc=None,key=None,dist
     R+='</ol>'+(f'<div class="made">{made}</div>' if made else '')+'<ol class="wk">'
     sa=f' data-stat="{stat[1]}"' if stat and len(stat)>1 else ''
     if mc:
-        R+=f'<li class="frag ans" data-key="{key}"{sa} data-s="sol"><span class="wn">✓</span><span class="sl">Answer · {key}</span>{answer}</li>'
-        if dis: R+=f'<li class="frag dis" data-s="sol"><div class="dlab">What’s the distractor? <span class="dl">{dis[0]}</span></div><span class="frag" data-dis="{dis[0]}">{dis[1]}</span></li>'
+        R+=f'<li class="frag ans" data-key="{key}"{sa}><span class="wn">✓</span><span class="sl">Answer · {key}</span>{answer}</li>'
+        # click 1: answer · click 2: the distractor question · click 3: which option and why (option highlighted)
+        if dis: R+=f'<li class="frag dis"><div class="dlab">What’s the distractor?</div><div class="frag" data-dis="{dis[0]}"><span class="dl">{dis[0]}</span> {dis[1]}</div></li>'
         if dist: R+='<span class="frag" data-pct="1"></span>'
     else:
         R+=f'<li class="frag ans"{sa}><span class="wn">✓</span><span class="sl">Answer</span>{answer}</li>'
