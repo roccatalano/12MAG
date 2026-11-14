@@ -1,0 +1,658 @@
+{
+ "s1": [],
+ "s2": [
+  {
+   "ex": 1,
+   "paper": "2024 NHT",
+   "q": "Q2",
+   "marks": 1,
+   "sec": "1A"
+  },
+  {
+   "ex": 2,
+   "paper": "2023",
+   "q": "Q2ai",
+   "marks": 1,
+   "sec": "1B"
+  },
+  {
+   "ex": 2,
+   "paper": "2023",
+   "q": "Q1a",
+   "marks": 1,
+   "sec": "1A"
+  }
+ ],
+ "s3": [
+  {
+   "ex": 1,
+   "paper": "2025 NHT",
+   "q": "Q4",
+   "marks": 1,
+   "sec": "1C"
+  },
+  {
+   "ex": 1,
+   "paper": "2024 NHT",
+   "q": "Q4",
+   "marks": 1,
+   "sec": "1E"
+  },
+  {
+   "ex": 2,
+   "paper": "2026",
+   "q": "Q2b",
+   "marks": 1,
+   "sec": "1C"
+  },
+  {
+   "ex": 2,
+   "paper": "2024 NHT",
+   "q": "Q2a",
+   "marks": 2,
+   "sec": "1B"
+  }
+ ],
+ "s4": [
+  {
+   "ex": 1,
+   "paper": "2023",
+   "q": "Q1",
+   "marks": 1,
+   "sec": "1F"
+  },
+  {
+   "ex": 2,
+   "paper": "2023",
+   "q": "Q1bi",
+   "marks": 1,
+   "sec": "1F"
+  }
+ ],
+ "s5": [
+  {
+   "ex": 1,
+   "paper": "2024",
+   "q": "Q4",
+   "marks": 1,
+   "sec": "1G"
+  },
+  {
+   "ex": 2,
+   "paper": "2024 NHT",
+   "q": "Q1b",
+   "marks": 2,
+   "sec": "1G"
+  }
+ ],
+ "l03": [
+  {
+   "ex": 1,
+   "paper": "2023",
+   "q": "Q4",
+   "marks": 1,
+   "sec": "1H"
+  },
+  {
+   "ex": 1,
+   "paper": "2023",
+   "q": "Q5",
+   "marks": 1,
+   "sec": "1I"
+  },
+  {
+   "ex": 2,
+   "paper": "2024",
+   "q": "Q1ai",
+   "marks": 1,
+   "sec": "1H"
+  },
+  {
+   "ex": 2,
+   "paper": "2024",
+   "q": "Q1b",
+   "marks": 1,
+   "sec": "1I"
+  }
+ ],
+ "l04": [
+  {
+   "ex": 1,
+   "paper": "2024",
+   "q": "Q1",
+   "marks": 1,
+   "sec": "2A"
+  },
+  {
+   "ex": 1,
+   "paper": "2025",
+   "q": "Q4",
+   "marks": 1,
+   "sec": "1E"
+  },
+  {
+   "ex": 2,
+   "paper": "2023",
+   "q": "Q1ci",
+   "marks": 1,
+   "sec": "2A"
+  },
+  {
+   "ex": 2,
+   "paper": "2025",
+   "q": "Q1b",
+   "marks": 1,
+   "sec": "1A"
+  }
+ ],
+ "l05": [
+  {
+   "ex": 1,
+   "paper": "2025 NHT",
+   "q": "Q11",
+   "marks": 1,
+   "sec": "2C"
+  },
+  {
+   "ex": 1,
+   "paper": "2025 NHT",
+   "q": "Q5",
+   "marks": 1,
+   "sec": "1C"
+  },
+  {
+   "ex": 2,
+   "paper": "2025 NHT",
+   "q": "Q3a",
+   "marks": 2,
+   "sec": "1B"
+  },
+  {
+   "ex": 2,
+   "paper": "2023",
+   "q": "Q1bii",
+   "marks": 1,
+   "sec": "1F"
+  }
+ ],
+ "l06": [
+  {
+   "ex": 1,
+   "paper": "2025 NHT",
+   "q": "Q10",
+   "marks": 1,
+   "sec": "2E"
+  },
+  {
+   "ex": 1,
+   "paper": "2024",
+   "q": "Q5",
+   "marks": 1,
+   "sec": "1G"
+  },
+  {
+   "ex": 2,
+   "paper": "2023",
+   "q": "Q3c",
+   "marks": 1,
+   "sec": "2E"
+  },
+  {
+   "ex": 2,
+   "paper": "2024 NHT",
+   "q": "Q1c",
+   "marks": 2,
+   "sec": "1G"
+  }
+ ],
+ "l07": [
+  {
+   "ex": 1,
+   "paper": "2024",
+   "q": "Q9",
+   "marks": 1,
+   "sec": "2F"
+  },
+  {
+   "ex": 1,
+   "paper": "2024 NHT",
+   "q": "Q6",
+   "marks": 1,
+   "sec": "1H"
+  },
+  {
+   "ex": 2,
+   "paper": "2023",
+   "q": "Q3b",
+   "marks": 1,
+   "sec": "2F"
+  },
+  {
+   "ex": 2,
+   "paper": "2024",
+   "q": "Q1aii",
+   "marks": 1,
+   "sec": "1H"
+  }
+ ],
+ "l09": [
+  {
+   "ex": 1,
+   "paper": "2023",
+   "q": "Q2",
+   "marks": 1,
+   "sec": "2G"
+  },
+  {
+   "ex": 1,
+   "paper": "2025",
+   "q": "Q10",
+   "marks": 1,
+   "sec": "2H"
+  },
+  {
+   "ex": 2,
+   "paper": "2023",
+   "q": "Q1e",
+   "marks": 2,
+   "sec": "2G"
+  },
+  {
+   "ex": 2,
+   "paper": "2026",
+   "q": "Q3c",
+   "marks": 2,
+   "sec": "1I"
+  }
+ ],
+ "l10": [
+  {
+   "ex": 1,
+   "paper": "2023",
+   "q": "Q7",
+   "marks": 1,
+   "sec": "3A"
+  },
+  {
+   "ex": 1,
+   "paper": "2025 NHT",
+   "q": "Q9",
+   "marks": 1,
+   "sec": "2H"
+  },
+  {
+   "ex": 2,
+   "paper": "2023",
+   "q": "Q3a",
+   "marks": 1,
+   "sec": "3A"
+  },
+  {
+   "ex": 2,
+   "paper": "2023",
+   "q": "Q2aii",
+   "marks": 1,
+   "sec": "2A"
+  }
+ ],
+ "l11": [
+  {
+   "ex": 1,
+   "paper": "2023",
+   "q": "Q8",
+   "marks": 1,
+   "sec": "3B"
+  },
+  {
+   "ex": 1,
+   "paper": "2026 NHT",
+   "q": "Q9",
+   "marks": 1,
+   "sec": "2F"
+  },
+  {
+   "ex": 2,
+   "paper": "2023",
+   "q": "Q1cii",
+   "marks": 1,
+   "sec": "3B"
+  },
+  {
+   "ex": 2,
+   "paper": "2024",
+   "q": "Q3d",
+   "marks": 1,
+   "sec": "2E"
+  }
+ ],
+ "l12": [
+  {
+   "ex": 1,
+   "paper": "2024 NHT",
+   "q": "Q10",
+   "marks": 1,
+   "sec": "3C"
+  },
+  {
+   "ex": 1,
+   "paper": "2023",
+   "q": "Q6",
+   "marks": 1,
+   "sec": "2G"
+  },
+  {
+   "ex": 2,
+   "paper": "2024 NHT",
+   "q": "Q4e",
+   "marks": 2,
+   "sec": "3C"
+  },
+  {
+   "ex": 2,
+   "paper": "2023",
+   "q": "Q2bii",
+   "marks": 2,
+   "sec": "2G"
+  }
+ ],
+ "l13": [
+  {
+   "ex": 1,
+   "paper": "2024 NHT",
+   "q": "Q11",
+   "marks": 1,
+   "sec": "4A"
+  },
+  {
+   "ex": 1,
+   "paper": "2026",
+   "q": "Q7",
+   "marks": 1,
+   "sec": "2H"
+  },
+  {
+   "ex": 2,
+   "paper": "2024 NHT",
+   "q": "Q4a",
+   "marks": 1,
+   "sec": "3A"
+  },
+  {
+   "ex": 2,
+   "paper": "2023",
+   "q": "Q1d",
+   "marks": 2,
+   "sec": "3B"
+  }
+ ],
+ "l14": [
+  {
+   "ex": 1,
+   "paper": "2024",
+   "q": "Q11",
+   "marks": 1,
+   "sec": "4B"
+  },
+  {
+   "ex": 1,
+   "paper": "2024 NHT",
+   "q": "Q12",
+   "marks": 1,
+   "sec": "4A"
+  },
+  {
+   "ex": 2,
+   "paper": "2026",
+   "q": "Q5g",
+   "marks": 2,
+   "sec": "4B"
+  },
+  {
+   "ex": 2,
+   "paper": "2024",
+   "q": "Q3f",
+   "marks": 2,
+   "sec": "3C"
+  }
+ ],
+ "l15": [
+  {
+   "ex": 1,
+   "paper": "2023",
+   "q": "Q11",
+   "marks": 1,
+   "sec": "4C"
+  },
+  {
+   "ex": 1,
+   "paper": "2025",
+   "q": "Q11",
+   "marks": 1,
+   "sec": "4B"
+  },
+  {
+   "ex": 2,
+   "paper": "2026 NHT",
+   "q": "Q1a",
+   "marks": 1,
+   "sec": "1A"
+  },
+  {
+   "ex": 2,
+   "paper": "2024 NHT",
+   "q": "Q1ai",
+   "marks": 1,
+   "sec": "1F"
+  }
+ ],
+ "l16": [
+  {
+   "ex": 1,
+   "paper": "2023",
+   "q": "Q12",
+   "marks": 1,
+   "sec": "4D"
+  },
+  {
+   "ex": 1,
+   "paper": "2026",
+   "q": "Q11",
+   "marks": 1,
+   "sec": "4C"
+  },
+  {
+   "ex": 2,
+   "paper": "2024",
+   "q": "Q3a",
+   "marks": 1,
+   "sec": "2A"
+  },
+  {
+   "ex": 2,
+   "paper": "2025 NHT",
+   "q": "Q4d",
+   "marks": 1,
+   "sec": "2E"
+  }
+ ],
+ "l17": [
+  {
+   "ex": 1,
+   "paper": "2024",
+   "q": "Q12",
+   "marks": 1,
+   "sec": "5A"
+  },
+  {
+   "ex": 1,
+   "paper": "2026 NHT",
+   "q": "Q10",
+   "marks": 1,
+   "sec": "4C"
+  },
+  {
+   "ex": 2,
+   "paper": "2023",
+   "q": "Q4a",
+   "marks": 1,
+   "sec": "5A"
+  },
+  {
+   "ex": 2,
+   "paper": "2024 NHT",
+   "q": "Q4b",
+   "marks": 1,
+   "sec": "2F"
+  }
+ ],
+ "l18": [
+  {
+   "ex": 1,
+   "paper": "2023",
+   "q": "Q15",
+   "marks": 1,
+   "sec": "5B"
+  },
+  {
+   "ex": 1,
+   "paper": "2025",
+   "q": "Q12",
+   "marks": 1,
+   "sec": "5A"
+  },
+  {
+   "ex": 2,
+   "paper": "2025",
+   "q": "Q4c",
+   "marks": 1,
+   "sec": "5B"
+  },
+  {
+   "ex": 2,
+   "paper": "2024",
+   "q": "Q4b",
+   "marks": 1,
+   "sec": "5A"
+  }
+ ],
+ "l19": [
+  {
+   "ex": 1,
+   "paper": "2024 NHT",
+   "q": "Q14",
+   "marks": 1,
+   "sec": "5B"
+  },
+  {
+   "ex": 1,
+   "paper": "2024 NHT",
+   "q": "Q5",
+   "marks": 1,
+   "sec": "1I"
+  },
+  {
+   "ex": 2,
+   "paper": "2025",
+   "q": "Q4d",
+   "marks": 1,
+   "sec": "5B"
+  },
+  {
+   "ex": 2,
+   "paper": "2024",
+   "q": "Q3b",
+   "marks": 1,
+   "sec": "3A"
+  }
+ ],
+ "l20": [
+  {
+   "ex": 1,
+   "paper": "2023",
+   "q": "Q13",
+   "marks": 1,
+   "sec": "5C"
+  },
+  {
+   "ex": 1,
+   "paper": "2026 NHT",
+   "q": "Q3",
+   "marks": 1,
+   "sec": "2H"
+  },
+  {
+   "ex": 2,
+   "paper": "2024",
+   "q": "Q4a",
+   "marks": 1,
+   "sec": "5C"
+  },
+  {
+   "ex": 2,
+   "paper": "2023",
+   "q": "Q3d",
+   "marks": 1,
+   "sec": "3B"
+  }
+ ],
+ "l21": [
+  {
+   "ex": 1,
+   "paper": "2023",
+   "q": "Q16",
+   "marks": 1,
+   "sec": "5D"
+  },
+  {
+   "ex": 1,
+   "paper": "2024 NHT",
+   "q": "Q13",
+   "marks": 1,
+   "sec": "5C"
+  },
+  {
+   "ex": 2,
+   "paper": "2023",
+   "q": "Q4b",
+   "marks": 1,
+   "sec": "5D"
+  },
+  {
+   "ex": 2,
+   "paper": "2024",
+   "q": "Q3gi",
+   "marks": 1,
+   "sec": "3C"
+  }
+ ],
+ "l22": [
+  {
+   "ex": 1,
+   "paper": "2024 NHT",
+   "q": "Q15",
+   "marks": 1,
+   "sec": "5D"
+  },
+  {
+   "ex": 1,
+   "paper": "2026",
+   "q": "Q10",
+   "marks": 1,
+   "sec": "4B"
+  },
+  {
+   "ex": 2,
+   "paper": "2023",
+   "q": "Q4c",
+   "marks": 2,
+   "sec": "5D"
+  },
+  {
+   "ex": 2,
+   "paper": "2024 NHT",
+   "q": "Q1aii",
+   "marks": 1,
+   "sec": "1F"
+  }
+ ]
+}

@@ -1,0 +1,2 @@
+// Screen preview of A4 print files: Paged.js lays out real A4 pages, then this adds the grey desk and page shadows.
+window.PagedConfig={after:()=>{const s=document.createElement('style');s.textContent=`@media screen{html,body{background:#6b6b6b!important}.pagedjs_pages{display:flex;flex-direction:column;align-items:center;padding:10mm 0;gap:8mm}.pagedjs_page{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.45)}}`;document.head.appendChild(s);}};
