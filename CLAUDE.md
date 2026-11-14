@@ -4,7 +4,7 @@ Owner: Rocco (teacher). He is new to Claude Code and git: explain in plain words
 
 ## What this repo is
 The standalone **Year 12 General Maths (12MAG) course planner** (GitHub Pages: roccatalano.github.io/12mag/). Moved here 14 Nov 2026 from `roccatalano/teaching-dashboard-2027` (which still shows 12MAG on Rocco's personal dashboard for now — don't change that repo unless asked).
-- `PLANNER.md` — the planner spec. **Built 14 Nov:** `planner/index.html` (Unit plan tab + one tab per year), data in `planner/unit-plan.json` (the single source of truth for content: edit it directly) and `planner/years/<year>.json` (+ `years/index.json` listing the years). 2027 is a blank tab until Rocco sends the term-dates file. The site root redirects to `planner/`.
+- `PLANNER.md` — the planner spec. **Built 14 Nov:** `planner/index.html` (Course plan tab + one Year plan tab per year; same card/nested-section design as Rocco's dashboard, whose CSS and section code it copies; label the four groups AoS 1–4, never 'Unit'), data in `planner/unit-plan.json` (the single source of truth for content: edit it directly) and `planner/years/<year>.json` (+ `years/index.json` listing the years). 2027 is a blank tab until Rocco sends the term-dates file. The site root redirects to `planner/`.
 - `lessons/` — finished 12MAG materials (html + pdf), same files as `teaching-dashboard-2027/lessons/gm12/`.
 - `tools/` — current plan builder (`build_plan.py`, writes the dashboard JSON in the OTHER repo; to be replaced by planner data files), source indexes (`y12_edrolo_exam_practice.csv`, `y11_edrolo_exam_practice.csv`, `y11_cambridge_skills_checklist.csv`, `cambridge_go_videos.csv`, `sd.json`, `vcaa_donow_aos1.json`), and slide-deck build code (`deck/s3/` = current template).
 - `docs/CLEANUP.md` — history of the 14 Nov G: drive reorganisation.
@@ -38,3 +38,7 @@ Root: `G:\Shared drives\1. EKC CURRICULUM\1. KLA Folders\MATHEMATICS\VCE Maths\G
 - `02 Sources\` VCAA current 2023-26 (`2025 E1.pdf`, `2025 NHT E2 report.docx`…), VCAA past 2016-2022 (originals of the Edrolo reprints, for % correct), Textbooks (Cambridge U3&4 + U1&2, Edrolo U3&4 + U1&2, Jacaranda, Mathspace), Insight, Bound references, CAS guides, RESERVED (commercial trials, Cambridge tests, Nelson — not used in class).
 - `03 Item bank\` items extracted on first use. `04 Archive\` old material. `Planning\`.
 Claude can create/overwrite files on G: but cannot move, rename or delete them.
+
+## Planner decisions (Rocco, 14 Nov)
+- Keep the Cambridge suggested teaching sequence as the lesson order. No drag-and-drop or auto-built slides: too complicated.
+- The planner must look and work like the teacher dashboard's nested-card system.
