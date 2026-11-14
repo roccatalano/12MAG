@@ -35,22 +35,31 @@ def _frame(cls,pill,head,body,src,stat=None,cfu='qw',extra=''):
     return (f'<section class="slide T {cls}" data-cfu="{cfu}"><div class="hd"><div class="pill">{pill}</div>{_stat(stat)}</div>'
             f'<h2 class="tt">{head}</h2>{body}{extra}<div class="src">{src}</div></section>')
 
-def qslide(kind,pill,head,given,steps,answer,src,stat=None,mc=None,key=None,dist=None,dis=None,made='',cfu=None,video=None):
+def qslide(kind,pill,head,given,steps,answer,src,stat=None,mc=None,key=None,dist=None,dis=None,made='',cfu=None,video=None,cmd=None):
     """kind: dn | apk | we | yt | ex.
     given: question html, or (text before, figure, text after) so the figure sits in a fixed middle zone. mc: list of option texts (A, B, …).
     steps: list of (label, html) or (label, html, attrs) — one reveal each, numbered.
     made: something students construct (e.g. a boxplot) shown on the right under the steps.
     answer: final answer html (bottom right, revealed last with the % badge).
-    key/dist/dis: MC correct letter, % choosing each option, (letter, explanation) distractor."""
+    key/dist/dis: MC correct letter, % choosing each option, (letter, explanation) distractor.
+    cmd: (command word, marks, what it needs) e.g. ('Explain',1,'a reason that refers to the data'). Shown as a chip on the
+         question (always visible) and as the FIRST reveal on the right, before any working. MC: ('Multiple choice',1,None)."""
     if isinstance(given,tuple):  # (text before, figure, text after): text blocks stay whole, figure fills the middle
         pre,fig,post=given; given=f'<div>{pre}</div><div class="fig">{fig}</div>'+(f'<div>{post}</div>' if post else '')
     else: given=f'<div>{given}</div>'
-    L='<div class="L"><div class="q">'+given
+    chip=''
+    if cmd:
+        w,m,_=(tuple(cmd)+(None,))[:3]
+        chip=f'<div class="cmd"><b>{w.upper()}</b>'+(f'<span>{m} mark{"s" if m!=1 else ""}</span>' if m else '')+'</div>'
+    L='<div class="L"><div class="q">'+chip+given
     if mc:
         d=f' data-dist="{",".join(map(str,dist))}"' if dist else ''
         L+=f'<div class="mc"{d}>'+''.join(f'<div data-o="{chr(65+i)}"><b>{chr(65+i)}.</b>{o}</div>' for i,o in enumerate(mc))+'</div>'
     L+='</div></div>'
-    R='<div class="R"><div class="zone">Working</div><ol class="wk">'
+    R='<div class="R">'
+    if cmd and len(cmd)>2 and cmd[2]:
+        R+=f'<div class="cmdbox frag"><div class="lab">What “{cmd[0].lower()}” needs</div><p>{cmd[2]}</p></div>'
+    R+='<div class="zone">Working</div><ol class="wk">'
     for n,s in enumerate(steps,1):
         lab,txt,att=(s+('',))[:3]
         R+=f'<li class="frag" {att}><span class="wn">{n}</span><span class="sl">{lab}</span>{txt}</li>'
