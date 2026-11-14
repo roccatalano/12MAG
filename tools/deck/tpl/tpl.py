@@ -42,16 +42,17 @@ def qslide(kind,pill,head,given,steps,answer,src,stat=None,mc=None,key=None,dist
     made: something students construct (e.g. a boxplot) shown on the right under the steps.
     answer: final answer html (bottom right, revealed last with the % badge).
     key/dist/dis: MC correct letter, % choosing each option, (letter, explanation) distractor.
-    cmd: (command word, marks, what it needs) e.g. ('Explain',1,'a reason that refers to the data'). Shown as a chip on the
-         question (always visible) and as the FIRST reveal on the right, before any working. MC: ('Multiple choice',1,None)."""
+    cmd: (command word, marks, what it needs) e.g. ('Explain',1,'a reason that refers to the data'). Highlighted yellow where it appears in the question, and decoded as the
+         FIRST reveal on the right, before any working. MC: ('Multiple choice',1,None)."""
     if isinstance(given,tuple):  # (text before, figure, text after): text blocks stay whole, figure fills the middle
         pre,fig,post=given; given=f'<div>{pre}</div><div class="fig">{fig}</div>'+(f'<div>{post}</div>' if post else '')
     else: given=f'<div>{given}</div>'
-    chip=''
-    if cmd:
-        w,m,_=(tuple(cmd)+(None,))[:3]
-        chip=f'<div class="cmd"><b>{w.upper()}</b>'+(f'<span>{m} mark{"s" if m!=1 else ""}</span>' if m else '')+'</div>'
-    L='<div class="L"><div class="q">'+chip+given
+    if cmd and cmd[0]!='Multiple choice':  # highlight the command word where it appears in the question (last occurrence = the actual question line)
+        rx=re.compile(r'(?<![\w-])('+re.escape(cmd[0])+r')(?![\w-])(?![^<]*>)',re.I)
+        ms=list(rx.finditer(given))
+        if ms:
+            m=ms[-1]; given=given[:m.start()]+f'<mark class="cw">{m.group(1)}</mark>'+given[m.end():]
+    L='<div class="L"><div class="q">'+given
     if mc:
         d=f' data-dist="{",".join(map(str,dist))}"' if dist else ''
         L+=f'<div class="mc"{d}>'+''.join(f'<div data-o="{chr(65+i)}"><b>{chr(65+i)}.</b>{o}</div>' for i,o in enumerate(mc))+'</div>'
