@@ -1,0 +1,697 @@
+edrolo_lesson,q,section,skill_heading,cambridge_sub,pdf_page,printed_page,type,parts,used_in,stem_start
+1A,1,skill,Classifying data as categorical or numerical,1A,12,5,MC,,,Which of the following variables is categorical?
+1A,2,skill,Classifying data as categorical or numerical,1A,12,5,MC,,,Which of the following variables is numerical?
+1A,3,skill,Classifying data as categorical or numerical,1A,12,5,short answer,2,,Classify the following variables as either categorical or numerical.
+1A,4,skill,Classifying categorical data as nominal or ordinal,1A,12,5,MC,,,Which of the following categorical variables is nominal?
+1A,5,skill,Classifying categorical data as nominal or ordinal,1A,12,5,MC,,,Which of the following categorical variables is ordinal?
+1A,6,skill,Classifying categorical data as nominal or ordinal,1A,12,5,short answer,2,,Classify the following categorical variables as either nominal or ordinal.
+1A,7,skill,Classifying numerical data as discrete or continuous,1A,12,5,MC,,,Which of the following numerical variables is discrete?
+1A,8,skill,Classifying numerical data as discrete or continuous,1A,13,6,MC,,,Which of the following numerical variables is continuous?
+1A,9,skill,Classifying numerical data as discrete or continuous,1A,13,6,short answer,2,,Classify the following numerical variables as either discrete or continuous.
+1A,10,joining it all together,,1A,13,6,short answer,,,"Fill in the gaps with the following terms: nominal data, discrete data, numerical data, and ordinal data."
+1A,11,joining it all together,,1A,13,6,short answer,8,,"Classify the following variables as either nominal, ordinal, discrete or continuous."
+1A,12,joining it all together,,1A,13,6,short answer,2,,A tennis coach collected data on the number of tennis racquets used and the serve speed (km/h) for
+1A,13,joining it all together,,1A,13,6,MC,,,A software company wants to see if they need to upgrade their program.
+1A,19,questions from multiple lessons,,,15,8,MC,,,Arthur gets $1000 for his birthday and wants to save his money. He opens a savings account and
+1B,1,skill,Constructing frequency tables,1B,22,15,MC,,,"A group of people were asked whether they preferred coffee, tea, or neither in the morning."
+1B,2,skill,Constructing frequency tables,1B,22,15,short answer,,,20 members of the Italian Club were asked what their favourite type of pasta is. Their results were
+1B,3,skill,Constructing bar charts,1B,22,15,MC,,,A class of 312 Year 12 boys were asked their shoe size . Their results are 200
+1B,4,skill,Constructing bar charts,1B,22,15,short answer,2,,"The s hirt sizes (extra small, small, medium, large, extra large) of 49 people frequency"
+1B,5,skill,Constructing bar charts,1B,23,16,MC,,,A group of people were asked what their preferred 150
+1B,6,skill,Constructing bar charts,1B,23,16,short answer,2,,139 people were asked what their favourite animal was. The results are shown
+1B,7,skill,Describing the distribution of categorical data,1B,23,16,MC,,,88 people were asked who their favourite Avenger was. 40
+1B,8,skill,Describing the distribution of categorical data,1B,23,16,short answer,,CFAT 1.1.1,"The brands of 50 cars entering a carpark were recorded, with the 100"
+1B,9,joining it all together,,1B,24,17,MC,,CFAT 1.1.1,A barista collected information on the type of milk that customers 100
+1B,10,joining it all together,,1B,24,17,short answer,,,A group of musicians were asked who their f avourite jazz drummer was. Their responses were
+1B,11,joining it all together,,1B,24,17,short answer,,,A group of toddlers were asked about their least favourite vegetable . The results are represented in
+1B,12,joining it all together,,1B,25,18,short answer,,,A group of office workers were asked what their 60
+1C,1,skill,Displaying data using dot plots,1D,37,30,MC,,,The number of bathrooms in 12 houses is shown in the
+1C,2,skill,Displaying data using dot plots,1D,37,30,short answer,,,Use the following data to construct a dot plot.
+1C,3,skill,Displaying data using dot plots,1D,37,30,short answer,4,,"Mr Hogan recorded the amount of time his students spent over a week studying for history, correct to"
+1C,4,skill,Displaying data using stem plots,1D,37,30,MC,,,The numbers of fingers of 11 species of aliens are shown in the following stem plot.
+1C,5,skill,Displaying data using stem plots,1D,37,30,short answer,,,Use the following data to construct a stem plot.
+1C,6,skill,Displaying data using stem plots,1D,38,31,short answer,3,CFAT 1.1.1,Simon conducted a survey for his statistics class by asking 25 of his classmates how long it took them
+1C,7,skill,Displaying data using stem plots,1D,38,31,short answer,4,,Mrs Jones’ physics class did an experiment investigating the height that a ball would bounce
+1C,8,skill,Constructing grouped frequency tables,1C,38,31,MC,3,,The w
+1C,9,skill,Constructing grouped frequency tables,1C,38,31,short answer,2,,The m
+1C,10,skill,Constructing grouped frequency tables,1C,39,32,MC,,,The number of games played by 22 Narrm Demons
+1C,11,skill,Constructing grouped frequency tables,1C,39,32,short answer,3,,A class of 20 students timed themselves to see how long it would take each of them to run around the
+1C,12,skill,Constructing grouped frequency tables,1C,39,32,short answer,4,,The selling prices of NFTs are shown in the following grouped frequency table.
+1C,13,skill,Constructing grouped frequency tables,1C,39,32,short answer,4,,The ages of 20 guests at a wedding are recorded.
+1C,14,joining it all together,,1C,40,33,short answer,4,,The m
+1C,15,joining it all together,,1C,40,33,short answer,6,,The h
+1C,22,questions from multiple lessons,,,43,36,short answer,,,Information on 26 different animals is shown in a table.
+1D,1,skill,Calculating logarithmic values,1E,50,43,MC,,,What is the value of log 10 (10) ?
+1D,2,skill,Calculating logarithmic values,1E,50,43,short answer,8,,"Calculate the log values of the following, correct to two decimal places."
+1D,3,skill,Calculating logarithmic values,1E,50,43,short answer,3,,"Calculate the value of 𝑥 , correct to two decimal places."
+1D,4,skill,Displaying data using a logarithmic scale,1E,50,43,MC,,,Consider the following histogram with a log 10 scale.
+1D,5,skill,Displaying data using a logarithmic scale,1E,50,43,short answer,,,The following table shows the revenues of six businesses.
+1D,6,skill,Displaying data using a logarithmic scale,1E,50,43,short answer,,,The w
+1D,7,skill,Interpreting data displayed using a logarithmic scale,1E,50,43,MC,2,,Statisticians have collected data on the population of 68 of rural communities.
+1D,8,skill,Interpreting data displayed using a logarithmic scale,1E,51,44,short answer,,,The height (m) of 21 oak trees have been measured by an environmentalist.
+1D,9,joining it all together,,1E,51,44,short answer,,CFAT 1.1.1,"The approximate weight of different vehicles (cars, boats, planes) were recorded in kilograms."
+1D,10,joining it all together,,1E,51,44,short answer,,,It is the year 3000. Many different alien species have been found across the universe.
+1D,11,joining it all together,,1E,52,45,short answer,2,,The weights of 10 vehicles were recorded in kilograms.
+1E,1,skill,Calculating the five-number summary,1G,63,56,MC,,CFAT 1.1.2,Find the value of Q3 for the following data set.
+1E,2,skill,Calculating the five-number summary,1G,63,56,short answer,,,A physics class made paper aeroplanes to test aerodynamics. The distance (m) that each paper
+1E,3,skill,Calculating the five-number summary,1G,63,56,short answer,,,Construct a five-number summary for the following dot plot.
+1E,4,skill,Calculating the five-number summary,1G,63,56,short answer,,,Construct a five-number summary for the following stem plot.
+1E,5,skill,Calculating the range and interquartile range,1F,63,56,MC,,,Which of the following statements is true?
+1E,6,skill,Calculating the range and interquartile range,1F,63,56,short answer,2,,"The following data shows the amount of money, correct to the nearest dollar, that Alice spent at her"
+1E,7,skill,Calculating the range and interquartile range,1F,64,57,short answer,,,"At the annual cheese rolling festival, the finishing time, in seconds, of each cheese is recorded in the"
+1E,8,skill,Identifying outliers,1G,64,57,MC,,CFAT 1.1.2,100 Year 12 students were asked how much money they have spent on games in the past year.
+1E,9,skill,Identifying outliers,1G,64,57,short answer,,,Identify which data values have been incorrectly marked as outliers on the boxplot.
+1E,10,skill,Identifying outliers,1G,64,57,short answer,2,,Identify any outliers in the following data sets.
+1E,11,skill,Identifying outliers,1G,64,57,MC,,CFAT 1.1.2,
+1E,12,skill,Identifying outliers,1G,65,58,MC,3,,"A group of 20 students, each from different schools, competed in an interschool diving competition."
+1E,13,skill,Identifying outliers,1G,65,58,MC,3,,A team of basketball players held a mini tournament to see how many baskets they can shoot in
+1E,14,joining it all together,,1G,65,58,short answer,4,CFAT 1.1.2,The goal tally of the top 20 forwards in the 2000 AFL season is recorded.
+1E,15,joining it all together,,1G,66,59,short answer,,,The owner of a record store documents the number of records sold on 17 different days.
+1E,16,joining it all together,,1G,66,59,short answer,,,The m
+1F,1,skill,Describing the distribution of histograms,1C,79,72,MC,,,Describe the shape of the following histogram.
+1F,2,skill,Describing the distribution of histograms,1C,79,72,short answer,2,,Describe the shape of each of the following histograms and identify any potential outliers.
+1F,3,skill,Describing the distribution of histograms,1C,80,73,short answer,2,,"The t emperature , in °F, in New York was measured every"
+1F,4,skill,Describing the distribution of dot plots and stem plots,1D,80,73,MC,,,Which of the following dot plots is negatively skewed with a potential outlier?
+1F,5,skill,Describing the distribution of dot plots and stem plots,1D,80,73,short answer,2,,Describe the shape of each of the following dot plots and identify any potential outliers.
+1F,6,skill,Describing the distribution of dot plots and stem plots,1D,81,74,short answer,4,,Describe the shape of each of the following stem plots and identify any possible outliers.
+1F,7,skill,Describing the distribution of dot plots and stem plots,1D,81,74,short answer,2,,Consider the following dot plot.
+1F,8,skill,Describing the distribution of dot plots and stem plots,1D,82,75,short answer,2,,Sophie is a newspaper editor and records the n umber of edits she makes for each newspaper that gets
+1F,9,skill,Identifying the best measure of centre,1F,82,75,MC,,,Fill in the missing words.
+1F,10,skill,Identifying the best measure of centre,1F,82,75,short answer,2,,Identify whether the mean or median would be the best measure of centre for the
+1F,11,skill,Identifying the best measure of centre,1F,83,76,short answer,,,Rodney and Sally are discussing their answers to question 10d. Rodney says the best measure of
+1F,12,skill,Describing the distribution of boxplots,1G,83,76,MC,,CFAT 1.1.2,Fill in the blanks in the following statement.
+1F,13,skill,Describing the distribution of boxplots,1G,83,76,short answer,4,,"Describe the following boxplots in terms of shape, centre, spread and outliers."
+1F,14,joining it all together,,1F,84,77,MC,,,Which of the following statements is false?
+1F,15,joining it all together,,1F,84,77,MC,,,Sashi constructed a distribution that is positively skewed with an outlier. The distribution has a median
+1F,16,joining it all together,,1F,84,77,short answer,2,CFAT 1.1.2,"Prue and Gil are both singers, and are members of two different choirs. They each decided to collect"
+1G,1,skill,Calculating the sample mean,1F,91,84,MC,,,A data set contains the following values.
+1G,2,skill,Calculating the sample mean,1F,91,84,short answer,,,Calculate the mean of the following data set.
+1G,3,skill,Calculating the sample mean,1F,91,84,short answer,,,"Calculate the mean number of pets from the following data set, rounded to one decimal place."
+1G,4,skill,Calculating the sample mean and standard deviation using technology,1F,91,84,MC,,CFAT 1.1.3,"For the following data set,"
+1G,5,skill,Calculating the sample mean and standard deviation using technology,1F,91,84,short answer,,,Calculate the sample mean and standard deviation for the following data set (to the nearest one
+1G,6,skill,Calculating the sample mean and standard deviation using technology,1F,91,84,short answer,,,Calculate the sample mean and standard deviation for the
+1G,7,joining it all together,,1F,91,84,short answer,3,,"While studying for her geography exam, Layla recorded the t ime"
+1G,8,joining it all together,,1F,92,85,short answer,2,,The following stem plot displays the daily sales at a crepe shop each day for two weeks.
+1G,9,joining it all together,,1F,92,85,short answer,2,,Ahava collects data from her colleagues on the number of disposable coffee cups used in a week. She is
+1G,13,questions from multiple lessons,,,93,86,MC,,,"Wally decides that he needs to practise playing the piano. On the first day, he spends a total of two"
+1H,1,skill,Calculating proportions in normal distributions,1H,100,93,MC,,,Which of the following is an example of a normal distribution?
+1H,2,skill,Calculating proportions in normal distributions,1H,100,93,short answer,2,,3000 students were surveyed about the volume of milk (mL) they add to their breakfast tea each
+1H,3,skill,Calculating proportions in normal distributions,1H,100,93,short answer,,,Malia goes to a turkey farm before Christmas to have a look at their range of turkeys. She finds that
+1H,4,skill,Calculating values in normal distributions,1H,100,93,MC,,,Which of the following graphs identifies 49.85% of data?
+1H,5,skill,Calculating values in normal distributions,1H,101,94,short answer,2,,"The weight, in kilograms, of mountain zebras is approximately normally distributed with a mean of"
+1H,6,skill,Determining the mean and standard deviation of a normal distribution,1H,101,94,MC,,,Which of the following graphs shows a normal distribution with a mean of 63 and a standard
+1H,7,skill,Determining the mean and standard deviation of a normal distribution,1H,101,94,short answer,2,,A manufacturing company produces plastic bottles from recycled plastics that have been collected
+1H,8,joining it all together,,1H,101,94,short answer,3,CFAT 1.1.3,The heights of 2000 seedlings planted by Michelle in her garden last year were measured and found
+1H,9,joining it all together,,1H,101,94,short answer,3,,It is known that travel time from home to school for students at Schoolrolo Secondary College
+1H,10,joining it all together,,1H,102,95,short answer,4,,The m
+1I,1,skill,,1H,108,101,MC,,CFAT 1.1.3,A standardised score of 𝑧 = −2.4 indicates an actual score is
+1I,2,skill,,1H,108,101,short answer,3,,A school hockey team underwent a cardiovascular fitness test. The heart rates of the students
+1I,3,skill,,1H,108,101,short answer,4,,"A PE class played soccer every lesson for one term. Over this period, the number of goals kicked by"
+1I,4,skill,,1H,108,101,MC,,CFAT 1.1.3,Which of the following actual scores will give a standardised score of zero in a data set with a mean of
+1I,5,skill,,1H,108,101,short answer,2,,The weights of a group of cats are approximately normally distributed with a mean weight of 3.5 kg
+1I,6,skill,,1H,108,101,short answer,4,,"After a local survey, the annual wage of workers in a small town was found to be approximately"
+1I,7,skill,,1H,108,101,MC,,,Which of the following scenarios will most likely result in equal 𝑧-scores?
+1I,8,skill,,1H,109,102,short answer,,,"Matt’s height is measured at 182.2 cm. In Australia, male heights are approximately normally distributed"
+1I,9,skill,,1H,109,102,short answer,,CFAT 1.1.3,The men’s 100 m sprint results are approximately normally distributed. Times continue to drop
+1I,10,joining it all together,,1H,109,102,short answer,3,,Suppose that the height of 18-year-old girls is normally distributed with a mean of 169.0 cm and
+1I,11,joining it all together,,1H,109,102,short answer,6,,Two classes sat tests in both Chemistry and Physics. The tests were marked out of 120. Table 1 shows
+2A,1,skill,Displaying bivariate data using two-way frequency tables,2B,119,112,MC,2,,A group of people were surveyed on commute time from home to school.
+2A,2,skill,Displaying bivariate data using two-way frequency tables,2B,119,112,short answer,2,,A survey was conducted on people’s preferences for reusable cup brands
+2A,3,skill,Displaying bivariate data using grouped bar charts,2B,119,112,MC,,,A study was conducted to test the relationship between
+2A,4,skill,Displaying bivariate data using grouped bar charts,2B,120,113,short answer,,,"A survey was conducted for a group of students to see if their current education level (primary,"
+2A,5,skill,Displaying bivariate data using percentage segmented bar charts,2B,120,113,MC,,,A scientific experiment was conducted to determine if there is a 100
+2A,6,skill,Displaying bivariate data using percentage segmented bar charts,2B,120,113,short answer,,,"A chef is experimenting with cooking time (short, cooking time"
+2A,7,skill,Displaying bivariate data using percentage segmented bar charts,2B,121,114,MC,,,"Each morning at the Edrolo office, a team member volunteers to do a employment duration"
+2A,8,skill,Displaying bivariate data using percentage segmented bar charts,2B,121,114,short answer,,,A study was conducted to see if individuals had a 100 cryptocurrency
+2A,9,joining it all together,,2B,121,114,short answer,4,,"Mark wants to see if there is an association between the number of hours studied (0 to 9 hours, 10 to"
+2A,10,joining it all together,,2B,122,115,short answer,2,,An astronomical observation was conducted to determine if there is a relationship between a star’s 
+2B,1,skill,Displaying data using back-to-back stem plots,2C,132,125,short answer,,,"A popular local bakery has recently reduced the size of its workforce, and as such needs to reduce"
+2B,2,skill,Displaying data using back-to-back stem plots,2C,133,126,short answer,4,,The points scored by the NSW Blues and Queensland Maroons in the first 20 State of Origin rugby
+2B,3,skill,Displaying data using parallel dot plots,2C,133,126,MC,2,,The number of minutes spent in the shower by each 11–14 years
+2B,4,skill,Displaying data using parallel dot plots,2C,133,126,short answer,3,,A fortnight worth of daily sales of Aesop and Sukin hand moisturiser brands at a local shop
+2B,5,skill,Displaying data using parallel dot plots,2C,134,127,MC,,,A Unit 3&4 General Mathematics teacher monitored the results of 14
+2B,6,skill,Displaying data using parallel dot plots,2C,134,127,short answer,3,,The number of w ins that Essendon and North Melbourne had in each of the seasons in the 2010’s is
+2B,7,skill,Describing the association between numerical and categorical variables,2C,134,127,MC,2,,"The average pay rate ( $/hour ) of workers from 50 countries were tracked in the years ‘1980’, ‘1990’"
+2B,8,skill,Describing the association between numerical and categorical variables,2C,135,128,short answer,,,Charlotte is a long distance runner. Her coach formulated before
+2B,9,skill,Describing the association between numerical and categorical variables,2C,135,128,short answer,,,The daily maximum temperature (°C) was recorded in the month of October for Hobart
+2B,10,joining it all together,,2C,135,128,short answer,,,"The number of years of education of 1000 random adults was recorded in Argentina, Germany"
+2C,1,skill,Identifying the response and explanatory variables,2A,144,137,MC,,,Fill in the blanks for the following statement.
+2C,2,skill,Identifying the response and explanatory variables,2A,145,138,short answer,,,"Identify the response variable, RV, and the explanatory variable, EV, in each of the following questions."
+2C,3,skill,Identifying the response and explanatory variables,2A,145,138,short answer,,,"Identify the response variable, RV, and the explanatory variable, EV, in each of the following pairs"
+2C,4,skill,Identifying the response and explanatory variables,2A,145,138,short answer,,,"From the following graph, identify the response variable and explanatory variable."
+2C,5,skill,Identifying the response and explanatory variables,2A,145,138,short answer,,,Darren plans on collecting data to determine whether the amount of sleep can be predicted from
+2C,6,skill,Using technology to construct scatterplots,2D,145,138,MC,,,Consider the following scatterplot.
+2C,7,skill,Using technology to construct scatterplots,2D,146,139,short answer,,,The following table was used to make the scatterplot shown. Fill in the missing data points that
+2C,8,skill,Using technology to construct scatterplots,2D,146,139,short answer,,,The m
+2C,9,skill,Using technology to construct scatterplots,2D,146,139,short answer,,,An English teacher wished to reduce the number of spelling mistakes her students made.
+2C,10,skill,Using technology to construct scatterplots,2D,147,140,MC,,,The relationship in the scatterplot shown can be described as
+2C,11,skill,Using technology to construct scatterplots,2D,147,140,short answer,2,,"For each of the following scatterplots, describe the association between the variables in terms"
+2C,12,joining it all together,,2E,147,140,MC,,,"Mavis collected data on how close her friends live to the city and how much they pay in weekly rent,"
+2C,13,joining it all together,,2E,148,141,short answer,,,"In Victoria, if an individual is under 21 years old, they need to have 120 hours of logged practice with"
+2C,14,joining it all together,,2E,148,141,short answer,,,"Francis wants to determine whether his d aily screen time , in minutes, on his phone can be predicted"
+2D,1,skill,Calculating and interpreting the Pearson correlation coefficient,2F,157,150,MC,,,An r value of 1.00 indicates an association that is
+2D,2,skill,Calculating and interpreting the Pearson correlation coefficient,2F,157,150,MC,,,"In which of the following circumstances would calculating the correlation coefficient, r, be most useful?"
+2D,3,skill,Calculating and interpreting the Pearson correlation coefficient,2F,158,151,short answer,,,Max and Penelope collect data on the goals conceded by their soccer team each week and the average
+2D,4,skill,Calculating and interpreting the Pearson correlation coefficient,2F,158,151,short answer,3,,A group of people were surveyed on the number of hours they spent playing Pokémon GO over one
+2D,5,skill,Calculating and interpreting the Pearson correlation coefficient,2F,158,151,short answer,2,,"A select group of rural towns were investigated through the census. For each rural town, the male"
+2D,6,skill,Distinguishing between correlation and causation,2H,158,151,MC,,,"A strong, positive, linear association was observed between two variables that are seemingly unrelated."
+2D,7,skill,Distinguishing between correlation and causation,2H,158,151,MC,,,"The total number of Nobel Prize winners from each country was found to have a strong, positive"
+2D,8,skill,Distinguishing between correlation and causation,2H,158,151,short answer,,,Axel runs a bakery with a wide range of products and has found a positive correlation between
+2D,9,skill,Distinguishing between correlation and causation,2H,159,152,short answer,,,"In a study of American cities, there was found to be a positive correlation between the number"
+2D,10,skill,Distinguishing between correlation and causation,2H,159,152,short answer,2,,Robbie looks at the screen time statistics on his phone to determine whether there is an association
+2D,11,joining it all together,,2F,159,152,short answer,4,,An association has been observed between the weekly cream cheese sales in Forest Hill and the
+2D,12,joining it all together,,2F,159,152,short answer,5,,Mikayla plays netball and is trying to determine whether her recovery during the week impacts
+3A,1,skill,Using technology to determine the least squares regression equation,3A,170,163,MC,,,Consider the following table.
+3A,2,skill,Using technology to determine the least squares regression equation,3A,170,163,MC,,,Consider the following table.
+3A,3,skill,Using technology to determine the least squares regression equation,3A,171,164,short answer,,,A group of students were asked how many hours they had slept the night before a General
+3A,4,skill,Determining the least squares regression equation from a graph,3A,171,164,MC,,,The least squares line fitted to the scatterplot shown is of the form 𝑦𝑦
+3A,5,skill,Determining the least squares regression equation from a graph,3A,171,164,short answer,3,,Estimate the equation of the least squares regression line for the following scatterplots.
+3A,6,skill,Determining the least squares regression equation from a graph,3A,172,165,MC,,,Consider the following summary statistics for a set of bivariate data involving the variables 𝑥 and 𝑦 .
+3A,7,skill,Determining the least squares regression equation from a graph,3A,172,165,short answer,,,Given the following information:
+3A,8,skill,Determining the least squares regression equation from a graph,3A,172,165,short answer,,,Joe the farmer wants to investigate the relationship between t ime (days) and the height (cm) of his
+3A,9,skill,Sketching a least squares regression line from its equation,3A,172,165,MC,,,A least squares line is fitted to data with the aim of predicting the number of daily customers 
+3A,10,skill,Sketching a least squares regression line from its equation,3A,173,166,short answer,,,The width (cm) and length (cm) of 13 insects were
+3A,11,joining it all together,,3A,173,166,MC,,,Which of the following statements regarding the least squares regression line is false?
+3A,12,joining it all together,,3A,173,166,short answer,,,"During a high school physics experiment, the mass (kg) and gravitational force (N) acting on 10"
+3B,1,skill,Interpreting a least squares regression line,3B,180,173,MC,,,The following regression equation shows the relationship between the number of bedrooms and price 
+3B,2,skill,Interpreting a least squares regression line,3B,180,173,short answer,2,,The p
+3B,3,skill,Interpreting a least squares regression line,3B,180,173,short answer,2,,"A group of runners are training for the next Melbourne Marathon. During their training, they record"
+3B,4,skill,Interpreting a least squares regression line,3B,181,174,MC,,,The relationship between the daily maximum temperature (°C) and the daily minimum temperature (°C)
+3B,5,skill,Interpreting a least squares regression line,3B,181,174,short answer,2,,The scatterplot shown has been fitted with a regression equation: 𝑦𝑦
+3B,6,skill,Interpreting a least squares regression line,3B,181,174,short answer,3,,15 seedlings were planted and given different amounts
+3B,7,skill,Interpreting a least squares regression line,3B,181,174,short answer,4,,The manager of a swimming pool investigated the
+3B,8,joining it all together,,3B,182,175,short answer,3,,A group of gardeners have developed a special soil to
+3B,9,joining it all together,,3B,182,175,short answer,4,,Anna owns a vintage dress shop and is trying to create 300
+3B,10,joining it all together,,3B,182,175,MC,3,,The m
+3C,1,skill,Calculating and interpreting the coefficient of determination,2G,193,186,MC,,,The price of burgers and revenue (per annum) for seven different burger stores are collected and
+3C,2,skill,Calculating and interpreting the coefficient of determination,2G,194,187,short answer,2,,A study was conducted to research the impacts of hours worked on hours slept . The results are
+3C,3,skill,Performing residual calculations and constructing a residual plot,3C,194,187,MC,,,Rachel’s Health and Human Development class is studying the average growth in the height of
+3C,4,skill,Performing residual calculations and constructing a residual plot,3C,194,187,short answer,2,,A group of scientists collected the IQ of 5 participants. The scientists then determined a least squares
+3C,5,skill,Performing residual calculations and constructing a residual plot,3C,194,187,short answer,,,The following table shows the length (cm) and width (cm) of seven rectangular cakes at
+3C,6,skill,Performing residual calculations and constructing a residual plot,3C,195,188,short answer,2,,"For each of the following residual plots, determine whether the assumption of linearity is supported."
+3C,7,skill,Performing residual calculations and constructing a residual plot,3C,195,188,short answer,,,The height (m) of a small tree was recorded at the end of every year from the time it was planted.
+3C,8,joining it all together,,3C,195,188,short answer,,,A Year 10 Maths class recently completed a statistics test and a calculus test. Six students recorded
+3C,9,joining it all together,,3C,196,189,short answer,5,,A scientific study was conducted measuring a
+3C,10,joining it all together,,3C,196,189,short answer,5,,Sebastian thinks that there may be a relationship between the amount of time he spends on his phone
+3D,1,skill,Choosing an appropriate data transformation,4D,207,200,MC,,,Which transformations could be used to linearise the data in the scatterplot?
+3D,2,skill,Choosing an appropriate data transformation,4D,207,200,short answer,,,Which square transformation(s) can be used to linearise each data set?
+3D,3,skill,Choosing an appropriate data transformation,4D,208,201,MC,3,,Determine the transformations that could be used to linearise the data in each of the following
+3D,4,skill,Applying a squared transformation,4A,208,201,MC,,,"An 𝑥 -squared transformation was applied to a data set, but one value is missing."
+3D,5,skill,Applying a squared transformation,4A,209,202,short answer,,,Consider the following table.
+3D,6,skill,Applying a squared transformation,4A,209,202,short answer,,,One keen young science student monitored the growth of a plant over 10 days. He recorded the
+3D,7,skill,Applying a log transformation,4B,209,202,MC,,,"A log transformation was applied to a data set, but one value is missing."
+3D,8,skill,Applying a log transformation,4B,209,202,short answer,,,"Use a calculator to apply a log transformation to the data in the table, and plot the transformed data."
+3D,9,skill,Applying a log transformation,4B,209,202,short answer,,,Ed has participated in an annual cheese rolling competition for the past seven years. The time taken
+3D,10,skill,Applying a reciprocal transformation,4C,210,203,MC,,,"An 𝑥 -reciprocal transformation was applied to a data set, but one value is missing."
+3D,11,skill,Applying a reciprocal transformation,4C,210,203,short answer,,,Consider the following table.
+3D,12,skill,Applying a reciprocal transformation,4C,210,203,short answer,,,Donald Trump started his career with a ‘small loan’ of $1 million dollars. The following table shows
+3D,13,joining it all together,,4D,210,203,MC,3,,"Danny, an Olympic discus thrower, recorded the distance of 15 of his throws at a training session in"
+3E,1,skill,Calculating the equation of the least squares regression line for transformed data,4D,221,214,MC,,,"An 𝑥-squared transformation was applied to the data in the following table, and a least squares"
+3E,2,skill,Calculating the equation of the least squares regression line for transformed data,4D,222,215,short answer,,,"Apply a log 10 𝑦 transformation to the data in the following table, and calculate the equation of the"
+3E,3,skill,Calculating the equation of the least squares regression line for transformed data,4D,222,215,short answer,,,"Loki uploads soccer videos to Youtube daily. The number of new views on his latest video, on each"
+3E,4,skill,Calculating the equation of the least squares regression line for transformed data,4D,222,215,short answer,3,,Amanda competed in a 400 m swimming race. Her time for each lap of the 50-metre pool was
+3E,5,skill,Making predictions using the regression equation of transformed data,4D,222,215,MC,,,An 𝑥 -reciprocal transformation was used to linearise a set of non-linear bivariate data. A least
+3E,6,skill,Making predictions using the regression equation of transformed data,4D,222,215,MC,,,The relationship between the value ($) and age (years) of an antique vase has been linearised using a 
+3E,7,skill,Making predictions using the regression equation of transformed data,4D,223,216,short answer,,,A group of medicine students went camping with a limited
+3E,8,skill,Making predictions using the regression equation of transformed data,4D,223,216,short answer,1,,"In an attempt to investigate claims that the sea levels are rising, a climate scientist decides to"
+3E,9,joining it all together,,4D,223,216,short answer,3,,Johnny is a day trader who buys and sells futures contracts. He tracks the value ($000’s) of his portfolio
+4A,1,skill,Constructing time series plots,5A,236,229,MC,,,Consider the following time series showing the number of tickets
+4A,2,skill,Constructing time series plots,5A,236,229,short answer,,,The n
+4A,3,skill,Constructing time series plots,5A,236,229,short answer,,,"The number of c limate change sceptics (%), as a percentage of the total population, each year from"
+4A,4,skill,Constructing time series plots,5A,237,230,short answer,,,The earnings ($000’s) of a casino were recorded for each month in 1983–84 and are given in
+4A,5,skill,Identifying characteristics of time series data,5A,237,230,MC,,,Identify which one of the following features is present in
+4A,6,skill,Identifying characteristics of time series data,5A,237,230,short answer,1,,Identify two features that are present in each of the following time series plots.
+4A,7,skill,Identifying characteristics of time series data,5A,237,230,short answer,,,The following graph shows the change in global
+4A,8,skill,Identifying characteristics of time series data,5A,238,231,short answer,,,The following graph shows the change in sea level (cm) since the year 1000.
+4A,9,joining it all together,,5A,238,231,short answer,,,The following table shows the yearly revenue of a restaurant from 2012 to 2022.
+4A,10,joining it all together,,5A,238,231,short answer,,,The profits between 2018 and 2021 of a buy-now pay-later
+4B,1,skill,Smoothing over an odd number of data points using moving means,5B,253,246,MC,,,Consider the following table.
+4B,2,skill,Smoothing over an odd number of data points using moving means,5B,253,246,short answer,1,,"Alexia recorded the time taken, in minutes, to travel to school over a period of two weeks."
+4B,3,skill,Smoothing over an odd number of data points using moving means,5B,254,247,short answer,2,,"Each day, Mrs Stinton asks her third grade class if they have eaten fruit. The results for the last ten"
+4B,4,skill,Smoothing over an odd number of data points using moving means,5B,254,247,short answer,3,,Crime rates in the city of Ashton are on the rise. The figures for the n
+4B,5,skill,Smoothing over an odd number of data points using moving means,5B,254,247,short answer,4,,Rachel is a leading financial analyst based in the US. Upon analysing exchange rate data for 2003 and
+4B,6,skill,Smoothing over an odd number of data points using moving means,5B,255,248,MC,,,Consider the following table.
+4B,7,skill,Smoothing over an odd number of data points using moving means,5B,255,248,short answer,3,,The following table shows the number of points scored by the winning team of the AFL grand final
+4B,8,skill,Smoothing over an odd number of data points using moving means,5B,255,248,short answer,4,,The following table shows the number of people who visited a popular tourist attraction over the
+4B,9,skill,Smoothing over an odd number of data points using moving means,5B,255,248,short answer,2,,"Brie recently opened a fromagerie called ‘Really Grate Cheese’. She recorded the total weight, in kg, of"
+4B,10,skill,Smoothing over an odd number of data points using moving means,5B,256,249,MC,,,The following graph shows a retail shop’s sales and their seven-mean smoothed s ales over 24 months.
+4B,11,skill,Smoothing over an odd number of data points using moving means,5B,256,249,short answer,1,,Winston is a freelance photographer and recorded the number of h
+4B,12,skill,Smoothing over an odd number of data points using moving means,5B,257,250,short answer,,,"Two weeks ago, Amira invested $8000 in various cryptocurrencies and has since monitored its value,"
+4B,13,joining it all together,,5B,257,250,short answer,,,An ice cream shop recorded the sales for their brand new bubblegum flavoured ice cream over the
+4B,14,joining it all together,,5B,258,251,short answer,4,,Alfredo is a passionate yogi and recorded the number of y oga classes that he has attended each year
+4C,1,skill,Smoothing using three-moving medians,5C,268,261,MC,,,Consider the following time series.
+4C,2,skill,Smoothing using three-moving medians,5C,269,262,short answer,2,,"The daily maximum temperature, in °C, for November is shown."
+4C,3,skill,Smoothing using three-moving medians,5C,269,262,short answer,,,Smooth each of the following time series using three-median smoothing.
+4C,4,skill,Smoothing using three-moving medians,5C,269,262,short answer,,,The time series plot shows the number of followers
+4C,5,skill,Smoothing using three-moving medians,5C,270,263,MC,,,Consider the following time series.
+4C,6,skill,Smoothing using three-moving medians,5C,270,263,short answer,,,"Last year, Nikki decided to plant a large crop of potatoes"
+4C,7,skill,Smoothing using three-moving medians,5C,270,263,short answer,,,Smooth each of the following time series using five-median smoothing.
+4C,8,skill,Smoothing using three-moving medians,5C,271,264,short answer,3,,The number of UFO sightings in a small town was recorded
+4C,9,joining it all together,,5C,271,264,MC,,,Jae is a small business owner. She recorded her daily income over the 28 days of February. Jae then
+4C,10,joining it all together,,5C,271,264,short answer,4,,The daily snowfall (mm) on Mount Buller was recorded
+4C,11,joining it all together,,5C,271,264,short answer,3,,The sales figures for a new type of tennis racquet were
+4C,12,joining it all together,,5C,272,265,short answer,,,Amelia just finished a 14-day hike in Nepal and measured the d
+4D,1,skill,Calculating and interpreting seasonal indices,5D,280,273,MC,,,The seasonal index for s ales in June is 0.73.
+4D,2,skill,Calculating and interpreting seasonal indices,5D,281,274,short answer,2,,The quarterly sales ($000’s) of a canine clothing shop are displayed in the following table.
+4D,3,skill,Calculating and interpreting seasonal indices,5D,281,274,MC,,,Consider the following table.
+4D,4,skill,Calculating and interpreting seasonal indices,5D,281,274,short answer,,,Calculate the seasonal indices for the following time series data. Give values correct to two
+4D,5,skill,Deseasonalising a time series,5D,281,274,MC,,,Consider the following table.
+4D,6,skill,Deseasonalising a time series,5D,281,274,MC,,,"The number of weddings held in the Botanical Gardens is seasonal, with the number of weddings in"
+4D,7,skill,Deseasonalising a time series,5D,282,275,short answer,,,Use the seasonal indices to deseasonalise the following time series data. Give values correct to one
+4D,8,skill,Deseasonalising a time series,5D,282,275,MC,,,The seasonal index for winter is 0.8. How should data from this season be adjusted to correct
+4D,9,skill,Deseasonalising a time series,5D,282,275,short answer,2,,The n
+4D,10,skill,Reseasonalising a time series,5D,282,275,MC,,,"The deseasonalised value for a particular season is 927. If the seasonal index is 0.75, the actual value"
+4D,11,skill,Reseasonalising a time series,5D,282,275,MC,,,Consider the following table.
+4D,12,skill,Reseasonalising a time series,5D,283,276,short answer,,,Baxter has collected the following data regarding the deseasonalised number of reservations at his
+4D,13,skill,Plotting and interpreting a deseasonalised time series,5D,283,276,MC,,,The following graph shows the actual sales and deseasonalised sales.
+4D,14,skill,Plotting and interpreting a deseasonalised time series,5D,283,276,short answer,2,,Hilaria is a fashion trend forecaster and for years has been researching the popularity of her least
+4D,15,joining it all together,,5D,284,277,short answer,3,,"The s ales ($000’s) for a churro company are seasonal, with the sales for 2020, 2021, and 2022 shown"
+4D,16,joining it all together,,5D,284,277,short answer,5,,The n
+4E,1,skill,Modelling time series data,5E,293,286,MC,,,An electronics store recorded their DVD sales between 2010 and 2022. They then fitted a regression
+4E,2,skill,Modelling time series data,5E,293,286,short answer,2,,A new escape room has determined a regression equation to estimate their predicted number of
+4E,3,skill,Modelling time series data,5E,294,287,short answer,2,,Rafaella and Jeremiah recorded the daily number of steps they each walked for a week.
+4E,4,skill,Modelling time series data,5E,294,287,short answer,3,,Leonard conducted research into the number of alien sightings from 1975 to 2015 in the northern
+4E,5,skill,Modelling time series data,5E,294,287,short answer,5,,Daniel is currently 6 weeks into a 16-week exchange program in the Netherlands. bank
+4E,6,skill,Modelling seasonal data,5E,294,287,MC,,,A regression equation has predicted the d
+4E,7,skill,Modelling seasonal data,5E,295,288,short answer,,,The following equation can be used to forecast the deseasonalised sales ($) of a small business.
+4E,8,skill,Modelling seasonal data,5E,295,288,short answer,,,"The average price, in dollars, for a punnet of strawberries at Preston market was recorded for each"
+4E,9,skill,Modelling seasonal data,5E,295,288,short answer,2,,Calliope recorded the monthly profit ($) for her small business in 2022. She noticed that her profit
+4E,10,skill,Modelling seasonal data,5E,295,288,short answer,5,,"Eleanor is a freelance dog-walker. She recorded her quarterly earnings, in dollars, for 2021 and 2022."
+4E,11,joining it all together,,5E,296,289,short answer,6,,"Fatima is studying mathematics at university, and decided to record the number of students that"
+4E,13,questions from multiple lessons,,,297,290,MC,,,Annabelle uses the following data to generate the scatterplot shown.
+5A,1,skill,Interpreting a recurrence relation,7A,308,301,MC,,,What is the initial term of the following recurrence relation?
+5A,2,skill,Interpreting a recurrence relation,7A,308,301,MC,,,Which statement is true of the following recurrence relation?
+5A,3,skill,Interpreting a recurrence relation,7A,308,301,short answer,3,,Determine the initial value for the sequence from the following recurrence relations. State whether
+5A,4,skill,Constructing a recurrence relation,7A,308,301,MC,,,"The first five terms of a sequence are 3, 7, 15, 31, 63 …"
+5A,5,skill,Constructing a recurrence relation,7A,308,301,short answer,4,,Identify the common difference or common ratio in each of the following sequences.
+5A,6,skill,Constructing a recurrence relation,7A,308,301,short answer,4,,Construct a recurrence relation for each of the following patterns.
+5A,7,skill,Constructing a recurrence relation,7A,309,302,short answer,1,,Construct a recurrence relation for each of the following sequences in terms of u.
+5A,8,skill,Constructing a recurrence relation,7A,309,302,short answer,,,"The number of people, Pn, on day n eating at a restaurant as it gets more and more popular follows"
+5A,9,skill,Generating a sequence of terms using a recurrence relation,7A,309,302,MC,,,"Using the following recurrence relation, what is the value of S3?"
+5A,10,skill,Generating a sequence of terms using a recurrence relation,7A,309,302,short answer,,,"Find the terms in each recurrence relation when n = 2, 4 and 7. Round to three decimal places"
+5A,11,skill,Generating a sequence of terms using a recurrence relation,7A,309,302,short answer,,,Generate the first five terms for the following recurrence relations.
+5A,12,skill,Generating a sequence of terms using a recurrence relation,7A,309,302,short answer,,,Use a calculator to find the term G15 in the following sequence. Round to the nearest whole number
+5A,13,skill,Generating a sequence of terms using a recurrence relation,7A,309,302,short answer,,,"A sequence follows a pattern given by Mn+1 = Mn + 3, where M4 = 23. What is the initial value of"
+5A,14,joining it all together,,7A,309,302,short answer,,,Consider the following recurrence relation:
+5A,15,joining it all together,,7A,310,303,short answer,2,,Theo bought his first car when he got his learner permit two years ago. He bought it for $3500.
+5A,16,joining it all together,,7A,310,303,short answer,,,"The height, h , in centimetres, of a ripple in a pond can be measured. The height of the ripple depends"
+5A,23,questions from multiple lessons,,,311,304,short answer,2,,Bacteria replicate and multiply over time.
+5B,1,skill,Modelling flat rate and unit cost depreciation using recurrence relations,7B,319,312,short answer,,,Courtney’s yacht loses its value each time she uses it. The following recurrence relation models the
+5B,2,skill,Modelling flat rate and unit cost depreciation using recurrence relations,7B,319,312,short answer,,,Write a recurrence relation to model each of the following scenarios.
+5B,3,skill,Modelling flat rate and unit cost depreciation using recurrence relations,7B,319,312,short answer,,,Write a recurrence relation to model each of the following scenarios.
+5B,4,skill,Modelling flat rate and unit cost depreciation using recurrence relations,7B,319,312,short answer,,,A brand new tractor was purchased for $14 000. The tractor will be Vn
+5B,5,skill,Modelling flat rate and unit cost depreciation using recurrence relations,7B,319,312,short answer,,,The following graph models the flat rate depreciation of a mobile Vn
+5B,6,skill,Modelling flat rate and unit cost depreciation using recurrence relations,7B,319,312,MC,,,Isaac bought new DJ decks for $740 which depreciate by 20% of the initial value each year.
+5B,7,skill,Modelling flat rate and unit cost depreciation using recurrence relations,7B,320,313,short answer,2,,The following recurrence relation models flat rate depreciation.
+5B,8,skill,Modelling flat rate and unit cost depreciation using recurrence relations,7B,320,313,short answer,3,,Let Vn represent the value of an item after n
+5B,9,skill,Modelling flat rate and unit cost depreciation using recurrence relations,7B,320,313,short answer,2,,A brand new refrigerator costs $930. The refrigerator depreciates by $132.86 every 10 000 times it is
+5B,10,joining it all together,,7B,320,313,short answer,2,,A microwave bought for $600 depreciates by 5.5% of its sale price each year.
+5B,11,joining it all together,,7B,320,313,short answer,3,,"Tristan’s mobile tablet depreciates according to the following recurrence relation, where Vn is its"
+5B,12,joining it all together,,7B,320,313,short answer,3,,"A brand new sedan made by Luxury Motors, that was bought for $84 000, is worth $44 000 four"
+5B,13,joining it all together,,7B,320,313,short answer,3,,Rachel bought a new watch for $280. The watch depreciates by $22 for every 1000 rotations of the
+5C,1,skill,Modelling reducing balance depreciation using recurrence relations,7D,327,320,MC,,,Alex recently purchased a new tractor to use on his farm for $13 000. The value of the tractor
+5C,2,skill,Modelling reducing balance depreciation using recurrence relations,7D,327,320,short answer,1,,"The value of Ella’s car, Vn, at year n, is depreciating according to the following recurrence relation."
+5C,3,skill,Modelling reducing balance depreciation using recurrence relations,7D,327,320,short answer,,,"Write the recurrence relations, On and An, to model the reducing balance depreciation of the following"
+5C,4,skill,Modelling reducing balance depreciation using recurrence relations,7D,328,321,short answer,,,Grace purchased a brand new grand piano for $36 000. Vn
+5C,5,skill,Modelling reducing balance depreciation using recurrence relations,7D,328,321,MC,,,"The value of Caitlyn’s new TV, Vn , at year n"
+5C,6,skill,Modelling reducing balance depreciation using recurrence relations,7D,328,321,short answer,2,,Maddy has saved up to buy a second hand car from her cousin. The car is worth $11 800 and is
+5C,7,skill,Modelling reducing balance depreciation using recurrence relations,7D,328,321,short answer,3,,The following recurrence relation models the monthly depreciation of a brand new jet ski that was
+5C,8,skill,Modelling reducing balance depreciation using recurrence relations,7D,328,321,short answer,3,,The following recurrence relation models the depreciation per year of a computer that was
+5C,9,skill,Modelling reducing balance depreciation using recurrence relations,7D,328,321,short answer,2,,Suppose a car is depreciated by the reducing balance method at a rate of 17% per annum. The value
+5C,10,joining it all together,,7D,329,322,short answer,,,Tracy and her brother Dean both bought a laptop. Tracy’s laptop is depreciated according to the
+5C,11,joining it all together,,7D,329,322,short answer,,,Sam recently bought a new phone for $1700. It will be depreciated at a reducing balance rate of 16%
+5C,12,joining it all together,,7D,329,322,short answer,,,Courtney was given a designer handbag for her birthday which cost $3250. The handbag loses its
+5D,1,skill,Creating and using a rule for flat rate depreciation,7C,336,329,MC,,,A $15 000 asset depreciates by a flat rate of 9% each year. By what dollar amount does the asset
+5D,2,skill,Creating and using a rule for flat rate depreciation,7C,336,329,MC,,,Rodney purchases a $400 scientific calculator that depreciates at a flat rate. He creates the rule 
+5D,3,skill,Creating and using a rule for flat rate depreciation,7C,336,329,short answer,4,,For each of the following scenarios:
+5D,4,skill,Creating and using a rule for flat rate depreciation,7C,336,329,short answer,3,,Steve buys a smartphone for $550. It depreciates by 10% of the sale price every year.
+5D,5,skill,Creating and using a rule for flat rate depreciation,7C,336,329,short answer,3,,"Riya buys a computer for $1225. Two years later she gets it valued, and finds it is worth $955.50."
+5D,6,skill,Creating and using a rule for flat rate depreciation,7C,336,329,short answer,,,Hessa buys a car for $8600. She hopes that in three years it will still be worth at least $6000.
+5D,7,skill,Creating and using a rule for unit cost depreciation,7C,336,329,MC,,,Hassan bought a SodaStream for $100 that depreciates by $0.25 each time it is used. He wants
+5D,8,skill,Creating and using a rule for unit cost depreciation,7C,337,330,short answer,,,For each of the following scenarios:
+5D,9,skill,Creating and using a rule for unit cost depreciation,7C,337,330,short answer,,,A parachute costs $400 and depreciates by $8 per jump.
+5D,10,skill,Creating and using a rule for unit cost depreciation,7C,337,330,short answer,,,The following table shows the value of a jet at various points during its service life.
+5D,11,skill,Creating and using a rule for unit cost depreciation,7C,337,330,short answer,,,Anakin owns a cafe and purchases an industrial coffee machine for $9300. The coffee machine
+5D,12,skill,Creating and using a rule for reducing balance depreciation,7E,337,330,MC,,,"Max uses the following rule to calculate Vn, the value of his photocopier after n years."
+5D,13,skill,Creating and using a rule for reducing balance depreciation,7E,337,330,short answer,,,For each of the following scenarios:
+5D,14,skill,Creating and using a rule for reducing balance depreciation,7E,337,330,short answer,,,"Marko wants to buy a new smartwatch, which is currently priced at $779, but he only has $700."
+5D,15,joining it all together,,7C,338,331,short answer,3,,Baxter purchases a brand new portable electric heater for $170.
+5D,16,joining it all together,,7C,338,331,short answer,3,,Mildred buys a high pressure washer for $1200. She is told that the washer depreciates by $2.50 for
+5E,1,skill,Modelling simple interest using recurrence relations,7B,342,335,MC,,,A $13 000 investment earns simple interest at a rate of 1.5% per period. Which of the following
+5E,2,skill,Modelling simple interest using recurrence relations,7B,343,336,short answer,,,Write a recurrence relation to model each of the following scenarios.
+5E,3,skill,Modelling simple interest using recurrence relations,7B,343,336,short answer,,,"The following recurrence relations describe the balance of three savings accounts, Vn, Xn, Yn after"
+5E,4,skill,Modelling simple interest using recurrence relations,7B,343,336,short answer,,,"The balance of Mala’s loan, Mn, at month n, follows the given recurrence relation. The loan charges"
+5E,5,skill,Modelling simple interest using a rule,7C,343,336,MC,,,"For the following rule, what is V19?"
+5E,6,skill,Modelling simple interest using a rule,7C,343,336,MC,,,"If $9354 was invested in an account that earns simple interest at a rate of 0.7% per month,"
+5E,7,skill,Modelling simple interest using a rule,7C,343,336,short answer,,,A $200 loan charges simple interest at a rate of 9% per annum. What is the total amount outstanding
+5E,8,skill,Modelling simple interest using a rule,7C,343,336,short answer,,,The balance of Alonso’s simple interest savings account n months after the initial deposit is given by
+5E,9,skill,Modelling simple interest using a rule,7C,343,336,short answer,,,Manish takes out a loan of $3000 from EasyShark Loans. The loan accumulates simple interest at a
+5E,10,skill,Modelling simple interest using a rule,7C,344,337,short answer,2,,Alex wants to open a simple interest bank account and has two options. An account with the Bank of
+5E,11,skill,Modelling simple interest using a rule,7C,344,337,short answer,3,,Janine put $400 into her savings account when she opened it. It pays simple interest at a rate of
+5E,12,skill,Modelling simple interest using a rule,7C,344,337,short answer,2,,"In order to save up to buy Christmas gifts for her family, Olivia requires $30 of interest to be paid to"
+5E,13,joining it all together,,7B,344,337,short answer,3,,"Tao borrowed $3650 from his local loan agency, and won’t make any repayments for the first 6 years."
+5E,14,joining it all together,,7B,344,337,short answer,3,,"Charlee sets herself a savings goal of $700, so she opens a brand new savings account and moves all"
+5E,15,joining it all together,,7B,344,337,short answer,2,,Sally invested $1600 in savings account four years ago and plotted
+5F,1,skill,Modelling compound interest using recurrence relations,7D,350,343,MC,,,"Sarah invests $2400 in a bank account which pays 4% interest per annum, compounding annually."
+5F,2,skill,Modelling compound interest using recurrence relations,7D,350,343,short answer,2,,"The amount of money in Said’s bank account, Vn , after n"
+5F,3,skill,Modelling compound interest using recurrence relations,7D,351,344,short answer,,,"The amount of money in Nicole’s bank account, Vn, after n months, is given by the following"
+5F,4,skill,Modelling compound interest using recurrence relations,7D,351,344,short answer,,,"Write recurrence relations, Ln and Sn, to model the following situations."
+5F,5,skill,Modelling compound interest using recurrence relations,7D,351,344,short answer,,,Harold is saving up to build a swimming pool in his backyard. He currently has $29 000 but the pool
+5F,6,skill,Modelling compound interest using recurrence relations,7D,351,344,short answer,,,"The graph shown displays the value, Vn, of an investment after n compounding periods."
+5F,7,skill,Modelling compound interest using recurrence relations,7D,351,344,short answer,,,Elise is trying to decide whether the Super Saver account or the Save Big account is best for her.
+5F,8,skill,Modelling compound interest using recurrence relations,7D,352,345,MC,,,The rule Vn = 6000 × 1.0 9 n could be used to model which of the following scenarios?
+5F,9,skill,Modelling compound interest using recurrence relations,7D,352,345,short answer,3,,"Find the final value of each of the following investments, compounding yearly, correct to the"
+5F,10,skill,Modelling compound interest using recurrence relations,7D,352,345,short answer,3,,"Andy, Bec and Charlie each invested $3000 into compound interest savings accounts three years ago."
+5F,11,skill,Modelling compound interest using recurrence relations,7D,352,345,short answer,3,,Find the value of the following investment accounts correct to the nearest dollar.
+5F,12,skill,Modelling compound interest using recurrence relations,7D,352,345,short answer,,,Eliza and Frankie win $1000 each and invest their winnings into savings accounts with an interest
+5F,13,joining it all together,,7D,352,345,MC,,,"Which recurrence relation, corresponding to the rule Vn = 2500 × 1.08 2 n , is written correctly?"
+5F,14,joining it all together,,7D,352,345,MC,,,Which of the following rules corresponds to the recurrence relation
+5F,15,joining it all together,,7D,353,346,short answer,,,"For each of the following scenarios, model the scenario by"
+5F,16,joining it all together,,7D,353,346,short answer,,,"Rachel and Naomi are arguing about which bank offers a better savings account, regarding the"
+5G,1,skill,Calculating effective interest rates,7F,357,350,MC,,,"For a loan with a nominal interest rate of 4.30% per annum, compounding fortnightly, the effective"
+5G,2,skill,Calculating effective interest rates,7F,357,350,short answer,,,"Convert the following nominal interest rates to effective interest rates, correct to two decimal places."
+5G,3,skill,Calculating effective interest rates,7F,357,350,short answer,,,"Brigitte decides to put $550 in a savings account that has an annual interest rate of 11.75%,"
+5G,4,skill,Comparing nominal and effective interest rates and returns,7F,357,350,MC,,,Which of the following nominal interest rates returns the lowest effective interest rate?
+5G,5,skill,Comparing nominal and effective interest rates and returns,7F,357,350,short answer,,,"In each of the following parts, state which of the two interest rates is lower."
+5G,6,skill,Comparing nominal and effective interest rates and returns,7F,358,351,short answer,,,"Emily is looking to invest her savings into an account, in the hope that the interest she earns will"
+5G,7,skill,Comparing nominal and effective interest rates and returns,7F,358,351,short answer,,,Liam wants to buy a Hilux in time for summer. He needs to take out a loan of $30 000 to cover the costs.
+5G,8,joining it all together,,7F,358,351,MC,,,"If an account has an effective interest rate of 14.6% and the interest compounds monthly, then the"
+5G,9,joining it all together,,7F,358,351,short answer,,,Rex wins $5000 in a snooker competition and wants to put it into a savings account. VicBank is
+5G,10,joining it all together,,7F,358,351,short answer,,,Jess currently has $30 000 invested in an account with an interest rate of 5.6% p.a.
+6A,1,skill,Using an amortisation table to model financial problems,8C,365,358,MC,2,,Stephanie takes out a loan of $50 000 with her bank who doesn’t charge interest for the first three
+6A,2,skill,Using an amortisation table to model financial problems,8C,366,359,short answer,,,"Hannes has put $500 into a safe. Each week, he will take out $50 to pay for petrol."
+6A,3,skill,Using an amortisation table to model financial problems,8C,366,359,short answer,3,,"Florence has borrowed $500 from his grandmother, Florina."
+6A,4,skill,Using financial applications of technology,8E,366,359,MC,,,Alo has established a loan of $15 000 to pay for her car.
+6A,5,skill,Using financial applications of technology,8E,366,359,short answer,3,,"In 2003, Zo opened up a savings account and put $215 into it."
+6A,6,skill,Using financial applications of technology,8E,366,359,short answer,3,,Hubert wants to start investing his earnings. He has put $4000 in a savings account.
+6A,7,joining it all together,,8C,367,360,short answer,2,,The following amortisation table models the balance of a loan worth $500.
+6A,8,joining it all together,,8C,367,360,short answer,2,,The following amortisation table models the balance of an investment worth $500.
+6A,9,questions from multiple lessons,,,367,360,MC,,,The first four terms of a sequence are:
+6B,1,skill,Using recurrence relations to model reducing balance loans,8B,375,368,MC,,,Which of the following graphs is most likely to represent the value of a reducing balance loan
+6B,2,skill,Using recurrence relations to model reducing balance loans,8B,376,369,short answer,3,,"Skyla took out a loan that can be modelled by the following recurrence relation, where Vn represents"
+6B,3,skill,Using recurrence relations to model reducing balance loans,8B,376,369,short answer,2,,"Construct a recurrence relation for each scenario, where Vn represents the value of the reducing"
+6B,4,skill,Using recurrence relations to model reducing balance loans,8B,376,369,short answer,3,,Grant takes out a loan to start his own food truck business.
+6B,5,skill,Using recurrence relations to model reducing balance loans,8B,376,369,short answer,,,"Candice took out a loan of $15 000 to buy her car. Interest is charged at 39% per annum,"
+6B,6,skill,Using amortisation tables to solve problems involving reducing balance loans,8C,376,369,MC,3,,The first four lines of an amortisation table for a reducing balance loan are shown. Interest is
+6B,7,skill,Using amortisation tables to solve problems involving reducing balance loans,8C,377,370,short answer,,,"A loan of $18 000 has an interest rate of 6% per annum, compounding monthly."
+6B,8,skill,Using amortisation tables to solve problems involving reducing balance loans,8C,377,370,short answer,,,The following amortisation table models a reducing balance loan. Fill in the empty cells.
+6B,9,skill,Using amortisation tables to solve problems involving reducing balance loans,8C,377,370,short answer,,,Consider the following amortisation table for a reducing balance loan. Interest is
+6B,10,skill,Using amortisation tables to solve problems involving reducing balance loans,8C,377,370,short answer,,,"Joan has agreed to a loan of $3000 with her bank. The loan has an interest rate of 4% per annum,"
+6B,11,skill,Using amortisation tables to solve problems involving reducing balance loans,8C,378,371,MC,,,Jasmine takes out a loan of $560 000 to pay for her mortgage. She makes monthly repayments of
+6B,12,skill,Using amortisation tables to solve problems involving reducing balance loans,8C,378,371,short answer,4,,Use a financial solver for each of the following.
+6B,13,skill,Using amortisation tables to solve problems involving reducing balance loans,8C,378,371,short answer,,,Drake wants to purchase the latest phone for $1299 but doesn’t have enough money on hand.
+6B,14,skill,Using amortisation tables to solve problems involving reducing balance loans,8C,378,371,short answer,3,,"Miette borrows $19 000 with an interest rate of 7.8% per annum, compounding monthly. She makes"
+6B,15,joining it all together,,8B,378,371,short answer,,,An amortisation table for a reducing balance loan is shown. Interest compounds monthly.
+6B,16,joining it all together,,8B,379,372,short answer,,,"The value of a reducing balance loan, Vn, after n quarters, can be modelled by the recurrence relation,"
+6B,17,joining it all together,,8B,379,372,short answer,,,"Frank wishes to buy a high-end gaming chair. He borrows $8000 at 10.98% per annum, compounding"
+6C,1,skill,Using recurrence relations to model interest-only loans,8H,386,379,MC,,,Which of the following graphs is most likely to represent the value of an interest-only loan
+6C,2,skill,Using recurrence relations to model interest-only loans,8H,386,379,short answer,4,,The monthly repayments of an interest-only loan are described by the following lines of working.
+6C,3,skill,Using recurrence relations to model interest-only loans,8H,386,379,short answer,4,,Calculate the regular repayment amount required for each of the following interest-only loans.
+6C,4,skill,Using recurrence relations to model interest-only loans,8H,387,380,short answer,2,,"Terry has taken out an interest-only loan. Every month, he makes a payment of $465. The interest"
+6C,5,skill,Using recurrence relations to model interest-only loans,8H,387,380,short answer,3,,"Find the annual interest rates for the following interest-only loans, rounded to one decimal place."
+6C,6,skill,Using recurrence relations to model interest-only loans,8H,387,380,short answer,,,Jennifer borrows $750 000 from the bank to purchase an investment property. She will make monthly
+6C,7,skill,Using recurrence relations to model interest-only loans,8H,387,380,MC,,,"What is the annual interest rate required to establish an interest-only loan of $4500, with monthly"
+6C,8,skill,Using recurrence relations to model interest-only loans,8H,387,380,short answer,3,,Determine the annual interest rate required for each of the following interest-only loans. Round to
+6C,9,skill,Using recurrence relations to model interest-only loans,8H,387,380,short answer,3,,Determine the payment required for each of the following interest-only loans. Give answers correct
+6C,10,skill,Using recurrence relations to model interest-only loans,8H,388,381,short answer,3,,Lee wants to purchase a sports car worth $547 841. He places a 30% deposit and finances the
+6C,11,joining it all together,,8H,388,381,short answer,4,,"Harvey is looking to borrow $500 000 and invest it wisely, in the hope of making a decent profit"
+6C,12,joining it all together,,8H,388,381,short answer,5,,Cassandra wants to borrow some money to pay for a beach house in Byron Bay. She places a deposit
+6D,1,skill,Using recurrence relations to model amortising annuities,8B,395,388,MC,,,Which of the following graphs is most likely to represent the value of an amortising annuity?
+6D,2,skill,Using recurrence relations to model amortising annuities,8B,396,389,short answer,3,,"The value of an annuity Vn , after n"
+6D,3,skill,Using recurrence relations to model amortising annuities,8B,396,389,short answer,2,,Carlos has invested in an annuity modelled by the recurrence relation
+6D,4,skill,Using recurrence relations to model amortising annuities,8B,396,389,short answer,3,,"Generate a recurrence relation to model the value of the annuity Vn , after n"
+6D,5,skill,Using recurrence relations to model amortising annuities,8B,396,389,short answer,,,The balance of an annuity after n
+6D,6,skill,Using amortisation tables to solve problems involving amortising annuities,8C,396,389,MC,,,The first four lines of the amortisation table for an
+6D,7,skill,Using amortisation tables to solve problems involving amortising annuities,8C,397,390,short answer,4,,John invests his superannuation in an annuity. Interest compounds monthly and he receives
+6D,8,skill,Using amortisation tables to solve problems involving amortising annuities,8C,397,390,short answer,,,"Find 𝑥, 𝑦 and 𝑧 in each of the following amortisation tables."
+6D,9,skill,Using amortisation tables to solve problems involving amortising annuities,8C,397,390,MC,,,Ashton’s parents invested $25 000 in an annuity that pays out $5000 each year to cover his school
+6D,10,skill,Using amortisation tables to solve problems involving amortising annuities,8C,398,391,short answer,4,,Find the current value of the following annuities.
+6D,11,skill,Using amortisation tables to solve problems involving amortising annuities,8C,398,391,short answer,,,"When Jack retires, he wants to have enough superannuation invested in an annuity to pay him $1000"
+6D,12,skill,Using amortisation tables to solve problems involving amortising annuities,8C,398,391,short answer,3,,"Dawn has invested $500 000 in an annuity. Her bank offers an interest rate of 4.7% per annum,"
+6D,13,joining it all together,,8B,398,391,short answer,4,,"Dale invests his life savings in an annuity, where interest compounds fortnightly. A recurrence"
+6D,14,joining it all together,,8B,399,392,short answer,,,Bobby has recently retired after 40 years of hard work. She has $759 231 invested in an annuity with
+6D,15,joining it all together,,8B,399,392,short answer,,,"The value of an annuity, Vn after n months can be modelled by the recurrence relation"
+6D,16,joining it all together,,8B,399,392,short answer,,,"Ella invests $100 000 in an annuity. Her bank offers a 4.68% per annum interest rate, compounding"
+6E,1,skill,Using recurrence relations to model perpetuities,8I,406,399,MC,,,Which of the following graphs is most likely to represent the value of a perpetuity after 5 years?
+6E,2,skill,Using recurrence relations to model perpetuities,8I,406,399,short answer,4,,The following working calculates the monthly payment from a perpetuity investment.
+6E,3,skill,Using recurrence relations to model perpetuities,8I,406,399,short answer,3,,"The following recurrence relation models the value of a perpetuity, Vn , after n"
+6E,4,skill,Using recurrence relations to model perpetuities,8I,407,400,short answer,,,Answer the following questions without using a financial solver. Round to two decimal places
+6E,5,skill,Using recurrence relations to model perpetuities,8I,407,400,short answer,,,Solt has a perpetuity that pays $2153.85 on a fortnightly basis. Interest is calculated at a rate of
+6E,6,skill,Using recurrence relations to model perpetuities,8I,407,400,short answer,,,Peppa has invested her superannuation in a perpetuity. Her super fund offers an interest rate of 7.2%
+6E,7,skill,Using financial applications of technology to solve problems involving perpetuities,8I,407,400,MC,,,The annual interest rate required to establish a perpetuity with a balance of $64 482 and fortnightly
+6E,8,skill,Using financial applications of technology to solve problems involving perpetuities,8I,407,400,short answer,,,"A perpetuity with an initial investment of $28 500 has an interest rate of 3.16% per annum,"
+6E,9,skill,Using financial applications of technology to solve problems involving perpetuities,8I,407,400,short answer,,,The initial investment in a perpetuity was $1 287 995. The perpetuity pays $1451.27 per fortnight.
+6E,10,skill,Using financial applications of technology to solve problems involving perpetuities,8I,407,400,short answer,,,"A perpetuity had an initial investment of $323 185. If the interest rate is 2.98% per annum, and interest"
+6E,11,skill,Using financial applications of technology to solve problems involving perpetuities,8I,407,400,short answer,,,Farah won $236 064 in a lottery and decided to invest it in a perpetuity. She invests 64% of her total
+6E,12,joining it all together,,8I,408,401,short answer,3,,"Rebecca has $245 105 invested in a perpetuity. Her bank offers an interest rate of 4.8% per annum,"
+6E,13,joining it all together,,8I,408,401,short answer,3,,The following table shows the value of a perpetuity over a period of time.
+6E,14,joining it all together,,8I,408,401,short answer,2,,"Hart wants to have enough superannuation so that, once invested in a perpetuity, he will receive"
+6F,1,skill,Using recurrence relations to model annuity investments,8A,417,410,MC,,,Which of the following graphs is most likely to represent the value of an annuity investment after
+6F,2,skill,Using recurrence relations to model annuity investments,8A,418,411,short answer,3,,"Paula’s annuity investment can be modelled by the following recurrence relation, where Vn is the"
+6F,3,skill,Using recurrence relations to model annuity investments,8A,418,411,short answer,2,,"Write a recurrence relation that can be used to model the value of the annuity investments Vn ,"
+6F,4,skill,Using recurrence relations to model annuity investments,8A,418,411,short answer,3,,Phil wants to predict how much money he will have in his savings account each month. He uses the
+6F,5,skill,Using tables to solve problems involving annuity investments,8A,418,411,MC,,,The following table can be used to model the value of an annuity investment over a period of five months.
+6F,6,skill,Using tables to solve problems involving annuity investments,8A,419,412,short answer,5,,Sheareen has constructed a table to predict the value of her savings for the next six months.
+6F,7,skill,Using tables to solve problems involving annuity investments,8A,419,412,short answer,,,"An annuity investment has an initial principal of $5600 and an interest rate of 4.1% per annum,"
+6F,8,skill,Using tables to solve problems involving annuity investments,8A,419,412,short answer,4,,"Johnathan puts $104 123 in an annuity investment earning interest at a rate of 1.04% per annum,"
+6F,9,skill,Using tables to solve problems involving annuity investments,8A,420,413,MC,,,"Mariana invests $55 000 in an annuity investment which earns interest at a rate of 3.9% per annum,"
+6F,10,skill,Using tables to solve problems involving annuity investments,8A,420,413,short answer,,,Jonah needs $17 780 to go on a whale watching trip exactly one year from now. He currently has $8500
+6F,11,skill,Using tables to solve problems involving annuity investments,8A,420,413,short answer,,,Jacob wants to have $51 988 saved up for an extended holiday in Dubai. He plans to go in 1.5 years.
+6F,12,skill,Using tables to solve problems involving annuity investments,8A,420,413,short answer,3,,Bel invests $50 000 in an annuity investment and wishes to have enough for a down payment of a
+6F,13,skill,Using tables to solve problems involving annuity investments,8A,420,413,short answer,3,,Rachel wants to purchase a car in four years. She currently has $20 000 which she will put in
+6F,14,joining it all together,,8A,420,413,short answer,,,The following table models an annuity investment from week to week.
+6F,15,joining it all together,,8A,421,414,short answer,,,Ash wants to retire in 30 years with at least $430 000 in savings. He currently has $15 000 which will
+7A,1,skill,Identifying matrix properties and types,10A,432,425,MC,,,What matrix has an order of 2
+7A,2,skill,Identifying matrix properties and types,10A,432,425,short answer,3,,Consider matrix B. 
+7A,3,skill,Identifying matrix properties and types,10A,432,425,short answer,4,," A , B , C and D are all matrices of different orders."
+7A,4,skill,Identifying matrix properties and types,10A,432,425,short answer,4,,The following matrix is a 3 × 5 matrix.
+7A,5,skill,Identifying matrix properties and types,10A,432,425,short answer,4,," M , N , O , P , and Q are all 3 × 3 matrices."
+7A,6,skill,Identifying matrix properties and types,10A,433,426,MC,,,A group of 100 people were surveyed about their favourite pets. The results are shown in the
+7A,7,skill,Identifying matrix properties and types,10A,433,426,short answer,4,,The following table and matrix both represent the number of residents and cats in three different
+7A,8,skill,Identifying matrix properties and types,10A,433,426,short answer,3,,A group of children were surveyed on their favourite animal
+7A,9,skill,Identifying matrix properties and types,10A,433,426,short answer,3,,"Construct a matrix using the given order and element rule, where aij is the element in the ith row and"
+7A,10,joining it all together,,10A,434,427,short answer,4,,Kyle noted how many scoops of each ice cream flavour he sold over
+7A,11,joining it all together,,10A,434,427,short answer,3,,"Matrix W shows the total amount of water stored, in litres, in a water tank from Monday to Thursday."
+7B,1,skill,Adding and subtracting matrices,10C,441,434,MC,,,Which of the following matrix operations is defined?
+7B,2,skill,Adding and subtracting matrices,10C,441,434,short answer,3,,"For each of the following matrix operations, determine if the matrix operation is defined. If the"
+7B,3,skill,Adding and subtracting matrices,10C,441,434,short answer,4,,"Simon and Darren are both part-time Uber drivers who drive on Mondays, Wednesdays, and Fridays."
+7B,4,skill,Adding and subtracting matrices,10C,441,434,MC,,,If A = 6
+7B,5,skill,Adding and subtracting matrices,10C,442,435,short answer,2,,Calculate each of the following scalar multiplications.
+7B,6,skill,Adding and subtracting matrices,10C,442,435,short answer,3,,The prices of men’s and women’s garments at a clothing store are displayed in matrix P .
+7B,7,skill,Determining the transpose of a matrix,10C,442,435,MC,,,Which of the following is the transpose of the matrix [ a b c d ] ?
+7B,8,skill,Determining the transpose of a matrix,10C,442,435,short answer,3,,Determine the transpose of each of the following matrices.
+7B,9,skill,Determining the transpose of a matrix,10C,442,435,short answer,,,Gabrielle owns a patisserie franchise with two locations in Melbourne.
+7B,10,joining it all together,,10C,443,436,short answer,4,,"For each of the following matrix expressions, determine if the matrix operation is defined. If the"
+7B,11,joining it all together,,10C,443,436,short answer,1,,Determine the values of 𝑥 and 𝑦 in the following matrix equations.
+7B,12,joining it all together,,10C,443,436,short answer,3,,Oxbridge University retains data on the number of commencing students each year. The number of
+7C,1,skill,Defining matrix products,10D,453,446,MC,,,Which of the following matrix products is defined?
+7C,2,skill,Defining matrix products,10D,453,446,short answer,4,,Consider the following matrices.
+7C,3,skill,Defining matrix products,10D,453,446,MC,1,,"Using the matrices from question 2, determine the order of the following matrix products."
+7C,4,skill,Calculating a matrix product,10D,453,446,MC,,,Calculate the following matrix product.
+7C,5,skill,Calculating a matrix product,10D,453,446,short answer,1,,Calculate the following matrix products.
+7C,6,skill,Calculating a matrix product,10D,453,446,short answer,,,"In a soccer tournament, team Soccerolo (S) and Edroloball (E) played in 20 games and their wins (W),"
+7C,7,skill,Calculating a matrix product,10D,454,447,short answer,4,,Tess runs a social media page and is paid based on the number of likes and comments she gets on
+7C,8,skill,Calculating a matrix product,10D,454,447,short answer,3,,"Mac needs three different cheeses, cheddar (C), gruyere (G) and parmesan (P), to cook his famous"
+7C,9,skill,Using a summing matrix,10D,454,447,MC,,,Which of the following is the correct summing matrix to sum the columns of matrix A ?
+7C,10,skill,Using a summing matrix,10D,454,447,short answer,,,Construct a summing matrix that
+7C,11,skill,Using a summing matrix,10D,454,447,short answer,4,,Heston has four dessert stores and wanted to know which store was doing better in the past month.
+7C,12,skill,Calculating a matrix power,10D,455,448,MC,,,Which of the following matrices can be raised to a power?
+7C,13,skill,Calculating a matrix power,10D,455,448,short answer,4,,For the following matrices:
+7C,14,skill,Calculating a matrix power,10D,455,448,short answer,2,,Use the matrices shown to evaluate the following expressions.
+7C,15,joining it all together,,10D,455,448,short answer,4,,Consider the following matrices.
+7C,16,joining it all together,,10D,455,448,short answer,4,,Fin Demali is an avid bird watcher. He tracks the population of three different species in two areas.
+7D,1,skill,Calculating the determinant of a matrix,10E,463,456,MC,,,What is the determinant of matrix A?
+7D,2,skill,Calculating the determinant of a matrix,10E,463,456,short answer,2,,Find the determinant for each of the following matrices by hand.
+7D,3,skill,Calculating the determinant of a matrix,10E,463,456,short answer,2,,Find the determinant for each of the following matrices using a CAS.
+7D,4,skill,Calculating the determinant of a matrix,10E,463,456,short answer,,,The determinant of matrix A is −4. Find k.
+7D,5,skill,Calculating the inverse of a matrix,10E,463,456,MC,,,What is the inverse of matrix P?
+7D,6,skill,Calculating the inverse of a matrix,10E,464,457,short answer,,,"For each of the following matrices, determine whether the inverse is defined. If it is defined,"
+7D,7,skill,Calculating the inverse of a matrix,10E,464,457,short answer,,,Determine whether the following pairs of matrices are each other’s inverses.
+7D,8,skill,Calculating the inverse of a matrix,10E,464,457,short answer,,,− 1 u 15 − _
+7D,9,skill,Solving simultaneous equations using matrix equations,10E,464,457,MC,,,Which of the following pairs of simultaneous equations is represented by this matrix equation?
+7D,10,skill,Solving simultaneous equations using matrix equations,10E,464,457,short answer,4,,Express the following simultaneous equations in matrix form.
+7D,11,skill,Solving simultaneous equations using matrix equations,10E,464,457,short answer,2,,Solve the following matrix equations for the values of 𝑥 and 𝑦 .
+7D,12,skill,Solving simultaneous equations using matrix equations,10E,464,457,short answer,4,,For each of the following sets of simultaneous equations:
+7D,13,joining it all together,,10E,464,457,short answer,,,Pearl loves body products and decides to call her favourite store and ask them to create two gift
+7D,14,joining it all together,,10E,465,458,MC,,,Yasmine has started a cafe that sells full-cream and soy coffees in both regular and large sizes.
+7E,1,skill,Applying permutations to matrices,10F,472,465,short answer,2,,For the following matrices
+7E,2,skill,Applying permutations to matrices,10F,472,465,short answer,,,Perform a column permutation on matrix M using permutation matrix P in the following.
+7E,3,skill,Applying permutations to matrices,10F,472,465,short answer,,,Perform a row permutation on matrix Q using permutation matrix P in the following.
+7E,4,skill,Constructing permutation matrices,10F,472,465,MC,,,Which of the following permutation matrices would be required to change [ s l o t ] to [ l o t s ] ?
+7E,5,skill,Constructing permutation matrices,10F,472,465,short answer,2,,
+7E,6,skill,Constructing permutation matrices,10F,472,465,short answer,,,Show a matrix calculation that can be used to rearrange the following matrix to spell the
+7E,7,joining it all together,,10F,473,466,short answer,2,,Wordle is a game where players find words inside a grid of jumbled letters. Samantha is playing a
+7F,1,skill,Interpreting and constructing communication matrices,10F,482,475,MC,,,Which of the following can be classified as a communication matrix?
+7F,2,skill,Interpreting and constructing communication matrices,10F,482,475,short answer,,,Construct a communication matrix that shows all one-step communication links for each of the
+7F,3,skill,Interpreting and constructing communication matrices,10F,482,475,short answer,3,,"The following communication matrix C , shows how four aeroplanes can communicate with"
+7F,4,skill,Interpreting and constructing communication matrices,10F,483,476,short answer,3,,"Ariana, Beyonce, Chance, Drake and Eminem are all very careful about who they share their phone"
+7F,5,skill,Interpreting and constructing communication matrices,10F,483,476,short answer,3,,"The mayors of six towns, labelled A to F, decided to set up a communication network between the towns."
+7F,6,skill,Interpreting and constructing dominance matrices,10G,483,476,MC,,,Consider the following dominance matrix.
+7F,7,skill,Interpreting and constructing dominance matrices,10G,484,477,short answer,,,Construct a dominance matrix that shows all one-step dominances in the following networks.
+7F,8,skill,Interpreting and constructing dominance matrices,10G,484,477,short answer,3,,"Four players, ai.zhao999, rainbowmuffin, xthundercatx and felipe.sanchez. competed in a round-robin"
+7F,9,skill,Interpreting and constructing dominance matrices,10G,484,477,short answer,3,,"Six teams competed in a round-robin beach volleyball tournament. After round 4, a tsunami warning"
+7F,10,skill,Interpreting and constructing dominance matrices,10G,484,477,short answer,,,"Five members of a chess club played in a round-robin chess tournament, where each person played"
+7F,11,joining it all together,,10F,485,478,short answer,3,,Jacob stumbled upon a mysterious jungle and was curious to learn more about the inhabitants.
+7G,1,skill,Interpreting and constructing state matrices,11A,496,489,MC,,,A transition model follows the recurrence relation.
+7G,2,skill,Interpreting and constructing state matrices,11A,496,489,short answer,3,,"People attending a local carnival have the choice of enjoying 3 different rides: ‘Timid Tiger’ (T),"
+7G,3,skill,Interpreting and constructing state matrices,11A,496,489,short answer,2,,The food company ‘Barnets’ releases 3 all-new flavours of their popular savoury biscuit brand:
+7G,4,skill,Interpreting and constructing transition matrices,11A,496,489,MC,,,A transition model follows the recurrence relation
+7G,5,skill,Interpreting and constructing transition matrices,11A,497,490,short answer,,,"When recycling, people either fold (F) or scrunch (S) their paper. A researcher finds that she can"
+7G,6,skill,Interpreting and constructing transition matrices,11A,497,490,short answer,,,"A teacher finds that 35% of students who buy lunch today (B) will buy lunch tomorrow, and 50% of"
+7G,7,skill,Calculating state matrices,11C,497,490,MC,,,Consider the following initial state matrix and transition matrix.
+7G,8,skill,Calculating state matrices,11C,497,490,MC,,,Consider the following initial state matrix and transition matrix.
+7G,9,skill,Calculating state matrices,11C,497,490,short answer,,,"Consider the following state matrix after one period, S1, and transition matrix, T."
+7G,10,skill,Calculating state matrices,11C,498,491,short answer,2,,A psychology experiment is conducted where 50 participants decide to eat either a red or blue
+7G,11,skill,Calculating state matrices,11C,498,491,short answer,2,,Superstar travel agent Tal has 300 regular customers who often go on trips to Mars. Based on
+7G,12,skill,Using Leslie matrices in applied scenarios,11E,498,491,MC,2,,The following Leslie matrix can be used to model the growth of a population of hedgehogs.
+7G,13,skill,Using Leslie matrices in applied scenarios,11E,499,492,short answer,3,,The Leslie matrix for a critically endangered species is given.
+7G,14,skill,Using Leslie matrices in applied scenarios,11E,499,492,short answer,,,Scientists have been monitoring the survival and reproductive rates of a rare species of chameleon on
+7G,15,joining it all together,,11A,499,492,short answer,5,,"In Circle Hill, every household has tacos for Mexican night once a week. They either have soft (S)"
+7G,16,joining it all together,,11A,500,493,short answer,2,,A new cafeteria is opening at Edrolo High and the principal wants to know how many students will
+7G,17,joining it all together,,11A,500,493,short answer,3,,"In the lead up to exams, teachers are offering study sessions in English (E), maths (M) and history (H)."
+7G,18,joining it all together,,11A,500,493,short answer,5,,Scientists have been investigating the population changes of green tree frogs. They’ve collected their
+7H,1,skill,Calculating the equilibrium state matrix,11C,506,499,MC,,,"For the state matrix equation Sn = T n × S0 , which of the following expressions would be most likely"
+7H,2,skill,Calculating the equilibrium state matrix,11C,506,499,short answer,2,, 
+7H,3,skill,Calculating the equilibrium state matrix,11C,506,499,short answer,,,Calculate the equilibrium state matrix for the following pairs of T and S0 . Round values to two
+7H,4,skill,Calculating the equilibrium state matrix,11C,506,499,short answer,,,The transition matrix and initial state matrix used to model the changing preferences of 100 mice
+7H,5,skill,Interpreting the equilibrium state matrix,11C,506,499,MC,,,"Matrix F represents an initial state matrix for the daily selection of different fruits, and matrix E "
+7H,6,skill,Interpreting the equilibrium state matrix,11C,506,499,short answer,,,The musical instruments tried by 50 primary school students from day to day can be modelled using
+7H,7,skill,Interpreting the equilibrium state matrix,11C,507,500,short answer,,,"The migration of penguins from two local regions, A and B, can be modelled by the following rule:"
+7H,8,joining it all together,,11C,507,500,short answer,,,A study was conducted on the weekly assignment submissions for 60 university students.
+7H,9,joining it all together,,11C,507,500,short answer,,,The chances of a driver reaching a red light at an intersection depend on whether the driver
+7H,10,joining it all together,,11C,507,500,short answer,,,"Scientists have discovered that turtles tend to migrate monthly between three islands: Amnio, Belix,"
+7H,11,joining it all together,,11C,508,501,short answer,,,Steve is a weatherman and wants to boost his ratings for 35 towns in regional Victoria. His aim is to
+7H,15,questions from multiple lessons,,,509,502,MC,,,Matrix P is a 3 × 3 permutation matrix.
+7I,1,skill,Constructing and interpreting transition diagrams,11B,516,509,MC,,,Which of the following is a valid transition diagram?
+7I,2,skill,Constructing and interpreting transition diagrams,11B,516,509,short answer,,,Construct a transition matrix from each of the following transition diagrams.
+7I,3,skill,Constructing and interpreting transition diagrams,11B,516,509,short answer,,,Construct a transition matrix from each of the following transition diagrams.
+7I,4,skill,Constructing and interpreting transition diagrams,11B,517,510,short answer,1,,Construct a transition diagram from each of the following transition matrices. Convert all decimals
+7I,5,skill,Constructing and interpreting transition diagrams,11B,517,510,short answer,3,,An Indian food appreciation group likes to order takeaway each week. 70% 50%
+7I,6,skill,Constructing and interpreting transition diagrams,11B,517,510,short answer,5,,"Aaron, Brett and Charlie are brothers who like to collect rocks. At the end of each week, Aaron and"
+7I,7,skill,Constructing and interpreting transition diagrams,11B,518,511,MC,,,Consider the matrix recurrence relation Sn+1
+7I,8,skill,Constructing and interpreting transition diagrams,11B,518,511,short answer,,,Consider the following matrix recurrence relation.
+7I,9,skill,Constructing and interpreting transition diagrams,11B,518,511,MC,2,,Consider the following recurrence relation.
+7I,10,skill,Constructing and interpreting transition diagrams,11B,518,511,short answer,3,,"Two cosmetics companies, Edphora and L’Órolo, are in direct competition. Each month, 7% of those"
+7I,11,skill,Constructing and interpreting transition diagrams,11B,519,512,short answer,4,,"John, Leila, and Lo all have way too much money and decide to start their own business. They decide to"
+7I,12,joining it all together,,11B,519,512,short answer,3,,"On a crowded bus, people will either be standing or sitting on a seat. On one bus journey, the number of"
+7I,13,joining it all together,,11B,519,512,short answer,4,,"In basketball, each team always has 5 players on the court, and other players off court on standby. 40%"
+8A,1,skill,Identifying properties of a graph,13A,533,526,MC,,,The following is a connected graph with four vertices.
+8A,2,skill,Identifying properties of a graph,13A,533,526,short answer,3,,Consider the following graph. C
+8A,3,skill,Identifying properties of a graph,13A,533,526,short answer,6,,Consider the following graph.
+8A,4,skill,Identifying properties of a graph,13A,533,526,short answer,6,,The following graph shows roads connecting countries in Europe.
+8A,5,skill,Identifying and constructing graphs,13A,533,526,MC,,,Consider the following graph. B
+8A,6,skill,Identifying and constructing graphs,13A,534,527,MC,,,Which of the following graphs are isomorphic?
+8A,7,skill,Identifying and constructing graphs,13A,534,527,short answer,,,Consider the graph.
+8A,8,skill,Identifying and constructing graphs,13A,534,527,short answer,,,Consider the graph. A
+8A,9,skill,Identifying and constructing graphs,13A,534,527,short answer,2,,Redraw the following graphs in planar form.
+8A,10,skill,Identifying and constructing graphs,13A,535,528,short answer,,,Create a graph that represents the following information.
+8A,11,skill,Using Euler’s rule,13A,535,528,MC,,,"Consider a graph that has five vertices and eight edges. If the graph was connected and planar,"
+8A,12,skill,Using Euler’s rule,13A,535,528,short answer,6,,"For a connected planar graph,"
+8A,13,skill,Using Euler’s rule,13A,535,528,short answer,,,The city council has decided they want to plant grass in the areas between and around some roads.
+8A,14,skill,Using Euler’s rule,13A,535,528,short answer,3,,"Determine the values of v, e and f for the following graphs and use Euler’s rule to show that these"
+8A,15,joining it all together,,13A,536,529,short answer,2,,Consider the following graph.
+8A,16,joining it all together,,13A,536,529,short answer,5,,Consider the following graph.
+8A,17,joining it all together,,13A,536,529,short answer,3,,A group of seven people all give handshakes to each other.
+8A,21,questions from multiple lessons,,,537,530,MC,,,"The following scatterplot shows income, in thousands of dollars,"
+8B,1,skill,Constructing an adjacency matrix from a graph,13B,546,539,MC,,,Which of the following is not an adjacency matrix for an undirected graph?
+8B,2,skill,Constructing an adjacency matrix from a graph,13B,546,539,short answer,,,Construct an adjacency matrix from the following graphs.
+8B,3,skill,Constructing an adjacency matrix from a graph,13B,546,539,short answer,2,,Construct an adjacency matrix from the following graphs.
+8B,4,skill,Constructing an adjacency matrix from a graph,13B,547,540,short answer,,,Harry Potter can’t seem to remember how to draw the symbol of the Deathly Hallows. A
+8B,5,skill,Constructing a graph from an adjacency matrix,13B,547,540,MC,,,Consider the following adjacency matrix.
+8B,6,skill,Constructing a graph from an adjacency matrix,13B,547,540,short answer,2,,Construct a graph from the following adjacency matrices.
+8B,7,skill,Constructing a graph from an adjacency matrix,13B,547,540,short answer,2,,Construct a graph from the following adjacency matrices.
+8B,8,skill,Constructing a graph from an adjacency matrix,13B,548,541,short answer,,,The following adjacency matrix shows the railway connections between
+8B,9,skill,Representing directed graphs,13B,548,541,MC,,,Which is the correct graph to represent the following adjacency matrix?
+8B,10,skill,Representing directed graphs,13B,549,542,short answer,,,Construct an adjacency matrix to represent each of the following directed graphs.
+8B,11,skill,Representing directed graphs,13B,549,542,short answer,,,Use the following adjacency matrices to construct directed graphs.
+8B,12,skill,Representing directed graphs,13B,549,542,short answer,,,Kayla decided to take her dogs for a walk in the local park. D
+8B,13,joining it all together,,13B,549,542,short answer,3,,A museum has several exhibits on display. The exhibits are connected by various different pathways.
+8C,1,skill,Identifying types of walks,13C,562,555,MC,,,What type of walk is shown in the following graph?
+8C,2,skill,Identifying types of walks,13C,562,555,short answer,3,,"Determine if the walk in each of the following graphs is a trail, path, circuit, cycle, or just a walk."
+8C,3,skill,Identifying types of walks,13C,562,555,short answer,,,Chelsea is going for a walk around her neighbourhood. She wants to make sure she starts and ends at her
+8C,4,skill,Identifying types of walks,13C,563,556,MC,,,How many edges need to be removed from the following graph for an Eulerian circuit to
+8C,5,skill,Identifying types of walks,13C,563,556,short answer,1,,For each of the following graphs:
+8C,6,skill,Identifying types of walks,13C,563,556,short answer,2,,Consider the following graph. C E
+8C,7,skill,Identifying types of walks,13C,563,556,short answer,3,,Jesse is skating at the local skatepark. The skatepark has eight ramps which are M
+8C,8,skill,Identifying types of walks,13C,564,557,MC,,,Consider the following graph. B
+8C,9,skill,Identifying types of walks,13C,564,557,short answer,2,,"Determine if a Hamiltonian path is possible in each of the following graphs. If so, write one down."
+8C,10,skill,Identifying types of walks,13C,564,557,short answer,1,,"Determine if a Hamiltonian cycle is possible in each of the following graphs. If so, write one down."
+8C,11,skill,Identifying types of walks,13C,564,557,short answer,2,,Five friends each live in different towns. The following graph shows
+8C,12,joining it all together,,13C,565,558,short answer,4,,Consider the following five graphs.
+8C,13,joining it all together,,13C,565,558,short answer,4,,The following graph displays the location of the Los Angeles houses of the six Kardashian siblings.
+8D,1,skill,Identifying and finding the weight of a spanning tree,13F,574,567,MC,,,Which of the following graphs is a tree?
+8D,2,skill,Identifying and finding the weight of a spanning tree,13F,574,567,short answer,3,,Consider the following weighted graph.
+8D,3,skill,Identifying and finding the weight of a spanning tree,13F,574,567,short answer,,,How many edges need to be removed from the following graph in order to create a spanning tree?
+8D,4,skill,Identifying and finding the weight of a spanning tree,13F,575,568,short answer,,,The following graph shows the roads connecting six towns.
+8D,5,skill,Finding the minimum spanning tree,13F,575,568,MC,,,Which of the following graphs is the minimum spanning tree of the graph provided?
+8D,6,skill,Finding the minimum spanning tree,13F,575,568,short answer,,,Draw the minimum spanning tree of the following weighted graph.
+8D,7,skill,Finding the minimum spanning tree,13F,576,569,short answer,1,,Calculate the weight of the minimum spanning tree for each of the following graphs.
+8D,8,skill,Finding the minimum spanning tree,13F,576,569,short answer,2,,"Since transportation dust has been discovered, Dragonride Services have been going out of business."
+8D,9,joining it all together,,13F,576,569,MC,2,,The total weight of the minimum spanning tree of the following 20
+8D,10,joining it all together,,13F,577,570,short answer,3,,Global leaders from every country are scheduled to meet at the Melbourne Convention Centre (MCC)
+8E,1,skill,Navigating directed graphs,14A,585,578,MC,,,"For the following directed graph, the source and sink, D"
+8E,2,skill,Navigating directed graphs,14A,585,578,short answer,2,,"For each of the following directed graphs, is it possible to travel from vertex B to vertex E?"
+8E,3,skill,Navigating directed graphs,14A,585,578,MC,,,The following network represents a number of A C
+8E,4,skill,Navigating directed graphs,14A,586,579,MC,,,"On the following network, which of the lines is not a cut?"
+8E,5,skill,Navigating directed graphs,14A,586,579,short answer,1,,Calculate the capacity of each of the following cuts.
+8E,6,skill,Navigating directed graphs,14A,586,579,short answer,2,,Consider the following network.
+8E,7,skill,Navigating directed graphs,14A,587,580,MC,,,The maximum flow from source to sink through the following network is
+8E,8,skill,Navigating directed graphs,14A,587,580,short answer,1,,Four lines have been drawn on each of the following networks. One of these four lines is the
+8E,9,skill,Navigating directed graphs,14A,587,580,short answer,,,Find the maximum flow from source to sink for each of the following networks.
+8E,10,skill,Navigating directed graphs,14A,587,580,short answer,,,The following network displays the route from a paddock in which sheep are currently herded to
+8E,11,joining it all together,,14A,588,581,MC,3,,The following network is a map of the paths between stalls and rides at the community fair. It shows
+8E,12,joining it all together,,14A,588,581,short answer,3,,"The following network shows the paths that connect landmarks on a hiking trail, and the number of"
+8E,13,joining it all together,,14A,588,581,short answer,2,,The following network shows the layout of a pipe system
+8F,1,skill,Determining the shortest path by inspection,13D,597,590,MC,,,"Seven fictitious towns, connected by roads, are represented in the following weighted network."
+8F,2,skill,Determining the shortest path by inspection,13D,598,591,short answer,,,"Find, by inspection, the length and route of the shortest path from vertex A to vertex D for each of the"
+8F,3,skill,Determining the shortest path by inspection,13D,598,591,short answer,2,,"Fiona is preparing for her first day at her new school, and is"
+8F,4,skill,Applying Dijkstra’s algorithm,13E,598,591,MC,3,,The following table is a complete Dijkstra’s algorithm solution to find the shortest path through a
+8F,5,skill,Applying Dijkstra’s algorithm,13E,599,592,MC,1,,Consider the table containing a complete Dijkstra’s algorithm solution.
+8F,6,skill,Applying Dijkstra’s algorithm,13E,599,592,MC,,,The first three rows of a Dijkstra’s algorithm solution have been filled out for a particular weighted
+8F,7,skill,Applying Dijkstra’s algorithm,13E,600,593,short answer,1,,"Use Dijkstra’s algorithm to find, for each of the following weighted networks:"
+8F,8,skill,Applying Dijkstra’s algorithm,13E,600,593,short answer,2,,"During an orienteering task at a school camp, students are X"
+8F,9,joining it all together,,13E,600,593,MC,4,,Tom is a truck driver who frequently travels between Melbourne and Sydney. He has calculated his
+8G,1,skill,Representing matching problems using a bipartite graph,14B,609,602,MC,,,The fast-food preferences of four random individuals are displayed in the following bipartite graph.
+8G,2,skill,Representing matching problems using a bipartite graph,14B,609,602,short answer,4,,"Miki, Ramsha, Joy, and Kat are trying to set up a study group for English"
+8G,3,skill,Representing matching problems using a bipartite graph,14B,609,602,short answer,,,"Priya, Rhys, Ted, Georgia, Natalia, and Andy were all asked to"
+8G,4,skill,Representing matching problems using a bipartite graph,14B,610,603,MC,,,"The following table summarises the cost, in dollars, of producing three types of clothing at three"
+8G,5,skill,Representing matching problems using a bipartite graph,14B,610,603,short answer,5,,"Khan, Henry, Jamie and Mya have been assigned to work with each other on a group project. The project"
+8G,6,skill,Representing matching problems using a bipartite graph,14B,611,604,short answer,,,"Anna, Margot, Tina, and Svetlana have all been asked to perform a solo piece at their end of year"
+8G,7,skill,Representing matching problems using a bipartite graph,14B,611,604,short answer,,,The Question Creation Team (QCT) at Edrolo wanted to
+8G,8,joining it all together,,14B,611,604,short answer,4,,"There are four builders available to complete four tasks, A, B, C and D, for a small construction project."
+8G,9,joining it all together,,14B,612,605,short answer,,,Bedazzled Bathers has four different production factories. Four retail stores wish to stock bathers
+8H,1,skill,Interpreting precedence tables,14C,621,614,MC,,,Consider the following precedence table.
+8H,2,skill,Interpreting precedence tables,14C,621,614,short answer,,,Hannah created a precedence table for a DIY project she wanted to complete.
+8H,3,skill,Constructing activity networks,14C,621,614,MC,,,Consider the following activity network. E
+8H,4,skill,Constructing activity networks,14C,622,615,short answer,1,,Construct a precedence table for each of the following activity networks.
+8H,5,skill,Constructing activity networks,14C,622,615,short answer,3,,Construct an activity network for each of the following precedence tables.
+8H,6,skill,Constructing activity networks,14C,623,616,short answer,,,Dustin Martin has multiple strength and conditioning tests that he needs
+8H,7,skill,Constructing activity networks with dummy activities,14C,623,616,MC,,,Consider the project displayed in the following precedence table.
+8H,8,skill,Constructing activity networks with dummy activities,14C,623,616,MC,,,Which activity network corresponds to the following precedence table?
+8H,9,skill,Constructing activity networks with dummy activities,14C,624,617,short answer,3,,"For each of the following precedence tables, if a corresponding activity network was constructed,"
+8H,10,skill,Constructing activity networks with dummy activities,14C,624,617,short answer,,,Construct a precedence table for each of the following activity networks.
+8H,11,skill,Constructing activity networks with dummy activities,14C,625,618,short answer,3,,Construct an activity network for each of the following precedence tables.
+8H,12,skill,Constructing activity networks with dummy activities,14C,625,618,short answer,,,Nova is creating a Piñata for her daughter’s 4th birthday party. The steps
+8H,13,joining it all together,,14C,626,619,MC,3,,Christine is planning on sewing an outfit for her birthday party. She has decided to make a jumpsuit
+8I,1,skill,Interpreting weighted precedence tables,14D,637,630,MC,2,,A weighted precedence table and its corresponding activity network are shown. Some labels on the
+8I,2,skill,Interpreting weighted precedence tables,14D,637,630,short answer,2,,Consider the following weighted precedence table.
+8I,3,skill,Forward scanning to determine the EST and minimum completion time,14D,637,630,MC,3,,Consider the following activity network.
+8I,4,skill,Forward scanning to determine the EST and minimum completion time,14D,638,631,short answer,2,,"The following activity network displays the time in C, 5"
+8I,5,skill,Backward scanning to determine the LST,14D,638,631,MC,2,,Consider the following activity network. 0 6
+8I,6,skill,Backward scanning to determine the LST,14D,638,631,short answer,,,A few students are doing a small group project in class.
+8I,7,skill,Determining the critical path and float times,14D,638,631,MC,,,Which one of the following statements about critical paths is true?
+8I,8,skill,Determining the critical path and float times,14D,638,631,short answer,2,,Consider the following activity network.
+8I,9,skill,Determining the critical path and float times,14D,639,632,short answer,5,,A group of young film students are editing a short film. The activity network below shows the
+8I,10,joining it all together,,14D,639,632,MC,,,"Consider the following activity network. E, 7"
+8I,11,joining it all together,,14D,639,632,short answer,4,,The following network has been used to show the
+8I,12,joining it all together,,14D,639,632,MC,,,"Jamie Oliver has come up with a new recipe for beef D, 10"
+8I,13,joining it all together,,14D,640,633,short answer,6,,Amanda is setting up for her 16th birthday party and has created the
+8I,14,joining it all together,,14D,640,633,short answer,5,,Beyoncé is mid-way through recording her new album ‘Ginger Ale’. Her personal assistant has
+8J,1,skill,Crashing an activity network,14E,647,640,MC,,,Consider the following activity network. The minimum completion time of the project is 24 days.
+8J,2,skill,Crashing an activity network,14E,647,640,short answer,3,,The activity network for a project is shown. All values are in days.
+8J,3,skill,Crashing an activity network,14E,648,641,short answer,4,,"In order to be more efficient, Alyssa, a Year 12 student, has timed all of her activities as she gets ready"
+8J,4,skill,Crashing an activity network with restrictions,14E,648,641,MC,,,Consider the following activity network. All values are in minutes.
+8J,5,skill,Crashing an activity network with restrictions,14E,648,641,short answer,4,,The organisers of Falls Music Festival have drawn an activity network for the setup of their festival.
+8J,6,skill,Crashing an activity network with restrictions,14E,649,642,short answer,,,The following activity network shows the steps required to build an automatic farm on Minecraft.
+8J,7,joining it all together,,14E,649,642,short answer,3,,There are plans for a new basketball court to be built in West Melbourne. Nine activities have been
+8J,8,joining it all together,,14E,650,643,short answer,4,,Hermione is planning on brewing a batch of Polyjuice Potion and has created an activity network for
