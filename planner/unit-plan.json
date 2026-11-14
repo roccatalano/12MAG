@@ -1249,11 +1249,11 @@
          {
           "sub": "1G",
           "items": [
-           "I can construct a boxplot from a five number summary.",
+           "I can construct a boxplot from a five-number summary.",
            "I can construct a boxplot with outliers from data using the CAS calculator.",
            "I can read values from a boxplot.",
-           "I estimate percentages from a boxplot.",
-           "I can use boxplots for describe a distribution without outliers.",
+           "I can estimate percentages from a boxplot.",
+           "I can use boxplots to describe a distribution without outliers.",
            "I can use boxplots to describe a distribution with outliers.",
            "I can use boxplots to answer statistical questions."
           ]
@@ -1338,9 +1338,19 @@
           "sec": "1F"
          },
          {
+          "exam": "Exam 1",
+          "ref": "VCAA 2023 Exam 1 Q6",
+          "sec": "1E"
+         },
+         {
           "exam": "Exam 2",
-          "ref": "VCAA 2023 Exam 2 Q1bi",
+          "ref": "VCAA 2025 Exam 2 Q1a",
           "sec": "1F"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2025 Exam 2 Q1b",
+          "sec": "1A"
          }
         ],
         "exit": [
@@ -1392,8 +1402,9 @@
          {
           "kind": "Guided slides",
           "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
-          "status": "todo",
-          "file": ""
+          "status": "draft",
+          "file": "lessons/S4-slides.html",
+          "pdf": "lessons/S4-slides.pdf"
          },
          {
           "kind": "Guided worksheet",
@@ -1409,12 +1420,56 @@
          }
         ],
         "homework": {
-         "source": "default",
+         "source": "slides",
          "sets": [
           {
-           "title": "Cambridge · Exercise 1G",
+           "title": "Cambridge · Exercise 1G (part 1)",
+           "items": [
+            {
+             "skill": "Five-number summary from a dot or stem plot",
+             "q": "Q1–2"
+            },
+            {
+             "skill": "Boxplot from a five-number summary",
+             "q": "Q3–6"
+            },
+            {
+             "skill": "Boxplot using a CAS calculator",
+             "q": "Q7"
+            },
+            {
+             "skill": "Reading values from a boxplot",
+             "q": "Q8–10"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Cambridge · Exercise 1G (part 2)",
+           "items": [
+            {
+             "skill": "Reading percentages from a boxplot",
+             "q": "Q11–13"
+            },
+            {
+             "skill": "Describing a distribution from a boxplot",
+             "q": "Q14–15"
+            },
+            {
+             "skill": "Using a boxplot to answer statistical questions",
+             "q": "Q16"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q17–20"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 1G section"
           }
          ]
         }

@@ -1,0 +1,13 @@
+
+/* ---------- S4: boxplots ---------- */
+.bxp{transition:opacity .45s}
+.bxo{transition:fill .3s}
+.mini4{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.mini4 .key{padding:10px 18px}
+.mini4 .key h4{margin-bottom:2px}
+.mini4 p{font-size:19px;line-height:1.35}
+.scos{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px}
+.scos div{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px 16px;font-size:20px;line-height:1.35}
+.scos b{display:block;font-size:24px;color:var(--we)}
+.tbl1{display:flex;gap:18px}
+.tbl1 table td,.tbl1 table th{padding:1px 12px}
