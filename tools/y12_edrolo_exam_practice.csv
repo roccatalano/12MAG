@@ -4,7 +4,7 @@ edrolo_lesson,q,source,pdf_page,printed_page,answer,pct_correct,note,stem_start
 1A,16,VCAA 2021 Exam 2 Data analysis Q1a,14,7,0.5/1 avg,50,,"In the sport of heptathlon, athletes compete in seven events."
 1A,17,VCAA 2017 Exam 1 Data analysis Q7,15,8,E,46,,"The variables number of moths (less than 250, 250–500, more than 500) and trap type (sugar, scent,"
 1B,13,Adapted from VCAA 2017 Exam 1 Data analysis Q5,25,18,B,76,,A study was conducted that investigated the number of moths                                        100
-1B,14,VCAA 2012 Exam 1 Data analysis Q2,25,18,,,no report on file (2012 Exam 1),The given bar chart shows the distribution of                                    45
+1B,14,VCAA 2012 Exam 1 Data analysis Q2,25,18,,,no assessor report info available (2012 Exam 1),The given bar chart shows the distribution of                                    45
 1C,16,VCAA 2020 Exam 2 Data analysis Q2a,40,33,0.9/1 avg,90,,The n
 1C,17,VCAA 2019 Exam 1 Data analysis Q1,41,34,A,92,,The following histogram shows the distribution of the population size of 48 countries in 2018.
 1C,18,VCAA 2016 Exam 1 Data analysis Q3,41,34,A,87,,The following stem plot displays 30 temperatures recorded at a weather station.
@@ -50,7 +50,7 @@ edrolo_lesson,q,source,pdf_page,printed_page,answer,pct_correct,note,stem_start
 3C,12,VCAA 2018 Exam 1 Data analysis Q7,197,190,B,73,,"The following scatterplot displays the resting pulse rate,"
 3C,13,VCAA 2019 Exam 2 Data analysis Q5f,197,190,0.8/2 avg,40,,"The scatterplot shows the atmospheric pressure, in hectopascals (hPa), at 3 pm (pressure 3 pm)"
 3C,14,Adapted from VCAA 2021 Exam 2 Data analysis Q3b,198,191,0.2/1 avg,20,,"The following plot shows the ​winning time​, in seconds,"
-3D,14,VCAA 2009 Exam 1 Data analysis Q12,211,204,,,no report on file (2009 Exam 1),The mathematics achievement level (TIMSS score) for grade 8
+3D,14,VCAA 2009 Exam 1 Data analysis Q12,211,204,,,no assessor report info available (2009 Exam 1),The mathematics achievement level (TIMSS score) for grade 8
 3E,10,VCAA 2020 Exam 1 Data analysis Q14,224,217,C,74,,"In a study, the association between the ​number of tasks​completed on a test and the ​time​allowed for"
 3E,11,VCAA 2018 Exam 1 Data analysis Q11,224,217,A,58,,Freya uses the data in the table to generate the following scatterplot.
 3E,12,VCAA 2017 Exam 2 Data analysis Q4b-cii,225,218,1.5/3 avg,50,,"The following time series plot shows the total area, in hectares, of forest eaten by the caterpillars in a"
@@ -83,8 +83,8 @@ edrolo_lesson,q,source,pdf_page,printed_page,answer,pct_correct,note,stem_start
 5D,17,VCAA 2020 Exam 1 Recursion and financial modelling Q29,338,331,B,54,,The value of a van purchased for $45 000 is depreciated by ​k​% per annum using the reducing
 5D,18,VCAA 2021 Exam 1 Recursion and financial modelling Q20,338,331,C,44,,Sammy purchased a boat for $72 000.
 5D,19,"VCAA 2021 Exam 2 Recursion and financial modelling Q7b,c",339,332,0.7/2 avg,35,,Sienna owns a coffee shop.
-5E,16,VCAA 2012 Exam 1 Business-related mathematics Q2,345,338,,,no report on file (2012 Exam 1),$3000 is invested at a simple interest rate of 6.5% per annum.
-5E,17,VCAA 2007 Exam 1 Business-related mathematics Q3,345,338,,,no report on file (2007 Exam 1),A sum of money is invested in an account paying simple interest at a rate of 8% per annum.
+5E,16,VCAA 2012 Exam 1 Business-related mathematics Q2,345,338,,,no assessor report info available (2012 Exam 1),$3000 is invested at a simple interest rate of 6.5% per annum.
+5E,17,VCAA 2007 Exam 1 Business-related mathematics Q3,345,338,,,no assessor report info available (2007 Exam 1),A sum of money is invested in an account paying simple interest at a rate of 8% per annum.
 5F,17,VCAA 2020 Exam 1 Recursion and financial modelling Q24,353,346,D,80,,Manu invests $3000 in an account that pays interest compounding monthly.
 5F,18,VCAA 2017 Exam 2 Recursion and financial modelling Q6,353,346,1.9/4 avg,48,,Alex sends a bill to his customers after repairs are completed.
 5G,11,VCAA 2020 Exam 1 Recursion and financial modelling Q28,358,351,C,58,,The nominal interest rate for a loan is 8% per annum.

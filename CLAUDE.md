@@ -11,7 +11,7 @@ The standalone **Year 12 General Maths (12MAG) course planner** (GitHub Pages: r
 - Long-term idea (Rocco): a school-wide system where each teacher's dashboard picks the subjects they teach. Keep subject data self-contained and portable.
 
 ## Item index — next steps (agreed 14 Nov: "index now, fill on first use")
-1. ~~Add page numbers + % correct to the Edrolo exam-practice indexes.~~ **Done 14 Nov.** Columns: `pdf_page`, `printed_page` (= pdf − 7), `answer` (Exam 1: correct letter; Exam 2: average mark/max), `pct_correct` (Exam 1: % choosing the correct option; Exam 2: average mark as % of max), `note`. 6 items from pre-2016 papers (2007, 2009, 2012, 2014, 2015 Exam 1) have no report on file, so they are blank.
+1. ~~Add page numbers + % correct to the Edrolo exam-practice indexes.~~ **Done 14 Nov.** Columns: `pdf_page`, `printed_page` (= pdf − 7), `answer` (Exam 1: correct letter; Exam 2: average mark/max), `pct_correct` (Exam 1: % choosing the correct option; Exam 2: average mark as % of max), `note`. 6 items from pre-2016 papers (2007, 2009, 2012, 2014, 2015 Exam 1) are flagged "no assessor report info available" (Rocco, 14 Nov: leave blank).
 2. Rebuild the current-design VCAA (2023–26) question index, tagged by subchapter = the Do Now pool.
 3. Index Edrolo U3&4 exercise questions (non-VCAA) = the CFAT pool.
 4. Extract an item fully (verbatim text, figure data, answer) the first time a lesson uses it; save to the item bank so it is never re-extracted.
