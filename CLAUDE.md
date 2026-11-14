@@ -12,7 +12,7 @@ The standalone **Year 12 General Maths (12MAG) course planner** (GitHub Pages: r
 
 ## Item index — next steps (agreed 14 Nov: "index now, fill on first use")
 1. ~~Add page numbers + % correct to the Edrolo exam-practice indexes.~~ **Done 14 Nov.** Columns: `pdf_page`, `printed_page` (= pdf − 7), `answer` (Exam 1: correct letter; Exam 2: average mark/max), `pct_correct` (Exam 1: % choosing the correct option; Exam 2: average mark as % of max), `note`. 6 items from pre-2016 papers (2007, 2009, 2012, 2014, 2015 Exam 1) are flagged "no assessor report info available" (Rocco, 14 Nov: leave blank).
-2. Rebuild the current-design VCAA (2023–26) question index, tagged by subchapter = the Do Now pool.
+2. ~~Rebuild the current-design VCAA (2023–26) question index.~~ **Done 14 Nov:** `tools/vcaa_current_index.csv` = the Do Now pool. 652 items (280 Exam 1 Qs + 372 Exam 2 parts) from 7 sittings: 2023, 2024 NHT, 2024, 2025 NHT, 2025, 2026 NHT, 2026 (2023 NHT is still the old Core+Modules design, so it is excluded). Each item is hand-tagged to one Cambridge U3&4 subchapter (`also` = secondary tags), with marks, paper page, answer and % correct (Nov reports only: NHT reports give no % and the 2026 report isn't out yet). `stem_end` is only a locator (OCR text for the scanned 2024 and 2025 NHT papers): extract verbatim from the PDF on first use (step 4). Z-scores are tagged 1H, as in Cambridge. `vcaa_donow_aos1.json` (the per-lesson picks) is kept, but its tags differ from this index on 35 items; this index wins.
 3. Index Edrolo U3&4 exercise questions (non-VCAA) = the CFAT pool.
 4. Extract an item fully (verbatim text, figure data, answer) the first time a lesson uses it; save to the item bank so it is never re-extracted.
 
