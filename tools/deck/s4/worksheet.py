@@ -69,12 +69,6 @@ LI=['To be able to construct the boxplot for displaying the distribution of a nu
     'To be able to construct both simple boxplots and boxplots with outliers.','To be able to determine the features of a distribution from a boxplot.',
     'To be able to use a CAS calculator to construct a boxplot.']
 P.append(box('Learning intentions','<ul class="ki">'+''.join(f'<li>{x}</li>' for x in LI)+'</ul>'))
-KF=[('Median position','position = (<i>n</i> + 1) ÷ 2'),('Median, <i>n</i> even','M = (first middle + second middle) ÷ 2'),('Interquartile range','IQR = Q<sub>3</sub> − Q<sub>1</sub>'),
-    ('Range','range = max − min'),('Lower fence','LF = Q<sub>1</sub> − 1.5 × IQR &nbsp;·&nbsp; <i>x</i> &lt; LF → <i>x</i> is an outlier'),('Upper fence','UF = Q<sub>3</sub> + 1.5 × IQR &nbsp;·&nbsp; <i>x</i> &gt; UF → <i>x</i> is an outlier')]
-P.append(box('Key formulas','<table class="kf kf2">'+''.join(f'<tr><td>{a}</td><td>{b}</td><td>{c}</td><td>{d}</td></tr>' for (a,b),(c,d) in zip(KF[0::2],KF[1::2]))+'</table>'
-  +'<p class="q" style="margin:1.5mm 0 0">A <b>boxplot</b> is a picture of the five-number summary (min, Q<sub>1</sub>, M, Q<sub>3</sub>, max). Each of the four sections holds about <b>25%</b> of the data. An <b>outlier</b> is drawn as a dot; the whisker stops at the last value inside the fence.</p>'
-  +cite(f'{CAM}, 1F pp. 44–47 and 1G pp. 61–64')))
-
 # ---- APK
 PARTY='The ages of a group of people at a party:<div class="data">19 21 22 56 34 19 27 28 34 17 66 37 20 20 21 45 26 19 23 29</div>'
 apk=(q(PARTY)
@@ -85,7 +79,7 @@ apk=(q(PARTY)
        +lines(3,'IQR = 34 − 20 = 14 · LF = 20 − 1.5 × 14 = −1 · UF = 34 + 1.5 × 14 = 55<br>56 &gt; 55 = UF → outlier · 66 &gt; 55 = UF → outlier · 17 &gt; −1 = LF → no low outliers<br>The fences are −1 and 55. The outliers are 56 and 66.'))
  +cite('Cambridge General Mathematics Units 1&amp;2 · Chapter 2 skills checklist, 2H #15')
  +item('3',q('<b>3.</b> The boxplot shows the distribution of the <i>reaction time</i> (milliseconds), of 256 firefighters.')+q('The five-number summary for the <i>reaction time</i> of these 256 firefighters is closest to')
-       +mc(['70, 130, 140, 152, 179','70, 130, 140, 152, 255','122, 130, 140, 152, 179','122, 130, 140, 152, 245','122, 130, 140, 152, 265'])+ans('B: the outlier dots (70, 90, 255) are data, so min = 70 and max = 255. Distractor C (whisker ends).'),
+       +mc(['70, 130, 140, 152, 179','70, 130, 140, 152, 255','122, 130, 140, 152, 179','122, 130, 140, 152, 245','122, 130, 140, 152, 265'],cols=2)+ans('B: the outlier dots (70, 90, 255) are data, so min = 70 and max = 255. Distractor C (whisker ends).'),
        boxplot(0,260,10,122,130,140,152,179,out=(70,90,255),lab=50,xl='reaction time (milliseconds)',caps=True))
  +guess('58% · C')+cite('Edrolo General Mathematics Units 1&amp;2 · 1F Q16 · Adapted from VCAA 2017 Exam 1 Data analysis Q2'))
 P.append(box('Activating prior knowledge',apk,'Year 11',cls='split'))
@@ -95,7 +89,7 @@ life=[('5',[2]),('5',[5,6]),('6',[4]),('6',[6,6,7,9]),('7',[1,2,2,3,3,4,4,4,4]),
 w4=[('0',[1,2,3,5,5,9]),('1',[0,0,1,5,8,9]),('2',[1,2,3,3,5]),('3',[3,7,9])]
 P.append(pair('Example 22 · Constructing a boxplot from a five-number summary',
   q('The stem plot shows the distribution of life expectancies (in years) in 23 countries. The five-number summary for these data is:')
-  +five(["52","66","73","75","77"]).replace('<span class="ans in">','<span>')+f'<div style="display:flex;justify-content:center">{stem(life,"Key: 5|2 = 52 years")}</div>'
+  +f'<div class="row" style="justify-content:center;gap:4mm;align-items:center"><div style="flex:none">{stem(life,"Key: 5|2 = 52 years")}</div>'+five(["52","66","73","75","77"]).replace('<span class="ans in">','<span>')+'</div>'
   +q('Use the five-number summary to construct a boxplot.')+boxplot(50,80,1,52,66,73,75,77,lab=5,xl='Life expectancy (years)',draw=False)+cite(f'{CAM} · Example 22'),
   'You try · Edrolo 1E WE4',
   q('The five-number summary for the following stem plot is: <b>1, 7, 16.5, 23, 39</b>')+f'<div style="display:flex;justify-content:center">{stem(w4,"Key: 1 | 2 = 12")}</div>'
@@ -105,7 +99,7 @@ P.append(pair('Example 22 · Constructing a boxplot from a five-number summary',
 # ---- CAS 4 / You try (Edrolo 1E WE5, CAS)
 P.append(pair('CAS 4 · Boxplot with outliers on CAS',
   q('Display the following set of 19 marks in the form of a boxplot with outliers.')+'<div class="data">28 21 21 3 22 31 35 26 27 33<br>43 31 30 34 48 36 35 23 24</div>'
-  +'<div class="cas"><b>TI-Nspire:</b> Lists &amp; Spreadsheet (list <i>marks</i>) → Data &amp; Statistics → Plot Type › Box Plot → Analyze › Graph Trace.<br><b>ClassPad:</b> Statistics (list <i>marks</i>) → SetGraph: Type MedBox, tick Show Outliers → Trace.</div>'
+  
   +'<p class="q" style="margin-top:1mm">Read from the CAS:</p>'+five(['3 (outlier)','23','30','35','48'])
   +boxplot(0,55,1,21,23,30,35,48,out=(3,),lab=5,xl='marks',draw=False)+cite(f'{CAM}, 1G pp. 64–66 (CAS 4)'),
   'You try · Edrolo 1E WE5 (CAS)',
@@ -138,9 +132,6 @@ P.append(box('Example 24 · Estimating percentages from a boxplot',
 # ---- Shape + Example 25 / You try (Edrolo 1F WE5)
 TPL=lambda a,b,c,d,e:(f'<div class="tpl">The distribution is {blank(a,34)} with {blank(b,22)}. The distribution is centred at {blank(c,12)}, the median value. '
                       f'The spread of the distribution, as measured by the IQR, is {blank(d,12)} and, as measured by the range, {blank(e,12)}.</div>')
-P.append(box('Reading shape from a boxplot','<p class="q" style="margin:0">Look at where the median sits in the box and which whisker is longer: the long side is the tail. '
-  '<b>Symmetric:</b> median near the middle, whiskers about equal. <b>Positively skewed:</b> median to the left, long right whisker. <b>Negatively skewed:</b> median to the right, long left whisker. '
-  '<b>Describe in this order:</b> shape (and outliers) · centre (the median) · spread (IQR and range) · outliers by value.</p>'+cite(f'{CAM}, 1G pp. 68–69')))
 P.append(pair('Example 25 · Describing a distribution without outliers',
   q('Describe the distribution represented by the boxplot in terms of shape, centre and spread. Give appropriate values.')+boxplot(0,50,1,0,5,10,21,45,lab=5)
   +TPL('positively skewed','no outliers','10','16','45')+cite(f'{CAM} · Example 25'),
@@ -151,12 +142,12 @@ P.append(pair('Example 25 · Describing a distribution without outliers',
 # ---- Example 26 / Example 27 (no You try)
 P.append(pair('Example 26 · Describing a distribution with outliers',
   q('Describe the distributions represented by the boxplot in terms of shape and outliers, centre and spread. Give appropriate values.')+boxplot(0,50,1,34,38.75,41,44.25,47,out=(10,15,20,25),lab=5)
-  +lines(5,'The distribution is symmetric but with outliers. The distribution is centred at 41, the median value. The spread of the distribution, as measured by the IQR, is 5.5 and, as measured by the range, 37. There are four outliers: 10, 15, 20 and 25.')
+  +lines(4,'The distribution is symmetric but with outliers. The distribution is centred at 41, the median value. The spread of the distribution, as measured by the IQR, is 5.5 and, as measured by the range, 37. There are four outliers: 10, 15, 20 and 25.')
   +cite(f'{CAM} · Example 26'),
   'Example 27 · Using a boxplot to answer statistical questions',
   q('The boxplot shows the gestation period (completed weeks) for a sample for 1000 babies born in Australia one year. Describe the distribution of gestation period in terms of shape, centre, spread and outliers.')
   +boxplot(25,43,1,35,38,39,40,42,out=tuple(range(25,35)),xl='Gestation period (weeks)')
-  +lines(6,'The distribution of gestational period is negatively skewed with several outliers. The distribution is centred at 39 weeks, the median value. The range of the distribution is 17 weeks, but the interquartile range is only 2 weeks. Any gestational period less than 35 weeks or less is considered unusual, with outliers at 25, 26, …, 34 weeks.')
+  +lines(5,'The distribution of gestational period is negatively skewed with several outliers. The distribution is centred at 39 weeks, the median value. The range of the distribution is 17 weeks, but the interquartile range is only 2 weeks. Any gestational period less than 35 weeks or less is considered unusual, with outliers at 25, 26, …, 34 weeks.')
   +cite(f'{CAM} · Example 27')))
 
 # ---- Exit tasks
@@ -169,7 +160,7 @@ ex=(item('1',q('<b>1.</b> The <i>neck size</i>, in centimetres, of 250 men was r
          +q('The five-number summary for this sample of neck sizes, in centimetres, is given in the following table.')+FT
          +q('Use the five-number summary to construct a boxplot, showing any outliers if appropriate. <i>(2 marks)</i>')
          +lines(3,'IQR = 39 − 36 = 3 · LF = 36 − 1.5 × 3 = 31.5 · UF = 39 + 1.5 × 3 = 43.5<br>31 &lt; 31.5 → outlier · 44 &gt; 43.5 → outlier · whiskers to 32 and 43'),
-         dotplot(30,45,nv,'neck size (cm)',r=1.5,W=300)+boxplot(30,45,1,32,36,38,39,43,out=(31,44),xl='neck size (cm)',draw=False,W=300),sep=False)
+         dotplot(30,45,nv,'neck size (cm)',r=1.15,W=300)+boxplot(30,45,1,32,36,38,39,43,out=(31,44),xl='neck size (cm)',draw=False,W=300),sep=False)
     +guess('55% (average mark)',mcq=False)+cite(f'{EDR} · 1E Q19 · VCAA 2020 Exam 2 Data analysis Q2c')
     +item('2',q('<b>2.</b> In the sport of heptathlon, athletes compete in seven events. These events are the 100 m hurdles, high jump, shot-put, javelin, 200 m run, 800 m run and long jump. Fifteen female athletes competed to qualify for the heptathlon at the Olympic Games. Their results for three of the heptathlon events – high jump, shot-put and javelin – are shown in the table. The following boxplot was constructed to show the distribution of high jump heights for all 15 athletes in the qualifying competition.')
           +boxplot(1.68,1.88,0.01,1.68,1.78,1.82,1.87,1.87,lab=0.04,dec=2,xl='high jump',caps=True)
