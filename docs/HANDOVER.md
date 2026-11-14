@@ -28,7 +28,7 @@ Rocco's dashboard repo `roccatalano/teaching-dashboard-2027` was used **read-onl
 - **Slides S1–S3 (later):** rename "Homework" → "Coursework" (pill, heading, title-slide flow; re-make PDFs; check every slide, rule 12). S2 Do Now has 3 items (needs 2 × E1 + 2 × E2). S3 has an extra exit from a current-design paper (VCAA 2026 NHT E2 Q1b, Q1d; rule 7 says Edrolo reprints only). S2 exit 3 shows "?%" — report value is 71% (VCAA 2019 E1 Q3).
 - **Planner cards vs slides (Ch 1):** S1 card lists APK 2B #5 not on the slides; S2 card APK differs from the slides (slides: 2C #6, 2D #7, 2D #9, 9D #6–7; card also has Edrolo U1&2 1C Q15, Q17). Decide whether cards should be synced to the slides.
 - Chapter 1 lessons still without decks: **1G (L4)**, **1H–1I (L5)**, Ch 1 coursework check + test (L6; `lessons/Ch1-coursework-check.html` exists).
-- Insight CFAT 1.1 (rejected 4 Nov): its 10 items are still marked burnt — un-burn? (Rocco to decide.)
+- ~~Insight un-burn~~ Done 14 Nov: Rocco — nothing from Insight is burnt. The 10 rows are removed from `tools/ledger.csv` and `build_ledger.py` skips Insight.
 - 2027 term dates → fill `planner/years/2027.json` (format in its `_help`).
 - Last PLANNER.md step: point Rocco's personal dashboard at the planner files (needs his go-ahead; other repo).
 - Item index step 4 (extract items fully on first use into `03 Item bank\`) happens lesson by lesson.
