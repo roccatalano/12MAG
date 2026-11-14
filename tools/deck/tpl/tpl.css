@@ -149,3 +149,10 @@
 .T .lrn .pic>.chart svg{height:100%;max-height:none}
 .T .lrn .pic{overflow:hidden}
 .T .lrn .pic .chart{display:flex;justify-content:center}
+
+.T ol.parts{list-style:none;padding:0;margin:4px 0 0;display:flex;flex-direction:column;gap:4px}
+.T ol.parts li{display:flex;gap:10px;font-size:20px;line-height:1.35}
+.T ol.parts li b{min-width:22px}
+.T .R ol.wk li.ans.big .pa{display:flex;gap:10px;align-items:center;flex-wrap:nowrap;padding:7px 0;border-top:1px solid #bfe3d2;font-size:20px}
+.T .R ol.wk li.ans.big .pa:first-of-type{border-top:0}
+.T .R ol.wk li.ans.big .pa .pl{min-width:26px;color:#137a59;font-size:21px}

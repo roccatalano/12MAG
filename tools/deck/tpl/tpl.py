@@ -24,6 +24,9 @@ def stem(rid,rows,key,fs=24):
     return f'<div><div class="stemcap">{key}</div><table class="stem3" id="{rid}" style="font-size:{fs}px">{tr}</table></div>'
 
 # ---------- formulas: write once, substitute values, solve (animated) ----------
+def plist(items):
+    """multi-part question parts, listed down the page: [('a','the median'), ...]"""
+    return '<ol class="parts">'+''.join(f'<li><b>{a}</b><span>{b}</span></li>' for a,b in items)+'</ol>'
 def F(*toks):
     """Build formula html. Tokens: plain str · V(name, value) a variable that flips to its value · FR(num, den) a fraction (each a list/tuple of tokens)."""
     out=''
@@ -58,11 +61,12 @@ def _frame(cls,pill,head,body,src,stat=None,cfu='qw',extra='',cmd=None):
     return (f'<section class="slide T {cls}" data-cfu="{cfu}"><div class="hd"><div class="pill">{pill}</div><div class="tiles">{ct}{_stat(stat)}{extra}</div></div>'
             f'<h2 class="tt">{head}</h2>{body}<div class="src">{src}</div></section>')
 
-def qslide(kind,pill,head,given,steps,answer,src,stat=None,mc=None,key=None,dist=None,dis=None,made='',cfu=None,video=None,cmd=None,afig='',build=()):
+def qslide(kind,pill,head,given,steps,answer,src,stat=None,mc=None,key=None,dist=None,dis=None,made='',cfu=None,video=None,cmd=None,afig='',build=(),parts=()):
     """kind: dn | apk | we | yt | ex.
     given: question html, or (text before, figure, text after) so the figure sits in a fixed middle zone. mc: list of option texts (A, B, …).
     steps: list of (label, html) or (label, html, attrs) — one reveal each, numbered.
     made: a figure shown on the right under the steps (not the answer).
+    parts: [(label, html[, attrs])] for a multi-part question: one green answer card that reveals one part per click (steps may be empty).
     afig + build: when the figure IS the answer (e.g. a boxplot), it sits in the green answer card; build = [(text, attrs)] lines
          revealed one per click inside the card (e.g. 'Box from Q1 to Q3', 'data-bx="#id|box"'). Hide the axis in the figure ('axis' in hide).
     answer: final answer html (bottom right, revealed last with the % badge).
@@ -94,6 +98,9 @@ def qslide(kind,pill,head,given,steps,answer,src,stat=None,mc=None,key=None,dist
         # click 1: answer · click 2: the distractor question · click 3: which option and why (option highlighted)
         if dis: R+=f'<li class="frag dis"><div class="dlab">What’s the distractor?</div><div class="frag" data-dis="{dis[0]}"><span class="dl">{dis[0]}</span> {dis[1]}</div></li>'
         if dist: R+='<span class="frag" data-pct="1"></span>'
+    elif parts:  # multi-part question: one big answer card, one part per click
+        pl=''.join(f'<div class="frag pa" {(p+("",))[2]}><b class="pl">{p[0]}</b><span>{p[1]}</span></div>' for p in parts)
+        R+=f'<li class="frag ans big"{sa}><span class="wn">✓</span><span class="sl">Answers</span>{answer}{pl}</li>'
     else:
         bl=''.join(f'<div class="frag bl" {a}>{t}</div>' for t,a in build)
         fig=f'<div class="afig">{afig}</div>' if afig else ''

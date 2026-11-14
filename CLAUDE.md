@@ -39,6 +39,7 @@ Build a lesson with a `tools/deck/<S#>/build.py` that only fills content into th
 - **Question slides:** question on the left (verbatim; command word highlighted yellow), blue line, working on the right as numbered cards revealed one per click, ending in a **green answer card** (a concluding statement). Header tiles top right: command word tile ("FIND · …"), VCAA % tile, video button.
 - **Model formulas:** formula → substitute (values flip in) → result, using the Key formulas names. Data sets: use CAS one-variable stats, don't order by hand. Outliers: IQR → fences → "56 > 55 = UF → outlier" statements; draw the fences on the boxplot.
 - **Annotate the question** at the step that needs it (e.g. the 20.5th line on a dot plot, highlighted cells, marked leaves). Axes appear only when their step comes.
+- **Multi-part questions (a, b, c…):** parts listed down the page on the left (`plist`); ONE big green answer card that reveals one part per click (`parts=`). Never run parts together in a line.
 - If the figure is the answer (a boxplot to construct), it is built inside the green answer card.
 - **MC:** answer card → next click "What's the distractor?" → next click the option + why. No distractor card unless there is a real one.
 - **Learn:** rule card + the related key formula/definition cards on top, picture, one tip. **CAS:** TI and ClassPad step cards, then small embedded YouTube cards, then the read-off card.
