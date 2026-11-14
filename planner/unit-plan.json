@@ -1408,8 +1408,9 @@
          {
           "kind": "Guided worksheet",
           "desc": "Student companion to the slides, in the same order, with space to answer. Max 2 double-sided pages.",
-          "status": "todo",
-          "file": ""
+          "status": "draft",
+          "file": "lessons/S4-worksheet.html",
+          "pdf": "lessons/S4-worksheet.pdf"
          },
          {
           "kind": "Bound reference entry",
