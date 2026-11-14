@@ -1,6 +1,6 @@
-# 12MAG unit planner — spec (Rocco, 14 Nov 2026)
+# 12MAG course planner — spec (Rocco, 14 Nov 2026)
 
-A standalone "2027 Year 12 General Maths" planner, separate from Physics and from Rocco's personal dashboard.
+A standalone "Year 12 General Maths" course planner, refit each year by adding a year file, separate from Physics and from Rocco's personal dashboard.
 Two tabs: **Unit plan** (content, no dates, reusable every year) and **Year plan** (one tab per year, dates).
 
 ## Tab 1 — Unit plan (no dates)
