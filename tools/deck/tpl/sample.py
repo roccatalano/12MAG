@@ -9,32 +9,41 @@ S.append(title(4,'The five-number summary and the boxplot','Cambridge General Ma
 SC=['I can construct a boxplot from a five-number summary.','I can construct a boxplot with outliers from data using the CAS calculator.','I can read values from a boxplot.','I can estimate percentages from a boxplot.']
 S.append(today(['To be able to construct the boxplot for displaying the distribution of a numerical data.','To be able to define and identify outliers.','To be able to use a CAS calculator to construct a boxplot.'],SC,
   [('Do Now','· four current VCAA questions','#00838F'),('APK','· Year 11 boxplots','var(--apk)'),('Five-number summary and the boxplot','→ WE 22',None),('Outliers and fences','· CAS',None),('Exit tasks','· two VCAA questions','var(--exit)'),('Check-in and coursework','','var(--muted)')]))
-S.append(keys([('Five-number summary','minimum, Q<sub>1</sub>, median, Q<sub>3</sub>, maximum'),('Boxplot','a picture of the five-number summary; the box holds the middle 50% of the data'),('Outlier','a value below the lower fence or above the upper fence'),('Whiskers','run to the smallest and largest values that are not outliers')],
-  [('Median position',F('median position = ',FR(['<i>n</i> + 1'],['2']))),('Median, n even',F('M = ',FR(['first middle value + second middle value'],['2']))),('Interquartile range',F('IQR = Q<sub>3</sub> − Q<sub>1</sub>')),('Lower fence',F('Q<sub>1</sub> − 1.5 × IQR')),('Upper fence',F('Q<sub>3</sub> + 1.5 × IQR'))],
-  'Cambridge General Mathematics Units 3&amp;4, 1F p. 44 and 1G pp. 61–64'))
+mini=lambda rid,c:box(rid,dict({"min":0,"max":20,"step":1,"lab":100,"W":380,"fs":17,"top":44,"bh":26,"nolab":1},**c))
+S.append(keys([
+  ('Five-number summary','minimum, Q<sub>1</sub>, median, Q<sub>3</sub>, maximum',mini('k1',{"lw":2,"q1":6,"m":9,"q3":13,"uw":18,"marks":[{"p":"a","x":2,"t":"min","col":"#8a4d00"},{"p":"b","x":6,"t":"Q₁"},{"p":"c","x":9,"t":"M","col":"#d2475b"},{"p":"d","x":13,"t":"Q₃"},{"p":"e","x":18,"t":"max","col":"#8a4d00"}],"show":1})),
+  ('Boxplot','a picture of the five-number summary: the box holds the middle 50% of the data',mini('k2',{"lw":2,"q1":6,"m":9,"q3":13,"uw":18,"bands":[{"p":"b","a":6,"b":13,"t":"50%","show":1}]})),
+  ('Outlier','a value below the lower fence or above the upper fence, drawn as a dot',mini('k3',{"lw":5,"q1":7,"m":9,"q3":11,"uw":13,"out":[18]})),
+  ('Whiskers','run from the box to the smallest and largest values that are not outliers',mini('k4',{"lw":5,"q1":7,"m":9,"q3":11,"uw":13,"out":[18],"marks":[{"p":"w","x":13,"t":"last non-outlier","col":"#1f4fb0","show":1}]}))],
+  [('Median position',F('median position = ',FR(['<i>n</i> + 1'],['2']))),('Median, n even',F('M = ',FR(['first middle value + second middle value'],['2']))),('Interquartile range',F('IQR = Q<sub>3</sub> − Q<sub>1</sub>')),
+   ('Lower fence',F('LF = Q<sub>1</sub> − 1.5 × IQR'),'<i>x</i> &lt; LF → <i>x</i> is an outlier'),('Upper fence',F('UF = Q<sub>3</sub> + 1.5 × IQR'),'<i>x</i> &gt; UF → <i>x</i> is an outlier')],
+  'Cambridge General Mathematics Units 3&amp;4, 1F p. 44 and 1G pp. 61–64 · Boxplots: teacher illustrations'))
 # --- Do Now, multiple choice
 runners=[134]*3+[135]*8+[136]*11+[137]*6+[138]*4+[139]*2+[140]*2+[141,142,143,146]
 S.append(qslide('dn','Do Now 1 of 4 · VCAA 2023 Exam 1 Q1','Review of 1F',
   ('The dot plot below shows the times, in seconds, of 40 runners in the qualifying heats of their 800 m club championship.',
    dot("t1d",{"min":134,"max":146,"vals":runners,"xl":"time (seconds)","W":900,"h":380,"r":12}),'The median time, in seconds, of these runners is'),
-  [('Count','n = 40 runners.'),
-   fx('Median position',None,F(FR([V('<i>n</i>','40'),' + 1'],['2'])),'20.5th'),
-   ('Locate','between the 20th and 21st times: 3 + 8 = 11 up to 135 s, 11 + 11 = 22 up to 136 s. Both are 136.','data-dotmark="#t1d|19,20"'),
+  [('Count','n = 40 runners (40 dots).'),
+   fx('Median position',None,F(FR([V('<i>n</i>','40'),' + 1'],['2'])),'20.5th',ra='data-dsplit="#t1d|19|20.5th"'),
+   ('Find','the 20th and 21st dots, counting from the left: both are in the 136 column.','data-dotmark="#t1d|19,20"'),
    fx('Median, n even',None,F(FR([V('20th','136'),' + ',V('21st','136')],['2'])),'136')],
-  'The median time of these runners is <b>136 seconds</b>.','VCAA 2023 General Mathematics Exam 1 Q1 (examiner report)',
+  'The median time is <b>136 seconds</b>.','VCAA 2023 General Mathematics Exam 1 Q1 (examiner report)',
   stat=('mc',90),mc=['135.5','136','136.5','137','137.5'],key='B',dist=[1,90,6,2,1],
   dis=('C','136.5 averages 136 and 137. Count the dots: the 20th and 21st are both in the 136 column.'),cmd=('Multiple choice',1)))
 # --- Do Now, short answer (Exam 2)
 apt=['350 000','490 000','500 000','620 000','720 000','830 000','875 000','995 000','1 100 000','1 520 000']
 hou=['800 000','840 000','920 000','920 000','1 010 000','1 263 000','1 398 000','1 460 000','1 540 000','1 540 000']
-tb=lambda rows:'<table class="t" style="font-size:15px"><tr><th>Price ($)</th><th>Type</th></tr>'+''.join(f'<tr><td style="text-align:right">{p}</td><td>{t}</td></tr>' for p,t in rows)+'</table>'
+RK={v:i for i,v in enumerate(sorted(apt+hou,key=lambda x:int(x.replace(' ',''))))}
+RK={}
+for i,v in enumerate(sorted([(int(p.replace(' ','')),k,p) for k,p in enumerate(apt+hou)])): RK[v[1]]=i
+tb=lambda rows,o:'<table class="t" style="font-size:15px"><tr><th>Price ($)</th><th>Type</th></tr>'+''.join(f'<tr><td style="text-align:right"><span data-i="{RK[o+k]}" style="padding:0 4px;border-radius:5px;border:1.5px solid transparent">{p}</span></td><td>{t}</td></tr>' for k,(p,t) in enumerate(rows))+'</table>'
 S.append(qslide('dn','Do Now 3 of 4 · VCAA 2025 Exam 2 Q1a','Review of 1F',
   ('Table 1, below, shows the prices in dollars, <em class="v">price</em>, for a sample of 20 homes sold in an inner Melbourne suburb during 2017. The type of home sold is either an apartment or a house.',
-   f'<div class="tbl1" style="justify-content:center">{tb([(p,"apartment") for p in apt])}{tb([(p,"house") for p in hou])}</div>',
+   f'<div class="tbl1" id="t2t" style="justify-content:center">{tb([(p,"apartment") for p in apt],0)}{tb([(p,"house") for p in hou],10)}</div>',
    '<b>a.</b> Find the median, in dollars, of the variable <em class="v">price</em>. <span class="muted">(1 mark)</span>'),
   [('Count','n = 20 homes.'),
    fx('Median position',None,F(FR([V('<i>n</i>','20'),' + 1'],['2'])),'10.5th'),
-   ('Order','350 000, 490 000, 500 000, 620 000, 720 000, 800 000, 830 000, 840 000, 875 000, <b>920 000</b>, <b>920 000</b>, …'),
+   ('Find','the 10th and 11th prices in order: both are 920 000.','data-mark="#t2t|9,10|mid"'),
    fx('Median, n even',None,F(FR([V('10th','920 000'),' + ',V('11th','920 000')],['2'])),'920 000')],
   'The median price is <b>$920 000</b>.','VCAA 2025 General Mathematics Exam 2 Q1a (examiner report) · Data: Adapted from &lt;www.kaggle.com/datasets/anthonypino/melbourne-housing-market&gt;',
   stat=('mark',84),cmd=('Find',1,'the value, with working')))

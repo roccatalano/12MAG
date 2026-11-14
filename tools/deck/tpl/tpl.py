@@ -37,12 +37,12 @@ def FR(num,den):
     """fraction; num/den: a token or a list of tokens"""
     L=lambda x:x if isinstance(x,list) else [x]
     return ('fr',L(num),L(den))
-def fx(name,lhs,rhs,result,attrs=''):
+def fx(name,lhs,rhs,result,attrs='',ra=''):
     """One working step that models a key formula: click 1 shows the formula, click 2 substitutes the values (variables flip),
-    click 3 shows the result. name should match the Key formulas slide; lhs=None lets the step name stand as the left-hand side."""
+    click 3 shows the result. ra: attributes for the result click (e.g. an annotation on the question). name should match the Key formulas slide; lhs=None lets the step name stand as the left-hand side."""
     l=f'<span class="lhs">{lhs}</span> ' if lhs else ''
     html=(f'<span class="fx">{l}= <span class="rhs">{rhs}</span>'
-          f'<span class="frag fxs" data-fx="sub"></span><span class="frag fxr"> = <b>{result}</b></span></span>')
+          f'<span class="frag fxs" data-fx="sub"></span><span class="frag fxr" {ra}> = <b>{result}</b></span></span>')
     return (name,html,attrs)
 
 def _stat(stat):
@@ -64,7 +64,7 @@ def qslide(kind,pill,head,given,steps,answer,src,stat=None,mc=None,key=None,dist
     steps: list of (label, html) or (label, html, attrs) — one reveal each, numbered.
     made: something students construct (e.g. a boxplot) shown on the right under the steps.
     answer: final answer html (bottom right, revealed last with the % badge).
-    key/dist/dis: MC correct letter, % choosing each option, (letter, explanation) distractor.
+    key/dist/dis: MC correct letter, % choosing each option, (letter, explanation) distractor — leave dis out when there is no real distractor.
     cmd: (command word, marks, what it needs) e.g. ('Explain',1,'a reason that refers to the data'). Highlighted yellow in the question;
          a tile beside the % badge (top right) says what it needs. MC: no command word.
     steps may include fx(...) steps: formula → substitute → solve. The answer is a concluding statement."""
@@ -82,18 +82,18 @@ def qslide(kind,pill,head,given,steps,answer,src,stat=None,mc=None,key=None,dist
         L+=f'<div class="mc"{d}>'+''.join(f'<div data-o="{chr(65+i)}"><b>{chr(65+i)}.</b>{o}</div>' for i,o in enumerate(mc))+'</div>'
     L+='</div></div>'
     R='<div class="R"><ol class="wk">'
-    for n,s in enumerate(steps,1):
-        lab,txt,att=(s+('',))[:3]
+    for n,st in enumerate(steps,1):
+        lab,txt,att=(st+('',))[:3]
         R+=f'<li class="frag" {att}><span class="wn">{n}</span><span class="sl">{lab}</span>{txt}</li>'
-    R+='</ol>'+(f'<div class="made">{made}</div>' if made else '')+'<div class="end">'
+    R+='</ol>'+(f'<div class="made">{made}</div>' if made else '')+'<ol class="wk">'
     sa=f' data-stat="{stat[1]}"' if stat and len(stat)>1 else ''
     if mc:
-        R+=f'<div class="ansbox frag" data-key="{key}"{sa} data-s="sol"><div class="lab">Answer · {key}</div><p>{answer}</p></div>'
-        if dis: R+=f'<div class="frag" data-s="sol"><div class="dbox"><div class="lab">What’s the distractor? <span class="dl">{dis[0]}</span></div><div class="frag" data-dis="{dis[0]}"><p>{dis[1]}</p></div></div></div>'
+        R+=f'<li class="frag ans" data-key="{key}"{sa} data-s="sol"><span class="wn">✓</span><span class="sl">Answer · {key}</span>{answer}</li>'
+        if dis: R+=f'<li class="frag dis" data-s="sol"><div class="dlab">What’s the distractor? <span class="dl">{dis[0]}</span></div><span class="frag" data-dis="{dis[0]}">{dis[1]}</span></li>'
         if dist: R+='<span class="frag" data-pct="1"></span>'
     else:
-        R+=f'<div class="ansbox frag"{sa}><div class="lab">Answer</div><p>{answer}</p></div>'
-    R+='</div></div>'
+        R+=f'<li class="frag ans"{sa}><span class="wn">✓</span><span class="sl">Answer</span>{answer}</li>'
+    R+='</ol></div>'
     cls=kind+(' mcslide' if mc else '')
     v=f'<button class="vid" data-src="" data-label="{video}">▶ Video</button>' if video else ''
     return _frame(cls,pill,head,f'<div class="qg">{L}{R}</div>',src,stat,cfu or ('mc' if mc else 'cold' if kind=='we' else 'qw'),v,cmd if cmd and cmd[0]!='Multiple choice' else None)
@@ -119,17 +119,17 @@ def title(lesson,topic,sub,code,flow=('Do Now','APK','Learn','Worked examples','
             f'</div><div class="foot"><span>12MAG · General Mathematics 3&amp;4</span><span>{code}</span></div></section>')
 
 def today(li,sc,seq):
-    """Three columns: learning intentions · success criteria · lesson sequence (text, small, colour or None)."""
-    ul=lambda xs:'<ul>'+''.join(f'<li>{x}</li>' for x in xs)+'</ul>'
+    """Three white cards: learning intentions · success criteria (tick boxes) · lesson sequence (text, small, colour or None)."""
+    ul=lambda xs,c='':f'<ul class="{c}">'+''.join(f'<li>{x}</li>' for x in xs)+'</ul>'
     q=''.join(f'<li{' style="--c:'+c+'"' if c else ""}>{t} <small>{m}</small></li>' for t,m,c in seq)
-    body=(f'<div class="col3"><div><h3>Learning intentions</h3>{ul(li)}</div><div><h3>Success criteria</h3>{ul(sc)}</div>'
-          f'<div><h3>Lesson sequence</h3><ol class="seq">{q}</ol></div></div>')
+    body=(f'<div class="col3"><div class="card3"><h3>Learning intentions</h3>{ul(li)}</div><div class="card3"><h3>Success criteria</h3>{ul(sc,"tick")}</div>'
+          f'<div class="card3"><h3>Lesson sequence</h3><ol class="seq">{q}</ol></div></div>')
     return _frame('',"Today’s lesson","Today’s lesson",body,'',cfu='')
 
 def keys(defs,forms,src):
-    """Two columns: key definitions (term, meaning) · key formulas (name, formula html built with F)."""
-    d=''.join(f'<div class="kd frag"><b>{t}</b><span>{m}</span></div>' for t,m in defs)
-    f=''.join(f'<div class="kf frag"><span class="kn">{n}</span><span class="kx">{x}</span></div>' for n,x in forms)
+    """Two columns: key definitions (term, meaning[, picture html]) · key formulas (name, formula html built with F[, rule line])."""
+    d=''.join(f'<div class="kd frag"><div><b>{x[0]}</b><span>{x[1]}</span></div>'+(f'<div class="kpic">{x[2]}</div>' if len(x)>2 else '')+'</div>' for x in defs)
+    f=''.join(f'<div class="kf frag"><span class="kn">{x[0]}</span><span class="kx">{x[1]}</span>'+(f'<span class="kr">{x[2]}</span>' if len(x)>2 else '')+'</div>' for x in forms)
     body=f'<div class="col2"><div><h3>Key definitions</h3>{d}</div><div><h3>Key formulas</h3>{f}</div></div>'
     return _frame('',"Key ideas","Key definitions and formulas",body,src,cfu='')
 
