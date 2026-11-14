@@ -1403,8 +1403,7 @@
           "kind": "Guided slides",
           "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
           "status": "draft",
-          "file": "lessons/S4-slides.html",
-          "pdf": "lessons/S4-slides.pdf"
+          "file": "lessons/S4-slides.html"
          },
          {
           "kind": "Guided worksheet",
