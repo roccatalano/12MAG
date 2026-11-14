@@ -5,19 +5,23 @@ from tpl import *
 CAM='Cambridge General Mathematics Units 3&amp;4'; EDR='Edrolo General Mathematics Units 3&amp;4'
 B=['box','med','wl','wu','out']
 S=[]
-S.append(title(4,'<span>Five numbers</span>, <br>one <span>picture</span>','1G The five-number summary and the boxplot','S4'))
-S.append(today(['To be able to construct the boxplot for displaying the distribution of a numerical data.','To be able to define and identify outliers.','To be able to use a CAS calculator to construct a boxplot.'],
-  [('Do Now','· four current VCAA questions','#00838F'),('APK','· Year 11 boxplots','var(--apk)'),('Five-number summary and the boxplot','→ WE 22',None),('Exit tasks','· two VCAA questions','var(--exit)'),('Check-in and coursework','','var(--muted)')]))
+S.append(title(4,'The five-number summary and the boxplot','Cambridge General Mathematics Units 3&amp;4 · 1G','S4'))
 SC=['I can construct a boxplot from a five-number summary.','I can construct a boxplot with outliers from data using the CAS calculator.','I can read values from a boxplot.','I can estimate percentages from a boxplot.']
-S.append(success(SC))
+S.append(today(['To be able to construct the boxplot for displaying the distribution of a numerical data.','To be able to define and identify outliers.','To be able to use a CAS calculator to construct a boxplot.'],SC,
+  [('Do Now','· four current VCAA questions','#00838F'),('APK','· Year 11 boxplots','var(--apk)'),('Five-number summary and the boxplot','→ WE 22',None),('Outliers and fences','· CAS',None),('Exit tasks','· two VCAA questions','var(--exit)'),('Check-in and coursework','','var(--muted)')]))
+S.append(keys([('Five-number summary','minimum, Q<sub>1</sub>, median, Q<sub>3</sub>, maximum'),('Boxplot','a picture of the five-number summary; the box holds the middle 50% of the data'),('Outlier','a value below the lower fence or above the upper fence'),('Whiskers','run to the smallest and largest values that are not outliers')],
+  [('Median position',F('median position = ',FR(['<i>n</i> + 1'],['2']))),('Median, n even',F('M = ',FR(['first middle value + second middle value'],['2']))),('Interquartile range',F('IQR = Q<sub>3</sub> − Q<sub>1</sub>')),('Lower fence',F('Q<sub>1</sub> − 1.5 × IQR')),('Upper fence',F('Q<sub>3</sub> + 1.5 × IQR'))],
+  'Cambridge General Mathematics Units 3&amp;4, 1F p. 44 and 1G pp. 61–64'))
 # --- Do Now, multiple choice
 runners=[134]*3+[135]*8+[136]*11+[137]*6+[138]*4+[139]*2+[140]*2+[141,142,143,146]
 S.append(qslide('dn','Do Now 1 of 4 · VCAA 2023 Exam 1 Q1','Review of 1F',
   ('The dot plot below shows the times, in seconds, of 40 runners in the qualifying heats of their 800 m club championship.',
    dot("t1d",{"min":134,"max":146,"vals":runners,"xl":"time (seconds)","W":900,"h":380,"r":12}),'The median time, in seconds, of these runners is'),
-  [('Count','n = 40, so the median is the average of the 20th and 21st times.'),
-   ('Locate','3 + 8 = 11 values up to 135 s; 11 + 11 = 22 up to 136 s.','data-dotmark="#t1d|19,20"')],
-  'Both the 20th and 21st times are <b>136</b> seconds.','VCAA 2023 General Mathematics Exam 1 Q1 (examiner report)',
+  [('Count','n = 40 runners.'),
+   fx('Median position',None,F(FR([V('<i>n</i>','40'),' + 1'],['2'])),'20.5th'),
+   ('Locate','between the 20th and 21st times: 3 + 8 = 11 up to 135 s, 11 + 11 = 22 up to 136 s. Both are 136.','data-dotmark="#t1d|19,20"'),
+   fx('Median, n even',None,F(FR([V('20th','136'),' + ',V('21st','136')],['2'])),'136')],
+  'The median time of these runners is <b>136 seconds</b>.','VCAA 2023 General Mathematics Exam 1 Q1 (examiner report)',
   stat=('mc',90),mc=['135.5','136','136.5','137','137.5'],key='B',dist=[1,90,6,2,1],
   dis=('C','136.5 averages 136 and 137. Count the dots: the 20th and 21st are both in the 136 column.'),cmd=('Multiple choice',1)))
 # --- Do Now, short answer (Exam 2)
@@ -28,19 +32,22 @@ S.append(qslide('dn','Do Now 3 of 4 · VCAA 2025 Exam 2 Q1a','Review of 1F',
   ('Table 1, below, shows the prices in dollars, <em class="v">price</em>, for a sample of 20 homes sold in an inner Melbourne suburb during 2017. The type of home sold is either an apartment or a house.',
    f'<div class="tbl1" style="justify-content:center">{tb([(p,"apartment") for p in apt])}{tb([(p,"house") for p in hou])}</div>',
    '<b>a.</b> Find the median, in dollars, of the variable <em class="v">price</em>. <span class="muted">(1 mark)</span>'),
-  [('Count','n = 20, so the median is the average of the 10th and 11th prices in order.'),
-   ('Order','350 000, 490 000, 500 000, 620 000, 720 000, 800 000, 830 000, 840 000, 875 000, <b>920 000</b>, <b>920 000</b>, …')],
-  'median = (920 000 + 920 000) ÷ 2 = <b>$920 000</b>','VCAA 2025 General Mathematics Exam 2 Q1a (examiner report) · Data: Adapted from &lt;www.kaggle.com/datasets/anthonypino/melbourne-housing-market&gt;',
-  stat=('mark',84),cmd=('Find',1,'the value, with working. Units: dollars.')))
+  [('Count','n = 20 homes.'),
+   fx('Median position',None,F(FR([V('<i>n</i>','20'),' + 1'],['2'])),'10.5th'),
+   ('Order','350 000, 490 000, 500 000, 620 000, 720 000, 800 000, 830 000, 840 000, 875 000, <b>920 000</b>, <b>920 000</b>, …'),
+   fx('Median, n even',None,F(FR([V('10th','920 000'),' + ',V('11th','920 000')],['2'])),'920 000')],
+  'The median price is <b>$920 000</b>.','VCAA 2025 General Mathematics Exam 2 Q1a (examiner report) · Data: Adapted from &lt;www.kaggle.com/datasets/anthonypino/melbourne-housing-market&gt;',
+  stat=('mark',84),cmd=('Find',1,'the value, with working')))
 # --- APK
 S.append(qslide('apk','APK · Year 11 · Cambridge U1&amp;2 2H #15','Outliers from the fences',
   'The ages of a group of people at a party:<div class="data" style="font-size:21px">19 21 22 56 34 19 27 28 34 17<br>66 37 20 20 21 45 26 19 23 29</div>'
   'Calculate the values of the upper and lower fences, and use these to find any outliers in the ages of the people who attended the party (from above).',
   [('Quartiles','In order: 17 19 19 19 20 <b>20</b> 21 21 22 23 | 26 27 28 29 34 <b>34</b> 37 45 56 66 → Q<sub>1</sub> = 20, Q<sub>3</sub> = 34'),
-   ('IQR','34 − 20 = 14 · 1.5 × 14 = 21'),
-   ('Fences','lower = 20 − 21 = −1 · upper = 34 + 21 = 55','data-bx="#t3b|box,med,wl,wu,out"')],
-  'Outliers: <b>56 and 66</b> (above the upper fence, 55)','Cambridge General Mathematics Units 1&amp;2 · Chapter 2 skills checklist, 2H #15 (teacher solution)',
-  cmd=('Calculate',2,'show the working for each fence, then use the fences to name the outliers.'),
+   fx('Interquartile range',None,F(V('Q<sub>3</sub>','34'),' − ',V('Q<sub>1</sub>','20')),'14'),
+   fx('Lower fence',None,F(V('Q<sub>1</sub>','20'),' − 1.5 × ',V('IQR','14')),'−1'),
+   fx('Upper fence',None,F(V('Q<sub>3</sub>','34'),' + 1.5 × ',V('IQR','14')),'55','data-bx="#t3b|box,med,wl,wu,out"')],
+  'The outliers are <b>56 and 66</b>: both are above the upper fence of 55.','Cambridge General Mathematics Units 1&amp;2 · Chapter 2 skills checklist, 2H #15 (teacher solution)',
+  cmd=('Calculate',2,'working for each fence'),
   made=box('t3b',{"min":15,"max":70,"step":5,"lw":17,"q1":20,"m":24.5,"q3":34,"uw":45,"out":[56,66],"xl":"age (years)","hide":B,"W":800,"fs":20,"top":20})))
 # --- Learn
 marks=[28,21,21,3,22,31,35,26,27,33,43,31,30,34,48,36,35,23,24]
@@ -62,7 +69,7 @@ S.append(qslide('we','Worked example 22 · 1G','Constructing a boxplot from a fi
    ('Box','from Q<sub>1</sub> = 66 to Q<sub>3</sub> = 75.','data-bx="#t5b|box"'),
    ('Median','a vertical line at M = 73.','data-bx="#t5b|med"'),
    ('Whiskers','out to the minimum (52) and maximum (77).','data-bx="#t5b|wl,wu"')],
-  'The finished boxplot is above.',f'{CAM} · Example 22',cmd=('Construct',None,'a labelled, scaled number line, then box, median and whiskers drawn from the given values.'),video='Cambridge GO · Example 22 (1G Resources)',
+  'The finished boxplot is above.',f'{CAM} · Example 22',cmd=('Construct',None,'scaled axis, box, median, whiskers'),video='Cambridge GO · Example 22 (1G Resources)',
   made=box('t5b',{"min":50,"max":80,"step":1,"lab":5,"lw":52,"q1":66,"m":73,"q3":75,"uw":77,"xl":"Life expectancy (years)","hide":B,"W":800,"fs":20,"top":20})))
 w4=[('0',[1,2,3,5,5,9]),('1',[0,0,1,5,8,9]),('2',[1,2,3,3,5]),('3',[3,7,9])]
 S.append(qslide('yt','You try · Edrolo 1E WE4','Constructing a boxplot from a five-number summary',
@@ -88,7 +95,7 @@ S.append(qslide('ex','Exit task 1 of 2 · Edrolo 1E Q20 · VCAA 2021 Exam 2 Q1e'
    'Explain why the boxplot has no whisker at its upper end. <span class="muted">(1 mark)</span>'),
   [('Read','Q<sub>3</sub> = 1.87 m and the maximum = 1.87 m.'),('Why','Four of the 15 athletes jumped 1.87 m, the highest height.')],
   'Q<sub>3</sub> is equal to the maximum value, so there is no distance for an upper whisker to cover.',
-  f'{EDR} · 1E Q20 · VCAA 2021 Exam 2 Data analysis Q1e (examiner report)',stat=('avg',50),cmd=('Explain',1,'a reason, in a sentence, that refers to the values on the boxplot (here Q<sub>3</sub> and the maximum).')))
+  f'{EDR} · 1E Q20 · VCAA 2021 Exam 2 Data analysis Q1e (examiner report)',stat=('avg',50),cmd=('Explain',1,'a reason, using values')))
 S.append(checkin(SC))
 S.append(coursework([('Cambridge · Exercise 1G (part 1)',[('Five-number summary from a dot or stem plot','Q1–2'),('Boxplot from a five-number summary','Q3–6')]),
                      ('Cambridge · Exercise 1G (part 2)',[('Reading percentages from a boxplot','Q11–13'),('Exam 1 style questions','Q17–20')])],'The <b>1G</b> section'))
