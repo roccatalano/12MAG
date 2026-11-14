@@ -29,7 +29,7 @@ Two tabs: **Unit plan** (content, no dates, reusable every year) and **Year plan
 - Rocco's dashboard (`index.html`) reads the same files and adds his personal layer (ticks, notes, "taught on" dates for re-flowing from where the class actually is).
 - `tools/gm12/build_plan.py` is replaced by these files once the planner works; until then nothing on the dashboard changes.
 
-## Build order
+## Build order (status 14 Nov: steps 1–3 done; 2027 dates still to come; step 4 waits for Rocco)
 1. Write `unit-plan.json` from the current dashboard data (Ch 1–5) + shells (Ch 7–8, 10–11, 13–14).
 2. Write `years/2027.json` from the 2027 term dates already in `build_plan.py` (T1 starts 25 Jan, students 28 Jan; T2 starts 12 Apr; Labour Day 8 Mar) — Rocco checks and adds Terms 3–4 and blocked dates.
 3. Build `planner/index.html` (Unit plan tab + 2027 tab), check it visually, push.

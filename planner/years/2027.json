@@ -1,0 +1,15 @@
+{
+ "year": 2027,
+ "status": "Dates not added yet. Rocco to supply the 2027 term-dates file.",
+ "lessonsPerWeek": 3,
+ "teachingDays": [],
+ "terms": [],
+ "blocked": [],
+ "anchors": [],
+ "_help": {
+  "teachingDays": "weekdays the class has 12MAG, e.g. [\"Mon\",\"Wed\",\"Thu\"]",
+  "terms": "[{\"name\":\"Term 1\",\"start\":\"2027-01-28\",\"end\":\"2027-03-26\"}, ...] (start = first day students are in)",
+  "blocked": "[{\"date\":\"2027-03-08\",\"reason\":\"Labour Day\"}, ...] public holidays, pupil-free days, school events",
+  "anchors": "[{\"date\":\"2027-06-14\",\"label\":\"Unit 3 exam\",\"unit\":3}, ...] fixed events. With \"unit\", later-unit lessons wait until after it (the slots before it become buffers) and you are warned if that unit runs past it."
+ }
+}

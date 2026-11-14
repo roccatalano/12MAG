@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>12MAG Course Planner · VCE General Mathematics 3&amp;4</title>
+<style>
+:root{--ink:#1d2433;--mute:#5d6678;--line:#dfe3ea;--bg:#f6f7f9;--card:#fff;
+ --a1:#2f6fb3;--a2:#b4691f;--a3:#2f8a5b;--a4:#8a3fa0;--warn:#b42318;--warnbg:#fdecea;--ok:#2f8a5b}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+header{background:var(--card);border-bottom:1px solid var(--line);padding:18px 28px 0}
+h1{margin:0;font-size:22px}
+.sub{color:var(--mute);margin:2px 0 14px;font-size:14px}
+nav{display:flex;gap:4px}
+nav button{border:1px solid transparent;border-bottom:none;background:none;padding:9px 16px;font:inherit;font-weight:600;color:var(--mute);cursor:pointer;border-radius:8px 8px 0 0}
+nav button[aria-selected=true]{background:var(--bg);border-color:var(--line);color:var(--ink);margin-bottom:-1px}
+main{max-width:1180px;margin:0 auto;padding:22px 28px 60px}
+.intro{color:var(--mute);margin:0 0 18px;max-width:820px}
+.aos{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:0 0 18px;overflow:hidden}
+.aos>h2{margin:0;padding:12px 18px;font-size:17px;color:#fff;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.aos>h2 small{font-weight:500;opacity:.9;font-size:13px}
+.aos .body{padding:6px 18px 14px}
+.chap{border-top:1px solid var(--line);padding:12px 0 6px}
+.chap:first-child{border-top:none}
+.chap h3{margin:0 0 8px;font-size:15px;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.chap h3 .n{font-size:12px;color:var(--mute);font-weight:600}
+.rev{color:var(--mute);font-size:13px;padding:8px 0 2px;border-top:1px dashed var(--line)}
+details.les{border:1px solid var(--line);border-radius:8px;margin:0 0 6px;background:#fff}
+details.les>summary{list-style:none;cursor:pointer;padding:8px 12px;display:grid;grid-template-columns:28px 190px 1fr auto;gap:10px;align-items:center}
+details.les>summary::-webkit-details-marker{display:none}
+details.les[open]>summary{border-bottom:1px solid var(--line);background:#fafbfc}
+.num{font-size:12px;color:var(--mute);font-weight:700;text-align:right}
+.chips{display:flex;gap:4px;flex-wrap:wrap}
+.chip{font-size:12px;font-weight:700;padding:2px 7px;border-radius:999px;border:1.5px solid currentColor;white-space:nowrap}
+.check .chip{border-style:dashed}
+.ttl{font-size:14px}
+.ttl.empty{color:var(--mute);font-style:italic}
+.tags{display:flex;gap:4px}
+.tag{font-size:11px;padding:2px 6px;border-radius:4px;background:#eef1f5;color:var(--mute);white-space:nowrap}
+.tag.cfat{background:#fff3e0;color:#8a4b0f}
+.tag.made{background:#e7f5ec;color:var(--ok)}
+.card{padding:12px 16px 14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px 22px}
+.card section h4{margin:0 0 4px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mute)}
+.card ul{margin:0;padding-left:18px}
+.card li{margin:1px 0}
+.card .wide{grid-column:1/-1}
+.card .src{color:var(--mute);font-size:13px}
+.card a{color:var(--a1)}
+.blank{color:var(--mute);font-style:italic;padding:10px 16px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin:0 0 18px}
+.panel h2{margin:0 0 8px;font-size:18px}
+.todo{margin:8px 0 0;padding-left:20px}
+.todo li{margin:4px 0}
+code{background:#eef1f5;padding:1px 5px;border-radius:4px;font-size:13px}
+.warn{background:var(--warnbg);color:var(--warn);border-radius:8px;padding:8px 12px;margin:0 0 10px;font-size:14px}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 14px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-width:150px}
+.stat b{display:block;font-size:20px}
+.stat span{color:var(--mute);font-size:13px}
+table.flow{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:14px}
+table.flow th,table.flow td{padding:6px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+table.flow th{background:#fafbfc;font-size:12px;color:var(--mute);text-transform:uppercase}
+tr.term td{background:#eef1f5;font-weight:700}
+tr.buffer td{color:var(--mute);font-style:italic}
+tr.anchor td{background:#fff3e0;font-weight:600}
+@media (max-width:760px){details.les>summary{grid-template-columns:24px 1fr;}.ttl,.tags{grid-column:2}}
+@media print{nav,header .sub{display:none}details.les{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header>
+ <h1>12MAG Course Planner</h1>
+ <p class="sub">VCE General Mathematics Units 3&amp;4 · Cambridge General Mathematics VCE Units 3&amp;4 (2nd ed.)</p>
+ <nav id="tabs" role="tablist"></nav>
+</header>
+<main id="main"><p class="intro">Loading…</p></main>
+
+<script>
+const AC={1:'var(--a1)',2:'var(--a2)',3:'var(--a3)',4:'var(--a4)'};
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const md=s=>esc(s).replace(/\$([^$]+)\$/g,'<i>$1</i>');
+let UP=null, YEARS=[], YD={}, tab='unit';
+
+async function load(){
+  try{
+    UP=await (await fetch('unit-plan.json',{cache:'no-store'})).json();
+    YEARS=await (await fetch('years/index.json',{cache:'no-store'})).json();
+    for(const y of YEARS){ try{ YD[y]=await (await fetch(`years/${y}.json`,{cache:'no-store'})).json(); }catch(e){ YD[y]=null; } }
+  }catch(e){
+    document.getElementById('main').innerHTML='<div class="warn">Could not load the planner data files. Open this page from the website (GitHub Pages), not as a local file.</div>';
+    return;
+  }
+  const h=location.hash.slice(1); if(h==='unit'||YEARS.includes(h)) tab=h;
+  render();
+}
+function setTab(t){tab=t; history.replaceState(null,'','#'+t); render();}
+function render(){
+  const nav=document.getElementById('tabs');
+  nav.innerHTML=[['unit','Unit plan'],...YEARS.map(y=>[y,`Year plan ${y}`])]
+    .map(([k,l])=>`<button role="tab" aria-selected="${tab===k}" onclick="setTab('${k}')">${l}</button>`).join('');
+  document.getElementById('main').innerHTML = tab==='unit'?unitPlan():yearPlan(tab);
+}
+
+/* ---------- Unit plan ---------- */
+function lessonLabel(l){return l.subchapters.length?l.subchapters:['Ch test'];}
+function unitPlan(){
+  let n=0, total=0, made=0;
+  UP.aos.forEach(a=>a.chapters.forEach(c=>c.lessons.forEach(l=>{total++; if(l.card&&l.card.materials&&l.card.materials.some(m=>m.file)) made++;})));
+  let h=`<p class="intro">Content only, no dates. Each chapter is its teaching lessons plus one coursework check + test lesson. A lesson is a list of Cambridge subchapters; open a lesson to see its card. Plan one chapter at a time. Year plans flow these lessons, in order, into each year's dated slots.</p>
+  <div class="stats"><div class="stat"><b>${total}</b><span>lessons in the unit plan</span></div>
+  <div class="stat"><b>${UP.aos.reduce((s,a)=>s+a.chapters.length,0)}</b><span>chapters</span></div>
+  <div class="stat"><b>${made}</b><span>lessons with materials made</span></div></div>`;
+  for(const a of UP.aos){
+    const cnt=a.chapters.reduce((s,c)=>s+c.lessons.length,0);
+    h+=`<section class="aos"><h2 style="background:${AC[a.n]}">Unit ${a.unit} · AoS ${a.n}: ${esc(a.title)} <small>${cnt} lessons · Ch ${a.chapters.map(c=>c.n).join(', ')}</small></h2><div class="body">`;
+    for(const c of a.chapters){
+      h+=`<div class="chap"><h3><span class="n">CHAPTER ${c.n}</span>${esc(c.title)} <span class="n">${c.lessons.length} lessons</span></h3>`;
+      for(const l of c.lessons){ n++; h+=lessonRow(l,n,a.n); }
+      h+=`</div>`;
+    }
+    h+=`<div class="rev">${esc(a.revision)}: practice only, not in the lesson sequence.</div></div></section>`;
+  }
+  return h;
+}
+function lessonRow(l,n,aos){
+  const k=l.card||{};
+  const chips=lessonLabel(l).map(s=>`<span class="chip" style="color:${AC[aos]}">${esc(s)}${l.part?` (part ${l.part})`:''}</span>`).join('');
+  const tags=[];
+  (k.cfats||[]).forEach(c=>tags.push(`<span class="tag cfat">${esc(c.id)}</span>`));
+  if(k.materials&&k.materials.some(m=>m.file)) tags.push('<span class="tag made">materials</span>');
+  if(l.shell) tags.push('<span class="tag">to plan</span>');
+  return `<details class="les ${l.kind==='check'?'check':''}"><summary><span class="num">${n}</span><span class="chips">${chips}</span>
+   <span class="ttl ${l.title?'':'empty'}">${l.title?md(l.title):'Not planned yet'}</span><span class="tags">${tags.join('')}</span></summary>${card(l)}</details>`;
+}
+function list(items){return items&&items.length?`<ul>${items.join('')}</ul>`:'<span class="src">None yet</span>';}
+function card(l){
+  const k=l.card||{};
+  if(!Object.keys(k).length) return `<div class="blank">${l.kind==='check'?'Coursework check + chapter test (Mathspace topic assessment). Not planned yet.':'Lesson card not planned yet. Plan this chapter on its own when it comes up.'}</div>`;
+  const s=[];
+  const bySub=(arr)=>(arr||[]).map(g=>`<li><b>${esc(g.sub)}</b><ul>${(g.items||[]).map(i=>`<li>${md(i)}</li>`).join('')}</ul></li>`);
+  if(k.learningObjectives) s.push(`<section><h4>Learning intentions</h4>${list(bySub(k.learningObjectives))}</section>`);
+  if(k.successCriteria) s.push(`<section><h4>Success criteria</h4>${list(bySub(k.successCriteria))}</section>`);
+  if(k.weDo) s.push(`<section><h4>Cambridge Examples → Edrolo You try</h4>${list(k.weDo.map(w=>`<li>Ex ${w.n} (${esc(w.sub)}) ${md(w.title)} <span class="src">→ ${w.youTry?esc(w.youTry):'no You try'}</span></li>`))}</section>`);
+  if(k.apk) s.push(`<section><h4>APK</h4>${list(k.apk.map(a=>`<li>${md(a.text||a.ref)} <span class="src">${esc(a.ref||'')}${a.src?' · '+esc(a.src):''}</span></li>`))}</section>`);
+  if(k.doNow) s.push(`<section><h4>Do Now</h4>${list(k.doNow.map(d=>`<li>${esc(d.ref)} <span class="src">${esc(d.exam||'')}${d.sec?' · '+esc(d.sec):''}</span></li>`))}</section>`);
+  if(k.exit) s.push(`<section><h4>Exit tasks</h4>${list(k.exit.map(e=>`<li>${esc(e.ref)} <span class="src">${esc(e.src||'')}</span></li>`))}</section>`);
+  if(k.cas) s.push(`<section><h4>CAS</h4>${list(k.cas.map(c=>`<li>${esc(c.skill)} <span class="src">${[...(c.classpad||[]).map(v=>`<a href="${esc(v.url)}" target="_blank" rel="noopener">ClassPad</a>`),...(c.ti||[]).map(v=>`<a href="${esc(v.url)}" target="_blank" rel="noopener">TI</a>`)].join(' · ')}</span></li>`))}</section>`);
+  if(k.cfats) s.push(`<section><h4>CFAT</h4>${list(k.cfats.map(c=>`<li><b>${esc(c.id)}</b> ${esc(c.title||'')} <span class="src">covers ${esc((c.covers||[]).join(', '))}${c.status?' · '+esc(c.status):''}${c.note?' · '+esc(c.note):''}</span>${c.file?` · <a href="../${esc(c.file)}" target="_blank">open</a>`:''}</li>`))}</section>`);
+  if(k.materials) s.push(`<section><h4>Materials</h4>${list(k.materials.map(m=>`<li>${esc(m.kind)} <span class="src">${esc(m.status||'')}</span>${m.file?` · <a href="../${esc(m.file)}" target="_blank">html</a>`:''}${m.pdf?` · <a href="../${esc(m.pdf)}" target="_blank">pdf</a>`:''}</li>`))}</section>`);
+  if(k.studyDesign) s.push(`<section class="wide"><h4>Study Design key knowledge</h4>${list(k.studyDesign.map(t=>`<li>${md(t)}</li>`))}</section>`);
+  return `<div class="card">${s.join('')}</div>`;
+}
+
+/* ---------- Year plan ---------- */
+const DOW=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+const iso=d=>d.toISOString().slice(0,10);
+const pretty=s=>{const d=new Date(s+'T00:00:00Z');return d.toLocaleDateString('en-AU',{weekday:'short',day:'numeric',month:'short',timeZone:'UTC'});};
+function allLessons(){const out=[];UP.aos.forEach(a=>a.chapters.forEach(c=>c.lessons.forEach(l=>out.push({...l,aos:a.n,unit:a.unit,ch:c.n}))));return out;}
+function yearPlan(y){
+  const Y=YD[y];
+  if(!Y) return `<div class="warn">Could not read <code>years/${esc(y)}.json</code>.</div>`;
+  const missing=[]; if(!Y.terms||!Y.terms.length) missing.push('term start and end dates'); if(!Y.teachingDays||!Y.teachingDays.length) missing.push('teaching weekdays');
+  if(missing.length) return `<div class="panel"><h2>Year plan ${esc(y)}</h2><p>${esc(Y.status||'Dates not added yet.')}</p>
+    <p>This tab fills itself in once <code>planner/years/${esc(y)}.json</code> has:</p>
+    <ul class="todo"><li><b>Terms</b>: start and end date of each term (the start = first day students are in).</li>
+    <li><b>Teaching days</b>: the ${Y.lessonsPerWeek||3} weekdays the class has 12MAG.</li>
+    <li><b>Blocked dates</b>: public holidays, pupil-free days, school events.</li>
+    <li><b>Anchors</b> (optional, later): fixed dates such as SACs and trial exams.</li></ul>
+    <p class="src" style="color:var(--mute)">The unit-plan lessons are then placed in order into the free slots. Lessons are never pinned to days, so splitting or merging lessons in the Unit plan re-flows every year automatically. Leftover slots, and any slot before an anchor that content can't fill, show as buffer lessons (for SACs, revision, catch-up).</p></div>`;
+  // build slots
+  const days=new Set(Y.teachingDays.map(d=>DOW.indexOf(d.slice(0,3))));
+  const blocked=new Map((Y.blocked||[]).map(b=>[b.date,b.reason||'blocked']));
+  const anchors=(Y.anchors||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));
+  const rows=[], warns=[], termStats=[]; const L=allLessons(); let i=0;
+  for(const t of Y.terms){
+    rows.push(`<tr class="term"><td colspan="4">${esc(t.name)} · ${pretty(t.start)} – ${pretty(t.end)}</td></tr>`);
+    let buf=0, used=0;
+    for(let d=new Date(t.start+'T00:00:00Z'); iso(d)<=t.end; d.setUTCDate(d.getUTCDate()+1)){
+      const s=iso(d);
+      const an=anchors.filter(a=>a.date===s);
+      an.forEach(a=>rows.push(`<tr class="anchor"><td>${pretty(s)}</td><td colspan="3">${esc(a.label)}</td></tr>`));
+      if(!days.has(d.getUTCDay())) continue;
+      if(blocked.has(s)){rows.push(`<tr class="buffer"><td>${pretty(s)}</td><td colspan="3">No lesson: ${esc(blocked.get(s))}</td></tr>`);continue;}
+      if(an.length){continue;}
+      const l=L[i];
+      // an anchor with a "unit" (e.g. the Unit 3 exam) holds back later units' lessons until after it
+      const hold=l && anchors.some(a=>a.unit && a.date>s && l.unit>a.unit);
+      if(l && !hold){
+        const late=anchors.find(a=>a.unit===l.unit && a.date<s);
+        if(late && !warns.some(w=>w.includes(late.label))) warns.push(`Unit ${l.unit} content runs past "${late.label}" (${pretty(late.date)}), from ${l.subchapters.join(', ')||'Ch '+l.ch+' check'}.`);
+        rows.push(`<tr><td>${pretty(s)}</td><td>${l.subchapters.length?l.subchapters.join(', ')+(l.part?` (part ${l.part})`:''):'Ch '+l.ch+' check'}</td><td>${l.title?md(l.title):'<i>not planned yet</i>'}</td><td>U${l.unit} AoS ${l.aos}</td></tr>`);
+        i++; used++;
+      } else { rows.push(`<tr class="buffer"><td>${pretty(s)}</td><td>Buffer</td><td colspan="2">SAC, revision or catch-up</td></tr>`); buf++; }
+    }
+    termStats.push({name:t.name,used,buf});
+  }
+  if(i<L.length) warns.push(`${L.length-i} unit-plan lessons don't fit in the year (from ${L[i].subchapters.join(', ')||'Ch '+L[i].ch+' check'}). Add dates, or merge lessons in the Unit plan.`);
+  return `${warns.map(w=>`<div class="warn">${esc(w)}</div>`).join('')}
+   <div class="stats">${termStats.map(t=>`<div class="stat"><b>${t.buf}</b><span>buffers in ${esc(t.name)} (${t.used} lessons)</span></div>`).join('')}</div>
+   <table class="flow"><thead><tr><th>Date</th><th>Subchapters</th><th>Lesson</th><th>AoS</th></tr></thead><tbody>${rows.join('')}</tbody></table>`;
+}
+load();
+</script>
+</body>
+</html>
