@@ -1,42 +1,40 @@
-# 12MAG handover — 14 Nov 2026 (evening)
+# 12MAG handover — 14 Nov 2026 (late night)
 
-Read `CLAUDE.md` first (rules + item index), then this file. Repo: `roccatalano/12MAG` (GitHub Pages: roccatalano.github.io/12mag/ → redirects to `planner/`).
-Rocco's dashboard repo `roccatalano/teaching-dashboard-2027` was used **read-only** (copied its CSS + section code). Don't change it unless asked.
+Read `CLAUDE.md` first (rules, item index, **slide template rules**), then this file.
+Repo: `roccatalano/12MAG` (GitHub Pages: roccatalano.github.io/12mag/ → `planner/`). Rocco's dashboard repo `roccatalano/teaching-dashboard-2027` is read-only unless he asks.
+Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through the desktop-app bridge (stage files to read; commit files to write; can't move/rename/delete).
 
-## Done this session
-1. **Item index steps 1–3** (details in CLAUDE.md):
-   - `tools/y12_edrolo_exam_practice.csv`, `tools/y11_edrolo_exam_practice.csv`: + pdf/printed page, answer, % correct (examiner reports). 6 pre-2016 items flagged "no assessor report info available".
-   - `tools/vcaa_current_index.csv`: Do Now pool, 652 current-design items (2023–26), hand-tagged to Cambridge subchapters.
-   - `tools/y12_edrolo_exercise_questions.csv`: CFAT pool, 696 Edrolo U3&4 exercise questions, mapped to Cambridge subchapters (`tools/edrolo_exercise_index.py`).
-2. **Burnt ledger** `tools/ledger.csv` (122 burnt rows), built by `tools/build_ledger.py "<path to 04 Archive\Planning\Topics\1. Data Analysis\HANDOFF.md>"`. Reads the HANDOFF burnt table + every `src` citation in `lessons/*.html`; role = the slide's class (dn/apk/we/yt/ex/cfat). VCAA reprints keyed by original paper. Manual rows: `tools/ledger_manual.csv` (create if needed).
-3. **Course planner** `planner/index.html`:
-   - Looks and works like the dashboard (same CSS, nested sections). Tabs: **Course plan** + **Year plan <year>**. Groups labelled **AoS 1–4** (never "Unit").
-   - Data: `planner/unit-plan.json` = the content master (AoS → chapters → lessons; each lesson = Cambridge subchapters + card). 68 lessons. Ch 1–5, 7–8 cards came from the dashboard data (`tools/make_unit_plan.py`, one-off); Unit 4 (Ch 10–11, 13–14) = outlines from the Cambridge sample planner.
-   - Lesson card sections: materials, CFAT, LOs, SC, Study Design, vocab, CAS, Do Now, APK, worked examples & You trys, exit tasks, **Coursework** (`tools/add_homework.py`: exact breakdown from the deck's last slide, else "Cambridge · Exercise XY, all questions"). Long coursework rows shrink to fit one line.
-   - **Lesson shape** panel = live outline of the lesson's slide deck (read from `lessons/<S#>-slides.html`); "Slides not made yet" if no deck.
-   - Year tabs: flow lessons into dated slots (teaching days, blocked dates, anchors with `"unit"`, buffers, overflow warning). `planner/years/2027.json` is **blank** until Rocco sends 2027 term dates; `years/index.json` lists years.
+## NEXT JOB: guided lesson worksheet for Lesson 4 (1G)
+Rocco wants to make the **guided worksheet** from the finished 1G slides (`lessons/S4-slides.html`, built by `tools/deck/s4/build.py`).
+What CLAUDE.md already says about it:
+- Every lesson gets guided slides, a **guided worksheet**, and a bound reference entry (rule 2).
+- Planner card wording: "Student companion to the slides, in the same order, with space to answer. **Max 2 double-sided pages.**"
+- Rule 12: check every page visually; finished files go in `lessons/` and flat into `01 Lesson materials` on G: (name: `1G worksheet.html`, like `1A-1B worksheet.html`).
+Starting points:
+- An older worksheet exists: `lessons/S1-worksheet.html/.pdf` (1A–1B, pre-template style; Rocco hasn't reviewed it against the new slide design). Look at it, but expect Rocco to want it to mirror the NEW slide templates.
+- **Reuse the slide content, don't retype it:** `tools/deck/s4/build.py` holds every question (verbatim), its figure config (boxplot/dot plot/stem plot data) and the solution steps. Best approach: build the worksheet from the same data (e.g. a `tools/deck/s4/worksheet.py` or a worksheet template next to `tools/deck/tpl/`), so slides and worksheet never drift.
+- Likely mirror of the slide layout on paper: question on the left (verbatim, command word highlighted), working space on the right, success-criteria tick boxes, key definitions/formulas box. **Ask Rocco** about: which slides go on the worksheet (all Do Now/APK/WE/You try/exits? WE as worked/filled-in vs blank?), answer space style (lines, grid, blank boxplot axes), and print format (A4, black and white?).
+- PDFs: Rocco said (14 Nov) **don't make PDFs of the slides yet** (static versions later). Ask whether the worksheet should have a PDF (it is for printing; S1-worksheet had one, made with paged.js: `lessons/paged.polyfill.min.js`, `a4view.js`).
+- Rocco's account skills may help: `11mag-chapter-workbook` (A4 photocopiable HTML workbook) and `maths-model-notes`. Check them before designing from scratch.
 
-## Rocco's decisions (14 Nov)
-- Keep the **Cambridge suggested sequence**. No drag-and-drop, no auto-built slides.
-- Planner must match the dashboard's nested-card look.
-- Say **Coursework**, not homework (students need it for their S).
-- Leave CFATs 1.1.1–1.1.3 as they are (13 of their items are Edrolo VCAA reprints, against rule 8).
-- Leave the made slides (S1–S3) for now; fix later.
-- **Focus now: Chapter 1.**
+## Done this session (14 Nov evening)
+1. **Insight is never burnt** (Rocco). 10 Insight rows removed from `tools/ledger.csv`; `build_ledger.py` skips Insight.
+2. **Lesson 4 (1G) slides** — `lessons/S4-slides.html` (29 slides), also `01 Lesson materials\1G slides.html` on G:.
+   - Do Now: VCAA 2023 E1 Q1, Q6; 2025 E2 Q1a, Q1b. APK: Cambridge U1&2 2H #14, #15; Edrolo U1&2 1F Q16 (VCAA 2017 E1 Q2). Exits: Edrolo U3&4 1E Q19 (VCAA 2020 E2 Q2c), Q20 (VCAA 2021 E2 Q1e). WE 22–27 with You trys Edrolo 1E WE4, WE5 (CAS), WE6, 1F WE5. All logged in the ledger; planner card updated (Do Now, success criteria, coursework, slide link).
+   - No PDF (Rocco). `01 Lesson materials\1G slides.pdf` on G: is stale — Rocco to delete it.
+3. **Slide templates** — `tools/deck/tpl/tpl.py` (+ `tpl.css`, `tpl.js`); engine `tools/deck/engine.html` (made by `tools/deck/make_engine.py` from the old S4 build `s4/build_v1.py` + `s4/extra.js` boxplot drawer). All rules are in CLAUDE.md ("Slide templates"). Key functions: `title, today, keys, qslide (fx/F/V/FR formulas, plist + parts, afig + build, mc/dis), learn (kcard), cas (yt videos), checkin, coursework, videos, assemble`.
+4. **Command words** — highlighted yellow in the question + a tile top right ("FIND · the value, with working"). The Study Design has no command-word list; VCAA's separate Glossary of command terms does (vcaa.vic.edu.au; the page needs a browser approval; definitions not yet captured). Not yet done: tag every item in `vcaa_current_index.csv` with its command word.
 
-## Open / next
-- **Slides S1–S3 (later):** rename "Homework" → "Coursework" (pill, heading, title-slide flow; re-make PDFs; check every slide, rule 12). S2 Do Now has 3 items (needs 2 × E1 + 2 × E2). S3 has an extra exit from a current-design paper (VCAA 2026 NHT E2 Q1b, Q1d; rule 7 says Edrolo reprints only). S2 exit 3 shows "?%" — report value is 71% (VCAA 2019 E1 Q3).
-- **Planner cards vs slides (Ch 1):** S1 card lists APK 2B #5 not on the slides; S2 card APK differs from the slides (slides: 2C #6, 2D #7, 2D #9, 9D #6–7; card also has Edrolo U1&2 1C Q15, Q17). Decide whether cards should be synced to the slides.
-- **1G (L4) slides REBUILT on the templates (14 Nov, late):** `tools/deck/s4/build.py` now uses `tools/deck/tpl/tpl.py`; 29 slides; template rules in CLAUDE.md. Old build kept as `s4/build_v1.py` (only used to make `tools/deck/engine.html`). Embedded YouTube videos show 'Error 153' when the file is opened from disk; they should play from the GitHub Pages copy (check). Next: S1–S3 and later lessons onto the templates.
-- (earlier) **1G (L4) slides made 14 Nov (evening):** `lessons/S4-slides.html` (27 slides; also `1G slides.html` on G:). **No PDF** (Rocco 14 Nov: static versions of slides to be worked out later; `1G slides.pdf` on G: is stale, Rocco to delete). Build: `tools/deck/s4/build.py` (template = S3 + `extra.js` boxplot drawer: `data-chart="box"`, stepped parts via `data-bx="#id|box,med"`, `=` prefix shows one % band at a time), `shoot.py` (screenshots). Do Now: VCAA 2023 E1 Q1, Q6; 2025 E2 Q1a, Q1b. APK: U1&2 2H #14–15, Edrolo U1&2 1F Q16. Exits: Edrolo 1E Q19, Q20. You trys: Edrolo 1E WE4, WE5 (CAS), WE6, 1F WE5. Card + ledger updated. Worksheet + bound reference for 1G NOT made yet (Rocco: slides only for now). Note: Cambridge Ex 24's boxplot draws its top outlier at ~81 but the question says 86; drawn as in the book.
-- Chapter 1 lessons still without decks: **1H–1I (L5)**, Ch 1 coursework check + test (L6; `lessons/Ch1-coursework-check.html` exists).
-- ~~Insight un-burn~~ Done 14 Nov: Rocco — nothing from Insight is burnt. The 10 rows are removed from `tools/ledger.csv` and `build_ledger.py` skips Insight.
-- 2027 term dates → fill `planner/years/2027.json` (format in its `_help`).
-- Last PLANNER.md step: point Rocco's personal dashboard at the planner files (needs his go-ahead; other repo).
-- Item index step 4 (extract items fully on first use into `03 Item bank\`) happens lesson by lesson.
+## Open / later
+- **Lessons 1–3 (S1–S3)** still use the old layout → rebuild on the templates (also fixes 'Homework' → 'Coursework', S2 Do Now count, S3 extra exit, S2 '?%' → 71%).
+- **1H–1I (L5)** slides not made. Ch 1 coursework check + test (L6).
+- Bound reference entry for 1G not made.
+- Embedded YouTube cards (CAS slide) show "Error 153" when the file is opened from disk; check they play on GitHub Pages.
+- Heptathlon exit (slide 26): fits, but the 15-row table text is small.
+- Command-word tagging of the item index; download VCAA glossary definitions.
+- Planner cards vs slides for S1/S2 (APK differences); 2027 term dates → `planner/years/2027.json`; point Rocco's dashboard at the planner files (needs his go-ahead).
 
 ## Working notes
-- G: drive is reached through the desktop app bridge (stage files to read; can't move/rename/delete there). Sources: `...\12MAG Course Planner\02 Sources\`. HANDOFF + old planning: `04 Archive\Planning\`.
-- 2024 E1/E2 and 2025 NHT E1/E2 PDFs are scans (OCR needed). 2023 NHT is old design (in `VCAA past\2022`).
-- Push: `git -c push.negotiate=true push origin HEAD` (remote is `https://github.com/roccatalano/12MAG.git`).
-- Check planner changes visually (headless Chrome + playwright: serve the repo with `python3 -m http.server`, open `/planner/`).
+- Screenshots: `python3 tools/deck/s4/shoot.py "<slide list>" "<slide:steps,…>"` (writes to /home/claude/w/shots; adjust paths in a new session). Needs playwright + /usr/bin/google-chrome.
+- Sources staged from G: `02 Sources\Textbooks\...` (Cambridge U3&4 1G = pdf pp. 73–88; Edrolo U3&4 1E = pdf pp. 54–68, 1F WE5 = p. 78; Edrolo U1&2 1F Q16 = p. 63).
+- 2024 E1/E2 and 2025 NHT papers are scans (OCR). 2023 NHT is old design.
