@@ -187,7 +187,61 @@
           "status": "todo",
           "file": ""
          }
-        ]
+        ],
+        "homework": {
+         "source": "slides",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 1A",
+           "items": [
+            {
+             "skill": "Types of variables: categorical or numerical",
+             "q": "Q1"
+            },
+            {
+             "skill": "Categorical variables: nominal or ordinal",
+             "q": "Q2"
+            },
+            {
+             "skill": "Numerical variables: discrete or continuous",
+             "q": "Q3"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q4–6"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Cambridge · Exercise 1B",
+           "items": [
+            {
+             "skill": "Constructing a frequency table for categorical data",
+             "q": "Q1–3"
+            },
+            {
+             "skill": "Constructing a percentage segmented bar chart from a frequency table",
+             "q": "Q4–5"
+            },
+            {
+             "skill": "Using the distribution of a categorical variable to answer statistical questions",
+             "q": "Q6–8"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q9"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
+           "items": [],
+           "note": "The 1A and 1B sections"
+          }
+         ]
+        }
        }
       },
       {
@@ -465,7 +519,103 @@
           "status": "todo",
           "file": ""
          }
-        ]
+        ],
+        "homework": {
+         "source": "slides",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 1C",
+           "items": [
+            {
+             "skill": "Frequency table, discrete data",
+             "q": "Q1–2"
+            },
+            {
+             "skill": "Grouped frequency table",
+             "q": "Q3"
+            },
+            {
+             "skill": "Histogram from a frequency table",
+             "q": "Q4"
+            },
+            {
+             "skill": "Reading a histogram",
+             "q": "Q5–6"
+            },
+            {
+             "skill": "Histogram on CAS",
+             "q": "Q7–8"
+            },
+            {
+             "skill": "Shape, centre and spread",
+             "q": "Q9–10"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q11–12"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Cambridge · Exercise 1D",
+           "items": [
+            {
+             "skill": "Dot plots",
+             "q": "Q1–5"
+            },
+            {
+             "skill": "Stem plots",
+             "q": "Q6"
+            },
+            {
+             "skill": "Split stems",
+             "q": "Q7"
+            },
+            {
+             "skill": "Interpreting stem plots",
+             "q": "Q8–9"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q10–11"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Cambridge · Exercise 1E",
+           "items": [
+            {
+             "skill": "Log of a number",
+             "q": "Q1"
+            },
+            {
+             "skill": "Number from its log",
+             "q": "Q2"
+            },
+            {
+             "skill": "Histogram with a log scale",
+             "q": "Q3"
+            },
+            {
+             "skill": "Interpreting a log scale",
+             "q": "Q4"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q5–6"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
+           "items": [],
+           "note": "The 1C, 1D and 1E sections"
+          }
+         ]
+        }
        }
       },
       {
@@ -1010,7 +1160,69 @@
           "file": "lessons/CFAT-1.1.1.html",
           "pdf": "lessons/CFAT-1.1.1.pdf"
          }
-        ]
+        ],
+        "homework": {
+         "source": "slides",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 1F (part 1)",
+           "items": [
+            {
+             "skill": "Median from data",
+             "q": "Q1–2"
+            },
+            {
+             "skill": "Median from a dot plot",
+             "q": "Q3"
+            },
+            {
+             "skill": "Median and range from a stem plot",
+             "q": "Q4"
+            },
+            {
+             "skill": "Median and quartiles from a dot plot",
+             "q": "Q5"
+            },
+            {
+             "skill": "Median and quartiles from a stem plot",
+             "q": "Q6–9"
+            },
+            {
+             "skill": "Median and quartiles from a histogram",
+             "q": "Q10–11"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Cambridge · Exercise 1F (part 2)",
+           "items": [
+            {
+             "skill": "Mean, median and mode from data",
+             "q": "Q12–17"
+            },
+            {
+             "skill": "The concept of standard deviation",
+             "q": "Q18–20"
+            },
+            {
+             "skill": "Mean and standard deviation on CAS",
+             "q": "Q21–22"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q23–26"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
+           "items": [],
+           "note": "The 1F section"
+          }
+         ]
+        }
        }
       },
       {
@@ -1195,7 +1407,17 @@
           "status": "todo",
           "file": ""
          }
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 1G",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        }
       },
       {
@@ -1724,7 +1946,22 @@
           "file": "lessons/CFAT-1.1.2.html",
           "pdf": "lessons/CFAT-1.1.2.pdf"
          }
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 1H",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          },
+          {
+           "title": "Cambridge · Exercise 1I",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        }
       },
       {
@@ -2245,7 +2482,22 @@
           "ref": "Edrolo U3&4 2A Q13",
           "src": "VCAA 2021 Exam 1 Q3"
          }
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 2A",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          },
+          {
+           "title": "Cambridge · Exercise 2B",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        }
       },
       {
@@ -2412,7 +2664,17 @@
           ],
           "marks": 14
          }
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 2C",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        }
       },
       {
@@ -2555,7 +2817,22 @@
            }
           ]
          }
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 2D",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          },
+          {
+           "title": "Cambridge · Exercise 2E",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        }
       },
       {
@@ -2677,7 +2954,17 @@
           "plan": "Start of the 2F lesson (one subchapter).",
           "file": "1. Data Analysis\\\\CFATs\\\\Chapter 2\\\\CFAT 1.2.2 [2C, 2D].docx"
          }
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 2F",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        }
       },
       {
@@ -2833,7 +3120,22 @@
            }
           ]
          }
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 2G",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          },
+          {
+           "title": "Cambridge · Exercise 2H",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        }
       },
       {
@@ -2854,7 +3156,17 @@
         ],
         "studyDesign": [
          "answering statistical questions that require a knowledge of the associations between pairs of variables"
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 2I",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        }
       },
       {
@@ -3030,7 +3342,17 @@
           "status": "Planned",
           "plan": "Start of the 3A lesson (the Chapter 2 review lesson stays CFAT-free)."
          }
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 3A",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        }
       },
       {
@@ -3168,7 +3490,17 @@
            }
           ]
          }
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 3B",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        }
       },
       {
@@ -3348,7 +3680,17 @@
           "status": "Planned",
           "plan": "Start of the residuals and regression analysis lesson."
          }
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 3C",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        }
       },
       {
@@ -3493,7 +3835,17 @@
           "status": "Planned",
           "plan": "Start of the 4A lesson."
          }
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 4A",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        }
       },
       {
@@ -3612,7 +3964,17 @@
            }
           ]
          }
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 4B",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        }
       },
       {
@@ -3722,7 +4084,17 @@
            }
           ]
          }
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 4C",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        }
       },
       {
@@ -3859,7 +4231,17 @@
           "status": "Planned",
           "plan": "Start of the 4D lesson (one subchapter)."
          }
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 4D",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        }
       },
       {
@@ -4053,7 +4435,17 @@
           "status": "Planned",
           "plan": "Start of the 5A lesson (features of time series plots, a lighter lesson)."
          }
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 5A",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        }
       },
       {
@@ -4161,7 +4553,17 @@
           ],
           "ti": []
          }
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 5B",
+           "items": [],
+           "note": "All questions (shared with the other 5B lesson). Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        },
        "part": 1
       },
@@ -4278,7 +4680,17 @@
           ],
           "ti": []
          }
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 5B",
+           "items": [],
+           "note": "All questions (shared with the other 5B lesson). Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        },
        "part": 2
       },
@@ -4377,7 +4789,17 @@
           "ref": "Edrolo U3&4 4C Q15",
           "src": "VCAA 2019 Exam 1 Q13"
          }
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 5C",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        }
       },
       {
@@ -4501,7 +4923,17 @@
           "status": "Planned",
           "plan": "Start of the first seasonal indices lesson."
          }
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 5D",
+           "items": [],
+           "note": "All questions (shared with the other 5D lesson). Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        },
        "part": 1
       },
@@ -4602,7 +5034,17 @@
           "ref": "Edrolo U3&4 4D Q18",
           "src": "VCAA 2019 Exam 2 Q6a,b"
          }
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 5D",
+           "items": [],
+           "note": "All questions (shared with the other 5D lesson). Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        },
        "part": 2
       },
@@ -4756,7 +5198,17 @@
           "status": "Planned",
           "plan": "Last 20 min of the 5E lesson: the lessons after it are all review or SAC 1 preparation."
          }
-        ]
+        ],
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 5E",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
        }
       },
       {
@@ -4803,7 +5255,18 @@
         "7A"
        ],
        "title": "Sequences and recurrence relations (after SAC 1 Part 3)",
-       "card": {}
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 7A",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       }
       },
       {
        "id": "gm12-u3-l32",
@@ -4813,7 +5276,23 @@
         "7D"
        ],
        "title": "Linear and geometric growth and decay",
-       "card": {}
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 7B",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          },
+          {
+           "title": "Cambridge · Exercise 7D",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       }
       },
       {
        "id": "gm12-u3-l33",
@@ -4823,7 +5302,23 @@
         "7E"
        ],
        "title": "Explicit rules for linear and geometric growth and decay",
-       "card": {}
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 7C",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          },
+          {
+           "title": "Cambridge · Exercise 7E",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       }
       },
       {
        "id": "gm12-u3-l34",
@@ -4832,7 +5327,18 @@
         "7F"
        ],
        "title": "Interest rates over different periods; effective interest rates",
-       "card": {}
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 7F",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       }
       },
       {
        "id": "gm12-u3-l36",
@@ -4869,7 +5375,18 @@
         "8A"
        ],
        "title": "Compound interest investments with regular additions",
-       "card": {}
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 8A",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       }
       },
       {
        "id": "gm12-u3-l38",
@@ -4878,7 +5395,18 @@
         "8B"
        ],
        "title": "Reducing balance loans and annuities",
-       "card": {}
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 8B",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       }
       },
       {
        "id": "gm12-u3-l39",
@@ -4887,7 +5415,18 @@
         "8C"
        ],
        "title": "Amortisation tables",
-       "card": {}
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 8C",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       }
       },
       {
        "id": "gm12-u3-l40",
@@ -4896,7 +5435,18 @@
         "8D"
        ],
        "title": "Analysing financial situations with amortisation tables",
-       "card": {}
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 8D",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       }
       },
       {
        "id": "gm12-u3-l41",
@@ -4905,7 +5455,18 @@
         "8E"
        ],
        "title": "Finance solver: balance and final payment",
-       "card": {}
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 8E",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       }
       },
       {
        "id": "gm12-u3-l42",
@@ -4914,7 +5475,18 @@
         "8F"
        ],
        "title": "Finance solver: interest rate, time and payment",
-       "card": {}
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 8F",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       }
       },
       {
        "id": "gm12-u3-l43",
@@ -4923,7 +5495,18 @@
         "8G"
        ],
        "title": "Harder financial problems",
-       "card": {}
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 8G",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       }
       },
       {
        "id": "gm12-u3-l44",
@@ -4932,7 +5515,18 @@
         "8H"
        ],
        "title": "Interest-only loans",
-       "card": {}
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 8H",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       }
       },
       {
        "id": "gm12-u3-l45",
@@ -4941,7 +5535,18 @@
         "8I"
        ],
        "title": "Perpetuities",
-       "card": {}
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 8I",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       }
       },
       {
        "id": "gm12-u3-l46",
@@ -4989,7 +5594,28 @@
         "10C"
        ],
        "title": "",
-       "card": {},
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 10A",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          },
+          {
+           "title": "Cambridge · Exercise 10B",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          },
+          {
+           "title": "Cambridge · Exercise 10C",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       },
        "shell": true
       },
       {
@@ -4999,7 +5625,18 @@
         "10D"
        ],
        "title": "",
-       "card": {},
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 10D",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       },
        "shell": true
       },
       {
@@ -5009,7 +5646,18 @@
         "10E"
        ],
        "title": "",
-       "card": {},
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 10E",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       },
        "shell": true
       },
       {
@@ -5019,7 +5667,18 @@
         "10F"
        ],
        "title": "",
-       "card": {},
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 10F",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       },
        "shell": true
       },
       {
@@ -5029,7 +5688,18 @@
         "10G"
        ],
        "title": "",
-       "card": {},
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 10G",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       },
        "shell": true
       },
       {
@@ -5053,7 +5723,18 @@
         "11A"
        ],
        "title": "",
-       "card": {},
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 11A",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       },
        "shell": true
       },
       {
@@ -5063,7 +5744,18 @@
         "11B"
        ],
        "title": "",
-       "card": {},
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 11B",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       },
        "shell": true
       },
       {
@@ -5073,7 +5765,18 @@
         "11C"
        ],
        "title": "",
-       "card": {},
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 11C",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       },
        "shell": true
       },
       {
@@ -5083,7 +5786,18 @@
         "11D"
        ],
        "title": "",
-       "card": {},
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 11D",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       },
        "shell": true
       },
       {
@@ -5093,7 +5807,18 @@
         "11E"
        ],
        "title": "",
-       "card": {},
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 11E",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       },
        "shell": true
       },
       {
@@ -5127,7 +5852,23 @@
         "13B"
        ],
        "title": "",
-       "card": {},
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 13A",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          },
+          {
+           "title": "Cambridge · Exercise 13B",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       },
        "shell": true
       },
       {
@@ -5137,7 +5878,18 @@
         "13C"
        ],
        "title": "",
-       "card": {},
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 13C",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       },
        "shell": true
       },
       {
@@ -5148,7 +5900,23 @@
         "13E"
        ],
        "title": "",
-       "card": {},
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 13D",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          },
+          {
+           "title": "Cambridge · Exercise 13E",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       },
        "shell": true
       },
       {
@@ -5158,7 +5926,18 @@
         "13F"
        ],
        "title": "",
-       "card": {},
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 13F",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       },
        "shell": true
       },
       {
@@ -5182,7 +5961,18 @@
         "14A"
        ],
        "title": "",
-       "card": {},
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 14A",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       },
        "shell": true
       },
       {
@@ -5192,7 +5982,18 @@
         "14B"
        ],
        "title": "",
-       "card": {},
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 14B",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       },
        "shell": true
       },
       {
@@ -5202,7 +6003,18 @@
         "14C"
        ],
        "title": "",
-       "card": {},
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 14C",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       },
        "shell": true
       },
       {
@@ -5212,7 +6024,18 @@
         "14D"
        ],
        "title": "",
-       "card": {},
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 14D",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       },
        "shell": true
       },
       {
@@ -5222,7 +6045,18 @@
         "14E"
        ],
        "title": "",
-       "card": {},
+       "card": {
+        "homework": {
+         "source": "default",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 14E",
+           "items": [],
+           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+          }
+         ]
+        }
+       },
        "shell": true
       },
       {

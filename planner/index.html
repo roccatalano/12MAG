@@ -177,7 +177,8 @@ function nests(l){const c=cfs(l),n=a=>(a||[]).reduce((t,g)=>t+(g.items?g.items.l
    +nest('donow','Do Now',l.doNow?.length?`<ul class="apk">${l.doNow.map(x=>`<li><span class="ak ex">${esc(x.exam)}</span> ${esc(x.ref)}</li>`).join('')}</ul>`:'',l.doNow?.length)
    +nest('apk','APK (prior knowledge)',l.apk?.length?`<ul class="apk">${l.apk.map(x=>`<li><span class="ak ${x.kind=='Exam'?'ex':''}">${x.kind=='Exam'?'Exam Q':'Skill'}</span> ${esc(x.text)}<div class="sub">${esc(x.ref)}</div></li>`).join('')}</ul>`:'',l.apk?.length)
    +nest('wedo','Worked examples &amp; you trys',l.weDo?.length?`<ol class="wedo">${l.weDo.map(x=>`<li><span class="sub">${esc(x.sub)}</span> <b>Example ${x.n}</b> · ${esc(x.title)}${x.video?`<span class="cgo" title="${esc(x.video)}">▶ video</span>`:''}<div class="${x.youTry&&x.youTry!='TBM'?'ytry':'ytry none'}">${x.youTry=='TBM'?'You try: to be mapped':x.youTry?'You try: '+esc(x.youTry):'No you try'}</div></li>`).join('')}</ol>${l.weDoNote?`<div class="sub">${esc(l.weDoNote)}</div>`:''}`:'',l.weDo?.length)
-   +nest('exit','Exit tasks',l.exit?.length?`<ul class="apk">${l.exit.map(x=>`<li><span class="ak ex">${/Exam 1/.test(x.src)?'Exam 1':'Exam 2'}</span> ${esc(x.ref)}<div class="sub">${esc(x.src)}</div></li>`).join('')}</ul>`:'',l.exit?.length)}
+   +nest('exit','Exit tasks',l.exit?.length?`<ul class="apk">${l.exit.map(x=>`<li><span class="ak ex">${/Exam 1/.test(x.src)?'Exam 1':'Exam 2'}</span> ${esc(x.ref)}<div class="sub">${esc(x.src)}</div></li>`).join('')}</ul>`:'',l.exit?.length)
+   +nest('hw','Homework',l.homework?.sets?.length?l.homework.sets.map(s=>`<h4>${esc(s.title)}</h4>${s.items.length?`<ul class="apk">${s.items.map(i=>`<li>${esc(i.skill)} <b style="float:right">${esc(i.q)}</b></li>`).join('')}</ul>`:''}${s.note?`<div class="sub">${esc(s.note)}</div>`:''}`).join(''):'',l.homework?.source=='slides'?'from slides':l.homework?.sets?.length?l.homework.sets.length+' exercise'+(l.homework.sets.length>1?'s':''):null)}
 const ytId=u=>{const m=String(u).match(/[?&]v=([\w-]{11})/)||String(u).match(/youtu\.be\/([\w-]{11})/);return m?m[1]:''};
 const ytStart=u=>{const m=String(u).match(/[?&]t=(\d+)/);return m?m[1]:''};
 function vids(arr){return (arr||[]).map(v=>{const id=ytId(v.url);return `<div class="vid"><button class="yt" data-yt="${id}" data-start="${ytStart(v.url)}" aria-label="Play ${esc(v.title)}"><img loading="lazy" src="https://i.ytimg.com/vi/${id}/mqdefault.jpg" alt=""></button><div class="vt">${esc(v.title)}</div><a href="${esc(v.url)}" target="_blank" rel="noopener">Open on YouTube ↗</a></div>`}).join('')||'<div class="empty">No video</div>'}
@@ -200,23 +201,30 @@ function lessons(){const out=[];let n=0;
 function card(l,extra){return `<div class="card t-${l.type} ${l.shell?'shell':''} ${cfs(l).length?'has-cfat':''} ${openId==l.id?'open':''}" data-id="${l.id}">
   <div class="meta"><span>${typeof l.n=='number'?'L'+l.n+(l.section?' · ':''):''}${l.section?esc(l.section):''}</span><span class="tags">${cfs(l).length?`<span class="tag cfat">${cfs(l).length>1?cfs(l).length+' CFATs':'CFAT'}</span>`:''}<span class="tag">${l.shell?'To plan':TYPE[l.type]}</span></span></div>
   <div class="ttl">${esc(l.title)}</div>${extra||''}</div>`}
+const DECKS={};
+function deckOf(l){const m=(l.materials||[]).find(x=>x.kind=='Guided slides'&&x.file);return m?m.file:null}
 function shapePane(l){
   if(l.type=='check')return `<div class="seqhead"><h3 style="margin-top:0">Coursework check + chapter test</h3></div><ol class="shape">
     <li><span class="sphase ph-cfat">Check</span><span>Coursework checklist: CFATs, bound reference, guided notes, homework</span></li>
     <li><span class="sphase ph-exit">Test</span><span>Chapter test: Mathspace topic assessment</span></li></ol>`;
-  if(l.shell)return `<div class="seqempty">Lesson not planned yet.<br>Plan Chapter ${l.ch} on its own when it comes up.</div>`;
-  const row=(ph,cls,body)=>`<li><span class="sphase ${cls}">${ph}</span><span>${body}</span></li>`;
-  const none='<span class="none">None</span>';
-  const c=cfs(l),dn=l.doNow||[],ap=l.apk||[],we=l.weDo||[],cas=l.cas||[],ex=l.exit||[];
-  return `<div class="seqhead"><h3 style="margin-top:0">Lesson shape</h3><span class="sub">${esc(l.section)}</span></div><ol class="shape">
-   ${c.length?row('CFAT','ph-cfat',c.map(x=>`<b>${esc(x.id)}</b> ${esc(x.title)}`).join('<br>')):''}
-   ${row('Do Now','ph-do-now',dn.length?`${dn.length} question${dn.length>1?'s':''}: ${dn.map(x=>esc(x.ref)).join('; ')}`:none)}
-   ${row('APK','ph-apk',ap.length?`${ap.length} item${ap.length>1?'s':''}`:none)}
-   ${row('Learn','ph-new',we.length?`${we.length} Cambridge Examples (${we.filter(x=>x.youTry).length} with an Edrolo You try)`:none)}
-   ${row('CAS','ph-guided',cas.length?cas.map(k=>esc(k.skill)).join('; '):none)}
-   ${row('Exit tasks','ph-exit',ex.length?`${ex.length}: ${ex.map(x=>esc(x.src||x.ref)).join('; ')}`:none)}
-   ${row('Check-in','ph-learning','Success criteria self-check')}
-   ${row('Homework','ph-apply','Cambridge exercises '+esc(range(l.subchapters)))}</ol>`}
+  const f=deckOf(l);
+  if(!f)return `<div class="seqhead"><h3 style="margin-top:0">Lesson shape</h3></div><div class="seqempty">Slides not made yet.<br>The lesson shape appears here once the slide deck exists.</div>`;
+  return `<div class="seqhead"><h3 style="margin-top:0">Lesson shape <span class="sub" style="text-transform:none;letter-spacing:0">· from the slides</span></h3><a class="sub" href="${esc(f)}" target="_blank" rel="noopener">Open slides ↗</a></div><div data-deck="${esc(f)}"><div class="sub">Reading the slides…</div></div>`}
+const PH=[[/^CFAT/i,'CFAT','ph-cfat'],[/^Do Now/i,'Do Now','ph-do-now'],[/^APK/i,'APK','ph-apk'],[/^Learn/i,'Learn','ph-new'],[/^Worked example/i,'Example','ph-guided'],[/^You try/i,'You try','ph-apply'],[/^CAS/i,'CAS','ph-guided'],[/^Exit/i,'Exit task','ph-exit'],[/^Check-in/i,'Check-in','ph-learning'],[/^Homework/i,'Homework','ph-learning']];
+function outline(doc){
+  return [...doc.querySelectorAll('section.slide')].map((s,i)=>{
+    const pill=(s.querySelector('.pill')?.textContent||'').replace(/\s+/g,' ').trim();
+    const head=(s.querySelector('h1,h2,.wename')?.textContent||'').replace(/\s+/g,' ').trim();
+    const ph=PH.find(([re])=>re.test(pill));
+    const label=ph?ph[1]:(s.classList.contains('s-title')?'Title':/success criteria/i.test(s.textContent)?'Success criteria':'Intro');
+    return {n:i+1,label,cls:ph?ph[2]:'ph-learning',pill,head}})}
+function fillDecks(){document.querySelectorAll('[data-deck]').forEach(async el=>{
+  const f=el.dataset.deck;
+  try{ if(!DECKS[f])DECKS[f]=outline(new DOMParser().parseFromString(await (await fetch(f,{cache:'no-store'})).text(),'text/html'));
+    const O=DECKS[f], cnt=k=>O.filter(x=>x.label==k).length;
+    const sum=['CFAT','Do Now','APK','Example','You try','CAS','Exit task'].filter(k=>cnt(k)).map(k=>`${k} ×${cnt(k)}`).join(' · ');
+    el.innerHTML=`<div class="sub" style="margin:6px 0 2px">${O.length} slides · ${sum}</div><ol class="shape">${O.map(x=>`<li><span class="sphase ${x.cls}">${x.n} · ${esc(x.label)}</span><span>${esc(x.label=='Title'||x.label=='Intro'||x.label=='Success criteria'?x.head:x.pill.replace(/^(Worked example|You try|Learn|CAS|APK)\s*·?\s*/i,'')+(x.head&&!/^(Show what you know|How did you go\?|Homework)$/.test(x.head)?' — '+x.head:''))}</span></li>`).join('')}</ol>`;
+  }catch(e){el.innerHTML='<div class="empty">Could not read the slide file.</div>'}})}
 function detail(l){
   return `<div class="detail" data-for="${l.id}"><div>
     <div class="meta"><span>${esc(l.aos)} · Chapter ${l.ch} · Lesson ${l.n}${l.when?' · '+esc(l.when):''}</span></div>
@@ -228,7 +236,7 @@ function wire(rerender){
   $('#main').querySelectorAll('.detail').forEach(dv=>{
     dv.querySelectorAll('[data-nest]').forEach(n=>n.ontoggle=()=>store.set('nest:'+n.dataset.nest,n.open));
     dv.querySelectorAll('.yt[data-yt]').forEach(bt=>bt.onclick=()=>{bt.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${bt.dataset.yt}?autoplay=1${bt.dataset.start?'&start='+bt.dataset.start:''}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;bt.onclick=null;bt.style.cursor='default';bt.classList.add('on')});});
-  typeset();
+  typeset(); fillDecks();
 }
 function aosFilter(L){const sel=$('#aosFilter'),f=sel.value;
   sel.innerHTML='<option value="">All areas of study</option>'+UP.aos.map(a=>`<option value="AoS ${a.n}" ${f=='AoS '+a.n?'selected':''}>AoS ${a.n}: ${esc(a.title)}</option>`).join('');

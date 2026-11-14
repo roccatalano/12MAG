@@ -43,17 +43,27 @@ ROLE={'do now':'Do Now','apk':'APK','exit task':'Exit','you try':'You try','work
 rows=[]
 def add(id_,ref,role,where,date,note=''):
     rows.append(dict(item=id_,via=ref,role=role,burnt='yes' if role in BURNS else 'no',where=where,date=date,note=note))
-# 1. lessons
+# 1. lessons: the role comes from each slide's own class (dn, apk, we, yt, ex, cfat) or its pill label
+CLS={'dn':'Do Now','apk':'APK','ex':'Exit','we':'Example','yt':'You try','cfat':'CFAT'}
+PILL=[('Do Now','Do Now'),('APK','APK'),('Exit','Exit'),('Worked example','Example'),('You try','You try'),('CFAT','CFAT'),('Homework','Homework'),('CAS','CAS')]
 for f in sorted(glob.glob(os.path.join(R,'lessons','*.html'))):
-    t=open(f,encoding='utf-8').read(); name=os.path.basename(f)[:-5]; last='?'
-    for m in re.finditer(r'class="src"[^>]*>(.*?)</',t,re.S):
-        pre=html.unescape(re.sub(r'<[^>]+>',' ',t[max(0,m.start()-3000):m.start()]))
-        rr=re.findall(r'(Do Now|APK|Exit task|You try|Worked example|Check-in|Homework|skills check)',pre,re.I)
-        if rr: last=ROLE[rr[-1].lower()]
-        cite=html.unescape(re.sub(r'<[^>]+>','',m.group(1)))
-        for part in re.split(r'\s·\s(?=VCAA)',cite)[:1]:
-            r=ids_from_cite(cite)
-            if r: add(r[0],r[1],last,name.split('-')[0],'',name)
+    t=open(f,encoding='utf-8').read(); name=os.path.basename(f)[:-5]
+    for sec in re.findall(r'<section\b.*?</section>',t,re.S):
+        cls=(re.match(r'<section[^>]*class="([^"]*)"',sec) or [None,''])[1].split()
+        pill=html.unescape(re.sub(r'<[^>]+>','',(re.search(r'class="pill"[^>]*>(.*?)</div>',sec,re.S) or [None,''])[1])).strip()
+        role=next((CLS[c] for c in cls if c in CLS),None) or next((r for k,r in PILL if pill.startswith(k)),'Other')
+        for m in re.finditer(r'class="src"[^>]*>(.*?)</',sec,re.S):
+            cite=html.unescape(re.sub(r'<[^>]+>','',m.group(1)))
+            # one src can name two parts (e.g. "Q1b, Q1d"): split them
+            for c in ([re.sub(r'Q(\d+)([a-z]), Q\1([a-z])',lambda x:'Q'+x.group(1)+x.group(2),cite),re.sub(r'Q(\d+)([a-z]), Q\1([a-z])',lambda x:'Q'+x.group(1)+x.group(3),cite)] if re.search(r'Q\d+[a-z], Q\d+[a-z]',cite) else [cite]):
+                if 'skills checklist' in c:
+                    items=[];cur=None
+                    for sub,num in re.findall(r'(\d[A-Z])? ?#(\d+)',c.split('checklist',1)[1]):
+                        cur=sub or cur; items.append(f'{cur} #{num}')
+                    for it in items: add(f'Cambridge U1&2 skills checklist {it}','',role,name.split('-')[0],'',name)
+                    continue
+                r=ids_from_cite(c)
+                if r: add(r[0],r[1],role,name.split('-')[0],'',name)
 # 2. HANDOFF burnt table
 if len(sys.argv)>1:
     on=False
