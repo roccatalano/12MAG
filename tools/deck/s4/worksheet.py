@@ -187,8 +187,10 @@ P.append(box('Coursework · Cambridge exercise 1G','<div class="hwg">'
   '<div><div class="hwh">Revision book</div><div class="hwq">1G section</div><div class="tick"></div></div></div>'
   '<div class="sig"><div class="stamp">Teacher stamp</div><div class="lines"><div>Teacher signature <i></i> Date <i class="d"></i></div><div>Parent signature <i></i> Date <i class="d"></i></div></div></div>','Tick when done'))
 
-def page(sol):
-    return f'<!DOCTYPE html><html><head><meta charset="utf-8"><title>1G guided worksheet{" · solutions" if sol else ""}</title><style>{CSS}</style></head><body class="{"sol" if sol else ""}">'+'\n'.join(P)+'</body></html>'
+JS=''.join(f'<script>{open(f"{ROOT}/lessons/{n}").read()}</script>' for n in ('a4view.js','paged.polyfill.min.js'))  # inlined so the G: copy works on its own
+def page(sol,screen=True):
+    return f'<!DOCTYPE html><html><head><meta charset="utf-8"><title>1G guided worksheet{" · solutions" if sol else ""}</title><style>{CSS}</style>{JS if screen else ""}</head><body class="{"sol" if sol else ""}">'+'\n'.join(P)+'</body></html>'
 for sol,fn in ((0,'S4-worksheet.html'),(1,'S4-worksheet-solutions.html')):
     open(f'{ROOT}/lessons/{fn}','w').write(page(sol))
+    open(f'/tmp/{fn}','w').write(page(sol,False))   # plain copy that ws_pdf.py prints
 print('ok')

@@ -7,7 +7,7 @@ async def main():
         b=await p.chromium.launch(executable_path='/usr/bin/google-chrome',args=['--no-sandbox'])
         pg=await b.new_page()
         for n in ('S4-worksheet','S4-worksheet-solutions'):
-            await pg.goto(f'file://{ROOT}/lessons/{n}.html'); await pg.wait_for_timeout(500)
+            await pg.goto(f'file:///tmp/{n}.html'); await pg.wait_for_timeout(500)
             await pg.pdf(path=f'{ROOT}/lessons/{n}.pdf',format='A4',prefer_css_page_size=True,print_background=True)
         await b.close()
 asyncio.run(main())
