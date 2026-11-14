@@ -55,14 +55,16 @@ def _stat(stat):
     return f'<div class="stat">VCAA: <b>?%</b> {txt}</div>'
 def _frame(cls,pill,head,body,src,stat=None,cfu='qw',extra='',cmd=None):
     ct=f'<div class="cmdt"><b>{cmd[0].upper()}</b>{(" · "+cmd[2]) if len(cmd)>2 and cmd[2] else ""}</div>' if cmd else ''
-    return (f'<section class="slide T {cls}" data-cfu="{cfu}"><div class="hd"><div class="pill">{pill}</div><div class="tiles">{ct}{_stat(stat)}</div></div>'
-            f'<h2 class="tt">{head}</h2>{body}{extra}<div class="src">{src}</div></section>')
+    return (f'<section class="slide T {cls}" data-cfu="{cfu}"><div class="hd"><div class="pill">{pill}</div><div class="tiles">{ct}{_stat(stat)}{extra}</div></div>'
+            f'<h2 class="tt">{head}</h2>{body}<div class="src">{src}</div></section>')
 
-def qslide(kind,pill,head,given,steps,answer,src,stat=None,mc=None,key=None,dist=None,dis=None,made='',cfu=None,video=None,cmd=None):
+def qslide(kind,pill,head,given,steps,answer,src,stat=None,mc=None,key=None,dist=None,dis=None,made='',cfu=None,video=None,cmd=None,afig='',build=()):
     """kind: dn | apk | we | yt | ex.
     given: question html, or (text before, figure, text after) so the figure sits in a fixed middle zone. mc: list of option texts (A, B, …).
     steps: list of (label, html) or (label, html, attrs) — one reveal each, numbered.
-    made: something students construct (e.g. a boxplot) shown on the right under the steps.
+    made: a figure shown on the right under the steps (not the answer).
+    afig + build: when the figure IS the answer (e.g. a boxplot), it sits in the green answer card; build = [(text, attrs)] lines
+         revealed one per click inside the card (e.g. 'Box from Q1 to Q3', 'data-bx="#id|box"'). Hide the axis in the figure ('axis' in hide).
     answer: final answer html (bottom right, revealed last with the % badge).
     key/dist/dis: MC correct letter, % choosing each option, (letter, explanation) distractor — leave dis out when there is no real distractor.
     cmd: (command word, marks, what it needs) e.g. ('Explain',1,'a reason that refers to the data'). Highlighted yellow in the question;
@@ -93,23 +95,35 @@ def qslide(kind,pill,head,given,steps,answer,src,stat=None,mc=None,key=None,dist
         if dis: R+=f'<li class="frag dis"><div class="dlab">What’s the distractor?</div><div class="frag" data-dis="{dis[0]}"><span class="dl">{dis[0]}</span> {dis[1]}</div></li>'
         if dist: R+='<span class="frag" data-pct="1"></span>'
     else:
-        R+=f'<li class="frag ans"{sa}><span class="wn">✓</span><span class="sl">Answer</span>{answer}</li>'
+        bl=''.join(f'<div class="frag bl" {a}>{t}</div>' for t,a in build)
+        fig=f'<div class="afig">{afig}</div>' if afig else ''
+        R+=f'<li class="frag ans"{sa}><span class="wn">✓</span><span class="sl">Answer</span>{answer}{bl}{fig}</li>'
     R+='</ol></div>'
     cls=kind+(' mcslide' if mc else '')
     v=f'<button class="vid" data-src="" data-label="{video}">▶ Video</button>' if video else ''
     return _frame(cls,pill,head,f'<div class="qg">{L}{R}</div>',src,stat,cfu or ('mc' if mc else 'cold' if kind=='we' else 'qw'),v,cmd if cmd and cmd[0]!='Multiple choice' else None)
 
-def learn(pill,head,rule,pic,tip,src,frags=''):
-    """rule: html for the rule/definition box (top) · pic: picture/animation (middle) · tip: one watch-out (bottom).
-    frags: extra invisible step spans that drive the picture."""
-    body=f'<div class="lrn"><div class="key frag">{rule}</div><div class="pic">{pic}</div>{frags}<div class="tip frag">{tip}</div></div>'
+def kcard(name,body,rule=''):
+    """a key formula/definition card, same look as the Key definitions and formulas slide"""
+    return f'<div class="kf"><span class="kn">{name}</span><span class="kx">{body}</span>'+(f'<span class="kr">{rule}</span>' if rule else '')+'</div>'
+def learn(pill,head,rule,pic,tip,src,frags='',cards=()):
+    """rule: html for the rule box (top left) · cards: related key formula/definition cards (top right, from kcard) ·
+    pic: picture/animation (middle) · tip: one watch-out (bottom). frags: invisible step spans that drive the picture."""
+    kc=f'<div class="kcs frag">{"".join(cards)}</div>' if cards else ''
+    body=f'<div class="lrn"><div class="ltop"><div class="key frag">{rule}</div>{kc}</div><div class="pic">{pic}</div>{frags}<div class="tip frag">{tip}</div></div>'
     return _frame('learn',pill,head,body,src,cfu='disc')
 
-def cas(pill,head,task,ti,cp,answer,src):
-    """task: question + data (left). ti/cp: lists of steps for TI-Nspire and ClassPad (right). answer: what to read off."""
+def yt(title,vid,start=0):
+    """an embedded YouTube video card"""
+    st=f'?start={start}' if start else ''
+    return f'<div class="ytc"><div class="ytf"><iframe src="https://www.youtube-nocookie.com/embed/{vid}{st}" title="{title}" allow="encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="ytt">{title}</div></div>'
+def cas(pill,head,task,ti,cp,answer,src,videos=()):
+    """task: question + data (left). ti/cp: TI-Nspire and ClassPad steps (two cards, right). answer: what to read off (green card).
+    videos: yt(...) cards shown small under the step cards."""
     ol=lambda xs:'<ol>'+''.join(f'<li>{x}</li>' for x in xs)+'</ol>'
+    vc=f'<div class="ytrow">{"".join(videos)}</div>' if videos else ''
     R=(f'<div class="R"><div class="cas2"><div class="key frag"><h4>TI-Nspire</h4>{ol(ti)}</div>'
-       f'<div class="key frag"><h4>ClassPad</h4>{ol(cp)}</div></div><div class="end"><div class="ansbox frag"><div class="lab">Read off</div><p>{answer}</p></div></div></div>')
+       f'<div class="key frag"><h4>ClassPad</h4>{ol(cp)}</div></div>{vc}<ol class="wk" style="margin-top:12px"><li class="frag ans"><span class="wn">✓</span><span class="sl">Read off</span>{answer}</li></ol></div>')
     return _frame('kcas',pill,head,f'<div class="qg"><div class="L"><div class="q">{task}</div></div>{R}</div>',src,cfu='disc')
 
 def title(lesson,topic,sub,code,flow=('Do Now','APK','Learn','Worked examples','You try','Exit tasks')):
@@ -137,22 +151,28 @@ def keys(defs,forms,src):
 def scgrid(sc):
     h=(len(sc)+1)//2
     return '<div class="lisc" style="grid-template-columns:1fr 1fr"><ul>'+''.join(f'<li>{x}</li>' for x in sc[:h])+'</ul><ul>'+''.join(f'<li>{x}</li>' for x in sc[h:])+'</ul></div>'
-def checkin(sc): return _frame('','Check-in','How did you go?',scgrid(sc)+'<p class="muted" style="font-size:24px;margin-top:22px">Thumbs up, sideways or down for each one, then rate it on your worksheet: ✓ got it · ~ nearly · ✗ not yet</p>','',cfu='tf')
-def coursework(sets,revision):
-    """sets: list of (title, [(skill, questions)])"""
-    k=''.join(f'<div class="key hw"><h4>{t}</h4><table>'+''.join(f'<tr><td>{a}</td><td>{b}</td></tr>' for a,b in rows)+'</table></div>' for t,rows in sets)
-    body=f'<div class="row" style="gap:24px">{k}</div><div class="key hw" style="margin-top:18px"><h4>Revision book</h4><p style="font-size:26px">{revision}</p></div>'
-    return _frame('','Coursework','Coursework',body,'',cfu='')
+def checkin(sc):
+    """one card, success criteria with tick boxes down the page (same look as Today's lesson)"""
+    body=('<div class="card3 ci"><h3>Success criteria</h3><ul class="tick">'+''.join(f'<li>{x}</li>' for x in sc)+'</ul></div>'
+          '<p class="muted" style="font-size:22px;margin-top:14px">Thumbs up, sideways or down for each one, then tick it on your worksheet: ✓ got it · ~ nearly · ✗ not yet</p>')
+    return _frame('','Check-in','How did you go?',body,'',cfu='tf')
+def coursework(subs):
+    """one card per subchapter: (subchapter title, questions line, [notes])"""
+    k=''.join(f'<div class="card3 cw"><h3>{t}</h3><p class="cwq">{q}</p>'+''.join(f'<p class="cwn">{n}</p>' for n in (x[0] if x else []))+'</div>' for t,q,*x in subs)
+    return _frame('','Coursework','Coursework',f'<div class="cwgrid">{k}</div>','',cfu='')
+def videos(items=(),blank=8):
+    """last slide of every deck: 'Videos that might help'. items: yt(...) cards; the rest are blank cards to fill later."""
+    cards=''.join(items)+''.join('<div class="ytc blank"><div class="ytf"></div><div class="ytt">Video to add</div></div>' for _ in range(max(0,blank-len(items))))
+    return _frame('','Videos','Videos that might help',f'<div class="ytgrid">{cards}</div>','',cfu='')
 
-def assemble(S,doc_title,out,base=f'{ROOT}/lessons/S4-slides.html'):
-    """Wrap slides in the deck engine (CSS, charts, reveal engine) taken from the current base deck."""
+def assemble(S,doc_title,out,base=f'{ROOT}/tools/deck/engine.html'):
+    """Wrap slides in the slide engine (tools/deck/engine.html: CSS, charts, reveal engine) plus the template CSS/JS."""
     h=open(base,encoding='utf-8').read()
-    i=h.find('</style>'); j=h.find('<section'); k=h.rfind('</section>')+len('</section>')
-    head=re.sub(r'<title>.*?</title>',f'<title>{doc_title}</title>',h[:i])
+    i=h.find('</style>'); head,tail=h.split('<!--SLIDES-->')
+    head=re.sub(r'<title>.*?</title>',f'<title>{doc_title}</title>',head)
     css=open(f'{HERE}/tpl.css',encoding='utf-8').read()
-    tail=h[k:]
+    head=head[:i]+css+head[i:]
     for x,y in [('s4apply(s,f);','s4apply(s,f);tplapply(s,f);'),('s4reset(s);','s4reset(s);tplreset(s);')]:
         assert tail.count(x)==1,x; tail=tail.replace(x,y)
     tail=tail.replace('/* ---------- reveal engine ---------- */',open(f'{HERE}/tpl.js',encoding='utf-8').read()+'\n/* ---------- reveal engine ---------- */',1)
-    doc=head+css+h[i:j]+'\n'.join(S)+tail
-    open(out,'w',encoding='utf-8').write(doc); return len(S)
+    open(out,'w',encoding='utf-8').write(head+'\n'.join(S)+tail); return len(S)

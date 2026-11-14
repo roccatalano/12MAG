@@ -103,3 +103,49 @@
 .T .kd .kpic svg{max-height:96px}
 .T .kf{padding:7px 16px;margin-bottom:8px}
 .T .kf .kx{font-size:24px}
+
+/* round 4 */
+.T .tiles .vid{position:static;margin:0}
+.T .R ol.wk li.ans .bl{font-size:20px;margin-top:4px;padding-left:4px;color:#1f3d33}
+.T .R ol.wk li.ans .bl:before{content:'▸ ';color:#1f9e74}
+.T .R ol.wk li.ans .afig{background:#fff;border-radius:10px;margin-top:8px;padding:4px 8px}
+.T .R ol.wk li.ans .afig svg{max-height:210px}
+.T .lrn .ltop{display:flex;gap:16px;align-items:stretch}
+.T .lrn .ltop>.key{flex:1.3}
+.T .lrn .kcs{flex:1;display:flex;flex-direction:column;gap:8px}
+.T .lrn .kcs .kf{margin:0}
+.T .ytrow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+.T .ytc{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:6px;display:flex;flex-direction:column;gap:4px}
+.T .ytf{position:relative;width:100%;aspect-ratio:16/9;background:#eef0f4;border-radius:8px;overflow:hidden}
+.T .ytf iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.T .ytt{font-size:14px;line-height:1.25;color:var(--ink)}
+.T .ytc.blank .ytf{border:2px dashed #c9ced8;background:#f7f8fb}
+.T .ytc.blank .ytt{color:var(--muted)}
+.T .ytgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.T .ytgrid .ytt{font-size:17px}
+.T .card3.ci{max-width:900px}
+.T .card3.ci ul.tick li{font-size:24px;padding:10px 0 10px 40px}
+.T .card3.ci ul.tick li:before{top:14px;width:22px;height:22px}
+.T .cwgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.T .cw .cwq{font-size:26px;font-weight:700;margin:4px 0 8px}
+.T .cw .cwn{font-size:19px;line-height:1.4;color:#444}
+.T .card3 ul.tick{list-style:none;padding:0;margin:0}
+.T .c5 b{color:#1f4fb0}
+
+.T .card3 h3{font:800 16px Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.T .lrn .pic{flex-direction:column;gap:6px}
+.T .lrn .pic:has(.mini4){background:none;border:0;padding:0}
+.T .lrn .mini4{width:100%;gap:10px}
+.T .lrn .mini4 .key{padding:6px 14px;margin:0}
+.T .lrn .mini4 .key h4{font-size:14px;margin:0}
+.T .lrn .mini4 p{font-size:16px;line-height:1.3;margin:0}
+.T .lrn .mini4 svg{max-height:70px}
+.T .cas2 ol li{font-size:17px;line-height:1.35}
+.T .cas2 .key h4{font-size:14px}
+.T .lrn .kcs .kf{padding:5px 14px;gap:1px}
+.T .lrn .kcs .kf .kx{font-size:20px}
+.T .lrn .kcs .kf .kr{font-size:16px}
+.T .lrn .pic>.chart{flex:1 1 0;min-height:0;width:100%}
+.T .lrn .pic>.chart svg{height:100%;max-height:none}
+.T .lrn .pic{overflow:hidden}
+.T .lrn .pic .chart{display:flex;justify-content:center}

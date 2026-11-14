@@ -33,6 +33,16 @@ These replace all older 12MAG rules (old Planning\CLAUDE.md, project docs).
 11. **% correct** only from examiner reports (past-design reports sit with the past papers); if a report is missing, say which one and ask Rocco.
 12. **Check every slide visually** (all steps shown + mid-reveal) before handing over. Finished resources go in `lessons/` here and flat into `01 Lesson materials` on G:.
 
+## Slide templates (Rocco, 14 Nov) — every deck is built from `tools/deck/tpl/tpl.py`
+Build a lesson with a `tools/deck/<S#>/build.py` that only fills content into the templates (see `tools/deck/s4/build.py`); the engine is `tools/deck/engine.html` (re-make with `make_engine.py`). Rules:
+- **Order:** title (formal topic) → Today's lesson (3 white cards: learning intentions · success criteria with tick boxes · lesson sequence) → Key definitions (with small pictures) and Key formulas (fences carry "x < LF → outlier") → Do Now ×4 → APK → Learn / WE / You try / CAS → exits → check-in (one tick-box card) → coursework (one card per subchapter) → **Videos that might help** (always last; blank cards to fill).
+- **Question slides:** question on the left (verbatim; command word highlighted yellow), blue line, working on the right as numbered cards revealed one per click, ending in a **green answer card** (a concluding statement). Header tiles top right: command word tile ("FIND · …"), VCAA % tile, video button.
+- **Model formulas:** formula → substitute (values flip in) → result, using the Key formulas names. Data sets: use CAS one-variable stats, don't order by hand. Outliers: IQR → fences → "56 > 55 = UF → outlier" statements; draw the fences on the boxplot.
+- **Annotate the question** at the step that needs it (e.g. the 20.5th line on a dot plot, highlighted cells, marked leaves). Axes appear only when their step comes.
+- If the figure is the answer (a boxplot to construct), it is built inside the green answer card.
+- **MC:** answer card → next click "What's the distractor?" → next click the option + why. No distractor card unless there is a real one.
+- **Learn:** rule card + the related key formula/definition cards on top, picture, one tip. **CAS:** TI and ClassPad step cards, then small embedded YouTube cards, then the read-off card.
+
 ## Source files (G: drive)
 Root: `G:\Shared drives\1. EKC CURRICULUM\1. KLA Folders\MATHEMATICS\VCE Maths\General Maths U3 & 4\12MAG Course Planner\` (the old `12MAG 2027` folder is archived — don't use it).
 - `00 Admin\` Study Design, curriculum grid, Cambridge sample planner.
