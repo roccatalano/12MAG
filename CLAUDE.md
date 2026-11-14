@@ -2,6 +2,8 @@
 
 Owner: Rocco (teacher). He is new to Claude Code and git: explain in plain words, ask before anything destructive, and never use jargon without a one-line explanation.
 
+**New chat? Read `docs/HANDOVER.md` next** (latest state, decisions, open items).
+
 ## What this repo is
 The standalone **Year 12 General Maths (12MAG) course planner** (GitHub Pages: roccatalano.github.io/12mag/). Moved here 14 Nov 2026 from `roccatalano/teaching-dashboard-2027` (which still shows 12MAG on Rocco's personal dashboard for now — don't change that repo unless asked).
 - `PLANNER.md` — the planner spec. **Built 14 Nov:** `planner/index.html` (Course plan tab + one Year plan tab per year; same card/nested-section design as Rocco's dashboard, whose CSS and section code it copies; label the four groups AoS 1–4, never 'Unit'), data in `planner/unit-plan.json` (the single source of truth for content: edit it directly) and `planner/years/<year>.json` (+ `years/index.json` listing the years). 2027 is a blank tab until Rocco sends the term-dates file. The site root redirects to `planner/`.
@@ -20,7 +22,7 @@ The standalone **Year 12 General Maths (12MAG) course planner** (GitHub Pages: r
 These replace all older 12MAG rules (old Planning\CLAUDE.md, project docs).
 1. **Never write questions.** Copy verbatim and cite the source. Adapt only when unavoidable and label it "adapted".
 2. **Every lesson gets:** guided slides, guided worksheet, bound reference entry. (Lesson handouts and log-book labels are discontinued.)
-3. **Lesson shape:** CFAT (if any) → Do Now → APK → Learn + Example/You try pairs → CAS → exit tasks → check-in → homework.
+3. **Lesson shape:** CFAT (if any) → Do Now → APK → Learn + Example/You try pairs → CAS → exit tasks → check-in → coursework.
 4. **Do Now = retrieval** ("last lesson, last week, last term"): always 2 × Exam 1 + 2 × Exam 2 from CURRENT-design VCAA (2023–26). Covers the current AoS and earlier AoS; the earlier-AoS share grows through the year.
 5. **APK = priming, not retrieval:** prerequisite content students should already know. Sources: Cambridge U1&2 skills checklist + the VCAA exam questions at the back of Edrolo U1&2 subchapters. If an APK item is also a candidate exit question, use it as the APK.
 6. **Learn notes:** own words, condensed, cite Cambridge. **Examples** = Cambridge Examples. **You try** = mapped Edrolo worked example only (no match → no You try).
