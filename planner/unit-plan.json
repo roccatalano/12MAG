@@ -158,7 +158,7 @@
          {
           "kind": "Guided worksheet",
           "desc": "Student companion to the slides, in the same order, with space to answer.",
-          "status": "draft",
+          "status": "ready",
           "copies": [
            {
             "label": "Student copy",
