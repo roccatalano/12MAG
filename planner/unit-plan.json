@@ -7332,15 +7332,166 @@
        "title": "Sequences and recurrence relations (after SAC 1 Part 3)",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 7A",
+           "items": [
+            {
+             "skill": "Generating a sequence recursively",
+             "q": "Q1–6"
+            },
+            {
+             "skill": "Generating sequences using recurrence relations",
+             "q": "Q7–8"
+            },
+            {
+             "skill": "Exploring sequences with a calculator",
+             "q": "Q9–10"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q11–13"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 7A section"
           }
          ]
-        }
+        },
+        "learningObjectives": [
+         {
+          "sub": "7A",
+          "items": [
+           "To be able to generate a sequence of terms recursively.",
+           "To be able to generate a sequence of numbers from a worded description using a calculator.",
+           "To be able to generate a sequence from a recurrence relation.",
+           "To be able to generate a sequence of numbers from a recurrence relation using a calculator.",
+           "To be able to number and name terms in a sequence."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "7A",
+          "items": [
+           "I can generate a sequence of terms recursively.",
+           "I can generate a sequence of numbers with a calculator.",
+           "I can generate a sequence from a recurrence relation.",
+           "I can use a calculator to generate sequences from recurrence relations.",
+           "I can name terms in a sequence."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "use of a first-order linear recurrence relation of the form u₀ = initial value, uₙ₊₁ = Ruₙ + d, where R and d are constants to generate the terms of a sequence"
+        ],
+        "keyVocab": [
+         "Sequence: a list of numbers in order (terms)",
+         "Recurrence relation: a starting value + a rule that gives the next term from the current term",
+         "V₀ is the starting value (term 0); Vₙ₊₁ is the term after Vₙ"
+        ],
+        "weDo": [
+         {
+          "n": 1,
+          "sub": "7A",
+          "title": "Generating a sequence of terms recursively (1)",
+          "youTry": "Written (modelled on Cambridge Ex 1) · YT-7A-1",
+          "video": "Cambridge GO · 7A Resources"
+         },
+         {
+          "n": 2,
+          "sub": "7A",
+          "title": "Generating a sequence of terms recursively (2)",
+          "youTry": "Written (modelled on Cambridge Ex 2) · YT-7A-2",
+          "video": "Cambridge GO · 7A Resources"
+         },
+         {
+          "n": 3,
+          "sub": "7A",
+          "title": "Generating a sequence of numbers with a calculator",
+          "youTry": "Edrolo 5A WE5a",
+          "video": "Cambridge GO · 7A Resources"
+         },
+         {
+          "n": 4,
+          "sub": "7A",
+          "title": "Generating a sequence from a recurrence relation",
+          "youTry": "Edrolo 5A WE4",
+          "video": "Cambridge GO · 7A Resources"
+         },
+         {
+          "n": 5,
+          "sub": "7A",
+          "title": "Using a calculator to generate sequences from recurrence relations",
+          "youTry": "Edrolo 5A WE5b–c",
+          "video": "Cambridge GO · 7A Resources"
+         },
+         {
+          "n": 6,
+          "sub": "7A",
+          "title": "Naming terms in a sequence",
+          "youTry": "Edrolo U1&2 3B WE1",
+          "video": "Cambridge GO · 7A Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 3A checklist #2",
+          "text": "Determine a simple rule for a sequence of numbers"
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 3A Q12",
+          "text": "VCAA 2015 Exam 1 Q1 (Number patterns; no report %)"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 Exam 1 Q14",
+          "sec": "5A"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2024 Exam 1 Q3",
+          "sec": "1F"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2024 Exam 2 Q2ci",
+          "sec": "1G"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2023 Exam 2 Q4b",
+          "sec": "5D"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 5A Q17",
+          "src": "VCAA 2017 Exam 1 Q18"
+         },
+         {
+          "ref": "Edrolo U3&4 5A Q19",
+          "src": "VCAA 2021 Exam 1 Q17"
+         },
+         {
+          "ref": "Edrolo U3&4 5A Q20",
+          "src": "VCAA 2019 Exam 1 Q17"
+         }
+        ],
+        "cas": [
+         "recursion-sequence"
+        ],
+        "casYouTry": "Edrolo 5A WE5 (sequence on CAS)",
+        "note": "Edrolo 5A WE1–3 (recurrence relation ↔ words / sequence) are spare You trys for Exercise 7A Q7–8."
        }
       },
       {
@@ -7353,20 +7504,247 @@
        "title": "Linear and geometric growth and decay",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 7B",
-           "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "items": [
+            {
+             "skill": "Modelling linear growth and decay using recurrence relations",
+             "q": "Q1–2"
+            },
+            {
+             "skill": "Modelling and analysing simple interest with recurrence relations",
+             "q": "Q3–6"
+            },
+            {
+             "skill": "Modelling flat-rate depreciation with recurrence relations",
+             "q": "Q7–11"
+            },
+            {
+             "skill": "Modelling unit-cost depreciation with recurrence relations",
+             "q": "Q12–15"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q16–18"
+            }
+           ],
+           "note": ""
           },
           {
            "title": "Cambridge · Exercise 7D",
+           "items": [
+            {
+             "skill": "Graphing geometric sequences",
+             "q": "Q1"
+            },
+            {
+             "skill": "Modelling compound interest with recurrence relations",
+             "q": "Q2–5"
+            },
+            {
+             "skill": "Modelling reducing balance depreciation with recurrence relations",
+             "q": "Q6–10"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q11–14"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 7B, 7D sections"
           }
          ]
-        }
+        },
+        "learningObjectives": [
+         {
+          "sub": "7B",
+          "items": [
+           "To be able to graph the terms of a linear growth/decay sequence.",
+           "To be able to model simple interest loans and investments using recurrence relations.",
+           "To be able to use a recurrence relation to analyse a simple interest investment.",
+           "To be able to model and analyse flat rate depreciation using a recurrence relation.",
+           "To be able to model and analyse unit cost depreciation using a recurrence relation."
+          ]
+         },
+         {
+          "sub": "7D",
+          "items": [
+           "To be able to graph the terms of a geometric sequence.",
+           "To be able to model compound interest with a recurrence relation.",
+           "To be able to model reducing balance depreciation with recurrence relations.",
+           "To be able to use reducing balance depreciation with recurrence relations."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "7B",
+          "items": [
+           "I can graph the terms of a linear growth/decay sequence.",
+           "I can model simple interest loans and investments with a recurrence relation.",
+           "I can use a recurrence relation to analyse a simple interest investment.",
+           "I can model flat rate depreciation using a recurrence relation.",
+           "I can use a recurrence relation to analyse flat rate depreciation.",
+           "I can model unit cost depreciation with a recurrence relation."
+          ]
+         },
+         {
+          "sub": "7D",
+          "items": [
+           "I can graph the terms in a geometric sequence.",
+           "I can model compound interest with a recurrence relation.",
+           "I can model reducing balance depreciation with recurrence relations.",
+           "I can use reducing balance depreciation with recurrence relations."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "use of a recurrence relation to model and compare (numerically and graphically) flat rate, unit cost and reducing balance depreciation of the value of an asset with time, including the use of a recurrence relation to determine the depreciating value of an asset after n depreciation periods for the initial sequence",
+         "the concepts of simple and compound interest",
+         "use of a recurrence relation to model and analyse (numerically and graphically) a compound interest investment or loan, including the use of a recurrence relation to determine the value of the compound interest loan or investment after n compounding period for an initial sequence from first principles"
+        ],
+        "keyVocab": [
+         "Linear growth/decay: add or subtract the same amount D each step (Vₙ₊₁ = Vₙ ± D): points lie on a straight line",
+         "Simple interest: D = (r/100) × V₀ added each year; flat rate depreciation: D = (r/100) × V₀ subtracted each year",
+         "Unit cost depreciation: subtract the cost per unit of use (per km, per hour, per use)",
+         "Geometric growth/decay: multiply by R each step (Vₙ₊₁ = R × Vₙ): points lie on a curve",
+         "Compound interest R = 1 + r/100; reducing balance depreciation R = 1 − r/100"
+        ],
+        "weDo": [
+         {
+          "n": 7,
+          "sub": "7B",
+          "title": "Graphing the terms of linear growth/decay sequence",
+          "youTry": "Edrolo 5B WE3b",
+          "video": "Cambridge GO · 7B Resources"
+         },
+         {
+          "n": 8,
+          "sub": "7B",
+          "title": "Modelling simple interest investments with a recurrence relation",
+          "youTry": "Edrolo 5E WE1a",
+          "video": "Cambridge GO · 7B Resources"
+         },
+         {
+          "n": 9,
+          "sub": "7B",
+          "title": "Using a recurrence relation to analyse a simple interest investment",
+          "youTry": "Edrolo 5E WE1b–c",
+          "video": "Cambridge GO · 7B Resources"
+         },
+         {
+          "n": 10,
+          "sub": "7B",
+          "title": "Modelling flat rate depreciation with a recurrence relation",
+          "youTry": "Edrolo 5B WE1",
+          "video": "Cambridge GO · 7B Resources"
+         },
+         {
+          "n": 11,
+          "sub": "7B",
+          "title": "Using a recurrence relation to analyse flat rate depreciation",
+          "youTry": "Edrolo 5B WE3a",
+          "video": "Cambridge GO · 7B Resources"
+         },
+         {
+          "n": 12,
+          "sub": "7B",
+          "title": "Modelling unit cost depreciation with a recurrence relation",
+          "youTry": "Edrolo 5B WE2",
+          "video": "Cambridge GO · 7B Resources"
+         },
+         {
+          "n": 19,
+          "sub": "7D",
+          "title": "Graphing the terms in a geometric sequence",
+          "youTry": "Edrolo U1&2 3D WE2",
+          "video": "Cambridge GO · 7D Resources"
+         },
+         {
+          "n": 20,
+          "sub": "7D",
+          "title": "Modelling compound interest with a recurrence relation",
+          "youTry": "Edrolo U1&2 3E WE1",
+          "video": "Cambridge GO · 7D Resources"
+         },
+         {
+          "n": 21,
+          "sub": "7D",
+          "title": "Modelling reducing balance depreciation with recurrence relations",
+          "youTry": "Edrolo 5C WE1",
+          "video": "Cambridge GO · 7D Resources"
+         },
+         {
+          "n": 22,
+          "sub": "7D",
+          "title": "Using reducing balance depreciation with recurrence relations",
+          "youTry": "Edrolo 5C WE2a",
+          "video": "Cambridge GO · 7D Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 1A checklist #5",
+          "text": "Find a percentage of a quantity"
+         },
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 1A checklist #4",
+          "text": "Convert percentages to decimals"
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 3D Q14",
+          "text": "VCAA 2016 Exam 2 Q5a"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 NHT Exam 1 Q17",
+          "sec": "7A"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 Exam 1 Q9",
+          "sec": "3A"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2025 Exam 2 Q2b",
+          "sec": "1G"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2023 Exam 2 Q3e",
+          "sec": "3B"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 5B Q14",
+          "src": "VCAA 2019 Exam 1 Q19"
+         },
+         {
+          "ref": "Edrolo U3&4 5B Q15",
+          "src": "VCAA 2020 Exam 2 Q7b"
+         },
+         {
+          "ref": "Edrolo U3&4 5C Q13",
+          "src": "VCAA 2019 Exam 2 Q7a"
+         }
+        ],
+        "cas": [
+         "recursion-sequence"
+        ],
+        "note": "Big lesson (10 Examples): split it into 7B and 7D on the planner if it runs over. Edrolo 5B WE4 (unit cost: uses until a value) is a spare You try for Example 12; Edrolo U1&2 3C WE3 (flat rate fridge) a spare for Example 10."
        }
       },
       {
@@ -7379,20 +7757,257 @@
        "title": "Explicit rules for linear and geometric growth and decay",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 7C",
-           "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "items": [
+            {
+             "skill": "Writing an explicit rule from a linear recurrence relation",
+             "q": "Q1–2"
+            },
+            {
+             "skill": "Using a rule for simple interest loans and investments",
+             "q": "Q3–5"
+            },
+            {
+             "skill": "Using a rule for flat rate depreciation of assets",
+             "q": "Q6–9"
+            },
+            {
+             "skill": "Using a rule for unit cost depreciation of assets",
+             "q": "Q10–12"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q13–14"
+            }
+           ],
+           "note": ""
           },
           {
            "title": "Cambridge · Exercise 7E",
+           "items": [
+            {
+             "skill": "Writing explicit rules for geometric recurrence relations",
+             "q": "Q1–2"
+            },
+            {
+             "skill": "Using a rule for compound interest loans and investments",
+             "q": "Q3–5"
+            },
+            {
+             "skill": "Using a rule for reducing balance depreciation",
+             "q": "Q6–7"
+            },
+            {
+             "skill": "Using a CAS calculator to solve geometric growth and decay problems",
+             "q": "Q8–12"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q13–14"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 7C, 7E sections"
           }
          ]
-        }
+        },
+        "learningObjectives": [
+         {
+          "sub": "7C",
+          "items": [
+           "To be able to convert a recurrence relation to an explicit rule.",
+           "To be able to model a simple interest investment using an explicit rule.",
+           "To be able to use a rule to determine the value of a simple interest loan or investment.",
+           "To be able to model flat rate depreciation of an asset using an explicit rule.",
+           "To be able to use a rule for the flat rate depreciation of an asset.",
+           "To be able to use an explicit rule for unit cost depreciation."
+          ]
+         },
+         {
+          "sub": "7E",
+          "items": [
+           "To be able to write explicit rules for geometric growth and decay.",
+           "To be able to use an explicit rule to find the value of an investment after n years.",
+           "To be able to calculate the value and total depreciation of an asset after a period of reducing balance depreciation.",
+           "To be able to use a calculator to solve geometric growth and decay problems."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "7C",
+          "items": [
+           "I can convert a recurrence relation to an explicit rule.",
+           "I can model a simple interest investment using an explicit rule.",
+           "I can use a rule to determine the value of a simple interest investment.",
+           "I can model flat rate depreciation of an asset with an explicit rule.",
+           "I can use a rule for the flat rate depreciation of an asset.",
+           "I can use an explicit rule for unit cost depreciation."
+          ]
+         },
+         {
+          "sub": "7E",
+          "items": [
+           "I can write explicit rules for geometric growth and decay.",
+           "I can use a rule to find the value of an investment after n years.",
+           "I can calculate the value and total depreciation of an asset after a period of reducing balance depreciation.",
+           "I can use a calculator to solve geometric growth and decay problems."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "use of the rules for the future value of an asset after n depreciation periods for flat rate, unit cost and reducing balance depreciation and their application.",
+         "the future value of a compound interest investment or loan after n compounding periods and its use to solve practical problems."
+        ],
+        "keyVocab": [
+         "Linear rule: Vₙ = V₀ + n × D (growth) or Vₙ = V₀ − n × D (decay)",
+         "Geometric rule: Vₙ = Rⁿ × V₀",
+         "Interest earned = Vₙ − V₀; total depreciation = V₀ − Vₙ",
+         "Solve for n or r on CAS; round n UP to a whole number of periods"
+        ],
+        "weDo": [
+         {
+          "n": 13,
+          "sub": "7C",
+          "title": "Converting a recurrence relation to an explicit rule",
+          "youTry": "Edrolo U1&2 3F WE1",
+          "video": "Cambridge GO · 7C Resources"
+         },
+         {
+          "n": 14,
+          "sub": "7C",
+          "title": "Modelling simple interest investments",
+          "youTry": "Edrolo 5E WE2",
+          "video": "Cambridge GO · 7C Resources"
+         },
+         {
+          "n": 15,
+          "sub": "7C",
+          "title": "Using a rule to determine the value of a simple interest investment",
+          "youTry": "Edrolo U1&2 3F WE2",
+          "video": "Cambridge GO · 7C Resources"
+         },
+         {
+          "n": 16,
+          "sub": "7C",
+          "title": "Modelling flat rate depreciation of an asset using an explicit rule",
+          "youTry": "Edrolo 5D WE1a",
+          "video": "Cambridge GO · 7C Resources"
+         },
+         {
+          "n": 17,
+          "sub": "7C",
+          "title": "Using a rule for the flat rate depreciation of an asset",
+          "youTry": "Edrolo 5D WE1b",
+          "video": "Cambridge GO · 7C Resources"
+         },
+         {
+          "n": 18,
+          "sub": "7C",
+          "title": "Using an explicit rule for unit cost depreciation",
+          "youTry": "Edrolo 5D WE2",
+          "video": "Cambridge GO · 7C Resources"
+         },
+         {
+          "n": 23,
+          "sub": "7E",
+          "title": "Writing explicit rules for geometric growth and decay",
+          "youTry": "Edrolo U1&2 3F WE3",
+          "video": "Cambridge GO · 7E Resources"
+         },
+         {
+          "n": 24,
+          "sub": "7E",
+          "title": "Using a rule to find the value of an investment after n years",
+          "youTry": "Edrolo 5F WE2",
+          "video": "Cambridge GO · 7E Resources"
+         },
+         {
+          "n": 25,
+          "sub": "7E",
+          "title": "Calculating the value and total depreciation of an asset after a period of reducing balance depreciation",
+          "youTry": "Edrolo 5C WE2b–c",
+          "video": "Cambridge GO · 7E Resources"
+         },
+         {
+          "n": 26,
+          "sub": "7E",
+          "title": "Using a calculator to solve geometric growth and decay problems to find n",
+          "youTry": "Written (modelled on Cambridge Ex 26) · YT-7E-26",
+          "video": "Cambridge GO · 7E Resources"
+         },
+         {
+          "n": 27,
+          "sub": "7E",
+          "title": "Using a calculator to solve geometric growth and decay problems to find r",
+          "youTry": "Written (modelled on Cambridge Ex 27) · YT-7E-27",
+          "video": "Cambridge GO · 7E Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 3D checklist #10",
+          "text": "Find the nth term to solve problems involving arithmetic sequences"
+         },
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 3G checklist #21",
+          "text": "Find the nth term in a geometric sequence using a recurrence relation"
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 3F Q12",
+          "text": "VCAA 2018 Exam 2 Q4c"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2023 Exam 1 Q20",
+          "sec": "7B"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2024 Exam 1 Q19",
+          "sec": "7D"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2025 Exam 2 Q8ai",
+          "sec": "7B"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2024 NHT Exam 2 Q8c",
+          "sec": "7D"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 5D Q17",
+          "src": "VCAA 2020 Exam 1 Q29"
+         },
+         {
+          "ref": "Edrolo U3&4 5D Q18",
+          "src": "VCAA 2021 Exam 1 Q20"
+         },
+         {
+          "ref": "Edrolo U3&4 5E Q16",
+          "src": "VCAA 2012 Exam 1 Q2 (no report %)"
+         }
+        ],
+        "cas": [
+         "solve-n-r"
+        ],
+        "note": "Big lesson (11 Examples): split it into 7C and 7E on the planner if it runs over. Edrolo 5D WE3 (reducing balance rule) is a spare You try for Example 23/25."
        }
       },
       {
@@ -7404,15 +8019,163 @@
        "title": "Interest rates over different periods; effective interest rates",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 7F",
+           "items": [
+            {
+             "skill": "Interest rate conversions",
+             "q": "Q1–2"
+            },
+            {
+             "skill": "Recurrence relations with different compounding periods",
+             "q": "Q3–7"
+            },
+            {
+             "skill": "Comparing loans and investments with effective interest rates",
+             "q": "Q8–11"
+            },
+            {
+             "skill": "Calculating effective interest rates using the CAS",
+             "q": "Q12–13"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q14–17"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 7F section"
           }
          ]
-        }
+        },
+        "learningObjectives": [
+         {
+          "sub": "7F",
+          "items": [
+           "To be able to convert nominal (annual) interest rates to compounding period interest rates.",
+           "To be able to model loans with different compounding periods using recurrence relations.",
+           "To be able to model investments with different compounding periods using recurrence relations.",
+           "To be able to compare loans and investments using effective interest rates.",
+           "To be able to calculate effective interest rates using a CAS calculator."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "7F",
+          "items": [
+           "I can convert nominal (annual) interest rates to compounding period interest rates.",
+           "I can use recurrence relations to model loans with different compounding periods.",
+           "I can model an investment that compounds monthly using recurrence relations.",
+           "I can compare loans and investments using effective interest rates.",
+           "I can calculate effective interest rates using a CAS calculator."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "the difference between nominal and effective interest rates and the use of effective interest rates to compare investment returns and the cost of loans when interest is paid or charged, for example, daily, monthly, quarterly",
+         "use of a recurrence relation to model and analyse (numerically and graphically) a compound interest investment or loan, including the use of a recurrence relation to determine the value of the compound interest loan or investment after n compounding period for an initial sequence from first principles"
+        ],
+        "keyVocab": [
+         "Nominal rate: the stated annual rate; rate per period = nominal rate ÷ periods per year (12, 26, 52, 4)",
+         "Effective interest rate: the actual % increase over one year once compounding is included",
+         "Compare loans/investments by their effective rates (lower for a loan, higher for an investment)"
+        ],
+        "weDo": [
+         {
+          "n": 28,
+          "sub": "7F",
+          "title": "Converting nominal interest rates to compounding period interest rates",
+          "youTry": "Edrolo U1&2 3E WE3a",
+          "video": "Cambridge GO · 7F Resources"
+         },
+         {
+          "n": 29,
+          "sub": "7F",
+          "title": "Recurrence relations with different compounding periods",
+          "youTry": "Edrolo 5F WE1a",
+          "video": "Cambridge GO · 7F Resources"
+         },
+         {
+          "n": 30,
+          "sub": "7F",
+          "title": "Modelling an investment that compounds monthly using recurrence relations",
+          "youTry": "Edrolo 5F WE1b–c",
+          "video": "Cambridge GO · 7F Resources"
+         },
+         {
+          "n": 31,
+          "sub": "7F",
+          "title": "Comparing loans and investments with effective interest rates",
+          "youTry": "Edrolo 5G WE2",
+          "video": "Cambridge GO · 7F Resources"
+         },
+         {
+          "n": 32,
+          "sub": "7F",
+          "title": "Calculating effective interest rates using a CAS calculator",
+          "youTry": "Edrolo 5G WE1",
+          "video": "Cambridge GO · 7F Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 3H checklist #23",
+          "text": "Write a recurrence relation to model a loan that compounds with a different compounding period"
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 3F Q14",
+          "text": "VCAA 2020 Exam 1 Q26"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2023 Exam 1 Q18",
+          "sec": "7C"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 NHT Exam 1 Q21",
+          "sec": "7E"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2024 Exam 2 Q5a",
+          "sec": "7C"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2026 Exam 2 Q8c",
+          "sec": "7E"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 5F Q17",
+          "src": "VCAA 2020 Exam 1 Q24"
+         },
+         {
+          "ref": "Edrolo U3&4 5G Q11",
+          "src": "VCAA 2020 Exam 1 Q28"
+         },
+         {
+          "ref": "Edrolo U3&4 5F Q18",
+          "src": "VCAA 2017 Exam 2 Q6"
+         }
+        ],
+        "cas": [
+         "effective-rate"
+        ],
+        "casYouTry": "Edrolo 5G WE1 (effective rate on CAS)"
        }
       },
       {

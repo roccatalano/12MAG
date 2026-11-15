@@ -770,6 +770,77 @@
     ]
    },
    "checked": "Cambridge U3&4 5E + Edrolo 4E WE2a (Draft, check against 02 Sources\\CAS guides)"
+  },
+  {
+   "id": "recursion-sequence",
+   "skill": "Generating a sequence from a recurrence relation",
+   "subs": [
+    "7A",
+    "7B",
+    "7D"
+   ],
+   "ti": [
+    "Calculator page: type the starting value (e.g. 300) and press enter.",
+    "Type the rule using the previous answer, e.g. ×0.5 − 9 (the calculator shows ans·0.5−9), and press enter.",
+    "Keep pressing enter: each press gives the next term (V₁, V₂, V₃ …). Count the presses to name the term."
+   ],
+   "classpad": [
+    "Main application: type the starting value (e.g. 300) and press EXE.",
+    "Type the rule using ans, e.g. ans × 0.5 − 9, and press EXE.",
+    "Keep pressing EXE: each press gives the next term (V₁, V₂, V₃ …). Count the presses to name the term."
+   ],
+   "tip": "The starting value is V₀, so the first press of enter/EXE after typing the rule gives V₁.",
+   "videos": {
+    "ti": [],
+    "classpad": []
+   },
+   "checked": "Cambridge U3&4 7A Examples 3, 5 + Edrolo 5A WE5 (Draft, check against 02 Sources\\CAS guides)"
+  },
+  {
+   "id": "solve-n-r",
+   "skill": "Solving a geometric growth/decay rule for n or r",
+   "subs": [
+    "7E"
+   ],
+   "ti": [
+    "Calculator page: Menu › Algebra › Solve.",
+    "Enter the rule with the known values, e.g. solve(8000 = 1.06^n × 5000, n) or solve(15000 = (1 − r/100)^10 × 56000, r), and press enter.",
+    "n: round UP to the next whole period. r: keep the sensible solution (between 0 and 100) and round as asked."
+   ],
+   "classpad": [
+    "Main application: Action › Advanced › solve (or type solve( from the keyboard).",
+    "Enter the rule with the known values, e.g. solve(8000 = 1.06^n × 5000, n) or solve(15000 = (1 − r/100)^10 × 56000, r), and press EXE.",
+    "n: round UP to the next whole period. r: keep the sensible solution (between 0 and 100) and round as asked."
+   ],
+   "tip": "Write the rule Vₙ = Rⁿ × V₀ first, then substitute; there are often two solutions for r.",
+   "videos": {
+    "ti": [],
+    "classpad": []
+   },
+   "checked": "Cambridge U3&4 7E Examples 26, 27 (Draft, check against 02 Sources\\CAS guides)"
+  },
+  {
+   "id": "effective-rate",
+   "skill": "Effective interest rate",
+   "subs": [
+    "7F"
+   ],
+   "ti": [
+    "Calculator page: Menu › Finance › Interest Conversion › Effective Interest Rate (pastes eff( ).",
+    "Enter eff(nominal rate, compounding periods per year), e.g. eff(4.5, 12), and press enter.",
+    "Write the effective rate as a percentage, rounded as asked (e.g. 4.594%)."
+   ],
+   "classpad": [
+    "Main application: Interactive › Financial › Interest Conversion › convEff.",
+    "Enter the compounding periods per year (e.g. 12) and the nominal rate (e.g. 4.5); OK.",
+    "Write the effective rate as a percentage, rounded as asked (e.g. 4.594%)."
+   ],
+   "tip": "The effective rate is always higher than the nominal rate when interest compounds more than once a year.",
+   "videos": {
+    "ti": [],
+    "classpad": []
+   },
+   "checked": "Cambridge U3&4 7F Example 32 + Edrolo 5G WE1 (Draft, check against 02 Sources\\CAS guides)"
   }
  ]
 }

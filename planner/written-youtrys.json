@@ -90,6 +90,38 @@
    "label": "Written for 12MAG (Claude, modelled on Cambridge Example 6)",
    "text": "The time series plot below shows the number of coffees sold each day at a café for a fortnight, constructed from the data below. Comment on any outliers in the plot. Day 1–14; Coffees sold: 82 85 80 84 83 81 86 84 150 83 82 85 80 84",
    "answer": "The number of coffees sold is around 80–86 each day, except on day 9 when 150 coffees were sold. This value stands out from the rest of the data, so day 9 is an outlier (perhaps there was a special event nearby that day)."
+  },
+  {
+   "id": "YT-7A-1",
+   "pairs": "Cambridge U3&4 Example 1",
+   "sub": "7A",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 1)",
+   "text": "Write down the first five terms of the sequence with a starting value of 9 and the rule ‘add 7 to the previous term’.",
+   "answer": "The first five terms are 9, 16, 23, 30, 37."
+  },
+  {
+   "id": "YT-7A-2",
+   "pairs": "Cambridge U3&4 Example 2",
+   "sub": "7A",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 2)",
+   "text": "Write down the first five terms of the sequence with a starting value of 4 and the rule ‘triple the number and then subtract 5’.",
+   "answer": "The first five terms are 4, 7, 16, 43, 124."
+  },
+  {
+   "id": "YT-7E-26",
+   "pairs": "Cambridge U3&4 Example 26",
+   "sub": "7E",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 26)",
+   "text": "How many years will it take for an investment of $8000, paying compound interest at 5% per annum, to grow above $12 000? Write your answer correct to the nearest year.",
+   "answer": "12 000 = 1.05ⁿ × 8000 gives n = 8.3104. Rounding up (interest is paid at the end of the year)  the investment grows above $12 000 after 9 years. After 8 years the value is $11 819.64."
+  },
+  {
+   "id": "YT-7E-27",
+   "pairs": "Cambridge U3&4 Example 27",
+   "sub": "7E",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 27)",
+   "text": "A bakery purchased a new oven at a cost of $42 000. It has an estimated value of $9000 after 8 years of operation. If the value of the oven is depreciated using a reducing balance method, what is the annual rate of depreciation? Write your answer correct to one decimal place.",
+   "answer": "9000 = (1 − r/100)⁸ × 42 000 gives r = 17.5152 (the other solution, r > 100, is not sensible). The annual rate of depreciation is 17.5%."
   }
  ]
 }
