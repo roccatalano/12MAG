@@ -74,9 +74,9 @@ table.t .a {{ color:{RED}; visibility:hidden; }} .sol table.t .a {{ visibility:v
 .hwg > div {{ border-right:1px solid #000; padding:1.5mm; text-align:center; display:flex; flex-direction:column; align-items:center; gap:1mm; }} .hwg > div:last-child {{ border-right:none; }}
 .hwh {{ font-weight:bold; text-transform:uppercase; font-size:9pt; }}
 .sig {{ display:flex; gap:4mm; margin-top:2mm; }}
-.stamp {{ width:30mm; height:15mm; border:1.2px dashed #000; font-size:8pt; color:#555; display:flex; align-items:flex-end; justify-content:center; flex:none; }}
-.sig .ln {{ flex:1; display:flex; flex-direction:column; justify-content:space-around; font-size:9pt; }}
-.sig .ln div {{ display:flex; gap:2mm; align-items:flex-end; }} .sig .ln span {{ white-space:nowrap; }} .sig .ln i {{ flex:1; min-width:15mm; border-bottom:1px solid #000; height:6mm; }} .sig .ln i.d {{ flex:none; width:18mm; min-width:0; }}
+.stamp {{ width:32mm; height:20mm; border:1.2px dashed #000; font-size:8pt; color:#555; display:flex; align-items:flex-end; justify-content:center; flex:none; }}
+.sig .ln {{ flex:1; display:flex; flex-direction:column; justify-content:space-around; font-size:10pt; }}
+.sig .ln div {{ display:flex; gap:2mm; align-items:flex-end; }} .sig .ln span {{ white-space:nowrap; }} .sig .ln i {{ flex:1; min-width:15mm; border-bottom:1px solid #000; height:6mm; }} .sig .ln i.d {{ flex:none; width:30mm; min-width:0; }} .sig .ln div {{ gap:2mm; }}
 .lis {{ column-count:2; column-gap:6mm; margin:0; padding-left:4mm; font-size:8.8pt; line-height:1.2; }} .lis li {{ margin:0; }} .lis li {{ break-inside:avoid; }}
 """
 
@@ -128,11 +128,11 @@ def report(toks):
     return '<p class="tpl">' + ''.join(t if isinstance(t, str) else f'<span class="bx"><u>{t[1]}</u><i>{t[0]}</i></span>' for t in toks) + '</p>'
 def lis(L): return box('Learning intentions', '<ul class="lis">' + ''.join(f'<li>{x}</li>' for x in L) + '</ul>').replace('class="box"', 'class="box lisbox"', 1)
 def close(SC, cols, rev):
-    """Skills checklist, then coursework (stacked). cols: [(subchapter, questions)], e.g. [('1A', 'Q1–6')]; rev: revision booklet sections."""
+    """Skills checklist, then coursework (stacked). cols: [(subchapter, questions)], e.g. [('1A', 'Q1–6')]; rev: revision booklet sections, one cell each, e.g. ['1A', '1B']."""
     ck = box('Skills checklist', '<div class="scg" style="grid-template-columns:1fr 1fr">' + ''.join(f'<div class="sc"><div class="tick"></div><div><b>{i}.</b> {s}</div></div>' for i, s in enumerate(SC, 1)) + '</div>', 'Tick when you can')
     cell = lambda h, t: f'<div><div class="hwh">{h}</div><div>{t}</div><div class="tick"></div><div class="due">Due <i></i></div></div>'
-    cw = box('Coursework', f'<div class="hwg" style="grid-template-columns:repeat({len(cols)+1},1fr)">' + ''.join(cell(h, t) for h, t in cols) + cell('Revision booklet', rev) + '</div>'
-             '<div class="sig"><div class="stamp">Teacher stamp</div><div class="ln"><div><span>Student signature</span><i></i></div><div><span>Parent signature</span><i></i></div><div><span>Date</span><i></i></div></div></div>', 'Tick when done')
+    cw = box('Coursework', f'<div class="hwg" style="grid-template-columns:repeat({len(cols)+len(rev)},1fr)">' + ''.join(cell(h, t) for h, t in cols) + ''.join(cell('Revision booklet', f'{r} section') for r in rev) + '</div>'
+             '<div class="sig"><div class="stamp">Teacher stamp</div><div class="ln"><div><span>Student signature</span><i></i><span>Date</span><i class="d"></i></div><div><span>Parent signature</span><i></i><span>Date</span><i class="d"></i></div></div></div>', 'Tick when done')
     return ck + cw
 
 # ---------------------------------------------------------------- figures (static SVG)
