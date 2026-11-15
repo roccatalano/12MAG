@@ -119,7 +119,7 @@ _Notes for all AoS 2–4 runners (Rocco, 16 Nov):_
 11. `done 16 Nov 10:39 — Ch10 test + solutions (Mathspace Ch 7 topic assessment, Ch 10 items: MC Q1–8 + SA Q10–16, 19, 20, 17 Qs /27, verbatim, 5 pages each), HTML+PDF, Draft, on G: + Ch 10 test card; Q9, 17, 18 (transition) left for the Ch 11 test; 17 ledger rows` **Chapter 10 test** + solutions (model `tools/test/ch5/build.py`) from the Ch 10 (non-transition) questions of the Mathspace Ch 7 topic assessment (Matrices). Add to the gm12-ch10-test card; run `python3 tools/test/details.py`. If it can't be built from what's there, mark `needs Rocco`.
 
 ### Chapter 11: Transition matrices and Leslie matrices (lessons gm12-u4-11a, gm12-u4-11b, gm12-u4-11c, gm12-u4-11d, gm12-u4-11e; check gm12-ch11-test)
-12. `todo` **Plan Chapter 11**: lesson split, titles, learning intentions, success criteria, coursework (gm12-u4-11a, gm12-u4-11b, gm12-u4-11c, gm12-u4-11d, gm12-u4-11e; see notes above). Update the lesson ids/list below if you split or merge.
+12. `in progress 16 Nov 10:45` **Plan Chapter 11**: lesson split, titles, learning intentions, success criteria, coursework (gm12-u4-11a, gm12-u4-11b, gm12-u4-11c, gm12-u4-11d, gm12-u4-11e; see notes above). Update the lesson ids/list below if you split or merge.
 13. `todo` **Prefill the lesson cards** (gm12-u4-11a, gm12-u4-11b, gm12-u4-11c, gm12-u4-11d, gm12-u4-11e) in `planner/unit-plan.json` (see notes above).
 14. `todo` **CFATs for Chapter 11** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch11/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
 15. `todo` **CFAT follow-ups for Chapter 11** (Jacaranda exercises; see notes above).
