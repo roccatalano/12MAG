@@ -2,6 +2,8 @@
 
 **15 Nov 22:26 (Ch5 runner):** Chapter 5 test + solutions built (`tools/test/ch5/build.py`, Mathspace time series topic assessment, 20 Qs /47, Draft; on G: in 01 Lesson materials). **Chapter 5 queue is finished**; the 'Ch 5 runner' scheduled task is turned off.
 
+**15 Nov 22:58 (planner layout, Rocco):** Course plan = lessons stacked vertically + a 'Formative assessments' column per chapter (CFATs in lesson order, then the chapter test). CFAT details now live on the CFAT cards (removed from lesson cards). Chapter test cards have 'Test details' from `planner/tests.json`: re-run `python3 tools/test/details.py` after changing a test. Ch 1 test entry fixed to 'to make' (it pointed at the Ch 2 files).
+
 Read `CLAUDE.md` first (rules, item index, **slide template rules**), then this file. The full to-do list is `docs/TODO.md`.
 Repo: `roccatalano/12MAG` (GitHub Pages: roccatalano.github.io/12mag/ → `planner/`). Rocco's dashboard repo `roccatalano/teaching-dashboard-2027` is read-only unless he asks.
 Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through the desktop-app bridge (stage files to read; commit files to write; can't move/rename/delete).

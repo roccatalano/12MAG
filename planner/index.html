@@ -138,6 +138,7 @@ main{max-width:1200px;margin:0 auto;padding:16px 20px 80px}
 .card.fa .ms.draft{background:var(--review);color:var(--review-i)}.card.fa .ms.ready{background:var(--prac);color:var(--prac-i)}
 .cpl{display:flex;flex-direction:column;gap:3px;font-size:12px}.cpl a{color:#1d7266;text-decoration:none;border:1px solid #9fd3c9;border-radius:6px;padding:0 6px;margin-left:3px;font-weight:600}
 @media(max-width:760px){.chgrid{grid-template-columns:1fr}}
+.nest.n-test{border-color:#d9a3a3;background:#fdf5f5}.nest.n-test>summary{color:var(--sac-i)}.n-test .cfx th{color:var(--sac-i);border-color:#e8c4c4}.n-test .cfx td{border-color:#f1dede}
 </style>
 </head>
 <body>
@@ -214,7 +215,7 @@ function lessons(){const out=[];let n=0;
 function card(l,extra){return `<div class="card t-${l.type} ${l.shell?'shell':''} ${cfs(l).length?'has-cfat':''} ${openId==l.id?'open':''}" data-id="${l.id}">
   <div class="meta"><span>${typeof l.n=='number'?'L'+l.n+(l.section?' · ':''):''}${l.section?esc(l.section):''}</span><span class="tags">${cfs(l).length?`<span class="tag cfat">${cfs(l).length>1?cfs(l).length+' CFATs':'CFAT'}</span>`:''}<span class="tag">${l.shell?'To plan':TYPE[l.type]}</span></span></div>
   <div class="ttl">${esc(l.title)}</div>${extra||''}</div>`}
-const DECKS={},CAS={};let VIDS=[];
+const DECKS={},CAS={};let TESTS={};let VIDS=[];
 function deckOf(l){const m=(l.materials||[]).find(x=>x.kind=='Guided slides'&&x.file);return m?m.file:null}
 const SHAPES_ON=false; // Rocco, 15 Nov: lesson shapes cleared; fill them in last (set true to bring back the slide-read outline)
 function shapePane(l){
@@ -260,6 +261,10 @@ window.addEventListener('resize',fitRows);
 function aosFilter(L){const sel=$('#aosFilter'),f=sel.value;
   sel.innerHTML='<option value="">All areas of study</option>'+UP.aos.map(a=>`<option value="AoS ${a.n}" ${f=='AoS '+a.n?'selected':''}>AoS ${a.n}: ${esc(a.title)}</option>`).join('');
   return L.filter(l=>!f||l.aos==f)}
+function testDetails(t){const tb=(h,r)=>`<table class="cfx"><tr>${h.map(x=>`<th>${x}</th>`).join('')}</tr>${r.join('')}</table>`;
+  return `<div class="cfsum"><span class="tag cfat">/${t.total}</span> <span class="sub">MC ${t.mc} · Short answer ${t.sa}</span></div><div class="sub" style="margin:4px 0">${esc(t.about)}</div>
+  <h3>Marks by Mathspace lesson</h3>${tb(['Lesson','Marks','Qs'],t.byLesson.map(b=>`<tr><td><b>${esc(b.lesson)}</b></td><td class="n">${b.marks}</td><td>${esc(b.qs.join(', '))}</td></tr>`))}
+  <h3>Question breakdown</h3>${tb(['Q','Mk','Question','Lesson'],t.questions.map(q=>`<tr><td><b>${esc(q.q)}</b> <span class="sub">${q.type}</span></td><td class="n">${q.marks}</td><td>${esc(q.text)}${q.answer?` <span class="sub">(${q.answer})</span>`:''}</td><td>${esc(q.src.split('·').pop().trim())}</td></tr>`))}`}
 const isFA=m=>/^(CFAT|Chapter test)/i.test(m.kind);
 function links(x){return `${x.file?`<a class="mlink" href="${esc(x.file)}" target="_blank" rel="noopener">Open ↗</a>`:''}${x.pdf?` <a class="mlink pdf" href="${esc(x.pdf)}" download>PDF ⬇</a>`:''}`}
 function formatives(C){const seen=new Set(),out=[];
@@ -269,7 +274,7 @@ function formatives(C){const seen=new Set(),out=[];
   return out.length?out.map(({m,l})=>{const test=/^Chapter test/i.test(m.kind),c=cfs(l).find(x=>x.id==m.kind);
     return `<div class="card fa ${test?'t-check':'t-cfat'}"><div class="meta"><span>Set in L${l.n}${c&&c.covers?' · covers '+esc(c.covers.join(', ')):''}</span><span class="ms ${m.status}">${m.status=='ready'?'Ready':m.status=='draft'?'Draft':'To make'}</span></div>
     <div class="ttl"><b>${test?'Chapter '+l.ch+' test':esc(m.kind)}</b>${c&&c.title?' · '+esc(c.title):''}</div>
-    <div class="cpl">${m.copies?.length?m.copies.map(k=>`<span><span class="sub">${esc(k.label)}</span> ${k.file||k.pdf?links(k):'<span class="sub">to make</span>'}</span>`).join(''):links(m)}</div>${c?nest('cfat-'+c.id,'CFAT details',cfatDetails(c),null,'n-cfat'):''}</div>`}).join(''):'<div class="empty">None yet</div>'}
+    <div class="cpl">${m.copies?.length?m.copies.map(k=>`<span><span class="sub">${esc(k.label)}</span> ${k.file||k.pdf?links(k):'<span class="sub">to make</span>'}</span>`).join(''):links(m)}</div>${c?nest('cfat-'+c.id,'CFAT details',cfatDetails(c),null,'n-cfat'):test?(TESTS[l.ch]?nest('test-'+l.ch,'Test details',testDetails(TESTS[l.ch]),'/'+TESTS[l.ch].total,'n-test'):'<div class="empty" style="margin-top:6px">Test not built yet</div>'):''}</div>`}).join(''):'<div class="empty">None yet</div>'}
 /* ---------- Course plan ---------- */
 function renderCourse(){
   const all=lessons(),L=aosFilter(all);
@@ -351,6 +356,7 @@ $('#expand').onclick=()=>{expandAll=!expandAll;$('#expand').textContent=expandAl
 (async()=>{try{
   UP=await (await fetch('unit-plan.json',{cache:'no-store'})).json();
   try{(await (await fetch('cas-skills.json',{cache:'no-store'})).json()).skills.forEach(k=>CAS[k.id]=k)}catch(e){}
+  try{TESTS=await (await fetch('tests.json',{cache:'no-store'})).json()}catch(e){}
   try{VIDS=(await (await fetch('videos.json',{cache:'no-store'})).json()).videos}catch(e){}
   YEARS=await (await fetch('years/index.json',{cache:'no-store'})).json();
   for(const y of YEARS){try{YD[y]=await (await fetch(`years/${y}.json`,{cache:'no-store'})).json()}catch(e){YD[y]=null}}

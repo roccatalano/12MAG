@@ -2109,18 +2109,14 @@
          },
          {
           "kind": "Chapter test",
-          "desc": "Mathspace Ch 2 topic assessment (20 Qs, /41), verbatim.",
-          "status": "draft",
+          "desc": "Mathspace Ch 1 topic assessment: not built yet.",
+          "status": "todo",
           "copies": [
            {
-            "label": "Student copy",
-            "file": "lessons/Ch2 test.html",
-            "pdf": "lessons/Ch2 test.pdf"
+            "label": "Student copy"
            },
            {
-            "label": "Solutions",
-            "file": "lessons/Ch2 test solutions.html",
-            "pdf": "lessons/Ch2 test solutions.pdf"
+            "label": "Solutions"
            }
           ]
          }

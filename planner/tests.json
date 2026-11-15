@@ -1,0 +1,1073 @@
+{
+ "2": {
+  "chapter": 2,
+  "total": 41,
+  "mc": 8,
+  "sa": 12,
+  "about": "Source (rule 9: chapter tests = Mathspace topic assessments), copied verbatim:   Mathspace, General Maths 3&4, Chapter 2 - Investigate associations, 'Chapter 2 - Topic assessment.pdf'",
+  "byLesson": [
+   {
+    "lesson": "2.01",
+    "marks": 2,
+    "qs": [
+     "1",
+     "9"
+    ]
+   },
+   {
+    "lesson": "2.02",
+    "marks": 9,
+    "qs": [
+     "2",
+     "10",
+     "16a"
+    ]
+   },
+   {
+    "lesson": "2.03",
+    "marks": 5,
+    "qs": [
+     "3",
+     "11",
+     "20"
+    ]
+   },
+   {
+    "lesson": "2.04",
+    "marks": 4,
+    "qs": [
+     "4",
+     "15a"
+    ]
+   },
+   {
+    "lesson": "2.05",
+    "marks": 3,
+    "qs": [
+     "5",
+     "12"
+    ]
+   },
+   {
+    "lesson": "2.06",
+    "marks": 9,
+    "qs": [
+     "6",
+     "17a",
+     "18a"
+    ]
+   },
+   {
+    "lesson": "2.07",
+    "marks": 5,
+    "qs": [
+     "7",
+     "14a"
+    ]
+   },
+   {
+    "lesson": "2.08",
+    "marks": 4,
+    "qs": [
+     "8",
+     "13",
+     "19"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "q": "1",
+    "type": "MC",
+    "marks": 1,
+    "src": "2.01",
+    "text": "In a study investigating whether daily screen time affects sleep duration, which variable is the response…",
+    "answer": "C"
+   },
+   {
+    "q": "2",
+    "type": "MC",
+    "marks": 1,
+    "src": "2.02",
+    "text": "A segmented bar chart shows the proportion of students who prefer sport, music, or art, split by gender. The…",
+    "answer": "A"
+   },
+   {
+    "q": "3",
+    "type": "MC",
+    "marks": 1,
+    "src": "2.03",
+    "text": "A back-to-back stem plot is used to compare the heights (in cm) of players from two basketball teams. The…",
+    "answer": "D"
+   },
+   {
+    "q": "4",
+    "type": "MC",
+    "marks": 1,
+    "src": "2.04",
+    "text": "Parallel boxplots are used to compare the distribution of weekly wages (in AUD) for full-time and part-time…",
+    "answer": "A"
+   },
+   {
+    "q": "5",
+    "type": "MC",
+    "marks": 1,
+    "src": "2.05",
+    "text": "A scatterplot is drawn with \"number of hours studied\" on the horizontal axis and \"exam score\" on the vertical…",
+    "answer": "B"
+   },
+   {
+    "q": "6",
+    "type": "MC",
+    "marks": 1,
+    "src": "2.06",
+    "text": "A scatterplot shows the relationship between daily temperature (°C) and the number of visitors to a beach.…",
+    "answer": "D"
+   },
+   {
+    "q": "7",
+    "type": "MC",
+    "marks": 1,
+    "src": "2.07",
+    "text": "The Pearson's correlation coefficient between two variables is r = 0.6. What is the coefficient of…",
+    "answer": "A"
+   },
+   {
+    "q": "8",
+    "type": "MC",
+    "marks": 1,
+    "src": "2.08",
+    "text": "A study finds a strong positive correlation (r = 0.91) between the number of fire trucks sent to a fire and…",
+    "answer": "B"
+   },
+   {
+    "q": "9",
+    "type": "SA",
+    "marks": 1,
+    "src": "2.01",
+    "text": "A study investigates whether the number of hours of sleep a student gets affects their reaction time (in…"
+   },
+   {
+    "q": "10",
+    "type": "SA",
+    "marks": 2,
+    "src": "2.02",
+    "text": "A survey asked 150 Melbourne residents whether they preferred coffee or tea, and recorded their age group…"
+   },
+   {
+    "q": "11",
+    "type": "SA",
+    "marks": 2,
+    "src": "2.03",
+    "text": "The following data shows the number of push-ups completed by students in two fitness groups, Group A and…"
+   },
+   {
+    "q": "12",
+    "type": "SA",
+    "marks": 2,
+    "src": "2.05",
+    "text": "A scatterplot is drawn to investigate the relationship between the number of hours of rainfall per week and…"
+   },
+   {
+    "q": "13",
+    "type": "SA",
+    "marks": 1,
+    "src": "2.08",
+    "text": "Across Victorian towns, the number of cafés in a town is strongly positively associated with the number of…"
+   },
+   {
+    "q": "14a",
+    "type": "SA",
+    "marks": 1,
+    "src": "2.07",
+    "text": "Identify the explanatory variable."
+   },
+   {
+    "q": "14b",
+    "type": "SA",
+    "marks": 1,
+    "src": "2.07",
+    "text": "Describe the strength and direction of the linear association between the two variables."
+   },
+   {
+    "q": "14c",
+    "type": "SA",
+    "marks": 2,
+    "src": "2.07",
+    "text": "Write the coefficient of determination as a percentage, rounded to one decimal place, and interpret it in the…"
+   },
+   {
+    "q": "15a",
+    "type": "SA",
+    "marks": 1,
+    "src": "2.04",
+    "text": "Calculate the interquartile range (IQR) of the commute times for each group."
+   },
+   {
+    "q": "15b",
+    "type": "SA",
+    "marks": 2,
+    "src": "2.04",
+    "text": "Do the data support the claim that commute time is associated with the mode of transport? Justify your answer…"
+   },
+   {
+    "q": "16a",
+    "type": "SA",
+    "marks": 1,
+    "src": "2.02",
+    "text": "Identify the explanatory variable."
+   },
+   {
+    "q": "16b",
+    "type": "SA",
+    "marks": 1,
+    "src": "2.02",
+    "text": "Calculate the percentage of respondents aged 18 to 34 who prefer online news."
+   },
+   {
+    "q": "16c",
+    "type": "SA",
+    "marks": 1,
+    "src": "2.02",
+    "text": "Calculate the percentage of respondents aged 35 and over who prefer television news."
+   },
+   {
+    "q": "16d",
+    "type": "SA",
+    "marks": 2,
+    "src": "2.02",
+    "text": "Does the data support the view that preferred news source is associated with age group? Justify your answer…"
+   },
+   {
+    "q": "16e",
+    "type": "SA",
+    "marks": 1,
+    "src": "2.02",
+    "text": "Calculate the percentage of all respondents who prefer print news."
+   },
+   {
+    "q": "17a",
+    "type": "SA",
+    "marks": 1,
+    "src": "2.06",
+    "text": "Use technology to determine the value of Pearson's correlation coefficient, r, rounded to three decimal…"
+   },
+   {
+    "q": "17b",
+    "type": "SA",
+    "marks": 1,
+    "src": "2.06",
+    "text": "Describe the strength and direction of the linear association between training time and parkrun time."
+   },
+   {
+    "q": "17c",
+    "type": "SA",
+    "marks": 2,
+    "src": "2.06",
+    "text": "Use technology to find the mean and standard deviation of the parkrun times, rounded to two decimal places.…"
+   },
+   {
+    "q": "17d",
+    "type": "SA",
+    "marks": 2,
+    "src": "2.06",
+    "text": "A coach claims that these data prove that training more causes faster parkrun times. Comment on the coach's…"
+   },
+   {
+    "q": "18a",
+    "type": "SA",
+    "marks": 1,
+    "src": "2.06",
+    "text": "Describe the strength and direction of the linear association between these two variables."
+   },
+   {
+    "q": "18b",
+    "type": "SA",
+    "marks": 1,
+    "src": "2.06",
+    "text": "Calculate the coefficient of determination and interpret it in the context of this study."
+   },
+   {
+    "q": "19",
+    "type": "SA",
+    "marks": 2,
+    "src": "2.08",
+    "text": "A study finds that the number of swimming pools in a suburb is strongly positively correlated with the rate…"
+   },
+   {
+    "q": "20",
+    "type": "SA",
+    "marks": 2,
+    "src": "2.03",
+    "text": "The travel times to work, in minutes, of 11 workers who live in the inner suburbs of Melbourne and 11 workers…"
+   }
+  ]
+ },
+ "3": {
+  "chapter": 3,
+  "total": 28,
+  "mc": 5,
+  "sa": 9,
+  "about": "Source (rule 9), copied verbatim: Mathspace General Maths 3&4, Chapter 3 - Model linear associations, 'Chapter 3 - Topic assessment.pdf' + answer key (02 Sources\\Textbooks\\Mathspace\\Chapter 3 - Model linear associations). Kept 3.01-3.04 items: MC 1, 2, 5, 7, 8; SA 9-16, 20 (renumbered).",
+  "byLesson": [
+   {
+    "lesson": "3.01",
+    "marks": 5,
+    "qs": [
+     "1",
+     "3",
+     "7",
+     "10"
+    ]
+   },
+   {
+    "lesson": "3.03",
+    "marks": 7,
+    "qs": [
+     "2",
+     "5",
+     "8",
+     "12a"
+    ]
+   },
+   {
+    "lesson": "3.02",
+    "marks": 8,
+    "qs": [
+     "4",
+     "6",
+     "9",
+     "11a"
+    ]
+   },
+   {
+    "lesson": "3.04",
+    "marks": 8,
+    "qs": [
+     "13a",
+     "14"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "q": "1",
+    "type": "MC",
+    "marks": 1,
+    "src": "3.01",
+    "text": "The least-squares regression line for a data set is y = 3.2x + 7.5. What is the gradient of this line?",
+    "answer": "B"
+   },
+   {
+    "q": "2",
+    "type": "MC",
+    "marks": 1,
+    "src": "3.03",
+    "text": "A residual value is calculated as:",
+    "answer": "D"
+   },
+   {
+    "q": "3",
+    "type": "MC",
+    "marks": 1,
+    "src": "3.01",
+    "text": "The means of a data set are x̄ = 5 and ȳ = 14. The standard deviations are sₓ = 2 and s_y = 6, and the…",
+    "answer": "C"
+   },
+   {
+    "q": "4",
+    "type": "MC",
+    "marks": 1,
+    "src": "3.02",
+    "text": "A least-squares regression line was fitted to data on the height and age of eucalyptus saplings aged from 3…",
+    "answer": "D"
+   },
+   {
+    "q": "5",
+    "type": "MC",
+    "marks": 1,
+    "src": "3.03",
+    "text": "The residual plot for a least-squares regression line shows a clear curved pattern. Which of the following…",
+    "answer": "B"
+   },
+   {
+    "q": "6",
+    "type": "SA",
+    "marks": 2,
+    "src": "3.02",
+    "text": "The least-squares regression line for a data set is Weight = 3.8 × Age + 12.5, where weight is in kilograms…"
+   },
+   {
+    "q": "7",
+    "type": "SA",
+    "marks": 2,
+    "src": "3.01",
+    "text": "The following data was collected on the temperature (°C) and the number of ice creams sold at a Sydney beach…"
+   },
+   {
+    "q": "8",
+    "type": "SA",
+    "marks": 2,
+    "src": "3.03",
+    "text": "A regression line y = 5.6x + 22.3 is fitted to data. Calculate the residual for the data point (4, 43)."
+   },
+   {
+    "q": "9",
+    "type": "SA",
+    "marks": 1,
+    "src": "3.02",
+    "text": "For adults at a Bendigo gym, resting heart rate, in beats per minute, can be predicted from the number of…"
+   },
+   {
+    "q": "10",
+    "type": "SA",
+    "marks": 1,
+    "src": "3.01",
+    "text": "For a bivariate data set, x̄ = 12 and ȳ = 40. The least-squares regression line y = a + bx has a gradient of…"
+   },
+   {
+    "q": "11a",
+    "type": "SA",
+    "marks": 1,
+    "src": "3.02",
+    "text": "Write the equation of the least-squares regression line in terms of the variables price and age."
+   },
+   {
+    "q": "11b",
+    "type": "SA",
+    "marks": 1,
+    "src": "3.02",
+    "text": "Interpret the gradient of the line in the context of this data."
+   },
+   {
+    "q": "11c",
+    "type": "SA",
+    "marks": 1,
+    "src": "3.02",
+    "text": "Interpret the coefficient of determination in the context of this data."
+   },
+   {
+    "q": "11d",
+    "type": "SA",
+    "marks": 1,
+    "src": "3.02",
+    "text": "Predict the price of a 4-year-old hatchback."
+   },
+   {
+    "q": "12a",
+    "type": "SA",
+    "marks": 1,
+    "src": "3.03",
+    "text": "Calculate the residual for week 8."
+   },
+   {
+    "q": "12b",
+    "type": "SA",
+    "marks": 2,
+    "src": "3.03",
+    "text": "The residual plot, with the point for week 8 not yet plotted, is shown below. With reference to the residual…"
+   },
+   {
+    "q": "13a",
+    "type": "SA",
+    "marks": 1,
+    "src": "3.04",
+    "text": "Use technology to determine the value of Pearson's correlation coefficient, r, rounded to three decimal…"
+   },
+   {
+    "q": "13b",
+    "type": "SA",
+    "marks": 2,
+    "src": "3.04",
+    "text": "Use technology to find the equation of the least-squares regression line that can be used to predict score…"
+   },
+   {
+    "q": "13c",
+    "type": "SA",
+    "marks": 1,
+    "src": "3.04",
+    "text": "Interpret the gradient of the regression line in the context of this data."
+   },
+   {
+    "q": "13d",
+    "type": "SA",
+    "marks": 1,
+    "src": "3.04",
+    "text": "Using your equation from part b, calculate the residual for the student who studied for 12 hours, rounded to…"
+   },
+   {
+    "q": "13e",
+    "type": "SA",
+    "marks": 1,
+    "src": "3.04",
+    "text": "Determine whether the equation can reliably predict the score of a student who studies for 30 hours per week.…"
+   },
+   {
+    "q": "14",
+    "type": "SA",
+    "marks": 2,
+    "src": "3.04",
+    "text": "A full regression analysis was carried out on the age, in years, and the annual maintenance cost, in dollars,…"
+   }
+  ]
+ },
+ "4": {
+  "chapter": 4,
+  "total": 39,
+  "mc": 3,
+  "sa": 9,
+  "about": "Source (rule 9), copied verbatim: Mathspace General Maths 3&4 has no transformations chapter; its transformation lessons are 3.05-3.07 in 'Chapter 3 - Model linear associations' (02 Sources\\Textbooks\\Mathspace). Used:",
+  "byLesson": [
+   {
+    "lesson": "3.05",
+    "marks": 13,
+    "qs": [
+     "1",
+     "7a",
+     "8a",
+     "9a"
+    ]
+   },
+   {
+    "lesson": "3.06",
+    "marks": 7,
+    "qs": [
+     "2",
+     "10a"
+    ]
+   },
+   {
+    "lesson": "3.07",
+    "marks": 19,
+    "qs": [
+     "3",
+     "4a",
+     "5",
+     "6a",
+     "11a",
+     "12a"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "q": "1",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 3 topic assessment Q3 · 3.05",
+    "text": "The following data set has an upward-curving (parabolic) shape when plotted. Which transformation is most…",
+    "answer": "B"
+   },
+   {
+    "q": "2",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 3 topic assessment Q4 · 3.06",
+    "text": "A data set shows a non-linear relationship where y decreases rapidly as x increases. Which transformation is…",
+    "answer": "D"
+   },
+   {
+    "q": "3",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 3 topic assessment Q6 · 3.07",
+    "text": "A scatterplot of data on the population of bacteria (y) over time in hours (x) shows an upward-curving shape.…",
+    "answer": "A"
+   },
+   {
+    "q": "4a",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 3 topic assessment Q17 · 3.07",
+    "text": "Use technology to find the equation of the least-squares regression line for time against 1 volunteers .…"
+   },
+   {
+    "q": "4b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 3 topic assessment Q17 · 3.07",
+    "text": "Write the value of r² for the transformed data, rounded to four decimal places, and comment on how well the…"
+   },
+   {
+    "q": "4c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 3 topic assessment Q17 · 3.07",
+    "text": "Use the rounded equation from part (a) to predict the time taken by a team of 7 volunteers, rounded to two…"
+   },
+   {
+    "q": "4d",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 3 topic assessment Q17 · 3.07",
+    "text": "Use the model to find the minimum number of volunteers needed to clear a section in 2 hours or less, and…"
+   },
+   {
+    "q": "5",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 3 topic assessment Q18 · 3.07",
+    "text": "A data set shows a non-linear relationship. After applying an x² transformation, the regression equation is y…"
+   },
+   {
+    "q": "6a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 3 topic assessment Q19 · 3.07",
+    "text": "Use this equation to predict the number of cafés in a town with a population of 25 000. Round your answer to…"
+   },
+   {
+    "q": "6b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 3 topic assessment Q19 · 3.07",
+    "text": "Explain why the equation should not be used to predict the number of cafés in a town with a population of 100."
+   },
+   {
+    "q": "7a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Chapter 3 review Q8 · 3.05",
+    "text": "Complete the transformation of the x-values by completing the table: x² 1 4 9 16 25 36 y 3 10 25 45 75 110"
+   },
+   {
+    "q": "7b",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Chapter 3 review Q8 · 3.05",
+    "text": "Determine the equation of the least-squares regression line for the transformed data set. Give the answer in…"
+   },
+   {
+    "q": "7c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Chapter 3 review Q8 · 3.05",
+    "text": "Using technology, determine the value of the correlation coefficient, r, for the transformed data. Round the…"
+   },
+   {
+    "q": "8a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Chapter 3 review Q9 · 3.05",
+    "text": "Use technology to create a scatterplot. Which transformation is most suitable to linearise the data? A 1 x B…"
+   },
+   {
+    "q": "8b",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Chapter 3 review Q9 · 3.05",
+    "text": "Determine the equation of the least-squares regression line for the transformed data. Give the answer in the…"
+   },
+   {
+    "q": "9a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Chapter 3 review Q10 · 3.05",
+    "text": "Transform the data by applying a squared transformation to the y-values. Complete the table, rounding y²…"
+   },
+   {
+    "q": "9b",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Chapter 3 review Q10 · 3.05",
+    "text": "Determine the equation of the least-squares regression line for the transformed data. Give the answer in the…"
+   },
+   {
+    "q": "9c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Chapter 3 review Q10 · 3.05",
+    "text": "Predict the value of y when x = 7. Round the answer to two decimal places."
+   },
+   {
+    "q": "9d",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Chapter 3 review Q10 · 3.05",
+    "text": "Comment on the reliability of this prediction."
+   },
+   {
+    "q": "10a",
+    "type": "SA",
+    "marks": 3,
+    "src": "Mathspace Chapter 3 review Q11 · 3.06",
+    "text": "A biologist observes that the relationship between the age of a tree (in years) and its height (in metres) is…"
+   },
+   {
+    "q": "10b",
+    "type": "SA",
+    "marks": 3,
+    "src": "Mathspace Chapter 3 review Q11 · 3.06",
+    "text": "The relationship between the pressure (P in kPa) and volume (V in L) of a gas is non-linear: Volume (x) 1 2 4…"
+   },
+   {
+    "q": "11a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Chapter 3 review Q12 · 3.07",
+    "text": "Predict the value of the machinery (y) when it is 5 years old. Round the answer to the nearest dollar."
+   },
+   {
+    "q": "11b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Chapter 3 review Q12 · 3.07",
+    "text": "Choose the description which best describes the reliability of this prediction. A Unreliable, as it is an…"
+   },
+   {
+    "q": "12a",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Chapter 3 review Q13 · 3.07",
+    "text": "To pick the best model, a researcher tests three transformations: x², log 10 (x), and 1 x . Determine the…"
+   },
+   {
+    "q": "12b",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Chapter 3 review Q13 · 3.07",
+    "text": "Using the best transformation from part (a), state the equation of the least-squares regression line. Round…"
+   },
+   {
+    "q": "12c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Chapter 3 review Q13 · 3.07",
+    "text": "Use the model to predict the reduction in blood pressure for a dosage of 15 mg. Round the answer to one…"
+   },
+   {
+    "q": "12d",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Chapter 3 review Q13 · 3.07",
+    "text": "Comment on the reliability of the prediction."
+   }
+  ]
+ },
+ "5": {
+  "chapter": 5,
+  "total": 47,
+  "mc": 8,
+  "sa": 12,
+  "about": "Source (rule 9), copied verbatim: Mathspace General Maths 3&4, 'Chapter 4 - Time series data' (Mathspace's numbering), 'Chapter 4 - Topic assessment.pdf' + answer key (02 Sources\\Textbooks\\Mathspace\\Chapter 4 - Time series data). All 20 items, marks as printed (/47).",
+  "byLesson": [
+   {
+    "lesson": "4.01",
+    "marks": 3,
+    "qs": [
+     "1",
+     "9"
+    ]
+   },
+   {
+    "lesson": "4.02",
+    "marks": 3,
+    "qs": [
+     "2",
+     "13"
+    ]
+   },
+   {
+    "lesson": "4.03",
+    "marks": 3,
+    "qs": [
+     "3",
+     "7",
+     "18"
+    ]
+   },
+   {
+    "lesson": "4.04",
+    "marks": 3,
+    "qs": [
+     "4",
+     "10"
+    ]
+   },
+   {
+    "lesson": "4.05",
+    "marks": 6,
+    "qs": [
+     "5",
+     "12",
+     "14a"
+    ]
+   },
+   {
+    "lesson": "4.07",
+    "marks": 11,
+    "qs": [
+     "6",
+     "15a",
+     "16a",
+     "19"
+    ]
+   },
+   {
+    "lesson": "4.06",
+    "marks": 18,
+    "qs": [
+     "8",
+     "11",
+     "17a",
+     "20a"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "q": "1",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q1 · 4.01",
+    "text": "A time series graph shows sales data that rises steadily over several years, with regular peaks each December…",
+    "answer": "C"
+   },
+   {
+    "q": "2",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q2 · 4.02",
+    "text": "A time series of monthly café revenue shows a sudden, sharp spike in April due to a one-off food festival…",
+    "answer": "D"
+   },
+   {
+    "q": "3",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q3 · 4.03",
+    "text": "The data below shows the number of visitors to a museum over 5 consecutive months: 120, 135, 128, 142, 131.…",
+    "answer": "B"
+   },
+   {
+    "q": "4",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q4 · 4.04",
+    "text": "The following data values are recorded over 7 time periods: 10, 14, 9, 16, 11, 18, 13. What is the 5-point…",
+    "answer": "A"
+   },
+   {
+    "q": "5",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q5 · 4.05",
+    "text": "The seasonal indices for four quarters of a year are: Q1 1.20, Q2 0.85, Q3 0.75, Q4 X . What is the value of…",
+    "answer": "C"
+   },
+   {
+    "q": "6",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q6 · 4.07",
+    "text": "A least-squares regression line fitted to deseasonalised quarterly sales data is deseasonalised sales = 520 +…",
+    "answer": "A"
+   },
+   {
+    "q": "7",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q7 · 4.03",
+    "text": "The values of a time series for the first five months are 20, 26, 31, 23, 28. The 4-point moving mean with…",
+    "answer": "C"
+   },
+   {
+    "q": "8",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q8 · 4.06",
+    "text": "The seasonal index for summer sales at a surf shop is 1.25. To deseasonalise a summer sales figure, the…",
+    "answer": "C"
+   },
+   {
+    "q": "9",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q9 · 4.01",
+    "text": "This time series graph shows the monthly number of new home loan approvals (in thousands) in a major…"
+   },
+   {
+    "q": "10",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q10 · 4.04",
+    "text": "Apply a 3-point median smooth to the following data and state the smoothed values for Time Periods 2, 3, 4,…"
+   },
+   {
+    "q": "11",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q11 · 4.06",
+    "text": "The seasonal indices for the four quarters of a year are given below. The actual sales for Q2 were 3600…"
+   },
+   {
+    "q": "12",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q12 · 4.05",
+    "text": "The seasonal indices for three of the four seasons at a ski resort are: Summer 0.55, Autumn 0.80, Winter…"
+   },
+   {
+    "q": "13",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q13 · 4.02",
+    "text": "This time series graph shows the weekly number of deliveries made by a courier company. Identify whether the…"
+   },
+   {
+    "q": "14a",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q14 · 4.05",
+    "text": "Calculate the seasonal index for Quarter 1."
+   },
+   {
+    "q": "14b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q14 · 4.05",
+    "text": "The seasonal index for Quarter 3 is 0.64. Interpret this seasonal index in the context of this data."
+   },
+   {
+    "q": "14c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q14 · 4.05",
+    "text": "In Quarter 3 of 2026, the park had 2720 visitors. Calculate the deseasonalised number of visitors for this…"
+   },
+   {
+    "q": "15a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q15 · 4.07",
+    "text": "Interpret the value of b in the context of this data."
+   },
+   {
+    "q": "15b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q15 · 4.07",
+    "text": "Predict the deseasonalised sales for December 2026."
+   },
+   {
+    "q": "15c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q15 · 4.07",
+    "text": "The seasonal index for December is 1.18. Predict the actual number of bicycles sold in December 2026, rounded…"
+   },
+   {
+    "q": "16a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q16 · 4.07",
+    "text": "Calculate the 3-point moving mean for 2019."
+   },
+   {
+    "q": "16b",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q16 · 4.07",
+    "text": "Use technology to find the equation of the least-squares regression line for registrations, in hundreds,…"
+   },
+   {
+    "q": "16c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q16 · 4.07",
+    "text": "Interpret the gradient of the regression line in the context of this data."
+   },
+   {
+    "q": "16d",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q16 · 4.07",
+    "text": "Use your equation to predict the number of registrations, in hundreds, in 2027, rounded to one decimal place."
+   },
+   {
+    "q": "16e",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q16 · 4.07",
+    "text": "Comment on the reliability of the prediction for 2027."
+   },
+   {
+    "q": "17a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q17 · 4.06",
+    "text": "Calculate the value of k ."
+   },
+   {
+    "q": "17b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q17 · 4.06",
+    "text": "Calculate the deseasonalised number of guests, in hundreds, for Quarter 3 of Year 2, rounded to two decimal…"
+   },
+   {
+    "q": "17c",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q17 · 4.06",
+    "text": "The manager claims that Quarter 1 of Year 2 was the park's best performing quarter that year. Use…"
+   },
+   {
+    "q": "17d",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q17 · 4.06",
+    "text": "A least-squares regression line fitted to the deseasonalised data is deseasonalised guests = 58.56 + 0.89 t ,…"
+   },
+   {
+    "q": "18",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q18 · 4.03",
+    "text": "The 5-point moving means for a time series are: 24.2, 25.6, 27.0, 28.4, 29.8 for Time Periods 3 through 7.…"
+   },
+   {
+    "q": "19",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q19 · 4.07",
+    "text": "The regression equation y = 95.4 + 2.1 t is fitted to deseasonalised data, where t = 1 represents the first…"
+   },
+   {
+    "q": "20a",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q20 · 4.06",
+    "text": "Deseasonalise the Year 2 data for January, June, and December. Round to two decimal places."
+   },
+   {
+    "q": "20b",
+    "type": "SA",
+    "marks": 3,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q20 · 4.06",
+    "text": "Using a CAS calculator, deseasonalise all Year 2 data and fit a least-squares regression line to the…"
+   },
+   {
+    "q": "20c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q20 · 4.06",
+    "text": "Use the regression equation to predict the deseasonalised number of passengers for March of Year 3 (Month…"
+   },
+   {
+    "q": "20d",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q20 · 4.06",
+    "text": "Reseasonalise the forecast for March of Year 3 to obtain the actual predicted number of passengers. Round to…"
+   },
+   {
+    "q": "20e",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 4 (time series) topic assessment Q20 · 4.06",
+    "text": "Evaluate the reliability of the prediction for March of Year 3, referring specifically to how far the…"
+   }
+  ]
+ }
+}
