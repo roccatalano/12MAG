@@ -1,8 +1,20 @@
-# 12MAG handover — 15 Nov 2026 (updated 15:45)
+# 12MAG handover — 15 Nov 2026 (updated 15:55)
 
 Read `CLAUDE.md` first (rules, item index, **slide template rules**), then this file. The full to-do list is `docs/TODO.md`.
 Repo: `roccatalano/12MAG` (GitHub Pages: roccatalano.github.io/12mag/ → `planner/`). Rocco's dashboard repo `roccatalano/teaching-dashboard-2027` is read-only unless he asks.
 Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through the desktop-app bridge (stage files to read; commit files to write; can't move/rename/delete).
+
+## >>> NEXT JOB (start here): Lesson 2 (1C–1E) — slides, then worksheet <<<
+**Lesson 1 is DONE apart from its bound reference:** slides READY (`lessons/S1-slides.html/.pdf`), guided worksheet READY (`lessons/S1-worksheet(-solutions).html/.pdf`, 5 pages; G: `1A-1B worksheet(.pdf)`, `1A-1B worksheet solutions(.pdf)`).
+**Bound reference work is PAUSED** (Rocco, 15 Nov: he wants to rethink the bound reference before we work on it). Don't build or change any bound reference cards until he says how.
+
+**Lesson 2 = planner card `gm12-u3-s2`, subchapters 1C, 1D, 1E.** Do it the way Lesson 1 was done: one resource at a time, show Rocco (screenshots + findings table) before changing things, mark Ready only when he says so.
+1. **Slides:** `lessons/S2-slides.html` is the OLD layout with no build script. Rebuild on the templates: new `tools/deck/s2/build.py` modelled on `tools/deck/s1/build.py` (rules: CLAUDE.md "Slide templates"). Known fixes: 'Homework' → 'Coursework'; Do Now has 3 items, needs 4 (2 × Exam 1 + 2 × Exam 2, current-design VCAA from `tools/vcaa_current_index.csv`, not burnt in `tools/ledger.csv`); 2016 E1 Q3 tile '?%' → 87% (confirm in the examiner report). Check every item against its source PDF on G: (verbatim, citation, % from reports). Screenshots: `tools/deck/s1/shoot.py`; PDF: `tools/deck/pdf.py`. Log items in the ledger.
+2. **Guided worksheet:** rewrite `tools/deck/s2/worksheet.py` on `tools/deck/ws2.py`, copying the shape of `tools/deck/s1/worksheet.py` (rules: CLAUDE.md "Guided worksheets"). The current S2 worksheet is the old wslib style: replace it, same file names (G: `1C-1E worksheet(.pdf)`, `1C-1E worksheet solutions(.pdf)`). Fewest pages without cramming (3 subchapters, roughly 6 pages).
+3. Then review the Lesson 2 planner card (Do Now, APK, examples/you trys, exits, coursework match the slides).
+
+## Done 15 Nov (to 15:55): Lesson 1 guided worksheet — READY
+- `tools/deck/s1/worksheet.py` on the new library `tools/deck/ws2.py` (CFAT / revision-booklet style). Many rounds of Rocco's feedback, all captured as rules in CLAUDE.md "Guided worksheets" (header + page numbers, split Example/You try boxes, scaffolded Examples vs blank You trys, CFAT dashed separators, VCAA source in box headers, no references/CAS/notes/guess boxes, coursework box with Due lines and signatures). Real sources are in the script's docstring.
 
 ## Done 15 Nov (13:10): bound reference cards 1C (full), 1D (half), 1E (half)
 - `lessons/1C|1D|1E bound reference.html` + combined `1C-1E bound reference.html`; also on G: `01 Lesson materials`. Planner S2 card updated.
@@ -49,42 +61,6 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 ## Done 15 Nov (14:50): S1 slides round 3 — Rocco: "amazing"; slides DONE, move on
 - Tree reveals branch by branch; CAS slides static (template); % frequency formula on the left in one row; chart axes hidden until the Axes step; coursework as tick boxes; rules in CLAUDE.md.
 - **Rocco: S1 slides READY** (planner status ready). PDF made with the new `tools/deck/pdf.py` (44 pages): question slides = question frame + final frame, other slides final frame only.
-
-## Done 15 Nov (15:45): Lesson 1 guided worksheet, round 2 (Draft, awaiting Rocco's review)
-- Rocco: "excellent", then asked for the CFAT / revision-booklet look: header (VCE General Maths 3&4 · AoS 1 · Data analysis), page numbers, simple title box, no references except VCAA sources, 'Example n' / 'You try n' headings, blank space instead of ruled lines. Rules in CLAUDE.md "Guided worksheets".
-- New library `tools/deck/ws2.py`; `tools/deck/s1/worksheet.py` rewritten on it → `lessons/S1-worksheet(-solutions).html/.pdf`, 4 pages each; G: `1A-1B worksheet(.pdf)`, `1A-1B worksheet solutions(.pdf)`.
-- Space-savers: heptathlon table turned (noted in its source line); Ex 4, Ex 5 → '(Table: see Example 3.)'; You try 4 → '(Table: see You try 3.)'; Example 1 and You try 1 are full-width boxes (one above the other).
-- Round 3 (Rocco): VCAA source in the box header; writing lines for one-word answers; Example + You try in one split box; You trys = blank space, no scaffolding (red answers on solutions). Still 4 pages.
-- Round 4 (Rocco: 'fix the cramping'; 5 and 6 pages print the same): 6 planned pages, 10 pt, repeated tables restored, report blanks are lines. Stretched boxes were 'too far': now natural heights, normal flow, trimmed to 5 pages (Rocco: single-sided printing). You try 4 a/b each have their own space (bigger), You try 3 smaller; guess-% boxes removed; Student + Parent signature lines (stamp = teacher). 5 pages.
-- Older worksheets S2–S5 are still in the old style (wslib.py) with CAS/Key ideas boxes: rebuild on ws2 (TODO).
-
-## >>> NEXT JOB: Rocco reviews the S1 worksheet; then Lesson 1 bound reference (cards 1A, 1B) → planner card review <<<
-
-After the worksheet: Lesson 1 bound reference (`tools/bref`, cards 1A, 1B) → planner card review. Older list below.
-
-### Lesson 1 review list (original brief)
-### Original brief: deep review of Lesson 1 (1A–1B) — Rocco, 15 Nov: "make sure they are up to standard and not AI slop"
-Everything is **Draft** on the planner. Review one resource at a time, show Rocco what you found (with screenshots), fix what he agrees to, then mark it Ready only when he says so.
-
-**Lesson 1 resources** (planner card `gm12-u3-s1`, subchapters 1A Types of data, 1B Displaying and describing categorical data):
-1. **Slides** `lessons/S1-slides.html/.pdf` (G: `1A-1B slides`). OLD layout, and there is **no build script** in `tools/deck/` for S1 (s2–s5 only): fixing it properly means rebuilding on the templates (`tools/deck/tpl/tpl.py`, model `tools/deck/s4/build.py`; see CLAUDE.md "Slide templates"). Known: says 'Homework' (→ Coursework), Do Now count and lesson order to check against rules 3–4.
-2. **Guided worksheet** `lessons/S1-worksheet.html/.pdf` (G: `1A-1B worksheet`). Student copy only, **no solutions copy**, no build script. Max 4 pages (it is 6). New worksheets are built with `tools/deck/wslib.py` (see `tools/deck/s3/worksheet.py`); rebuilding S1 that way gives a solutions copy too.
-3. **Bound reference** `lessons/1A|1B|1A-1B bound reference.html/.pdf` (build: `tools/bref/build.py`, content `tools/bref/cards.py`).
-4. **Planner card** for the lesson: learning objectives, success criteria, Study Design, key vocab, CAS guide (`stats-list`), self-study videos (MaffsGuru 1A, 1B), Do Now, APK, worked examples / you trys, exits, coursework (planner card vs slides had APK differences: check).
-(CFAT 1.1.1 covers 1A–1E: review it with lesson 3, not here.)
-
-**Check every item for:**
-1. Wording copied word for word from the source PDF (stage it from G: `02 Sources`), or labelled "adapted".
-2. Citation right (book, example/question number, page).
-3. % correct = examiner report (past-design reports sit with the past papers in `02 Sources\VCAA past 2016-2022`; current in `VCAA current 2023-26`). Missing report → say which and ask.
-4. Maths and answers right; figures match the data.
-5. Rules: lesson shape (rule 3), Do Now = 2 × Exam 1 + 2 × Exam 2 current-design VCAA (rule 4), APK sources (rule 5), You try = mapped Edrolo WE (rule 6), exits = Edrolo U3&4 VCAA reprints (rule 7).
-6. Burnt items: `tools/ledger.csv`. **Already spotted:** VCAA 2019 E2 Q1a is logged twice (S1 exit via Edrolo U3&4 1A Q14 AND an older 'Exam Q (1A)' row); VCAA 2020 E1 Q10 twice (S1 APK via Edrolo U1&2 1A Q14 AND 'Exam Q (1A)'). Work out which rows are stale (old handout/label era) vs real double use.
-7. Writing: own-words notes short and plain, no filler, nothing made up, no "AI voice".
-8. Layout: A4 print, page limits, nothing cut off; every slide step checked visually (`tools/deck/s4/shoot.py`, Playwright + /usr/bin/google-chrome).
-9. Consistency: slides ↔ worksheet ↔ bound reference ↔ planner card say the same thing.
-
-**Suggested way of working:** read the slides first and list every item (Do Now, APK, examples, you trys, exits) with its source; stage the source pages; compare; give Rocco one findings table per resource (item · problem · proposed fix) before changing anything. Then do the same for the worksheet and bound reference.
 
 ## Done 15 Nov: Lesson 5 slides (1H–1I)
 - `lessons/S5-slides.html` (34 slides), also `01 Lesson materials\1H-1I slides.html` on G:. Build: `tools/deck/s5/build.py` (screenshots: `tools/deck/s5/shoot.py`).

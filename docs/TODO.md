@@ -7,7 +7,7 @@ Tick items off here as they are done. Everything made so far is **Draft** on the
 - [ ] CFAT 1.1.1, 1.1.2, 1.1.3: solutions copies (planner shows "To make")
 - [ ] CFAT follow-ups (Jacaranda exercises) for each CFAT
 - [ ] Chapter 1 test (Mathspace topic assessment) — the only Ch 1 material still "To make"
-- [ ] Rebuild S1–S3 slides on the new templates (also fixes: 'Homework' → 'Coursework', S2 Do Now has 3 not 4, S3 extra exit, '?%' tiles)
+- [ ] Rebuild S2–S3 slides on the new templates (S1 done) (also fixes: 'Homework' → 'Coursework', S2 Do Now has 3 not 4, S3 extra exit, '?%' tiles)
 - [ ] "Videos that might help" cards on every deck (blank)
 - [ ] Item bank: save each used item (verbatim text, figure data, answer) to `03 Item bank` on G:
 - [ ] Ledger: check every Ch 1 item is logged (`tools/ledger.csv`)
@@ -17,7 +17,7 @@ For each lesson: slides → worksheet (student + solutions) → bound reference 
 
 | Lesson | Slides | Worksheet | Bound reference | CFAT / other |
 |---|---|---|---|---|
-| L1 · 1A–1B | [ ] | [ ] | [ ] | — |
+| L1 · 1A–1B | [x] | [x] | [ ] paused (Rocco rethinking bound references) | — |
 | L2 · 1C–1E | [ ] | [ ] | [ ] | — |
 | L3 · 1F | [ ] | [ ] | [ ] | [ ] CFAT 1.1.1 |
 | L4 · 1G | [ ] | [ ] | [ ] | — |
