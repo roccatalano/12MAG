@@ -7,6 +7,11 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 
 
+## 15 Nov 19:15 — Lesson l07 (2G-2H) slides + guided worksheet (runner, task Ch2 #7)
+- `tools/deck/l07/build.py` → `lessons/2G-2H slides.html/.pdf` (30 slides, PDF 49 pages; screenshots `tools/deck/l07/shoot.py`). `tools/deck/l07/worksheet.py` → `lessons/2G-2H worksheet(.html/.pdf)` + `… worksheet solutions` (4 pages each). Same names on G: `01 Lesson materials`. Draft on the l07 card.
+- Do Now: VCAA 2025 E1 Q10 (63%) and 2024 E2 Q3d (78%) replace 2024 E1 Q9 (3A) and 2025 NHT E2 Q4g (2G) — see Decisions log; plus 2024 NHT E1 Q6, 2024 E2 Q1aii (77%). APK Cambridge U1&2 7C #6, VCAA 2019 E2 Q4a (84%). Examples 17–21 + Edrolo 3C WE1a/b, YT-2G-19/20/21; 2H You try Edrolo 2D WE2; exits VCAA 2017 E1 Q12 (81%), 2019 E2 Q4c (76%).
+- For Rocco to check: Example 21 / YT-21 scatterplots generated (exact r); 2G MaffsGuru link still blank.
+
 ## 15 Nov 18:57 — Lesson l06 (2F) slides + guided worksheet (runner, task Ch2 #6)
 - `tools/deck/l06/build.py` → `lessons/2F slides.html/.pdf` (20 slides incl. CFAT 1.2.2 timer slide, PDF 30 pages; screenshots `tools/deck/l06/shoot.py`). `tools/deck/l06/worksheet.py` → `lessons/2F worksheet(.html/.pdf)` + `… worksheet solutions` (3 pages each). Same names on G: `01 Lesson materials`. Draft on the l06 card.
 - From the l06 card: Do Now VCAA 2025 NHT E1 Q9 (replaces 2024 E1 Q10, see Decisions log), 2024 E1 Q5 (80%), 2023 E2 Q3c (60%), 2024 NHT E2 Q1c (no %); APK Cambridge U1&2 7C #4, #5 (r = 0.657, moderate), VCAA 2016 E1 Q12 (67%, original wording); Example 16 + Edrolo 2D WE1; CAS slide (Cambridge CAS 2, r = 0.82); exit VCAA 2020 E2 Q6b (50%). Nothing else dropped.

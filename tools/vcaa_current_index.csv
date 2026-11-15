@@ -194,7 +194,7 @@ paper,exam,q,aos,subchapter,also,marks,paper_page,answer,pct_correct,note,stem_e
 2024,1,Q6,1,1G,,1,5,C,53,,8 613 Data: <https://olympics.com> The smallest number of athletes per country that would display as an outlier on a boxplot of this data is
 2024,1,Q7,1,1H,,1,6,C,82,,"2024 is 55.7 In one round, when she recorded a score of 48, her standardised score was z = —1.75 The standard deviation for score in 2024 is"
 2024,1,Q8,1,3A,,1,6,B,73,,~~ e 5.0 aa a 0.04 Perr 0 5 10 15 20 25 30 number Data: Adapted from <www-statista.com> The equation of the least squares line is closest to
-2024,1,Q9,1,2F,,1,7,A,52,,"ean 15.0 48.4 standard deviation 8.51 19.0 The value of Pearson’s correlation coefficient, r, rounded to three decimal places, is closest to"
+2024,1,Q9,1,3A,,1,7,A,52,"re-tagged 3A (needs b = r·sy/sx), l07 run","ean 15.0 48.4 standard deviation 8.51 19.0 The value of Pearson’s correlation coefficient, r, rounded to three decimal places, is closest to"
 2024,1,Q10,1,3B,,1,7,C,73,"re-tagged 15 Nov (l06 run): least-squares prediction, paper p. 7; stem_end below is from Q11", 4 208 280 190 260 $ 5 pairs 240 6 180 220 e 7 170 200 ad . 8 165 180 ® ; e 9 160 160 “7 o 10 158 140 T 1 0 2 4 6 8 10 12 11 155 year 12 150
 2024,1,Q11,1,4B,,1,8,D,59,, (base 10) transformation applied to the explanatory variable. The least squares equation calculated from the transformed data is closest to
 2024,1,Q12,1,4D,,1,8,A,48,,"ares line is fitted to the plot of versus year, the largest difference between the pairs actual value and the predicted value occurs at year"
@@ -337,7 +337,7 @@ paper,exam,q,aos,subchapter,also,marks,paper_page,answer,pct_correct,note,stem_e
 2025 NHT,2,Q4d,1,2E,,1,9,,,NHT report gives no % statistics,Mathematics Examination 2 Page 9 of 28 Describe the association between son's height and father’s height in terms of strength and direction.
 2025 NHT,2,Q4e,1,3B,,1,9,,,NHT report gives no % statistics,"res line predicts that, on average, each 10 centimetre increase in father’s height is associated with a centimetre increase in son’s height."
 2025 NHT,2,Q4f,1,3C,,2,9,,,NHT report gives no % statistics,termine the residual value for this point when the least squares line is fitted to the scatterplot. Round your answer to two decimal places.
-2025 NHT,2,Q4g,1,2F,,1,9,,,NHT report gives no % statistics,"ring to appropriate statistics, identify which variable, father’s height or mother’s height, has the stronger association with son’s height."
+2025 NHT,2,Q4g,1,2G,,1,9,,,"NHT report gives no % statistics; re-tagged 2G (compares r²), l07 run","ring to appropriate statistics, identify which variable, father’s height or mother’s height, has the stronger association with son’s height."
 2025 NHT,2,Q5a,1,5B,,2,10,,,NHT report gives no % statistics,he missing smoothed values and marking these smoothed values with crosses (x) joined by a dashed line (- - -) on the time series plot above.
 2025 NHT,2,Q5b,1,5E,,1,10,,,NHT report gives no % statistics,"ould be the estimated average height of adult males, in metres, in this European country in 2040? Round your answer to three decimal places."
 2025 NHT,2,Q6a,2,7B,,1,11,,,NHT report gives no % statistics,"d to model the value of the van, M,,, after n years. My = 80000, M,.,=M,,—7200 What is the annual percentage flat rate of depreciation used?"

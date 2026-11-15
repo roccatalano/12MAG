@@ -3593,7 +3593,7 @@
         "doNow": [
          {
           "exam": "Exam 1",
-          "ref": "VCAA 2024 Exam 1 Q9",
+          "ref": "VCAA 2025 Exam 1 Q10",
           "sec": "2F"
          },
          {
@@ -3603,8 +3603,8 @@
          },
          {
           "exam": "Exam 2",
-          "ref": "VCAA 2025 NHT Exam 2 Q4g",
-          "sec": "2F"
+          "ref": "VCAA 2024 Exam 2 Q3d",
+          "sec": "2E"
          },
          {
           "exam": "Exam 2",
@@ -3666,7 +3666,33 @@
            "note": "The 2G, 2H sections"
           }
          ]
-        }
+        },
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/2G-2H slides.html",
+          "pdf": "lessons/2G-2H slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "4 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/2G-2H worksheet.html",
+            "pdf": "lessons/2G-2H worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/2G-2H worksheet solutions.html",
+            "pdf": "lessons/2G-2H worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
