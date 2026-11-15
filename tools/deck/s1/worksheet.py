@@ -96,5 +96,5 @@ P.append(box('Exit task 3 · VCAA 2017 Exam 1 Q5 (adapted)', '<div class="row"><
 
 P.append(close(['I can identify types of data.', 'I can construct a frequency table for categorical data.', 'I can construct a bar chart from a frequency table.',
   'I can construct a percentage segmented bar chart from a frequency table.', 'I can describe the distribution of a categorical variable.'],
-  [('Exercise 1A', 'Q1 · Q2 · Q3<br>Q4–6 <i>(Exam 1 style)</i>'), ('Exercise 1B', 'Q1–3 · Q4–5<br>Q6–8 · Q9 <i>(Exam 1 style)</i>')], '1A and 1B sections'))
+  [('1A', 'Q1–6'), ('1B', 'Q1–9')], '1A and 1B sections'))
 build('S1', '1A–1B', 'AoS 1 · Data analysis', P)

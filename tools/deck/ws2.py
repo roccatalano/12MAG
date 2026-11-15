@@ -66,7 +66,8 @@ table.t .a {{ color:{RED}; visibility:hidden; }} .sol table.t .a {{ visibility:v
 .bx i {{ position:absolute; left:0; right:0; top:100%; font-size:6.5pt; font-style:normal; color:#666; line-height:1.1; white-space:nowrap; }}
 .bx u {{ text-decoration:none; color:{RED}; visibility:hidden; font-size:9pt; white-space:nowrap; }} .sol .bx u {{ visibility:visible; }}
 .solfig {{ visibility:hidden; }} .sol .solfig {{ visibility:visible; }}
-.scg {{ display:grid; grid-template-columns:1fr; }}
+.scg {{ display:grid; grid-template-columns:1fr; }} .scg .sc:nth-child(odd) {{ border-right:1px solid #000; }} .scg .sc:nth-last-child(-n+2) {{ border-bottom:none; }}
+.due {{ display:flex; gap:1.5mm; align-items:flex-end; width:100%; font-size:9pt; margin-top:1mm; }} .due i {{ flex:1; border-bottom:1px solid #000; height:5mm; }}
 .sc {{ display:grid; grid-template-columns:6mm 1fr; gap:1mm 2mm; padding:1mm 2mm; border-bottom:1px solid #000; }} .sc:last-child {{ border-bottom:none; }}
 .tick {{ width:4.6mm; height:4.6mm; border:1.2px solid #000; }}
 .hwg {{ display:grid; border:1px solid #000; }}
@@ -127,11 +128,12 @@ def report(toks):
     return '<p class="tpl">' + ''.join(t if isinstance(t, str) else f'<span class="bx"><u>{t[1]}</u><i>{t[0]}</i></span>' for t in toks) + '</p>'
 def lis(L): return box('Learning intentions', '<ul class="lis">' + ''.join(f'<li>{x}</li>' for x in L) + '</ul>').replace('class="box"', 'class="box lisbox"', 1)
 def close(SC, cols, rev):
-    ck = box('Skills checklist', '<div class="scg">' + ''.join(f'<div class="sc"><div class="tick"></div><div><b>{i}.</b> {s}</div></div>' for i, s in enumerate(SC, 1)) + '</div>', 'Tick when you can')
-    cw = box('Coursework · Cambridge exercises', f'<div class="hwg" style="grid-template-columns:repeat({len(cols)+1},1fr)">' + ''.join(f'<div><div class="hwh">{h}</div><div>{t}</div><div class="tick"></div></div>' for h, t in cols)
-             + f'<div><div class="hwh">Revision booklet</div><div>{rev}</div><div class="tick"></div></div></div>'
+    """Skills checklist, then coursework (stacked). cols: [(subchapter, questions)], e.g. [('1A', 'Q1–6')]; rev: revision booklet sections."""
+    ck = box('Skills checklist', '<div class="scg" style="grid-template-columns:1fr 1fr">' + ''.join(f'<div class="sc"><div class="tick"></div><div><b>{i}.</b> {s}</div></div>' for i, s in enumerate(SC, 1)) + '</div>', 'Tick when you can')
+    cell = lambda h, t: f'<div><div class="hwh">{h}</div><div>{t}</div><div class="tick"></div><div class="due">Due <i></i></div></div>'
+    cw = box('Coursework', f'<div class="hwg" style="grid-template-columns:repeat({len(cols)+1},1fr)">' + ''.join(cell(h, t) for h, t in cols) + cell('Revision booklet', rev) + '</div>'
              '<div class="sig"><div class="stamp">Teacher stamp</div><div class="ln"><div><span>Student signature</span><i></i></div><div><span>Parent signature</span><i></i></div><div><span>Date</span><i></i></div></div></div>', 'Tick when done')
-    return f'<div class="pair" style="grid-template-columns:.85fr 1.15fr">{ck}{cw}</div>'
+    return ck + cw
 
 # ---------------------------------------------------------------- figures (static SVG)
 SHADE = ['#fff', '#bbb', '#555']
