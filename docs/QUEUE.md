@@ -106,7 +106,7 @@ _Notes for all AoS 2–4 runners (Rocco, 16 Nov):_
 ## AoS 3: Matrices (runner "12MAG AoS 3 runner")
 
 ### Chapter 10: Matrices (lessons gm12-u4-10a10b10c, gm12-u4-10d, gm12-u4-10e, gm12-u4-10f, gm12-u4-10g; check gm12-ch10-test)
-1. `todo` **Plan Chapter 10**: lesson split, titles, learning intentions, success criteria, coursework (gm12-u4-10a10b10c, gm12-u4-10d, gm12-u4-10e, gm12-u4-10f, gm12-u4-10g; see notes above). Update the lesson ids/list below if you split or merge.
+1. `in progress 16 Nov 01:13` **Plan Chapter 10**: lesson split, titles, learning intentions, success criteria, coursework (gm12-u4-10a10b10c, gm12-u4-10d, gm12-u4-10e, gm12-u4-10f, gm12-u4-10g; see notes above). Update the lesson ids/list below if you split or merge.
 2. `todo` **Prefill the lesson cards** (gm12-u4-10a10b10c, gm12-u4-10d, gm12-u4-10e, gm12-u4-10f, gm12-u4-10g) in `planner/unit-plan.json` (see notes above).
 3. `todo` **CFATs for Chapter 10** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch10/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
 4. `todo` **CFAT follow-ups for Chapter 10** (Jacaranda exercises; see notes above).
