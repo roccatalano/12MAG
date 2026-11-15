@@ -7,6 +7,9 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 
 
+## 15 Nov 19:36 — Ch 2 test (runner)
+- `lessons/Ch2 test(.html/.pdf)` + solutions: Mathspace Ch 2 topic assessment verbatim (8 MC + 12 SA, /41), CFAT layout, Draft; build `tools/test/ch2/build.py`; on G: `01 Lesson materials`; on the Ch 2 check card; Mathspace Q1–20 burnt in the ledger. **Chapter 2 queue finished**; Ch 2 runner turned off. Coursework check sheet on that card is still todo (not a queued task).
+
 ## 15 Nov 19:30 — Chapter 2 revision booklet (runner, task Ch2 #9)
 - `tools/revision/ch2/build.py` (questions `qdata.py`, figure crops `crop.py` → `crops/`, PDF `pdf.py`) → `lessons/Ch2-revision-booklet(.html/.pdf)` + `-solutions` (10 pages each). G: `01 Lesson materials\Ch2 revision booklet(.html/.pdf)`, `… solutions`. Draft on the Ch 2 check card.
 - Insight GM1 MC Q1, 6, 33, 34 (2C), 28 (2D), 12, 24 (2G), 9 (2H), 17 (2I); GM2 Q13a (2B), Q1, 3, 6, 9 (2C), Q2a–b (2F), Q4b,d, Q5a,f,g, Q7a,c, Q14c (2G). Regression parts left for Ch 3. 2A/2E have no own section (see Decisions log).

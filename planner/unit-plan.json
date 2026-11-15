@@ -2109,9 +2109,12 @@
          },
          {
           "kind": "Chapter test",
-          "desc": "Formal chapter test. Each question maps to the success criteria on the back of the coursework check.",
-          "status": "todo",
-          "file": ""
+          "desc": "Mathspace Ch 2 topic assessment (20 Qs, /41), verbatim.",
+          "status": "draft",
+          "copies": [
+           {"label": "Student copy", "file": "lessons/Ch2 test.html", "pdf": "lessons/Ch2 test.pdf"},
+           {"label": "Solutions", "file": "lessons/Ch2 test solutions.html", "pdf": "lessons/Ch2 test solutions.pdf"}
+          ]
          }
         ],
         "cfats": [
@@ -3814,9 +3817,12 @@
          },
          {
           "kind": "Chapter test",
-          "desc": "Formal chapter test. Each question maps to the success criteria on the back of the coursework check.",
-          "status": "todo",
-          "file": ""
+          "desc": "Mathspace Ch 2 topic assessment (20 Qs, /41), verbatim.",
+          "status": "draft",
+          "copies": [
+           {"label": "Student copy", "file": "lessons/Ch2 test.html", "pdf": "lessons/Ch2 test.pdf"},
+           {"label": "Solutions", "file": "lessons/Ch2 test solutions.html", "pdf": "lessons/Ch2 test solutions.pdf"}
+          ]
          },
          {
           "kind": "Revision booklet",
@@ -4422,9 +4428,12 @@
          },
          {
           "kind": "Chapter test",
-          "desc": "Formal chapter test. Each question maps to the success criteria on the back of the coursework check.",
-          "status": "todo",
-          "file": ""
+          "desc": "Mathspace Ch 2 topic assessment (20 Qs, /41), verbatim.",
+          "status": "draft",
+          "copies": [
+           {"label": "Student copy", "file": "lessons/Ch2 test.html", "pdf": "lessons/Ch2 test.pdf"},
+           {"label": "Solutions", "file": "lessons/Ch2 test solutions.html", "pdf": "lessons/Ch2 test solutions.pdf"}
+          ]
          }
         ]
        }
@@ -4909,9 +4918,12 @@
          },
          {
           "kind": "Chapter test",
-          "desc": "Formal chapter test. Each question maps to the success criteria on the back of the coursework check.",
-          "status": "todo",
-          "file": ""
+          "desc": "Mathspace Ch 2 topic assessment (20 Qs, /41), verbatim.",
+          "status": "draft",
+          "copies": [
+           {"label": "Student copy", "file": "lessons/Ch2 test.html", "pdf": "lessons/Ch2 test.pdf"},
+           {"label": "Solutions", "file": "lessons/Ch2 test solutions.html", "pdf": "lessons/Ch2 test solutions.pdf"}
+          ]
          }
         ]
        }
@@ -5823,9 +5835,12 @@
          },
          {
           "kind": "Chapter test",
-          "desc": "Formal chapter test. Each question maps to the success criteria on the back of the coursework check.",
-          "status": "todo",
-          "file": ""
+          "desc": "Mathspace Ch 2 topic assessment (20 Qs, /41), verbatim.",
+          "status": "draft",
+          "copies": [
+           {"label": "Student copy", "file": "lessons/Ch2 test.html", "pdf": "lessons/Ch2 test.pdf"},
+           {"label": "Solutions", "file": "lessons/Ch2 test solutions.html", "pdf": "lessons/Ch2 test solutions.pdf"}
+          ]
          }
         ]
        }
@@ -5952,9 +5967,12 @@
          },
          {
           "kind": "Chapter test",
-          "desc": "Formal chapter test. Each question maps to the success criteria on the back of the coursework check.",
-          "status": "todo",
-          "file": ""
+          "desc": "Mathspace Ch 2 topic assessment (20 Qs, /41), verbatim.",
+          "status": "draft",
+          "copies": [
+           {"label": "Student copy", "file": "lessons/Ch2 test.html", "pdf": "lessons/Ch2 test.pdf"},
+           {"label": "Solutions", "file": "lessons/Ch2 test solutions.html", "pdf": "lessons/Ch2 test solutions.pdf"}
+          ]
          }
         ]
        }
@@ -6160,9 +6178,12 @@
          },
          {
           "kind": "Chapter test",
-          "desc": "Formal chapter test. Each question maps to the success criteria on the back of the coursework check.",
-          "status": "todo",
-          "file": ""
+          "desc": "Mathspace Ch 2 topic assessment (20 Qs, /41), verbatim.",
+          "status": "draft",
+          "copies": [
+           {"label": "Student copy", "file": "lessons/Ch2 test.html", "pdf": "lessons/Ch2 test.pdf"},
+           {"label": "Solutions", "file": "lessons/Ch2 test solutions.html", "pdf": "lessons/Ch2 test solutions.pdf"}
+          ]
          }
         ]
        }
