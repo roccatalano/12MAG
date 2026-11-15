@@ -122,4 +122,4 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 | Ch3 #2 CFATs | 19:41 | 19:45 | ~4 | | done: 2 CFATs, 2 pages each, 18 Edrolo exercise Qs burnt; Edrolo 3C has only 1 MC so 1.3.2 has 3 MC (borrowed 3A Q4, Q11) | next run: fired |
 | Ch4 runner: G: not reachable | 2026-11-15 19:52 | 2026-11-15 19:53 | 1 | | stopped: the 12MAG Course Planner folder is not connected to this run (names-only listing); no task taken. next run: NOT fired — needs the folder attached |
 | Ch5 runner: G: not reachable | 2026-11-15 19:53 | 2026-11-15 19:55 | 2 | | stopped: 12MAG Course Planner folder not connected to this session (device_list_dir returned names only); nothing changed; next run: NOT fired — G: unreachable |
-| Ch4 #1 prefill l12–l15 | 19:54 | 19:59 | ~30 | | done; Edrolo PDFs staged (100 MB each) and text-searched; 3 ledger clashes found and fixed | next run: fired |
+| Ch4 #1 prefill l12–l15 | 19:54 | 19:59 | 5 | | done; Edrolo PDFs staged (100 MB each) and text-searched; 3 ledger clashes found and fixed | next run: fired |
