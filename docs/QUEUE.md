@@ -18,7 +18,7 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 3. `done 2026-11-15 — 2A-2B slides (35 slides, PDF 59 pages) + guided worksheet (6 pages, student + solutions), Draft; on G: and the l03 card` **Lesson l03 (2A, 2B)**: slides (`tools/deck/<id>/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 4. `done 2026-11-15 — 2C slides (27 slides, PDF 45 pages) + guided worksheet (5 pages, student + solutions), Draft; on G: and the l04 card` **Lesson l04 (2C)**: slides + worksheet.
 5. `done 2026-11-15 — 2D-2E slides (26 slides, PDF 41 pages) + guided worksheet (4 pages, student + solutions), Draft; on G: and the l05 card` **Lesson l05 (2D, 2E)**: slides + worksheet.
-6. `todo` **Lesson l06 (2F)**: slides + worksheet.
+6. `in progress 2026-11-15 18:44` **Lesson l06 (2F)**: slides + worksheet.
 7. `todo` **Lesson l07 (2G, 2H)**: slides + worksheet.
 8. `todo` **Lesson l08 (2I)**: slides + worksheet.
 9. `todo` **Chapter 2 revision booklet** + solutions (Insight GM1 + GM2 Data Analysis, sections per subchapter; template `tools/revision/ch1/build.py`). Insight is never burnt.
