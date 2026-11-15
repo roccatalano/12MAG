@@ -2,7 +2,7 @@
 
 Owner: Rocco (teacher). He is new to Claude Code and git: explain in plain words, ask before anything destructive, and never use jargon without a one-line explanation.
 
-**New chat? Read `docs/HANDOVER.md` next** (latest state, decisions, open items).
+**New chat? Read `docs/HANDOVER.md` next** (latest state, decisions, open items). Background build queue: `docs/QUEUE.md`.
 
 ## What this repo is
 The standalone **Year 12 General Maths (12MAG) course planner** (GitHub Pages: roccatalano.github.io/12mag/). Moved here 14 Nov 2026 from `roccatalano/teaching-dashboard-2027` (which still shows 12MAG on Rocco's personal dashboard for now — don't change that repo unless asked).
