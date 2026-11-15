@@ -147,7 +147,7 @@ _Notes for all AoS 2–4 runners (Rocco, 16 Nov):_
 10. `done 16 Nov 10:37 — Ch13 test + solutions (8 pages each, /45, HTML+PDF, Draft): Mathspace Ch 8 topic assessment Q1–20 + Ch 9 Q3, Q4, Q5, Q10 (shortest path/Dijkstra), verbatim, graphs cropped; 24 ledger rows; on G: and the ch13-test card; tests.json re-run` **Chapter 13 test** + solutions (model `tools/test/ch5/build.py`) from the Mathspace Ch 8 topic assessment (Graphs and networks), plus any Ch 13 content in the Mathspace Ch 9 assessment (e.g. shortest path). Add to the gm12-ch13-test card; run `python3 tools/test/details.py`. If it can't be built from what's there, mark `needs Rocco`.
 
 ### Chapter 14: Flow, matching and scheduling (lessons gm12-u4-14a, gm12-u4-14b, gm12-u4-14c, gm12-u4-14d, gm12-u4-14e; check gm12-ch14-test)
-11. `todo` **Plan Chapter 14**: lesson split, titles, learning intentions, success criteria, coursework (gm12-u4-14a, gm12-u4-14b, gm12-u4-14c, gm12-u4-14d, gm12-u4-14e; see notes above). Update the lesson ids/list below if you split or merge.
+11. `in progress 16 Nov 10:45` **Plan Chapter 14**: lesson split, titles, learning intentions, success criteria, coursework (gm12-u4-14a, gm12-u4-14b, gm12-u4-14c, gm12-u4-14d, gm12-u4-14e; see notes above). Update the lesson ids/list below if you split or merge.
 12. `todo` **Prefill the lesson cards** (gm12-u4-14a, gm12-u4-14b, gm12-u4-14c, gm12-u4-14d, gm12-u4-14e) in `planner/unit-plan.json` (see notes above).
 13. `todo` **CFATs for Chapter 14** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch14/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
 14. `todo` **CFAT follow-ups for Chapter 14** (Jacaranda exercises; see notes above).
