@@ -9,6 +9,8 @@ Status words: `todo` · `in progress <date time>` · `done <date> — what was m
 A task `in progress` for more than 3 hours is treated as crashed: set it back to `todo` and note it.
 Everything made is **Draft** on the planner. Nothing is marked Ready by the runner.
 
+**Timing log (Rocco, 15 Nov):** every run adds one row to the Run log at the bottom when it finishes (or stops early): task, start and finish time (Sydney), minutes taken, result, and anything that slowed it (e.g. new chart type built, usage limit hit, G: unreachable). If the session offers a way to see usage (e.g. the explain-usage skill), add the tokens used too; otherwise leave that cell blank.
+
 ## Chapter 2: Investigating associations between two variables (lessons gm12-u3-l03 … l08, check gm12-u3-ch2-test)
 1. `done 2026-11-15 — l03–l08 cards prefilled: Do Now ×4 each (burnt ones replaced), You trys mapped, coursework Q ranges, CAS steps (scatterplot, r, r²), Ch2 videos (draft); 46 items reserved in the ledger` **Prefill the lesson cards** (l03–l08) in `planner/unit-plan.json` from the indexes, following the rules in CLAUDE.md: Do Now ×4 per lesson (current-design VCAA from `tools/vcaa_current_index.csv`, not burnt), APK (Cambridge U1&2 skills checklist + Edrolo U1&2 exam questions), Examples (Cambridge) with mapped Edrolo You trys, exits (Edrolo U3&4 exam practice), CAS skill ids (add new skills to `planner/cas-skills.json`, steps checked against `02 Sources\CAS guides`), coursework (Cambridge exercises), self-study videos (`planner/videos.json`, MaffsGuru first; status `draft` until Rocco checks). Reserve every chosen exam item in the ledger (`tools/ledger_manual.csv`, role as planned) so later tasks don't reuse it.
 2. `todo` **CFATs for Chapter 2** + solutions (Edrolo U3&4 exercise questions only: `tools/y12_edrolo_exercise_questions.csv`; Word layout per the 12mag-cfat-word skill if listed, otherwise as CFAT 1.1.x). Add them to the planner.
@@ -32,3 +34,8 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 ## Later chapters (Rocco adds each when he's ready)
 - Chapter 1 leftovers: rebuild S3–S5 slides on the templates; worksheets S2–S5 on ws2.py; CFAT 1.1.1–1.1.3 solutions; Ch 1 test.
 - Chapters 3, 4, 5, 7, 8: same task pattern as Chapter 2.
+
+## Run log
+| Task | Start | Finish | Minutes | Tokens | Result / what slowed it |
+|---|---|---|---|---|---|
+| Ch2 #1 Prefill | 2026-11-15 16:52 | | | | |
