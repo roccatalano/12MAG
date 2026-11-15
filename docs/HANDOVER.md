@@ -13,6 +13,14 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 2. **Guided worksheet:** rewrite `tools/deck/s2/worksheet.py` on `tools/deck/ws2.py`, copying the shape of `tools/deck/s1/worksheet.py` (rules: CLAUDE.md "Guided worksheets"). The current S2 worksheet is the old wslib style: replace it, same file names (G: `1C-1E worksheet(.pdf)`, `1C-1E worksheet solutions(.pdf)`). Fewest pages without cramming (3 subchapters, roughly 6 pages).
 3. Then review the Lesson 2 planner card (Do Now, APK, examples/you trys, exits, coursework match the slides).
 
+## Done 15 Nov (16:xx): Lesson 2 slides rebuilt on the templates — AWAITING ROCCO'S REVIEW
+- `tools/deck/s2/build.py` → `lessons/S2-slides.html` (39 slides) + PDF (63 pages); G: `1C-1E slides.html/.pdf`. Screenshots `tools/deck/s2/shoot.py`. Sources + report %s in the build docstring (all checked against the PDFs on G:).
+- Do Now now 4: + VCAA 2024 E1 Q1 (78%). % fixed: 2023 E2 Q1a 50%, Q2ai 95%; exits 93% / 87% / 71% with distractors. Exit questions use the original VCAA wording. 'Homework' → Coursework; Key ideas, check-in, videos slides added.
+- Template additions: `data-show` + hidden dots (dot3 cfg `hid`) / leaves (class `hid0`) for building dot and stem plots step by step; bar/dot highlights (rect.hy …); TMPL 4th item = attrs for the turn-green click (e.g. data-stat); `.dlist` data grids; `table.t.cmp` compact tables.
+- Ledger re-run (HANDOFF rows kept). Planner S2 Do Now updated.
+- Open questions for Rocco: planner APK also lists Edrolo U1&2 1C Q15/Q17 (VCAA 2017 E2 Q2b, 2016 E2 Q1d) — not used on the slides (kept the 3 Cambridge APKs); planner CAS lists 'dotplot' but no CAS dot-plot slide (ClassPad steps unconfirmed); WE9 gestation bar heights are read off Cambridge's figure.
+- Next: Rocco's feedback on S2 slides → then S2 guided worksheet on ws2.py.
+
 ## Done 15 Nov (to 15:55): Lesson 1 guided worksheet — READY
 - `tools/deck/s1/worksheet.py` on the new library `tools/deck/ws2.py` (CFAT / revision-booklet style). Many rounds of Rocco's feedback, all captured as rules in CLAUDE.md "Guided worksheets" (header + page numbers, split Example/You try boxes, scaffolded Examples vs blank You trys, CFAT dashed separators, VCAA source in box headers, no references/CAS/notes/guess boxes, coursework box with Due lines and signatures). Real sources are in the script's docstring.
 

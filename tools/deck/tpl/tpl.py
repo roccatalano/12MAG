@@ -116,7 +116,7 @@ def qslide(kind,pill,head,given,steps,answer,src,stat=None,mc=None,key=None,dist
             if lab=='ANS': R+=f'<li class="frag ans" style="order:{v}" {att}><span class="wn">✓</span><span class="sl">Answer</span>{txt}</li>'
             else:
                 n+=1; R+=f'<li class="frag" style="order:{v}" {att}><span class="wn">{n}</span><span class="sl">{lab}</span>{txt}</li>'
-        if tm: v+=1; R+=f'<li class="frag tdone" data-tmpl="done:{tk}" style="display:none"></li>'
+        if tm: v+=1; R+=f'<li class="frag tdone" data-tmpl="done:{tk}" style="display:none" {(tm[0]+("","",""))[3]}></li>'  # 4th item: attrs for the click that turns it green (e.g. data-stat)
     if any('data-pk' in ((st+('',))[2] or '') for st in steps): R+='<li class="frag" data-pall="1" style="display:none"></li>'  # end: everything back in full
     R+='</ol>'+(f'<div class="made">{made}</div>' if made else '')+'<ol class="wk">'
     sa=f' data-stat="{stat[1]}"' if stat and len(stat)>1 else ''

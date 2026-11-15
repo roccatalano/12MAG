@@ -198,3 +198,13 @@
 .T .chart.noax svg>*:not(rect){opacity:0}
 .T .cw ul.tick li{font-size:20px;padding:7px 0 7px 36px}
 .T .cw .cwn{font-size:20px;font-weight:700;color:var(--ink);margin:2px 0 4px}
+
+/* Lesson 2: hidden-until-shown items (stem leaves, dots) and highlighted SVG bars/dots */
+.T .hid{opacity:0!important}
+.T .lf2,.T circle.d3{transition:opacity .35s}
+.T rect.hy{fill:#f2c200!important}.T rect.hb{fill:#2f6fdf!important}.T rect.hg{fill:#1f9e74!important}.T rect.hc{fill:#c0632b!important}
+.T circle.hy{fill:#d9b100!important}.T circle.hb{fill:#2f6fdf!important}.T circle.hg{fill:#1f9e74!important}
+.T .dlist{display:grid;gap:2px 10px;justify-content:center;font-variant-numeric:tabular-nums}
+.T .dlist span{padding:1px 5px;text-align:right}
+.T table.t.cmp td,.T table.t.cmp th{padding-top:3px;padding-bottom:3px}
+.T .tmpl .stem3,.T .tmpl .stemcap{color:#1d2330}.T .tmpl .stemcap{background:#fff;display:inline-block;padding:2px 8px;border-radius:6px}
