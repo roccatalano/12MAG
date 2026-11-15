@@ -1,8 +1,17 @@
-# 12MAG handover — 15 Nov 2026
+# 12MAG handover — 15 Nov 2026 (updated 12:15)
 
 Read `CLAUDE.md` first (rules, item index, **slide template rules**), then this file.
 Repo: `roccatalano/12MAG` (GitHub Pages: roccatalano.github.io/12mag/ → `planner/`). Rocco's dashboard repo `roccatalano/teaching-dashboard-2027` is read-only unless he asks.
 Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through the desktop-app bridge (stage files to read; commit files to write; can't move/rename/delete).
+
+## NEXT JOB: suggested bound reference summaries (one per lesson)
+Rule 2: every lesson gets a **bound reference entry** = one A4 sheet students can put in their single bound reference (allowed in CFATs, SACs and the exams): key ideas, key formulas, simple how-tos and examples. Planner material: "Bound reference entry" (status `todo` on every lesson card).
+- **Start with Chapter 1** (lessons S1–S5: 1A–1I). None are made yet, including 1G.
+- **Content comes from what's already built:** each lesson's Key definitions/formulas slide, Learn slides (own words, cite Cambridge) and CAS steps (`tools/deck/s4/build.py`, `tools/deck/s5/build.py`; S1–S3 are the old layout but have the same content). Short worked "how-to" examples should use the Cambridge Examples already on the slides (cite them). Never write new questions.
+- **Before building, ask Rocco:** (1) one sheet per lesson or one per subchapter; (2) look: match the slides (blue/teal, white cards) or plain black-and-white for photocopying; (3) one side or two; (4) check `02 Sources\Bound references` on G: for any existing example or school format first.
+- **Format:** A4 HTML that opens as A4 pages (inline `a4view.js` + `paged.polyfill.min.js`, see `tools/revision/ch1/build.py`) + a PDF. Save as `lessons/<sub> bound reference.html/.pdf` style names here, and flat on G: as `01 Lesson materials\<subchapters> bound reference.pdf` (e.g. `1H-1I bound reference.pdf`). Then set each card's Bound reference material (`file`, `pdf`, status) in `planner/unit-plan.json`.
+- Normal curves: reuse `drawNorm` from `tools/deck/tpl/tpl.js` (static, with `sh` shading). Boxplots: `drawBox` in `tools/deck/engine.html`.
+- Check every page visually before handing over (rule 12).
 
 ## Done 15 Nov: Lesson 5 slides (1H–1I)
 - `lessons/S5-slides.html` (34 slides), also `01 Lesson materials\1H-1I slides.html` on G:. Build: `tools/deck/s5/build.py` (screenshots: `tools/deck/s5/shoot.py`).
