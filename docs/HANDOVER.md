@@ -1,4 +1,4 @@
-# 12MAG handover — 15 Nov 2026 (updated 15:10)
+# 12MAG handover — 15 Nov 2026 (updated 15:45)
 
 Read `CLAUDE.md` first (rules, item index, **slide template rules**), then this file. The full to-do list is `docs/TODO.md`.
 Repo: `roccatalano/12MAG` (GitHub Pages: roccatalano.github.io/12mag/ → `planner/`). Rocco's dashboard repo `roccatalano/teaching-dashboard-2027` is read-only unless he asks.
@@ -50,11 +50,11 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 - Tree reveals branch by branch; CAS slides static (template); % frequency formula on the left in one row; chart axes hidden until the Axes step; coursework as tick boxes; rules in CLAUDE.md.
 - **Rocco: S1 slides READY** (planner status ready). PDF made with the new `tools/deck/pdf.py` (44 pages): question slides = question frame + final frame, other slides final frame only.
 
-## Done 15 Nov (15:10): Lesson 1 guided worksheet rebuilt (Draft, awaiting Rocco's review)
-- `tools/deck/s1/worksheet.py` → `lessons/S1-worksheet(.html/.pdf)` + `S1-worksheet-solutions(.html/.pdf)`, 4 pages each; G: `1A-1B worksheet(.pdf)`, `1A-1B worksheet solutions(.pdf)`. Planner card has Student copy / Solutions.
-- **New rules (Rocco, 15 Nov, in CLAUDE.md "Guided worksheets"):** limit = 1 double-sided sheet per subchapter; no CAS and no Key ideas on worksheets (bound reference only).
-- Space-savers to show Rocco: heptathlon table transposed (noted in cite); Ex 4, Ex 5 and You try 1B WE3 point back to the table in Ex 3 / You try 1B WE2 instead of reprinting it; answer blanks sit at the end of each part line.
-- Older worksheets S2–S5 still have CAS/Key ideas boxes (TODO).
+## Done 15 Nov (15:45): Lesson 1 guided worksheet, round 2 (Draft, awaiting Rocco's review)
+- Rocco: "excellent", then asked for the CFAT / revision-booklet look: header (VCE General Maths 3&4 · AoS 1 · Data analysis), page numbers, simple title box, no references except VCAA sources, 'Example n' / 'You try n' headings, blank space instead of ruled lines. Rules in CLAUDE.md "Guided worksheets".
+- New library `tools/deck/ws2.py`; `tools/deck/s1/worksheet.py` rewritten on it → `lessons/S1-worksheet(-solutions).html/.pdf`, 4 pages each; G: `1A-1B worksheet(.pdf)`, `1A-1B worksheet solutions(.pdf)`.
+- Space-savers: heptathlon table turned (noted in its source line); Ex 4, Ex 5 → '(Table: see Example 3.)'; You try 4 → '(Table: see You try 3.)'; Example 1 and You try 1 are full-width boxes (one above the other).
+- Older worksheets S2–S5 are still in the old style (wslib.py) with CAS/Key ideas boxes: rebuild on ws2 (TODO).
 
 ## >>> NEXT JOB: Rocco reviews the S1 worksheet; then Lesson 1 bound reference (cards 1A, 1B) → planner card review <<<
 

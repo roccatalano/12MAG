@@ -35,7 +35,7 @@ For each lesson: slides → worksheet (student + solutions) → bound reference 
 8. Consistency: slides, worksheet and bound reference say the same thing; planner links open the right files.
 
 **Known issues already found**
-- [ ] Worksheet page counts (new limit 2 pages per subchapter): 1C–1E 6 = OK; 1H–1I 5 (limit 4); 1G solutions 5 (limit 2). Also remove their CAS and Key ideas boxes (now bound-reference only)
+- [ ] Worksheet page counts (new limit 2 pages per subchapter): 1C–1E 6 = OK; 1H–1I 5 (limit 4); 1G solutions 5 (limit 2). Rebuild S2–S5 worksheets on tools/deck/ws2.py (new style, no CAS/Key ideas)
 - [ ] 1G worksheet: red answers sit across the ruled lines (old layout; S2/S3/S5 fixed)
 - [ ] 1H–1I worksheet: Key ideas box and learning intentions are summaries, not slide text
 - [ ] 1I bound reference: thin half card (no examples or VCAA) — keep separate or merge into 1H?

@@ -55,9 +55,12 @@ Build a lesson with a `tools/deck/<S#>/build.py` that only fills content into th
 - **Slide PDF** (Rocco, 15 Nov): `python3 tools/deck/pdf.py lessons/S#-slides.html lessons/S#-slides.pdf`. Question slides (Do Now, APK, WE, You try, exit) → 2 pages (question only, then the final frame); everything else → the final frame only. Copy to G: as `<subs> slides.pdf`.
 
 ## Guided worksheets (Rocco, 15 Nov)
-- Build with `tools/deck/<s#>/worksheet.py` on `tools/deck/wslib.py` (model: `tools/deck/s1/worksheet.py`) → student + solutions copies (html + PDF). G: names `<subs> worksheet(.pdf)`, `<subs> worksheet solutions(.pdf)`.
+- Build with `tools/deck/<s#>/worksheet.py` on **`tools/deck/ws2.py`** (CFAT / revision-booklet style; model: `tools/deck/s1/worksheet.py`) → student + solutions copies (html + PDF). G: names `<subs> worksheet(.pdf)`, `<subs> worksheet solutions(.pdf)`. (`wslib.py` = the old ruled-line style used by S2–S5; move them to ws2.)
 - **Page limit: one double-sided A4 sheet (2 pages) per subchapter** (a 3-subchapter lesson gets 6 pages). Student and solutions copies must have the same page count.
 - **Questions only, in slide order:** learning intentions → APK → Example/You try pairs → exits ('guess the %') → skills checklist + coursework. **No CAS steps and no Key ideas / learning notes**: those live in the bound reference (Rocco walks around and checks CAS set-ups).
+- **Look:** running header 'VCE General Maths 3&4' (left) and the AoS (right, e.g. 'AoS 1 · Data analysis'); 'Page n of N' at the bottom. Title box = subchapters + title only. Every question in its own box ('Question n' for APK, 'Example n · <Cambridge example title>' beside 'You try n', 'Exit task n'). **Blank working space, never ruled answer lines**; tables, chart grids and boxed report templates where the answer is a table/chart/report. Solutions = the same layout with answers in red (MC: red ✓ + one-line why).
+- **References:** none on Examples, You trys or the Cambridge APK. Exam questions show only the VCAA source (e.g. 'VCAA 2021 Exam 1 Q1'), never Edrolo. Keep the real sources in the build script's docstring.
+- A table repeated from an earlier box may be replaced by '(Table: see Example 3.)' to save space.
 
 ## Bound reference entries (Rocco, 15 Nov)
 - **One card per subchapter**, in colour, with dashed cut lines so it can be trimmed and stuck in the top left of a double page in the student's A4 bound reference (the rest of the double page is for their own notes). The lesson card's "Bound reference entry" links that lesson's subchapter cards (single or combined for printing).
