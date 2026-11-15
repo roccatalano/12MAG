@@ -87,7 +87,7 @@ _Notes for all AoS 2–4 runners (Rocco, 16 Nov):_
 9. `done 16 Nov 10:28 — Ch7 test + solutions (Mathspace Ch 5 depreciation and interest topic assessment, 20 Qs /39, verbatim, 5 pages each), Draft, on G: + l36 card (replaced the placeholder Ch2 test link); tests.json updated` **Chapter 7 test** + solutions (model `tools/test/ch5/build.py`) from the Mathspace Ch 5 topic assessment (Depreciation and interest). Add to the gm12-u3-l36 card; run `python3 tools/test/details.py`. If it can't be built from what's there, mark `needs Rocco`.
 
 ### Chapter 8: Reducing balance loans, annuities and investments (lessons gm12-u3-l37, gm12-u3-l38, gm12-u3-l39, gm12-u3-l40, gm12-u3-l41, gm12-u3-l42, gm12-u3-l43, gm12-u3-l44, gm12-u3-l45; check gm12-u3-l46)
-10. `todo` **Prefill the lesson cards** (gm12-u3-l37, gm12-u3-l38, gm12-u3-l39, gm12-u3-l40, gm12-u3-l41, gm12-u3-l42, gm12-u3-l43, gm12-u3-l44, gm12-u3-l45) in `planner/unit-plan.json` (see notes above).
+10. `in progress 16 Nov 10:35` **Prefill the lesson cards** (gm12-u3-l37, gm12-u3-l38, gm12-u3-l39, gm12-u3-l40, gm12-u3-l41, gm12-u3-l42, gm12-u3-l43, gm12-u3-l44, gm12-u3-l45) in `planner/unit-plan.json` (see notes above).
 11. `todo` **CFATs for Chapter 8** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch8/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
 12. `todo` **CFAT follow-ups for Chapter 8** (Jacaranda exercises; see notes above).
 13. `todo` **Lesson gm12-u3-l37 (8A)**: slides (`tools/deck/gm12-u3-l37/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
