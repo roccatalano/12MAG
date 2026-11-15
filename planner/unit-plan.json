@@ -10347,6 +10347,23 @@
             "pdf": "lessons/CFAT 3.10.3 (10F-10G) solutions.pdf"
            }
           ]
+         },
+         {
+          "kind": "Revision booklet",
+          "desc": "Insight GM1 + GM2 matrices questions (28 MC + 9 short answer), one section per subchapter (10A–10G).",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/Ch10-revision-booklet.html",
+            "pdf": "lessons/Ch10-revision-booklet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/Ch10-revision-booklet-solutions.html",
+            "pdf": "lessons/Ch10-revision-booklet-solutions.pdf"
+           }
+          ]
          }
         ]
        }
