@@ -57,17 +57,17 @@ CLIM = ftab('Climate type', [('Cold', 3, '13.0'), ('Mild', 14, '60.9'), ('Hot', 
 TQ = '24 students in a prep class were asked the question, ‘Would you describe your teacher’s height as short, average or tall?’. Their responses are recorded in the frequency table shown.'
 P.append(exyt('Example 3 · Constructing a bar chart from a frequency table', q('The climate type of 23 countries is classified as ‘cold’, ‘mild’ or ‘hot’. The results are summarised in the table opposite.') + CLIM
       + parts([('a', 'What is the level of measurement of the variable <i>climate type</i>?', 'Ordinal', 'L'),
-               ('b', 'Construct a frequency bar chart to display this information.' + barchart(['Cold', 'Mild', 'Hot'], [3, 14, 6], 15, 5, 'Climate type', 'Frequency', draw=False, H=125, mm=68), '', 0)]),
+               ('b', 'Construct a frequency bar chart to display this information.' + barchart(['Cold', 'Mild', 'Hot'], [3, 14, 6], 15, 5, 'Climate type', 'Frequency', draw=False, H=110, mm=60), '', 0)]),
   'You try 3', q(TQ) + THT_A + q('Use the frequency table to construct a frequency bar chart.')
-      + space(50, barchart(['short', 'average', 'tall'], [6, 10, 8], 10, 2, 'teacher’s height', 'frequency', H=125, mm=68), grow=True)))
+      + space(40, barchart(['short', 'average', 'tall'], [6, 10, 8], 10, 2, 'teacher’s height', 'frequency', H=110, mm=60), grow=True)))
 
 P.append(exyt('Example 4 · Constructing a percentage segmented bar chart', q('The climate type of 23 countries is classified as ‘cold’, ‘mild’ or ‘hot’.')
       + CLIM + q('Construct a percentage frequency segmented bar chart to display this information.')
       + segbar([13.0, 60.9, 26.1], ['Cold', 'Mild', 'Hot'], 100, 10, 'Percentage', draw=False, W=220, H=170, mm=58)
       + space(16, 'Cold: 0 to 13.0 · Mild: 13.0 to 13.0 + 60.9 = 73.9 · Hot: 73.9 to 100'),
   'You try 4', q(TQ) + THT_A
-      + parts([('a.', 'Use the frequency table to construct a segmented bar chart.', segbar([6, 10, 8], ['short', 'average', 'tall'], 24, 4, 'frequency', W=200, H=115, mm=38), 26),
-               ('b.', 'Use the frequency table to construct a percentage segmented bar chart.', segbar([25, 41.7, 33.3], ['short', 'average', 'tall'], 100, 20, 'frequency (%)', W=200, H=115, mm=38), 26)])))
+      + parts([('a.', 'Use the frequency table to construct a segmented bar chart.', segbar([6, 10, 8], ['short', 'average', 'tall'], 24, 4, 'frequency', W=200, H=130, mm=44), 34),
+               ('b.', 'Use the frequency table to construct a percentage segmented bar chart.', segbar([25, 41.7, 33.3], ['short', 'average', 'tall'], 100, 20, 'frequency (%)', W=200, H=130, mm=44), 34)])))
 
 P.append(exyt('Example 5 · Describing the distribution of a categorical variable', q('In an investigation of the variation of climate type across countries, the climate types of 23 countries were classified as ‘cold’, ‘mild’ or ‘hot’. The data are displayed in a frequency table to show the percentages.')
       + CLIM + q('Use the information in the frequency table to write a concise report on the distribution of climate types across these 23 countries.')

@@ -40,7 +40,7 @@ body {{ font-family:Arial,"Liberation Sans",Helvetica,sans-serif; font-size:10pt
 .mc .ok {{ display:none; color:{RED}; font-weight:bold; }} .sol .mc .right .ok {{ display:inline; }} .sol .mc .right span {{ color:{RED}; }}
 .why {{ visibility:hidden; color:{RED}; font-size:8.6pt; line-height:1.2; }} .sol .why {{ visibility:visible; }}
 .wl {{ border-bottom:1px solid #777; height:8mm; margin:.5mm 0 1mm; display:flex; align-items:flex-end; padding-bottom:.6mm; }}
-.ey .eyh {{ display:grid; grid-template-columns:1fr 1fr; border-bottom:1.2px solid #000; background:#eee; font-weight:bold; font-size:10pt; text-transform:uppercase; letter-spacing:.3px; }}
+.ey .eyh {{ display:grid; grid-template-columns:1fr 1fr; border-bottom:1.2px solid #000; background:#eee; font-weight:bold; font-size:8.8pt; text-transform:uppercase; letter-spacing:.3px; }}
 .ey .eyh > div {{ padding:1mm 3mm; }} .ey .eyh > div:first-child, .ey .eyb > div:first-child {{ border-right:1.2px solid #000; }}
 .ey .eyb {{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); flex:1; }}
 .ey .eyb > .bd {{ padding:2mm 3mm; display:flex; flex-direction:column; }}
@@ -73,7 +73,7 @@ table.t .a {{ color:{RED}; visibility:hidden; }} .sol table.t .a {{ visibility:v
 .sig {{ display:flex; gap:4mm; margin-top:2mm; }}
 .stamp {{ width:30mm; height:15mm; border:1.2px dashed #000; font-size:8pt; color:#555; display:flex; align-items:flex-end; justify-content:center; flex:none; }}
 .sig .ln {{ flex:1; display:flex; flex-direction:column; justify-content:space-around; font-size:9pt; }}
-.sig .ln div {{ display:flex; gap:2mm; align-items:flex-end; }} .sig .ln i {{ flex:1; border-bottom:1px solid #000; height:5mm; }} .sig .ln i.d {{ flex:none; width:24mm; }}
+.sig .ln div {{ display:flex; gap:2mm; align-items:flex-end; }} .sig .ln span {{ white-space:nowrap; }} .sig .ln i {{ flex:1; min-width:15mm; border-bottom:1px solid #000; height:6mm; }} .sig .ln i.d {{ flex:none; width:18mm; min-width:0; }}
 .lis {{ column-count:2; column-gap:6mm; margin:0; padding-left:4mm; font-size:8.8pt; line-height:1.2; }} .lis li {{ margin:0; }} .lis li {{ break-inside:avoid; }}
 """
 
@@ -106,6 +106,7 @@ def mc(opts, key, cols=1):
         f'<div class="{"right" if "ABCDE"[i] == key else ""}"><b>{"ABCDE"[i]}.</b><span>{o}</span><span class="ok">&nbsp;✓</span></div>' for i, o in enumerate(opts)) + '</div>'
 def why(t): return f'<div class="why">{t}</div>'
 def guess(a, mcq=True):
+    return ''  # Rocco, 15 Nov: 'guess the %' boxes removed from worksheets (clutter)
     return f'<div class="guess" data-a="{a}">Guess the % of students who got this right <i></i>' + (' &nbsp; Most common wrong answer <i style="width:9mm"></i>' if mcq else '') + '</div>'
 def table(rows, head=True, cls='t', style=''):
     out = f'<table class="{cls}" style="{style}">'
@@ -126,7 +127,7 @@ def close(SC, cols, rev):
     ck = box('Skills checklist', '<div class="scg">' + ''.join(f'<div class="sc"><div class="tick"></div><div><b>{i}.</b> {s}</div></div>' for i, s in enumerate(SC, 1)) + '</div>', 'Tick when you can')
     cw = box('Coursework · Cambridge exercises', f'<div class="hwg" style="grid-template-columns:repeat({len(cols)+1},1fr)">' + ''.join(f'<div><div class="hwh">{h}</div><div>{t}</div><div class="tick"></div></div>' for h, t in cols)
              + f'<div><div class="hwh">Revision booklet</div><div>{rev}</div><div class="tick"></div></div></div>'
-             '<div class="sig"><div class="stamp">Teacher stamp</div><div class="ln"><div>Teacher signature <i></i> Date <i class="d"></i></div><div>Parent signature <i></i> Date <i class="d"></i></div></div></div>', 'Tick when done')
+             '<div class="sig"><div class="stamp">Teacher stamp</div><div class="ln"><div><span>Student signature</span><i></i></div><div><span>Parent signature</span><i></i></div><div><span>Date</span><i></i></div></div></div>', 'Tick when done')
     return f'<div class="pair" style="grid-template-columns:.85fr 1.15fr">{ck}{cw}</div>'
 
 # ---------------------------------------------------------------- figures (static SVG)
