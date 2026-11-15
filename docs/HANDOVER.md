@@ -1,4 +1,4 @@
-# 12MAG handover — 15 Nov 2026 (updated 13:25)
+# 12MAG handover — 15 Nov 2026 (updated 15:10)
 
 Read `CLAUDE.md` first (rules, item index, **slide template rules**), then this file. The full to-do list is `docs/TODO.md`.
 Repo: `roccatalano/12MAG` (GitHub Pages: roccatalano.github.io/12mag/ → `planner/`). Rocco's dashboard repo `roccatalano/teaching-dashboard-2027` is read-only unless he asks.
@@ -50,17 +50,13 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 - Tree reveals branch by branch; CAS slides static (template); % frequency formula on the left in one row; chart axes hidden until the Axes step; coursework as tick boxes; rules in CLAUDE.md.
 - **Rocco: S1 slides READY** (planner status ready). PDF made with the new `tools/deck/pdf.py` (44 pages): question slides = question frame + final frame, other slides final frame only.
 
-## >>> NEXT JOB (start here): finalise the Lesson 1 GUIDED WORKSHEET (1A–1B) <<<
-Slides are DONE and **Ready** (`lessons/S1-slides.html` + vector PDF `S1-slides.pdf`, 44 pages, via `tools/deck/pdf.py`; G: `1A-1B slides.html/.pdf`). The worksheet must now mirror them exactly.
+## Done 15 Nov (15:10): Lesson 1 guided worksheet rebuilt (Draft, awaiting Rocco's review)
+- `tools/deck/s1/worksheet.py` → `lessons/S1-worksheet(.html/.pdf)` + `S1-worksheet-solutions(.html/.pdf)`, 4 pages each; G: `1A-1B worksheet(.pdf)`, `1A-1B worksheet solutions(.pdf)`. Planner card has Student copy / Solutions.
+- **New rules (Rocco, 15 Nov, in CLAUDE.md "Guided worksheets"):** limit = 1 double-sided sheet per subchapter; no CAS and no Key ideas on worksheets (bound reference only).
+- Space-savers to show Rocco: heptathlon table transposed (noted in cite); Ex 4, Ex 5 and You try 1B WE3 point back to the table in Ex 3 / You try 1B WE2 instead of reprinting it; answer blanks sit at the end of each part line.
+- Older worksheets S2–S5 still have CAS/Key ideas boxes (TODO).
 
-**Current worksheet** `lessons/S1-worksheet.html/.pdf` (G: `1A-1B worksheet`): old, 6 pages (limit 4 = 2 double-sided sheets), student copy only, no build script, built for the OLD deck (old 1A You try = Edrolo 1A Q11; old 1B Learn used invented '40 students travel' data) → **rebuild, don't patch.**
-
-**How:** new `tools/deck/s1/worksheet.py` on `tools/deck/wslib.py` (copy the shape of `tools/deck/s3/worksheet.py` / `s5/worksheet.py`; shared CSS `tools/deck/s4/ws.css`). Outputs student + solutions (html + PDF). G: names `1A-1B worksheet(.pdf)` and `1A-1B worksheet solutions(.pdf)`. Planner card `gm12-u3-s1` → Guided worksheet gets `copies: [Student copy, Solutions]`, status stays `draft` until Rocco says Ready.
-
-**Order = the slides (no Do Now in Lesson 1):** APK (Cambridge U1&2 2A #1 coffee shop a–d; VCAA 2021 E1 Q1, 70%; VCAA 2020 E1 Q10, 57%) → 1A types of variable (tree + two tests) → WE1 (Cambridge Ex 1 a–e) / You try Edrolo 1A WE1–3 (numbered 1–3, parts a–b) → CAS set-up (stats-list from `planner/cas-skills.json`) → 1B frequency table (study mode 27/33 of 60) → WE2 (Ex 2 ice cream, 11) / YT Edrolo 1B WE1 (teacher height, 24) → bar chart → WE3 (Ex 3 climate a ordinal, b bar chart) / YT 1B WE2 → segmented bar → WE4 (Ex 4 % segmented) / YT 1B WE3 (a seg, b % seg) → describing (report template, three parts) → WE5 (Ex 5 report) / YT 1B WE4 (a mode, b report) → exits (VCAA 2019 E2 Q1a 83%, 2021 E2 Q1a 52%, 2017 E1 Q5 adapted 76%; 'guess the %' like S2–S5) → skills checklist (the 5 success criteria) → coursework (from the planner card: Ex 1A Q1–6, Ex 1B Q1–9 with skills, Ch 1 revision booklet 1A + 1B sections).
-
-**Carry over from the slides:** exact wording and citations in `tools/deck/s1/build.py` (all verbatim-checked 15 Nov); exam questions titled by VCAA source; student copy = blank templates (empty frequency tables, blank axes, report template with blanks); solutions = filled in red like S2–S5.
-Same checks as the slides: verbatim, citations, % from reports, maths, 4-page limit, visual check of every page (student + solutions), consistency with slides. Show Rocco a findings/preview before marking anything Ready.
+## >>> NEXT JOB: Rocco reviews the S1 worksheet; then Lesson 1 bound reference (cards 1A, 1B) → planner card review <<<
 
 After the worksheet: Lesson 1 bound reference (`tools/bref`, cards 1A, 1B) → planner card review. Older list below.
 

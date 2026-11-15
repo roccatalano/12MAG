@@ -54,6 +54,11 @@ Build a lesson with a `tools/deck/<S#>/build.py` that only fills content into th
 
 - **Slide PDF** (Rocco, 15 Nov): `python3 tools/deck/pdf.py lessons/S#-slides.html lessons/S#-slides.pdf`. Question slides (Do Now, APK, WE, You try, exit) → 2 pages (question only, then the final frame); everything else → the final frame only. Copy to G: as `<subs> slides.pdf`.
 
+## Guided worksheets (Rocco, 15 Nov)
+- Build with `tools/deck/<s#>/worksheet.py` on `tools/deck/wslib.py` (model: `tools/deck/s1/worksheet.py`) → student + solutions copies (html + PDF). G: names `<subs> worksheet(.pdf)`, `<subs> worksheet solutions(.pdf)`.
+- **Page limit: one double-sided A4 sheet (2 pages) per subchapter** (a 3-subchapter lesson gets 6 pages). Student and solutions copies must have the same page count.
+- **Questions only, in slide order:** learning intentions → APK → Example/You try pairs → exits ('guess the %') → skills checklist + coursework. **No CAS steps and no Key ideas / learning notes**: those live in the bound reference (Rocco walks around and checks CAS set-ups).
+
 ## Bound reference entries (Rocco, 15 Nov)
 - **One card per subchapter**, in colour, with dashed cut lines so it can be trimmed and stuck in the top left of a double page in the student's A4 bound reference (the rest of the double page is for their own notes). The lesson card's "Bound reference entry" links that lesson's subchapter cards (single or combined for printing).
 - **Half A4 by default; full A4 if it doesn't fit.** One fixed text size for every card (never scale fonts to fill). Fill spare space with useful content, e.g. a VCAA question.

@@ -3,7 +3,7 @@
 Tick items off here as they are done. Everything made so far is **Draft** on the planner; nothing goes to Ready until it has passed review.
 
 ## A. Create — Chapter 1 (finish the chapter)
-- [ ] S1 (1A–1B) worksheet: solutions copy (only the student copy exists)
+- [x] S1 (1A–1B) worksheet rebuilt with solutions copy (15 Nov)
 - [ ] CFAT 1.1.1, 1.1.2, 1.1.3: solutions copies (planner shows "To make")
 - [ ] CFAT follow-ups (Jacaranda exercises) for each CFAT
 - [ ] Chapter 1 test (Mathspace topic assessment) — the only Ch 1 material still "To make"
@@ -31,11 +31,11 @@ For each lesson: slides → worksheet (student + solutions) → bound reference 
 4. Maths: every answer and working step right; numbers in figures match the data.
 5. Rules: lesson shape order, Do Now = 2 × Exam 1 + 2 × Exam 2 current VCAA, APK sources, You try = mapped Edrolo WE, exits = Edrolo VCAA reprints, nothing burnt twice.
 6. Writing: own-words notes short and plain; no filler, no "AI voice", no made-up claims.
-7. Layout: prints on A4, page limits (worksheet ≤ 4 pages), nothing cut off, every slide step checked visually.
+7. Layout: prints on A4, page limits (worksheet ≤ 1 double-sided sheet per subchapter), nothing cut off, every slide step checked visually.
 8. Consistency: slides, worksheet and bound reference say the same thing; planner links open the right files.
 
 **Known issues already found**
-- [ ] Worksheet page counts: 1C–1E is 6 pages, 1H–1I is 5 (limit 4); 1G solutions is 5
+- [ ] Worksheet page counts (new limit 2 pages per subchapter): 1C–1E 6 = OK; 1H–1I 5 (limit 4); 1G solutions 5 (limit 2). Also remove their CAS and Key ideas boxes (now bound-reference only)
 - [ ] 1G worksheet: red answers sit across the ruled lines (old layout; S2/S3/S5 fixed)
 - [ ] 1H–1I worksheet: Key ideas box and learning intentions are summaries, not slide text
 - [ ] 1I bound reference: thin half card (no examples or VCAA) — keep separate or merge into 1H?
