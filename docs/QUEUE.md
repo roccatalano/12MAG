@@ -38,4 +38,4 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 ## Run log
 | Task | Start | Finish | Minutes | Tokens | Result / what slowed it |
 |---|---|---|---|---|---|
-| Ch2 #1 Prefill | 2026-11-15 16:52 | | | | |
+| Ch2 #1 Prefill | 2026-11-15 16:52 | 2026-11-15 17:01 | 9 | | done; logged afterwards from GitHub history |
