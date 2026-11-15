@@ -1,0 +1,131 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Ch3 test solutions</title><style>@page { size: A4; margin: 11mm 12mm 12mm 12mm; }
+* { box-sizing: border-box; }
+body { font-family: Arial, "Liberation Sans", Helvetica, sans-serif; font-size: 10.3pt; line-height: 1.32; color:#000; margin:0; }
+.title { display:flex; align-items:center; gap:4mm; border:2px solid #000; padding:2mm 4mm; margin-bottom:3mm; }
+.title .code { font-size:15pt; line-height:1.1; text-align:center; font-weight:bold; border-right:2px solid #000; padding-right:4mm; }
+.title h1 { font-size:16pt; margin:0; flex:1; }
+.title .pg { font-size:10pt; text-align:right; white-space:nowrap; }
+.box { border:1.2px solid #000; margin-bottom:3mm; break-inside: avoid; }
+.box > .hd { font-weight:bold; font-size:10.5pt; text-transform:uppercase; letter-spacing:.4px; border-bottom:1.2px solid #000; padding:1mm 3mm; background:#eee; display:flex; justify-content:space-between; white-space:nowrap; }
+.box > .hd span { text-transform:none; font-weight:normal; letter-spacing:0; }
+.box > .bd { padding:2mm 3mm; }
+ul { margin:0; padding-left:5mm; } li { margin:0.6mm 0; }
+.ki { column-count:2; column-gap:6mm; } .ki li { margin:1mm 0; break-inside:avoid; }
+.pair { display:grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); border:1.2px solid #000; margin-bottom:3mm; break-inside: avoid; }
+.pair > div:nth-child(odd) { border-right:1.2px solid #000; } .pair .hd { display:flex; align-items:center; }
+.pair .hd { font-weight:bold; border-bottom:1.2px solid #000; padding:1mm 3mm; background:#eee; font-size:10pt; }
+.pair .bd { padding:2mm 3mm; display:flex; flex-direction:column; }
+.q { margin:0 0 1.5mm; }
+.ytp { display:flex; gap:2mm; border-bottom:1px dashed #bbb; padding-top:1mm; flex-direction:column; }
+.ytp:last-child { border-bottom:none; }
+.ytp .pq { display:flex; gap:2mm; } .ytp .pq > b { min-width:4mm; }
+.sp { position:relative; } .sp > .ans { position:absolute; left:6mm; right:0; top:0; font-size:8.6pt; line-height:1.25; }
+.ans { display:none; color:#c00; font-size:10pt; }
+.sol .ans { display:block; } .mc + .ans { margin-top:-1mm; }
+.sol .ans.in { display:inline; }
+.kf { border-collapse:collapse; width:100%; }
+.kf td { border-bottom:1px solid #999; padding:1.4mm 2mm; vertical-align:middle; }
+.kf tr:last-child td { border-bottom:none; }
+.kf td:first-child { font-weight:bold; width:36mm; border-right:1px solid #999; }
+table.t { border-collapse:collapse; font-size:10pt; margin:1mm 0; }
+table.t th, table.t td { border:1px solid #000; padding:.6mm 2.5mm; text-align:center; }
+table.t th { background:#eee; } table.t .l { text-align:left; } table.t tr.tot td { font-weight:bold; }
+table.fill td { height:6.5mm; min-width:16mm; } table.fill td:first-child { min-width:22mm; text-align:left; }
+.raw { font-size:10pt; border-collapse:collapse; margin:1mm 0; } .raw td { padding:0 2mm 0 0; }
+.mc { display:grid; gap:.3mm 4mm; margin:1mm 0; } .mc b { display:inline-block; width:5mm; }
+.grid { background-image:linear-gradient(#bbb .2mm,transparent .2mm),linear-gradient(90deg,#bbb .2mm,transparent .2mm); background-size:5mm 5mm; border-right:.2mm solid #bbb; border-bottom:.2mm solid #bbb; margin:1mm auto 0; }
+.sol .grid { display:none; }
+.sol .stu { display:none; }
+.chart { display:none; text-align:center; } .sol .chart { display:block; }
+.chart.always { display:block; }
+.fig { text-align:center; }
+.row { display:flex; gap:3mm; align-items:flex-start; } .row > * { min-width:0; }
+.tpl { line-height:2.3; font-size:10.5pt; }
+.tpl .s { display:inline-block; border-bottom:1px solid #000; min-width:22mm; text-align:center; position:relative; line-height:1.2; }
+.tpl .s i { position:absolute; left:0; right:0; top:100%; font-size:7pt; font-style:normal; color:#555; text-align:center; line-height:1.2; }
+.tpl .s u { text-decoration:none; color:#c00; font-size:9.5pt; visibility:hidden; white-space:nowrap; } .sol .tpl .s u { visibility:visible; }
+.scg { display:grid; grid-template-columns:1fr 1fr; }
+.sc { display:grid; grid-template-columns:6mm 1fr; gap:1mm 2mm; padding:2mm; border-bottom:1px solid #000; }
+.scg .sc:nth-child(odd) { border-right:1px solid #000; }
+.scg .sc:nth-last-child(-n+1) { border-bottom:none; }
+.tick { width:5mm; height:5mm; border:1.2px solid #000; margin-top:.5mm; }
+.hwg { display:grid; grid-template-columns:repeat(3,1fr); border:1px solid #000; }
+.hwg > div { border-right:1px solid #000; padding:2mm; text-align:center; display:flex; flex-direction:column; align-items:center; gap:1mm; }
+.hwg > div:last-child { border-right:none; }
+.hwh { font-weight:bold; text-transform:uppercase; font-size:9.5pt; }
+.hwq { font-size:10.5pt; line-height:1.5; }
+.sig { display:flex; gap:4mm; margin-top:3mm; align-items:stretch; }
+.stamp { width:32mm; height:24mm; border:1.2px dashed #000; font-size:8.5pt; color:#555; display:flex; align-items:flex-end; justify-content:center; padding-bottom:1mm; flex:none; }
+.sig .lines { flex:1; display:flex; flex-direction:column; justify-content:space-around; }
+.sig .lines > div { display:flex; align-items:flex-end; gap:2mm; font-size:10pt; }
+.sig .lines i { flex:1; border-bottom:1px solid #000; height:6mm; } .sig .lines i.d { flex:none; width:28mm; }
+.cite { font-size:8pt; font-style:italic; color:#444; text-align:right; margin-top:auto; padding-top:1mm; }
+.box.split { break-inside:auto; } .box.split .row, .box.split p, .box.split .mc { break-inside:avoid; }
+.sol .sp.wk { min-height:auto !important; } .sol .sp.wk > .ans { position:static; }
+.guess { font-size:9.5pt; margin-top:1.5mm; padding:1.2mm 2mm; border:1px dashed #000; display:flex; align-items:flex-end; gap:1.5mm; flex-wrap:wrap; }
+.guess span { display:inline-block; width:16mm; border-bottom:1px solid #000; height:4mm; } .guess span.sh { width:12mm; }
+.sol .guess::after { content:attr(data-a); color:#c00; font-weight:bold; margin-left:2mm; }
+.lines { margin-top:2mm; } .lines div { height:8mm; border-bottom:1px solid #999; }
+.bl { border-bottom:1px solid #000; width:45mm; height:6mm; margin:1mm 0 1.5mm auto; font-size:10pt; } .bl span { visibility:hidden; color:#c00; } .sol .bl span { visibility:visible; }
+.pagebreak { break-after: page; }
+.solmark { display:none; } .sol .solmark { display:inline; color:#c00; }
+body { font-size:9.8pt; line-height:1.28; }
+.secthd{margin-bottom:1.5mm} .qgrid{gap:2.5mm;margin-bottom:2.5mm} .title{margin-bottom:2mm}
+
+.title .who { font-size:10.5pt; white-space:nowrap; display:flex; flex-direction:column; gap:2mm; align-items:flex-end; }
+.title .who b { font-weight:normal; }
+.title .who i { display:inline-block; border-bottom:1px solid #000; width:52mm; height:5mm; vertical-align:bottom; }
+.title .who .sc { display:inline-block; border:1.5px solid #000; width:26mm; height:9mm; text-align:right; padding:1mm 2mm; font-size:12pt; font-weight:bold; }
+.qgrid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:3mm; margin-bottom:3mm; }
+.qgrid .box { margin-bottom:0; display:flex; flex-direction:column; }
+.qgrid .box > .bd { flex:1; display:flex; flex-direction:column; }
+.mc { grid-template-columns:1fr; }
+.mc div { display:flex; gap:1mm; } .mc b { flex:none; }
+.fig img { max-width:100%; }
+.fig.gs img { filter:grayscale(1) contrast(1.1); }
+.sa { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+.sa > .stem { border-right:1.2px solid #000; padding:2mm 3mm; display:flex; flex-direction:column; }
+.sa > .parts { display:flex; flex-direction:column; }
+.sa .part { padding:2mm 3mm; border-bottom:1px dashed #bbb; display:flex; flex-direction:column; }
+.sa .part:last-child { border-bottom:none; }
+.sa .part .pq { display:flex; gap:2mm; } .sa .part .pq > b { min-width:4mm; }
+.sa .part .grid { width:100%; flex:1; min-height:20mm; }
+.sa .part .blank { flex:1; min-height:12mm; }
+.sa1 { border-top:1.2px solid #000; } .sa1 .part { padding:2mm 3mm; display:flex; flex-direction:column; } .sa1 .pq{display:flex;gap:2mm} .sa1 .pq>b{min-width:4mm}
+.sa1 .blank { flex:1; min-height:11mm; }
+.brk { break-before:page; }
+.secthd { font-weight:bold; text-transform:uppercase; letter-spacing:.4px; font-size:10.5pt; margin:0 0 2mm; display:flex; justify-content:space-between; }
+.secthd span { text-transform:none; letter-spacing:0; font-weight:normal; font-size:9.5pt; }
+
+body{font-size:9.6pt;line-height:1.25}
+.qgrid{display:grid;grid-template-columns:1fr 1fr;gap:3mm} .qgrid .box{margin-bottom:0}
+.mcl div{margin:.6mm 0} .mcl b{display:inline-block;width:5mm}
+.mc2{display:grid;grid-template-columns:1fr 1fr;gap:.5mm 3mm}
+.ans{color:#c00;display:none;white-space:pre-wrap} .sol .ans{display:block}
+.ok{color:#c00;font-weight:bold;display:none} .sol .ok{display:inline}
+.part{border-top:1px dashed #000;padding:1mm 0 0;margin-top:1mm} .part .pq b{margin-right:2mm}
+.sp{min-height:var(--h)} .mk{color:#555;font-size:8.5pt}
+table.t{border-collapse:collapse;margin:1mm 0} table.t td,table.t th{border:1px solid #000;padding:.5mm 2mm;text-align:center}
+.cite{font-size:7.5pt;color:#555;margin-top:1mm}
+.stem3 td{border:none!important;padding:0 2mm!important;font-family:monospace;font-size:10pt} .stem3 td.s{border-left:1px solid #000!important;border-right:1px solid #000!important}
+.secthd{font-weight:bold;border-bottom:2px solid #000;margin:2mm 0;display:flex;justify-content:space-between}
+</style><script src="a4view.js"></script><script src="paged.polyfill.min.js"></script></head><body class="sol">
+<div class="title"><div class="code">Ch 3<br>test</div><h1>Fitting a linear model to numerical data<div style="font-size:10pt;font-weight:normal;margin-top:1mm">3A–3C · CAS and bound reference allowed · <b style=color:#c00>SOLUTIONS</b></div></h1><div class="who"><div><b>Name</b> <i></i></div><div class="sc">/28</div></div></div>
+<div class="secthd">Section A · Multiple choice<span>Circle one answer. 5 marks</span></div>
+<div class="qgrid" style="margin-bottom:3mm"><div class="box"><div class="hd">Question 1<span>1 mark</span></div><div class="bd"><p class="q">The least-squares regression line for a data set is y = 3.2x + 7.5. What is the gradient of this line?</p><div class="mc2"><div><b>A</b>7.5 </div><div><b>B</b>3.2 <span class=ok>✓</span></div><div><b>C</b>−3.2 </div><div><b>D</b>10.7 </div></div><div class="cite">Mathspace Ch 3 topic assessment · 3.01</div></div></div><div class="box"><div class="hd">Question 2<span>1 mark</span></div><div class="bd"><p class="q">A residual value is calculated as:</p><div class="mcl"><div><b>A</b>predicted value ÷ actual value </div><div><b>B</b>actual value ÷ predicted value </div><div><b>C</b>predicted value − actual value </div><div><b>D</b>actual value − predicted value <span class=ok>✓</span></div></div><div class="cite">Mathspace Ch 3 topic assessment · 3.03</div></div></div></div>
+<div class="qgrid" style="margin-bottom:3mm"><div class="box"><div class="hd">Question 3<span>1 mark</span></div><div class="bd"><p class="q">The means of a data set are x̄ = 5 and ȳ = 14. The standard deviations are sₓ = 2 and s_y = 6, and the correlation coefficient is r = 0.9. Using the formula b = r × s_y ÷ sₓ, the gradient of the least-squares regression line is:</p><div class="mc2"><div><b>A</b>0.3 </div><div><b>B</b>1.8 </div><div><b>C</b>2.7 <span class=ok>✓</span></div><div><b>D</b>0.6 </div></div><div class="cite">Mathspace Ch 3 topic assessment · 3.01</div></div></div><div class="box"><div class="hd">Question 4<span>1 mark</span></div><div class="bd"><p class="q">A least-squares regression line was fitted to data on the height and age of eucalyptus saplings aged from 3 to 12 years. Using this line to predict the height of a sapling of which age would be an extrapolation?</p><div class="mc2"><div><b>A</b>3.5 years </div><div><b>B</b>7 years </div><div><b>C</b>11.5 years </div><div><b>D</b>15 years <span class=ok>✓</span></div></div><div class="cite">Mathspace Ch 3 topic assessment · 3.02</div></div></div></div>
+<div class="qgrid" style="margin-bottom:3mm"><div class="box"><div class="hd">Question 5<span>1 mark</span></div><div class="bd"><p class="q">The residual plot for a least-squares regression line shows a clear curved pattern. Which of the following conclusions is most appropriate?</p><div class="mcl"><div><b>A</b>The linear model is appropriate because the residuals are both positive and negative </div><div><b>B</b>The association is non-linear, so a linear model is not appropriate <span class=ok>✓</span></div><div><b>C</b>The association is linear, but the correlation is weak </div><div><b>D</b>The data must contain an outlier </div></div><div class="cite">Mathspace Ch 3 topic assessment · 3.03</div></div></div></div>
+<div class="secthd">Section B · Short answer<span>Show your working. 23 marks</span></div>
+<div class="box"><div class="hd">Question 6<span>2 marks</span></div><div class="bd"><p class="q">The least-squares regression line for a data set is Weight = 3.8 × Age + 12.5, where weight is in kilograms and age is in months. Interpret the gradient and the y-intercept in the context of this model.</p><div class="part"><div class="sp" style="--h:22mm"><div class="ans">The gradient of 3.8 means that for each additional month of age, the weight is predicted to increase by 3.8 kg. The y-intercept of 12.5 means that at birth (age 0 months), the predicted weight is 12.5 kg.</div></div></div><div class="cite">Mathspace Ch 3 topic assessment · 3.02</div></div></div>
+<div class="box"><div class="hd">Question 7<span>2 marks</span></div><div class="bd"><p class="q">The following data was collected on the temperature (°C) and the number of ice creams sold at a Sydney beach kiosk.<table class="t"><tr><td>Temperature (°C)</td><td>22</td><td>25</td><td>28</td><td>30</td><td>33</td><td>35</td></tr><tr><td>Ice creams sold</td><td>45</td><td>52</td><td>68</td><td>74</td><td>89</td><td>95</td></tr></table>Use technology to determine the equation of the least-squares regression line for ice creams sold (y) in terms of temperature (x). Round values to two decimal places.</p><div class="part"><div class="sp" style="--h:14mm"><div class="ans">y = −45.84 + 4.04x</div></div></div><div class="cite">Mathspace Ch 3 topic assessment · 3.01</div></div></div>
+<div class="box"><div class="hd">Question 8<span>2 marks</span></div><div class="bd"><p class="q">A regression line y = 5.6x + 22.3 is fitted to data. Calculate the residual for the data point (4, 43).</p><div class="part"><div class="sp" style="--h:14mm"><div class="ans">Predicted y = 5.6 × 4 + 22.3 = 44.7
+Residual = 43 − 44.7 = −1.7</div></div></div><div class="cite">Mathspace Ch 3 topic assessment · 3.03</div></div></div>
+<div class="box"><div class="hd">Question 9<span>1 mark</span></div><div class="bd"><p class="q">For adults at a Bendigo gym, resting heart rate, in beats per minute, can be predicted from the number of hours of exercise per week using the equation heart rate = 78.4 − 0.65 × hours. Predict the resting heart rate of an adult who exercises for 14 hours per week.</p><div class="part"><div class="sp" style="--h:10mm"><div class="ans">78.4 − 0.65 × 14 = 69.3 beats per minute</div></div></div><div class="cite">Mathspace Ch 3 topic assessment · 3.02</div></div></div>
+<div class="box"><div class="hd">Question 10<span>1 mark</span></div><div class="bd"><p class="q">For a bivariate data set, x̄ = 12 and ȳ = 40. The least-squares regression line y = a + bx has a gradient of b = 2.5. Calculate the value of a.</p><div class="part"><div class="sp" style="--h:10mm"><div class="ans">a = ȳ − b x̄ = 40 − 2.5 × 12 = 10</div></div></div><div class="cite">Mathspace Ch 3 topic assessment · 3.01</div></div></div>
+<div class="box"><div class="hd">Question 11<span>4 marks</span></div><div class="bd"><p class="q">A least-squares regression line was fitted to data on the age, in years, and the price, in dollars, of used hatchbacks advertised in Melbourne. Age is the explanatory variable. The CAS output is shown below, where the line has the form y = a + bx.<table class="t"><tr><td>a</td><td>27 850</td></tr><tr><td>b</td><td>−2140</td></tr><tr><td>r²</td><td>0.8836</td></tr><tr><td>r</td><td>−0.94</td></tr></table></p><div class="part"><div class="pq"><b>a</b>Write the equation of the least-squares regression line in terms of the variables price and age. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:8mm"><div class="ans">price = 27 850 − 2140 × age</div></div></div><div class="part"><div class="pq"><b>b</b>Interpret the gradient of the line in the context of this data. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:12mm"><div class="ans">On average, the price of a used hatchback decreases by $2140 for each additional year of age.</div></div></div><div class="part"><div class="pq"><b>c</b>Interpret the coefficient of determination in the context of this data. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:12mm"><div class="ans">88.36% of the variation in price can be explained by the variation in age.</div></div></div><div class="part"><div class="pq"><b>d</b>Predict the price of a 4-year-old hatchback. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:9mm"><div class="ans">27 850 − 2140 × 4 = $19 290</div></div></div><div class="cite">Mathspace Ch 3 topic assessment · 3.02</div></div></div>
+<div class="box"><div class="hd">Question 12<span>3 marks</span></div><div class="bd"><p class="q">The height of a tomato seedling, in centimetres, was recorded every two weeks after planting. The data are shown below.<table class="t"><tr><td>Week</td><td>2</td><td>4</td><td>6</td><td>8</td><td>10</td><td>12</td></tr><tr><td>Height (cm)</td><td>9.4</td><td>10.1</td><td>11.6</td><td>14.3</td><td>18.2</td><td>23.9</td></tr></table>The least-squares regression line is height = 4.63 + 1.42 × week, with r² = 0.908.</p><div class="part"><div class="pq"><b>a</b>Calculate the residual for week 8. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:12mm"><div class="ans">Predicted = 4.63 + 1.42 × 8 = 15.99
+Residual = 14.3 − 15.99 = −1.69</div></div></div><div class="part"><div class="pq"><b>b</b>The residual plot, with the point for week 8 not yet plotted, is shown below. With reference to the residual plot, comment on whether a linear model is appropriate for this data. <span class="mk">(2 marks)</span></div><div style="text-align:center"><svg width="230" height="165" viewBox="0 0 230 165"><line x1="34.0" y1="19" x2="34.0" y2="121" stroke="#ddd"/><line x1="59.0" y1="19" x2="59.0" y2="121" stroke="#ddd"/><line x1="84.0" y1="19" x2="84.0" y2="121" stroke="#ddd"/><line x1="109.0" y1="19" x2="109.0" y2="121" stroke="#ddd"/><line x1="134.0" y1="19" x2="134.0" y2="121" stroke="#ddd"/><line x1="159.0" y1="19" x2="159.0" y2="121" stroke="#ddd"/><line x1="184.0" y1="19" x2="184.0" y2="121" stroke="#ddd"/><line x1="209.0" y1="19" x2="209.0" y2="121" stroke="#ddd"/><line x1="34.0" y1="121" x2="209.0" y2="121" stroke="#ddd"/><text x="29.0" y="124" font-size="9" text-anchor="end">−3</text><line x1="34.0" y1="104" x2="209.0" y2="104" stroke="#ddd"/><text x="29.0" y="107" font-size="9" text-anchor="end">−2</text><line x1="34.0" y1="87" x2="209.0" y2="87" stroke="#ddd"/><text x="29.0" y="90" font-size="9" text-anchor="end">−1</text><line x1="34.0" y1="70" x2="209.0" y2="70" stroke="#ddd"/><text x="29.0" y="73" font-size="9" text-anchor="end">0</text><line x1="34.0" y1="53" x2="209.0" y2="53" stroke="#ddd"/><text x="29.0" y="56" font-size="9" text-anchor="end">1</text><line x1="34.0" y1="36" x2="209.0" y2="36" stroke="#ddd"/><text x="29.0" y="39" font-size="9" text-anchor="end">2</text><line x1="34.0" y1="19" x2="209.0" y2="19" stroke="#ddd"/><text x="29.0" y="22" font-size="9" text-anchor="end">3</text><text x="34.0" y="132" font-size="9" text-anchor="middle">0</text><text x="59.0" y="132" font-size="9" text-anchor="middle">2</text><text x="84.0" y="132" font-size="9" text-anchor="middle">4</text><text x="109.0" y="132" font-size="9" text-anchor="middle">6</text><text x="134.0" y="132" font-size="9" text-anchor="middle">8</text><text x="159.0" y="132" font-size="9" text-anchor="middle">10</text><text x="184.0" y="132" font-size="9" text-anchor="middle">12</text><text x="209.0" y="132" font-size="9" text-anchor="middle">14</text><line x1="34.0" y1="70" x2="209.0" y2="70" stroke="#000" stroke-dasharray="4 3"/><line x1="34.0" y1="19" x2="34.0" y2="121" stroke="#000"/><line x1="34.0" y1="121" x2="209.0" y2="121" stroke="#000"/><rect x="56.0" y="34.19" width="6" height="6" transform="rotate(45 59.0 37.19)" fill="#000"/><rect x="81.0" y="70.57" width="6" height="6" transform="rotate(45 84.0 73.57)" fill="#000"/><rect x="106.0" y="93.35" width="6" height="6" transform="rotate(45 109.0 96.35)" fill="#000"/><rect x="156.0" y="77.71000000000001" width="6" height="6" transform="rotate(45 159.0 80.71000000000001)" fill="#000"/><rect x="181.0" y="29.090000000000003" width="6" height="6" transform="rotate(45 184.0 32.09)" fill="#000"/><text x="121.5" y="144" font-size="10" text-anchor="middle">Week</text><text x="10" y="70" font-size="10" transform="rotate(-90 10 70)" text-anchor="middle">Residual</text></svg></div><div class="sp" style="--h:18mm"><div class="ans">A linear model is not appropriate. The residuals form a clear curved (U-shaped) pattern, so the association is non-linear, even though the coefficient of determination is high.</div></div></div><div class="cite">Mathspace Ch 3 topic assessment · 3.03</div></div></div>
+<div class="box"><div class="hd">Question 13<span>6 marks</span></div><div class="bd"><p class="q">The average number of hours spent studying each week and the final score out of 100 were recorded for 10 Year 12 students. The data are shown below.<table class="t"><tr><td>Study (hours)</td><td>3</td><td>5</td><td>6</td><td>8</td><td>9</td><td>10</td><td>12</td><td>14</td><td>15</td><td>18</td></tr><tr><td>Score</td><td>48</td><td>55</td><td>52</td><td>61</td><td>66</td><td>63</td><td>72</td><td>75</td><td>81</td><td>86</td></tr></table></p><div class="part"><div class="pq"><b>a</b>Use technology to determine the value of Pearson&#x27;s correlation coefficient, r, rounded to three decimal places, and describe the strength and direction of the association. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:10mm"><div class="ans">r = 0.986, strong and positive</div></div></div><div class="part"><div class="pq"><b>b</b>Use technology to find the equation of the least-squares regression line that can be used to predict score from study hours. Write the values rounded to two decimal places. <span class="mk">(2 marks)</span></div><div class="sp" style="--h:12mm"><div class="ans">score = 39.92 + 2.60 × study hours</div></div></div><div class="part"><div class="pq"><b>c</b>Interpret the gradient of the regression line in the context of this data. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:12mm"><div class="ans">On average, the final score increases by 2.60 for each additional hour of study per week.</div></div></div><div class="part"><div class="pq"><b>d</b>Using your equation from part b, calculate the residual for the student who studied for 12 hours, rounded to one decimal place. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:12mm"><div class="ans">Predicted = 39.92 + 2.60 × 12 = 71.12
+Residual = 72 − 71.12 = 0.9</div></div></div><div class="part"><div class="pq"><b>e</b>Determine whether the equation can reliably predict the score of a student who studies for 30 hours per week. Justify your answer. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:14mm"><div class="ans">No. This is an extrapolation well beyond the data (3 to 18 hours) and it predicts a score above 100, which is not possible.</div></div></div><div class="cite">Mathspace Ch 3 topic assessment · 3.04</div></div></div>
+<div class="box"><div class="hd">Question 14<span>2 marks</span></div><div class="bd"><p class="q">A full regression analysis was carried out on the age, in years, and the annual maintenance cost, in dollars, of 12 ride-on mowers at a Geelong council depot. The mowers were aged from 1 to 9 years. The least-squares regression line is cost = 180 + 95 × age, Pearson's correlation coefficient is r = 0.96 and the residual plot shows no clear pattern. Predict the annual maintenance cost of a 6-year-old mower and state whether this prediction is reliable. Give a reason for your answer.</p><div class="part"><div class="sp" style="--h:22mm"><div class="ans">180 + 95 × 6 = $750. The prediction is reliable: it is an interpolation (within 1 to 9 years), the association is strong and linear and the residual plot supports a linear model.</div></div></div><div class="cite">Mathspace Ch 3 topic assessment · 3.04</div></div></div>
+</body></html>

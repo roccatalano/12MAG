@@ -4731,18 +4731,18 @@
          },
          {
           "kind": "Chapter test",
-          "desc": "Mathspace Ch 2 topic assessment (20 Qs, /41), verbatim.",
+          "desc": "Mathspace Ch 3 topic assessment, regression Qs only (14 Qs, /28), verbatim.",
           "status": "draft",
           "copies": [
            {
             "label": "Student copy",
-            "file": "lessons/Ch2 test.html",
-            "pdf": "lessons/Ch2 test.pdf"
+            "file": "lessons/Ch3 test.html",
+            "pdf": "lessons/Ch3 test.pdf"
            },
            {
             "label": "Solutions",
-            "file": "lessons/Ch2 test solutions.html",
-            "pdf": "lessons/Ch2 test solutions.pdf"
+            "file": "lessons/Ch3 test solutions.html",
+            "pdf": "lessons/Ch3 test solutions.pdf"
            }
           ]
          },
