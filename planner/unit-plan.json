@@ -11531,20 +11531,54 @@
        "subchapters": [
         "11A"
        ],
-       "title": "",
+       "title": "Transition matrices: setting up a transition matrix",
        "card": {
+        "learningObjectives": [
+         {
+          "sub": "11A",
+          "items": [
+           "To be able to set up a transition matrix from a diagram or written information."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "11A",
+          "items": [
+           "I can set up a transition matrix from a diagram.",
+           "I can set up a transition matrix from written information."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "use of transition diagrams, their associated transition matrices and state matrices to model the transitions between states in discrete dynamical situations and their application to model and analyse practical situations such as the modelling and analysis of an insect population comprising eggs, juveniles and adults",
+         "construct a transition matrix from a transition diagram or a written description and vice versa"
+        ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 11A",
+           "items": [
+            {
+             "skill": "Setting up a transition matrix from a transition diagram",
+             "q": "Q1–3"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q4"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 11A section"
           }
          ]
         }
-       },
-       "shell": true
+       }
       },
       {
        "id": "gm12-u4-11b",
@@ -11552,20 +11586,53 @@
        "subchapters": [
         "11B"
        ],
-       "title": "",
+       "title": "Interpreting transition matrices",
        "card": {
+        "learningObjectives": [
+         {
+          "sub": "11B",
+          "items": [
+           "To be able to interpret a transition matrix and a transition diagram."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "11B",
+          "items": [
+           "I can interpret a transition matrix and a transition diagram."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "use of transition diagrams, their associated transition matrices and state matrices to model the transitions between states in discrete dynamical situations and their application to model and analyse practical situations such as the modelling and analysis of an insect population comprising eggs, juveniles and adults",
+         "construct a transition matrix from a transition diagram or a written description and vice versa"
+        ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 11B",
+           "items": [
+            {
+             "skill": "Interpreting transition matrices",
+             "q": "Q1–4"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q5–6"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 11B section"
           }
          ]
         }
-       },
-       "shell": true
+       }
       },
       {
        "id": "gm12-u4-11c",
@@ -11573,20 +11640,62 @@
        "subchapters": [
         "11C"
        ],
-       "title": "",
+       "title": "Transition matrices: using recursion and the steady state",
        "card": {
+        "learningObjectives": [
+         {
+          "sub": "11C",
+          "items": [
+           "To be able to use a matrix recurrence relation: S0 = initial state matrix, Sn+1 = TSn, to generate a sequence of state matrices.",
+           "To be able to informally identify the equilibrium state or steady-state matrix in the case of regular state matrices."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "11C",
+          "items": [
+           "I can use a recurrence relation to calculate state matrices step by step.",
+           "I can use a recurrence relation Sn = TⁿS0 to determine the nth state.",
+           "I can use the inverse of a transition matrix.",
+           "I can estimate the steady-state solution for suitable transition matrices."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "use of the matrix recurrence relation S₀ = initial state matrix, Sₙ₊₁ = TSₙ or Sₙ₊₁ = LSₙ, where T is a transition matrix, L is a Leslie matrix, and S is a column state matrix, to generate a sequence of state matrices (assuming the next state only relies on the current state)",
+         "informal identification of the equilibrium state matrix in the case of regular transition matrices (no noticeable change from one state matrix to the next state matrix)",
+         "use matrix recurrence relations to generate a sequence of state matrices, including an informal identification of the equilibrium or steady state matrix in the case of regular state matrices"
+        ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 11C",
+           "items": [
+            {
+             "skill": "Calculating state matrices step-by-step and by rule",
+             "q": "Q1–5"
+            },
+            {
+             "skill": "Practical applications of transition matrices",
+             "q": "Q6–8"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q9–11"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 11C section"
           }
          ]
         }
-       },
-       "shell": true
+       }
       },
       {
        "id": "gm12-u4-11d",
@@ -11594,20 +11703,57 @@
        "subchapters": [
         "11D"
        ],
-       "title": "",
+       "title": "Transition matrices: using the rule Sn+1 = TSn + B",
        "card": {
+        "learningObjectives": [
+         {
+          "sub": "11D",
+          "items": [
+           "To be able to use a matrix recurrence relation S0 = initial state matrix, Sn+1 = TSn + B to model systems that include external additions or reductions at each step of the process."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "11D",
+          "items": [
+           "I can use the matrix recurrence relation S0 = initial state matrix, Sn+1 = TSn + B."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "use of the matrix recurrence relation S₀ = initial state matrix, Sₙ₊₁ = TSₙ + B, to extend modelling to populations that include culling and restocking.",
+         "use matrix recurrence relations to model populations with culling and restocking"
+        ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 11D",
+           "items": [
+            {
+             "skill": "Using a recurrence rule to calculate state matrices",
+             "q": "Q1"
+            },
+            {
+             "skill": "Practical application",
+             "q": "Q2"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q3–4"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 11D section"
           }
          ]
         }
-       },
-       "shell": true
+       }
       },
       {
        "id": "gm12-u4-11e",
@@ -11615,28 +11761,71 @@
        "subchapters": [
         "11E"
        ],
-       "title": "",
+       "title": "Leslie matrices",
        "card": {
+        "learningObjectives": [
+         {
+          "sub": "11E",
+          "items": [
+           "To use and interpret Leslie matrices to analyse changes in population over time."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "11E",
+          "items": [
+           "I can determine state matrices and construct life cycle diagrams in situations modelled by Leslie matrices.",
+           "I can enter information into a Leslie matrix from written information.",
+           "I can use numerical techniques to consider the limiting behaviour of Leslie matrices.",
+           "I can identify the properties of a Leslie matrix and the state matrices when there is a constant rate."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "use of the matrix recurrence relation S₀ = initial state matrix, Sₙ₊₁ = TSₙ or Sₙ₊₁ = LSₙ, where T is a transition matrix, L is a Leslie matrix, and S is a column state matrix, to generate a sequence of state matrices (assuming the next state only relies on the current state)",
+         "use of transition diagrams, their associated transition matrices and state matrices to model the transitions between states in discrete dynamical situations and their application to model and analyse practical situations such as the modelling and analysis of an insect population comprising eggs, juveniles and adults"
+        ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 11E",
+           "items": [
+            {
+             "skill": "Determining state matrices and life cycle diagrams",
+             "q": "Q1–3"
+            },
+            {
+             "skill": "Entering information in a Leslie matrix and state matrix",
+             "q": "Q4–5"
+            },
+            {
+             "skill": "Limiting behaviour for Leslie matrices",
+             "q": "Q6–10"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q11–13"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 11E section"
           }
          ]
         }
-       },
-       "shell": true
+       }
       },
       {
        "id": "gm12-ch11-test",
        "kind": "check",
        "subchapters": [],
        "title": "Chapter 11 coursework check + test",
-       "card": {},
-       "shell": true
+       "card": {}
       }
      ]
     }

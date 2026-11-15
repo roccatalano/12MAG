@@ -119,7 +119,7 @@ _Notes for all AoS 2–4 runners (Rocco, 16 Nov):_
 11. `done 16 Nov 10:39 — Ch10 test + solutions (Mathspace Ch 7 topic assessment, Ch 10 items: MC Q1–8 + SA Q10–16, 19, 20, 17 Qs /27, verbatim, 5 pages each), HTML+PDF, Draft, on G: + Ch 10 test card; Q9, 17, 18 (transition) left for the Ch 11 test; 17 ledger rows` **Chapter 10 test** + solutions (model `tools/test/ch5/build.py`) from the Ch 10 (non-transition) questions of the Mathspace Ch 7 topic assessment (Matrices). Add to the gm12-ch10-test card; run `python3 tools/test/details.py`. If it can't be built from what's there, mark `needs Rocco`.
 
 ### Chapter 11: Transition matrices and Leslie matrices (lessons gm12-u4-11a, gm12-u4-11b, gm12-u4-11c, gm12-u4-11d, gm12-u4-11e; check gm12-ch11-test)
-12. `in progress 16 Nov 10:45` **Plan Chapter 11**: lesson split, titles, learning intentions, success criteria, coursework (gm12-u4-11a, gm12-u4-11b, gm12-u4-11c, gm12-u4-11d, gm12-u4-11e; see notes above). Update the lesson ids/list below if you split or merge.
+12. `done 16 Nov 10:45 — split kept 11A · 11B · 11C · 11D · 11E (5 lessons, 13 Examples); titles, Cambridge learning intentions, checklist success criteria (1–12), Study Design points, coursework by exercise section (+ Revision book); tools/plan_ch11.py` **Plan Chapter 11**: lesson split, titles, learning intentions, success criteria, coursework (gm12-u4-11a, gm12-u4-11b, gm12-u4-11c, gm12-u4-11d, gm12-u4-11e; see notes above). Update the lesson ids/list below if you split or merge.
 13. `todo` **Prefill the lesson cards** (gm12-u4-11a, gm12-u4-11b, gm12-u4-11c, gm12-u4-11d, gm12-u4-11e) in `planner/unit-plan.json` (see notes above).
 14. `todo` **CFATs for Chapter 11** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch11/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
 15. `todo` **CFAT follow-ups for Chapter 11** (Jacaranda exercises; see notes above).
@@ -181,6 +181,7 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 ## Decisions log
 | When | Question | Decision taken | Why | Run |
 |---|---|---|---|---|
+| 16 Nov 10:45 | — | Ch 11 split kept as the Cambridge sample planner (11A · 11B · 11C · 11D · 11E) | only 13 Examples; 11A/11B are short but introduce transition matrices; no merge/split needed | AoS3 #12 |
 | 15 Nov 17:21 | Q1 | Rocco: rebuild CFAT 1.2.1/1.2.2 from exercise questions only; Edrolo 2B Q11/Q12 freed for l04 exits | rule 8 | Ch2 #2 |
 | 15 Nov 17:21 | Q2 | Rocco: l08 has no exits | Rocco's answer | Ch2 #2 |
 | 15 Nov 17:21 | Q3/Q6 | Rocco: Edrolo U1&2 WEs OK as You trys; Ex 19–21 written (written-youtrys.json) | Rocco's answer | Ch2 #2 |
@@ -316,3 +317,4 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 | AoS4 #10 Ch13 test | 2026-11-16 10:34 | 10:37 | | | done: quick (text PDFs + 13 figure crops); Ch 9 Q13 (cutting) and rest of Ch 9 left for Ch 14 test. Remote URL updated to 12MAG. next run: NOT fired — fire_trigger denied by the permission check; hourly schedule (:47) picks up task 11 |
 | AoS3 #11 Ch10 test | 2026-11-16 10:36 | 10:39 | ~3 | | done: matrices rendered with mx.py; one fix (stems in <p> broke inline matrices → div). next run: NOT fired — fire_trigger denied by the permission check; hourly schedule (:27) picks up task 12. Ledger merge dropped 24 AoS4 rows for a moment; restored (e2131d5) |
 | AoS2 #10 Ch8 prefill | 2026-11-16 10:35 | 10:52 | 17 | | done; Cambridge/Edrolo PDFs staged and read as text; many written You trys (no Edrolo match). next run: NOT fired — fire_trigger denied by the permission check; hourly schedule (:07) picks up task 11 |
+| AoS3 #12 Plan Ch 11 | 2026-11-16 10:44 | 10:45 | ~10 | | done: Cambridge PDF + Ch 11 checklist staged, text-extracted. next run: see fire_trigger |
