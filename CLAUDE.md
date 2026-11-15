@@ -42,6 +42,11 @@ Build a lesson with a `tools/deck/<S#>/build.py` that only fills content into th
 - **Multi-part questions (a, b, c…):** parts listed down the page on the left (`plist`); ONE big green answer card that reveals one part per click (`parts=`). Never run parts together in a line.
 - If the figure is the answer (a boxplot to construct), it is built inside the green answer card.
 - **MC:** answer card → next click "What's the distractor?" → next click the option + why. No distractor card unless there is a real one.
+- **Exam question pills name the VCAA source** (e.g. 'APK · VCAA 2021 Exam 1 Q1', 'Exit task 1 of 3 · VCAA 2019 Exam 2 Q1a'), never Edrolo; the Edrolo/textbook reference stays in the source line at the bottom. Highlight EVERY occurrence of the command word (not inside quotations).
+- **Answer templates (Rocco, 15 Nov):** when the answer is a table, chart or report, show it first as a dark template card (`('TMPL', html)` in qslide steps; blanks `B(cls,val)` filled by `data-fill`, bars/segments by `data-grow="#id|i"`), fill it step by step while annotating the question (`data-hi="#id|rows|hc/hv/hy/hb/hg"`, only the thing being counted), then one more click turns it green. Several answer cards per slide are fine: step, step, answer (`('ANS', html)`), step, step, answer. Steps carry `data-pk` to fade the parts of the question not being worked on (`data-pks` on whole question blocks); the last click restores everything in full (static PDF state).
+- **Questions take normal spacing** (`G(text, figure, question)`), not the stretched figure zone, unless filling the card makes sense (multi-part lists: parts fill the card).
+- **Learn slides for displays follow the data → frequency table → graph flow** (tally chips into the table, then grow the bars; bars → stacked → % for segmented bar charts; report templates filled part by part with the three highlight colours).
+- **Coursework slide mirrors the planner's coursework card** (Cambridge exercises with skills + Q numbers, and the chapter revision booklet sections).
 - **Learn:** rule card + the related key formula/definition cards on top, picture, one tip. **CAS:** TI and ClassPad step cards, then small embedded YouTube cards, then the read-off card.
 
 ## Bound reference entries (Rocco, 15 Nov)

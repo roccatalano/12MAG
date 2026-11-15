@@ -87,6 +87,7 @@ def qslide(kind,pill,head,given,steps,answer,src,stat=None,mc=None,key=None,dist
     if cmd and cmd[0]!='Multiple choice':  # highlight the command word where it appears in the question (last occurrence = the actual question line)
         rx=re.compile(r'(?<![\w-])('+re.escape(cmd[0])+r')(?![\w-])(?![^<]*>)',re.I)
         ms=list(rx.finditer(given))
+        ms=[m for m in ms if given[:m.start()].count('‘')<=given[:m.start()].count('’')]  # not inside a quotation
         for m in reversed(ms):  # every occurrence of the command word (Rocco, 15 Nov)
             given=given[:m.start()]+f'<mark class="cw">{m.group(1)}</mark>'+given[m.end():]
     L='<div class="L"><div class="q">'+given
@@ -94,10 +95,29 @@ def qslide(kind,pill,head,given,steps,answer,src,stat=None,mc=None,key=None,dist
         d=f' data-dist="{",".join(map(str,dist))}"' if dist else ''
         L+=f'<div class="mc"{d}>'+''.join(f'<div data-o="{chr(65+i)}"><b>{chr(65+i)}.</b>{o}</div>' for i,o in enumerate(mc))+'</div>'
     L+='</div></div>'
-    R='<div class="R"><ol class="wk">'
-    for n,st in enumerate(steps,1):
-        lab,txt,att=(st+('',))[:3]
-        R+=f'<li class="frag" {att}><span class="wn">{n}</span><span class="sl">{lab}</span>{txt}</li>'
+    R='<div class="R"><ol class="wk" style="display:flex;flex-direction:column">'
+    # steps: (label, html[, attrs]) · ('ANS', html[, attrs]) a green answer card in the flow ·
+    # ('TMPL', html[, attrs]) an answer TEMPLATE card: shown dark at the start of its segment (the steps since the last
+    # ANS/TMPL), filled in by those steps (data-fill / data-grow …), then turned green by one more click.
+    segs=[[]]
+    for st in steps:
+        segs[-1].append(st)
+        if st[0] in ('ANS','TMPL'): segs.append([])
+    n=0; v=0; tk=0
+    for seg in segs:
+        tm=[x for x in seg if x[0]=='TMPL']
+        if tm:  # template card first in the DOM (revealed first), shown last (css order)
+            tk+=1; t=tm[0]; att=(t+('',))[2]
+            R+=f'<li class="ans tmpl" data-tk="{tk}" style="order:{v+len(seg)}" {att}><span class="frag" data-tmpl="on"></span><span class="wn">✓</span><span class="sl">Answer</span>{t[1]}</li>'
+        for st in seg:
+            lab,txt,att=(st+('',))[:3]
+            if lab=='TMPL': continue
+            v+=1
+            if lab=='ANS': R+=f'<li class="frag ans" style="order:{v}" {att}><span class="wn">✓</span><span class="sl">Answer</span>{txt}</li>'
+            else:
+                n+=1; R+=f'<li class="frag" style="order:{v}" {att}><span class="wn">{n}</span><span class="sl">{lab}</span>{txt}</li>'
+        if tm: v+=1; R+=f'<li class="frag tdone" data-tmpl="done:{tk}" style="display:none"></li>'
+    if any('data-pk' in ((st+('',))[2] or '') for st in steps): R+='<li class="frag" data-pall="1" style="display:none"></li>'  # end: everything back in full
     R+='</ol>'+(f'<div class="made">{made}</div>' if made else '')+'<ol class="wk">'
     sa=f' data-stat="{stat[1]}"' if stat and len(stat)>1 else ''
     if mc:
@@ -109,6 +129,7 @@ def qslide(kind,pill,head,given,steps,answer,src,stat=None,mc=None,key=None,dist
         pl=''.join(f'<div class="frag pa" data-pk="{k}" {(p+("",))[2]}><b class="pl">{p[0]}</b><span>{p[1]}</span></div>' for k,p in enumerate(parts))
         pl+='<span class="frag" data-pall="1"></span>'  # last click: every part back in full (for the static PDF)
         R+=f'<li class="frag ans big"{sa}><span class="wn">✓</span><span class="sl">Answers</span>{answer}{pl}</li>'
+    elif answer=='' and not afig: pass  # the answer is already in the steps (ANS / TMPL cards)
     else:
         bl=''.join(f'<div class="frag bl" {a}>{t}</div>' for t,a in build)
         fig=f'<div class="afig">{afig}</div>' if afig else ''

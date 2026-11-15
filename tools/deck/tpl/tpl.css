@@ -171,3 +171,24 @@
 /* title: textbook and subchapters one per line */
 .s-title .sub div{line-height:1.35}
 .s-title .sub div:first-child{font-weight:700;color:var(--ink)}
+
+/* answer template cards: dark until their segment starts, filled by the steps, green when done (15 Nov) */
+.T .R ol.wk li.tmpl{opacity:0;transition:opacity .4s,background .5s,border-color .5s;background:#23272f;border:2px solid #23272f;color:#e9ecf2}
+.T .R ol.wk li.tmpl.on{opacity:1}
+.T .R ol.wk li.tmpl .wn{background:#5a6170}.T .R ol.wk li.tmpl .sl{color:#c5cad4}
+.T .R ol.wk li.tmpl.done{background:#eaf7f0;border-color:#1f9e74;color:inherit}
+.T .R ol.wk li.tmpl.done .wn{background:#1f9e74}.T .R ol.wk li.tmpl.done .sl{color:#137a59}
+.T .tmpl table.t,.T .tmpl .chart,.T .tmpl .report{background:#fff;color:#1d2330;border-radius:10px}
+.T .tmpl .chart{padding:6px}
+.T .tmpl td .blank{min-width:44px;text-align:center}
+.T .report .blank{padding:0 2px;margin:0}
+.T .cwgrid b{white-space:nowrap}
+/* highlights for data (question annotation) */
+.T .hc{background:#ead7c5!important;outline:2px solid #7a4a24;border-radius:6px}
+.T .hv{background:#fff4c7!important;outline:2px solid #c9a227;border-radius:6px}
+.T .hy{background:#fff3c4!important;outline:2px solid #d9b100;border-radius:5px}
+.T .hb{background:#dbeafe!important;outline:2px solid #2f6fdf;border-radius:5px}
+.T .hg{background:#dcfce7!important;outline:2px solid #1f9e74;border-radius:5px}
+.T [data-pks]{transition:opacity .35s}.T [data-pks].dim{opacity:.22}
+.T .ytrow{grid-template-columns:repeat(auto-fit,minmax(0,1fr))}
+.s-title .sub div{margin-bottom:10px}
