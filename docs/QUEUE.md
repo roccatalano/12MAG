@@ -21,7 +21,7 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 6. `done 2026-11-15 — 2F slides (20 slides, PDF 30 pages) + guided worksheet (3 pages, student + solutions), Draft; on G: and the l06 card` **Lesson l06 (2F)**: slides + worksheet.
 7. `done 2026-11-15 — 2G-2H slides (30 slides, PDF 49 pages) + guided worksheet (4 pages, student + solutions), Draft; on G: and the l07 card` **Lesson l07 (2G, 2H)**: slides + worksheet.
 8. `done 2026-11-15 — 2I slides (13 slides, PDF 17 pages) + guided worksheet (1 page, student + solutions), Draft; on G: and the l08 card` **Lesson l08 (2I)**: slides + worksheet.
-9. `todo` **Chapter 2 revision booklet** + solutions (Insight GM1 + GM2 Data Analysis, sections per subchapter; template `tools/revision/ch1/build.py`). Insight is never burnt.
+9. `in progress 2026-11-15 19:22` **Chapter 2 revision booklet** + solutions (Insight GM1 + GM2 Data Analysis, sections per subchapter; template `tools/revision/ch1/build.py`). Insight is never burnt.
 10. `todo` **Chapter 2 test** from the Mathspace Chapter 2 topic assessment (`02 Sources\Textbooks\Mathspace\Chapter 2 - Investigate associations`). If it can't be built from what's there, mark `needs Rocco`.
 
 ## Questions for Rocco
