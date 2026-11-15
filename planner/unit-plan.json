@@ -2661,7 +2661,35 @@
            "note": "The 2A, 2B sections"
           }
          ]
-        }
+        },
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/2A-2B slides.html",
+          "pdf": "lessons/2A-2B slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "Student companion to the slides, in the same order, with space to answer.",
+          "status": "draft",
+          "file": "lessons/2A-2B worksheet.html",
+          "pdf": "lessons/2A-2B worksheet.pdf",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/2A-2B worksheet.html",
+            "pdf": "lessons/2A-2B worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/2A-2B worksheet solutions.html",
+            "pdf": "lessons/2A-2B worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {

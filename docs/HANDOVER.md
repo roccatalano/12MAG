@@ -5,6 +5,13 @@ Repo: `roccatalano/12MAG` (GitHub Pages: roccatalano.github.io/12mag/ → `plann
 Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through the desktop-app bridge (stage files to read; commit files to write; can't move/rename/delete).
 
 
+
+## 15 Nov 17:58 — Lesson l03 (2A-2B) slides + guided worksheet (live session, task Ch2 #3)
+- `tools/deck/l03/build.py` → `lessons/2A-2B slides.html/.pdf` (35 slides, PDF 59 pages; screenshots `tools/deck/l03/shoot.py`). `tools/deck/l03/worksheet.py` → `lessons/2A-2B worksheet(.html/.pdf)` + `… worksheet solutions` (6 pages each). Same names on G: `01 Lesson materials`. All Draft on the l03 card (materials added; no bound reference: paused).
+- Built only from the l03 card: Do Now VCAA 2024 E1 Q7 (82%), 2023 E1 Q5 (84%), 2024 E2 Q1ai (96%), Q1b (84%); APK Cambridge U1&2 2A #2, 1A #2; Examples 1–8 + the 8 mapped You trys; exits VCAA 2018 E2 Q1d (94%) and 2021 E1 Q3 (A 50%, distractor C 28%). % from the examiner reports on G:. Nothing dropped.
+- New in the deck: a grouped bar chart (`gbar` in l03/build.py, for Edrolo 2A WE2) and a two-way table helper `tw()` (cells highlightable). Ledger: l03 rows now 'used'; 16 Example/You try rows (not burnt).
+- Note for Rocco: You try 6 (Edrolo 2A WE2) is a grouped bar chart task, as mapped on the card, though Example 6 is about describing a 3 × 3 table.
+
 ## 15 Nov 17:27 — Ch 2 CFATs rebuilt (runner, task Ch2 #2)
 - **Changed (Rocco, 15 Nov): CFATs are HTML + PDF, not Word.** Rebuilt as `lessons/CFAT 1.2.x (…).html/.pdf` (+ solutions) by `tools/cfat/ch2/build_html.py` in the CFAT 1.1.x layout, 2 pages each; Word files removed from the repo (Rocco deletes the .docx copies on G:). Original note: `lessons/CFAT 1.2.1 (2A-2B).docx/.pdf` (/17: 5 MC + 4 short answer) and `CFAT 1.2.2 (2C-2D).docx/.pdf` (/16: 5 MC + 3 short answer), each with a `solutions` copy (red answers + marks). Rule 8: Edrolo U3&4 exercise questions only. Built by `tools/cfat/ch2/build.py` (figures cropped by `crop.py`; sources in the docstring). Also on G: in 01 Lesson materials.
 - Planner: both CFAT cards updated (questions, marks, Draft) + material entries with Student copy / Solutions. Ledger: old CFAT 1.2.1 rows set burnt = no (incl. VCAA 2017 E1 Q6 via Edrolo 2A Q12, now free); 17 new rows.

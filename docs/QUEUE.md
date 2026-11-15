@@ -14,7 +14,7 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 ## Chapter 2: Investigating associations between two variables (lessons gm12-u3-l03 … l08, check gm12-u3-ch2-test)
 1. `done 2026-11-15 — l03–l08 cards prefilled: Do Now ×4 each (burnt ones replaced), You trys mapped, coursework Q ranges, CAS steps (scatterplot, r, r²), Ch2 videos (draft); 46 items reserved in the ledger` **Prefill the lesson cards** (l03–l08) in `planner/unit-plan.json` from the indexes, following the rules in CLAUDE.md: Do Now ×4 per lesson (current-design VCAA from `tools/vcaa_current_index.csv`, not burnt), APK (Cambridge U1&2 skills checklist + Edrolo U1&2 exam questions), Examples (Cambridge) with mapped Edrolo You trys, exits (Edrolo U3&4 exam practice), CAS skill ids (add new skills to `planner/cas-skills.json`, steps checked against `02 Sources\CAS guides`), coursework (Cambridge exercises), self-study videos (`planner/videos.json`, MaffsGuru first; status `draft` until Rocco checks). Reserve every chosen exam item in the ledger (`tools/ledger_manual.csv`, role as planned) so later tasks don't reuse it.
 2. `done 2026-11-15 — CFAT 1.2.1 (2A-2B, /17) + 1.2.2 (2C-2D, /16), HTML + PDF like CFAT 1.1.x (Word version replaced, Rocco 15 Nov), student + solutions, Edrolo exercise Qs only; old 1.2.1 ledger rows freed` **CFATs for Chapter 2** + solutions — Rocco 15 Nov: RECREATE CFAT 1.2.1/1.2.2 from scratch under rule 8 (Edrolo U3&4 exercise questions only: `tools/y12_edrolo_exercise_questions.csv`; HTML + PDF in the CFAT 1.1.x layout (Rocco 15 Nov: NOT Word; model `tools/cfat/ch2/build_html.py`)). Add them to the planner.
-3. `in progress 2026-11-15 17:36` **Lesson l03 (2A, 2B)**: slides (`tools/deck/<id>/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+3. `done 2026-11-15 — 2A-2B slides (35 slides, PDF 59 pages) + guided worksheet (6 pages, student + solutions), Draft; on G: and the l03 card` **Lesson l03 (2A, 2B)**: slides (`tools/deck/<id>/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 4. `todo` **Lesson l04 (2C)**: slides + worksheet.
 5. `todo` **Lesson l05 (2D, 2E)**: slides + worksheet.
 6. `todo` **Lesson l06 (2F)**: slides + worksheet.
@@ -49,6 +49,7 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 | 15 Nov 17:21 | Q3/Q6 | Rocco: Edrolo U1&2 WEs OK as You trys; Ex 19–21 written (written-youtrys.json) | Rocco's answer | Ch2 #2 |
 | 15 Nov 17:21 | Q4 | Rocco: OK | Rocco's answer | Ch2 #2 |
 | 15 Nov 17:21 | Q5 | Keep Ch 2 videos `draft`; each lesson task checks/fills its subchapters' MaffsGuru links when it builds the "Videos that might help" slide | no answer after 10 min; videos are only needed when the slides are built | Ch2 #2 |
+| 15 Nov 17:58 | — | l03 videos slide: MaffsGuru 2B video kept (YouTube title checked); 2A MaffsGuru video is locked (paid), so its card stays blank; videos.json status left `draft` | only free, checked links on slides | Ch2 #3 |
 
 ## Later chapters (Rocco adds each when he's ready)
 - Chapter 1 leftovers: rebuild S3–S5 slides on the templates; worksheets S2–S5 on ws2.py; CFAT 1.1.1–1.1.3 solutions; Ch 1 test.
@@ -60,3 +61,4 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 | Ch2 #1 Prefill | 2026-11-15 16:52 | 2026-11-15 17:01 | 9 | | done; logged afterwards from GitHub history |
 | — (none started) | 2026-11-15 17:18 | 2026-11-15 17:18 | 1 | | G: not reachable — the 12MAG Course Planner folder is not connected to this run (names-only listing), so nothing was changed. next run: NOT fired — hourly schedule will retry |
 | Ch2 #2 CFATs | 2026-11-15 17:20 | 17:27 | 7 | | done: 2 Word CFATs (2 pages each) + solutions; slowed by getting the Word layout to 2 pages (3 render rounds). next run: NOT fired — fire_trigger was refused by the permission check; the hourly schedule (:17) will pick up task 3 |
+| Ch2 #3 l03 (2A-2B) | 2026-11-15 17:36 | 2026-11-15 17:58 | 22 | | done: 35 slides + 6-page worksheet (both copies), Draft. Slowed by: a new grouped bar chart (Edrolo 2A WE2) and fitting the 5 table options of VCAA 2021 E1 Q3 on one slide; worksheet 7→6 pages by laying tables side by side. next run: not fired — built in live session |
