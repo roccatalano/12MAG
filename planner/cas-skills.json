@@ -708,15 +708,17 @@
     "Lists & Spreadsheet: enter the time (1, 2, 3 …) in column A (name it e.g. day) and the values in column B (e.g. rainfall).",
     "Three-mean: in cell C2 type =(b1+b2+b3)/3 and press enter (C1 stays blank: no smoothed value for the first point).",
     "Select C2, drag its bottom-right corner down to the second-last row to copy the formula.",
-    "Five-mean: start in C3 with =(b1+b2+b3+b4+b5)/5 and copy down to the third-last row."
+    "Five-mean: start in C3 with =(b1+b2+b3+b4+b5)/5 and copy down to the third-last row.",
+    "With centring (even n): two-mean start in C2 with =(b1+2b2+b3)/4; four-mean start in C3 with =(b1+2b2+2b3+2b4+b5)/8; copy down as before."
    ],
    "classpad": [
     "Spreadsheet app: enter the time (1, 2, 3 …) in column A and the values in column B.",
     "Three-mean: select C2, type =(B1+B2+B3)/3 and press EXE (C1 stays blank).",
     "Select C2 and drag down to the second-last row to copy the formula.",
-    "Five-mean: start in C3 with =(B1+B2+B3+B4+B5)/5 and copy down to the third-last row."
+    "Five-mean: start in C3 with =(B1+B2+B3+B4+B5)/5 and copy down to the third-last row.",
+    "With centring (even n): two-mean start in C2 with =(B1+2B2+B3)/4; four-mean start in C3 with =(B1+2B2+2B3+2B4+B5)/8; copy down as before."
    ],
-   "tip": "An n-mean (n odd) loses (n − 1) ÷ 2 points at each end. Round only the final smoothed values.",
+   "tip": "An n-mean (n odd) loses (n − 1) ÷ 2 points at each end. Round only the final smoothed values. Centred n-mean (n even) also loses n ÷ 2 points at each end.",
    "videos": {
     "ti": [],
     "classpad": [
@@ -730,7 +732,7 @@
      }
     ]
    },
-   "checked": "Edrolo U3&4 4B WE1b, d (spreadsheet method) (Draft, check against 02 Sources\\CAS guides: ClassPad Help 545/945)"
+   "checked": "Edrolo U3&4 4B WE1b, d (spreadsheet method) (Draft, check against 02 Sources\\CAS guides: ClassPad Help 545/945); centring steps from Edrolo 4B WE2b, d (Draft)"
   },
   {
    "id": "trend-line",

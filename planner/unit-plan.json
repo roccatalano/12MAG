@@ -6234,20 +6234,15 @@
         ],
         "apk": [
          {
-          "kind": "Skill",
-          "ref": "Cambridge U1&2 2E checklist #10",
-          "text": "Determine the median and mean as measures of centre"
-         },
-         {
           "kind": "Exam",
           "ref": "Edrolo U1&2 1E Q12",
-          "text": "adapted from VCAA 2020 Exam 2 Q4aii"
+          "text": "VCAA 2020 Exam 2 Q4aii (original wording and data used). Cambridge U1&2 2E checklist #10 dropped: already used in S3"
          }
         ],
         "doNow": [
          {
           "exam": "Exam 1",
-          "ref": "VCAA 2023 Exam 1 Q15",
+          "ref": "VCAA 2026 NHT Exam 1 Q14",
           "sec": "5B"
          },
          {
@@ -6306,7 +6301,33 @@
            "note": "The 5B section"
           }
          ]
-        }
+        },
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/5B centring slides.html",
+          "pdf": "lessons/5B centring slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "3 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/5B centring worksheet.html",
+            "pdf": "lessons/5B centring worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/5B centring worksheet solutions.html",
+            "pdf": "lessons/5B centring worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        },
        "part": 2
       },
