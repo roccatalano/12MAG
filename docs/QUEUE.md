@@ -59,4 +59,4 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 |---|---|---|---|---|---|
 | Ch2 #1 Prefill | 2026-11-15 16:52 | 2026-11-15 17:01 | 9 | | done; logged afterwards from GitHub history |
 | — (none started) | 2026-11-15 17:18 | 2026-11-15 17:18 | 1 | | G: not reachable — the 12MAG Course Planner folder is not connected to this run (names-only listing), so nothing was changed. next run: NOT fired — hourly schedule will retry |
-| Ch2 #2 CFATs | 2026-11-15 17:20 | 17:27 | 7 | | done: 2 Word CFATs (2 pages each) + solutions; slowed by getting the Word layout to 2 pages (3 render rounds). next run: fired |
+| Ch2 #2 CFATs | 2026-11-15 17:20 | 17:27 | 7 | | done: 2 Word CFATs (2 pages each) + solutions; slowed by getting the Word layout to 2 pages (3 render rounds). next run: NOT fired — fire_trigger was refused by the permission check; the hourly schedule (:17) will pick up task 3 |
