@@ -17,7 +17,7 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 2b. `done 2026-11-15 — CFAT 1.2.3 (2E-2H, /15) HTML + PDF + solutions; sits on the l09 (3A) card` **CFAT 1.2.3** (Rocco, 15 Nov: was missed by task 2; covers 2E–2H, given at the start of the 3A lesson).
 3. `done 2026-11-15 — 2A-2B slides (35 slides, PDF 59 pages) + guided worksheet (6 pages, student + solutions), Draft; on G: and the l03 card` **Lesson l03 (2A, 2B)**: slides (`tools/deck/<id>/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 4. `done 2026-11-15 — 2C slides (27 slides, PDF 45 pages) + guided worksheet (5 pages, student + solutions), Draft; on G: and the l04 card` **Lesson l04 (2C)**: slides + worksheet.
-5. `todo` **Lesson l05 (2D, 2E)**: slides + worksheet.
+5. `in progress 2026-11-15 18:23` **Lesson l05 (2D, 2E)**: slides + worksheet.
 6. `todo` **Lesson l06 (2F)**: slides + worksheet.
 7. `todo` **Lesson l07 (2G, 2H)**: slides + worksheet.
 8. `todo` **Lesson l08 (2I)**: slides + worksheet.
