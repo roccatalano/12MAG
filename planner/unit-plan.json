@@ -524,8 +524,21 @@
          {
           "kind": "Guided worksheet",
           "desc": "Student companion to the slides, in the same order, with space to answer. Max 2 double-sided pages.",
-          "status": "todo",
-          "file": ""
+          "status": "draft",
+          "file": "lessons/S2-worksheet.html",
+          "pdf": "lessons/S2-worksheet.pdf",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/S2-worksheet.html",
+            "pdf": "lessons/S2-worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/S2-worksheet-solutions.html",
+            "pdf": "lessons/S2-worksheet-solutions.pdf"
+           }
+          ]
          },
          {
           "kind": "Bound reference entry",
@@ -1176,8 +1189,21 @@
          {
           "kind": "Guided worksheet",
           "desc": "Student companion to the slides, in the same order, with space to answer. Max 2 double-sided pages.",
-          "status": "todo",
-          "file": ""
+          "status": "draft",
+          "file": "lessons/S3-worksheet.html",
+          "pdf": "lessons/S3-worksheet.pdf",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/S3-worksheet.html",
+            "pdf": "lessons/S3-worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/S3-worksheet-solutions.html",
+            "pdf": "lessons/S3-worksheet-solutions.pdf"
+           }
+          ]
          },
          {
           "kind": "Bound reference entry",
@@ -1450,7 +1476,19 @@
           "desc": "Student companion to the slides, in the same order, with space to answer. Max 2 double-sided pages.",
           "status": "draft",
           "file": "lessons/S4-worksheet.html",
-          "pdf": "lessons/S4-worksheet.pdf"
+          "pdf": "lessons/S4-worksheet.pdf",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/S4-worksheet.html",
+            "pdf": "lessons/S4-worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/S4-worksheet-solutions.html",
+            "pdf": "lessons/S4-worksheet-solutions.pdf"
+           }
+          ]
          },
          {
           "kind": "Bound reference entry",
@@ -2031,8 +2069,21 @@
          {
           "kind": "Guided worksheet",
           "desc": "Student companion to the slides, in the same order, with space to answer. Max 2 double-sided pages.",
-          "status": "todo",
-          "file": ""
+          "status": "draft",
+          "file": "lessons/S5-worksheet.html",
+          "pdf": "lessons/S5-worksheet.pdf",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/S5-worksheet.html",
+            "pdf": "lessons/S5-worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/S5-worksheet-solutions.html",
+            "pdf": "lessons/S5-worksheet-solutions.pdf"
+           }
+          ]
          },
          {
           "kind": "Bound reference entry",

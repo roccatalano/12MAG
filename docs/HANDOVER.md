@@ -20,7 +20,15 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 - 1H VCAA boxes: 2019 E2 Q2b (58%), 2021 E2 Q1c (78%). 1I = own-words definitions only (Interactive Textbook; no Study Design dot point, no examples): half card has spare room. Ask Rocco whether to keep 1I separate or merge into 1H.
 - All Chapter 1 bound reference cards (1A–1I) are now done.
 
-## NEXT JOB: see Open / later (e.g. 1H–1I worksheet, Ch 1 test, rebuild S1–S3 on the templates) (was: 1C, 1D and 1E — the notes below still apply)
+## Done 15 Nov (afternoon): everything Draft + guided worksheets for S2, S3, S5
+- **Rocco: every made resource is now 'Draft' on the planner** (materials 'ready' → 'draft'; CFAT cards 'Ready…/Written' → 'Draft'). Nothing goes back to Ready until it passes the fine-tooth-comb review.
+- New worksheets (student + solutions, html + pdf; G: names `1C-1E worksheet(.pdf)`, `… worksheet solutions(.pdf)`): `tools/deck/s2|s3|s5/worksheet.py`, shared helpers in `tools/deck/wslib.py` (copied from s4/worksheet.py, plus hist, ncurve, stemfill, table/fillrow, build → html + PDF). Planner cards have Student copy / Solutions copies (S1 has no solutions copy).
+- Page counts (target 4 = 2 double-sided sheets): S2 6, S3 4, S5 5. S4 is 4 (solutions 5).
+- Worksheets follow the S4 shape (no Do Now section; APK → Example/You try pairs → CAS → exits with "guess the %" → skills checklist → coursework).
+- `ws.css` (shared with S4) gained: stem leaves left-aligned, `stemfill` frames, taller answer cells in tables.
+
+## NEXT JOB: fine-tooth-comb review of every Chapter 1 resource (Rocco, 15 Nov: "make sure they are up to standard and not AI slop")
+Suggested order per lesson: slides → worksheet → bound reference → CFAT; check verbatim wording against the sources, % correct against reports, maths, layout/print, page limits. (was: 1C, 1D and 1E — the notes below still apply)
 Rules are in CLAUDE.md, "Bound reference entries" section (read it first). In short: one colour cut-out card per subchapter; half A4 by default, full A4 if it doesn't fit; ONE fixed text size (never scale fonts to fill); fill spare space with real content (e.g. a VCAA question from that lesson); no Edrolo/source line under VCAA boxes (the title says it).
 - **Model to copy: 1A (half) and 1B (full)**, done 15 Nov: `lessons/1A bound reference.html`, `lessons/1B bound reference.html`, combined `lessons/1A-1B bound reference.html`.
 - **Build:** add each card to `CARDS` in `tools/bref/cards.py` (`size`, `title`, `sd` = Study Design words, `body` HTML, `cite`), add the lesson to `LESSONS` (e.g. `'1C-1E': ['1C','1D','1E']`, = lesson S2), run `python3 tools/bref/build.py`. Box classes: `box` (blue notes), `box f` (formula), `box ex` (green Cambridge example), `box tip` (orange), `box cas` (purple CAS steps), `box vc` (red VCAA question with `<span class="pc">NN% correct</span>` and an `ans` answer strip). Tables `table.t` (`sm` for wide ones). Pictures: inline SVG (see `bars()`/`seg()`), or crop from the VCAA PDF (see `vcaa2017e1_q5.png`).
