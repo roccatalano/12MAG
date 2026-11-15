@@ -130,6 +130,11 @@ Chapter 3 revision booklet + solutions built (`tools/revision/ch3/`, 16 pages ea
 - Planner: both CFAT cards updated (questions, marks, Draft) + material entries with Student copy / Solutions. Ledger: old CFAT 1.2.1 rows set burnt = no (incl. VCAA 2017 E1 Q6 via Edrolo 2A Q12, now free); 17 new rows.
 - Open questions Q1–Q6 logged in QUEUE Decisions log (Q5 decided: videos stay draft until each lesson task checks them).
 
+## Start here (handoff, 15 Nov 23:05)
+- **Last done:** Ch 1 test + solutions (draft, Rocco to check: see below). Planner UI: assessment cards (CFATs, chapter tests) no longer show the "Set in L# · covers …" line (it's in the details); Student copy / Solutions are two side-by-side cards (`.cp2`/`.cpc` in `planner/index.html`). Rocco: "much better".
+- **Waiting on Rocco:** check Ch 1 test draft (figures print small; Q12 bar-chart solution drawn for 12MAG; Mathspace Q8 left out).
+- **Next jobs:** CFAT 1.1.1–1.1.3 solutions copies; 1H–1I guided worksheet; bound reference entries (1G, 1H–1I); rebuild S2–S3 on the slide templates; see "Open / later" below.
+
 ## Done 15 Nov: Chapter 1 test (draft, Rocco to check)
 - `lessons/Ch1 test.html/.pdf` + `Ch1 test solutions.html/.pdf` (5 pages each), build `tools/test/ch1/build.py` (Ch 2 layout). Also on G: `01 Lesson materials`. Planner card updated (status draft); `planner/tests.json` re-run.
 - Source: Mathspace Ch 1 topic assessment + answer key, verbatim, /37 (19 Qs). Figures are crops of the Mathspace PDF.
