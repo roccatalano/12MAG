@@ -15,7 +15,12 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 ## Done 15 Nov (13:50): bound reference card 1G (full A4)
 - `lessons/1G bound reference.html` (+ G:), planner S4 card updated. New helper `box()` (boxplot SVG with fences, 25% bands, outlier dots; `axis=False` for sketches). VCAA box: 2020 E2 Q2c (55%), answer boxplot drawn. Left off for space: 2021 E2 Q1e (heptathlon, needs the 15-row table) and the APK firefighter question (Edrolo-adapted from VCAA 2017 E1 Q2).
 
-## NEXT JOB: bound reference cards for 1H–1I (ask Rocco: 1I definitions-only card, or merged into 1H) (was: 1C, 1D and 1E — the notes below still apply)
+## Done 15 Nov (14:10): bound reference cards 1H (full) + 1I (half)
+- `lessons/1H|1I bound reference.html` + combined `1H-1I bound reference.html` (+ G:), planner S5 card updated. New helper `ncurve()` (normal curve with section %, x and z rows, optional shading).
+- 1H VCAA boxes: 2019 E2 Q2b (58%), 2021 E2 Q1c (78%). 1I = own-words definitions only (Interactive Textbook; no Study Design dot point, no examples): half card has spare room. Ask Rocco whether to keep 1I separate or merge into 1H.
+- All Chapter 1 bound reference cards (1A–1I) are now done.
+
+## NEXT JOB: see Open / later (e.g. 1H–1I worksheet, Ch 1 test, rebuild S1–S3 on the templates) (was: 1C, 1D and 1E — the notes below still apply)
 Rules are in CLAUDE.md, "Bound reference entries" section (read it first). In short: one colour cut-out card per subchapter; half A4 by default, full A4 if it doesn't fit; ONE fixed text size (never scale fonts to fill); fill spare space with real content (e.g. a VCAA question from that lesson); no Edrolo/source line under VCAA boxes (the title says it).
 - **Model to copy: 1A (half) and 1B (full)**, done 15 Nov: `lessons/1A bound reference.html`, `lessons/1B bound reference.html`, combined `lessons/1A-1B bound reference.html`.
 - **Build:** add each card to `CARDS` in `tools/bref/cards.py` (`size`, `title`, `sd` = Study Design words, `body` HTML, `cite`), add the lesson to `LESSONS` (e.g. `'1C-1E': ['1C','1D','1E']`, = lesson S2), run `python3 tools/bref/build.py`. Box classes: `box` (blue notes), `box f` (formula), `box ex` (green Cambridge example), `box tip` (orange), `box cas` (purple CAS steps), `box vc` (red VCAA question with `<span class="pc">NN% correct</span>` and an `ans` answer strip). Tables `table.t` (`sm` for wide ones). Pictures: inline SVG (see `bars()`/`seg()`), or crop from the VCAA PDF (see `vcaa2017e1_q5.png`).

@@ -2037,8 +2037,22 @@
          {
           "kind": "Bound reference entry",
           "desc": "Cut-out card per subchapter for the bound reference.",
-          "status": "todo",
-          "file": ""
+          "status": "ready",
+          "file": "lessons/1H-1I bound reference.html",
+          "copies": [
+           {
+            "label": "1H",
+            "file": "lessons/1H bound reference.html"
+           },
+           {
+            "label": "1I",
+            "file": "lessons/1I bound reference.html"
+           },
+           {
+            "label": "1H + 1I (print both)",
+            "file": "lessons/1H-1I bound reference.html"
+           }
+          ]
          },
          {
           "kind": "CFAT 1.1.2",

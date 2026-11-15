@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>1I bound reference</title><style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+:root{--ink:#1b1f2a;--muted:#6b7280;--line:#dfe3ec;--we:#2f6fdf;--yt:#1f9e74;--apk:#d98a1f;--exit:#d2475b;--dis:#7b4fd6;--tint:#eef3fd}
+@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#6b6b6b}
+body{font:400 1em/1.32 Inter,Arial,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;background:#fff;margin:8mm auto;overflow:hidden;display:flex;flex-direction:column}
+@media print{html{background:#fff}.page{margin:0;break-after:page}}
+.slot{padding:6mm;flex:none}
+.slot.half{height:148.5mm}.slot.full{height:297mm}
+.cut{position:relative;height:100%;border:.35mm dashed #9aa1ad}
+.sc{position:absolute;top:-3.2mm;left:6mm;background:#fff;color:#9aa1ad;font-size:10pt;line-height:1;padding:0 1mm}
+.card{height:100%;padding:3.2mm 4mm 2.4mm;display:flex;flex-direction:column;gap:2mm}
+.hd{display:flex;align-items:center;gap:2.5mm;border-bottom:.6mm solid var(--we);padding-bottom:1.6mm}
+.code{background:var(--we);color:#fff;font:800 11pt Inter;border-radius:2mm;padding:.4mm 2.4mm}
+.tt{font:800 12pt Inter;flex:1}
+.sd{font:600 6.6pt Inter;color:var(--muted);text-align:right;max-width:62mm;line-height:1.2}
+.bd{flex:1;min-height:0;display:flex;flex-direction:column;gap:2.4mm}
+.box.f mjx-container{font-size:92%!important}
+.ft{font-size:6.4pt;color:var(--muted);border-top:.25mm solid var(--line);padding-top:1mm}
+.box{border:.35mm solid var(--line);border-radius:2mm;padding:1.6mm 2.2mm;background:#fff;min-width:0}
+.box h4{font:800 6.8pt Inter;letter-spacing:.09em;text-transform:uppercase;margin-bottom:1mm;color:var(--we)}
+.box.ex{border-color:var(--yt)}.box.ex h4{color:var(--yt)}
+.box.tip{border-color:var(--apk);background:#fff8ec}.box.tip h4{color:var(--apk)}
+.box.f{border:.5mm solid var(--ink)}.box.f h4{color:var(--ink)}
+.box.cas{border-color:var(--dis)}.box.cas h4{color:var(--dis)}
+b{font-weight:700}
+.k{color:var(--we);font-weight:700}
+ul.d{list-style:none}ul.d li{padding:.5mm 0;border-bottom:.2mm solid var(--line)}ul.d li:last-child{border:0}
+ol.st{padding-left:4mm}ol.st li{padding:.25mm 0}
+table.t{border-collapse:collapse;font-size:7.8pt}
+table.t th,table.t td{border:.25mm solid #b8bfcc;padding:.4mm 2mm;text-align:center}
+table.t th{background:var(--tint)}
+table.t td:first-child,table.t th:first-child{text-align:left}
+.tree{display:grid;grid-template-columns:1fr 1fr;gap:2mm}
+.tree .grp{border-radius:2mm;padding:1.4mm 2mm;background:var(--tint)}
+.tree .grp>div:first-child{font-weight:800;font-size:1.05em}
+.tree .two{display:grid;grid-template-columns:1fr 1fr;gap:1.4mm;margin-top:1mm}
+.tree .leaf{background:#fff;border-radius:1.5mm;padding:1mm 1.5mm;font-size:.88em}
+.tree .leaf b{display:block;color:var(--we);font-size:1em}
+.row{display:flex;gap:2.4mm;align-items:stretch}
+.small{font-size:7.4pt}.mut{color:var(--muted)}
+.rep{font-size:.9em;background:#f2fbf7;border-radius:1.5mm;padding:1.2mm 1.8mm}
+.blank{border-bottom:.3mm solid var(--yt);padding:0 1mm;color:var(--yt);font-weight:700}
+svg text{font-family:Inter,Arial}
+.card{font-size:8.8pt}
+.bd>*{flex:1 1 auto}
+table.t{font-size:.92em}
+.small{font-size:.86em}.sd{font-size:6.6pt}
+.box h4{font-size:.8em}.hd .tt{font-size:1.4em}
+.box.f mjx-container{display:block!important;text-align:left!important;margin:.6mm 0!important}
+.box.vc{border-color:var(--exit)}.box.vc h4{color:var(--exit)}
+.pc{background:var(--exit);color:#fff;border-radius:1mm;padding:0 1.4mm;margin-left:1.5mm;letter-spacing:0}
+.ans{flex:1;background:#f2fbf7;border-left:.8mm solid var(--yt);padding:.6mm 1.6mm}
+table.t.sm{font-size:.8em}table.t.sm td,table.t.sm th{padding:.3mm 1mm}
+.bd>*{flex:0 0 auto}
+.mcq{display:flex;gap:4mm;margin:1mm 0}
+table.stem{border-collapse:collapse;font-size:.92em;font-family:"DejaVu Sans Mono",monospace}
+table.stem td{padding:0 1.2mm}table.stem td.st{border-right:.35mm solid var(--ink);text-align:right;font-weight:700}
+table.stem td.small{font-family:Inter,Arial;padding-bottom:.6mm}
+.mcq span{white-space:nowrap}table.stem{line-height:1.2}
+.box.f .inl mjx-container{display:inline-block!important;margin:0!important}
+</style><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]},svg:{fontCache:"global"}};</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script><script>addEventListener('load',()=>setTimeout(()=>document.body.dataset.fit=1,800))</script></head><body><div class="page"><div class="slot half"><div class="cut"><span class="sc">&#9986;</span><div class="card"><div class="hd"><span class="code">1I</span><span class="tt">Populations and samples</span><span class="sd">Interactive Textbook section: not a separate Study Design dot point</span></div><div class="bd">
+<div class="row">
+ <div class="box" style="flex:1.3"><h4>Populations and samples</h4>
+  <ul class="d"><li><b>Population</b>: every member of the group we want to know about.</li>
+  <li><b>Sample</b>: a subset of the population that is actually measured.</li>
+  <li><b>Random sample</b>: every member has the same chance of being picked.</li></ul>
+  Measuring a whole population is usually too slow or too costly, so we measure a sample and use its mean \(\bar x\) and standard deviation s to <b>estimate</b> the population's.</div>
+ <div class="box" style="flex:1;text-align:center"><h4>Picture it</h4><svg viewBox="0 0 196 78" width="100%" style="max-width:52mm"><rect x="3" y="2" width="190" height="72" rx="8" fill="#eef3fd" stroke="#2f6fdf"/><circle cx="13.3" cy="8.6" r="3.2" fill="#d98a1f"/><circle cx="25.6" cy="8.3" r="3.2" fill="#9cc0f5"/><circle cx="36.1" cy="9.5" r="3.2" fill="#9cc0f5"/><circle cx="45.2" cy="10.0" r="3.2" fill="#9cc0f5"/><circle cx="56.1" cy="9.7" r="3.2" fill="#9cc0f5"/><circle cx="67.3" cy="8.4" r="3.2" fill="#9cc0f5"/><circle cx="79.7" cy="11.3" r="3.2" fill="#9cc0f5"/><circle cx="89.5" cy="8.9" r="3.2" fill="#9cc0f5"/><circle cx="102.5" cy="11.8" r="3.2" fill="#9cc0f5"/><circle cx="113.3" cy="9.6" r="3.2" fill="#9cc0f5"/><circle cx="125.9" cy="8.2" r="3.2" fill="#9cc0f5"/><circle cx="136.4" cy="9.2" r="3.2" fill="#9cc0f5"/><circle cx="144.6" cy="8.5" r="3.2" fill="#9cc0f5"/><circle cx="156.2" cy="11.3" r="3.2" fill="#9cc0f5"/><circle cx="166.7" cy="10.3" r="3.2" fill="#9cc0f5"/><circle cx="179.6" cy="9.5" r="3.2" fill="#9cc0f5"/><circle cx="14.2" cy="19.3" r="3.2" fill="#9cc0f5"/><circle cx="23.2" cy="19.8" r="3.2" fill="#9cc0f5"/><circle cx="36.7" cy="20.7" r="3.2" fill="#9cc0f5"/><circle cx="46.3" cy="21.3" r="3.2" fill="#9cc0f5"/><circle cx="57.8" cy="20.2" r="3.2" fill="#9cc0f5"/><circle cx="70.2" cy="21.8" r="3.2" fill="#9cc0f5"/><circle cx="79.0" cy="21.3" r="3.2" fill="#9cc0f5"/><circle cx="91.1" cy="22.5" r="3.2" fill="#9cc0f5"/><circle cx="102.9" cy="20.2" r="3.2" fill="#9cc0f5"/><circle cx="114.9" cy="19.5" r="3.2" fill="#d98a1f"/><circle cx="123.7" cy="22.0" r="3.2" fill="#d98a1f"/><circle cx="133.6" cy="21.0" r="3.2" fill="#9cc0f5"/><circle cx="144.2" cy="21.7" r="3.2" fill="#9cc0f5"/><circle cx="158.1" cy="21.3" r="3.2" fill="#9cc0f5"/><circle cx="169.5" cy="20.3" r="3.2" fill="#9cc0f5"/><circle cx="179.8" cy="21.4" r="3.2" fill="#9cc0f5"/><circle cx="14.3" cy="31.8" r="3.2" fill="#9cc0f5"/><circle cx="26.4" cy="33.8" r="3.2" fill="#9cc0f5"/><circle cx="35.9" cy="32.7" r="3.2" fill="#9cc0f5"/><circle cx="45.2" cy="32.8" r="3.2" fill="#9cc0f5"/><circle cx="58.6" cy="34.0" r="3.2" fill="#9cc0f5"/><circle cx="70.3" cy="31.1" r="3.2" fill="#9cc0f5"/><circle cx="79.5" cy="32.7" r="3.2" fill="#9cc0f5"/><circle cx="89.1" cy="31.8" r="3.2" fill="#9cc0f5"/><circle cx="100.7" cy="30.5" r="3.2" fill="#9cc0f5"/><circle cx="111.2" cy="33.1" r="3.2" fill="#9cc0f5"/><circle cx="122.5" cy="31.0" r="3.2" fill="#9cc0f5"/><circle cx="134.6" cy="33.5" r="3.2" fill="#d98a1f"/><circle cx="144.3" cy="31.8" r="3.2" fill="#d98a1f"/><circle cx="157.2" cy="33.5" r="3.2" fill="#9cc0f5"/><circle cx="169.3" cy="33.5" r="3.2" fill="#9cc0f5"/><circle cx="178.1" cy="31.7" r="3.2" fill="#9cc0f5"/><circle cx="13.4" cy="44.5" r="3.2" fill="#9cc0f5"/><circle cx="26.8" cy="41.6" r="3.2" fill="#9cc0f5"/><circle cx="34.7" cy="41.9" r="3.2" fill="#9cc0f5"/><circle cx="45.9" cy="42.9" r="3.2" fill="#9cc0f5"/><circle cx="58.4" cy="42.1" r="3.2" fill="#9cc0f5"/><circle cx="67.0" cy="42.7" r="3.2" fill="#9cc0f5"/><circle cx="79.5" cy="43.3" r="3.2" fill="#9cc0f5"/><circle cx="92.8" cy="43.8" r="3.2" fill="#9cc0f5"/><circle cx="102.1" cy="43.5" r="3.2" fill="#9cc0f5"/><circle cx="113.7" cy="41.2" r="3.2" fill="#9cc0f5"/><circle cx="125.6" cy="44.1" r="3.2" fill="#9cc0f5"/><circle cx="136.5" cy="44.2" r="3.2" fill="#9cc0f5"/><circle cx="145.6" cy="42.6" r="3.2" fill="#9cc0f5"/><circle cx="155.4" cy="43.5" r="3.2" fill="#d98a1f"/><circle cx="166.2" cy="41.3" r="3.2" fill="#9cc0f5"/><circle cx="177.8" cy="41.6" r="3.2" fill="#9cc0f5"/><circle cx="13.4" cy="52.2" r="3.2" fill="#9cc0f5"/><circle cx="23.0" cy="52.6" r="3.2" fill="#9cc0f5"/><circle cx="34.4" cy="53.5" r="3.2" fill="#9cc0f5"/><circle cx="45.1" cy="55.5" r="3.2" fill="#9cc0f5"/><circle cx="58.5" cy="52.6" r="3.2" fill="#9cc0f5"/><circle cx="68.0" cy="53.4" r="3.2" fill="#9cc0f5"/><circle cx="79.5" cy="52.5" r="3.2" fill="#9cc0f5"/><circle cx="92.4" cy="56.0" r="3.2" fill="#9cc0f5"/><circle cx="101.9" cy="53.9" r="3.2" fill="#9cc0f5"/><circle cx="111.3" cy="52.4" r="3.2" fill="#9cc0f5"/><circle cx="123.4" cy="53.1" r="3.2" fill="#9cc0f5"/><circle cx="136.3" cy="52.6" r="3.2" fill="#9cc0f5"/><circle cx="144.1" cy="55.8" r="3.2" fill="#9cc0f5"/><circle cx="157.1" cy="52.6" r="3.2" fill="#9cc0f5"/><circle cx="168.2" cy="52.1" r="3.2" fill="#d98a1f"/><circle cx="179.1" cy="55.9" r="3.2" fill="#d98a1f"/><circle cx="15.5" cy="65.8" r="3.2" fill="#9cc0f5"/><circle cx="24.0" cy="64.5" r="3.2" fill="#9cc0f5"/><circle cx="34.7" cy="66.1" r="3.2" fill="#d98a1f"/><circle cx="47.1" cy="66.1" r="3.2" fill="#d98a1f"/><circle cx="57.3" cy="63.9" r="3.2" fill="#9cc0f5"/><circle cx="70.2" cy="66.9" r="3.2" fill="#9cc0f5"/><circle cx="81.4" cy="66.2" r="3.2" fill="#9cc0f5"/><circle cx="92.3" cy="66.0" r="3.2" fill="#9cc0f5"/><circle cx="100.9" cy="65.1" r="3.2" fill="#9cc0f5"/><circle cx="112.4" cy="63.1" r="3.2" fill="#9cc0f5"/><circle cx="122.1" cy="64.1" r="3.2" fill="#9cc0f5"/><circle cx="134.0" cy="65.8" r="3.2" fill="#9cc0f5"/><circle cx="147.8" cy="64.8" r="3.2" fill="#9cc0f5"/><circle cx="158.7" cy="67.0" r="3.2" fill="#9cc0f5"/><circle cx="169.8" cy="64.5" r="3.2" fill="#9cc0f5"/><circle cx="177.9" cy="63.9" r="3.2" fill="#9cc0f5"/></svg><div class="small">blue: the population · <b style="color:#d98a1f">orange</b>: a random sample of 10</div></div>
+</div>
+<div class="row">
+ <div class="box tip" style="flex:1"><h4>Why random?</h4>A random sample is fair: no part of the population is favoured, so the sample statistics give fair estimates. A sample chosen for convenience (e.g. only your friends, only one class) can be <b>biased</b>.</div>
+ <div class="box tip" style="flex:1"><h4>Spot it in VCAA questions</h4>"A sample of 250 … drawn at random from a population …": the numbers you are given (mean, SD, five-number summary) describe the <b>sample</b>. GM uses the sample standard deviation (<b>sx</b>) on CAS.</div>
+</div>
+</div><div class="ft">Notes: own words, from Cambridge General Mathematics Units 3&amp;4, 1I (Interactive Textbook only). Picture: illustration.</div></div></div></div></div></body></html>

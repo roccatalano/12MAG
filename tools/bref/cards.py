@@ -356,6 +356,112 @@ G1 = f"""
 </div>
 """
 
+import math as _m
+def ncurve(m=None, s=None, xl='', W=330, H=118, dec=0, pct=True, zrow=True, shade=None):
+    """Normal curve with section percentages, x row (m ± ks) and z row."""
+    x0, x1, yb, top = 14, W - 14, H - (34 if (m is not None and zrow) else 22), 10
+    X = lambda z: x0 + (z + 3.6) / 7.2 * (x1 - x0)
+    Y = lambda z: yb - (yb - top) * _m.exp(-z * z / 2)
+    s_ = [f'<svg viewBox="0 0 {W} {H}" width="100%">']
+    if shade:
+        a, b = shade
+        pts = ' '.join(f'{X(z):.1f},{Y(z):.1f}' for z in [a + i * (b - a) / 40 for i in range(41)])
+        s_.append(f'<polygon points="{X(a):.1f},{yb} {pts} {X(b):.1f},{yb}" fill="#cfe0fb"/>')
+    pts = ' '.join(f'{X(z):.1f},{Y(z):.1f}' for z in [-3.6 + i * 0.05 for i in range(145)])
+    s_.append(f'<polyline points="{pts}" fill="none" stroke="#2f6fdf" stroke-width="1.6"/>')
+    s_.append(f'<line x1="{x0}" y1="{yb}" x2="{x1}" y2="{yb}" stroke="#1b1f2a" stroke-width="1.1"/>')
+    for z in range(-3, 4):
+        s_.append(f'<line x1="{X(z):.1f}" y1="{Y(z):.1f}" x2="{X(z):.1f}" y2="{yb+3}" stroke="#9aa1ad" stroke-width=".7"/>')
+    if pct:
+        for z, p in [(-3.3, '0.15'), (-2.5, '2.35'), (-1.5, '13.5'), (-.5, '34'), (.5, '34'), (1.5, '13.5'), (2.5, '2.35'), (3.3, '0.15')]:
+            yy = min(Y(z) + 14, yb - 4) if abs(z) < 2 else yb - 4
+            s_.append(f'<text x="{X(z):.1f}" y="{yy:.1f}" font-size="{8 if abs(z)<2 else 6.6}" text-anchor="middle" font-weight="700">{p}%</text>')
+    yy = yb + 10
+    if m is not None:
+        for z in range(-3, 4):
+            v = m + z * s
+            s_.append(f'<text x="{X(z):.1f}" y="{yy}" font-size="8" text-anchor="middle">{v:.{dec}f}</text>')
+        yy += 10
+    if zrow:
+        for z in range(-3, 4):
+            s_.append(f'<text x="{X(z):.1f}" y="{yy}" font-size="8" fill="#6b7280" text-anchor="middle">{"z = " if z==-3 else ""}{z}</text>')
+        yy += 10
+    if xl: s_.append(f'<text x="{W/2}" y="{H-1}" font-size="8.5" font-weight="700" text-anchor="middle">{xl}</text>')
+    s_.append('</svg>')
+    return ''.join(s_)
+
+H1 = f"""
+<div class="row">
+ <div class="box" style="flex:1.1"><h4>The normal distribution and the 68–95–99.7% rule</h4>
+  A symmetric, bell-shaped model: mean = median, at the centre; the standard deviation sets the width. Approximately <b>68%</b>, <b>95%</b> and <b>99.7%</b> of values lie within <b>1, 2 and 3</b> standard deviations of the mean.
+  {ncurve(H=96)}
+  <span class="small">Each tail: beyond 1 SD <b>16%</b> · beyond 2 SD <b>2.5%</b> · beyond 3 SD <b>0.15%</b>. Use symmetry: 50% either side of the mean.</span></div>
+ <div class="box f" style="flex:.9"><h4>Key formulas</h4>
+  <table class="t sm" style="width:100%"><tr><th>within</th><th>interval</th><th>%</th></tr><tr><td>1 SD</td><td>x̄ − s to x̄ + s</td><td>68%</td></tr><tr><td>2 SD</td><td>x̄ − 2s to x̄ + 2s</td><td>95%</td></tr><tr><td>3 SD</td><td>x̄ − 3s to x̄ + 3s</td><td>99.7%</td></tr></table>
+  <div style="margin-top:1.2mm"><b>Standardised score</b> (z-score): how many SDs a value is above (+) or below (−) the mean.</div>
+  \\[z=\\dfrac{{x-\\bar x}}{{s}} \\qquad x=\\bar x+z\\times s\\]
+  <span class="small"><b>Tail → z:</b> 16% above → z = 1 · 2.5% above → z = 2 · 0.15% above → z = 3 (negative for tails below).</span>
+  <div class="box cas" style="margin-top:1.2mm"><h4>CAS</h4>Type <b>(172−160)/8</b> (TI Calculator) or <b>(172−160)÷8</b> (ClassPad Main). <b>Brackets matter.</b></div></div>
+</div>
+<div class="row">
+ <div class="box ex" style="flex:1"><h4>Example 28 · pizza delivery, mean 25 min, SD 5 min</h4>
+  {ncurve(25, 5, 'Delivery time (minutes)', zrow=False, H=104)}
+  <span class="small"><b>a</b> 15 to 35 min = within 2 SD: <b>95%</b> · <b>b</b> over 30 min = above +1 SD: <b>16%</b><br><b>c</b> under 10 min = below −3 SD: 0.15% × 2000 = <b>3 pizzas</b></span></div>
+ <div class="box ex" style="flex:1"><h4>Example 31 · birds, mean 42 g, SD 3 g</h4>
+  {ncurve(42, 3, 'weight (grams)', H=112, shade=(-1, 2))}
+  <span class="small"><b>a</b> z = −1: 16% below, so <b>84%</b> weigh more.<br><b>b</b> 39 g → z = −1, 48 g → z = 2: 34 + 34 + 13.5 = <b>81.5%</b></span></div>
+</div>
+<div class="row">
+ <div class="box ex" style="flex:1"><h4>Example 29 · z-scores (mean 160 cm, SD 8 cm)</h4>
+  172 cm: \\(z=\\tfrac{{172-160}}{{8}}=\\) <b>1.5</b><br>150 cm: \\(z=\\tfrac{{150-160}}{{8}}=\\) <b>−1.25</b> <span class="mut">(below the mean → negative)</span><br>160 cm: <b>z = 0</b> (at the mean)</div>
+ <div class="box ex" style="flex:1.15"><h4>Example 30 · comparing with z-scores</h4>
+  <table class="t sm"><tr><th>Subject</th><th>Mean</th><th>SD</th></tr><tr><td>Psychology</td><td>65</td><td>10</td></tr><tr><td>Statistics</td><td>60</td><td>5</td></tr></table>
+  <span class="small">Mark of 55 in both: \\(\\tfrac{{55-65}}{{10}}=-1\\) and \\(\\tfrac{{55-60}}{{5}}=-1\\).</span>
+  <div class="rep small">Yes, her standardised score, z = −1, was the same for both subjects. In both subjects she finished in the bottom 16%.</div></div>
+ <div class="box ex" style="flex:1"><h4>Examples 32 + 33 · back to actual scores</h4>
+  <b>32</b> mean 34, SD 4, z = −1.5: x = 34 + (−1.5) × 4 = <b>28</b><br>
+  <b>33</b> mean 10.2 m, 2.5% taller than 11.4 m → 11.4 is at z = 2: 11.4 = 10.2 + 2s, so <b>s = 0.6 m</b></div>
+</div>
+<div class="row">
+ <div class="box vc" style="flex:1"><h4>VCAA 2019 Exam 2 Q2b <span class="pc">58% correct</span></h4>
+  The <i>temperature difference</i> between the <i>minimum daily temperature</i> and the <i>maximum daily temperature</i> in November 2017 at a location is approximately normally distributed with a mean of 9.4 °C and a standard deviation of 3.2 °C.<br>
+  Determine the number of days in November 2017 for which this <i>temperature difference</i> is expected to be greater than 9.4 °C. <span class="mut">(1 mark)</span>
+  <div class="ans" style="margin-top:1mm">9.4 °C is the mean: 50% of 30 days = <b>15 days</b> (a number of days, not 50%).</div></div>
+ <div class="box vc" style="flex:1"><h4>VCAA 2021 Exam 2 Q1c <span class="pc">78% correct</span></h4>
+  <span class="small">In the sport of heptathlon, athletes compete in seven events. These events are the 100 m hurdles, high jump, shot-put, javelin, 200 m run, 800 m run and long jump. In shot-put, athletes throw a heavy spherical ball (a shot) as far as they can. For shot-put, athlete number six, Jamilia, threw the shot 14.50 m. The table shows the mean and standard deviation of the shot-put results for the 15 athletes.</span>
+  <table class="t sm" style="margin:1mm 0"><tr><th>statistic</th><th>shot-put (metres)</th></tr><tr><td>mean</td><td>13.74</td></tr><tr><td>standard deviation</td><td>1.43</td></tr></table>
+  Calculate Jamilia’s standardised score (<i>z</i>). Round your answer to one decimal place. <span class="mut">(1 mark)</span>
+  <div class="ans" style="margin-top:1mm">\\(z=\\tfrac{{14.50-13.74}}{{1.43}}=0.531\\ldots\\) → <b>0.5</b></div></div>
+</div>
+"""
+
+def dotsamp():
+    import random
+    r = random.Random(7)
+    pts = [(14 + (i % 16) * 11 + r.uniform(-2, 2), 10 + (i // 16) * 11 + r.uniform(-2, 2)) for i in range(96)]
+    pick = set(r.sample(range(96), 10))
+    s = ['<svg viewBox="0 0 196 78" width="100%" style="max-width:52mm">']
+    s.append('<rect x="3" y="2" width="190" height="72" rx="8" fill="#eef3fd" stroke="#2f6fdf"/>')
+    for i, (x, y) in enumerate(pts):
+        s.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3.2" fill="{"#d98a1f" if i in pick else "#9cc0f5"}"/>')
+    s.append('</svg>')
+    return ''.join(s)
+
+I1 = f"""
+<div class="row">
+ <div class="box" style="flex:1.3"><h4>Populations and samples</h4>
+  <ul class="d"><li><b>Population</b>: every member of the group we want to know about.</li>
+  <li><b>Sample</b>: a subset of the population that is actually measured.</li>
+  <li><b>Random sample</b>: every member has the same chance of being picked.</li></ul>
+  Measuring a whole population is usually too slow or too costly, so we measure a sample and use its mean \\(\\bar x\\) and standard deviation s to <b>estimate</b> the population's.</div>
+ <div class="box" style="flex:1;text-align:center"><h4>Picture it</h4>{dotsamp()}<div class="small">blue: the population · <b style="color:#d98a1f">orange</b>: a random sample of 10</div></div>
+</div>
+<div class="row">
+ <div class="box tip" style="flex:1"><h4>Why random?</h4>A random sample is fair: no part of the population is favoured, so the sample statistics give fair estimates. A sample chosen for convenience (e.g. only your friends, only one class) can be <b>biased</b>.</div>
+ <div class="box tip" style="flex:1"><h4>Spot it in VCAA questions</h4>"A sample of 250 … drawn at random from a population …": the numbers you are given (mean, SD, five-number summary) describe the <b>sample</b>. GM uses the sample standard deviation (<b>sx</b>) on CAS.</div>
+</div>
+"""
+
 CARDS = {
  '1A': dict(size='half', title='Types of data', sd='Study Design: types of data', body=A1,
             cite='Notes: own words, from Cambridge General Mathematics Units 3&amp;4, 1A. Example: Cambridge U3&amp;4 Example 1.'),
@@ -380,6 +486,13 @@ CARDS = {
  '1G': dict(size='full', title='The five-number summary and the boxplot',
             sd='Study Design: the five-number summary and boxplots (including the use of the lower fence (Q1 – 1.5 × IQR) and upper fence (Q3 + 1.5 × IQR) to identify and display possible outliers)', body=G1,
             cite='Notes: own words, from Cambridge General Mathematics Units 3&amp;4, 1G. Examples: Cambridge U3&amp;4 Examples 22–24, 26 (Example 26 description verbatim) and CAS 4; boxplots redrawn.'),
+
+ '1H': dict(size='full', title='The normal distribution and standardised scores',
+            sd='Study Design: the normal model for bell-shaped distributions and the use of the 68–95–99.7% rule to estimate percentages and to give meaning to the standard deviation; standardised values (z-scores) and their use in comparing data values across distributions', body=H1,
+            cite='Notes: own words, from Cambridge General Mathematics Units 3&amp;4, 1H. Examples: Cambridge U3&amp;4 Examples 28–33 (Example 30 conclusion verbatim); curves redrawn.'),
+ '1I': dict(size='half', title='Populations and samples',
+            sd='Interactive Textbook section: not a separate Study Design dot point', body=I1,
+            cite='Notes: own words, from Cambridge General Mathematics Units 3&amp;4, 1I (Interactive Textbook only). Picture: illustration.'),
 }
 
-LESSONS = {'1A-1B': ['1A', '1B'], '1C-1E': ['1C', '1D', '1E']}
+LESSONS = {'1A-1B': ['1A', '1B'], '1C-1E': ['1C', '1D', '1E'], '1H-1I': ['1H', '1I']}
