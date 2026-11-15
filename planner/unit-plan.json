@@ -7683,37 +7683,181 @@
      "title": "Matrices",
      "lessons": [
       {
-       "id": "gm12-u4-10a10b10c",
+       "id": "gm12-u4-10a10b",
        "kind": "lesson",
        "subchapters": [
         "10A",
-        "10B",
-        "10C"
+        "10B"
        ],
-       "title": "",
+       "title": "What is a matrix? Representing information",
        "card": {
+        "learningObjectives": [
+         {
+          "sub": "10A",
+          "items": [
+           "To be able to state the order of a given matrix.",
+           "To be able to describe the location of an element in a matrix.",
+           "To be able to determine the transpose of a matrix.",
+           "To be able to define and recognise diagonal, symmetric and triangular matrices.",
+           "To be able to define and recognise identity matrices."
+          ]
+         },
+         {
+          "sub": "10B",
+          "items": [
+           "To be able to represent data given in a table by a matrix.",
+           "To be able to represent a network diagram with a matrix."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "10A",
+          "items": [
+           "I can state the order of a given matrix.",
+           "I can find the transpose of a matrix.",
+           "I can identify a matrix as being a square, column or row matrix.",
+           "I can identify a square matrix as being an identity or diagonal or symmetric or upper/lower triangular matrix.",
+           "I can identify the aij term in a matrix A.",
+           "I can construct a matrix given a rule for aij.",
+           "I can enter a matrix into a CAS calculator."
+          ]
+         },
+         {
+          "sub": "10B",
+          "items": [
+           "I can enter information from a table into a matrix.",
+           "I can represent a network diagram by a matrix.",
+           "I can interpret a matrix representing a network diagram."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "matrix arithmetic: the order of a matrix, types of matrices (row, column, square, diagonal, symmetric, triangular, zero, binary and identity), the transpose of a matrix, and elementary matrix operations (sum, difference, multiplication of a scalar, product and power)",
+         "use of matrices to represent numerical information presented in tabular form, and the use of a rule for the (i, j) element of a matrix to construct the matrix"
+        ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 10A",
-           "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "items": [
+            {
+             "skill": "Order of a matrix",
+             "q": "Q1–4"
+            },
+            {
+             "skill": "The transpose of a matrix",
+             "q": "Q5"
+            },
+            {
+             "skill": "Types of matrices and their elements",
+             "q": "Q6–14"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q15–19"
+            }
+           ],
+           "note": ""
           },
           {
            "title": "Cambridge · Exercise 10B",
-           "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "items": [
+            {
+             "skill": "Representing a table of data in matrix form",
+             "q": "Q1–6"
+            },
+            {
+             "skill": "Representing a network diagram by a matrix",
+             "q": "Q7–10"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q11–12"
+            }
+           ],
+           "note": ""
           },
           {
-           "title": "Cambridge · Exercise 10C",
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 10A and 10B sections"
           }
          ]
         }
-       },
-       "shell": true
+       }
+      },
+      {
+       "id": "gm12-u4-10c",
+       "kind": "lesson",
+       "subchapters": [
+        "10C"
+       ],
+       "title": "Matrix addition, subtraction and scalar multiplication",
+       "card": {
+        "learningObjectives": [
+         {
+          "sub": "10C",
+          "items": [
+           "To be able to establish when two matrices are equal.",
+           "To be able to recognise when matrix addition and subtraction are defined and to perform these operations.",
+           "To be able to undertake scalar multiplication.",
+           "To be able to identify zero matrices.",
+           "To be able to undertake addition, subtraction and multiplication by a scalar with a CAS calculator.",
+           "To be able to use the operations of addition, subtraction and scalar multiplication of matrices in practical situations."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "10C",
+          "items": [
+           "I can recognise when two matrices are equal and use this to solve problems.",
+           "I can add two matrices of the same order together.",
+           "I can subtract one matrix from another when they have the same order.",
+           "I can multiply a matrix by a scalar.",
+           "I recognise the role of the zero matrix and can undertake operations using the zero matrix.",
+           "I can use addition, subtraction and scalar multiplication to process data."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "matrix arithmetic: the order of a matrix, types of matrices (row, column, square, diagonal, symmetric, triangular, zero, binary and identity), the transpose of a matrix, and elementary matrix operations (sum, difference, multiplication of a scalar, product and power)"
+        ],
+        "homework": {
+         "source": "prefill",
+         "sets": [
+          {
+           "title": "Cambridge · Exercise 10C",
+           "items": [
+            {
+             "skill": "Equality of two matrices",
+             "q": "Q1"
+            },
+            {
+             "skill": "Matrix addition, subtraction and scalar multiplication",
+             "q": "Q2–6"
+            },
+            {
+             "skill": "Applications of matrix addition, subtraction and scalar multiplication",
+             "q": "Q7–9"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q10–11"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
+           "items": [],
+           "note": "The 10C section"
+          }
+         ]
+        }
+       }
       },
       {
        "id": "gm12-u4-10d",
@@ -7721,20 +7865,72 @@
        "subchapters": [
         "10D"
        ],
-       "title": "",
+       "title": "The product of two matrices",
        "card": {
+        "learningObjectives": [
+         {
+          "sub": "10D",
+          "items": [
+           "To be able to establish when multiplication of two matrices can be undertaken.",
+           "To be able to undertake the multiplication of matrices.",
+           "To be able to understand that the order of multiplication of matrices is important.",
+           "To be able to apply multiplication of matrices to practical problems.",
+           "To be able to use your CAS calculator to undertake multiplication of matrices.",
+           "To be able to understand the role of 'summing matrices'.",
+           "To be able to work with calculations involving powers of matrices."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "10D",
+          "items": [
+           "I can determine if the product of two given matrices is defined.",
+           "I can determine the order of a matrix product.",
+           "I can multiply a row matrix by a column matrix by hand.",
+           "I can multiply a rectangular matrix by a column matrix by hand.",
+           "I can use summing matrices to sum the rows or columns of a matrix.",
+           "I can undertake multiplications of matrices to solve practical problems.",
+           "I can evaluate matrix expressions involving powers."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "matrix arithmetic: the order of a matrix, types of matrices (row, column, square, diagonal, symmetric, triangular, zero, binary and identity), the transpose of a matrix, and elementary matrix operations (sum, difference, multiplication of a scalar, product and power)"
+        ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 10D",
+           "items": [
+            {
+             "skill": "Matrix multiplication",
+             "q": "Q1–7"
+            },
+            {
+             "skill": "Practical applications of matrix multiplication",
+             "q": "Q8–13"
+            },
+            {
+             "skill": "Powers of matrices",
+             "q": "Q14–17"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q18–20"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 10D section"
           }
          ]
         }
-       },
-       "shell": true
+       }
       },
       {
        "id": "gm12-u4-10e",
@@ -7742,70 +7938,171 @@
        "subchapters": [
         "10E"
        ],
-       "title": "",
+       "title": "Matrix inverse, the determinant and matrix equations",
        "card": {
+        "learningObjectives": [
+         {
+          "sub": "10E",
+          "items": [
+           "To be able to determine by multiplication when two matrices are inverses.",
+           "To be able to determine the determinant of a 2 × 2 matrix.",
+           "To be able to determine the inverse of a 2 × 2 matrix.",
+           "To be able to use a CAS calculator to determine the inverse and determinant of an n × n matrix.",
+           "To be able to solve simple matrix equations."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "10E",
+          "items": [
+           "I can recognise that two matrices are inverses if their product is the identity matrix.",
+           "I can evaluate the determinant of a 2 × 2 matrix by hand.",
+           "I can calculate the inverse of a 2 × 2 matrix by hand.",
+           "I can calculate the inverse and determinant of an n × n matrix using CAS.",
+           "I can solve simple matrix equations."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "inverse of a matrix, its determinant, and the condition for a matrix to have an inverse"
+        ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 10E",
+           "items": [
+            {
+             "skill": "Review of the properties of the identity matrix",
+             "q": "Q1–2"
+            },
+            {
+             "skill": "Calculating the determinant of a matrix",
+             "q": "Q3"
+            },
+            {
+             "skill": "Calculating the inverse of a matrix",
+             "q": "Q4"
+            },
+            {
+             "skill": "Solving matrix equations",
+             "q": "Q5–11"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q12–14"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 10E section"
           }
          ]
         }
-       },
-       "shell": true
+       }
       },
       {
-       "id": "gm12-u4-10f",
+       "id": "gm12-u4-10f10g",
        "kind": "lesson",
        "subchapters": [
-        "10F"
+        "10F",
+        "10G"
        ],
-       "title": "",
+       "title": "Binary, permutation, communication and dominance matrices",
        "card": {
+        "learningObjectives": [
+         {
+          "sub": "10F",
+          "items": [
+           "To be able to identify and work with binary matrices, permutation matrices and communication matrices."
+          ]
+         },
+         {
+          "sub": "10G",
+          "items": [
+           "To be able to construct and interpret dominance matrices."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "10F",
+          "items": [
+           "I can use a permutation matrix to rearrange the elements of a column or row matrix.",
+           "I can construct a permutation matrix to rearrange the elements of a column or row matrix in a given order.",
+           "I can find the inverse of a permutation matrix.",
+           "I can construct a communication matrix from information given in written form or a diagram."
+          ]
+         },
+         {
+          "sub": "10G",
+          "items": [
+           "I can construct a dominance matrix from information given in written form or a diagram."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "binary and permutation matrices, and their properties and applications",
+         "communication and dominance matrices and their use in analysing communication systems and ranking players in round-robin tournaments."
+        ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 10F",
-           "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
-          }
-         ]
-        }
-       },
-       "shell": true
-      },
-      {
-       "id": "gm12-u4-10g",
-       "kind": "lesson",
-       "subchapters": [
-        "10G"
-       ],
-       "title": "",
-       "card": {
-        "homework": {
-         "source": "default",
-         "sets": [
+           "items": [
+            {
+             "skill": "Permutation matrices",
+             "q": "Q1–3"
+            },
+            {
+             "skill": "Inverses of permutation matrices",
+             "q": "Q4"
+            },
+            {
+             "skill": "Communication matrices",
+             "q": "Q5–7"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q8–9"
+            }
+           ],
+           "note": ""
+          },
           {
            "title": "Cambridge · Exercise 10G",
+           "items": [
+            {
+             "skill": "Dominance matrices",
+             "q": "Q1–9"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q10–12"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 10F and 10G sections"
           }
          ]
         }
-       },
-       "shell": true
+       }
       },
       {
        "id": "gm12-ch10-test",
        "kind": "check",
        "subchapters": [],
        "title": "Chapter 10 coursework check + test",
-       "card": {},
-       "shell": true
+       "card": {}
       }
      ]
     },

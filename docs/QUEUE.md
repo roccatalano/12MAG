@@ -105,16 +105,16 @@ _Notes for all AoS 2–4 runners (Rocco, 16 Nov):_
 
 ## AoS 3: Matrices (runner "12MAG AoS 3 runner")
 
-### Chapter 10: Matrices (lessons gm12-u4-10a10b10c, gm12-u4-10d, gm12-u4-10e, gm12-u4-10f, gm12-u4-10g; check gm12-ch10-test)
-1. `in progress 16 Nov 01:13` **Plan Chapter 10**: lesson split, titles, learning intentions, success criteria, coursework (gm12-u4-10a10b10c, gm12-u4-10d, gm12-u4-10e, gm12-u4-10f, gm12-u4-10g; see notes above). Update the lesson ids/list below if you split or merge.
-2. `todo` **Prefill the lesson cards** (gm12-u4-10a10b10c, gm12-u4-10d, gm12-u4-10e, gm12-u4-10f, gm12-u4-10g) in `planner/unit-plan.json` (see notes above).
+### Chapter 10: Matrices (lessons gm12-u4-10a10b, gm12-u4-10c, gm12-u4-10d, gm12-u4-10e, gm12-u4-10f10g; check gm12-ch10-test)
+1. `done 16 Nov 01:24 — split changed to 10A-10B · 10C · 10D · 10E · 10F-10G (still 5 lessons); titles, Cambridge learning intentions, checklist success criteria, Study Design points, coursework by exercise section (+ Revision book) on the cards; tools/plan_ch10.py` **Plan Chapter 10**: lesson split, titles, learning intentions, success criteria, coursework (gm12-u4-10a10b10c, gm12-u4-10d, gm12-u4-10e, gm12-u4-10f, gm12-u4-10g; see notes above). Update the lesson ids/list below if you split or merge.
+2. `todo` **Prefill the lesson cards** (gm12-u4-10a10b, gm12-u4-10c, gm12-u4-10d, gm12-u4-10e, gm12-u4-10f10g) in `planner/unit-plan.json` (see notes above).
 3. `todo` **CFATs for Chapter 10** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch10/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
 4. `todo` **CFAT follow-ups for Chapter 10** (Jacaranda exercises; see notes above).
-5. `todo` **Lesson gm12-u4-10a10b10c (10A, 10B, 10C)**: slides (`tools/deck/gm12-u4-10a10b10c/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-6. `todo` **Lesson gm12-u4-10d (10D)**: slides (`tools/deck/gm12-u4-10d/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-7. `todo` **Lesson gm12-u4-10e (10E)**: slides (`tools/deck/gm12-u4-10e/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-8. `todo` **Lesson gm12-u4-10f (10F)**: slides (`tools/deck/gm12-u4-10f/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-9. `todo` **Lesson gm12-u4-10g (10G)**: slides (`tools/deck/gm12-u4-10g/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+5. `todo` **Lesson gm12-u4-10a10b (10A, 10B)**: slides (`tools/deck/gm12-u4-10a10b/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+6. `todo` **Lesson gm12-u4-10c (10C)**: slides (`tools/deck/gm12-u4-10c/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+7. `todo` **Lesson gm12-u4-10d (10D)**: slides (`tools/deck/gm12-u4-10d/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+8. `todo` **Lesson gm12-u4-10e (10E)**: slides (`tools/deck/gm12-u4-10e/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+9. `todo` **Lesson gm12-u4-10f10g (10F, 10G)**: slides (`tools/deck/gm12-u4-10f10g/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 10. `todo` **Chapter 10 revision booklet** + solutions (Insight GM1 + GM2, sections per subchapter). Add to the gm12-ch10-test card.
 11. `todo` **Chapter 10 test** + solutions (model `tools/test/ch5/build.py`) from the Ch 10 (non-transition) questions of the Mathspace Ch 7 topic assessment (Matrices). Add to the gm12-ch10-test card; run `python3 tools/test/details.py`. If it can't be built from what's there, mark `needs Rocco`.
 
@@ -212,6 +212,7 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 | 15 Nov 22:01 | (no Q: rules 1, 10) | l21: APK Cambridge U1&2 1B #6 burnt (l20) → 1B #7 (% increase); 1B #7/1F #14 answers worked for 12MAG. Exit = VCAA 2019 E2 Q6a,b in original wording (one exit only, as on the card). Do Now 3 (2026 NHT E2 Q4bi) and Do Now 4 (2024 E2 Q3gi) shown without the plots/tables their part doesn't need; Do Now 4 residual plot redrawn from the least squares line (matches the printed plot). Sunspot table shown in three rows of six months. 'Why deseasonalise?' plots redrawn from Cambridge Ex 18/19 data. No CAS on the card. | rules 1, 10; Rocco can overrule | Ch5 #8 |
 | 15 Nov 22:15 | (no Q: rules 1, 10) | l22: APK Cambridge U1&2 7E #10 burnt (l10) → dropped; APKs = 5F #10 + VCAA 2014 E1 G&R Q4 (no 2014 report: % blank) + VCAA 2016 E1 G&R Q2 in original wording (Edrolo misprints option C). Exit = VCAA 2018 E2 Q3bii, biii, d in original wording (plot not shown: not needed; tile = bii 36%). Do Now 2 (2026 E1 Q10) shown with the data table, scatterplot not shown; 2026 reports not out (no % tiles). CFAT 1.5.2 slide placed after the exit (planner: last 20 min). Worksheet runs to 4 pages (coursework box spills onto p. 4). 5E video link still blank. | rules 1, 10; Rocco can overrule | Ch5 #9 |
 | 16 Nov 01:12 | — (AoS4 #1, no question asked) | Ch 13 plan: kept the Cambridge sample-planner split (13A+13B, 13C, 13D+13E, 13F: 4 lessons; 13A is long but 13B is short). LIs copied from Cambridge (13E prints none: one written for 12MAG); SCs from the Ch 13 skills checklist, which uses the newer numbering (its 13D = Cambridge 13D+13E, its 13E = 13F) so items were matched by content; added 'I can solve a minimum connector problem' (13F). Coursework = all Cambridge exercise questions grouped by the exercise's skill headings. | PLANNER.md rules; Rocco can overrule | AoS4 #1 |
+| 16 Nov 01:24 | — | Ch 10 split: 10A-10B · 10C · 10D · 10E · 10F-10G instead of 10A-10C · 10D · 10E · 10F · 10G (Cambridge sample planner) | 10A-10C = 16 Examples for one lesson, 10G = 1 Example; still 5 lessons, Study Design order kept | AoS3 #1 |
 
 ## Later chapters (Rocco adds each when he's ready)
 - Chapter 1 leftovers: rebuild S3–S5 slides on the templates; worksheets S2–S5 on ws2.py; CFAT 1.1.1–1.1.3 solutions; Ch 1 test.
@@ -267,3 +268,4 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 | AoS4 runner: G: not reachable | 2026-11-16 01:03 | 2026-11-16 01:04 | 1 | | stopped: G: folder not connected to this session (device shows no connected folders); no task claimed; next run: NOT fired — G: access needed |
 | — (AoS2 runner) | 2026-11-16 01:10 | 01:10 | 1 | | AoS2 runner: G: not reachable — get_device_info showed connectedFolders: [] (12MAG Course Planner gives names-only listing); nothing changed |
 | AoS4 #1 Plan Ch 13 | 2026-11-16 01:11 | 01:12 | ~1 | | done: 4 lesson cards planned from the Cambridge book (text PDF, quick). next run: NOT fired — fire_trigger denied by the permission check; hourly schedule (:47) will pick up task 2 |
+| AoS3 #1 Plan Chapter 10 | 2026-11-16 01:11 | 01:25 | ~14 | | done: lesson split changed (10A-10B, 10C, 10D, 10E, 10F-10G), cards filled from the Cambridge text + Ch 10 checklist; push rejected once (AoS2 claim). next run: fired |

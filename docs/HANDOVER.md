@@ -1,5 +1,8 @@
 # 12MAG handover — 15 Nov 2026 (updated 15:55)
 
+
+**16 Nov 01:25 (AoS3 #1):** Chapter 10 planned: lessons now `gm12-u4-10a10b` (10A-10B), `gm12-u4-10c`, `gm12-u4-10d`, `gm12-u4-10e`, `gm12-u4-10f10g` (10F-10G) with titles, learning intentions, success criteria, Study Design points and coursework (`tools/plan_ch10.py`). Next AoS 3 task: prefill the Ch 10 cards.
+
 **15 Nov 22:26 (Ch5 runner):** Chapter 5 test + solutions built (`tools/test/ch5/build.py`, Mathspace time series topic assessment, 20 Qs /47, Draft; on G: in 01 Lesson materials). **Chapter 5 queue is finished**; the 'Ch 5 runner' scheduled task is turned off.
 
 **15 Nov 22:58 (planner layout, Rocco):** Course plan = lessons stacked vertically + a 'Formative assessments' column per chapter (CFATs in lesson order, then the chapter test). CFAT details now live on the CFAT cards (removed from lesson cards). Chapter test cards have 'Test details' from `planner/tests.json`: re-run `python3 tools/test/details.py` after changing a test. Ch 1 test entry fixed to 'to make' (it pointed at the Ch 2 files).
