@@ -10,6 +10,10 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 **15 Nov 21:07 (Ch4 runner #6):** l15 (4D) built: `lessons/4D slides` (20) + `4D worksheet` (3 pp) + solutions, Draft, copied to 01 Lesson materials. Next Ch4 tasks: revision booklet, test.
 
+## 15 Nov 21:12 — Ch4 #7: Chapter 4 revision booklet (Draft)
+- `tools/revision/ch4/` (build.py copied from ch3; qdata.py, crop.py) → `lessons/Ch4-revision-booklet(.html/.pdf)` + `-solutions` (8 pages each); G: `01 Lesson materials\Ch4 revision booklet*.html/.pdf`. Draft on the Ch 4 check card. Insight GM1 Q5, 15, 16, 21, 22, 26, 27, 31, 32 + GM2 Q12, Q15 (GM2 Q13 log-scale histogram left out: Ch 1 content).
+- NB for Ch4 #8: the Ch 4 check card's 'Chapter test' entry still points at the Ch 2 test files (stale copy); replace it when the Ch 4 test is built.
+
 ## 15 Nov 20:57 — Ch3 #7: Chapter 3 test (Draft) · Chapter 3 queue finished
 `tools/test/ch3/build.py` → `lessons/Ch3 test` + `Ch3 test solutions` (HTML + PDF, 4 pages, /28) from the Mathspace Ch 3 topic assessment regression questions; transformation questions left for Ch 4. On G: and the Ch 3 check card. All Chapter 3 queue tasks are done; the '12MAG Ch 3 runner' scheduled task is turned off.
 

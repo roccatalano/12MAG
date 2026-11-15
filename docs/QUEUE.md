@@ -46,7 +46,7 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 4. `done 15 Nov 20:41 — 4B slides (22) + worksheet (4 pp, student + solutions), Draft; Do Now 2026 E1 Q7 (burnt by l09) → 2024 NHT E1 Q9; 13 ledger rows` **Lesson l13 (4B)**: slides + worksheet.
 5. `done 15 Nov 20:51 — 4C slides (20) + worksheet (4 pp, student + solutions), Draft; 11 ledger rows` **Lesson l14 (4C)**: slides + worksheet.
 6. `done 15 Nov 21:07 — 4D slides (20) + worksheet (3 pp, student + solutions), Draft; Cambridge Ex 7 figures cropped; stale CFAT 1.4.1 entry removed from l15 card; 11 ledger rows` **Lesson l15 (4D)**: slides + worksheet.
-7. `in progress 15 Nov 21:10` **Chapter 4 revision booklet** + solutions (template `tools/revision/ch2/build.py`): Insight GM1 + GM2 transformation questions and parts (the ones the Ch 2/Ch 3 booklets leave out). Insight is never burnt.
+7. `done 15 Nov 21:12 — Ch4 revision booklet + solutions (8 pages each, HTML + PDF): Insight GM1 MC Q5, 15, 16, 21, 22, 26, 27, 31, 32 + GM2 Q12, Q15 (a in 4B, b in 4C); sections 4A–4D; on G: and the Ch 4 check card` **Chapter 4 revision booklet** + solutions (template `tools/revision/ch2/build.py`): Insight GM1 + GM2 transformation questions and parts (the ones the Ch 2/Ch 3 booklets leave out). Insight is never burnt.
 8. `todo` **Chapter 4 test** (model `tools/test/ch2/build.py`). Mathspace has no transformations chapter: its transformation questions are lessons 3.05–3.07 in `02 Sources\Textbooks\Mathspace\Chapter 3 - Model linear associations` (topic assessment + Chapter 3 review). Use the transformation questions the Ch 3 test does not use; if that is too few for a test, mark `needs Rocco`.
 
 ## Chapter 5: Investigating and modelling time series data (lessons gm12-u3-l16 … l22, check gm12-u3-ch5-test)
@@ -149,3 +149,4 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 | Ch3 #7 Chapter 3 test | 2026-11-15 20:53 | 2026-11-15 20:57 | ~4 | | done: 4-page test + solutions; quick (text-based PDF, ch2 test build reused). Chapter 3 finished: Ch 3 runner turned off | next run: NOT fired — no Ch 3 todo tasks left; Ch 3 runner disabled |
 | Ch5 #4 Lesson l17 (5B moving means) | 20:44 | 21:00 | ~16 | | done: sources re-read from G:; exits/APK fixes (burnt, wrong lesson); slide PDF ~4 min | next run: fired |
 | Ch4 #6 l15 (4D) slides + worksheet | 20:53 | 21:07 | ~14 | | done: 20 slides, 3-page worksheet; textbook figure crops instead of redraws; 1 overflow fix | next run: fired |
+| Ch4 #7 Ch 4 revision booklet | 21:08 | 21:12 | ~4 | | done: 8-page booklet + solutions; Insight pages read from images, answers checked with numpy and Insight solutions; 3 wide tables split to fit. Insight never burnt (no ledger rows) | next run: fired |
