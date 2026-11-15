@@ -3175,7 +3175,33 @@
           }
          ]
         },
-        "casYouTry": "Edrolo 2C WE3 (scatterplot on CAS)"
+        "casYouTry": "Edrolo 2C WE3 (scatterplot on CAS)",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/2D-2E slides.html",
+          "pdf": "lessons/2D-2E slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "4 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/2D-2E worksheet.html",
+            "pdf": "lessons/2D-2E worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/2D-2E worksheet solutions.html",
+            "pdf": "lessons/2D-2E worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {

@@ -17,7 +17,7 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 2b. `done 2026-11-15 — CFAT 1.2.3 (2E-2H, /15) HTML + PDF + solutions; sits on the l09 (3A) card` **CFAT 1.2.3** (Rocco, 15 Nov: was missed by task 2; covers 2E–2H, given at the start of the 3A lesson).
 3. `done 2026-11-15 — 2A-2B slides (35 slides, PDF 59 pages) + guided worksheet (6 pages, student + solutions), Draft; on G: and the l03 card` **Lesson l03 (2A, 2B)**: slides (`tools/deck/<id>/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 4. `done 2026-11-15 — 2C slides (27 slides, PDF 45 pages) + guided worksheet (5 pages, student + solutions), Draft; on G: and the l04 card` **Lesson l04 (2C)**: slides + worksheet.
-5. `in progress 2026-11-15 18:23` **Lesson l05 (2D, 2E)**: slides + worksheet.
+5. `done 2026-11-15 — 2D-2E slides (26 slides, PDF 41 pages) + guided worksheet (4 pages, student + solutions), Draft; on G: and the l05 card` **Lesson l05 (2D, 2E)**: slides + worksheet.
 6. `todo` **Lesson l06 (2F)**: slides + worksheet.
 7. `todo` **Lesson l07 (2G, 2H)**: slides + worksheet.
 8. `todo` **Lesson l08 (2I)**: slides + worksheet.
@@ -51,6 +51,7 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 | 15 Nov 17:21 | Q4 | Rocco: OK | Rocco's answer | Ch2 #2 |
 | 15 Nov 17:21 | Q5 | Keep Ch 2 videos `draft`; each lesson task checks/fills its subchapters' MaffsGuru links when it builds the "Videos that might help" slide | no answer after 10 min; videos are only needed when the slides are built | Ch2 #2 |
 | 15 Nov 18:22 | — | l04: APK 'Cambridge U1&2 2I #16' has no question of its own (it points to Examples 27/28); used its Now try this 27 (Example 27 = U3&4 Example 10). All figures redrawn from values read off the sources (no image crops); 2019 E2 Q3 boxplots redrawn horizontally. Worked-example reports set out in SOCS order. | rule 1 + SOCS rule; Rocco can overrule | Ch2 #4 |
+| 15 Nov 18:43 | — | l05: exits and APK 2 use the original VCAA wording (2018 E2 Q2b, 2016 E2 Q3a incl. n = 13, r² = 0.97; 2020 E2 Q4bi), not Edrolo's adapted versions. Cambridge U1&2 checklist 7B #3 has no printed answer: solution written for 12MAG (r = 0.66 → moderate). Scatterplots redrawn; Example 15 and Edrolo 6B WE1/WE3 point clouds are close approximations. Do Now 3 Table 1 laid out across the page (same data). | as for l04 (original VCAA wording); Rocco can overrule | Ch2 #5 |
 | 15 Nov 17:58 | — | l03 videos slide: MaffsGuru 2B video kept (YouTube title checked); 2A MaffsGuru video is locked (paid), so its card stays blank; videos.json status left `draft` | only free, checked links on slides | Ch2 #3 |
 
 ## Later chapters (Rocco adds each when he's ready)
@@ -66,3 +67,4 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 | Ch2 #3 l03 (2A-2B) | 2026-11-15 17:36 | 2026-11-15 17:58 | 22 | | done: 35 slides + 6-page worksheet (both copies), Draft. Slowed by: a new grouped bar chart (Edrolo 2A WE2) and fitting the 5 table options of VCAA 2021 E1 Q3 on one slide; worksheet 7→6 pages by laying tables side by side. next run: not fired — built in live session |
 | Ch2 #2b CFAT 1.2.3 | 2026-11-15 18:01 | 2026-11-15 18:01 | ~15 | | done in live session (Rocco spotted the missing third CFAT). next run: not fired — live session |
 | Ch2 #4 l04 (2C) | 2026-11-15 18:07 | 2026-11-15 18:22 | 15 | | done: 27 slides + 5-page worksheet (both copies), Draft. Slowed by: new figure helpers (parallel boxplots, parallel dot plots, back-to-back stem plots in tools/deck/l04/figs.py) and reading values off source figures. next run: fired |
+| Ch2 #5 l05 (2D-2E) | 2026-11-15 18:23 | 2026-11-15 18:43 | ~20 | | done: 26 slides + 4-page worksheet (both copies), Draft. Slowed by: new scatterplot helper (tools/deck/l05/figs.py), reading ~200 points off source scatterplots, slide PDF render (~3 min). next run: fired |

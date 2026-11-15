@@ -7,6 +7,12 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 
 
+## 15 Nov 18:43 — Lesson l05 (2D-2E) slides + guided worksheet (runner, task Ch2 #5)
+- `tools/deck/l05/build.py` → `lessons/2D-2E slides.html/.pdf` (26 slides, PDF 41 pages; screenshots `tools/deck/l05/shoot.py`). `tools/deck/l05/worksheet.py` → `lessons/2D-2E worksheet(.html/.pdf)` + `… worksheet solutions` (4 pages each). Same names on G: `01 Lesson materials`. Draft on the l05 card.
+- From the l05 card: Do Now VCAA 2025 NHT E1 Q11, Q5 (no %), 2025 E2 Q1d (89%), 2023 E2 Q1bii (39%); APK Cambridge U1&2 7B #3, VCAA 2020 E2 Q4bi (78%, original wording); Examples 13–15 + Edrolo U1&2 6B WE3, WE1, Edrolo 2C WE4; CAS slide (Cambridge CAS 1 data) + CAS You try Edrolo 2C WE3; exits VCAA 2018 E2 Q2b (90%), 2016 E2 Q3a (78%), original wording. Nothing dropped.
+- New: `tools/deck/l05/figs.py` (scatterplot SVG with hideable trend line/curve, highlightable points) and a Direction · Form · Strength · Outliers answer template (`dfs()` in build.py).
+- For Rocco to check: scatterplots redrawn (Example 15 and Edrolo 6B WE1/WE3 clouds approximate); 2E MaffsGuru link still blank.
+
 ## 15 Nov 18:22 — Lesson l04 (2C) slides + guided worksheet (runner, task Ch2 #4)
 - `tools/deck/l04/build.py` → `lessons/2C slides.html/.pdf` (27 slides, PDF 45 pages; screenshots `tools/deck/l04/shoot.py`). `tools/deck/l04/worksheet.py` → `lessons/2C worksheet(.html/.pdf)` + `… worksheet solutions` (5 pages each). Same names on G: `01 Lesson materials`. Draft on the l04 card.
 - From the l04 card: Do Now VCAA 2026 NHT E1 Q5 (no %), 2024 E1 Q6 (53%), 2023 E2 Q1ci (88%), Q2bi (87%); APK Cambridge U1&2 2I Now try this 27 (for checklist #16), VCAA 2019 E2 Q2aii (87%), 2021 E1 Q4 (60%, original wording); Examples 9–12 + Edrolo 2B WE2, WE1, WE3, WE4; exits VCAA 2016 E1 Q8 (45%), 2019 E2 Q3 (36% full marks), 2017 E2 Q2e (43% full marks). Nothing dropped.
