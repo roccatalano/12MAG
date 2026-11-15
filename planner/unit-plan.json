@@ -151,8 +151,9 @@
          {
           "kind": "Guided slides",
           "desc": "Teach the new content and project every question: APK, worked examples, you trys, exit tasks (no Do Now in Lesson 1).",
-          "status": "draft",
-          "file": "lessons/S1-slides.html"
+          "status": "ready",
+          "file": "lessons/S1-slides.html",
+          "pdf": "lessons/S1-slides.pdf"
          },
          {
           "kind": "Guided worksheet",

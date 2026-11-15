@@ -48,7 +48,7 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 ## Done 15 Nov (14:50): S1 slides round 3 — Rocco: "amazing"; slides DONE, move on
 - Tree reveals branch by branch; CAS slides static (template); % frequency formula on the left in one row; chart axes hidden until the Axes step; coursework as tick boxes; rules in CLAUDE.md.
-- Still Draft on the planner until Rocco says Ready.
+- **Rocco: S1 slides READY** (planner status ready). PDF made with the new `tools/deck/pdf.py` (44 pages): question slides = question frame + final frame, other slides final frame only.
 
 ## NEXT JOB: deep review of Lesson 1 (1A–1B), continued — next is the **worksheet**: worksheet → bound reference → planner card
 ### Original brief: deep review of Lesson 1 (1A–1B) — Rocco, 15 Nov: "make sure they are up to standard and not AI slop"

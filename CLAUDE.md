@@ -52,6 +52,8 @@ Build a lesson with a `tools/deck/<S#>/build.py` that only fills content into th
 - **Coursework items are tick boxes** (same look as the success criteria).
 - **Learn:** rule card + the related key formula/definition cards on top, picture, one tip. **CAS slides are static** (Rocco, 15 Nov): TI and ClassPad step cards, small embedded YouTube cards stretched to the width of the step cards, then the read-off card, all shown at once.
 
+- **Slide PDF** (Rocco, 15 Nov): `python3 tools/deck/pdf.py lessons/S#-slides.html lessons/S#-slides.pdf`. Question slides (Do Now, APK, WE, You try, exit) → 2 pages (question only, then the final frame); everything else → the final frame only. Copy to G: as `<subs> slides.pdf`.
+
 ## Bound reference entries (Rocco, 15 Nov)
 - **One card per subchapter**, in colour, with dashed cut lines so it can be trimmed and stuck in the top left of a double page in the student's A4 bound reference (the rest of the double page is for their own notes). The lesson card's "Bound reference entry" links that lesson's subchapter cards (single or combined for printing).
 - **Half A4 by default; full A4 if it doesn't fit.** One fixed text size for every card (never scale fonts to fill). Fill spare space with useful content, e.g. a VCAA question.
