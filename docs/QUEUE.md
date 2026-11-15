@@ -69,6 +69,8 @@ _Notes for all AoS 2–4 runners (Rocco, 16 Nov):_
 - CFAT names: CFAT <AoS>.<Cambridge chapter>.<n> (e.g. CFAT 2.7.1, 3.10.1, 4.13.1). Edrolo exercise Qs only (rule 8). If a subchapter has no Edrolo exercise questions, the CFAT covers only those that do; note the gap in the task's done line (no question to Rocco needed).
 - Chapter tests come from Mathspace, which numbers chapters differently (all on G: in `02 Sources\Textbooks\Mathspace\`, downloaded 16 Nov: topic assessment + answer key, and per-lesson question worksheet + answer key): Cambridge Ch 7 ↔ Mathspace Ch 5 (Depreciation and interest); Ch 8 ↔ Mathspace Ch 6 (Loans and investments); Ch 10 + Ch 11 ↔ Mathspace Ch 7 (Matrices) — split its topic assessment by content; Ch 13 + Ch 14 ↔ Mathspace Ch 8 (Graphs and networks) + Ch 9 (Applications of graphs and networks) — split by content. If a split leaves too few questions, top up from the matching Mathspace lesson question worksheets (verbatim, cite). Mathspace is burnt like any other source.
 - New CAS skills: write each once in `planner/cas-skills.json` during the chapter's prefill (e.g. Finance Solver / TVM for Ch 7–8, matrix entry/operations/inverse/powers for Ch 10–11), then lessons copy from there.
+- CFAT follow-ups (rule 8): after each chapter's CFATs, pick Jacaranda U3&4 textbook exercises (`02 Sources\Textbooks\Jacaranda`) matching each CFAT's subchapters/skills, as a 'Follow-up' list on the CFAT's planner entry (exercise + question numbers by skill; no new files needed unless the existing CFAT entries use one).
+- Chapter planning (AoS 3–4 only: those lessons are blank shells taken from the Cambridge sample planner): check the lesson split against the Cambridge chapter and the Study Design (split/merge lessons inside the chapter if needed: PLANNER.md rules), give each lesson a title, learning intentions and success criteria like the Ch 2–5 cards, and fill the coursework sets.
 - Revision booklets: Insight GM1 + GM2 questions for that chapter's topic (template `tools/revision/ch2/build.py`). Insight is never burnt.
 
 ## AoS 2: Recursion and financial modelling (runner "12MAG AoS 2 runner")
@@ -76,76 +78,86 @@ _Notes for all AoS 2–4 runners (Rocco, 16 Nov):_
 ### Chapter 7: Modelling growth and decay using recursion (lessons gm12-u3-l31, gm12-u3-l32, gm12-u3-l33, gm12-u3-l34; check gm12-u3-l36)
 1. `todo` **Prefill the lesson cards** (gm12-u3-l31, gm12-u3-l32, gm12-u3-l33, gm12-u3-l34) in `planner/unit-plan.json` (see notes above).
 2. `todo` **CFATs for Chapter 7** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch7/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
-3. `todo` **Lesson gm12-u3-l31 (7A)**: slides (`tools/deck/gm12-u3-l31/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-4. `todo` **Lesson gm12-u3-l32 (7B, 7D)**: slides (`tools/deck/gm12-u3-l32/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-5. `todo` **Lesson gm12-u3-l33 (7C, 7E)**: slides (`tools/deck/gm12-u3-l33/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-6. `todo` **Lesson gm12-u3-l34 (7F)**: slides (`tools/deck/gm12-u3-l34/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-7. `todo` **Chapter 7 revision booklet** + solutions (Insight GM1 + GM2, sections per subchapter). Add to the gm12-u3-l36 card.
-8. `todo` **Chapter 7 test** + solutions (model `tools/test/ch5/build.py`) from the Mathspace Ch 5 topic assessment (Depreciation and interest). Add to the gm12-u3-l36 card; run `python3 tools/test/details.py`. If it can't be built from what's there, mark `needs Rocco`.
+3. `todo` **CFAT follow-ups for Chapter 7** (Jacaranda exercises; see notes above).
+4. `todo` **Lesson gm12-u3-l31 (7A)**: slides (`tools/deck/gm12-u3-l31/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+5. `todo` **Lesson gm12-u3-l32 (7B, 7D)**: slides (`tools/deck/gm12-u3-l32/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+6. `todo` **Lesson gm12-u3-l33 (7C, 7E)**: slides (`tools/deck/gm12-u3-l33/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+7. `todo` **Lesson gm12-u3-l34 (7F)**: slides (`tools/deck/gm12-u3-l34/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+8. `todo` **Chapter 7 revision booklet** + solutions (Insight GM1 + GM2, sections per subchapter). Add to the gm12-u3-l36 card.
+9. `todo` **Chapter 7 test** + solutions (model `tools/test/ch5/build.py`) from the Mathspace Ch 5 topic assessment (Depreciation and interest). Add to the gm12-u3-l36 card; run `python3 tools/test/details.py`. If it can't be built from what's there, mark `needs Rocco`.
 
 ### Chapter 8: Reducing balance loans, annuities and investments (lessons gm12-u3-l37, gm12-u3-l38, gm12-u3-l39, gm12-u3-l40, gm12-u3-l41, gm12-u3-l42, gm12-u3-l43, gm12-u3-l44, gm12-u3-l45; check gm12-u3-l46)
-9. `todo` **Prefill the lesson cards** (gm12-u3-l37, gm12-u3-l38, gm12-u3-l39, gm12-u3-l40, gm12-u3-l41, gm12-u3-l42, gm12-u3-l43, gm12-u3-l44, gm12-u3-l45) in `planner/unit-plan.json` (see notes above).
-10. `todo` **CFATs for Chapter 8** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch8/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
-11. `todo` **Lesson gm12-u3-l37 (8A)**: slides (`tools/deck/gm12-u3-l37/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-12. `todo` **Lesson gm12-u3-l38 (8B)**: slides (`tools/deck/gm12-u3-l38/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-13. `todo` **Lesson gm12-u3-l39 (8C)**: slides (`tools/deck/gm12-u3-l39/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-14. `todo` **Lesson gm12-u3-l40 (8D)**: slides (`tools/deck/gm12-u3-l40/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-15. `todo` **Lesson gm12-u3-l41 (8E)**: slides (`tools/deck/gm12-u3-l41/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-16. `todo` **Lesson gm12-u3-l42 (8F)**: slides (`tools/deck/gm12-u3-l42/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-17. `todo` **Lesson gm12-u3-l43 (8G)**: slides (`tools/deck/gm12-u3-l43/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-18. `todo` **Lesson gm12-u3-l44 (8H)**: slides (`tools/deck/gm12-u3-l44/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-19. `todo` **Lesson gm12-u3-l45 (8I)**: slides (`tools/deck/gm12-u3-l45/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-20. `todo` **Chapter 8 revision booklet** + solutions (Insight GM1 + GM2, sections per subchapter). Add to the gm12-u3-l46 card.
-21. `todo` **Chapter 8 test** + solutions (model `tools/test/ch5/build.py`) from the Mathspace Ch 6 topic assessment (Loans and investments). Add to the gm12-u3-l46 card; run `python3 tools/test/details.py`. If it can't be built from what's there, mark `needs Rocco`.
+10. `todo` **Prefill the lesson cards** (gm12-u3-l37, gm12-u3-l38, gm12-u3-l39, gm12-u3-l40, gm12-u3-l41, gm12-u3-l42, gm12-u3-l43, gm12-u3-l44, gm12-u3-l45) in `planner/unit-plan.json` (see notes above).
+11. `todo` **CFATs for Chapter 8** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch8/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
+12. `todo` **CFAT follow-ups for Chapter 8** (Jacaranda exercises; see notes above).
+13. `todo` **Lesson gm12-u3-l37 (8A)**: slides (`tools/deck/gm12-u3-l37/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+14. `todo` **Lesson gm12-u3-l38 (8B)**: slides (`tools/deck/gm12-u3-l38/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+15. `todo` **Lesson gm12-u3-l39 (8C)**: slides (`tools/deck/gm12-u3-l39/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+16. `todo` **Lesson gm12-u3-l40 (8D)**: slides (`tools/deck/gm12-u3-l40/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+17. `todo` **Lesson gm12-u3-l41 (8E)**: slides (`tools/deck/gm12-u3-l41/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+18. `todo` **Lesson gm12-u3-l42 (8F)**: slides (`tools/deck/gm12-u3-l42/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+19. `todo` **Lesson gm12-u3-l43 (8G)**: slides (`tools/deck/gm12-u3-l43/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+20. `todo` **Lesson gm12-u3-l44 (8H)**: slides (`tools/deck/gm12-u3-l44/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+21. `todo` **Lesson gm12-u3-l45 (8I)**: slides (`tools/deck/gm12-u3-l45/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+22. `todo` **Chapter 8 revision booklet** + solutions (Insight GM1 + GM2, sections per subchapter). Add to the gm12-u3-l46 card.
+23. `todo` **Chapter 8 test** + solutions (model `tools/test/ch5/build.py`) from the Mathspace Ch 6 topic assessment (Loans and investments). Add to the gm12-u3-l46 card; run `python3 tools/test/details.py`. If it can't be built from what's there, mark `needs Rocco`.
 
 
 ## AoS 3: Matrices (runner "12MAG AoS 3 runner")
 
 ### Chapter 10: Matrices (lessons gm12-u4-10a10b10c, gm12-u4-10d, gm12-u4-10e, gm12-u4-10f, gm12-u4-10g; check gm12-ch10-test)
-1. `todo` **Prefill the lesson cards** (gm12-u4-10a10b10c, gm12-u4-10d, gm12-u4-10e, gm12-u4-10f, gm12-u4-10g) in `planner/unit-plan.json` (see notes above).
-2. `todo` **CFATs for Chapter 10** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch10/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
-3. `todo` **Lesson gm12-u4-10a10b10c (10A, 10B, 10C)**: slides (`tools/deck/gm12-u4-10a10b10c/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-4. `todo` **Lesson gm12-u4-10d (10D)**: slides (`tools/deck/gm12-u4-10d/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-5. `todo` **Lesson gm12-u4-10e (10E)**: slides (`tools/deck/gm12-u4-10e/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-6. `todo` **Lesson gm12-u4-10f (10F)**: slides (`tools/deck/gm12-u4-10f/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-7. `todo` **Lesson gm12-u4-10g (10G)**: slides (`tools/deck/gm12-u4-10g/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-8. `todo` **Chapter 10 revision booklet** + solutions (Insight GM1 + GM2, sections per subchapter). Add to the gm12-ch10-test card.
-9. `todo` **Chapter 10 test** + solutions (model `tools/test/ch5/build.py`) from the Ch 10 (non-transition) questions of the Mathspace Ch 7 topic assessment (Matrices). Add to the gm12-ch10-test card; run `python3 tools/test/details.py`. If it can't be built from what's there, mark `needs Rocco`.
+1. `todo` **Plan Chapter 10**: lesson split, titles, learning intentions, success criteria, coursework (gm12-u4-10a10b10c, gm12-u4-10d, gm12-u4-10e, gm12-u4-10f, gm12-u4-10g; see notes above). Update the lesson ids/list below if you split or merge.
+2. `todo` **Prefill the lesson cards** (gm12-u4-10a10b10c, gm12-u4-10d, gm12-u4-10e, gm12-u4-10f, gm12-u4-10g) in `planner/unit-plan.json` (see notes above).
+3. `todo` **CFATs for Chapter 10** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch10/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
+4. `todo` **CFAT follow-ups for Chapter 10** (Jacaranda exercises; see notes above).
+5. `todo` **Lesson gm12-u4-10a10b10c (10A, 10B, 10C)**: slides (`tools/deck/gm12-u4-10a10b10c/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+6. `todo` **Lesson gm12-u4-10d (10D)**: slides (`tools/deck/gm12-u4-10d/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+7. `todo` **Lesson gm12-u4-10e (10E)**: slides (`tools/deck/gm12-u4-10e/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+8. `todo` **Lesson gm12-u4-10f (10F)**: slides (`tools/deck/gm12-u4-10f/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+9. `todo` **Lesson gm12-u4-10g (10G)**: slides (`tools/deck/gm12-u4-10g/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+10. `todo` **Chapter 10 revision booklet** + solutions (Insight GM1 + GM2, sections per subchapter). Add to the gm12-ch10-test card.
+11. `todo` **Chapter 10 test** + solutions (model `tools/test/ch5/build.py`) from the Ch 10 (non-transition) questions of the Mathspace Ch 7 topic assessment (Matrices). Add to the gm12-ch10-test card; run `python3 tools/test/details.py`. If it can't be built from what's there, mark `needs Rocco`.
 
 ### Chapter 11: Transition matrices and Leslie matrices (lessons gm12-u4-11a, gm12-u4-11b, gm12-u4-11c, gm12-u4-11d, gm12-u4-11e; check gm12-ch11-test)
-10. `todo` **Prefill the lesson cards** (gm12-u4-11a, gm12-u4-11b, gm12-u4-11c, gm12-u4-11d, gm12-u4-11e) in `planner/unit-plan.json` (see notes above).
-11. `todo` **CFATs for Chapter 11** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch11/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
-12. `todo` **Lesson gm12-u4-11a (11A)**: slides (`tools/deck/gm12-u4-11a/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-13. `todo` **Lesson gm12-u4-11b (11B)**: slides (`tools/deck/gm12-u4-11b/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-14. `todo` **Lesson gm12-u4-11c (11C)**: slides (`tools/deck/gm12-u4-11c/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-15. `todo` **Lesson gm12-u4-11d (11D)**: slides (`tools/deck/gm12-u4-11d/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-16. `todo` **Lesson gm12-u4-11e (11E)**: slides (`tools/deck/gm12-u4-11e/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-17. `todo` **Chapter 11 revision booklet** + solutions (Insight GM1 + GM2, sections per subchapter). Add to the gm12-ch11-test card.
-18. `todo` **Chapter 11 test** + solutions (model `tools/test/ch5/build.py`) from the transition-matrix questions of the Mathspace Ch 7 topic assessment (lessons 7.10–7.12); those the Ch 10 test does not use. Add to the gm12-ch11-test card; run `python3 tools/test/details.py`. If it can't be built from what's there, mark `needs Rocco`.
+12. `todo` **Plan Chapter 11**: lesson split, titles, learning intentions, success criteria, coursework (gm12-u4-11a, gm12-u4-11b, gm12-u4-11c, gm12-u4-11d, gm12-u4-11e; see notes above). Update the lesson ids/list below if you split or merge.
+13. `todo` **Prefill the lesson cards** (gm12-u4-11a, gm12-u4-11b, gm12-u4-11c, gm12-u4-11d, gm12-u4-11e) in `planner/unit-plan.json` (see notes above).
+14. `todo` **CFATs for Chapter 11** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch11/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
+15. `todo` **CFAT follow-ups for Chapter 11** (Jacaranda exercises; see notes above).
+16. `todo` **Lesson gm12-u4-11a (11A)**: slides (`tools/deck/gm12-u4-11a/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+17. `todo` **Lesson gm12-u4-11b (11B)**: slides (`tools/deck/gm12-u4-11b/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+18. `todo` **Lesson gm12-u4-11c (11C)**: slides (`tools/deck/gm12-u4-11c/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+19. `todo` **Lesson gm12-u4-11d (11D)**: slides (`tools/deck/gm12-u4-11d/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+20. `todo` **Lesson gm12-u4-11e (11E)**: slides (`tools/deck/gm12-u4-11e/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+21. `todo` **Chapter 11 revision booklet** + solutions (Insight GM1 + GM2, sections per subchapter). Add to the gm12-ch11-test card.
+22. `todo` **Chapter 11 test** + solutions (model `tools/test/ch5/build.py`) from the transition-matrix questions of the Mathspace Ch 7 topic assessment (lessons 7.10–7.12); those the Ch 10 test does not use. Add to the gm12-ch11-test card; run `python3 tools/test/details.py`. If it can't be built from what's there, mark `needs Rocco`.
 
 
 ## AoS 4: Networks and decision mathematics (runner "12MAG AoS 4 runner")
 
 ### Chapter 13: Graphs, networks and trees (lessons gm12-u4-13a13b, gm12-u4-13c, gm12-u4-13d13e, gm12-u4-13f; check gm12-ch13-test)
-1. `todo` **Prefill the lesson cards** (gm12-u4-13a13b, gm12-u4-13c, gm12-u4-13d13e, gm12-u4-13f) in `planner/unit-plan.json` (see notes above).
-2. `todo` **CFATs for Chapter 13** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch13/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
-3. `todo` **Lesson gm12-u4-13a13b (13A, 13B)**: slides (`tools/deck/gm12-u4-13a13b/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-4. `todo` **Lesson gm12-u4-13c (13C)**: slides (`tools/deck/gm12-u4-13c/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-5. `todo` **Lesson gm12-u4-13d13e (13D, 13E)**: slides (`tools/deck/gm12-u4-13d13e/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-6. `todo` **Lesson gm12-u4-13f (13F)**: slides (`tools/deck/gm12-u4-13f/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-7. `todo` **Chapter 13 revision booklet** + solutions (Insight GM1 + GM2, sections per subchapter). Add to the gm12-ch13-test card.
-8. `todo` **Chapter 13 test** + solutions (model `tools/test/ch5/build.py`) from the Mathspace Ch 8 topic assessment (Graphs and networks), plus any Ch 13 content in the Mathspace Ch 9 assessment (e.g. shortest path). Add to the gm12-ch13-test card; run `python3 tools/test/details.py`. If it can't be built from what's there, mark `needs Rocco`.
+1. `todo` **Plan Chapter 13**: lesson split, titles, learning intentions, success criteria, coursework (gm12-u4-13a13b, gm12-u4-13c, gm12-u4-13d13e, gm12-u4-13f; see notes above). Update the lesson ids/list below if you split or merge.
+2. `todo` **Prefill the lesson cards** (gm12-u4-13a13b, gm12-u4-13c, gm12-u4-13d13e, gm12-u4-13f) in `planner/unit-plan.json` (see notes above).
+3. `todo` **CFATs for Chapter 13** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch13/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
+4. `todo` **CFAT follow-ups for Chapter 13** (Jacaranda exercises; see notes above).
+5. `todo` **Lesson gm12-u4-13a13b (13A, 13B)**: slides (`tools/deck/gm12-u4-13a13b/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+6. `todo` **Lesson gm12-u4-13c (13C)**: slides (`tools/deck/gm12-u4-13c/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+7. `todo` **Lesson gm12-u4-13d13e (13D, 13E)**: slides (`tools/deck/gm12-u4-13d13e/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+8. `todo` **Lesson gm12-u4-13f (13F)**: slides (`tools/deck/gm12-u4-13f/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+9. `todo` **Chapter 13 revision booklet** + solutions (Insight GM1 + GM2, sections per subchapter). Add to the gm12-ch13-test card.
+10. `todo` **Chapter 13 test** + solutions (model `tools/test/ch5/build.py`) from the Mathspace Ch 8 topic assessment (Graphs and networks), plus any Ch 13 content in the Mathspace Ch 9 assessment (e.g. shortest path). Add to the gm12-ch13-test card; run `python3 tools/test/details.py`. If it can't be built from what's there, mark `needs Rocco`.
 
 ### Chapter 14: Flow, matching and scheduling (lessons gm12-u4-14a, gm12-u4-14b, gm12-u4-14c, gm12-u4-14d, gm12-u4-14e; check gm12-ch14-test)
-9. `todo` **Prefill the lesson cards** (gm12-u4-14a, gm12-u4-14b, gm12-u4-14c, gm12-u4-14d, gm12-u4-14e) in `planner/unit-plan.json` (see notes above).
-10. `todo` **CFATs for Chapter 14** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch14/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
-11. `todo` **Lesson gm12-u4-14a (14A)**: slides (`tools/deck/gm12-u4-14a/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-12. `todo` **Lesson gm12-u4-14b (14B)**: slides (`tools/deck/gm12-u4-14b/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-13. `todo` **Lesson gm12-u4-14c (14C)**: slides (`tools/deck/gm12-u4-14c/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-14. `todo` **Lesson gm12-u4-14d (14D)**: slides (`tools/deck/gm12-u4-14d/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-15. `todo` **Lesson gm12-u4-14e (14E)**: slides (`tools/deck/gm12-u4-14e/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-16. `todo` **Chapter 14 revision booklet** + solutions (Insight GM1 + GM2, sections per subchapter). Add to the gm12-ch14-test card.
-17. `todo` **Chapter 14 test** + solutions (model `tools/test/ch5/build.py`) from the Mathspace Ch 9 topic assessment (Applications of graphs and networks), questions the Ch 13 test does not use. Add to the gm12-ch14-test card; run `python3 tools/test/details.py`. If it can't be built from what's there, mark `needs Rocco`.
+11. `todo` **Plan Chapter 14**: lesson split, titles, learning intentions, success criteria, coursework (gm12-u4-14a, gm12-u4-14b, gm12-u4-14c, gm12-u4-14d, gm12-u4-14e; see notes above). Update the lesson ids/list below if you split or merge.
+12. `todo` **Prefill the lesson cards** (gm12-u4-14a, gm12-u4-14b, gm12-u4-14c, gm12-u4-14d, gm12-u4-14e) in `planner/unit-plan.json` (see notes above).
+13. `todo` **CFATs for Chapter 14** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch14/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
+14. `todo` **CFAT follow-ups for Chapter 14** (Jacaranda exercises; see notes above).
+15. `todo` **Lesson gm12-u4-14a (14A)**: slides (`tools/deck/gm12-u4-14a/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+16. `todo` **Lesson gm12-u4-14b (14B)**: slides (`tools/deck/gm12-u4-14b/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+17. `todo` **Lesson gm12-u4-14c (14C)**: slides (`tools/deck/gm12-u4-14c/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+18. `todo` **Lesson gm12-u4-14d (14D)**: slides (`tools/deck/gm12-u4-14d/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+19. `todo` **Lesson gm12-u4-14e (14E)**: slides (`tools/deck/gm12-u4-14e/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+20. `todo` **Chapter 14 revision booklet** + solutions (Insight GM1 + GM2, sections per subchapter). Add to the gm12-ch14-test card.
+21. `todo` **Chapter 14 test** + solutions (model `tools/test/ch5/build.py`) from the Mathspace Ch 9 topic assessment (Applications of graphs and networks), questions the Ch 13 test does not use. Add to the gm12-ch14-test card; run `python3 tools/test/details.py`. If it can't be built from what's there, mark `needs Rocco`.
 
 
 ## Questions for Rocco
