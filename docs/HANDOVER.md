@@ -8,6 +8,7 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 
 
+- **15 Nov 22:23 (Ch5 runner, task 10):** Chapter 5 revision booklet + solutions (Draft): `tools/revision/ch5/` (qdata.py, crop.py, mk.sh builds PDFs), `lessons/Ch5-revision-booklet*.html/.pdf`, on G: as `Ch5 revision booklet(.pdf)`. Insight GM1 time series Q1–22 + GM2 Q1–6; SA in one-column layout. Planner: added to the gm12-u3-ch5-test card (its Chapter test entry still points at Ch2 test: task 11 will replace it). Insight print errors handled: GM1 Q18 table moved from under Q16; GM2 Q2c missing equation added from Insight's worked solution (labelled adapted); GM2 Q3e 'Table 4' typo noted.
 - **15 Nov 22:15 (Ch5 #9):** l22 (5E trend lines and forecasting) built: `lessons/5E slides` (26 slides, CFAT 1.5.2 slide after the exit) + `5E worksheet`/solutions (4 pages), Draft, copied to G: 01 Lesson materials. APK 7E #10 (burnt in l10) dropped. Next Ch5 tasks: revision booklet, test.
 - **15 Nov 22:01 (Ch5 #8):** l21 (5D calculating seasonal indices + deseasonalising) built: `lessons/5D deseasonalising slides` (21 slides) + worksheet/solutions (3 pages), Draft, copied to G: 01 Lesson materials. APK 1B #6 (burnt in l20) → 1B #7. Next Ch5 task: l22 (5E).
 

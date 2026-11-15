@@ -59,7 +59,7 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 7. `done 15 Nov 21:49 — 5D seasonal indices slides (24, CFAT 1.5.1 first) + 3-page guided worksheet (student + solutions), HTML+PDF, Draft; APK 1A #2 (burnt) → 1B #6` **Lesson l20 (5D, seasonal indices)**: slides (`tools/deck/l20/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 8. `done 15 Nov 22:01 — 5D deseasonalising slides (21) + 3-page guided worksheet (student + solutions), HTML+PDF, Draft; APK 1B #6 (burnt) → 1B #7` **Lesson l21 (5D, deseasonalising)**: slides (`tools/deck/l21/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 9. `done 15 Nov 22:15 — 5E slides (26, CFAT 1.5.2 slide after the exit) + 4-page guided worksheet (student + solutions), HTML+PDF, Draft; APK 7E #10 (burnt l10) dropped` **Lesson l22 (5E)**: slides (`tools/deck/l22/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-10. `in progress 15 Nov 22:17` **Chapter 5 revision booklet** + solutions (template `tools/revision/ch2/build.py`): Insight GM1 + GM2 time series questions, sections per subchapter 5A–5E. Insight is never burnt.
+10. `done 15 Nov 22:23 — Ch5 revision booklet + solutions (Insight GM1 Q1–22 MC + GM2 Q1–6 SA, sections 5A–5E, 13 pages each), HTML+PDF, Draft; GM2 Q2c equation added from Insight's solution (labelled adapted)` **Chapter 5 revision booklet** + solutions (template `tools/revision/ch2/build.py`): Insight GM1 + GM2 time series questions, sections per subchapter 5A–5E. Insight is never burnt.
 11. `todo` **Chapter 5 test** (model `tools/test/ch2/build.py`) from the Mathspace time series topic assessment: Mathspace calls it Chapter 4 (`02 Sources\Textbooks\Mathspace\Chapter 4 - Time series data`). If it can't be built from what's there, mark `needs Rocco`.
 
 ## Questions for Rocco
@@ -161,3 +161,4 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 | Ch5 #7 Lesson l20 (5D seasonal indices) | 21:34 | 21:49 | ~15 | | done: all sources re-staged from G: (Edrolo ~210 MB); exit table split; slide PDF ~5 min | next run: fired |
 | Ch5 #8 Lesson l21 (5D deseasonalising) | 21:51 | 22:01 | ~10 | | done: sources re-staged from G: (Edrolo ~100 MB); 2024 E2 paper is scanned (read from page images); exit/table overflow fixes; slide PDF ~2 min | next run: fired |
 | Ch5 #9 Lesson l22 (5E) | 22:03 | 22:15 | ~12 | | done: sources re-staged from G: (both Edrolo books ~210 MB); 12-column tables split; slide PDF ~3 min | next run: fired |
+| Ch5 #10 Ch5 revision booklet | 22:16 | 22:23 | ~7 | | done: Insight books scanned (read from page images); SA switched to one-column layout so wide tables fit; mixed SA questions placed in the last subchapter they need | next run: fired |
