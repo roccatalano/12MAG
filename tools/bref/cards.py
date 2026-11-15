@@ -107,12 +107,144 @@ B1 = f"""
  <div class="ans"><b>B</b>: the 'less than 250' segment for sugar reaches 30%, and 30% of 300 = 0.30 × 300 = 90.</div></div></div></div>
 """
 
+def hist(v, start=0, w=1, xl='', yl='Frequency', ymax=None, ystep=5, W=230, H=140, col='#2f6fdf', axes=True, mw='22em', xlab=None):
+    """Simple histogram SVG: bars touch; x ticks at the start of each interval."""
+    ymax = ymax or max(v)
+    x0, y0, x1 = (34 if axes else 4), H - (26 if axes else 4), W - 6
+    bw, k = (x1 - x0) / len(v), (y0 - 10) / ymax
+    s = [f'<svg viewBox="0 0 {W} {H}" width="100%" style="max-width:{mw}">']
+    if axes:
+        y = 0
+        while y <= ymax + 1e-9:
+            yy = y0 - y * k
+            s.append(f'<line x1="{x0}" y1="{yy}" x2="{x1}" y2="{yy}" stroke="#e3e6ee"/><text x="{x0-4}" y="{yy+3}" font-size="9" text-anchor="end">{y:g}</text>')
+            y += ystep
+    for i, f in enumerate(v):
+        if f: s.append(f'<rect x="{x0+i*bw:.1f}" y="{y0-f*k:.1f}" width="{bw:.1f}" height="{f*k:.1f}" fill="{col}" stroke="#fff" stroke-width=".8"/>')
+    if axes:
+        labs = xlab or [f'{start+i*w:g}' for i in range(len(v) + 1)]
+        for i, t in enumerate(labs):
+            s.append(f'<text x="{x0+i*bw:.1f}" y="{y0+11}" font-size="8.5" text-anchor="middle">{t}</text>')
+        s.append(f'<line x1="{x0}" y1="{y0}" x2="{x1}" y2="{y0}" stroke="#1b1f2a" stroke-width="1.4"/><line x1="{x0}" y1="{y0}" x2="{x0}" y2="6" stroke="#1b1f2a" stroke-width="1.4"/>')
+        s.append(f'<text x="{(x0+x1)/2}" y="{H-2}" font-size="9" font-weight="700" text-anchor="middle">{xl}</text>')
+        s.append(f'<text x="10" y="{y0/2+6}" font-size="9" font-weight="700" text-anchor="middle" transform="rotate(-90 10 {y0/2+6})">{yl}</text>')
+    else:
+        s.append(f'<line x1="{x0}" y1="{y0}" x2="{x1}" y2="{y0}" stroke="#1b1f2a" stroke-width="1.2"/>')
+    s.append('</svg>')
+    return ''.join(s)
+
+def mini(v, cap):
+    return f'<div style="flex:1;text-align:center">{hist(v, axes=False, W=120, H=52, mw="100%")}<div class="small"><b>{cap[0]}</b><br><span class="mut">{cap[1]}</span></div></div>'
+
+def dots():
+    # Cambridge U3&4 Example 10: cricket team ages
+    data = [22,19,18,19,23,25,22,29,18,22,23,24,22]
+    W, y0 = 250, 62
+    s = [f'<svg viewBox="0 0 {W} 86" width="100%" style="max-width:21em">']
+    xs = lambda a: 12 + (a - 17) * 17.4
+    for a in range(17, 31):
+        s.append(f'<line x1="{xs(a)}" y1="{y0}" x2="{xs(a)}" y2="{y0+4}" stroke="#1b1f2a"/><text x="{xs(a)}" y="{y0+14}" font-size="8.5" text-anchor="middle">{a}</text>')
+        for j in range(data.count(a)):
+            s.append(f'<circle cx="{xs(a)}" cy="{y0-6-j*10}" r="4" fill="#2f6fdf"/>')
+    s.append(f'<line x1="6" y1="{y0}" x2="{W-6}" y2="{y0}" stroke="#1b1f2a" stroke-width="1.4"/><text x="{W/2}" y="84" font-size="9" font-weight="700" text-anchor="middle">Age (years)</text></svg>')
+    return ''.join(s)
+
+def stem(rows, key, cap=''):
+    r = ''.join(f'<tr><td class="st">{a}</td><td class="lv">{" ".join(b)}</td></tr>' for a, b in rows)
+    return f'<table class="stem"><tr><td colspan="2" class="small"><b>{cap}</b> <span class="mut">Key: {key}</span></td></tr>{r}</table>'
+
+C1 = f"""
+<div class="row">
+ <div class="box" style="flex:1"><h4>Frequency tables for numerical data</h4>
+  <b>Discrete, few values:</b> one row for every value from the minimum to the maximum (like categorical data).<br>
+  <b>Many values, or continuous:</b> group into intervals, a <b>grouped frequency table</b>.
+  <ol class="st"><li>Every value fits in exactly one interval: no overlaps, no gaps.</li><li>About 5 to 15 intervals with easy widths (2, 5, 10, 100…).</li><li>Start each interval on an exact value: 0–49, 50–99.</li><li>Read <b>30–&lt;40</b> as 'at least 30 but less than 40'.</li></ol>
+  <div class="box f" style="margin-top:1.2mm"><h4>Percentage frequency</h4>\\[\\small \\dfrac{{\\text{{frequency}}}}{{\\text{{total}}}}\\times100\\%\\]</div></div>
+ <div class="box ex" style="flex:1.05"><h4>Examples 7 + 8 · average hours worked, 23 countries</h4>
+  <div class="row"><table class="t sm"><tr><th>Hours</th><th>No.</th><th>%</th></tr><tr><td>30.0–34.9</td><td>1</td><td>4.3</td></tr><tr><td>35.0–39.9</td><td>6</td><td>26.1</td></tr><tr><td>40.0–44.9</td><td>8</td><td>34.8</td></tr><tr><td>45.0–49.9</td><td>5</td><td>21.7</td></tr><tr><td>50.0–54.9</td><td>3</td><td>13.0</td></tr><tr><td><b>Total</b></td><td>23</td><td>99.9</td></tr></table>
+  {hist([1,6,8,5,3], start=30, w=5, xl='Average hours worked', ystep=2, W=200, H=130)}</div>
+  <span class="small">Histogram: frequency up, variable across; one bar per interval; <b>bars touch</b>; mark the start of each interval. 99.9%: just rounding.</span></div>
+</div>
+<div class="row">
+ <div class="box ex" style="flex:1"><h4>Example 6 · bedrooms in 24 properties sold</h4>
+  2 3 4 3 3 4 3 4 4 1 3 2 1 2 2 2 4 5 3 4 4 5 3 4
+  <div class="row" style="margin-top:1.2mm"><table class="t sm"><tr><th>Bedrooms</th><th>No.</th><th>%</th></tr><tr><td>1</td><td>2</td><td>8.3</td></tr><tr><td>2</td><td>5</td><td>20.8</td></tr><tr><td>3</td><td>7</td><td>29.2</td></tr><tr><td>4</td><td>8</td><td>33.3</td></tr><tr><td>5</td><td>2</td><td>8.3</td></tr><tr><td><b>Total</b></td><td>24</td><td>99.9</td></tr></table>
+  <ol class="st small" style="flex:1"><li>Minimum 1, maximum 5: one row for every value 1 to 5.</li><li>Count each value; total 24.</li><li>\\(\\tfrac{{2}}{{24}}\\times100=8.3\\%\\)</li><li>Total 99.9%: rounding, that's fine.</li></ol></div></div>
+ <div class="box tip" style="flex:.8"><h4>Writing a description</h4>Cover all four, in context, with numbers:<ol class="st"><li><b>Shape</b>: symmetric / positively or negatively skewed (name the tail).</li><li><b>Centre</b>: 'around …' with units.</li><li><b>Spread</b>: from min to max; where most values lie.</li><li><b>Outliers</b>: possible ones only, from a histogram.</li></ol></div>
+</div>
+<div class="box cas"><h4>CAS · histogram from raw data (e.g. bin width 4, starting at 2)</h4>
+ <div class="row"><div style="flex:1"><b>TI-Nspire</b><ol class="st small"><li>Lists &amp; Spreadsheet: name column A (e.g. <i>marks</i>), enter the data.</li><li>Add Data &amp; Statistics; put <i>marks</i> on the x-axis.</li><li>Menu › Plot Type › Histogram.</li><li>Menu › Plot Properties › Histogram Properties › Bin Settings › Equal Bin Width: width 4, alignment 2.</li><li>Window/Zoom › Zoom-Data. Hover to read a bar.</li></ol></div>
+ <div style="flex:1"><b>ClassPad</b><ol class="st small"><li>Statistics app: name list1 <i>marks</i>, enter the data.</li><li>SetGraph › Setting: Draw On, Type Histogram, XList main\\marks, Freq 1. Set.</li><li>Tap the graph icon.</li><li>Set Interval: HStart 2, HStep 4. OK.</li><li>Analysis › Trace to read each bar.</li></ol></div></div></div>
+<div class="box"><h4>Describing a distribution: shape, centre, spread, outliers</h4>
+ <div class="row" style="gap:3mm">{mini([1,3,6,9,6,3,1],('Symmetric','even tails either side'))}{mini([3,9,7,4,2,1,1],('Positively skewed','long tail to the right'))}{mini([1,1,2,4,7,9,3],('Negatively skewed','long tail to the left'))}{mini([2,7,4,1,4,7,2],('Bimodal','two peaks: two groups?'))}</div>
+ <div class="row small" style="margin-top:1mm"><div style="flex:1"><b>Centre:</b> the middle value, where the area splits in half.</div><div style="flex:1"><b>Spread:</b> narrow peak = tightly clustered; broad = widely spread.</div><div style="flex:1"><b>Outliers:</b> values that stand out from the main body. Check them.</div></div>
+ <div class="box tip" style="margin-top:1.2mm"><h4>Tip</h4>The <b>tail</b> names the skew. From a histogram you can only <b>estimate</b> the centre and spread and flag <b>possible</b> outliers.</div></div>
+<div class="box ex"><h4>Example 9 · gestation period of 1000 babies</h4>
+ <div class="row"><div style="flex:1">{hist([2,2,2,2,2,2,2,4,6,10,16,34,95,233,302,207,86,4], start=25, xl='Gestation period (weeks)', ymax=300, ystep=100, W=290, H=130, mw='100%', xlab=[str(25+i) if i%2==0 else '' for i in range(19)])}</div>
+ <div class="rep" style="flex:1">The distribution is clearly negatively skewed, with a long lower tail. The centre of the distribution is around 38-39 weeks. The data values range from 25-42 weeks, but most of the data values are close to the centre, in the range of 36-41 weeks. Those values which are less than 34 weeks seem to be small in comparison to the rest of the data, but which values are outliers cannot be determined from the histogram.</div></div></div>
+"""
+
+IMG2='data:image/png;base64,'+_b.b64encode(open(_o.path.join(_o.path.dirname(__file__),'vcaa2020e2_q2a.png'),'rb').read()).decode()
+
+D1 = f"""
+<div class="row">
+ <div class="box" style="flex:1"><h4>Dot plot</h4>A number line with a dot for each value; equal values stack. Best for <b>small, discrete</b> data sets.
+  <div class="box ex" style="margin-top:1.2mm"><h4>Example 10 · ages of a cricket team</h4>22 19 18 19 23 25 22 29 18 22 23 24 22{dots()}</div></div>
+ <div class="box" style="flex:1"><h4>Stem plot</h4>Each value splits into a <b>stem</b> (leading digits) and a <b>leaf</b> (last digit).
+  <div class="small" style="margin-top:.6mm">Add a key and the variable name · leaves in order · include empty stems · bunched? split each stem in two (leaves 0–4, 5–9).</div>
+  <div class="box ex" style="margin-top:1.2mm"><h4>Example 11 · university participation (%)</h4>
+  <div class="row"><span class="small" style="flex:1">26 3 12 20 36 1 25 26 13 9 26 27 15 21 7 8 22 3 37 17 55 30 1</span>
+  {stem([('0','1 1 3 3 7 8 9'.split()),('1','2 3 5 7'.split()),('2','0 1 2 5 6 6 6 7'.split()),('3','0 6 7'.split()),('4',[]),('5',['5'])],'1|2 = 12','rate (%)')}</div></div></div>
+</div>
+<div class="row">
+ <div class="box vc" style="flex:1"><h4>VCAA 2020 Exam 2 Q2a <span class="pc">93% correct</span></h4>
+  <div class="row"><img src="{IMG2}" style="width:23mm;align-self:center"><div style="flex:1">The <i>neck size</i>, in centimetres, of 250 men was recorded and displayed in the following dot plot.<br>Write down the modal <i>neck size</i>, in centimetres, for these 250 men. <span class="mut">(1 mark)</span>
+  <div class="ans" style="margin-top:1.2mm"><b>38 cm</b>: the tallest column of dots.</div></div></div></div>
+ <div class="box vc" style="flex:1.1"><h4>VCAA 2016 Exam 1 Q3 <span class="pc">87% correct</span></h4>
+  <div class="row"><div style="flex:1">The following stem plot displays 30 temperatures recorded at a weather station.<br>The modal temperature is
+  <div class="mcq" style="flex-wrap:wrap;gap:0 3mm"><span><b>A.</b> 2.8 °C</span><span><b>B.</b> 2.9 °C</span><span><b>C.</b> 3.7 °C</span><span><b>D.</b> 8.0 °C</span><span><b>E.</b> 9.0 °C</span></div></div>
+  {stem([('2','2 4 4'.split()),('2','5 7 8 8 8 8 8 8 9 9 9 9'.split()),('3','1 2 3 3 4 4 4'.split()),('3','5 6 7 7 7 7'.split()),('4',['1'])],'2|2 = 2.2 °C','temperature')}</div>
+  <div class="ans" style="margin-top:1mm"><b>A</b>: leaf 8 appears six times on a 2 stem: 2.8 °C.</div></div>
+</div>
+"""
+
+E1 = f"""
+<div class="row">
+ <div class="box" style="flex:1.2"><h4>Logs are powers of 10</h4>
+  <table class="t sm" style="width:100%"><tr><th>number</th><td>0.01</td><td>0.1</td><td>1</td><td>10</td><td>100</td><td>1000</td><td>1 000 000</td></tr><tr><th>power of 10</th><td>10<sup>−2</sup></td><td>10<sup>−1</sup></td><td>10<sup>0</sup></td><td>10<sup>1</sup></td><td>10<sup>2</sup></td><td>10<sup>3</sup></td><td>10<sup>6</sup></td></tr><tr><th>log</th><td>−2</td><td>−1</td><td>0</td><td>1</td><td>2</td><td>3</td><td>6</td></tr></table>
+  <div class="box f" style="margin-top:1.2mm"><h4>Log and its inverse</h4>\\[\\small \\log_{{10}}x=b \\iff x=10^{{b}}\\]</div>
+  <span class="small">number &gt; 1 → log positive · = 1 → log 0 · between 0 and 1 → log negative · 0 or negative → undefined</span></div>
+ <div class="box" style="flex:1"><h4>Why a log scale?</h4>Use it when data range over several <b>orders of magnitude</b>: values spread evenly instead of bunching at 0. A positively skewed histogram often becomes <b>symmetric</b>.
+  <div class="box cas" style="margin-top:1.2mm"><h4>CAS</h4>Log: type <b>log(45)</b> → 1.65… <br>Undo a log: type <b>10^2.7125</b> → 515.82…</div></div>
+</div>
+<div class="row">
+ <div class="box ex" style="flex:1"><h4>Example 13 · weights of 27 animals</h4>
+  <div class="row">{hist([3.7,7.4,18.5,25.9,25.9,11.1,7.4], start=-2, xl='log(body weight)', yl='Percentage', ymax=28, ystep=7, W=200, H=125, mw='48mm')}
+  <ol class="st small" style="flex:1"><li>4 on the scale: 10<sup>4</sup> = 10 000 kg</li><li>log 3.3 = 0.518… = 0.52</li><li>log = 3.4: 10<sup>3.4</sup> = 2511.88… ≈ 2512 kg</li></ol></div></div>
+ <div class="box vc" style="flex:1.15"><h4>VCAA 2019 Exam 1 Q3 <span class="pc">71% correct</span></h4>
+  <div class="row"><div style="flex:1">The following histogram shows the <i>population size</i> for 48 countries plotted on a log<sub>10</sub> scale.<br>Based on this histogram, the number of countries with a <i>population size</i> that is less than 100 000 people is
+  <div class="mcq"><span><b>A.</b> 1</span><span><b>B.</b> 5</span><span><b>C.</b> 7</span><span><b>D.</b> 8</span><span><b>E.</b> 48</span></div></div>
+  <div style="flex:1">{hist([0,0,1,0,7,5,21,13,1,0], xl='log₁₀(population size)', ymax=25, ystep=5, W=170, H=120, mw='100%')}</div></div>
+  <div class="ans" style="margin-top:1mm"><b>D</b>: 100 000 = 10<sup>5</sup>, so 5 on the scale. Bars below 5: 1 + 7 = 8.</div></div>
+</div>
+"""
+
 CARDS = {
  '1A': dict(size='half', title='Types of data', sd='Study Design: types of data', body=A1,
             cite='Notes: own words, from Cambridge General Mathematics Units 3&amp;4, 1A. Example: Cambridge U3&amp;4 Example 1.'),
  '1B': dict(size='full', title='Displaying and describing categorical data',
             sd='Study Design: display and description of categorical variables; using distributions to answer statistical questions', body=B1,
             cite='Notes: own words, from Cambridge General Mathematics Units 3&amp;4, 1B. Examples: Cambridge U3&amp;4 Examples 2–5 (Example 5 report verbatim).'),
+
+ '1C': dict(size='full', title='Displaying and describing numerical data',
+            sd='Study Design: representation, display and description of the distributions of numerical variables: histograms; use of distributions to answer statistical questions', body=C1,
+            cite='Notes: own words, from Cambridge General Mathematics Units 3&amp;4, 1C. Examples: Cambridge U3&amp;4 Examples 6–9 (Example 9 report verbatim; histograms redrawn).'),
+ '1D': dict(size='half', title='Dot plots and stem plots',
+            sd='Study Design: representation, display and description of the distributions of numerical variables: dot plots, stem plots', body=D1,
+            cite='Notes: own words, from Cambridge General Mathematics Units 3&amp;4, 1D. Examples: Cambridge U3&amp;4 Examples 10–11.'),
+ '1E': dict(size='half', title='Logarithmic scales',
+            sd='Study Design: the use of a logarithmic (base 10) scale to display data ranging over several orders of magnitude and their interpretation in terms of powers of ten', body=E1,
+            cite='Notes: own words, from Cambridge General Mathematics Units 3&amp;4, 1E. Example: Cambridge U3&amp;4 Example 13 (histogram redrawn).'),
 }
 
-LESSONS = {'1A-1B': ['1A', '1B']}
+LESSONS = {'1A-1B': ['1A', '1B'], '1C-1E': ['1C', '1D', '1E']}

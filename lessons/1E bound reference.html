@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>1E bound reference</title><style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+:root{--ink:#1b1f2a;--muted:#6b7280;--line:#dfe3ec;--we:#2f6fdf;--yt:#1f9e74;--apk:#d98a1f;--exit:#d2475b;--dis:#7b4fd6;--tint:#eef3fd}
+@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#6b6b6b}
+body{font:400 1em/1.32 Inter,Arial,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;background:#fff;margin:8mm auto;overflow:hidden;display:flex;flex-direction:column}
+@media print{html{background:#fff}.page{margin:0;break-after:page}}
+.slot{padding:6mm;flex:none}
+.slot.half{height:148.5mm}.slot.full{height:297mm}
+.cut{position:relative;height:100%;border:.35mm dashed #9aa1ad}
+.sc{position:absolute;top:-3.2mm;left:6mm;background:#fff;color:#9aa1ad;font-size:10pt;line-height:1;padding:0 1mm}
+.card{height:100%;padding:3.2mm 4mm 2.4mm;display:flex;flex-direction:column;gap:2mm}
+.hd{display:flex;align-items:center;gap:2.5mm;border-bottom:.6mm solid var(--we);padding-bottom:1.6mm}
+.code{background:var(--we);color:#fff;font:800 11pt Inter;border-radius:2mm;padding:.4mm 2.4mm}
+.tt{font:800 12pt Inter;flex:1}
+.sd{font:600 6.6pt Inter;color:var(--muted);text-align:right;max-width:62mm;line-height:1.2}
+.bd{flex:1;min-height:0;display:flex;flex-direction:column;gap:2.4mm}
+.box.f mjx-container{font-size:92%!important}
+.ft{font-size:6.4pt;color:var(--muted);border-top:.25mm solid var(--line);padding-top:1mm}
+.box{border:.35mm solid var(--line);border-radius:2mm;padding:1.6mm 2.2mm;background:#fff;min-width:0}
+.box h4{font:800 6.8pt Inter;letter-spacing:.09em;text-transform:uppercase;margin-bottom:1mm;color:var(--we)}
+.box.ex{border-color:var(--yt)}.box.ex h4{color:var(--yt)}
+.box.tip{border-color:var(--apk);background:#fff8ec}.box.tip h4{color:var(--apk)}
+.box.f{border:.5mm solid var(--ink)}.box.f h4{color:var(--ink)}
+.box.cas{border-color:var(--dis)}.box.cas h4{color:var(--dis)}
+b{font-weight:700}
+.k{color:var(--we);font-weight:700}
+ul.d{list-style:none}ul.d li{padding:.5mm 0;border-bottom:.2mm solid var(--line)}ul.d li:last-child{border:0}
+ol.st{padding-left:4mm}ol.st li{padding:.25mm 0}
+table.t{border-collapse:collapse;font-size:7.8pt}
+table.t th,table.t td{border:.25mm solid #b8bfcc;padding:.4mm 2mm;text-align:center}
+table.t th{background:var(--tint)}
+table.t td:first-child,table.t th:first-child{text-align:left}
+.tree{display:grid;grid-template-columns:1fr 1fr;gap:2mm}
+.tree .grp{border-radius:2mm;padding:1.4mm 2mm;background:var(--tint)}
+.tree .grp>div:first-child{font-weight:800;font-size:1.05em}
+.tree .two{display:grid;grid-template-columns:1fr 1fr;gap:1.4mm;margin-top:1mm}
+.tree .leaf{background:#fff;border-radius:1.5mm;padding:1mm 1.5mm;font-size:.88em}
+.tree .leaf b{display:block;color:var(--we);font-size:1em}
+.row{display:flex;gap:2.4mm;align-items:stretch}
+.small{font-size:7.4pt}.mut{color:var(--muted)}
+.rep{font-size:.9em;background:#f2fbf7;border-radius:1.5mm;padding:1.2mm 1.8mm}
+.blank{border-bottom:.3mm solid var(--yt);padding:0 1mm;color:var(--yt);font-weight:700}
+svg text{font-family:Inter,Arial}
+.card{font-size:8.8pt}
+.bd>*{flex:1 1 auto}
+table.t{font-size:.92em}
+.small{font-size:.86em}.sd{font-size:6.6pt}
+.box h4{font-size:.8em}.hd .tt{font-size:1.4em}
+.box.f mjx-container{display:block!important;text-align:left!important;margin:.6mm 0!important}
+.box.vc{border-color:var(--exit)}.box.vc h4{color:var(--exit)}
+.pc{background:var(--exit);color:#fff;border-radius:1mm;padding:0 1.4mm;margin-left:1.5mm;letter-spacing:0}
+.ans{flex:1;background:#f2fbf7;border-left:.8mm solid var(--yt);padding:.6mm 1.6mm}
+table.t.sm{font-size:.8em}table.t.sm td,table.t.sm th{padding:.3mm 1mm}
+.bd>*{flex:0 0 auto}
+.mcq{display:flex;gap:4mm;margin:1mm 0}
+table.stem{border-collapse:collapse;font-size:.92em;font-family:"DejaVu Sans Mono",monospace}
+table.stem td{padding:0 1.2mm}table.stem td.st{border-right:.35mm solid var(--ink);text-align:right;font-weight:700}
+table.stem td.small{font-family:Inter,Arial;padding-bottom:.6mm}
+.mcq span{white-space:nowrap}table.stem{line-height:1.2}
+</style><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]},svg:{fontCache:"global"}};</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script><script>addEventListener('load',()=>setTimeout(()=>document.body.dataset.fit=1,800))</script></head><body><div class="page"><div class="slot half"><div class="cut"><span class="sc">&#9986;</span><div class="card"><div class="hd"><span class="code">1E</span><span class="tt">Logarithmic scales</span><span class="sd">Study Design: the use of a logarithmic (base 10) scale to display data ranging over several orders of magnitude and their interpretation in terms of powers of ten</span></div><div class="bd">
+<div class="row">
+ <div class="box" style="flex:1.2"><h4>Logs are powers of 10</h4>
+  <table class="t sm" style="width:100%"><tr><th>number</th><td>0.01</td><td>0.1</td><td>1</td><td>10</td><td>100</td><td>1000</td><td>1 000 000</td></tr><tr><th>power of 10</th><td>10<sup>−2</sup></td><td>10<sup>−1</sup></td><td>10<sup>0</sup></td><td>10<sup>1</sup></td><td>10<sup>2</sup></td><td>10<sup>3</sup></td><td>10<sup>6</sup></td></tr><tr><th>log</th><td>−2</td><td>−1</td><td>0</td><td>1</td><td>2</td><td>3</td><td>6</td></tr></table>
+  <div class="box f" style="margin-top:1.2mm"><h4>Log and its inverse</h4>\[\small \log_{10}x=b \iff x=10^{b}\]</div>
+  <span class="small">number &gt; 1 → log positive · = 1 → log 0 · between 0 and 1 → log negative · 0 or negative → undefined</span></div>
+ <div class="box" style="flex:1"><h4>Why a log scale?</h4>Use it when data range over several <b>orders of magnitude</b>: values spread evenly instead of bunching at 0. A positively skewed histogram often becomes <b>symmetric</b>.
+  <div class="box cas" style="margin-top:1.2mm"><h4>CAS</h4>Log: type <b>log(45)</b> → 1.65… <br>Undo a log: type <b>10^2.7125</b> → 515.82…</div></div>
+</div>
+<div class="row">
+ <div class="box ex" style="flex:1"><h4>Example 13 · weights of 27 animals</h4>
+  <div class="row"><svg viewBox="0 0 200 125" width="100%" style="max-width:48mm"><line x1="34" y1="99.0" x2="194" y2="99.0" stroke="#e3e6ee"/><text x="30" y="102.0" font-size="9" text-anchor="end">0</text><line x1="34" y1="76.75" x2="194" y2="76.75" stroke="#e3e6ee"/><text x="30" y="79.75" font-size="9" text-anchor="end">7</text><line x1="34" y1="54.5" x2="194" y2="54.5" stroke="#e3e6ee"/><text x="30" y="57.5" font-size="9" text-anchor="end">14</text><line x1="34" y1="32.25" x2="194" y2="32.25" stroke="#e3e6ee"/><text x="30" y="35.25" font-size="9" text-anchor="end">21</text><line x1="34" y1="10.0" x2="194" y2="10.0" stroke="#e3e6ee"/><text x="30" y="13.0" font-size="9" text-anchor="end">28</text><rect x="34.0" y="87.2" width="22.9" height="11.8" fill="#2f6fdf" stroke="#fff" stroke-width=".8"/><rect x="56.9" y="75.5" width="22.9" height="23.5" fill="#2f6fdf" stroke="#fff" stroke-width=".8"/><rect x="79.7" y="40.2" width="22.9" height="58.8" fill="#2f6fdf" stroke="#fff" stroke-width=".8"/><rect x="102.6" y="16.7" width="22.9" height="82.3" fill="#2f6fdf" stroke="#fff" stroke-width=".8"/><rect x="125.4" y="16.7" width="22.9" height="82.3" fill="#2f6fdf" stroke="#fff" stroke-width=".8"/><rect x="148.3" y="63.7" width="22.9" height="35.3" fill="#2f6fdf" stroke="#fff" stroke-width=".8"/><rect x="171.1" y="75.5" width="22.9" height="23.5" fill="#2f6fdf" stroke="#fff" stroke-width=".8"/><text x="34.0" y="110" font-size="8.5" text-anchor="middle">-2</text><text x="56.9" y="110" font-size="8.5" text-anchor="middle">-1</text><text x="79.7" y="110" font-size="8.5" text-anchor="middle">0</text><text x="102.6" y="110" font-size="8.5" text-anchor="middle">1</text><text x="125.4" y="110" font-size="8.5" text-anchor="middle">2</text><text x="148.3" y="110" font-size="8.5" text-anchor="middle">3</text><text x="171.1" y="110" font-size="8.5" text-anchor="middle">4</text><text x="194.0" y="110" font-size="8.5" text-anchor="middle">5</text><line x1="34" y1="99" x2="194" y2="99" stroke="#1b1f2a" stroke-width="1.4"/><line x1="34" y1="99" x2="34" y2="6" stroke="#1b1f2a" stroke-width="1.4"/><text x="114.0" y="123" font-size="9" font-weight="700" text-anchor="middle">log(body weight)</text><text x="10" y="55.5" font-size="9" font-weight="700" text-anchor="middle" transform="rotate(-90 10 55.5)">Percentage</text></svg>
+  <ol class="st small" style="flex:1"><li>4 on the scale: 10<sup>4</sup> = 10 000 kg</li><li>log 3.3 = 0.518… = 0.52</li><li>log = 3.4: 10<sup>3.4</sup> = 2511.88… ≈ 2512 kg</li></ol></div></div>
+ <div class="box vc" style="flex:1.15"><h4>VCAA 2019 Exam 1 Q3 <span class="pc">71% correct</span></h4>
+  <div class="row"><div style="flex:1">The following histogram shows the <i>population size</i> for 48 countries plotted on a log<sub>10</sub> scale.<br>Based on this histogram, the number of countries with a <i>population size</i> that is less than 100 000 people is
+  <div class="mcq"><span><b>A.</b> 1</span><span><b>B.</b> 5</span><span><b>C.</b> 7</span><span><b>D.</b> 8</span><span><b>E.</b> 48</span></div></div>
+  <div style="flex:1"><svg viewBox="0 0 170 120" width="100%" style="max-width:100%"><line x1="34" y1="94.0" x2="164" y2="94.0" stroke="#e3e6ee"/><text x="30" y="97.0" font-size="9" text-anchor="end">0</text><line x1="34" y1="77.2" x2="164" y2="77.2" stroke="#e3e6ee"/><text x="30" y="80.2" font-size="9" text-anchor="end">5</text><line x1="34" y1="60.4" x2="164" y2="60.4" stroke="#e3e6ee"/><text x="30" y="63.4" font-size="9" text-anchor="end">10</text><line x1="34" y1="43.6" x2="164" y2="43.6" stroke="#e3e6ee"/><text x="30" y="46.6" font-size="9" text-anchor="end">15</text><line x1="34" y1="26.799999999999997" x2="164" y2="26.799999999999997" stroke="#e3e6ee"/><text x="30" y="29.799999999999997" font-size="9" text-anchor="end">20</text><line x1="34" y1="10.0" x2="164" y2="10.0" stroke="#e3e6ee"/><text x="30" y="13.0" font-size="9" text-anchor="end">25</text><rect x="60.0" y="90.6" width="13.0" height="3.4" fill="#2f6fdf" stroke="#fff" stroke-width=".8"/><rect x="86.0" y="70.5" width="13.0" height="23.5" fill="#2f6fdf" stroke="#fff" stroke-width=".8"/><rect x="99.0" y="77.2" width="13.0" height="16.8" fill="#2f6fdf" stroke="#fff" stroke-width=".8"/><rect x="112.0" y="23.4" width="13.0" height="70.6" fill="#2f6fdf" stroke="#fff" stroke-width=".8"/><rect x="125.0" y="50.3" width="13.0" height="43.7" fill="#2f6fdf" stroke="#fff" stroke-width=".8"/><rect x="138.0" y="90.6" width="13.0" height="3.4" fill="#2f6fdf" stroke="#fff" stroke-width=".8"/><text x="34.0" y="105" font-size="8.5" text-anchor="middle">0</text><text x="47.0" y="105" font-size="8.5" text-anchor="middle">1</text><text x="60.0" y="105" font-size="8.5" text-anchor="middle">2</text><text x="73.0" y="105" font-size="8.5" text-anchor="middle">3</text><text x="86.0" y="105" font-size="8.5" text-anchor="middle">4</text><text x="99.0" y="105" font-size="8.5" text-anchor="middle">5</text><text x="112.0" y="105" font-size="8.5" text-anchor="middle">6</text><text x="125.0" y="105" font-size="8.5" text-anchor="middle">7</text><text x="138.0" y="105" font-size="8.5" text-anchor="middle">8</text><text x="151.0" y="105" font-size="8.5" text-anchor="middle">9</text><text x="164.0" y="105" font-size="8.5" text-anchor="middle">10</text><line x1="34" y1="94" x2="164" y2="94" stroke="#1b1f2a" stroke-width="1.4"/><line x1="34" y1="94" x2="34" y2="6" stroke="#1b1f2a" stroke-width="1.4"/><text x="99.0" y="118" font-size="9" font-weight="700" text-anchor="middle">log₁₀(population size)</text><text x="10" y="53.0" font-size="9" font-weight="700" text-anchor="middle" transform="rotate(-90 10 53.0)">Frequency</text></svg></div></div>
+  <div class="ans" style="margin-top:1mm"><b>D</b>: 100 000 = 10<sup>5</sup>, so 5 on the scale. Bars below 5: 1 + 7 = 8.</div></div>
+</div>
+</div><div class="ft">Notes: own words, from Cambridge General Mathematics Units 3&amp;4, 1E. Example: Cambridge U3&amp;4 Example 13 (histogram redrawn).</div></div></div></div></div></body></html>

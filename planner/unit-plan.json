@@ -530,8 +530,26 @@
          {
           "kind": "Bound reference entry",
           "desc": "Cut-out card per subchapter for the bound reference.",
-          "status": "todo",
-          "file": ""
+          "status": "ready",
+          "file": "lessons/1C-1E bound reference.html",
+          "copies": [
+           {
+            "label": "1C",
+            "file": "lessons/1C bound reference.html"
+           },
+           {
+            "label": "1D",
+            "file": "lessons/1D bound reference.html"
+           },
+           {
+            "label": "1E",
+            "file": "lessons/1E bound reference.html"
+           },
+           {
+            "label": "1C + 1D + 1E (print all)",
+            "file": "lessons/1C-1E bound reference.html"
+           }
+          ]
          }
         ],
         "homework": {
