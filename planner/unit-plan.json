@@ -4673,6 +4673,30 @@
         "casYouTry": "Cambridge 3C CAS 2 data (no Edrolo CAS worked example for a full regression analysis)",
         "materials": [
          {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/3C slides.html",
+          "pdf": "lessons/3C slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "6 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/3C worksheet.html",
+            "pdf": "lessons/3C worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/3C worksheet solutions.html",
+            "pdf": "lessons/3C worksheet solutions.pdf"
+           }
+          ]
+         },
+         {
           "kind": "CFAT 1.3.1",
           "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
           "status": "draft",

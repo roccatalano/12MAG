@@ -9,6 +9,9 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 ## 15 Nov 20:42 — Ch4 #4: lesson l13 (4B) built (Draft)
 `tools/deck/l13/` (build.py, worksheet.py, figs.py) → `lessons/4B slides` (22), `4B worksheet` (+ solutions, 4 pages), copied to G: 01 Lesson materials. Do Now 2 swapped to VCAA 2024 NHT E1 Q9 (2026 E1 Q7 burnt by l09). Exit 2 = Edrolo 3E Q12a–b only (part c burnt by l09). Ex 4 points read off the Cambridge plot. 4B video links still blank.
+## 15 Nov 20:45 · Ch3 #5: lesson l11 (3C) (Draft)
+- `lessons/3C slides` (29, CFAT 1.3.1 slide first) + `3C worksheet` / `solutions` (6 pages), built by `tools/deck/l11/` (figs.py adds `ts()` line graphs and `resid()` residual plots); copied to G: 01 Lesson materials; planner card + ledger updated.
+- For Rocco to check: YT-3B-8 (written), CAS steps for residuals / regression-analysis; 3B/3C videos still blank in videos.json.
 
 ## 15 Nov 20:23 — Ch4 #3: lesson l12 (4A) built (Draft)
 `tools/deck/l12/` (build.py, worksheet.py, figs.py) → `lessons/4A slides`, `4A worksheet` (+ solutions), copied to G: 01 Lesson materials. Planner card has the materials; ledger rows added. No exits (card). See QUEUE Decisions log.
