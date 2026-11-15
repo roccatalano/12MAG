@@ -55,6 +55,7 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 - New library `tools/deck/ws2.py`; `tools/deck/s1/worksheet.py` rewritten on it → `lessons/S1-worksheet(-solutions).html/.pdf`, 4 pages each; G: `1A-1B worksheet(.pdf)`, `1A-1B worksheet solutions(.pdf)`.
 - Space-savers: heptathlon table turned (noted in its source line); Ex 4, Ex 5 → '(Table: see Example 3.)'; You try 4 → '(Table: see You try 3.)'; Example 1 and You try 1 are full-width boxes (one above the other).
 - Round 3 (Rocco): VCAA source in the box header; writing lines for one-word answers; Example + You try in one split box; You trys = blank space, no scaffolding (red answers on solutions). Still 4 pages.
+- Round 4 (Rocco: 'fix the cramping'; 5 and 6 pages print the same): 6 planned pages, 10 pt, boxes stretch to fill each page (`PAGE` groups in ws2.py), repeated tables restored, report blanks are lines.
 - Older worksheets S2–S5 are still in the old style (wslib.py) with CAS/Key ideas boxes: rebuild on ws2 (TODO).
 
 ## >>> NEXT JOB: Rocco reviews the S1 worksheet; then Lesson 1 bound reference (cards 1A, 1B) → planner card review <<<

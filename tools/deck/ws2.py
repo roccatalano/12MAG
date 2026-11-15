@@ -8,19 +8,19 @@ RED = '#c00'
 
 def css(aos):
     return f"""
-@page {{ size:A4; margin:11mm 9mm 10mm 9mm;
+@page {{ size:A4; margin:13mm 12mm 12mm 12mm;
   @top-left {{ content:"VCE General Maths 3&4"; font:9pt Arial, sans-serif; color:#444; }}
   @top-right {{ content:"{aos}"; font:9pt Arial, sans-serif; color:#444; }}
   @bottom-center {{ content:"Page " counter(page) " of " counter(pages); font:8.5pt Arial, sans-serif; color:#444; }} }}
 * {{ box-sizing:border-box; }}
-body {{ font-family:Arial,"Liberation Sans",Helvetica,sans-serif; font-size:9pt; line-height:1.22; color:#000; margin:0; }}
+body {{ font-family:Arial,"Liberation Sans",Helvetica,sans-serif; font-size:10pt; line-height:1.32; color:#000; margin:0; }}
 .title {{ display:flex; align-items:center; gap:4mm; border:2px solid #000; padding:2mm 4mm; margin-bottom:3mm; }}
 .title .code {{ font-size:16pt; font-weight:bold; border-right:2px solid #000; padding-right:4mm; white-space:nowrap; }}
 .title h1 {{ font-size:15pt; margin:0; flex:1; }}
 .solmark {{ display:none; color:{RED}; }} .sol .solmark {{ display:inline; }}
-.secthd {{ font-weight:bold; text-transform:uppercase; letter-spacing:.4px; font-size:10.5pt; margin:3mm 0 1.5mm; display:flex; justify-content:space-between; break-after:avoid; }}
+.secthd {{ font-weight:bold; text-transform:uppercase; letter-spacing:.4px; font-size:10.5pt; margin:2mm 0 1.2mm; display:flex; justify-content:space-between; break-after:avoid; }}
 .secthd span {{ text-transform:none; letter-spacing:0; font-weight:normal; font-size:9pt; }}
-.box {{ border:1.2px solid #000; margin-bottom:2.5mm; break-inside:avoid; display:flex; flex-direction:column; }}
+.box {{ border:1.2px solid #000; margin-bottom:2mm; break-inside:avoid; display:flex; flex-direction:column; }}
 .box > .hd {{ font-weight:bold; font-size:10pt; text-transform:uppercase; letter-spacing:.3px; border-bottom:1.2px solid #000; padding:1mm 3mm; background:#eee; display:flex; justify-content:space-between; gap:3mm; }}
 .box > .hd span {{ text-transform:none; font-weight:normal; letter-spacing:0; font-size:9pt; }}
 .box > .bd {{ padding:2mm 3mm; flex:1; display:flex; flex-direction:column; }}
@@ -38,15 +38,18 @@ body {{ font-family:Arial,"Liberation Sans",Helvetica,sans-serif; font-size:9pt;
 .parts {{ display:grid; gap:1mm 4mm; }}
 .mc {{ display:grid; gap:.4mm 4mm; margin:1mm 0; }} .mc b {{ display:inline-block; width:5mm; }}
 .mc .ok {{ display:none; color:{RED}; font-weight:bold; }} .sol .mc .right .ok {{ display:inline; }} .sol .mc .right span {{ color:{RED}; }}
-.why {{ visibility:hidden; color:{RED}; font-size:9pt; }} .sol .why {{ visibility:visible; }}
-.wl {{ border-bottom:1px solid #777; height:6.5mm; margin:.5mm 0 1mm; display:flex; align-items:flex-end; padding-bottom:.6mm; }}
+.why {{ visibility:hidden; color:{RED}; font-size:8.6pt; line-height:1.2; }} .sol .why {{ visibility:visible; }}
+.wl {{ border-bottom:1px solid #777; height:8mm; margin:.5mm 0 1mm; display:flex; align-items:flex-end; padding-bottom:.6mm; }}
 .ey .eyh {{ display:grid; grid-template-columns:1fr 1fr; border-bottom:1.2px solid #000; background:#eee; font-weight:bold; font-size:10pt; text-transform:uppercase; letter-spacing:.3px; }}
 .ey .eyh > div {{ padding:1mm 3mm; }} .ey .eyh > div:first-child, .ey .eyb > div:first-child {{ border-right:1.2px solid #000; }}
 .ey .eyb {{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); flex:1; }}
 .ey .eyb > .bd {{ padding:2mm 3mm; display:flex; flex-direction:column; }}
 .space .ans svg line, .space .ans svg rect {{ stroke:{RED}; }} .space .ans svg text {{ fill:{RED}; }} .space .ans svg rect {{ fill-opacity:.25; }}
+.pg {{ height:271mm; display:flex; flex-direction:column; break-after:page; overflow:hidden; }} .pg:last-child {{ break-after:auto; }}
+.pg > .box, .pg > .pair {{ flex:1 1 auto; }} .pg > .title, .pg > .secthd, .pg > .box.lisbox {{ flex:none; }}
+.pg > .pair > .box {{ height:100%; }}
 .src {{ font-size:8pt; font-style:italic; color:#444; text-align:right; margin-top:auto; padding-top:1mm; }}
-.guess {{ font-size:9pt; margin-top:1.5mm; padding:1mm 2mm; border:1px dashed #000; display:flex; align-items:flex-end; gap:1.5mm; flex-wrap:wrap; }}
+.guess {{ font-size:9pt; margin-top:1mm; padding:.6mm 2mm; border:1px dashed #000; display:flex; align-items:flex-end; gap:1.5mm; flex-wrap:wrap; }}
 .guess i {{ display:inline-block; width:14mm; border-bottom:1px solid #000; height:4mm; }}
 .sol .guess::after {{ content:attr(data-a); color:{RED}; font-weight:bold; margin-left:2mm; }}
 table.t {{ border-collapse:collapse; font-size:9.3pt; margin:1mm auto; }}
@@ -56,7 +59,7 @@ table.t.fill td {{ height:6mm; min-width:15mm; }}
 table.t.tiny {{ font-size:7.2pt; margin:0; }} table.t.tiny th, table.t.tiny td {{ padding:.1mm .8mm; }} table.t.tiny th {{ font-weight:normal; }}
 table.t .a {{ color:{RED}; visibility:hidden; }} .sol table.t .a {{ visibility:visible; }}
 .data {{ font-family:"Courier New",monospace; font-size:10pt; letter-spacing:.4px; margin:1mm 0 1.5mm; text-align:center; }}
-.tpl {{ line-height:1.95; margin:1mm 0; }}
+.tpl {{ line-height:2.3; margin:1mm 0; }}
 .bx {{ display:inline-block; border-bottom:1px solid #000; min-width:20mm; height:5.6mm; line-height:5.2mm; padding:0 1.5mm; vertical-align:middle; text-align:center; position:relative; }}
 .bx i {{ position:absolute; left:0; right:0; top:100%; font-size:6.5pt; font-style:normal; color:#666; line-height:1.1; white-space:nowrap; }}
 .bx u {{ text-decoration:none; color:{RED}; visibility:hidden; font-size:9pt; white-space:nowrap; }} .sol .bx u {{ visibility:visible; }}
@@ -71,10 +74,11 @@ table.t .a {{ color:{RED}; visibility:hidden; }} .sol table.t .a {{ visibility:v
 .stamp {{ width:30mm; height:15mm; border:1.2px dashed #000; font-size:8pt; color:#555; display:flex; align-items:flex-end; justify-content:center; flex:none; }}
 .sig .ln {{ flex:1; display:flex; flex-direction:column; justify-content:space-around; font-size:9pt; }}
 .sig .ln div {{ display:flex; gap:2mm; align-items:flex-end; }} .sig .ln i {{ flex:1; border-bottom:1px solid #000; height:5mm; }} .sig .ln i.d {{ flex:none; width:24mm; }}
-.lis {{ column-count:2; column-gap:6mm; margin:0; padding-left:4mm; font-size:8.6pt; line-height:1.2; }} .lis li {{ break-inside:avoid; }}
+.lis {{ column-count:2; column-gap:6mm; margin:0; padding-left:4mm; font-size:8.8pt; line-height:1.2; }} .lis li {{ margin:0; }} .lis li {{ break-inside:avoid; }}
 """
 
 # ---------------------------------------------------------------- building blocks
+PAGE = '<!--PAGE-->'   # put between groups in P: each group fills exactly one A4 page (boxes stretch to use the room)
 def title(code, t): return f'<div class="title"><div class="code">{code}</div><h1>{t} <span class="solmark">· SOLUTIONS</span></h1></div>'
 def sect(t, right=''): return f'<div class="secthd">{t}<span>{right}</span></div>'
 def box(hd, body, right=''): return f'<div class="box"><div class="hd">{hd}<span>{right}</span></div><div class="bd">{body}</div></div>'
@@ -117,7 +121,7 @@ def ftab(var, rows, total, blank=True, pcth='Percentage (%)'):
 def report(toks):
     """Report template: text with boxed blanks (small label under each box; filled in red on the solutions copy)."""
     return '<p class="tpl">' + ''.join(t if isinstance(t, str) else f'<span class="bx"><u>{t[1]}</u><i>{t[0]}</i></span>' for t in toks) + '</p>'
-def lis(L): return box('Learning intentions', '<ul class="lis">' + ''.join(f'<li>{x}</li>' for x in L) + '</ul>')
+def lis(L): return box('Learning intentions', '<ul class="lis">' + ''.join(f'<li>{x}</li>' for x in L) + '</ul>').replace('class="box"', 'class="box lisbox"', 1)
 def close(SC, cols, rev):
     ck = box('Skills checklist', '<div class="scg">' + ''.join(f'<div class="sc"><div class="tick"></div><div><b>{i}.</b> {s}</div></div>' for i, s in enumerate(SC, 1)) + '</div>', 'Tick when you can')
     cw = box('Coursework · Cambridge exercises', f'<div class="hwg" style="grid-template-columns:repeat({len(cols)+1},1fr)">' + ''.join(f'<div><div class="hwh">{h}</div><div>{t}</div><div class="tick"></div></div>' for h, t in cols)
@@ -175,7 +179,16 @@ def build(name, page_title, aos, P):
     C = css(aos)
     def page(sol, screen=True):
         return (f'<!DOCTYPE html><html><head><meta charset="utf-8"><title>{page_title} guided worksheet{" · solutions" if sol else ""}</title><style>{C}</style>{JS if screen else ""}</head>'
-                f'<body class="{"sol" if sol else ""}">' + '\n'.join(P) + '</body></html>')
+                f'<body class="{"sol" if sol else ""}">' + pages(P) + '</body></html>')
+    def pages(P):
+        if PAGE not in P: return '\n'.join(P)
+        out, cur = [], []
+        for x in P + [PAGE]:
+            if x == PAGE:
+                if cur: out.append('<div class="pg">' + '\n'.join(cur) + '</div>')
+                cur = []
+            else: cur.append(x)
+        return '\n'.join(out)
     fns = (f'{name}-worksheet', f'{name}-worksheet-solutions')
     for sol, fn in enumerate(fns):
         open(f'{ROOT}/lessons/{fn}.html', 'w').write(page(sol))
@@ -186,6 +199,9 @@ def build(name, page_title, aos, P):
             b = await p.chromium.launch(executable_path='/usr/bin/google-chrome', args=['--no-sandbox']); pg = await b.new_page()
             for fn in fns:
                 await pg.goto(f'file:///tmp/{fn}.html'); await pg.wait_for_timeout(500)
+                await pg.emulate_media(media='print'); await pg.set_viewport_size({'width': int(186 * 3.78), 'height': 1100})
+                over = await pg.evaluate("[...document.querySelectorAll('.pg')].map((p,i)=>p.scrollHeight>p.clientHeight+2?i+1:0).filter(x=>x)")
+                if over: print('WARNING', fn, 'content cut off on page(s)', over)
                 await pg.pdf(path=f'{ROOT}/lessons/{fn}.pdf', prefer_css_page_size=True, print_background=True)
             await b.close()
     asyncio.run(pdf())
