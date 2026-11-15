@@ -7770,7 +7770,33 @@
         "cas": [
          "recursion-sequence"
         ],
-        "note": "Big lesson (10 Examples): split it into 7B and 7D on the planner if it runs over. Edrolo 5B WE4 (unit cost: uses until a value) is a spare You try for Example 12; Edrolo U1&2 3C WE3 (flat rate fridge) a spare for Example 10."
+        "note": "Big lesson (10 Examples): split it into 7B and 7D on the planner if it runs over. Edrolo 5B WE4 (unit cost: uses until a value) is a spare You try for Example 12; Edrolo U1&2 3C WE3 (flat rate fridge) a spare for Example 10.",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/7B-7D slides.html",
+          "pdf": "lessons/7B-7D slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "8 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/7B-7D worksheet.html",
+            "pdf": "lessons/7B-7D worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/7B-7D worksheet solutions.html",
+            "pdf": "lessons/7B-7D worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
