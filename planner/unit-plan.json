@@ -8490,6 +8490,23 @@
             "pdf": "lessons/Ch2 test solutions.pdf"
            }
           ]
+         },
+         {
+          "kind": "Revision booklet",
+          "desc": "Insight GM1 + GM2 recursion questions (14 MC + 9 short answer), one section per subchapter (7A–7E; 7F has none) for gradual coursework.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/Ch7-revision-booklet.html",
+            "pdf": "lessons/Ch7-revision-booklet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/Ch7-revision-booklet-solutions.html",
+            "pdf": "lessons/Ch7-revision-booklet-solutions.pdf"
+           }
+          ]
          }
         ],
         "cfats": [
