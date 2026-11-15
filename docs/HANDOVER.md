@@ -16,6 +16,9 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 - **15 Nov 22:15 (Ch5 #9):** l22 (5E trend lines and forecasting) built: `lessons/5E slides` (26 slides, CFAT 1.5.2 slide after the exit) + `5E worksheet`/solutions (4 pages), Draft, copied to G: 01 Lesson materials. APK 7E #10 (burnt in l10) dropped. Next Ch5 tasks: revision booklet, test.
 - **15 Nov 22:01 (Ch5 #8):** l21 (5D calculating seasonal indices + deseasonalising) built: `lessons/5D deseasonalising slides` (21 slides) + worksheet/solutions (3 pages), Draft, copied to G: 01 Lesson materials. APK 1B #6 (burnt in l20) → 1B #7. Next Ch5 task: l22 (5E).
 
+## 16 Nov 01:12 — AoS 4 runner: Chapter 13 planned
+Lessons gm12-u4-13a13b (Graphs, networks and adjacency matrices), 13c (Exploring and travelling), 13d13e (Shortest paths and Dijkstra’s algorithm), 13f (Trees and minimum connector problems): titles, learning intentions, success criteria, SD dot points, coursework by skill. Split unchanged. Next: AoS4 #2 prefill.
+
 ## 15 Nov 21:49 — Ch5 #7: lesson l20 (5D seasonal indices) built (Draft)
 `tools/deck/l20/` (build.py, worksheet.py, figs.py, shoot.py) → `lessons/5D seasonal indices slides` (24, CFAT 1.5.1 slide first), `5D seasonal indices worksheet` (+ solutions, 3 pages), copied to G: 01 Lesson materials. APK 1A #2 burnt → 1B #6. Files named '5D seasonal indices …' (l21 shares 5D: use '5D deseasonalising …'). 5D video link still blank.
 

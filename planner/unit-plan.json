@@ -7948,25 +7948,113 @@
         "13A",
         "13B"
        ],
-       "title": "",
+       "title": "Graphs, networks and adjacency matrices",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "plan",
          "sets": [
           {
            "title": "Cambridge · Exercise 13A",
-           "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "items": [
+            {
+             "skill": "Drawing and describing graphs",
+             "q": "Q1–2"
+            },
+            {
+             "skill": "Equivalent (isomorphic) graphs",
+             "q": "Q3"
+            },
+            {
+             "skill": "Drawing planar graphs",
+             "q": "Q4"
+            },
+            {
+             "skill": "Euler’s formula",
+             "q": "Q5–6"
+            },
+            {
+             "skill": "Properties of graphs",
+             "q": "Q7–9"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q10–15"
+            }
+           ],
+           "note": ""
           },
           {
            "title": "Cambridge · Exercise 13B",
+           "items": [
+            {
+             "skill": "Writing adjacency matrices",
+             "q": "Q1"
+            },
+            {
+             "skill": "Drawing graphs from adjacency matrices",
+             "q": "Q2"
+            },
+            {
+             "skill": "Properties of graphs",
+             "q": "Q3–5"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q6–12"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 13A/13B sections"
           }
          ]
-        }
-       },
-       "shell": true
+        },
+        "learningObjectives": [
+         {
+          "sub": "13A",
+          "items": [
+           "To be able to define and identify a graph, vertex, edge and loop.",
+           "To be able to find the degree of a vertex and the sum of degrees.",
+           "To be able to describe the features of a graph.",
+           "To be able to define and identify a planar graph and its faces.",
+           "To be able to apply Euler’s formula and use it to verify if a graph is planar."
+          ]
+         },
+         {
+          "sub": "13B",
+          "items": [
+           "To be able to use an adjacency matrix to represent a graph."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "13A",
+          "items": [
+           "I can identify edges, vertices and loops in a graph.",
+           "I can determine the degree of a vertex in a graph.",
+           "I can identify simple graphs, isolated vertices, degenerate graphs, connected graphs, bridges and subgraphs.",
+           "I can recognise isomorphic graphs.",
+           "I can redraw graphs in planar form.",
+           "I can use Euler’s formula."
+          ]
+         },
+         {
+          "sub": "13B",
+          "items": [
+           "I can write an adjacency matrix from a graph.",
+           "I can construct a graph from an adjacency matrix."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "the conventions, terminology, properties and types of graphs; edge, face, loop, vertex, the degree of a vertex, isomorphic and connected graphs, and the adjacency matrix, and Euler’s formula for planar graphs and its application",
+         "use of matrices to represent graphs, digraphs and networks and their application."
+        ]
+       }
       },
       {
        "id": "gm12-u4-13c",
@@ -7974,20 +8062,73 @@
        "subchapters": [
         "13C"
        ],
-       "title": "",
+       "title": "Exploring and travelling",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "plan",
          "sets": [
           {
            "title": "Cambridge · Exercise 13C",
+           "items": [
+            {
+             "skill": "Describing travels",
+             "q": "Q1–2"
+            },
+            {
+             "skill": "Eulerian trails and circuits",
+             "q": "Q3"
+            },
+            {
+             "skill": "Hamiltonian paths and cycles",
+             "q": "Q4–5"
+            },
+            {
+             "skill": "Applications",
+             "q": "Q6–7"
+            },
+            {
+             "skill": "Properties of graphs",
+             "q": "Q8–9"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q10–14"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 13C section"
           }
          ]
-        }
-       },
-       "shell": true
+        },
+        "learningObjectives": [
+         {
+          "sub": "13C",
+          "items": [
+           "To be able to identify a walk as a trail, path, circuit or cycle.",
+           "To be able to identify a walk as an Eulerian trail, Eulerian circuit, Hamiltonian path or Hamiltonian cycle.",
+           "To be able to use the degrees of the vertices to identify if an Eulerian trail or circuit is possible."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "13C",
+          "items": [
+           "I can define walks, trails, paths, circuits and cycles through a graph.",
+           "I can determine whether an Eulerian trail or circuit exists in a graph.",
+           "I can identify Eulerian trails and circuits through graphs.",
+           "I can identify Hamiltonian paths and cycles through graphs."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "the exploring and travelling problem, walks, trails, paths, Eulerian trails and circuits, and Hamiltonian paths and cycles"
+        ]
+       }
       },
       {
        "id": "gm12-u4-13d13e",
@@ -7996,25 +8137,81 @@
         "13D",
         "13E"
        ],
-       "title": "",
+       "title": "Shortest paths and Dijkstra’s algorithm",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "plan",
          "sets": [
           {
            "title": "Cambridge · Exercise 13D",
-           "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "items": [
+            {
+             "skill": "Weighted graphs and networks",
+             "q": "Q1"
+            },
+            {
+             "skill": "Shortest path by inspection",
+             "q": "Q2–5"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q6–9"
+            }
+           ],
+           "note": ""
           },
           {
            "title": "Cambridge · Exercise 13E",
+           "items": [
+            {
+             "skill": "Dijkstra’s algorithm",
+             "q": "Q1–2"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 13D/13E sections"
           }
          ]
-        }
-       },
-       "shell": true
+        },
+        "learningObjectives": [
+         {
+          "sub": "13D",
+          "items": [
+           "To be able to analyse a weighted graph.",
+           "To be able to find the shortest path between two vertices for a network."
+          ]
+         },
+         {
+          "sub": "13E",
+          "items": [
+           "To be able to use Dijkstra’s algorithm to find the shortest path between two vertices."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "13D",
+          "items": [
+           "I can define a weighted graph.",
+           "I can calculate the shortest path from one vertex to another by inspection."
+          ]
+         },
+         {
+          "sub": "13E",
+          "items": [
+           "I can calculate the shortest path from one vertex to another using Dijkstra’s algorithm."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "determination of the shortest path between two specified vertices in a graph, digraph or network by inspection",
+         "the shortest path problem and Dijkstra’s algorithm"
+        ]
+       }
       },
       {
        "id": "gm12-u4-13f",
@@ -8022,28 +8219,71 @@
        "subchapters": [
         "13F"
        ],
-       "title": "",
+       "title": "Trees and minimum connector problems",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "plan",
          "sets": [
           {
            "title": "Cambridge · Exercise 13F",
+           "items": [
+            {
+             "skill": "Spanning trees",
+             "q": "Q1"
+            },
+            {
+             "skill": "Minimum spanning trees and Prim’s algorithm",
+             "q": "Q2"
+            },
+            {
+             "skill": "Connector problems",
+             "q": "Q3"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q4–8"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 13F section"
           }
          ]
-        }
-       },
-       "shell": true
+        },
+        "learningObjectives": [
+         {
+          "sub": "13F",
+          "items": [
+           "To be able to identify a tree.",
+           "To be able to find a spanning tree for a graph.",
+           "To be able to find the minimum spanning tree for a network using Prim’s algorithm."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "13F",
+          "items": [
+           "I can define tree, spanning tree and minimum spanning tree.",
+           "I can draw a minimum spanning tree using Prim’s algorithm.",
+           "I can solve a minimum connector problem."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "the minimum connector problem, trees, spanning trees and minimum spanning trees and Prim’s algorithm"
+        ]
+       }
       },
       {
        "id": "gm12-ch13-test",
        "kind": "check",
        "subchapters": [],
        "title": "Chapter 13 coursework check + test",
-       "card": {},
-       "shell": true
+       "card": {}
       }
      ]
     },
