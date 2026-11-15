@@ -4,6 +4,11 @@ Read `CLAUDE.md` first (rules, item index, **slide template rules**), then this 
 Repo: `roccatalano/12MAG` (GitHub Pages: roccatalano.github.io/12mag/ → `planner/`). Rocco's dashboard repo `roccatalano/teaching-dashboard-2027` is read-only unless he asks.
 Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through the desktop-app bridge (stage files to read; commit files to write; can't move/rename/delete).
 
+## Done 15 Nov (17:30, queue runner): Ch 2 task 1 — lesson cards l03–l08 prefilled (Draft)
+- `tools/prefill_ch2.py` (sources in its docstring) → `planner/unit-plan.json`. Do Now: replaced burnt/duplicate picks (2023 E1 Q4, 2024 E1 Q1, 2025 E1 Q4, 2025 E2 Q1b, 2025 NHT E2 Q3a), the 4B-tagged 2025 NHT E1 Q10 and the same-lesson 2023 E2 Q3b; l08 got 4. Secs now follow vcaa_current_index.
+- You trys mapped from Edrolo U3&4 2A–2D + 3C WE1 (r²); coursework = Cambridge 2A–2I Q ranges by skill + revision book. CAS steps written for scatterplot, correlation-r, r-and-r2 (from Cambridge CAS 1/2; marked Draft). Ch 2 MaffsGuru videos in videos.json (draft).
+- Ledger: 46 planned rows added to `tools/ledger.csv` + new `tools/ledger_manual.csv`. Open questions in QUEUE.md.
+
 ## >>> NEXT JOB (start here): Lesson 2 (1C–1E) — slides, then worksheet <<<
 **Lesson 1 is DONE apart from its bound reference:** slides READY (`lessons/S1-slides.html/.pdf`), guided worksheet READY (`lessons/S1-worksheet(-solutions).html/.pdf`, 5 pages; G: `1A-1B worksheet(.pdf)`, `1A-1B worksheet solutions(.pdf)`).
 **Bound reference work is PAUSED** (Rocco, 15 Nov: he wants to rethink the bound reference before we work on it). Don't build or change any bound reference cards until he says how.

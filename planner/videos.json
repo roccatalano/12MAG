@@ -91,6 +91,87 @@
    "page": "",
    "status": "approved",
    "note": "covers z-scores, which the MaffsGuru 1H video does not"
+  },
+  {
+   "sub": "2A",
+   "title": "Bivariate data: classifying the variables",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "https://www.maffsguru.com/courses/general-mathematics-units-3-and-4-23",
+   "status": "draft"
+  },
+  {
+   "sub": "2B",
+   "title": "Investigating associations between categorical variables",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "https://www.youtube.com/watch?v=fAgY-tmgg2E",
+   "length": "",
+   "page": "https://www.maffsguru.com/videos/investigating-associations-between-categorical-variables/",
+   "status": "draft"
+  },
+  {
+   "sub": "2C",
+   "title": "Investigating the association between a numerical and a categorical variable",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "https://www.maffsguru.com/videos/investigating-the-association-between-a-numerical-and-a-categorical-variable/",
+   "status": "draft"
+  },
+  {
+   "sub": "2D",
+   "title": "Investigating associations between two numerical variables",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "https://www.youtube.com/watch?v=BWA_2IlvGcM",
+   "length": "",
+   "page": "https://www.maffsguru.com/videos/investigating-associations-between-two-numerical-variables/",
+   "status": "draft"
+  },
+  {
+   "sub": "2E",
+   "title": "How to interpret a scatterplot",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "https://www.maffsguru.com/videos/how-to-interpret-a-scatterplot/",
+   "status": "draft"
+  },
+  {
+   "sub": "2F",
+   "title": "Strength of a linear relationship: the correlation coefficient",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "https://www.youtube.com/watch?v=KbP3AIezt9c",
+   "length": "13:54",
+   "page": "https://www.maffsguru.com/videos/calculating-the-correlation-coefficient/",
+   "status": "draft"
+  },
+  {
+   "sub": "2G",
+   "title": "The coefficient of determination",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "https://www.maffsguru.com/videos/the-coefficient-of-determination/",
+   "status": "draft"
+  },
+  {
+   "sub": "2H",
+   "title": "Correlation and causality",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "https://www.youtube.com/watch?v=X6YJPi9AkFI",
+   "length": "11:53",
+   "page": "https://www.maffsguru.com/videos/correlation-and-causality/",
+   "status": "draft"
+  },
+  {
+   "sub": "2I",
+   "title": "Which graph?",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "https://www.maffsguru.com/videos/which-graph/",
+   "status": "draft"
   }
  ]
 }

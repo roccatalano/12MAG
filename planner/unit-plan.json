@@ -2515,21 +2515,21 @@
           "n": 1,
           "sub": "2A",
           "title": "Identifying associations as categorical or numerical",
-          "youTry": "TBM",
+          "youTry": null,
           "video": "Cambridge GO · 2A Resources"
          },
          {
           "n": 2,
           "sub": "2A",
           "title": "Identifying the response and explanatory variables",
-          "youTry": "TBM",
+          "youTry": "Edrolo 2C WE1",
           "video": "Cambridge GO · 2A Resources"
          },
          {
           "n": 3,
           "sub": "2A",
           "title": "Identifying the response and explanatory variables",
-          "youTry": "TBM",
+          "youTry": "Edrolo 2C WE2",
           "video": "Cambridge GO · 2A Resources"
          },
          {
@@ -2550,7 +2550,7 @@
           "n": 6,
           "sub": "2B",
           "title": "Identifying and describing associations from a percentaged two-way table (3 × 3)",
-          "youTry": "TBM",
+          "youTry": "Edrolo 2A WE2",
           "video": "Cambridge GO · 2B Resources"
          },
          {
@@ -2583,23 +2583,23 @@
         "doNow": [
          {
           "exam": "Exam 1",
-          "ref": "VCAA 2023 Exam 1 Q4",
+          "ref": "VCAA 2024 Exam 1 Q7",
           "sec": "1H"
          },
          {
           "exam": "Exam 1",
           "ref": "VCAA 2023 Exam 1 Q5",
-          "sec": "1I"
-         },
-         {
-          "exam": "Exam 2",
-          "ref": "VCAA 2024 Exam 2 Q1ai",
           "sec": "1H"
          },
          {
           "exam": "Exam 2",
+          "ref": "VCAA 2024 Exam 2 Q1ai",
+          "sec": "1F"
+         },
+         {
+          "exam": "Exam 2",
           "ref": "VCAA 2024 Exam 2 Q1b",
-          "sec": "1I"
+          "sec": "1H"
          }
         ],
         "exit": [
@@ -2613,17 +2613,52 @@
          }
         ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 2A",
-           "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "items": [
+            {
+             "skill": "Categorical or numerical variables",
+             "q": "Q1"
+            },
+            {
+             "skill": "Explanatory and response variables",
+             "q": "Q2–3"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q4–6"
+            }
+           ],
+           "note": ""
           },
           {
            "title": "Cambridge · Exercise 2B",
+           "items": [
+            {
+             "skill": "Two-way frequency table",
+             "q": "Q1"
+            },
+            {
+             "skill": "Percentaged two-way tables and associations",
+             "q": "Q2–5"
+            },
+            {
+             "skill": "Segmented bar charts",
+             "q": "Q6–9"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q10–12"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 2A, 2B sections"
           }
          ]
         }
@@ -2672,28 +2707,28 @@
           "n": 9,
           "sub": "2C",
           "title": "Using a parallel dot plot to identify and describe associations",
-          "youTry": "TBM",
+          "youTry": "Edrolo 2B WE2",
           "video": "Cambridge GO · 2C Resources"
          },
          {
           "n": 10,
           "sub": "2C",
           "title": "Using a back-to-back stem plot to identify and describe associations",
-          "youTry": "TBM",
+          "youTry": "Edrolo 2B WE1",
           "video": "Cambridge GO · 2C Resources"
          },
          {
           "n": 11,
           "sub": "2C",
           "title": "Comparing distributions across two groups using parallel boxplots",
-          "youTry": "TBM",
+          "youTry": "Edrolo 2B WE3",
           "video": "Cambridge GO · 2C Resources"
          },
          {
           "n": 12,
           "sub": "2C",
           "title": "Comparing distributions across more than two groups using parallel boxplots",
-          "youTry": "TBM",
+          "youTry": "Edrolo 2B WE4",
           "video": "Cambridge GO · 2C Resources"
          }
         ],
@@ -2702,11 +2737,6 @@
           "kind": "Skill",
           "ref": "Cambridge U1&2 2I checklist #16",
           "text": "Compare distributions with a back-to-back stem plot or boxplot"
-         },
-         {
-          "kind": "Skill",
-          "ref": "Cambridge U1&2 2H checklist #14",
-          "text": "Produce a five-number summary and construct a boxplot"
          },
          {
           "kind": "Exam",
@@ -2722,13 +2752,13 @@
         "doNow": [
          {
           "exam": "Exam 1",
-          "ref": "VCAA 2024 Exam 1 Q1",
-          "sec": "2A"
+          "ref": "VCAA 2026 NHT Exam 1 Q5",
+          "sec": "2B"
          },
          {
           "exam": "Exam 1",
-          "ref": "VCAA 2025 Exam 1 Q4",
-          "sec": "1E"
+          "ref": "VCAA 2024 Exam 1 Q6",
+          "sec": "1G"
          },
          {
           "exam": "Exam 2",
@@ -2737,8 +2767,8 @@
          },
          {
           "exam": "Exam 2",
-          "ref": "VCAA 2025 Exam 2 Q1b",
-          "sec": "1A"
+          "ref": "VCAA 2023 Exam 2 Q2bi",
+          "sec": "2B"
          }
         ],
         "exit": [
@@ -2777,12 +2807,34 @@
          }
         ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 2C",
+           "items": [
+            {
+             "skill": "Parallel dot plots",
+             "q": "Q1"
+            },
+            {
+             "skill": "Back-to-back stem plots",
+             "q": "Q2–3"
+            },
+            {
+             "skill": "Parallel boxplots",
+             "q": "Q4–6"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q7–10"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 2C sections"
           }
          ]
         }
@@ -2842,21 +2894,21 @@
           "n": 13,
           "sub": "2E",
           "title": "Direction of association",
-          "youTry": "TBM",
+          "youTry": null,
           "video": "Cambridge GO · 2E Resources"
          },
          {
           "n": 14,
           "sub": "2E",
           "title": "Form of an association",
-          "youTry": "TBM",
+          "youTry": null,
           "video": "Cambridge GO · 2E Resources"
          },
          {
           "n": 15,
           "sub": "2E",
           "title": "Strength of an association",
-          "youTry": "TBM",
+          "youTry": "Edrolo 2C WE4",
           "video": "Cambridge GO · 2E Resources"
          }
         ],
@@ -2885,8 +2937,8 @@
          },
          {
           "exam": "Exam 2",
-          "ref": "VCAA 2025 NHT Exam 2 Q3a",
-          "sec": "1B"
+          "ref": "VCAA 2025 Exam 2 Q1d",
+          "sec": "2B"
          },
          {
           "exam": "Exam 2",
@@ -2908,20 +2960,48 @@
          "scatterplot"
         ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 2D",
-           "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "items": [
+            {
+             "skill": "Reading a scatterplot",
+             "q": "Q1"
+            },
+            {
+             "skill": "Scatterplots on CAS",
+             "q": "Q2–5"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q6"
+            }
+           ],
+           "note": ""
           },
           {
            "title": "Cambridge · Exercise 2E",
+           "items": [
+            {
+             "skill": "Direction from the variables",
+             "q": "Q1"
+            },
+            {
+             "skill": "Direction, form and strength from a scatterplot",
+             "q": "Q2"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 2D, 2E sections"
           }
          ]
-        }
+        },
+        "casYouTry": "Edrolo 2C WE3 (scatterplot on CAS)"
        }
       },
       {
@@ -2964,7 +3044,7 @@
           "n": 16,
           "sub": "2F",
           "title": "Classifying the strength of a linear association",
-          "youTry": "TBM",
+          "youTry": "Edrolo 2D WE1",
           "video": "Cambridge GO · 2F Resources"
          }
         ],
@@ -2988,7 +3068,7 @@
         "doNow": [
          {
           "exam": "Exam 1",
-          "ref": "VCAA 2025 NHT Exam 1 Q10",
+          "ref": "VCAA 2024 Exam 1 Q10",
           "sec": "2E"
          },
          {
@@ -3031,12 +3111,34 @@
          }
         ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 2F",
+           "items": [
+            {
+             "skill": "Basic ideas",
+             "q": "Q1"
+            },
+            {
+             "skill": "r using the formula (optional)",
+             "q": "Q2"
+            },
+            {
+             "skill": "r on CAS",
+             "q": "Q3"
+            },
+            {
+             "skill": "Classifying strength from r",
+             "q": "Q4"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 2F sections"
           }
          ]
         }
@@ -3098,35 +3200,35 @@
           "n": 17,
           "sub": "2G",
           "title": "Calculating the coefficient of determination",
-          "youTry": "TBM",
+          "youTry": null,
           "video": "Cambridge GO · 2G Resources"
          },
          {
           "n": 18,
           "sub": "2G",
           "title": "Interpreting the coefficient of determination",
-          "youTry": "TBM",
+          "youTry": null,
           "video": "Cambridge GO · 2G Resources"
          },
          {
           "n": 19,
           "sub": "2G",
           "title": "Calculating and interpreting the coefficient of determination",
-          "youTry": "TBM",
+          "youTry": "Edrolo 3C WE1",
           "video": "Cambridge GO · 2G Resources"
          },
          {
           "n": 20,
           "sub": "2G",
           "title": "Calculating and interpreting the coefficient of determination",
-          "youTry": "TBM",
+          "youTry": null,
           "video": "Cambridge GO · 2G Resources"
          },
          {
           "n": 21,
           "sub": "2G",
           "title": "Calculating the correlation coefficient from the coefficient of determination",
-          "youTry": "TBM",
+          "youTry": null,
           "video": "Cambridge GO · 2G Resources"
          }
         ],
@@ -3135,11 +3237,6 @@
           "kind": "Skill",
           "ref": "Cambridge U1&2 7C checklist #6",
           "text": "Recognise that correlation does not imply causation"
-         },
-         {
-          "kind": "Skill",
-          "ref": "Cambridge U1&2 7C checklist #5",
-          "text": "Classify the strength of r"
          },
          {
           "kind": "Exam",
@@ -3160,13 +3257,13 @@
          },
          {
           "exam": "Exam 2",
-          "ref": "VCAA 2023 Exam 2 Q3b",
+          "ref": "VCAA 2025 NHT Exam 2 Q4g",
           "sec": "2F"
          },
          {
           "exam": "Exam 2",
           "ref": "VCAA 2024 Exam 2 Q1aii",
-          "sec": "1H"
+          "sec": "1F"
          }
         ],
         "exit": [
@@ -3183,20 +3280,48 @@
          "r-and-r2"
         ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 2G",
-           "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "items": [
+            {
+             "skill": "r² from r",
+             "q": "Q1"
+            },
+            {
+             "skill": "Calculating and interpreting r²",
+             "q": "Q2–3"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q4–8"
+            }
+           ],
+           "note": ""
           },
           {
            "title": "Cambridge · Exercise 2H",
+           "items": [
+            {
+             "skill": "Correlation and causation",
+             "q": "Q1–7"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q8"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 2G, 2H sections"
           }
          ]
-        }
+        },
+        "note": "2H has no Cambridge Example: Edrolo 2D WE2 (third variable, causation) can be a 2H You try if Rocco wants one."
        }
       },
       {
@@ -3219,15 +3344,53 @@
          "answering statistical questions that require a knowledge of the associations between pairs of variables"
         ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 2I",
+           "items": [
+            {
+             "skill": "Choosing the graph",
+             "q": "Q1–2"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q3"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 2I sections"
           }
          ]
-        }
+        },
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2023 Exam 1 Q10",
+          "sec": "2H"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2026 Exam 1 Q5",
+          "sec": "1H"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2024 Exam 2 Q3c",
+          "sec": "2G"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2024 NHT Exam 2 Q2b",
+          "sec": "2B"
+         }
+        ],
+        "exit": [],
+        "note": "No Edrolo U3&4 exam-practice questions for 2I (Edrolo has no Which graph? lesson): exits to confirm with Rocco."
        }
       },
       {

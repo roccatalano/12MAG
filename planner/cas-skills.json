@@ -344,9 +344,17 @@
     "2D",
     "2E"
    ],
-   "ti": [],
-   "classpad": [],
-   "tip": "",
+   "ti": [
+    "Lists & Spreadsheet: enter the EV and RV in two named lists.",
+    "ctrl + I › Add Data & Statistics.",
+    "Click to add variable on the x-axis: choose the EV; on the y-axis: choose the RV. The scatterplot is scaled automatically."
+   ],
+   "classpad": [
+    "Statistics app: enter the EV in one list and the RV in another.",
+    "SetGraph › Setting: Draw On · Type Scatter · XList = EV list · YList = RV list · Freq 1; Set.",
+    "Tap the graph icon to plot; tap Resize for a full-screen plot (turn off other StatGraphs if they show)."
+   ],
+   "tip": "EV on the x-axis, RV on the y-axis.",
    "videos": {
     "ti": [
      {
@@ -368,7 +376,8 @@
       "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
      }
     ]
-   }
+   },
+   "checked": "Cambridge U3&4 2D CAS 1 (Draft: check against the official CAS help videos)"
   },
   {
    "id": "correlation-r",
@@ -376,9 +385,17 @@
    "subs": [
     "2F"
    ],
-   "ti": [],
-   "classpad": [],
-   "tip": "",
+   "ti": [
+    "Lists & Spreadsheet: enter the two variables in named lists.",
+    "ctrl + I › Add Calculator.",
+    "Type corrmat(EV list, RV list) and press enter (or Catalog › corrMat( ). r is the off-diagonal value."
+   ],
+   "classpad": [
+    "Statistics app: enter the EV in list1 and the RV in list2.",
+    "Calc › Regression › Linear Reg; XList list1, YList list2; OK.",
+    "Read r from the output (round as asked)."
+   ],
+   "tip": "Only use r for a linear association with no clear outliers.",
    "videos": {
     "ti": [
      {
@@ -392,7 +409,8 @@
       "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
      }
     ]
-   }
+   },
+   "checked": "Cambridge U3&4 2F CAS 2 (Draft)"
   },
   {
    "id": "r-and-r2",
@@ -401,9 +419,17 @@
     "2G",
     "2H"
    ],
-   "ti": [],
-   "classpad": [],
-   "tip": "",
+   "ti": [
+    "Lists & Spreadsheet: enter the EV and RV in named lists.",
+    "Menu › Statistics › Stat Calculations › Linear Regression (mx+b): X List = EV, Y List = RV; OK.",
+    "Read r and r² from the output (or square r from corrmat)."
+   ],
+   "classpad": [
+    "Statistics app: enter the EV in list1 and the RV in list2.",
+    "Calc › Regression › Linear Reg; XList list1, YList list2; OK.",
+    "Read r and r² from the output."
+   ],
+   "tip": "Interpret r² as a percentage: 'x% of the variation in RV is explained by the variation in EV'.",
    "videos": {
     "ti": [
      {
@@ -417,7 +443,8 @@
       "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
      }
     ]
-   }
+   },
+   "checked": "Cambridge U3&4 2F CAS 2 + linear regression (Draft)"
   },
   {
    "id": "lsrl",
