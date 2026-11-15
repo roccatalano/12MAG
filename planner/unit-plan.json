@@ -11385,6 +11385,23 @@
             "pdf": "lessons/CFAT 4.13.3 (13F) solutions.pdf"
            }
           ]
+         },
+         {
+          "kind": "Revision booklet",
+          "desc": "Insight GM1 + GM2 Unit 4 network questions (22 MC + 7 short answer), one section per subchapter (13A–13F).",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/Ch13-revision-booklet.html",
+            "pdf": "lessons/Ch13-revision-booklet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/Ch13-revision-booklet-solutions.html",
+            "pdf": "lessons/Ch13-revision-booklet-solutions.pdf"
+           }
+          ]
          }
         ]
        }
