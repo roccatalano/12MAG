@@ -7,6 +7,10 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 
 
+## 15 Nov 19:45 — CFATs 1.3.1 and 1.3.2 (runner, task Ch3 #2)
+- `tools/cfat/ch3/build.py` (content, sources in docstring) + `build_html.py` (copy of ch2 + tables/subscripts) + `crop.py` → `lessons/CFAT 1.3.1 (3A-3B)` and `CFAT 1.3.2 (3B-3C)` (.html/.pdf + solutions, 2 pages each, /15). On G: `01 Lesson materials`. Draft on the l11 (1.3.1) and l12 (1.3.2) cards, as already planned there.
+- 1.3.1: Edrolo 3A Q1, Q2, Q6, 3B Q1, Q4 (MC); 3A Q3, Q8, 3B Q2, Q7. 1.3.2: 3A Q11, Q4, 3C Q3 (MC); 3C Q4, Q6, Q8a–c. 18 ledger rows.
+- For Rocco to check: 1.3.2 has only 3 MC (Edrolo 3C has one non-burnt MC); 3C Q4b answer is Edrolo's 57.26/−3.26 (rounded equation gives 57.20/−3.20, noted in solutions); part marks set by Claude.
 ## 15 Nov 19:36 — Ch 2 test (runner)
 - `lessons/Ch2 test(.html/.pdf)` + solutions: Mathspace Ch 2 topic assessment verbatim (8 MC + 12 SA, /41), CFAT layout, Draft; build `tools/test/ch2/build.py`; on G: `01 Lesson materials`; on the Ch 2 check card; Mathspace Q1–20 burnt in the ledger. **Chapter 2 queue finished**; Ch 2 runner turned off. Coursework check sheet on that card is still todo (not a queued task).
 ## 15 Nov 19:39 — Chapter 3 lesson cards l09–l11 prefilled (runner, task Ch3 #1)
