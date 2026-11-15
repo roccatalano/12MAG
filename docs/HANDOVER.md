@@ -27,6 +27,8 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 ## 16 Nov 01:32 — AoS2 #2: Chapter 7 CFATs
 - `tools/cfat/ch7/` → `lessons/CFAT 2.7.1 (7A-7B-7D)` (l33 card) and `CFAT 2.7.2 (7C-7E-7F)` (l36 card), student + solutions, HTML + PDF, 2 pages each, Draft; copied to G: 01 Lesson materials. 20 Edrolo exercise items burnt in `tools/ledger_manual.csv`.
+## 16 Nov 01:34 — AoS3: Chapter 10 CFATs (Draft)
+CFAT 3.10.1 (10A-10C), 3.10.2 (10D-10E), 3.10.3 (10F-10G) built in `tools/cfat/ch10/` (Edrolo 7A-7F exercise questions; each question cropped from the Edrolo PDF so matrices stay verbatim; answers from Edrolo answer pages). On the 10D, 10F-10G and Ch 10 test cards; files in lessons/ and on G: 01 Lesson materials. Next: CFAT follow-ups (Jacaranda).
 
 ## 16 Nov 01:12 — AoS 4 runner: Chapter 13 planned
 Lessons gm12-u4-13a13b (Graphs, networks and adjacency matrices), 13c (Exploring and travelling), 13d13e (Shortest paths and Dijkstra’s algorithm), 13f (Trees and minimum connector problems): titles, learning intentions, success criteria, SD dot points, coursework by skill. Split unchanged. Next: AoS4 #2 prefill.
