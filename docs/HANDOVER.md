@@ -6,7 +6,7 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 
 ## 15 Nov 17:27 — Ch 2 CFATs rebuilt (runner, task Ch2 #2)
-- `lessons/CFAT 1.2.1 (2A-2B).docx/.pdf` (/17: 5 MC + 4 short answer) and `CFAT 1.2.2 (2C-2D).docx/.pdf` (/16: 5 MC + 3 short answer), each with a `solutions` copy (red answers + marks). Rule 8: Edrolo U3&4 exercise questions only. Built by `tools/cfat/ch2/build.py` (figures cropped by `crop.py`; sources in the docstring). Also on G: in 01 Lesson materials.
+- **Changed (Rocco, 15 Nov): CFATs are HTML + PDF, not Word.** Rebuilt as `lessons/CFAT 1.2.x (…).html/.pdf` (+ solutions) by `tools/cfat/ch2/build_html.py` in the CFAT 1.1.x layout, 2 pages each; Word files removed from the repo (Rocco deletes the .docx copies on G:). Original note: `lessons/CFAT 1.2.1 (2A-2B).docx/.pdf` (/17: 5 MC + 4 short answer) and `CFAT 1.2.2 (2C-2D).docx/.pdf` (/16: 5 MC + 3 short answer), each with a `solutions` copy (red answers + marks). Rule 8: Edrolo U3&4 exercise questions only. Built by `tools/cfat/ch2/build.py` (figures cropped by `crop.py`; sources in the docstring). Also on G: in 01 Lesson materials.
 - Planner: both CFAT cards updated (questions, marks, Draft) + material entries with Student copy / Solutions. Ledger: old CFAT 1.2.1 rows set burnt = no (incl. VCAA 2017 E1 Q6 via Edrolo 2A Q12, now free); 17 new rows.
 - Open questions Q1–Q6 logged in QUEUE Decisions log (Q5 decided: videos stay draft until each lesson task checks them).
 

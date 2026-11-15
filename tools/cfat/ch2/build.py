@@ -1,4 +1,5 @@
-"""CFAT 1.2.1 (Cambridge 2A-2B) and CFAT 1.2.2 (Cambridge 2C-2D), Word layout per the 12mag-cfat-word skill.
+"""CONTENT for CFAT 1.2.1 / 1.2.2 (CFATS list) + the retired Word builder. The live output is build_html.py
+(HTML + PDF, Rocco 15 Nov). CFAT 1.2.1 (Cambridge 2A-2B) and CFAT 1.2.2 (Cambridge 2C-2D), Word layout per the 12mag-cfat-word skill.
 
 Rule 8: Edrolo U3&4 (2023) exercise questions ONLY (no VCAA reprints). Rebuilt from scratch 15 Nov 2026
 (queue Ch2 #2, Rocco's answer to Q1). Wording copied from Edrolo; stems shortened only where the skill allows
@@ -26,7 +27,7 @@ GREY = RGBColor(0x77, 0x77, 0x77)
 # ---------------- content ----------------
 CFATS = [
  dict(id='CFAT 1.2.1', subs='2A-2B', title='Response and explanatory variables · associations between two categorical variables',
-  layout=[([0,2],[1]),('full',3),('full',4)],
+  layout=[([0,2],[1]),([3],[4])],
   mc=[
    dict(src='Edrolo 2C Q1', stem='Fill in the blanks for the following statement.\nThe ______ variable is used to predict the changes observed in the ______ variable. When representing the variables on a scatterplot, the response variable is positioned on the ______ axis and the explanatory variable is positioned on the ______ axis.',
         opts=['response, explanatory, horizontal, vertical','response, explanatory, vertical, horizontal','explanatory, response, horizontal, vertical','explanatory, response, vertical, horizontal'], ans=3),
@@ -37,7 +38,7 @@ CFATS = [
    dict(src='Edrolo 2A Q5', stem='A scientific experiment was conducted to determine if there is a relationship between light intensity (dark, bright) and respiration rate (low, medium, high) for a small sample of spinach leaves. The results were displayed in a percentage segmented bar chart.\nWhich of the following statements is correct?',
         fig='2A_Q5', w=3.4, opts=['25% of spinach leaves subjected to a bright light intensity had a low respiration rate.','55% of spinach leaves subjected to a dark light intensity had a low respiration rate.','35% of spinach leaves subjected to a dark light intensity had a medium respiration rate.','55% of spinach leaves subjected to a bright light intensity had a high respiration rate.'], ans=3),
    dict(src='Edrolo 2A Q7', full=True, stem='Each morning at the Edrolo office, a team member volunteers to do a coffee run. Everyone is able to choose either ‘cappuccino’, ‘flat white’ or ‘latte’. Their coffee preference has been recorded alongside their employment duration (less than three years, three years or more) in a two-way percentage frequency table.\nThe data displayed supports the contention that there is no obvious association between coffee preference and employment duration because',
-        fig='2A_Q7', w=6.0, opts=['the coffee preferences between employment duration differ by a significant amount.','23.7% of team members who have been working for less than 3 years prefer a flat white.','63.2% of team members who have been working for less than 3 years prefer a latte and 64.7% of those who have been working for 3 or more years prefer a latte.','63.2% of team members who have been working for less than 3 years prefer a latte and 11.7% of those who have been working for 3 or more years prefer a cappuccino.'], ans=2),
+        fig='2A_Q7', w=5.2, opts=['the coffee preferences between employment duration differ by a significant amount.','23.7% of team members who have been working for less than 3 years prefer a flat white.','63.2% of team members who have been working for less than 3 years prefer a latte and 64.7% of those who have been working for 3 or more years prefer a latte.','63.2% of team members who have been working for less than 3 years prefer a latte and 11.7% of those who have been working for 3 or more years prefer a cappuccino.'], ans=2),
   ],
   sa=[
    dict(src='Edrolo 2C Q2', stem='Identify the response variable, RV, and the explanatory variable, EV, in each of the following questions.',
@@ -53,11 +54,12 @@ CFATS = [
         fig='2A_Q8', w=3.6,
         parts=[('','Is there an association between age and cryptocurrency investment? Ensure to quote appropriate percentages.',2,'Yes, there is an association between cryptocurrency investment and age (1). The percentage of those with a cryptocurrency investment increases with age, from 15% of participants aged under 45 to 75% of participants aged 45 and over (1).')]),
    dict(src='Edrolo 2A Q9', stem='Mark wants to see if there is an association between the number of hours studied (0 to 9 hours, 10 to 19 hours, 20 to 29 hours, 30 or more hours) for an assessment and the test score (low, medium, high) that his students get.',
+        fig='2A_Q9', w=8.4,
         parts=[('a.','Which variable is most likely to be plotted on the horizontal axis of a percentage segmented bar chart?',1,'hours studied'),
-               ('b.','Mark fills out a table with the data he gathered from the test. However, Mark spilled his coffee on his paper on his drive to work, leaving a couple of stains. Fill out the rest of the table.',2,'0 to 9 hours: low = 80%;  10 to 19 hours: medium = 60%;  20 to 29 hours: medium = 50%  (2 marks; −1 per error)','2A_Q9',9.0)]),
+               ('b.','Mark fills out a table with the data he gathered from the test. However, Mark spilled his coffee on his paper on his drive to work, leaving a couple of stains. Fill out the rest of the table.',2,'0 to 9 hours: low = 80%;  10 to 19 hours: medium = 60%;  20 to 29 hours: medium = 50%  (2 marks; −1 per error)')]),
   ]),
  dict(id='CFAT 1.2.2', subs='2C-2D', title='Numerical vs categorical variables · scatterplots',
-  layout=[([0],[1]),('full',2),('full',3),('full',4)],
+  layout=[([0],[1]),('full',2),([3],[4])],
   mc=[
    dict(src='Edrolo 2B Q3a', stem='The number of minutes spent in the shower by each participant at band camp was recorded correct to the nearest 30 seconds. The participants were then categorised by age into two groups: ‘11–14 years’ and ‘15–18 years’.\nIn this circumstance, age is classified as what kind of variable?',
         opts=['Discrete numerical variable','Nominal categorical variable','Continuous numerical variable','Ordinal categorical variable'], ans=3),

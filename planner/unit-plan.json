@@ -2799,7 +2799,7 @@
           "format": "About 20 min · individual · CAS and single bound reference allowed",
           "status": "Draft",
           "plan": "Start of the 2C lesson.",
-          "file": "lessons/CFAT 1.2.1 (2A-2B).pdf",
+          "file": "lessons/CFAT 1.2.1 (2A-2B).html",
           "sources": [
            "Edrolo GM U3&4 2023 exercise questions only (rule 8): 2C Q1, Q2a–d · 2A Q1a, Q1b, Q2, Q5, Q7, Q8, Q9a–b"
           ],
@@ -2944,17 +2944,17 @@
         "materials": [
          {
           "kind": "CFAT 1.2.1",
-          "desc": "Word, 2 pages, about 20 min, CAS and bound reference allowed.",
+          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
           "status": "draft",
           "copies": [
            {
             "label": "Student copy",
-            "file": "lessons/CFAT 1.2.1 (2A-2B).docx",
+            "file": "lessons/CFAT 1.2.1 (2A-2B).html",
             "pdf": "lessons/CFAT 1.2.1 (2A-2B).pdf"
            },
            {
             "label": "Solutions",
-            "file": "lessons/CFAT 1.2.1 (2A-2B) solutions.docx",
+            "file": "lessons/CFAT 1.2.1 (2A-2B) solutions.html",
             "pdf": "lessons/CFAT 1.2.1 (2A-2B) solutions.pdf"
            }
           ]
@@ -3229,7 +3229,7 @@
           "format": "About 20 min · individual · CAS and single bound reference allowed",
           "status": "Draft",
           "plan": "Start of the 2F lesson (one subchapter).",
-          "file": "lessons/CFAT 1.2.2 (2C-2D).pdf",
+          "file": "lessons/CFAT 1.2.2 (2C-2D).html",
           "marks": 16,
           "mcMarks": 5,
           "saMarks": 11,
@@ -3363,17 +3363,17 @@
         "materials": [
          {
           "kind": "CFAT 1.2.2",
-          "desc": "Word, 2 pages, about 20 min, CAS and bound reference allowed.",
+          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
           "status": "draft",
           "copies": [
            {
             "label": "Student copy",
-            "file": "lessons/CFAT 1.2.2 (2C-2D).docx",
+            "file": "lessons/CFAT 1.2.2 (2C-2D).html",
             "pdf": "lessons/CFAT 1.2.2 (2C-2D).pdf"
            },
            {
             "label": "Solutions",
-            "file": "lessons/CFAT 1.2.2 (2C-2D) solutions.docx",
+            "file": "lessons/CFAT 1.2.2 (2C-2D) solutions.html",
             "pdf": "lessons/CFAT 1.2.2 (2C-2D) solutions.pdf"
            }
           ]

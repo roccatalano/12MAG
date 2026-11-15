@@ -13,7 +13,7 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 
 ## Chapter 2: Investigating associations between two variables (lessons gm12-u3-l03 … l08, check gm12-u3-ch2-test)
 1. `done 2026-11-15 — l03–l08 cards prefilled: Do Now ×4 each (burnt ones replaced), You trys mapped, coursework Q ranges, CAS steps (scatterplot, r, r²), Ch2 videos (draft); 46 items reserved in the ledger` **Prefill the lesson cards** (l03–l08) in `planner/unit-plan.json` from the indexes, following the rules in CLAUDE.md: Do Now ×4 per lesson (current-design VCAA from `tools/vcaa_current_index.csv`, not burnt), APK (Cambridge U1&2 skills checklist + Edrolo U1&2 exam questions), Examples (Cambridge) with mapped Edrolo You trys, exits (Edrolo U3&4 exam practice), CAS skill ids (add new skills to `planner/cas-skills.json`, steps checked against `02 Sources\CAS guides`), coursework (Cambridge exercises), self-study videos (`planner/videos.json`, MaffsGuru first; status `draft` until Rocco checks). Reserve every chosen exam item in the ledger (`tools/ledger_manual.csv`, role as planned) so later tasks don't reuse it.
-2. `done 2026-11-15 — CFAT 1.2.1 (2A-2B, /17) + 1.2.2 (2C-2D, /16), Word + PDF, student + solutions, Edrolo exercise Qs only; old 1.2.1 ledger rows freed` **CFATs for Chapter 2** + solutions — Rocco 15 Nov: RECREATE CFAT 1.2.1/1.2.2 from scratch under rule 8 (Edrolo U3&4 exercise questions only: `tools/y12_edrolo_exercise_questions.csv`; Word layout per the 12mag-cfat-word skill if listed, otherwise as CFAT 1.1.x). Add them to the planner.
+2. `done 2026-11-15 — CFAT 1.2.1 (2A-2B, /17) + 1.2.2 (2C-2D, /16), HTML + PDF like CFAT 1.1.x (Word version replaced, Rocco 15 Nov), student + solutions, Edrolo exercise Qs only; old 1.2.1 ledger rows freed` **CFATs for Chapter 2** + solutions — Rocco 15 Nov: RECREATE CFAT 1.2.1/1.2.2 from scratch under rule 8 (Edrolo U3&4 exercise questions only: `tools/y12_edrolo_exercise_questions.csv`; HTML + PDF in the CFAT 1.1.x layout (Rocco 15 Nov: NOT Word; model `tools/cfat/ch2/build_html.py`)). Add them to the planner.
 3. `todo` **Lesson l03 (2A, 2B)**: slides (`tools/deck/<id>/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 4. `todo` **Lesson l04 (2C)**: slides + worksheet.
 5. `todo` **Lesson l05 (2D, 2E)**: slides + worksheet.
@@ -52,7 +52,7 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 
 ## Later chapters (Rocco adds each when he's ready)
 - Chapter 1 leftovers: rebuild S3–S5 slides on the templates; worksheets S2–S5 on ws2.py; CFAT 1.1.1–1.1.3 solutions; Ch 1 test.
-- Chapters 3, 4, 5, 7, 8: same task pattern as Chapter 2.
+- Chapters 3, 4, 5, 7, 8: same task pattern as Chapter 2. CFATs are HTML + PDF (copy `tools/cfat/ch2/build_html.py`), never Word.
 
 ## Run log
 | Task | Start | Finish | Minutes | Tokens | Result / what slowed it |
