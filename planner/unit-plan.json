@@ -8207,6 +8207,30 @@
         ],
         "materials": [
          {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: CFAT, Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/7C-7E slides.html",
+          "pdf": "lessons/7C-7E slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "8 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/7C-7E worksheet.html",
+            "pdf": "lessons/7C-7E worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/7C-7E worksheet solutions.html",
+            "pdf": "lessons/7C-7E worksheet solutions.pdf"
+           }
+          ]
+         },
+         {
           "kind": "CFAT 2.7.1",
           "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
           "status": "draft",

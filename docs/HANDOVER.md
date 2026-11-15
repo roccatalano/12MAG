@@ -44,6 +44,8 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 ## 16 Nov 09:37 — AoS4 #7: lesson 13D-13E built (Draft)
 - `lessons/13D-13E slides` (21 slides) + `13D-13E worksheet` / `worksheet solutions` (4 pages), copied to G: 01 Lesson materials; planner card gm12-u4-13d13e updated; ledger rows marked used.
 - Build: `tools/deck/gm12-u4-13d13e/` (figs.py adds `dtable()` for Edrolo's Dijkstra table, and ring/label helpers for the Cambridge graphical method). Next AoS4 task: lesson 13F.
+## 16 Nov 09:42 — AoS2 runner: lesson l33 (7C, 7E)
+7C-7E slides (41) + guided worksheet/solutions (8 pp), Draft, on G: and the l33 card. Do Now/APK/exits as on the card; ledger rows marked used. Written You trys YT-7E-26/27 used.
 
 ## 16 Nov 01:58 — AoS4 #4: CFAT 4.13.x follow-ups
 Each Ch 13 CFAT entry now has a `followUp` list of Jacaranda U3&4 (2023) Topic 9 exercise questions by Edrolo skill (`tools/cfat/ch13/followups.py`). Next AoS4 task: lesson gm12-u4-13a13b slides + worksheet.
