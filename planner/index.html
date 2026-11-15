@@ -136,7 +136,7 @@ main{max-width:1200px;margin:0 auto;padding:16px 20px 80px}
 .chgrid .card{min-height:0}.chgrid .detail{grid-column:auto;grid-template-columns:1fr;gap:10px}
 .t-cfat{--c:#8a6ad8}.card.fa{cursor:default}.card.fa .ms{font-size:10.5px;font-weight:600;padding:1px 6px;border-radius:5px}
 .card.fa .ms.draft{background:var(--review);color:var(--review-i)}.card.fa .ms.ready{background:var(--prac);color:var(--prac-i)}
-.cpl{display:flex;flex-direction:column;gap:3px;font-size:12px}.cpl a{color:#1d7266;text-decoration:none;border:1px solid #9fd3c9;border-radius:6px;padding:0 6px;margin-left:3px;font-weight:600}
+.cpl.cp2{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:4px}.cpc{border:1px solid #d6d0e8;border-radius:8px;background:#fff;padding:5px 7px;display:flex;flex-direction:column;gap:4px}.cpc a{margin-left:0!important;margin-right:3px}.cpl{display:flex;flex-direction:column;gap:3px;font-size:12px}.cpl a{color:#1d7266;text-decoration:none;border:1px solid #9fd3c9;border-radius:6px;padding:0 6px;margin-left:3px;font-weight:600}
 @media(max-width:760px){.chgrid{grid-template-columns:1fr}}
 .nest.n-test{border-color:#d9a3a3;background:#fdf5f5}.nest.n-test>summary{color:var(--sac-i)}.n-test .cfx th{color:var(--sac-i);border-color:#e8c4c4}.n-test .cfx td{border-color:#f1dede}
 </style>
@@ -272,9 +272,9 @@ function formatives(C){const seen=new Set(),out=[];
     cfs(l).forEach(c=>{if(!seen.has(c.id)){seen.add(c.id);out.push({m:{kind:c.id,status:/ready/i.test(c.status)?'ready':/draft/i.test(c.status)?'draft':'',file:c.file},l})}})});
   out.sort((x,y)=>(/^Chapter test/i.test(x.m.kind)?1:0)-(/^Chapter test/i.test(y.m.kind)?1:0));
   return out.length?out.map(({m,l})=>{const test=/^Chapter test/i.test(m.kind),c=cfs(l).find(x=>x.id==m.kind);
-    return `<div class="card fa ${test?'t-check':'t-cfat'}"><div class="meta"><span>Set in L${l.n}${c&&c.covers?' · covers '+esc(c.covers.join(', ')):''}</span><span class="ms ${m.status}">${m.status=='ready'?'Ready':m.status=='draft'?'Draft':'To make'}</span></div>
+    return `<div class="card fa ${test?'t-check':'t-cfat'}"><div class="meta"><span></span><span class="ms ${m.status}">${m.status=='ready'?'Ready':m.status=='draft'?'Draft':'To make'}</span></div>
     <div class="ttl"><b>${test?'Chapter '+l.ch+' test':esc(m.kind)}</b>${c&&c.title?' · '+esc(c.title):''}</div>
-    <div class="cpl">${m.copies?.length?m.copies.map(k=>`<span><span class="sub">${esc(k.label)}</span> ${k.file||k.pdf?links(k):'<span class="sub">to make</span>'}</span>`).join(''):links(m)}</div>${c?nest('cfat-'+c.id,'CFAT details',cfatDetails(c),null,'n-cfat'):test?(TESTS[l.ch]?nest('test-'+l.ch,'Test details',testDetails(TESTS[l.ch]),'/'+TESTS[l.ch].total,'n-test'):'<div class="empty" style="margin-top:6px">Test not built yet</div>'):''}</div>`}).join(''):'<div class="empty">None yet</div>'}
+    <div class="cpl${m.copies?.length?' cp2':''}">${m.copies?.length?m.copies.map(k=>`<div class="cpc"><b>${esc(k.label)}</b><div>${k.file||k.pdf?links(k):'<span class="sub">To make</span>'}</div></div>`).join(''):links(m)}</div>${c?nest('cfat-'+c.id,'CFAT details',cfatDetails(c),null,'n-cfat'):test?(TESTS[l.ch]?nest('test-'+l.ch,'Test details',testDetails(TESTS[l.ch]),'/'+TESTS[l.ch].total,'n-test'):'<div class="empty" style="margin-top:6px">Test not built yet</div>'):''}</div>`}).join(''):'<div class="empty">None yet</div>'}
 /* ---------- Course plan ---------- */
 function renderCourse(){
   const all=lessons(),L=aosFilter(all);
