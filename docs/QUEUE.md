@@ -104,3 +104,4 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 | Ch2 #10 Ch 2 test | 2026-11-15 19:36 | 2026-11-15 19:36 | ~0 | | done: 6-page test + solutions (HTML + PDF), Draft. Quick: Mathspace PDF is text, answers checked with numpy. Chapter 2 finished: Ch 2 runner turned off. next run: NOT fired — no Ch 2 todo left |
 | Ch3 #1 prefill l09–l11 | 19:35 | 19:39 | 5 | | done: cards, 3 written You trys, 4 CAS skills, videos, 27 ledger rows; staging Edrolo PDFs slowest | next run: fired |
 | Ch3 #2 CFATs | 19:41 | 19:45 | ~4 | | done: 2 CFATs, 2 pages each, 18 Edrolo exercise Qs burnt; Edrolo 3C has only 1 MC so 1.3.2 has 3 MC (borrowed 3A Q4, Q11) | next run: fired |
+| Ch4 runner: G: not reachable | 2026-11-15 19:52 | 2026-11-15 19:53 | 1 | | stopped: the 12MAG Course Planner folder is not connected to this run (names-only listing); no task taken. next run: NOT fired — needs the folder attached |
