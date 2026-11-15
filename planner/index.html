@@ -189,10 +189,11 @@ function range(subs){ // ['1C','1D','1E'] -> '1C–1E'; ['7B','7D'] -> '7B, 7D'
   if(!subs.length)return '';
   const ok=subs.every((s,i)=>i==0||(parseInt(s)==parseInt(subs[0])&&s.slice(-1).charCodeAt(0)==subs[i-1].slice(-1).charCodeAt(0)+1));
   return subs.length>2&&ok?`${subs[0]}–${subs[subs.length-1]}`:subs.join(subs.length==2&&ok?'–':', ')}
+const BUST='?v='+Date.now(); // always open the newest file, never a copy the browser saved earlier
 function lessons(){const out=[];let n=0;
   UP.aos.forEach(a=>a.chapters.forEach(c=>c.lessons.forEach(l=>{n++;
     const k=l.card||{};
-    const fx=m=>({...m,file:m.file?'../'+m.file:m.file,pdf:m.pdf?'../'+m.pdf:m.pdf});
+    const fx=m=>({...m,file:m.file?'../'+m.file+BUST:m.file,pdf:m.pdf?'../'+m.pdf+BUST:m.pdf});
     const materials=(k.materials||[]).map(m=>({...fx(m),copies:m.copies?m.copies.map(fx):m.copies}));
     const cf=(k.cfats||[]).map(x=>({...x,file:x.file?'../'+x.file:x.file}));
     out.push({...k,materials,cfats:cf,id:l.id,n,type:l.kind,shell:!!l.shell,subchapters:l.subchapters,part:l.part,
