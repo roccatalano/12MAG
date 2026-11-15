@@ -1,6 +1,8 @@
 # 12MAG handover — 15 Nov 2026 (updated 15:55)
 
 
+**16 Nov 01:33 (AoS4 #2):** Ch 13 cards prefilled (`tools/prefill_ch13.py`): Examples 1–13 with Edrolo You trys (none written), APK (Cambridge U1&2 Ch 8 checklist + Edrolo U1&2 7A–7F exam Qs), Do Now, exits (Edrolo 8A–8D, 8F), no CAS, videos (draft); 36 ledger rows. Next AoS 4 task: CFATs for Ch 13.
+
 **16 Nov 01:28 (AoS3 #2):** Ch 10 cards prefilled (`tools/prefill_ch10.py`): Examples 1–32 with You trys (7 written: YT-10B-8, 10B-10, 10C-15, 10C-16, 10D-19, 10E-24, 10F-30 in `planner/written-youtrys.json`), APK, Do Now, exits (Edrolo 7A–7F), CAS skills matrix-entry / matrix-operations / matrix-det-inverse (Draft, not yet checked against CAS guides), videos (draft); 48 ledger rows. Next AoS 3 task: CFATs for Ch 10.
 
 **16 Nov 01:25 (AoS3 #1):** Chapter 10 planned: lessons now `gm12-u4-10a10b` (10A-10B), `gm12-u4-10c`, `gm12-u4-10d`, `gm12-u4-10e`, `gm12-u4-10f10g` (10F-10G) with titles, learning intentions, success criteria, Study Design points and coursework (`tools/plan_ch10.py`). Next AoS 3 task: prefill the Ch 10 cards.

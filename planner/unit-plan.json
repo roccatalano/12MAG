@@ -9965,7 +9965,114 @@
         "studyDesign": [
          "the conventions, terminology, properties and types of graphs; edge, face, loop, vertex, the degree of a vertex, isomorphic and connected graphs, and the adjacency matrix, and Euler’s formula for planar graphs and its application",
          "use of matrices to represent graphs, digraphs and networks and their application."
-        ]
+        ],
+        "keyVocab": [
+         "Graph: vertices (dots) joined by edges (lines); a loop joins a vertex to itself",
+         "Degree of a vertex: number of edges attached (a loop adds 2); sum of degrees = 2 × number of edges",
+         "Simple, connected, complete graphs; isolated vertex, bridge, subgraph; isomorphic graphs (same connections, drawn differently)",
+         "Planar graph: can be drawn with no edges crossing; faces = regions, including the outside",
+         "Euler’s formula (connected planar graphs): v − e + f = 2",
+         "Adjacency matrix: the entry in row i, column j = number of edges joining vertices i and j (a loop counts as 1)"
+        ],
+        "weDo": [
+         {
+          "n": 1,
+          "sub": "13A",
+          "title": "Graphs",
+          "youTry": "Edrolo 8A WE1",
+          "video": "Cambridge GO · 13A Resources"
+         },
+         {
+          "n": 2,
+          "sub": "13A",
+          "title": "Redrawing a graph in planar form",
+          "youTry": "Edrolo 8A WE2a",
+          "video": "Cambridge GO · 13A Resources"
+         },
+         {
+          "n": 3,
+          "sub": "13A",
+          "title": "Verifying Euler’s formula",
+          "youTry": "Edrolo 8A WE3a",
+          "video": "Cambridge GO · 13A Resources"
+         },
+         {
+          "n": 4,
+          "sub": "13A",
+          "title": "Using Euler’s formula",
+          "youTry": "Edrolo 8A WE3b",
+          "video": "Cambridge GO · 13A Resources"
+         },
+         {
+          "n": 5,
+          "sub": "13B",
+          "title": "Drawing a graph from an adjacency matrix",
+          "youTry": "Edrolo 8B WE2",
+          "video": "Cambridge GO · 13B Resources"
+         },
+         {
+          "n": 6,
+          "sub": "13B",
+          "title": "Constructing an adjacency matrix",
+          "youTry": "Edrolo 8B WE1",
+          "video": "Cambridge GO · 13B Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 8A checklist #2",
+          "text": "I can determine the degree of a vertex and the sum of degrees of a graph."
+         },
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 8C checklist #8",
+          "text": "I can verify Euler’s formula."
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 7A Q13",
+          "text": "VCAA 2017 Exam 1 Networks and decision mathematics Q2 (83%)"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2024 Exam 1 Q30",
+          "sec": "11E"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2026 Exam 1 Q6",
+          "sec": "1H"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2025 Exam 2 Q12a",
+          "sec": "11D"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2024 Exam 2 Q7c",
+          "sec": "8F"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 8A Q18",
+          "src": "VCAA 2021 Exam 2 Networks and decision mathematics Q1a,b"
+         },
+         {
+          "ref": "Edrolo U3&4 8A Q20",
+          "src": "VCAA 2021 Exam 1 Networks and decision mathematics Q3"
+         },
+         {
+          "ref": "Edrolo U3&4 8B Q15",
+          "src": "VCAA 2019 Exam 1 Networks and decision mathematics Q6"
+         }
+        ],
+        "cas": [],
+        "note": "Spare exits (not reserved): Edrolo 8A Q19 (VCAA 2020 E2 N&DM Q1b, 58%), 8B Q14 (VCAA 2020 E1 N&DM Q8, 75%), 8B Q16 (VCAA 2021 E1 N&DM Q7, 33%). Edrolo 8B WE3–WE4 (digraph ↔ adjacency matrix) are spare You trys."
        }
       },
       {
@@ -10039,7 +10146,85 @@
         ],
         "studyDesign": [
          "the exploring and travelling problem, walks, trails, paths, Eulerian trails and circuits, and Hamiltonian paths and cycles"
-        ]
+        ],
+        "keyVocab": [
+         "Walk: any route along edges; trail: no repeated edges; path: no repeated vertices",
+         "Circuit: a trail that starts and ends at the same vertex; cycle: a path that starts and ends at the same vertex",
+         "Eulerian trail: uses every edge exactly once (connected, exactly two odd-degree vertices: start at one, end at the other)",
+         "Eulerian circuit: uses every edge exactly once and returns to the start (connected, all vertices even)",
+         "Hamiltonian path: visits every vertex exactly once; Hamiltonian cycle: also returns to the start"
+        ],
+        "weDo": [
+         {
+          "n": 7,
+          "sub": "13C",
+          "title": "Identifying types of walks",
+          "youTry": "Edrolo 8C WE1",
+          "video": "Cambridge GO · 13C Resources"
+         },
+         {
+          "n": 8,
+          "sub": "13C",
+          "title": "Eulerian and Hamiltonian travel",
+          "youTry": "Edrolo 8C WE2 (Eulerian) + WE3 (Hamiltonian)",
+          "video": "Cambridge GO · 13C Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 8B checklist #3",
+          "text": "I can identify a connected graph and a bridge."
+         },
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 8D checklist #9",
+          "text": "I can classify a walk as either a trail, path, circuit or cycle."
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 7D Q11",
+          "text": "VCAA 2019 Exam 2 Networks and decision mathematics Q1bii (93%)"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2024 Exam 1 Q33",
+          "sec": "13A"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 Exam 1 Q29",
+          "sec": "11E"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2024 Exam 2 Q13a",
+          "sec": "13A"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2025 Exam 2 Q7b",
+          "sec": "8C"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 8C Q14",
+          "src": "VCAA 2019 Exam 2 Networks and decision mathematics Q1bi"
+         },
+         {
+          "ref": "Edrolo U3&4 8C Q15",
+          "src": "VCAA 2019 Exam 1 Networks and decision mathematics Q2"
+         },
+         {
+          "ref": "Edrolo U3&4 8C Q16",
+          "src": "VCAA 2018 Exam 2 Networks and decision mathematics Q2c"
+         }
+        ],
+        "cas": [],
+        "note": "Spare exit (not reserved): Edrolo 8C Q17 (VCAA 2021 E1 N&DM Q5, 17%)."
        }
       },
       {
@@ -10122,7 +10307,75 @@
         "studyDesign": [
          "determination of the shortest path between two specified vertices in a graph, digraph or network by inspection",
          "the shortest path problem and Dijkstra’s algorithm"
-        ]
+        ],
+        "keyVocab": [
+         "Weighted graph (network): each edge carries a number (weight), e.g. distance, time or cost",
+         "Shortest path: the route between two vertices with the smallest total weight",
+         "By inspection: list the possible routes and add their weights",
+         "Dijkstra’s algorithm: from the start, repeatedly finalise the closest unvisited vertex, updating the running totals of its neighbours"
+        ],
+        "weDo": [
+         {
+          "n": 9,
+          "sub": "13D",
+          "title": "Finding the shortest path from one vertex to another",
+          "youTry": "Edrolo 8F WE1",
+          "video": "Cambridge GO · 13D Resources"
+         },
+         {
+          "n": 10,
+          "sub": "13E",
+          "title": "Using Dijkstra’s algorithm to find the shortest path in a network",
+          "youTry": "Edrolo 8F WE2",
+          "video": "Cambridge GO · 13E Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 8G checklist #14",
+          "text": "I can find the shortest path of a weighted network."
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 7E Q14",
+          "text": "VCAA 2020 Exam 2 Networks and decision mathematics Q3a (58%)"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 Exam 1 Q34",
+          "sec": "13C"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2026 NHT Exam 1 Q39",
+          "sec": "13B"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2024 Exam 2 Q13bi",
+          "sec": "13C"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2023 Exam 2 Q12bi",
+          "sec": "13A"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 8F Q10",
+          "src": "VCAA 2018 Exam 1 Networks and decision mathematics Q2"
+         },
+         {
+          "ref": "Edrolo U3&4 8F Q11",
+          "src": "VCAA 2017 Exam 2 Networks and decision mathematics Q1b"
+         }
+        ],
+        "cas": [],
+        "note": "Edrolo U1&2 7E WE1–WE2 are spare You trys for Example 9. Edrolo U1&2 7E Q12 (VCAA 2017 E2 N&DM Q1a,b) overlaps exit 2 (Q1b): not used."
        }
       },
       {
@@ -10187,7 +10440,84 @@
         ],
         "studyDesign": [
          "the minimum connector problem, trees, spanning trees and minimum spanning trees and Prim’s algorithm"
-        ]
+        ],
+        "keyVocab": [
+         "Tree: a connected graph with no cycles; a tree with n vertices has n − 1 edges",
+         "Spanning tree: a subgraph that is a tree and includes every vertex of the graph",
+         "Weight of a spanning tree: the sum of the weights of its edges",
+         "Minimum spanning tree: the spanning tree with the smallest weight",
+         "Prim’s algorithm: start anywhere; keep adding the cheapest edge that joins a new vertex to the tree (no cycles) until all vertices are joined",
+         "Minimum connector problem: join all locations as cheaply as possible = find the minimum spanning tree"
+        ],
+        "weDo": [
+         {
+          "n": 11,
+          "sub": "13F",
+          "title": "Finding the weight of a spanning tree",
+          "youTry": "Edrolo 8D WE1",
+          "video": "Cambridge GO · 13F Resources"
+         },
+         {
+          "n": 12,
+          "sub": "13F",
+          "title": "Finding the minimum spanning tree",
+          "youTry": "Edrolo 8D WE2",
+          "video": "Cambridge GO · 13F Resources"
+         },
+         {
+          "n": 13,
+          "sub": "13F",
+          "title": "Solving a connector problem",
+          "youTry": "Edrolo U1&2 7F WE2",
+          "video": "Cambridge GO · 13F Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 8H checklist #15",
+          "text": "I can apply a greedy algorithm such as Prim’s or Kruskal’s algorithm to find a minimum spanning tree in a network."
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 7F Q18",
+          "text": "VCAA 2017 Exam 2 Networks and decision mathematics Q3a (53%; = Edrolo U3&4 8D Q13, used here as APK: rule 5)"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2024 Exam 1 Q34",
+          "sec": "13C"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 Exam 1 Q38",
+          "sec": "13E"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2025 Exam 2 Q15b",
+          "sec": "13A"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2026 NHT Exam 2 Q4c",
+          "sec": "5B"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 8D Q11",
+          "src": "VCAA 2018 Exam 1 Networks and decision mathematics Q1"
+         },
+         {
+          "ref": "Edrolo U3&4 8D Q12",
+          "src": "VCAA 2020 Exam 1 Networks and decision mathematics Q3"
+         }
+        ],
+        "cas": [],
+        "note": "Edrolo U1&2 7F WE1 (draw a tree) and WE3 (Kruskal’s) are spare You trys."
        }
       },
       {
