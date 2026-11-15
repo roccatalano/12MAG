@@ -676,9 +676,17 @@
    "subs": [
     "5A"
    ],
-   "ti": [],
-   "classpad": [],
-   "tip": "",
+   "ti": [
+    "Lists & Spreadsheet: enter the time (coded 1, 2, 3 … if needed) and the values in named lists (e.g. year, birth).",
+    "Add Data & Statistics: time on the horizontal axis, values on the vertical axis.",
+    "Menu › Plot Properties › Connect Data Points to join the points into a time series plot."
+   ],
+   "classpad": [
+    "Statistics app: enter the time (coded 1, 2, 3 … if needed) in list1 and the values in list2 (or name the columns).",
+    "SetGraph › Setting: Type = xyLine, XList = time, YList = values; Set.",
+    "Tap the graph icon to draw the time series plot."
+   ],
+   "tip": "Time is always the explanatory variable (horizontal axis). Code months or quarters as 1, 2, 3 … first.",
    "videos": {
     "ti": [],
     "classpad": [
@@ -687,7 +695,8 @@
       "url": "https://www.youtube.com/watch?v=g8HfR10oVtY"
      }
     ]
-   }
+   },
+   "checked": "Cambridge U3&4 5A CAS 1 + Edrolo 4A WE1 (Draft, check against 02 Sources\\CAS guides)"
   },
   {
    "id": "moving-means",
@@ -718,9 +727,17 @@
    "subs": [
     "5E"
    ],
-   "ti": [],
-   "classpad": [],
-   "tip": "",
+   "ti": [
+    "Lists & Spreadsheet: enter the time (coded 1, 2, 3 …) and the (deseasonalised) values in named lists.",
+    "Menu › Statistics › Stat Calculations › Linear Regression (a+bx): X List = time, Y List = values; OK.",
+    "Write the trend line in the variable names, e.g. deseasonalised sales = 903.8 − 38.1 × month."
+   ],
+   "classpad": [
+    "Statistics app: time in list1, (deseasonalised) values in list2 (or name the columns).",
+    "Calc › Regression › Linear Reg; form y = a + b·x; XList = time, YList = values; OK.",
+    "Write the trend line in the variable names, e.g. deseasonalised sales = 903.8 − 38.1 × month."
+   ],
+   "tip": "With seasonal data, fit the line to the DESEASONALISED values, then reseasonalise the forecast (× seasonal index).",
    "videos": {
     "ti": [
      {
@@ -738,7 +755,8 @@
       "url": "https://www.youtube.com/watch?v=hr_53Cu1xSs"
      }
     ]
-   }
+   },
+   "checked": "Cambridge U3&4 5E + Edrolo 4E WE2a (Draft, check against 02 Sources\\CAS guides)"
   }
  ]
 }

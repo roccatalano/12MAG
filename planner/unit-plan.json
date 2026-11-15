@@ -5418,42 +5418,42 @@
           "n": 1,
           "sub": "5A",
           "title": "Constructing a time series plot",
-          "youTry": "TBM",
+          "youTry": "Edrolo 4A WE1",
           "video": "Cambridge GO · 5A Resources"
          },
          {
           "n": 2,
           "sub": "5A",
           "title": "Identifying trends",
-          "youTry": "TBM",
+          "youTry": "Written (modelled on Cambridge Ex 2) · YT-5A-2",
           "video": "Cambridge GO · 5A Resources"
          },
          {
           "n": 3,
           "sub": "5A",
           "title": "Identifying cycles",
-          "youTry": "TBM",
+          "youTry": "Written (modelled on Cambridge Ex 3) · YT-5A-3",
           "video": "Cambridge GO · 5A Resources"
          },
          {
           "n": 4,
           "sub": "5A",
           "title": "Identifying seasonality",
-          "youTry": "TBM",
+          "youTry": "Edrolo 4A WE2",
           "video": "Cambridge GO · 5A Resources"
          },
          {
           "n": 5,
           "sub": "5A",
           "title": "Identifying structural change",
-          "youTry": "TBM",
+          "youTry": "Written (modelled on Cambridge Ex 5) · YT-5A-5",
           "video": "Cambridge GO · 5A Resources"
          },
          {
           "n": 6,
           "sub": "5A",
           "title": "Identifying outliers",
-          "youTry": "TBM",
+          "youTry": "Written (modelled on Cambridge Ex 6) · YT-5A-6",
           "video": "Cambridge GO · 5A Resources"
          }
         ],
@@ -5478,7 +5478,7 @@
          {
           "exam": "Exam 1",
           "ref": "VCAA 2023 Exam 1 Q12",
-          "sec": "4D"
+          "sec": "4B"
          },
          {
           "exam": "Exam 1",
@@ -5526,15 +5526,39 @@
          }
         ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 5A",
+           "items": [
+            {
+             "skill": "Constructing a time series plot",
+             "q": "Q1–3"
+            },
+            {
+             "skill": "Identifying key features in a time series plot",
+             "q": "Q4–7"
+            },
+            {
+             "skill": "Describing time series plots",
+             "q": "Q8–13"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q14–15"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 5A section"
           }
          ]
-        }
+        },
+        "note": "Edrolo 4A WE2 (seasonality + structural change, seat-belt law) pairs with Example 4; it also fits Example 5.",
+        "casYouTry": "Edrolo 4A WE1 (time series plot on CAS)"
        }
       },
       {
@@ -5572,14 +5596,14 @@
           "n": 7,
           "sub": "5B",
           "title": "Three- and five-moving mean smoothing",
-          "youTry": "TBM",
+          "youTry": "Edrolo 4B WE1",
           "video": "Cambridge GO · 5B Resources"
          },
          {
           "n": 8,
           "sub": "5B",
           "title": "Three- and five-moving mean smoothing of a time series",
-          "youTry": "TBM",
+          "youTry": "Edrolo 4B WE3",
           "video": "Cambridge GO · 5B Resources"
          }
         ],
@@ -5599,12 +5623,12 @@
          {
           "exam": "Exam 1",
           "ref": "VCAA 2024 Exam 1 Q12",
-          "sec": "5A"
+          "sec": "4D"
          },
          {
           "exam": "Exam 1",
           "ref": "VCAA 2026 NHT Exam 1 Q10",
-          "sec": "4C"
+          "sec": "4D"
          },
          {
           "exam": "Exam 2",
@@ -5614,7 +5638,7 @@
          {
           "exam": "Exam 2",
           "ref": "VCAA 2024 NHT Exam 2 Q4b",
-          "sec": "2F"
+          "sec": "2G"
          }
         ],
         "exit": [
@@ -5631,12 +5655,26 @@
          "moving-means"
         ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 5B",
+           "items": [
+            {
+             "skill": "Calculating the smoothed values of an odd number of points",
+             "q": "Q1–3"
+            },
+            {
+             "skill": "Smoothing and plotting a time series plot (odd number of points)",
+             "q": "Q4–5"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions (shared with the other 5B lesson). Skill-by-skill breakdown added when the slides are made."
+           "note": "The 5B section"
           }
          ]
         }
@@ -5679,21 +5717,21 @@
           "n": 9,
           "sub": "5B",
           "title": "Two-moving mean smoothing with centring",
-          "youTry": "TBM",
+          "youTry": "Edrolo 4B WE2a–b",
           "video": "Cambridge GO · 5B Resources"
          },
          {
           "n": 10,
           "sub": "5B",
           "title": "Four- and six-moving mean smoothing with centring",
-          "youTry": "TBM",
+          "youTry": "Edrolo 4B WE2c",
           "video": "Cambridge GO · 5B Resources"
          },
          {
           "n": 11,
           "sub": "5B",
           "title": "Smoothing of a time series using four-mean smoothing with centring",
-          "youTry": "TBM",
+          "youTry": "Edrolo 4B WE2d",
           "video": "Cambridge GO · 5B Resources"
          }
         ],
@@ -5717,13 +5755,13 @@
          },
          {
           "exam": "Exam 1",
-          "ref": "VCAA 2025 Exam 1 Q12",
-          "sec": "5A"
+          "ref": "VCAA 2024 NHT Exam 1 Q12",
+          "sec": "4D"
          },
          {
           "exam": "Exam 2",
           "ref": "VCAA 2025 Exam 2 Q4c",
-          "sec": "5B"
+          "sec": "3B"
          },
          {
           "exam": "Exam 2",
@@ -5745,12 +5783,30 @@
          "moving-means"
         ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 5B",
+           "items": [
+            {
+             "skill": "Calculating the smoothed values of an even number of points",
+             "q": "Q6–8"
+            },
+            {
+             "skill": "Smoothing and plotting a time series plot (even number of points)",
+             "q": "Q9–10"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q11–14"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions (shared with the other 5B lesson). Skill-by-skill breakdown added when the slides are made."
+           "note": "The 5B section"
           }
          ]
         }
@@ -5794,14 +5850,14 @@
           "n": 12,
           "sub": "5C",
           "title": "Three-moving median smoothing using a graphical approach",
-          "youTry": "TBM",
+          "youTry": "Edrolo 4C WE1",
           "video": "Cambridge GO · 5D Resources"
          },
          {
           "n": 13,
           "sub": "5C",
           "title": "Five-moving median smoothing using a graphical approach",
-          "youTry": "TBM",
+          "youTry": "Edrolo 4C WE2",
           "video": "Cambridge GO · 5C Resources"
          }
         ],
@@ -5826,12 +5882,12 @@
          {
           "exam": "Exam 1",
           "ref": "VCAA 2024 NHT Exam 1 Q5",
-          "sec": "1I"
+          "sec": "1H"
          },
          {
           "exam": "Exam 2",
           "ref": "VCAA 2025 Exam 2 Q4d",
-          "sec": "5B"
+          "sec": "3B"
          },
          {
           "exam": "Exam 2",
@@ -5854,15 +5910,34 @@
          }
         ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 5C",
+           "items": [
+            {
+             "skill": "Locating the median of a set of data points graphically",
+             "q": "Q1"
+            },
+            {
+             "skill": "Smoothing a time series graphically",
+             "q": "Q2–7"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q8–10"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 5C section"
           }
          ]
-        }
+        },
+        "cas": []
        }
       },
       {
@@ -5906,21 +5981,21 @@
           "n": 14,
           "sub": "5D",
           "title": "Interpreting seasonal indices",
-          "youTry": "TBM",
+          "youTry": "Edrolo 4D WE1b",
           "video": "Cambridge GO · 5D Resources"
          },
          {
           "n": 15,
           "sub": "5D",
           "title": "Using seasonal indices",
-          "youTry": "TBM",
+          "youTry": "Edrolo 4D WE5",
           "video": "Cambridge GO · 5D Resources"
          },
          {
           "n": 16,
           "sub": "5D",
           "title": "Using seasonal indices to determine percentage change required to correct for seasonality",
-          "youTry": "TBM",
+          "youTry": "Edrolo 4D WE4",
           "video": "Cambridge GO · 5D Resources"
          }
         ],
@@ -5950,7 +6025,7 @@
          {
           "exam": "Exam 1",
           "ref": "VCAA 2026 NHT Exam 1 Q3",
-          "sec": "2H"
+          "sec": "1F"
          },
          {
           "exam": "Exam 2",
@@ -5988,15 +6063,30 @@
          }
         ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 5D",
+           "items": [
+            {
+             "skill": "Basic skills and interpretation",
+             "q": "Q1–5"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q13–15"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions (shared with the other 5D lesson). Skill-by-skill breakdown added when the slides are made."
+           "note": "The 5D section"
           }
          ]
-        }
+        },
+        "cas": []
        },
        "part": 1
       },
@@ -6040,21 +6130,21 @@
           "n": 17,
           "sub": "5D",
           "title": "Calculating seasonal indices (1 year’s data)",
-          "youTry": "TBM",
+          "youTry": "Edrolo 4D WE1a",
           "video": "Cambridge GO · 5D Resources"
          },
          {
           "n": 18,
           "sub": "5D",
           "title": "Calculating seasonal indices (several years’ data)",
-          "youTry": "TBM",
+          "youTry": "Edrolo 4D WE2",
           "video": "Cambridge GO · 5D Resources"
          },
          {
           "n": 19,
           "sub": "5D",
           "title": "Deseasonalising a time series",
-          "youTry": "TBM",
+          "youTry": "Edrolo 4D WE3",
           "video": "Cambridge GO · 5D Resources"
          }
         ],
@@ -6083,8 +6173,8 @@
          },
          {
           "exam": "Exam 2",
-          "ref": "VCAA 2023 Exam 2 Q4b",
-          "sec": "5D"
+          "ref": "VCAA 2026 NHT Exam 2 Q4bi",
+          "sec": "5B"
          },
          {
           "exam": "Exam 2",
@@ -6099,15 +6189,35 @@
          }
         ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 5D",
+           "items": [
+            {
+             "skill": "Deseasonalising a time series",
+             "q": "Q6–7"
+            },
+            {
+             "skill": "Calculating seasonal indices",
+             "q": "Q8–12"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q16–17"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions (shared with the other 5D lesson). Skill-by-skill breakdown added when the slides are made."
+           "note": "The 5D section"
           }
          ]
-        }
+        },
+        "cas": [],
+        "note": "Edrolo 4D WE6 (plot deseasonalised data, identify the trend) is a spare You try for Example 19."
        },
        "part": 2
       },
@@ -6153,28 +6263,28 @@
           "n": 20,
           "sub": "5E",
           "title": "Fitting a trend line",
-          "youTry": "TBM",
+          "youTry": "Edrolo 4E WE1a",
           "video": "Cambridge GO · 5E Resources"
          },
          {
           "n": 21,
           "sub": "5E",
           "title": "Forecasting",
-          "youTry": "TBM",
+          "youTry": "Edrolo 4E WE1b–c",
           "video": "Cambridge GO · 5E Resources"
          },
          {
           "n": 22,
           "sub": "5E",
           "title": "Fitting a trend line (seasonality)",
-          "youTry": "TBM",
+          "youTry": "Edrolo 4E WE2a",
           "video": "Cambridge GO · 5E Resources"
          },
          {
           "n": 23,
           "sub": "5E",
           "title": "Forecasting (seasonality)",
-          "youTry": "TBM",
+          "youTry": "Edrolo 4E WE2b–c",
           "video": "Cambridge GO · 5E Resources"
          }
         ],
@@ -6218,8 +6328,8 @@
          },
          {
           "exam": "Exam 2",
-          "ref": "VCAA 2024 NHT Exam 2 Q1aii",
-          "sec": "1F"
+          "ref": "VCAA 2026 Exam 2 Q1b",
+          "sec": "1B"
          }
         ],
         "exit": [
@@ -6245,15 +6355,34 @@
          }
         ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 5E",
+           "items": [
+            {
+             "skill": "Fitting a least squares line to a time series plot (no seasonality)",
+             "q": "Q1–4"
+            },
+            {
+             "skill": "Fitting a least squares line to a time series with seasonality",
+             "q": "Q5–6"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q7–8"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 5E section"
           }
          ]
-        }
+        },
+        "casYouTry": "Edrolo 4E WE1a (trend line on CAS)"
        }
       },
       {

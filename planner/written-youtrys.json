@@ -58,6 +58,38 @@
    "label": "Written for 12MAG (Claude, modelled on Cambridge Example 4)",
    "text": "The number of followers of a new social media account was recorded over a 10 week period. The association is not linear.\nweek: 1 2 3 4 5 6 7 8 9 10\nfollowers: 15 22 36 51 80 118 190 276 440 650\na Apply a log transformation to the variable followers, and determine the least squares regression line for the transformed data.\nb Use the least squares equation to predict the followers in week 11.",
    "answer": "a log(followers) = 0.989 + 0.183 × week (r² = 0.9996). b log(followers) = 0.989 + 0.183 × 11 = 3.002; 10^3.002 = 1005 followers (to the nearest whole number)."
+  },
+  {
+   "id": "YT-5A-2",
+   "pairs": "Cambridge U3&4 Example 2",
+   "sub": "5A",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 2)",
+   "text": "Consider the time series plot of the number of visitors (in thousands) to a national park each year from 2008 to 2022, constructed from the data below. Comment on the trend shown in the plot. Year: 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022; Visitors ('000): 41 44 48 51 55 58 62 60 57 53 50 46 44 41 38",
+   "answer": "There are two distinct trends. Trend 1: from 2008 to 2014 the number of visitors increased steadily (from 41 000 to 62 000). Trend 2: from 2014 to 2022 the number of visitors decreased steadily (from 62 000 to 38 000)."
+  },
+  {
+   "id": "YT-5A-3",
+   "pairs": "Cambridge U3&4 Example 3",
+   "sub": "5A",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 3)",
+   "text": "The following plot shows the number of mice caught each year on a farm for the period 2000 to 2023, constructed from the data below. Comment on the cycles shown in the plot. Year 2000–2023; Mice caught: 20 45 90 60 30 15 25 55 95 70 35 20 15 40 85 65 30 20 30 60 100 70 35 20",
+   "answer": "There is a recurrent pattern of peaks and troughs lasting longer than a year, so the plot shows cycles. The years of highest numbers of mice caught are approximately 2002, 2008, 2014 and 2020, so the cycle repeats about every 6 years."
+  },
+  {
+   "id": "YT-5A-5",
+   "pairs": "Cambridge U3&4 Example 5",
+   "sub": "5A",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 5)",
+   "text": "The time series plot below shows the water use for a house (in kL) for the 12 months of a year, constructed from the data below. Comment on any structural change in the plot. Month: Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec; Water use (kL): 22 21 23 22 20 21 38 37 39 38 40 39",
+   "answer": "The plot reveals an abrupt change in water use from June to July. Monthly water use suddenly increases from around 21 kL per month from January to June to around 38 kL for the rest of the year. This is an example of structural change that can probably be explained by a change in circumstances, for example, more people moving into the house."
+  },
+  {
+   "id": "YT-5A-6",
+   "pairs": "Cambridge U3&4 Example 6",
+   "sub": "5A",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 6)",
+   "text": "The time series plot below shows the number of coffees sold each day at a café for a fortnight, constructed from the data below. Comment on any outliers in the plot. Day 1–14; Coffees sold: 82 85 80 84 83 81 86 84 150 83 82 85 80 84",
+   "answer": "The number of coffees sold is around 80–86 each day, except on day 9 when 150 coffees were sold. This value stands out from the rest of the data, so day 9 is an outlier (perhaps there was a special event nearby that day)."
   }
  ]
 }
