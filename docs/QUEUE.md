@@ -132,4 +132,4 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 | Ch3 #3 Lesson l09 (3A) | 2026-11-15 19:46 | 2026-11-15 20:01 | 15 | | done; 26 slides + 4-page worksheet; sourcing 9 PDFs (2 scanned) took most time | next run: fired
 | Ch5 #2 CFATs 1.5.1–1.5.2 | 20:12 | 20:18 | ~6 | | done: built on tools/cfat/ch5 (copied ch4); Edrolo 4B Q7 dropped to keep 1.5.1 on 2 pages; figures cropped from Edrolo | next run: fired |
 | Ch3 #4 Lesson l10 (3B) | 2026-11-15 20:01 | 2026-11-15 20:19 | ~18 | | done; 27 slides + 5-page worksheet; slide PDF render slowest (~5 min) | next run: fired |
-| Ch4 #3 l12 (4A) slides + worksheet | 20:12 | 20:23 | ~0 | | done; Edrolo/Cambridge/VCAA PDFs staged; 2024 E1 is scanned (read from page images); CAS slide overflow fixed | next run: fired |
+| Ch4 #3 l12 (4A) slides + worksheet | 20:12 | 20:23 | ~11 | | done; Edrolo/Cambridge/VCAA PDFs staged; 2024 E1 is scanned (read from page images); CAS slide overflow fixed | next run: fired |
