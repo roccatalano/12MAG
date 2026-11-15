@@ -10611,7 +10611,45 @@
          }
         ],
         "cas": [],
-        "note": "Spare exit (not reserved): Edrolo 8C Q17 (VCAA 2021 E1 N&DM Q5, 17%)."
+        "note": "Spare exit (not reserved): Edrolo 8C Q17 (VCAA 2021 E1 N&DM Q5, 17%).",
+        "cfats": [
+         {
+          "id": "CFAT 4.13.1",
+          "title": "Graphs, Euler’s rule and adjacency matrices",
+          "covers": [
+           "13A-13B"
+          ],
+          "format": "About 20 min · individual · CAS and single bound reference allowed",
+          "status": "Draft",
+          "plan": "Start of the 13C lesson.",
+          "marks": 13,
+          "mcMarks": 4,
+          "saMarks": 9,
+          "file": "lessons/CFAT 4.13.1 (13A-13B).html",
+          "sources": [
+           "Edrolo GM U3&4 2023 exercise questions only (rule 8): 8A Q1, 8A Q5, 8A Q11, 8B Q1, 8A Q3, 8B Q2, 8B Q4"
+          ]
+         }
+        ],
+        "materials": [
+         {
+          "kind": "CFAT 4.13.1",
+          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/CFAT 4.13.1 (13A-13B).html",
+            "pdf": "lessons/CFAT 4.13.1 (13A-13B).pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/CFAT 4.13.1 (13A-13B) solutions.html",
+            "pdf": "lessons/CFAT 4.13.1 (13A-13B) solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
@@ -10904,7 +10942,45 @@
          }
         ],
         "cas": [],
-        "note": "Edrolo U1&2 7F WE1 (draw a tree) and WE3 (Kruskal’s) are spare You trys."
+        "note": "Edrolo U1&2 7F WE1 (draw a tree) and WE3 (Kruskal’s) are spare You trys.",
+        "cfats": [
+         {
+          "id": "CFAT 4.13.2",
+          "title": "Walks, Eulerian and Hamiltonian paths, shortest paths",
+          "covers": [
+           "13C-13E"
+          ],
+          "format": "About 20 min · individual · CAS and single bound reference allowed",
+          "status": "Draft",
+          "plan": "Start of the 13F lesson.",
+          "marks": 12,
+          "mcMarks": 5,
+          "saMarks": 7,
+          "file": "lessons/CFAT 4.13.2 (13C-13E).html",
+          "sources": [
+           "Edrolo GM U3&4 2023 exercise questions only (rule 8): 8C Q1, 8C Q4, 8C Q8, 8F Q1, 8F Q6, 8C Q3, 8C Q6, 8F Q3, 8F Q8"
+          ]
+         }
+        ],
+        "materials": [
+         {
+          "kind": "CFAT 4.13.2",
+          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/CFAT 4.13.2 (13C-13E).html",
+            "pdf": "lessons/CFAT 4.13.2 (13C-13E).pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/CFAT 4.13.2 (13C-13E) solutions.html",
+            "pdf": "lessons/CFAT 4.13.2 (13C-13E) solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
@@ -10912,7 +10988,46 @@
        "kind": "check",
        "subchapters": [],
        "title": "Chapter 13 coursework check + test",
-       "card": {}
+       "card": {
+        "cfats": [
+         {
+          "id": "CFAT 4.13.3",
+          "title": "Trees, spanning trees and minimum spanning trees",
+          "covers": [
+           "13F"
+          ],
+          "format": "About 20 min · individual · CAS and single bound reference allowed",
+          "status": "Draft",
+          "plan": "Start of the Ch 13 test lesson.",
+          "marks": 12,
+          "mcMarks": 2,
+          "saMarks": 10,
+          "file": "lessons/CFAT 4.13.3 (13F).html",
+          "sources": [
+           "Edrolo GM U3&4 2023 exercise questions only (rule 8): 8D Q1, 8D Q5, 8D Q2, 8D Q3, 8D Q6, 8D Q7, 8D Q8"
+          ]
+         }
+        ],
+        "materials": [
+         {
+          "kind": "CFAT 4.13.3",
+          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/CFAT 4.13.3 (13F).html",
+            "pdf": "lessons/CFAT 4.13.3 (13F).pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/CFAT 4.13.3 (13F) solutions.html",
+            "pdf": "lessons/CFAT 4.13.3 (13F) solutions.pdf"
+           }
+          ]
+         }
+        ]
+       }
       }
      ]
     },
