@@ -114,7 +114,7 @@ main{max-width:1200px;margin:0 auto;padding:16px 20px 80px}
 .wdates{display:block;font-size:12px;color:var(--muted);margin-top:2px}
 
 /* planner additions */
-.week.chap{grid-template-columns:110px repeat(3,minmax(0,1fr))}
+.week.chap{grid-template-columns:110px minmax(0,1fr);margin-bottom:6px;align-items:start}.week.chap .card{min-height:0}
 .wl .cn{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.04em}
 .t-check{--c:var(--sac-i)}.t-check .tag{--b:var(--sac)}
 .t-buffer{--c:var(--other-i)}.card.t-buffer{border-style:dashed;background:transparent;color:var(--muted)}
@@ -264,7 +264,7 @@ function renderCourse(){
     const C=L.filter(l=>l.ch==ch);
     if(C[0].aos!=lastA){ if(lastA)h+=`<div class="revrow">${esc(L.find(l=>l.aos==lastA).revision)}: practice only, not in the lesson sequence.</div>`;
       lastA=C[0].aos;h+=`<div class="aos"><b>${esc(lastA)}</b><span>${esc(C[0].aosTitle)}</span></div>`}
-    for(let i=0;i<C.length;i+=3){const W=C.slice(i,i+3);
+    for(let i=0;i<C.length;i++){const W=C.slice(i,i+1);
       h+=`<div class="week chap"><div class="wl">${i==0?`<span class="cn">Chapter ${ch}</span><b>${esc(C[0].chTitle)}</b>${C.length} lessons`:''}</div>`;
       for(const l of W)h+=card(l);
       W.filter(l=>expandAll||l.id==openId).forEach(l=>h+=detail(l));
