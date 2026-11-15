@@ -4719,14 +4719,14 @@
           "n": 1,
           "sub": "4A",
           "title": "Applying the x-squared transformation",
-          "youTry": "TBM",
+          "youTry": "Edrolo 3D WE2",
           "video": "Cambridge GO · 4A Resources"
          },
          {
           "n": 2,
           "sub": "4A",
           "title": "Applying the y-squared transformation",
-          "youTry": "TBM",
+          "youTry": "Edrolo 3E WE1a",
           "video": "Cambridge GO · 4A Resources"
          }
         ],
@@ -4750,8 +4750,8 @@
          },
          {
           "exam": "Exam 1",
-          "ref": "VCAA 2023 Exam 1 Q6",
-          "sec": "2G"
+          "ref": "VCAA 2024 Exam 1 Q10",
+          "sec": "3B"
          },
          {
           "exam": "Exam 2",
@@ -4761,7 +4761,7 @@
          {
           "exam": "Exam 2",
           "ref": "VCAA 2023 Exam 2 Q2bii",
-          "sec": "2G"
+          "sec": "2B"
          }
         ],
         "cas": [
@@ -4856,12 +4856,38 @@
          }
         ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 4A",
+           "items": [
+            {
+             "skill": "Prerequisite skills",
+             "q": "Q1"
+            },
+            {
+             "skill": "x² transformation on CAS",
+             "q": "Q2–3"
+            },
+            {
+             "skill": "y² transformation on CAS",
+             "q": "Q4–5"
+            },
+            {
+             "skill": "Applications",
+             "q": "Q6–7"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q8–10"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 4A section"
           }
          ]
         },
@@ -4883,7 +4909,9 @@
            }
           ]
          }
-        ]
+        ],
+        "note": "No Edrolo exam-practice questions on the squared transformation, so no exits. Spare You trys: Edrolo 3E WE2a (prediction from (distance)²). CAS You try: Cambridge CAS 1 data.",
+        "casYouTry": "Cambridge 4A CAS 1 data (squared transformation)"
        }
       },
       {
@@ -4926,22 +4954,22 @@
           "n": 3,
           "sub": "4B",
           "title": "Applying the log x transformation",
-          "youTry": "TBM",
+          "youTry": "Edrolo 3E WE1b",
           "video": "Cambridge GO · 4B Resources"
          },
          {
           "n": 4,
           "sub": "4B",
           "title": "Applying the log y transformation",
-          "youTry": "TBM",
+          "youTry": "Written (modelled on Cambridge Ex 4) · YT-4B-4",
           "video": "Cambridge GO · 4B Resources"
          }
         ],
         "apk": [
          {
           "kind": "Skill",
-          "ref": "Cambridge U1&2 9D checklist #6",
-          "text": "Evaluate logarithms"
+          "ref": "Cambridge U1&2 9D checklist #9",
+          "text": "Use a calculator to find a number from its logarithm"
          },
          {
           "kind": "Skill",
@@ -4951,7 +4979,7 @@
          {
           "kind": "Exam",
           "ref": "Edrolo U1&2 8D Q14",
-          "text": "adapted from VCAA 2017 Exam 1 Q4"
+          "text": "adapted from VCAA 2017 Exam 1 Q4 (log scale)"
          }
         ],
         "doNow": [
@@ -4963,7 +4991,7 @@
          {
           "exam": "Exam 1",
           "ref": "VCAA 2026 Exam 1 Q7",
-          "sec": "2H"
+          "sec": "2E"
          },
          {
           "exam": "Exam 2",
@@ -4973,7 +5001,7 @@
          {
           "exam": "Exam 2",
           "ref": "VCAA 2023 Exam 2 Q1d",
-          "sec": "3B"
+          "sec": "3A"
          }
         ],
         "exit": [
@@ -4982,23 +5010,51 @@
           "src": "VCAA 2020 Exam 1 Q14"
          },
          {
-          "ref": "Edrolo U3&4 3E Q12",
-          "src": "VCAA 2017 Exam 2 Q4b-cii"
+          "ref": "Edrolo U3&4 3E Q12a–b",
+          "src": "VCAA 2017 Exam 2 Q4b, Q4ci (part c = Q4cii is l09 APK)"
          }
         ],
         "cas": [
          "transformed-lsrl"
         ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 4B",
+           "items": [
+            {
+             "skill": "Prerequisite skills",
+             "q": "Q1"
+            },
+            {
+             "skill": "log x transformation on CAS",
+             "q": "Q2–3"
+            },
+            {
+             "skill": "log y transformation on CAS",
+             "q": "Q4–5"
+            },
+            {
+             "skill": "Applications",
+             "q": "Q6–7"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q8–10"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 4B section"
           }
          ]
-        }
+        },
+        "note": "Spare You trys: Edrolo 3D WE3 (log x, plot only), 3E WE2b (prediction). CAS You try: Cambridge CAS 2 data.",
+        "casYouTry": "Cambridge 4B CAS 2 data (lifespan vs log GDP)"
        }
       },
       {
@@ -5041,14 +5097,14 @@
           "n": 5,
           "sub": "4C",
           "title": "Applying the reciprocal (1/x) transformation",
-          "youTry": "TBM",
+          "youTry": "Edrolo 3E WE1c",
           "video": "Cambridge GO · 4C Resources"
          },
          {
           "n": 6,
           "sub": "4C",
           "title": "Applying the reciprocal (1/y) transformation",
-          "youTry": "TBM",
+          "youTry": "Edrolo 3D WE4",
           "video": "Cambridge GO · 4C Resources"
          }
         ],
@@ -5072,7 +5128,7 @@
          },
          {
           "exam": "Exam 1",
-          "ref": "VCAA 2024 NHT Exam 1 Q12",
+          "ref": "VCAA 2025 Exam 1 Q12",
           "sec": "4A"
          },
          {
@@ -5096,15 +5152,43 @@
          "transformed-lsrl"
         ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 4C",
+           "items": [
+            {
+             "skill": "Prerequisite skills",
+             "q": "Q1"
+            },
+            {
+             "skill": "1/x transformation on CAS",
+             "q": "Q2"
+            },
+            {
+             "skill": "1/y transformation on CAS",
+             "q": "Q3–4"
+            },
+            {
+             "skill": "Applications",
+             "q": "Q5–6"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q7–9"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 4C section"
           }
          ]
-        }
+        },
+        "note": "Spare You try: Edrolo 3E WE2c (prediction from 1/week). CAS You try: Cambridge CAS 3 data.",
+        "casYouTry": "Cambridge 4C CAS 3 data (reciprocal transformation)"
        }
       },
       {
@@ -5150,7 +5234,7 @@
           "n": 7,
           "sub": "4D",
           "title": "Choosing the best transformation",
-          "youTry": "TBM",
+          "youTry": "Edrolo 3E WE1d",
           "video": "Cambridge GO · 4D Resources"
          }
         ],
@@ -5221,15 +5305,30 @@
          }
         ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 4D",
+           "items": [
+            {
+             "skill": "Choosing transformations (circle of transformations)",
+             "q": "Q1"
+            },
+            {
+             "skill": "Choosing and applying the best transformation",
+             "q": "Q2–4"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 4D section"
           }
          ]
-        }
+        },
+        "note": "Spare You try: Edrolo 3D WE1 (transformation wave: which transformations could linearise)."
        }
       },
       {

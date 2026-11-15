@@ -594,9 +594,21 @@
     "4B",
     "4C"
    ],
-   "ti": [],
-   "classpad": [],
-   "tip": "",
+   "ti": [
+    "Lists & Spreadsheet: enter the data in named lists (e.g. lifespan, gdp).",
+    "Name a new column for the transformed variable (e.g. lgdp) and in its formula cell type =log(gdp) (or =gdp^2, =1/gdp).",
+    "Add Data & Statistics: plot the RV against the transformed variable (check the plot is now linear).",
+    "Menu › Analyze › Regression › Show Linear (a+bx). The x in the equation is the transformed variable.",
+    "Write the equation in the variable names, e.g. lifespan = 54.3 + 5.59 × log(GDP); substitute to predict (undo a log y or 1/y at the end)."
+   ],
+   "classpad": [
+    "Statistics app: enter the data in named lists (e.g. Lifespan, GDP).",
+    "Name a third list (e.g. logGDP) and in its calculation cell at the bottom type log(GDP) (or GDP^2, 1/GDP).",
+    "SetGraph: Scatter, XList = transformed list, YList = RV; draw it and check the plot is linear.",
+    "Calc › Regression › Linear Reg with the same lists: read a, b, r²; the x is the transformed variable.",
+    "Write the equation in the variable names; substitute to predict (undo a log y or 1/y at the end)."
+   ],
+   "tip": "Transform only one variable. If you transformed y, the answer from the equation is log y, y² or 1/y: undo it (10^, √, 1/) to get the prediction.",
    "videos": {
     "ti": [
      {
@@ -610,7 +622,9 @@
       "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
      }
     ]
-   }
+   },
+   "status": "draft",
+   "src": "Cambridge U3&4 4A CAS 1, 4B CAS 2, 4C CAS 3 (not yet checked against 02 Sources\\CAS guides)"
   },
   {
    "id": "transformation-check",
@@ -618,9 +632,19 @@
    "subs": [
     "4D"
    ],
-   "ti": [],
-   "classpad": [],
-   "tip": "",
+   "ti": [
+    "Make a column for each transformation to try (x², log x, 1/x or y², log y, 1/y) as in \"Fitting a regression line to transformed data\".",
+    "For each one: Data & Statistics plot, Show Linear (a+bx), turn on Diagnostics to show r².",
+    "Menu › Analyze › Residuals › Show Residual Plot: look for no clear pattern.",
+    "Choose the transformation with the patternless residual plot and the highest r²."
+   ],
+   "classpad": [
+    "Make a list for each transformation to try (e.g. x², log x, 1/x).",
+    "For each one: Calc › Regression › Linear Reg (XList = transformed list) and read r².",
+    "Set Copy Residual to a list, then plot residuals against the transformed list as a scatterplot: look for no clear pattern.",
+    "Choose the transformation with the patternless residual plot and the highest r²."
+   ],
+   "tip": "Use the circle of transformations first to pick the candidates, then let r² and the residual plot decide.",
    "videos": {
     "ti": [
      {
@@ -642,7 +666,9 @@
       "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
      }
     ]
-   }
+   },
+   "status": "draft",
+   "src": "Cambridge U3&4 4D Example 7 + 3C CAS 2 (not yet checked against 02 Sources\\CAS guides)"
   },
   {
    "id": "time-series-plot",

@@ -50,6 +50,14 @@
    "text": "Construct a report to describe the association between the price and age of secondhand motorbikes.\nage (years): 1 2 2 3 4 5 5 6 7 8\nprice ($): 14 800 13 900 13 100 12 600 11 200 10 500 9800 9300 8100 7400",
    "figure": "scatterplot of price against age with the least squares line, and the residual plot (residuals 203, 372, −428, 141, −191, 178, −522, 47, −84, 285: no clear pattern). Draw both from the data when the slides are made.",
    "answer": "From the scatterplot we see that there is a strong negative, linear association between the price of a secondhand motorbike and its age, r = −0.993. There are no obvious outliers. The equation of the least squares regression line is: price = 15 700 − 1070 × age. The slope of the regression line predicts that, on average, the price of these secondhand motorbikes decreased by $1070 each year. The intercept predicts that, on average, the price of these motorbikes when new was $15 700. The coefficient of determination indicates that 98.5% of the variation in the price of these secondhand motorbikes is explained by the variation in their age. The lack of a clear pattern in the residual plot confirms the assumption of a linear association between the price and the age of these secondhand motorbikes."
+  },
+  {
+   "id": "YT-4B-4",
+   "pairs": "Cambridge U3&4 Example 4",
+   "sub": "4B",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 4)",
+   "text": "The number of followers of a new social media account was recorded over a 10 week period. The association is not linear.\nweek: 1 2 3 4 5 6 7 8 9 10\nfollowers: 15 22 36 51 80 118 190 276 440 650\na Apply a log transformation to the variable followers, and determine the least squares regression line for the transformed data.\nb Use the least squares equation to predict the followers in week 11.",
+   "answer": "a log(followers) = 0.989 + 0.183 × week (r² = 0.9996). b log(followers) = 0.989 + 0.183 × 11 = 3.002; 10^3.002 = 1005 followers (to the nearest whole number)."
   }
  ]
 }

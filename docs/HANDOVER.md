@@ -7,6 +7,10 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 
 
+## 15 Nov 19:59 — Chapter 4 lesson cards l12–l15 prefilled (runner, task Ch4 #1)
+- `tools/prefill_ch4.py` (sources in docstring) → `planner/unit-plan.json`. You trys: Ex 1 Edrolo 3D WE2, Ex 2 3E WE1a, Ex 3 3E WE1b, Ex 5 3E WE1c, Ex 6 3D WE4, Ex 7 3E WE1d; Ex 4 (log y) written: `planner/written-youtrys.json` YT-4B-4. Exits: l13 Edrolo 3E Q10, Q12a–b; l14 3E Q11; l15 3D Q14, 3E Q13; l12 none.
+- Coursework by skill (Cambridge 4A–4D). CAS steps written for transformed-lsrl, transformation-check (Draft). 4A–4D videos added as `draft`. 31 planned rows in `tools/ledger_manual.csv`.
+- For Rocco to check: CAS steps; YT-4B-4; l12 has no exits.
 ## 15 Nov 19:45 — CFATs 1.3.1 and 1.3.2 (runner, task Ch3 #2)
 - `tools/cfat/ch3/build.py` (content, sources in docstring) + `build_html.py` (copy of ch2 + tables/subscripts) + `crop.py` → `lessons/CFAT 1.3.1 (3A-3B)` and `CFAT 1.3.2 (3B-3C)` (.html/.pdf + solutions, 2 pages each, /15). On G: `01 Lesson materials`. Draft on the l11 (1.3.1) and l12 (1.3.2) cards, as already planned there.
 - 1.3.1: Edrolo 3A Q1, Q2, Q6, 3B Q1, Q4 (MC); 3A Q3, Q8, 3B Q2, Q7. 1.3.2: 3A Q11, Q4, 3C Q3 (MC); 3C Q4, Q6, Q8a–c. 18 ledger rows.
