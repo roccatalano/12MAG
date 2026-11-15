@@ -7,6 +7,11 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 
 
+## 15 Nov 19:30 — Chapter 2 revision booklet (runner, task Ch2 #9)
+- `tools/revision/ch2/build.py` (questions `qdata.py`, figure crops `crop.py` → `crops/`, PDF `pdf.py`) → `lessons/Ch2-revision-booklet(.html/.pdf)` + `-solutions` (10 pages each). G: `01 Lesson materials\Ch2 revision booklet(.html/.pdf)`, `… solutions`. Draft on the Ch 2 check card.
+- Insight GM1 MC Q1, 6, 33, 34 (2C), 28 (2D), 12, 24 (2G), 9 (2H), 17 (2I); GM2 Q13a (2B), Q1, 3, 6, 9 (2C), Q2a–b (2F), Q4b,d, Q5a,f,g, Q7a,c, Q14c (2G). Regression parts left for Ch 3. 2A/2E have no own section (see Decisions log).
+- For Rocco to check: figures are scan crops (grey; GM1 Q1 says red/yellow); Q6/Q9 trial-exam table laid across the page.
+
 ## 15 Nov 19:20 — Lesson l08 (2I) slides + guided worksheet (runner, task Ch2 #8)
 - `tools/deck/l08/build.py` → `lessons/2I slides.html/.pdf` (13 slides, PDF 17 pages; screenshots `tools/deck/l08/shoot.py`). `tools/deck/l08/worksheet.py` → `lessons/2I worksheet(.html/.pdf)` + `… worksheet solutions` (1 page each). Same names on G: `01 Lesson materials`. Draft on the l08 card.
 - Do Now (card): VCAA 2023 E1 Q10 (59%), 2026 E1 Q5 (report not out), 2024 E2 Q3c (57%), 2024 NHT E2 Q2b (no %). Learn: Cambridge 2I p. 155 table + flowchart. No APK/examples/exits (card). LI/SC written for 12MAG (none printed).

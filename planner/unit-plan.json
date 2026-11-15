@@ -3817,6 +3817,23 @@
           "desc": "Formal chapter test. Each question maps to the success criteria on the back of the coursework check.",
           "status": "todo",
           "file": ""
+         },
+         {
+          "kind": "Revision booklet",
+          "desc": "Insight GM1 + GM2 association questions, one section per subchapter (2A–2I) for gradual coursework.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/Ch2-revision-booklet.html",
+            "pdf": "lessons/Ch2-revision-booklet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/Ch2-revision-booklet-solutions.html",
+            "pdf": "lessons/Ch2-revision-booklet-solutions.pdf"
+           }
+          ]
          }
         ]
        }
