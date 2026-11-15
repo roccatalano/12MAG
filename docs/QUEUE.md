@@ -45,7 +45,7 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 3. `done 15 Nov 20:23 — 4A slides (20) + worksheet (3 pp, student + solutions), Draft; no exits (card); 11 ledger rows` **Lesson l12 (4A)**: slides (`tools/deck/l12/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 4. `done 15 Nov 20:41 — 4B slides (22) + worksheet (4 pp, student + solutions), Draft; Do Now 2026 E1 Q7 (burnt by l09) → 2024 NHT E1 Q9; 13 ledger rows` **Lesson l13 (4B)**: slides + worksheet.
 5. `done 15 Nov 20:51 — 4C slides (20) + worksheet (4 pp, student + solutions), Draft; 11 ledger rows` **Lesson l14 (4C)**: slides + worksheet.
-6. `todo` **Lesson l15 (4D)**: slides + worksheet.
+6. `in progress 15 Nov 20:53` **Lesson l15 (4D)**: slides + worksheet.
 7. `todo` **Chapter 4 revision booklet** + solutions (template `tools/revision/ch2/build.py`): Insight GM1 + GM2 transformation questions and parts (the ones the Ch 2/Ch 3 booklets leave out). Insight is never burnt.
 8. `todo` **Chapter 4 test** (model `tools/test/ch2/build.py`). Mathspace has no transformations chapter: its transformation questions are lessons 3.05–3.07 in `02 Sources\Textbooks\Mathspace\Chapter 3 - Model linear associations` (topic assessment + Chapter 3 review). Use the transformation questions the Ch 3 test does not use; if that is too few for a test, mark `needs Rocco`.
 
