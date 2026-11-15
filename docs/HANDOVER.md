@@ -8,6 +8,8 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 
 - **15 Nov 20:51 (Ch4 #5):** l14 (4C) slides (`lessons/4C slides.html/.pdf`, 20 slides) + worksheet (4 pp, student + solutions) built from `tools/deck/l14/`; Draft; copied to G: 01 Lesson materials; 11 ledger rows.
+## 15 Nov 20:52 — Ch3 #6: Chapter 3 revision booklet (Draft)
+Chapter 3 revision booklet + solutions built (`tools/revision/ch3/`, 16 pages each, Draft) from the Insight regression questions not used in Ch 2; transformation questions left for Ch 4. On G: and the Ch 3 check card. Note: that card's 'Chapter test' entry still points at the Ch2 test (task 7 will replace it).
 
 ## 15 Nov 20:42 — Ch4 #4: lesson l13 (4B) built (Draft)
 `tools/deck/l13/` (build.py, worksheet.py, figs.py) → `lessons/4B slides` (22), `4B worksheet` (+ solutions, 4 pages), copied to G: 01 Lesson materials. Do Now 2 swapped to VCAA 2024 NHT E1 Q9 (2026 E1 Q7 burnt by l09). Exit 2 = Edrolo 3E Q12a–b only (part c burnt by l09). Ex 4 points read off the Cambridge plot. 4B video links still blank.

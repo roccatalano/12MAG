@@ -4745,6 +4745,23 @@
             "pdf": "lessons/Ch2 test solutions.pdf"
            }
           ]
+         },
+         {
+          "kind": "Revision booklet",
+          "desc": "Insight GM1 + GM2 regression questions, one section per subchapter (3A–3C) for gradual coursework.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/Ch3-revision-booklet.html",
+            "pdf": "lessons/Ch3-revision-booklet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/Ch3-revision-booklet-solutions.html",
+            "pdf": "lessons/Ch3-revision-booklet-solutions.pdf"
+           }
+          ]
          }
         ]
        }
