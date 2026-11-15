@@ -131,13 +131,6 @@ main{max-width:1200px;margin:0 auto;padding:16px 20px 80px}
 .ystats div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 12px}.ystats b{font-size:17px;display:block}
 .placeholder ul{text-align:left;display:inline-block;margin:10px 0 0;line-height:1.7}
 .hwrow{display:flex;gap:10px;align-items:baseline}.hwrow .hws{flex:1;min-width:0;white-space:nowrap;overflow:hidden}.hwrow b{white-space:nowrap}
-.chhead{margin:14px 0 6px;font-size:15px}.chhead .cn{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
-.cols{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:12px;align-items:start}
-.col{display:flex;flex-direction:column;gap:8px}.colh{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600}
-.col .mg,.col>.mat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 10px}
-.mgh{font-size:12px;font-weight:600;color:var(--lesson-i)}.col .mat li{font-size:13px}.cpl{display:flex;flex-direction:column;gap:2px;font-size:12px;margin-top:2px}
-.cdetail .detail{grid-column:auto;margin:10px 0}
-@media(max-width:760px){.cols{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -260,17 +253,6 @@ window.addEventListener('resize',fitRows);
 function aosFilter(L){const sel=$('#aosFilter'),f=sel.value;
   sel.innerHTML='<option value="">All areas of study</option>'+UP.aos.map(a=>`<option value="AoS ${a.n}" ${f=='AoS '+a.n?'selected':''}>AoS ${a.n}: ${esc(a.title)}</option>`).join('');
   return L.filter(l=>!f||l.aos==f)}
-const isFA=m=>/^(CFAT|Chapter test)/i.test(m.kind);
-function links(x){return `${x.file?`<a class="mlink" href="${esc(x.file)}" target="_blank" rel="noopener">Open ↗</a>`:''}${x.pdf?` <a class="mlink pdf" href="${esc(x.pdf)}" download>PDF ⬇</a>`:''}`}
-function mitem(x){const st=`<span class="ms ${x.status}">${x.status=='ready'?'Ready':x.status=='draft'?'Draft':'To make'}</span>`;
-  return `<li><div class="mrow"><b>${esc(x.kind)}</b>${x.copies?.length?'':' '+links(x)}${st}</div>${x.copies?.length?`<div class="cpl">${x.copies.map(c=>`<span><span class="sub">${esc(c.label)}</span> ${c.file||c.pdf?links(c):'<span class="sub">to make</span>'}</span>`).join('')}</div>`:''}</li>`}
-function unitMats(C){const g=C.map(l=>{const M=(l.materials||[]).filter(m=>!isFA(m));
-  return M.length?`<div class="mg"><div class="mgh">L${l.n} · ${esc(l.section)}</div><ul class="mat">${M.map(mitem).join('')}</ul></div>`:''}).join('');
-  return g||'<div class="empty">None yet</div>'}
-function formatives(C){const seen=new Set(),out=[];
-  C.forEach(l=>(l.materials||[]).filter(isFA).forEach(m=>{if(!seen.has(m.kind)){seen.add(m.kind);out.push({m,l})}}));
-  C.forEach(l=>cfs(l).forEach(c=>{if(!seen.has(c.id)){seen.add(c.id);out.push({m:{kind:c.id,status:/ready/i.test(c.status)?'ready':/draft/i.test(c.status)?'draft':'',file:c.file},l})}}));
-  return out.length?`<ul class="mat">${out.map(({m,l})=>mitem(m).replace('</b>',`</b> <span class="sub">L${l.n}</span>`)).join('')}</ul>`:'<div class="empty">None</div>'}
 /* ---------- Course plan ---------- */
 function renderCourse(){
   const all=lessons(),L=aosFilter(all);
@@ -282,11 +264,11 @@ function renderCourse(){
     const C=L.filter(l=>l.ch==ch);
     if(C[0].aos!=lastA){ if(lastA)h+=`<div class="revrow">${esc(L.find(l=>l.aos==lastA).revision)}: practice only, not in the lesson sequence.</div>`;
       lastA=C[0].aos;h+=`<div class="aos"><b>${esc(lastA)}</b><span>${esc(C[0].aosTitle)}</span></div>`}
-    h+=`<div class="chhead"><span class="cn">Chapter ${ch}</span> <b>${esc(C[0].chTitle)}</b> <span class="sub">· ${C.length} lessons</span></div>
-      <div class="cols"><div class="col"><div class="colh">Proposed lessons</div>${C.map(l=>card(l)).join('')}</div>
-      <div class="col"><div class="colh">Unit materials</div>${unitMats(C)}</div>
-      <div class="col"><div class="colh">Formative assessments</div>${formatives(C)}</div></div>`;
-    C.filter(l=>expandAll||l.id==openId).forEach(l=>h+=`<div class="cdetail">${detail(l)}</div>`);
+    for(let i=0;i<C.length;i+=3){const W=C.slice(i,i+3);
+      h+=`<div class="week chap"><div class="wl">${i==0?`<span class="cn">Chapter ${ch}</span><b>${esc(C[0].chTitle)}</b>${C.length} lessons`:''}</div>`;
+      for(const l of W)h+=card(l);
+      W.filter(l=>expandAll||l.id==openId).forEach(l=>h+=detail(l));
+      h+='</div>';}
   }
   if(lastA)h+=`<div class="revrow">${esc(L.find(l=>l.aos==lastA).revision)}: practice only, not in the lesson sequence.</div>`;
   $('#main').innerHTML=h; wire(renderCourse);
