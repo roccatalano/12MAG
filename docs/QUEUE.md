@@ -5,6 +5,8 @@ When the chapter has no `todo` tasks left, the runner turns itself off and waits
 
 **ACTIVE: Chapter 2** (runner "12MAG Ch 2 runner")
 
+**ACTIVE (fourth runner): Chapter 5** (runner "12MAG Ch 5 runner", added 15 Nov by Rocco; same rule: only its own section)
+
 **ACTIVE (third runner): Chapter 4** (runner "12MAG Ch 4 runner", added 15 Nov by Rocco; runs alongside Ch 3, same rule: only its own section)
 
 **ACTIVE (second runner): Chapter 3** (runner "12MAG Ch 3 runner", added 15 Nov by Rocco; runs alongside Ch 2: each runner only takes tasks from its own chapter section)
@@ -46,6 +48,19 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 6. `todo` **Lesson l15 (4D)**: slides + worksheet.
 7. `todo` **Chapter 4 revision booklet** + solutions (template `tools/revision/ch2/build.py`): Insight GM1 + GM2 transformation questions and parts (the ones the Ch 2/Ch 3 booklets leave out). Insight is never burnt.
 8. `todo` **Chapter 4 test** (model `tools/test/ch2/build.py`). Mathspace has no transformations chapter: its transformation questions are lessons 3.05–3.07 in `02 Sources\Textbooks\Mathspace\Chapter 3 - Model linear associations` (topic assessment + Chapter 3 review). Use the transformation questions the Ch 3 test does not use; if that is too few for a test, mark `needs Rocco`.
+
+## Chapter 5: Investigating and modelling time series data (lessons gm12-u3-l16 … l22, check gm12-u3-ch5-test)
+1. `todo` **Prefill the lesson cards** (l16–l22) in `planner/unit-plan.json`, same rules as Ch 3 task 1 (Do Now ×4 retrieval from `tools/vcaa_current_index.csv`, APK, Examples + mapped Edrolo You trys, exits, CAS skill ids, coursework, videos `draft`). Reserve every chosen exam item in `tools/ledger_manual.csv`. Check the ledger first: the Ch 3 and Ch 4 runners reserve items at the same time. l17/l18 and l20/l21 share a subchapter: split its Examples between the two lessons.
+2. `todo` **CFATs for Chapter 5** + solutions (CFAT 1.5.x, Edrolo U3&4 exercise questions only, HTML + PDF; copy `tools/cfat/ch2/build_html.py` to `tools/cfat/ch5/`). Each CFAT sits at the start of the lesson after the content it covers.
+3. `todo` **Lesson l16 (5A)**: slides (`tools/deck/l16/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+4. `todo` **Lesson l17 (5B, moving means)**: slides (`tools/deck/l17/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+5. `todo` **Lesson l18 (5B, centring)**: slides (`tools/deck/l18/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+6. `todo` **Lesson l19 (5C)**: slides (`tools/deck/l19/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+7. `todo` **Lesson l20 (5D, seasonal indices)**: slides (`tools/deck/l20/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+8. `todo` **Lesson l21 (5D, deseasonalising)**: slides (`tools/deck/l21/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+9. `todo` **Lesson l22 (5E)**: slides (`tools/deck/l22/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+10. `todo` **Chapter 5 revision booklet** + solutions (template `tools/revision/ch2/build.py`): Insight GM1 + GM2 time series questions, sections per subchapter 5A–5E. Insight is never burnt.
+11. `todo` **Chapter 5 test** (model `tools/test/ch2/build.py`) from the Mathspace time series topic assessment: Mathspace calls it Chapter 4 (`02 Sources\Textbooks\Mathspace\Chapter 4 - Time series data`). If it can't be built from what's there, mark `needs Rocco`.
 
 ## Questions for Rocco
 (Each runner adds questions here (prefix Ch 3 questions with 'Ch3'), numbered Q1, Q2 …, with the date and time asked, and sends Rocco a phone notification. Rocco answers in the setup chat (Claude writes them under "Answers") or edits this file.
