@@ -1,4 +1,4 @@
-# 12MAG handover — 15 Nov 2026 (updated 13:10)
+# 12MAG handover — 15 Nov 2026 (updated 13:25)
 
 Read `CLAUDE.md` first (rules, item index, **slide template rules**), then this file. The full to-do list is `docs/TODO.md`.
 Repo: `roccatalano/12MAG` (GitHub Pages: roccatalano.github.io/12mag/ → `planner/`). Rocco's dashboard repo `roccatalano/teaching-dashboard-2027` is read-only unless he asks.
@@ -20,6 +20,11 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 - 1H VCAA boxes: 2019 E2 Q2b (58%), 2021 E2 Q1c (78%). 1I = own-words definitions only (Interactive Textbook; no Study Design dot point, no examples): half card has spare room. Ask Rocco whether to keep 1I separate or merge into 1H.
 - All Chapter 1 bound reference cards (1A–1I) are now done.
 
+## Done 15 Nov (13:00–13:25): planner + CAS guide + videos
+- Planner: materials with nested copies show no top-level Open/PDF; lesson shapes cleared ('To be filled in last'); bound reference always nested with Open + PDF per card; PDFs + 'Download PDF' button on every bound reference.
+- `docs/TODO.md` = full creation + review list.
+- Self-study videos `planner/videos.json` (Ch 1 = MaffsGuru 1A–1I + TI z-scores, all approved). CAS guide `planner/cas-skills.json` (one master list; planner: CAS guide → skill → ClassPad / TI-Nspire with steps + one main video + More videos). Ch 1 steps complete; ClassPad dot plot to confirm.
+
 ## Done 15 Nov (afternoon): everything Draft + guided worksheets for S2, S3, S5
 - **Rocco: every made resource is now 'Draft' on the planner** (materials 'ready' → 'draft'; CFAT cards 'Ready…/Written' → 'Draft'). Nothing goes back to Ready until it passes the fine-tooth-comb review.
 - New worksheets (student + solutions, html + pdf; G: names `1C-1E worksheet(.pdf)`, `… worksheet solutions(.pdf)`): `tools/deck/s2|s3|s5/worksheet.py`, shared helpers in `tools/deck/wslib.py` (copied from s4/worksheet.py, plus hist, ncurve, stemfill, table/fillrow, build → html + PDF). Planner cards have Student copy / Solutions copies (S1 has no solutions copy).
@@ -29,15 +34,28 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 - **Lesson shapes cleared (Rocco, 15 Nov):** the planner's right-hand 'Lesson shape' pane now says 'To be filled in last' for every lesson (`SHAPES_ON=false` in `planner/index.html`). Fill them in at the very end.
 
-## NEXT JOB: fine-tooth-comb review of every Chapter 1 resource (Rocco, 15 Nov: "make sure they are up to standard and not AI slop")
-Suggested order per lesson: slides → worksheet → bound reference → CFAT; check verbatim wording against the sources, % correct against reports, maths, layout/print, page limits. (was: 1C, 1D and 1E — the notes below still apply)
-Rules are in CLAUDE.md, "Bound reference entries" section (read it first). In short: one colour cut-out card per subchapter; half A4 by default, full A4 if it doesn't fit; ONE fixed text size (never scale fonts to fill); fill spare space with real content (e.g. a VCAA question from that lesson); no Edrolo/source line under VCAA boxes (the title says it).
-- **Model to copy: 1A (half) and 1B (full)**, done 15 Nov: `lessons/1A bound reference.html`, `lessons/1B bound reference.html`, combined `lessons/1A-1B bound reference.html`.
-- **Build:** add each card to `CARDS` in `tools/bref/cards.py` (`size`, `title`, `sd` = Study Design words, `body` HTML, `cite`), add the lesson to `LESSONS` (e.g. `'1C-1E': ['1C','1D','1E']`, = lesson S2), run `python3 tools/bref/build.py`. Box classes: `box` (blue notes), `box f` (formula), `box ex` (green Cambridge example), `box tip` (orange), `box cas` (purple CAS steps), `box vc` (red VCAA question with `<span class="pc">NN% correct</span>` and an `ans` answer strip). Tables `table.t` (`sm` for wide ones). Pictures: inline SVG (see `bars()`/`seg()`), or crop from the VCAA PDF (see `vcaa2017e1_q5.png`).
-- **Content source:** the lesson slides (S2 = 1C–1E, `lessons/S2-slides.html`): Key definitions/formulas, Learn slides, Cambridge Examples, CAS steps (condensed TI + ClassPad, not textbook screenshots), and that lesson's Do Now/APK/exit VCAA questions (reuse is fine, not burnt again; prefer the original VCAA wording; % correct from the examiner report). S1–S3 are the old deck layout: pull text with a quick regex strip of `lessons/S2-slides.html` etc.
-- **Check visually** (Playwright + /usr/bin/google-chrome; wait for `body[data-fit]`, then screenshot each `.page`; also check `.bd` scrollHeight == clientHeight so nothing overflows).
-- **Then:** update the lesson's "Bound reference entry" material in `planner/unit-plan.json` like S1's (status `ready`, `file` = combined file, `copies` one per sub + "print both"), copy the html flat to G: `01 Lesson materials\<sub> bound reference.html`, commit + push.
-- After 1C–1E: 1F, 1G, 1H, 1I (1I is Interactive-Textbook only: definitions only, or merge into 1H — ask Rocco).
+## NEXT JOB: deep review of Lesson 1 (1A–1B) — Rocco, 15 Nov: "make sure they are up to standard and not AI slop"
+Everything is **Draft** on the planner. Review one resource at a time, show Rocco what you found (with screenshots), fix what he agrees to, then mark it Ready only when he says so.
+
+**Lesson 1 resources** (planner card `gm12-u3-s1`, subchapters 1A Types of data, 1B Displaying and describing categorical data):
+1. **Slides** `lessons/S1-slides.html/.pdf` (G: `1A-1B slides`). OLD layout, and there is **no build script** in `tools/deck/` for S1 (s2–s5 only): fixing it properly means rebuilding on the templates (`tools/deck/tpl/tpl.py`, model `tools/deck/s4/build.py`; see CLAUDE.md "Slide templates"). Known: says 'Homework' (→ Coursework), Do Now count and lesson order to check against rules 3–4.
+2. **Guided worksheet** `lessons/S1-worksheet.html/.pdf` (G: `1A-1B worksheet`). Student copy only, **no solutions copy**, no build script. Max 4 pages (it is 6). New worksheets are built with `tools/deck/wslib.py` (see `tools/deck/s3/worksheet.py`); rebuilding S1 that way gives a solutions copy too.
+3. **Bound reference** `lessons/1A|1B|1A-1B bound reference.html/.pdf` (build: `tools/bref/build.py`, content `tools/bref/cards.py`).
+4. **Planner card** for the lesson: learning objectives, success criteria, Study Design, key vocab, CAS guide (`stats-list`), self-study videos (MaffsGuru 1A, 1B), Do Now, APK, worked examples / you trys, exits, coursework (planner card vs slides had APK differences: check).
+(CFAT 1.1.1 covers 1A–1E: review it with lesson 3, not here.)
+
+**Check every item for:**
+1. Wording copied word for word from the source PDF (stage it from G: `02 Sources`), or labelled "adapted".
+2. Citation right (book, example/question number, page).
+3. % correct = examiner report (past-design reports sit with the past papers in `02 Sources\VCAA past 2016-2022`; current in `VCAA current 2023-26`). Missing report → say which and ask.
+4. Maths and answers right; figures match the data.
+5. Rules: lesson shape (rule 3), Do Now = 2 × Exam 1 + 2 × Exam 2 current-design VCAA (rule 4), APK sources (rule 5), You try = mapped Edrolo WE (rule 6), exits = Edrolo U3&4 VCAA reprints (rule 7).
+6. Burnt items: `tools/ledger.csv`. **Already spotted:** VCAA 2019 E2 Q1a is logged twice (S1 exit via Edrolo U3&4 1A Q14 AND an older 'Exam Q (1A)' row); VCAA 2020 E1 Q10 twice (S1 APK via Edrolo U1&2 1A Q14 AND 'Exam Q (1A)'). Work out which rows are stale (old handout/label era) vs real double use.
+7. Writing: own-words notes short and plain, no filler, nothing made up, no "AI voice".
+8. Layout: A4 print, page limits, nothing cut off; every slide step checked visually (`tools/deck/s4/shoot.py`, Playwright + /usr/bin/google-chrome).
+9. Consistency: slides ↔ worksheet ↔ bound reference ↔ planner card say the same thing.
+
+**Suggested way of working:** read the slides first and list every item (Do Now, APK, examples, you trys, exits) with its source; stage the source pages; compare; give Rocco one findings table per resource (item · problem · proposed fix) before changing anything. Then do the same for the worksheet and bound reference.
 
 ## Done 15 Nov: Lesson 5 slides (1H–1I)
 - `lessons/S5-slides.html` (34 slides), also `01 Lesson materials\1H-1I slides.html` on G:. Build: `tools/deck/s5/build.py` (screenshots: `tools/deck/s5/shoot.py`).
@@ -73,8 +91,7 @@ Rules are in CLAUDE.md, "Bound reference entries" section (read it first). In sh
 
 ## Open / later
 - **Lessons 1–3 (S1–S3)** still use the old layout → rebuild on the templates (also fixes 'Homework' → 'Coursework', S2 Do Now count, S3 extra exit, S2 '?%' → 71%).
-- 1H–1I worksheet not made. Ch 1 coursework check + test (L6).
-- Bound reference entry for 1G not made.
+- Ch 1 test (L6) not made.
 - Embedded YouTube cards (CAS slide) show "Error 153" when the file is opened from disk; check they play on GitHub Pages.
 - Heptathlon exit (slide 26): fits, but the 15-row table text is small.
 - Command-word tagging of the item index; download VCAA glossary definitions.
