@@ -264,3 +264,4 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 | AoS2 runner: G: not reachable | 2026-11-16 01:02 | 01:03 | 1 | | the 12MAG Course Planner folder is not connected to this run (names-only listing); nothing changed. next run: NOT fired — hourly schedule will retry |
 | AoS3 runner: G: not reachable | 2026-11-16 01:02 | 2026-11-16 01:04 | 2 | | stopped: 12MAG Course Planner folder not connected to this session; nothing changed |
 | AoS4 runner: G: not reachable | 2026-11-16 01:03 | 2026-11-16 01:04 | 1 | | stopped: G: folder not connected to this session (device shows no connected folders); no task claimed; next run: NOT fired — G: access needed |
+| — (AoS2 runner) | 2026-11-16 01:10 | 01:10 | 1 | | AoS2 runner: G: not reachable — get_device_info showed connectedFolders: [] (12MAG Course Planner gives names-only listing); nothing changed |
