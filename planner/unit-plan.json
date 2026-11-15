@@ -8415,7 +8415,33 @@
         "cas": [
          "effective-rate"
         ],
-        "casYouTry": "Edrolo 5G WE1 (effective rate on CAS)"
+        "casYouTry": "Edrolo 5G WE1 (effective rate on CAS)",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/7F slides.html",
+          "pdf": "lessons/7F slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "4 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/7F worksheet.html",
+            "pdf": "lessons/7F worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/7F worksheet solutions.html",
+            "pdf": "lessons/7F worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {

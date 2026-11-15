@@ -1,5 +1,7 @@
 # 12MAG handover — 15 Nov 2026 (updated 15:55)
 
+**16 Nov 10:15 (AoS2 #7):** Lesson l34 (7F) built (Draft): `tools/deck/gm12-u3-l34/` (build.py, worksheet.py, shoot.py) → `lessons/7F slides` (27 slides: Do Now 2023 E1 Q18, 2025 NHT E1 Q21, 2024 E2 Q5a, 2026 E2 Q8c; APK Cambridge U1&2 3H #23 + VCAA 2020 E1 Q26; Examples 28–32 + Edrolo You trys; CAS effective rate; exits VCAA 2020 E1 Q24, Q28, 2017 E2 Q6) and `7F worksheet`/solutions (4 pages), on G: and the planner card; 9 ledger rows marked used. Next AoS 2 task: Ch 7 revision booklet.
+
 **16 Nov 10:00 (AoS4 #8):** Lesson 13F built: `tools/deck/gm12-u4-13f/` (build.py, worksheet.py, figs.py, shoot.py) → `lessons/13F slides` (24 slides, 38-page PDF) + `13F worksheet` / `solutions` (4 pages each), Draft, on the card and G: 01 Lesson materials. Checklist #15 answer (23) worked out with Prim (no printed answer found). Next AoS4 task: Ch 13 revision booklet.
 
 **16 Nov 09:39 (AoS3 #8):** Lesson 10E built (Draft): `tools/deck/gm12-u4-10e/` (build.py, worksheet.py, shoot.py, fig/ = 2025 E2 Q6 time series crop) → `lessons/10E slides` (32 slides: Do Now 2025 E1 Q26, 2026 E1 Q1, 2023 E2 Q9b, 2025 E2 Q6a; APK Cambridge U1&2 4D #11, 4E #12 + VCAA 2017 E2 Q1ci; Examples 24–27 (27 over two slides) + You trys; CAS 4 + Edrolo 7D WE1b; exits VCAA 2018 E1 Q1, 2020 E2 Q2, 2016 E1 Q3) and `10E worksheet`/solutions (4 pages), on G: and the planner card; 10 ledger rows marked used. Next AoS 3 task: lesson 10F-10G.
