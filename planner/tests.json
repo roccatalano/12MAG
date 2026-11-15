@@ -1365,5 +1365,317 @@
     "text": "Evaluate the reliability of the prediction for March of Year 3, referring specifically to how far the…"
    }
   ]
+ },
+ "7": {
+  "chapter": 7,
+  "total": 39,
+  "mc": 9,
+  "sa": 11,
+  "about": "Source (rule 9), copied verbatim: Mathspace General Maths 3&4, 'Chapter 5 - Depreciation and interest' (Mathspace's numbering), 'Chapter 5 - Topic assessment.pdf' + '5. Depreciation and interest - topicanswerkey.pdf' (02 Sources\\Textbooks\\Mathspace\\Chapter 5 - Depreciation and interest). All 20 items, marks as printed (/39). No figures.",
+  "byLesson": [
+   {
+    "lesson": "5.01",
+    "marks": 2,
+    "qs": [
+     "1",
+     "10"
+    ]
+   },
+   {
+    "lesson": "5.02",
+    "marks": 3,
+    "qs": [
+     "2",
+     "11"
+    ]
+   },
+   {
+    "lesson": "5.03",
+    "marks": 4,
+    "qs": [
+     "3",
+     "16a"
+    ]
+   },
+   {
+    "lesson": "5.04",
+    "marks": 10,
+    "qs": [
+     "4",
+     "6",
+     "12",
+     "17a"
+    ]
+   },
+   {
+    "lesson": "5.06",
+    "marks": 2,
+    "qs": [
+     "5",
+     "7"
+    ]
+   },
+   {
+    "lesson": "5.08",
+    "marks": 9,
+    "qs": [
+     "8",
+     "14",
+     "18a"
+    ]
+   },
+   {
+    "lesson": "5.05",
+    "marks": 3,
+    "qs": [
+     "9",
+     "13",
+     "20"
+    ]
+   },
+   {
+    "lesson": "5.07",
+    "marks": 6,
+    "qs": [
+     "15a",
+     "19"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "q": "1",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q1 · 5.01",
+    "text": "Which of these is a correct recurrence relation for a sequence that starts at 400 and decreases by 25 each…",
+    "answer": "B"
+   },
+   {
+    "q": "2",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q2 · 5.02",
+    "text": "For the recurrence relation u 0 = 1000, u n +1 = 0.8 u n + 50, what is the value of u 2 ?",
+    "answer": "D"
+   },
+   {
+    "q": "3",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q3 · 5.03",
+    "text": "A car is purchased for $24 000 and depreciates by $3000 per year using flat-rate (simple) depreciation. Which…",
+    "answer": "C"
+   },
+   {
+    "q": "4",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q4 · 5.04",
+    "text": "A machine worth $50 000 depreciates at 10% per year using reducing balance depreciation. What is its value…",
+    "answer": "D"
+   },
+   {
+    "q": "5",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q5 · 5.06",
+    "text": "An investment of $5000 earns compound interest at 6% per annum, compounded annually. Which recurrence…",
+    "answer": "C"
+   },
+   {
+    "q": "6",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q6 · 5.04",
+    "text": "A laptop is purchased for $2000 and depreciates at 20% per year using reducing balance depreciation. Which…",
+    "answer": "A"
+   },
+   {
+    "q": "7",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q7 · 5.06",
+    "text": "An investment of $10 000 earns compound interest at 4% per annum, compounded quarterly. What is the interest…",
+    "answer": "B"
+   },
+   {
+    "q": "8",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q8 · 5.08",
+    "text": "A nominal interest rate of 6% per annum is compounded monthly. What is the effective annual interest rate,…",
+    "answer": "B"
+   },
+   {
+    "q": "9",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q9 · 5.05",
+    "text": "An investment of $6000 earns simple interest at 4% per annum. How much interest is earned after 3 years?",
+    "answer": "A"
+   },
+   {
+    "q": "10",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q10 · 5.01",
+    "text": "Write a recurrence relation to model a sequence that starts at 750, and each term is found by multiplying the…"
+   },
+   {
+    "q": "11",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q11 · 5.02",
+    "text": "For the recurrence relation u 0 = 600, u n +1 = 1.06 u n − 25, calculate the values of u 1 , u 2 , and u 3 ,…"
+   },
+   {
+    "q": "12",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q12 · 5.04",
+    "text": "A piece of equipment worth $18 000 depreciates at 15% per year using reducing balance depreciation. Write a…"
+   },
+   {
+    "q": "13",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q13 · 5.05",
+    "text": "A savings account pays simple interest. The value of the account is modelled by V n = 4000 + 180 n , where V…"
+   },
+   {
+    "q": "14",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q14 · 5.08",
+    "text": "A nominal interest rate of 5% per annum is compounded quarterly. Calculate the effective annual interest…"
+   },
+   {
+    "q": "15a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q15 · 5.07",
+    "text": "State how often interest is compounded and the length of the term in years."
+   },
+   {
+    "q": "15b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q15 · 5.07",
+    "text": "Determine the total interest Mia earns over the term."
+   },
+   {
+    "q": "15c",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q15 · 5.07",
+    "text": "Mia wants the value of her investment to be more than $14 000. At the same interest rate, determine the…"
+   },
+   {
+    "q": "16a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q16 · 5.03",
+    "text": "Calculate the depreciation of the van in one year."
+   },
+   {
+    "q": "16b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q16 · 5.03",
+    "text": "Write a recurrence relation for V n , the value of the van in dollars after n years."
+   },
+   {
+    "q": "16c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q16 · 5.03",
+    "text": "The company sells the van as soon as its value falls below $12 000. Determine after how many years the van is…"
+   },
+   {
+    "q": "17a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q17 · 5.04",
+    "text": "Show that the car is depreciating by reducing balance depreciation, and state the annual rate of depreciation."
+   },
+   {
+    "q": "17b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q17 · 5.04",
+    "text": "Write a recurrence relation for V n , the value of the car in dollars after n years."
+   },
+   {
+    "q": "17c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q17 · 5.04",
+    "text": "A financial planner fits a least squares regression line to the data in the table, with age as the…"
+   },
+   {
+    "q": "17d",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q17 · 5.04",
+    "text": "Use the regression line from part c and the recurrence relation from part b to predict the value of the car…"
+   },
+   {
+    "q": "17e",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q17 · 5.04",
+    "text": "Which of the two predictions is more reasonable? Give a reason based on the data and the predictions."
+   },
+   {
+    "q": "18a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q18 · 5.08",
+    "text": "Determine the annual interest rate for this account."
+   },
+   {
+    "q": "18b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q18 · 5.08",
+    "text": "Write a recurrence relation for B n , the balance of the account in dollars after n months."
+   },
+   {
+    "q": "18c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q18 · 5.08",
+    "text": "Determine the balance of the account after 12 months, to the nearest cent."
+   },
+   {
+    "q": "18d",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q18 · 5.08",
+    "text": "Calculate the effective annual interest rate for this account, rounded to two decimal places."
+   },
+   {
+    "q": "18e",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q18 · 5.08",
+    "text": "Another bank offers Sam an account paying 4.05% per annum, compounding annually. Should Sam move his money to…"
+   },
+   {
+    "q": "19",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q19 · 5.07",
+    "text": "A recurrence relation is given by V 0 = 25 000, V n +1 = 1.06 V n . Using technology, determine after how…"
+   },
+   {
+    "q": "20",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 5 (depreciation and interest) topic assessment Q20 · 5.05",
+    "text": "A loan of $7200 charges simple interest. The total interest paid after 4 years is $1296. Determine the annual…"
+   }
+  ]
  }
 }

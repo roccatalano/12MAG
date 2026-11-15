@@ -1,5 +1,7 @@
 # 12MAG handover — 15 Nov 2026 (updated 15:55)
 
+**16 Nov 10:28 (AoS2 #9):** Chapter 7 test built (Draft): `tools/test/ch7/build.py` → `lessons/Ch7 test` + `solutions` (Mathspace Ch 5 depreciation and interest topic assessment, all 20 Qs verbatim, /39, 5 pages each), on G: 01 Lesson materials and the l36 card (it had a stray Ch2 test link: replaced). `planner/tests.json` re-run; 20 ledger_manual rows. **Chapter 7 queue finished**; next AoS 2 task: prefill Ch 8 cards.
+
 **16 Nov 10:15 (AoS2 #7):** Lesson l34 (7F) built (Draft): `tools/deck/gm12-u3-l34/` (build.py, worksheet.py, shoot.py) → `lessons/7F slides` (27 slides: Do Now 2023 E1 Q18, 2025 NHT E1 Q21, 2024 E2 Q5a, 2026 E2 Q8c; APK Cambridge U1&2 3H #23 + VCAA 2020 E1 Q26; Examples 28–32 + Edrolo You trys; CAS effective rate; exits VCAA 2020 E1 Q24, Q28, 2017 E2 Q6) and `7F worksheet`/solutions (4 pages), on G: and the planner card; 9 ledger rows marked used. Next AoS 2 task: Ch 7 revision booklet.
 
 **16 Nov 10:00 (AoS4 #8):** Lesson 13F built: `tools/deck/gm12-u4-13f/` (build.py, worksheet.py, figs.py, shoot.py) → `lessons/13F slides` (24 slides, 38-page PDF) + `13F worksheet` / `solutions` (4 pages each), Draft, on the card and G: 01 Lesson materials. Checklist #15 answer (23) worked out with Prim (no printed answer found). Next AoS4 task: Ch 13 revision booklet.
