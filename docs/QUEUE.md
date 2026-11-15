@@ -3,7 +3,9 @@
 Rocco starts ONE chapter at a time. The runner does the first `todo` task of the ACTIVE chapter, marks it, and starts the next run.
 When the chapter has no `todo` tasks left, the runner turns itself off and waits for Rocco to set up the next chapter.
 
-**ACTIVE: Chapter 2**
+**ACTIVE: Chapter 2** (runner "12MAG Ch 2 runner")
+
+**ACTIVE (second runner): Chapter 3** (runner "12MAG Ch 3 runner", added 15 Nov by Rocco; runs alongside Ch 2: each runner only takes tasks from its own chapter section)
 
 Status words: `todo` · `in progress <date time>` · `done <date> — what was made` · `needs Rocco — why` (skipped; ask him).
 A task `in progress` for more than 3 hours is treated as crashed: set it back to `todo` and note it.
@@ -24,8 +26,17 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 9. `done 2026-11-15 — Ch2 revision booklet + solutions (10 pages each, HTML + PDF): Insight GM1 MC Q1, 6, 9, 12, 17, 24, 28, 33, 34 + GM2 Q1, 3, 6, 9, 13a and association parts of Q2, 4, 5, 7, 14; sections 2B–2I; on G: and the Ch 2 check card` **Chapter 2 revision booklet** + solutions (Insight GM1 + GM2 Data Analysis, sections per subchapter; template `tools/revision/ch1/build.py`). Insight is never burnt.
 10. `todo` **Chapter 2 test** from the Mathspace Chapter 2 topic assessment (`02 Sources\Textbooks\Mathspace\Chapter 2 - Investigate associations`). If it can't be built from what's there, mark `needs Rocco`.
 
+## Chapter 3: Fitting a linear model to numerical data (lessons gm12-u3-l09 … l11, check gm12-u3-ch3-test)
+1. `todo` **Prefill the lesson cards** (l09–l11) in `planner/unit-plan.json`, same rules as Ch 2 task 1: Do Now ×4 per lesson (current-design VCAA from `tools/vcaa_current_index.csv`, not burnt; retrieval only, never today's new content), APK (Cambridge U1&2 skills checklist + Edrolo U1&2 exam questions), Examples (Cambridge) with mapped Edrolo You trys (U3&4 first, then U1&2; written ones only if neither book has a match → `planner/written-youtrys.json`), exits (Edrolo U3&4 exam practice), CAS skill ids (`planner/cas-skills.json`, steps checked against `02 Sources\CAS guides`), coursework (Cambridge exercises), self-study videos (`planner/videos.json`, `draft`). Reserve every chosen exam item in `tools/ledger_manual.csv`. Keep the CFAT 1.2.3 already on the l09 card.
+2. `todo` **CFATs for Chapter 3** + solutions (CFAT 1.3.x, Edrolo U3&4 exercise questions only, HTML + PDF in the CFAT 1.1.x layout; copy `tools/cfat/ch2/build_html.py` to `tools/cfat/ch3/`). Decide the split by subchapter as Ch 2 did; each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
+3. `todo` **Lesson l09 (3A)**: slides (`tools/deck/l09/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+4. `todo` **Lesson l10 (3B)**: slides + worksheet.
+5. `todo` **Lesson l11 (3C)**: slides + worksheet.
+6. `todo` **Chapter 3 revision booklet** + solutions (template `tools/revision/ch2/build.py`): the Insight GM1 + GM2 'Investigating associations … and modelling linear associations' questions and parts NOT used in the Ch 2 booklet (regression: least squares line, slope/intercept, predictions, residuals, residual plots), plus any whole questions on 3A–3C. Leave transformation questions (Ch 4) out. Insight is never burnt.
+7. `todo` **Chapter 3 test** from the Mathspace Chapter 3 topic assessment (`02 Sources\Textbooks\Mathspace\Chapter 3 - Model linear associations`). If it can't be built from what's there, mark `needs Rocco`.
+
 ## Questions for Rocco
-(The runner adds questions here, numbered Q1, Q2 …, with the date and time asked, and sends Rocco a phone notification. Rocco answers in the setup chat (Claude writes them under "Answers") or edits this file.
+(Each runner adds questions here (prefix Ch 3 questions with 'Ch3'), numbered Q1, Q2 …, with the date and time asked, and sends Rocco a phone notification. Rocco answers in the setup chat (Claude writes them under "Answers") or edits this file.
 If there is no answer after 10 minutes, the runner decides with its best judgement and records it in the Decisions log. Rocco can overrule any decision later.)
 - Q1 (15 Nov 17:01, prefill) Draft CFAT 1.2.1 burnt VCAA reprints Edrolo 2B Q11 (VCAA 2016 E1 Q8) and 2B Q12 (VCAA 2019 E2 Q3), which are l04's planned exits (and against rule 8). Plan: task 2 rebuilds the Ch 2 CFATs from exercise questions only, which frees them for the exits. OK?
 - Q2 (15 Nov 17:01, prefill) 2I 'Which graph?' (l08) has no Edrolo U3&4 exam-practice questions, so no exits. Use current-design 2I items (VCAA 2024 NHT E1 Q7, 2025 E1 Q8) instead, or leave none?
