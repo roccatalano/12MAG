@@ -9737,7 +9737,7 @@
          {
           "kind": "Exam",
           "ref": "Edrolo U1&2 5F Q15",
-          "text": "VCAA 2017 Exam 2 Matrices Q1ci (60%)"
+          "text": "VCAA 2017 Exam 2 Matrices Q1ci (56%)"
          }
         ],
         "doNow": [
@@ -9780,7 +9780,33 @@
          "matrix-det-inverse"
         ],
         "casYouTry": "Edrolo 7D WE1b (determinant on CAS)",
-        "note": "Edrolo 7D WE3 (simultaneous equations with matrices) and U1&2 5F WE2 (AX = B) are spare You trys for Example 27. U1&2 5E WE1–3 are spares for Examples 25–26."
+        "note": "Edrolo 7D WE3 (simultaneous equations with matrices) and U1&2 5F WE2 (AX = B) are spare You trys for Example 27. U1&2 5E WE1–3 are spares for Examples 25–26.",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/10E slides.html",
+          "pdf": "lessons/10E slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "4 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/10E worksheet.html",
+            "pdf": "lessons/10E worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/10E worksheet solutions.html",
+            "pdf": "lessons/10E worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
