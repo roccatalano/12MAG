@@ -1155,10 +1155,18 @@
          },
          {
           "kind": "CFAT 1.1.1",
-          "desc": "CFAT 1.1.1: student copy, worksheet style. Solutions by hand.",
+          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
           "status": "ready",
-          "file": "lessons/CFAT-1.1.1.html",
-          "pdf": "lessons/CFAT-1.1.1.pdf"
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/CFAT-1.1.1.html",
+            "pdf": "lessons/CFAT-1.1.1.pdf"
+           },
+           {
+            "label": "Solutions"
+           }
+          ]
          }
         ],
         "homework": {
@@ -1996,10 +2004,18 @@
          },
          {
           "kind": "CFAT 1.1.2",
-          "desc": "CFAT 1.1.2: student copy, worksheet style. Solutions by hand.",
+          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
           "status": "ready",
-          "file": "lessons/CFAT-1.1.2.html",
-          "pdf": "lessons/CFAT-1.1.2.pdf"
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/CFAT-1.1.2.html",
+            "pdf": "lessons/CFAT-1.1.2.pdf"
+           },
+           {
+            "label": "Solutions"
+           }
+          ]
          }
         ],
         "homework": {
@@ -2026,6 +2042,21 @@
        "title": "Chapter 1 coursework check + test",
        "card": {
         "materials": [
+         {
+          "kind": "CFAT 1.1.3",
+          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
+          "status": "ready",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/CFAT-1.1.3.html",
+            "pdf": "lessons/CFAT-1.1.3.pdf"
+           },
+           {
+            "label": "Solutions"
+           }
+          ]
+         },
          {
           "kind": "Coursework check",
           "desc": "Double-sided A4. Front: students tick the coursework they have (guided notes, bound reference entries, CFATs, homework); teacher signs off. Back: chapter success criteria, ticked by the teacher when marking the test (Test Q column = which question tests it).",

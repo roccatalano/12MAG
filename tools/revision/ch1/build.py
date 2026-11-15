@@ -1,8 +1,10 @@
 """Build the Ch1 revision booklet (CFAT house style) from qdata.py. Writes student + solutions HTML."""
-import json, re, base64, sys
+import json, re, base64, sys, os
+A4VIEW = '--print' not in sys.argv  # screen copies get the A4 page view; --print builds the plain copy used for PDFs
 sys.path.insert(0, '.')
 from qdata import Q, SUBS
 
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 FIG = json.load(open('figs.json'))
 
 def fig(key, sol, w=None):
@@ -125,8 +127,11 @@ def build(sol):
             for q in sas:
                 num += 1; body += sa_box(q, num, sol)
     title = 'Ch1 revision booklet' + (' solutions' if sol else '')
-    return f'<!DOCTYPE html><html><head><meta charset="utf-8"><title>{title}</title><style>{css}</style></head><body class="{"sol" if sol else ""}">{body}</body></html>'
+    L = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..', 'lessons')
+    js = ''.join(f'<script>{open(os.path.join(L, f)).read()}</script>' for f in ('a4view.js', 'paged.polyfill.min.js')) if A4VIEW else ''
+    return f'<!DOCTYPE html><html><head><meta charset="utf-8"><title>{title}</title><style>{css}</style>{js}</head><body class="{"sol" if sol else ""}">{body}</body></html>'
 
+os.makedirs('out', exist_ok=True)
 for sol in (0, 1):
-    open(f'out/Ch1 revision booklet{" solutions" if sol else ""}.html', 'w').write(build(sol))
+    open(f'out/Ch1-revision-booklet{"-solutions" if sol else ""}.html', 'w').write(build(sol))
 print('ok')
