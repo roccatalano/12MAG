@@ -6841,8 +6841,8 @@
         "apk": [
          {
           "kind": "Skill",
-          "ref": "Cambridge U1&2 1B checklist #6",
-          "text": "Increase or decrease a value by a percentage"
+          "ref": "Cambridge U1&2 1B checklist #7",
+          "text": "Find percentage increase or decrease (replaces 1B checklist #6: already used in l20)"
          },
          {
           "kind": "Skill",
@@ -6875,7 +6875,7 @@
         "exit": [
          {
           "ref": "Edrolo U3&4 4D Q18",
-          "src": "VCAA 2019 Exam 2 Q6a,b"
+          "src": "VCAA 2019 Exam 2 Q6a,b (original wording used)"
          }
         ],
         "homework": {
@@ -6907,7 +6907,33 @@
          ]
         },
         "cas": [],
-        "note": "Edrolo 4D WE6 (plot deseasonalised data, identify the trend) is a spare You try for Example 19."
+        "note": "Edrolo 4D WE6 (plot deseasonalised data, identify the trend) is a spare You try for Example 19.",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit task.",
+          "status": "draft",
+          "file": "lessons/5D deseasonalising slides.html",
+          "pdf": "lessons/5D deseasonalising slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "3 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/5D deseasonalising worksheet.html",
+            "pdf": "lessons/5D deseasonalising worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/5D deseasonalising worksheet solutions.html",
+            "pdf": "lessons/5D deseasonalising worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        },
        "part": 2
       },

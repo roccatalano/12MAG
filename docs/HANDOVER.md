@@ -8,6 +8,8 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 
 
+- **15 Nov 22:01 (Ch5 #8):** l21 (5D calculating seasonal indices + deseasonalising) built: `lessons/5D deseasonalising slides` (21 slides) + worksheet/solutions (3 pages), Draft, copied to G: 01 Lesson materials. APK 1B #6 (burnt in l20) → 1B #7. Next Ch5 task: l22 (5E).
+
 ## 15 Nov 21:49 — Ch5 #7: lesson l20 (5D seasonal indices) built (Draft)
 `tools/deck/l20/` (build.py, worksheet.py, figs.py, shoot.py) → `lessons/5D seasonal indices slides` (24, CFAT 1.5.1 slide first), `5D seasonal indices worksheet` (+ solutions, 3 pages), copied to G: 01 Lesson materials. APK 1A #2 burnt → 1B #6. Files named '5D seasonal indices …' (l21 shares 5D: use '5D deseasonalising …'). 5D video link still blank.
 
