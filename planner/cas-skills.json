@@ -841,6 +841,83 @@
     "classpad": []
    },
    "checked": "Cambridge U3&4 7F Example 32 + Edrolo 5G WE1 (Draft, check against 02 Sources\\CAS guides)"
+  },
+  {
+   "id": "matrix-entry",
+   "skill": "Entering and storing a matrix (and its transpose)",
+   "subs": [
+    "10A",
+    "10B"
+   ],
+   "ti": [
+    "Calculator page: press the template key (beside 9) and choose the m × n matrix template; enter the number of rows and columns; OK.",
+    "Type the elements, using tab to move between them.",
+    "Store it: press ctrl var (sto→), type a letter (e.g. a) and press enter.",
+    "Transpose: type a then Menu › Matrix & Vector › Transpose (shows aᵀ) and press enter."
+   ],
+   "classpad": [
+    "Main application: open the Keyboard › Math2 tab and tap the matrix template; tap the add-row / add-column buttons until the order is right.",
+    "Type the elements, tapping each cell.",
+    "Store it: tap ⇒ and type a letter (e.g. A), then EXE.",
+    "Transpose: Action › Matrix › Create › trn, type trn(A) and press EXE."
+   ],
+   "tip": "Check the order (rows × columns) on screen before storing; a stored letter keeps its matrix until you overwrite it.",
+   "videos": {
+    "ti": [],
+    "classpad": []
+   },
+   "checked": "Cambridge U3&4 10A CAS 1 + Edrolo 7B WE3 (Draft, check against 02 Sources\\CAS guides)"
+  },
+  {
+   "id": "matrix-operations",
+   "skill": "Matrix arithmetic: sum, difference, scalar multiple, product and power",
+   "subs": [
+    "10C",
+    "10D",
+    "10F",
+    "10G"
+   ],
+   "ti": [
+    "Enter and store each matrix (see Entering and storing a matrix).",
+    "Type the calculation with the stored letters, e.g. a+b, a−b, 3·a, a·b (use ×) or a^2, and press enter.",
+    "\"Error: Dimension\" means the operation is not defined for those orders."
+   ],
+   "classpad": [
+    "Enter and store each matrix (see Entering and storing a matrix).",
+    "Type the calculation with the stored letters, e.g. A+B, A−B, 3A, A×B or A^2, and press EXE.",
+    "\"Dimension ERROR\" means the operation is not defined for those orders."
+   ],
+   "tip": "Order matters for products: a·b and b·a are usually different (or one is not defined).",
+   "videos": {
+    "ti": [],
+    "classpad": []
+   },
+   "checked": "Cambridge U3&4 10C CAS 2, 10D CAS 3-4 + Edrolo 7B WE2, 7C WE2 Method 2 (Draft, check against 02 Sources\\CAS guides)"
+  },
+  {
+   "id": "matrix-det-inverse",
+   "skill": "Determinant and inverse of a matrix; solving AX = B",
+   "subs": [
+    "10E"
+   ],
+   "ti": [
+    "Enter and store the matrix (e.g. as a).",
+    "Determinant: Menu › Matrix & Vector › Determinant, type det(a) and press enter.",
+    "Inverse: type a^-1 and press enter (\"Singular matrix\" means det = 0, no inverse).",
+    "Solve AX = B: type a^-1·b (pre-multiply); for XA = B type b·a^-1."
+   ],
+   "classpad": [
+    "Enter and store the matrix (e.g. as A).",
+    "Determinant: Action › Matrix › Calculation › det, type det(A) and press EXE.",
+    "Inverse: type A^-1 and press EXE (an error means det = 0, no inverse).",
+    "Solve AX = B: type A^-1×B (pre-multiply); for XA = B type B×A^-1."
+   ],
+   "tip": "Find det first: if it is 0 the matrix has no inverse.",
+   "videos": {
+    "ti": [],
+    "classpad": []
+   },
+   "checked": "Cambridge U3&4 10E CAS 5 + Edrolo 7D WE1b, WE2 (Draft, check against 02 Sources\\CAS guides)"
   }
  ]
 }

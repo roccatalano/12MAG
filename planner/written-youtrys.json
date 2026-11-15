@@ -122,6 +122,62 @@
    "label": "Written for 12MAG (Claude, modelled on Cambridge Example 27)",
    "text": "A bakery purchased a new oven at a cost of $42 000. It has an estimated value of $9000 after 8 years of operation. If the value of the oven is depreciated using a reducing balance method, what is the annual rate of depreciation? Write your answer correct to one decimal place.",
    "answer": "9000 = (1 − r/100)⁸ × 42 000 gives r = 17.5152 (the other solution, r > 100, is not sensible). The annual rate of depreciation is 17.5%."
+  },
+  {
+   "id": "YT-10B-8",
+   "pairs": "Cambridge U3&4 Example 8",
+   "sub": "10B",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 8)",
+   "text": "Convert the 16-digit credit card number: 5213 7046 9381 2750 into a 2 × 8 matrix, listing the digits in pairs, one under the other. Ignore the spaces.",
+   "answer": "[5 1 7 4 9 8 2 5; 2 3 0 6 3 1 7 0]"
+  },
+  {
+   "id": "YT-10B-10",
+   "pairs": "Cambridge U3&4 Example 10",
+   "sub": "10B",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 10)",
+   "text": "The roads connecting four towns, town P, town Q, town R and town S, have been represented by a 4 × 4 matrix, M. The elements show the number of roads between each pair of towns. M = [0 2 1 0; 2 0 0 1; 1 0 0 3; 0 1 3 0] (rows and columns in the order P, Q, R, S). a In the matrix M, m₁₄ = 0. What does this tell us? b In the matrix M, m₃₄ = 3. What does this tell us? c What is the sum of the elements in row 2 of matrix M and what does this tell us? d What is the sum of all the elements of matrix M and what does this tell us?",
+   "answer": "a There is no road between town P and town S. b There are three roads between town R and town S. c 3: the total number of roads between town Q and the other towns in the network. d 14: the total number of different ways you can travel between towns."
+  },
+  {
+   "id": "YT-10C-15",
+   "pairs": "Cambridge U3&4 Example 15",
+   "sub": "10C",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 15)",
+   "text": "G = [4 0; −2 6], H = [6 0; −3 9]. Show that 3G − 2H = O.",
+   "answer": "3G − 2H = [12 0; −6 18] − [12 0; −6 18] = [0 0; 0 0], so 3G − 2H = O."
+  },
+  {
+   "id": "YT-10C-16",
+   "pairs": "Cambridge U3&4 Example 16",
+   "sub": "10C",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 16)",
+   "text": "The bread sales (small, medium, large loaves) for two bakeries are displayed below. 2024: Corner Bake 18, 25, 9; Daily Loaf 27, 22, 14. 2025: Corner Bake 22, 30, 12; Daily Loaf 28, 26, 16. a Construct two matrices, A and B, to represent the sales data for 2024 and 2025 separately. b Construct a new matrix C = A + B. What does this matrix represent? c Construct a new matrix, D = B − A. What does this matrix represent? d Both bakeries want to increase their 2025 sales by 50% by 2026. Construct a new matrix E = 1.5B. Explain why this matrix represents the planned sales figures for 2026.",
+   "answer": "a A = [18 25 9; 27 22 14], B = [22 30 12; 28 26 16]. b C = [40 55 21; 55 48 30]: the total sales for 2024 and 2025 for the two bakeries. c D = [4 5 3; 1 4 2]: the increase in sales from 2024 to 2025 for the two bakeries. d E = [33 45 18; 42 39 24]: each 2025 figure is multiplied by 1.5 (a 50% increase), giving the planned 2026 sales."
+  },
+  {
+   "id": "YT-10D-19",
+   "pairs": "Cambridge U3&4 Example 19",
+   "sub": "10D",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 19)",
+   "text": "Evaluate the matrix product AB, where A = [2 1 3] and B = [5; 2; 4].",
+   "answer": "1 × 3 times 3 × 1: defined, order 1 × 1. AB = [2 × 5 + 1 × 2 + 3 × 4] = [24]."
+  },
+  {
+   "id": "YT-10E-24",
+   "pairs": "Cambridge U3&4 Example 24",
+   "sub": "10E",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 24)",
+   "text": "Show that the matrices A = [3 5; 1 2] and B = [2 −5; −1 3] are inverses.",
+   "answer": "AB = [3×2 + 5×(−1)  3×(−5) + 5×3; 1×2 + 2×(−1)  1×(−5) + 2×3] = [1 0; 0 1] = I and BA = [2×3 + (−5)×1  2×5 + (−5)×2; −1×3 + 3×1  −1×5 + 3×2] = [1 0; 0 1] = I, so A and B are inverses."
+  },
+  {
+   "id": "YT-10F-30",
+   "pairs": "Cambridge U3&4 Example 30",
+   "sub": "10F",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 30)",
+   "text": "A 4 × 4 permutation matrix P = [0 1 0 0; 0 0 0 1; 1 0 0 0; 0 0 1 0] applied to a 4 × 1 column matrix A gives the column matrix [K; L; M; N]. Determine the matrix A.",
+   "answer": "PA = [K; L; M; N], so A = P⁻¹[K; L; M; N] = Pᵀ[K; L; M; N] = [M; K; N; L]."
   }
  ]
 }

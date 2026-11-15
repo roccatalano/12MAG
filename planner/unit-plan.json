@@ -8548,7 +8548,140 @@
            "note": "The 10A and 10B sections"
           }
          ]
-        }
+        },
+        "keyVocab": [
+         "Matrix: a rectangular array of numbers (elements) in rows and columns",
+         "Order: rows × columns (a 2 × 3 matrix has 2 rows and 3 columns)",
+         "aᵢⱼ: the element in row i, column j",
+         "Row, column, square, zero, identity (I), diagonal, symmetric, upper/lower triangular matrices",
+         "Transpose Aᵀ: rows become columns"
+        ],
+        "weDo": [
+         {
+          "n": 1,
+          "sub": "10A",
+          "title": "The order of a matrix",
+          "youTry": "Edrolo 7A WE1a",
+          "video": "Cambridge GO · 10A Resources"
+         },
+         {
+          "n": 2,
+          "sub": "10A",
+          "title": "The transpose of a matrix",
+          "youTry": "Edrolo 7B WE3",
+          "video": "Cambridge GO · 10A Resources"
+         },
+         {
+          "n": 3,
+          "sub": "10A",
+          "title": "Matrix facts (row, column, square)",
+          "youTry": "Edrolo U1&2 5A WE2",
+          "video": "Cambridge GO · 10A Resources"
+         },
+         {
+          "n": 4,
+          "sub": "10A",
+          "title": "Types of matrices",
+          "youTry": "Edrolo 7A WE2",
+          "video": "Cambridge GO · 10A Resources"
+         },
+         {
+          "n": 5,
+          "sub": "10A",
+          "title": "Identifying the elements in a matrix",
+          "youTry": "Edrolo 7A WE1b",
+          "video": "Cambridge GO · 10A Resources"
+         },
+         {
+          "n": 6,
+          "sub": "10A",
+          "title": "Constructing a matrix given a rule for its ijth term",
+          "youTry": "Edrolo 7A WE4",
+          "video": "Cambridge GO · 10A Resources"
+         },
+         {
+          "n": 7,
+          "sub": "10B",
+          "title": "Representing information in a table by a matrix",
+          "youTry": "Edrolo 7A WE3a–b",
+          "video": "Cambridge GO · 10B Resources"
+         },
+         {
+          "n": 8,
+          "sub": "10B",
+          "title": "Entering a credit card number into a matrix",
+          "youTry": "Written (modelled on Cambridge Ex 8) · YT-10B-8",
+          "video": "Cambridge GO · 10B Resources"
+         },
+         {
+          "n": 9,
+          "sub": "10B",
+          "title": "Representing a network diagram by a matrix",
+          "youTry": "Edrolo U1&2 5D WE3a",
+          "video": "Cambridge GO · 10B Resources"
+         },
+         {
+          "n": 10,
+          "sub": "10B",
+          "title": "Interpreting a matrix representing a network diagram",
+          "youTry": "Written (modelled on Cambridge Ex 10) · YT-10B-10",
+          "video": "Cambridge GO · 10B Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 4A checklist #1",
+          "text": "I can state the order of a given matrix."
+         },
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 4A checklist #2",
+          "text": "I can describe the location of an element in a matrix."
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 5A Q13",
+          "text": "VCAA 2020 Exam 1 Matrices Q6 (adapted by Edrolo; 73%)"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 Exam 1 Q2",
+          "sec": "1F"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2024 Exam 1 Q15",
+          "sec": "5B"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2024 Exam 2 Q2a",
+          "sec": "1C"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2026 Exam 2 Q3a",
+          "sec": "1H"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 7A Q12",
+          "src": "VCAA 2018 Exam 2 Matrices Q1"
+         },
+         {
+          "ref": "Edrolo U3&4 7B Q15",
+          "src": "VCAA 2017 Exam 1 Matrices Q6"
+         }
+        ],
+        "cas": [
+         "matrix-entry"
+        ],
+        "casYouTry": "Cambridge CAS 1 (entering a matrix) with the Example 4 matrices",
+        "note": "Edrolo 7A WE3c (interpreting a sum) is a spare You try for Example 10d–e."
        }
       },
       {
@@ -8619,7 +8752,111 @@
            "note": "The 10C section"
           }
          ]
-        }
+        },
+        "keyVocab": [
+         "Equal matrices: same order and every pair of corresponding elements equal",
+         "A + B and A − B are only defined when A and B have the same order: add/subtract corresponding elements",
+         "Scalar multiplication kA: multiply every element by k",
+         "Zero matrix O: every element is 0 (A + O = A, A − A = O)"
+        ],
+        "weDo": [
+         {
+          "n": 11,
+          "sub": "10C",
+          "title": "Equality of two matrices",
+          "youTry": "Edrolo U1&2 5B WE3",
+          "video": "Cambridge GO · 10C Resources"
+         },
+         {
+          "n": 12,
+          "sub": "10C",
+          "title": "Adding two matrices",
+          "youTry": "Edrolo U1&2 5B WE2",
+          "video": "Cambridge GO · 10C Resources"
+         },
+         {
+          "n": 13,
+          "sub": "10C",
+          "title": "Subtracting two matrices",
+          "youTry": "Edrolo 7B WE1 (defined? then A − B)",
+          "video": "Cambridge GO · 10C Resources"
+         },
+         {
+          "n": 14,
+          "sub": "10C",
+          "title": "Scalar multiplication",
+          "youTry": "Edrolo 7B WE2",
+          "video": "Cambridge GO · 10C Resources"
+         },
+         {
+          "n": 15,
+          "sub": "10C",
+          "title": "The zero matrix",
+          "youTry": "Written (modelled on Cambridge Ex 15) · YT-10C-15",
+          "video": "Cambridge GO · 10C Resources"
+         },
+         {
+          "n": 16,
+          "sub": "10C",
+          "title": "Processing data using addition, subtraction and scalar multiplication",
+          "youTry": "Written (modelled on Cambridge Ex 16) · YT-10C-16",
+          "video": "Cambridge GO · 10C Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 4B checklist #3",
+          "text": "I can add and subtract matrices."
+         },
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 4C checklist #6",
+          "text": "I can apply scalar multiplication with addition and subtraction of matrices."
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 5B Q15",
+          "text": "VCAA 2021 Exam 2 Matrices Q1b (adapted by Edrolo; 50%)"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2023 Exam 1 Q29",
+          "sec": "10A"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 Exam 1 Q8",
+          "sec": "2I"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2024 Exam 2 Q9a",
+          "sec": "10A"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2025 Exam 2 Q4e",
+          "sec": "2E"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 7B Q13",
+          "src": "VCAA 2019 Exam 1 Matrices Q1"
+         },
+         {
+          "ref": "Edrolo U3&4 7B Q14",
+          "src": "VCAA 2016 Exam 1 Matrices Q1"
+         }
+        ],
+        "cas": [
+         "matrix-operations"
+        ],
+        "casYouTry": "Edrolo 7B WE2 Method 2 (3C on CAS)",
+        "note": "Edrolo U1&2 5B WE1 (is A + B defined?) and WE5 (find a in a scalar matrix equation) are spare You trys for Examples 12 and 11."
        }
       },
       {
@@ -8692,7 +8929,119 @@
            "note": "The 10D section"
           }
          ]
-        }
+        },
+        "keyVocab": [
+         "AB is defined when columns of A = rows of B; the order of AB is (rows of A) × (columns of B)",
+         "Multiply row by column: multiply matching elements and add",
+         "Order matters: AB ≠ BA in general",
+         "Summing matrix: a row or column matrix of 1s; A × column of 1s sums the rows, row of 1s × A sums the columns",
+         "Powers: A² = A × A (A must be square)"
+        ],
+        "weDo": [
+         {
+          "n": 17,
+          "sub": "10D",
+          "title": "Is a matrix product defined?",
+          "youTry": "Edrolo 7C WE1",
+          "video": "Cambridge GO · 10D Resources"
+         },
+         {
+          "n": 18,
+          "sub": "10D",
+          "title": "Determining the order of a matrix product",
+          "youTry": "Edrolo U1&2 5C WE1",
+          "video": "Cambridge GO · 10D Resources"
+         },
+         {
+          "n": 19,
+          "sub": "10D",
+          "title": "Multiplying a row matrix by a column matrix (by hand)",
+          "youTry": "Written (modelled on Cambridge Ex 19) · YT-10D-19",
+          "video": "Cambridge GO · 10D Resources"
+         },
+         {
+          "n": 20,
+          "sub": "10D",
+          "title": "Multiplying a rectangular matrix by a column matrix (by hand)",
+          "youTry": "Edrolo 7C WE2",
+          "video": "Cambridge GO · 10D Resources"
+         },
+         {
+          "n": 21,
+          "sub": "10D",
+          "title": "Using matrix multiplication to sum the rows and columns of a matrix",
+          "youTry": "Edrolo 7C WE3",
+          "video": "Cambridge GO · 10D Resources"
+         },
+         {
+          "n": 22,
+          "sub": "10D",
+          "title": "A practical application of matrix multiplication",
+          "youTry": "Edrolo U1&2 5D WE1",
+          "video": "Cambridge GO · 10D Resources"
+         },
+         {
+          "n": 23,
+          "sub": "10D",
+          "title": "Evaluating matrix expressions involving powers",
+          "youTry": "Edrolo 7C WE4",
+          "video": "Cambridge GO · 10D Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 4D checklist #7",
+          "text": "I can determine if matrix multiplication is possible for two matrices."
+         },
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 4D checklist #9",
+          "text": "I can perform matrix multiplication by hand."
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 5C Q16",
+          "text": "VCAA 2020 Exam 1 Matrices Q2 (79%)"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2024 Exam 1 Q26",
+          "sec": "10C"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2024 Exam 1 Q8",
+          "sec": "3A"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2024 Exam 2 Q9c",
+          "sec": "10C"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2026 Exam 2 Q5b",
+          "sec": "3B"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 7C Q17",
+          "src": "VCAA 2017 Exam 2 Matrices Q1a"
+         },
+         {
+          "ref": "Edrolo U3&4 7C Q18",
+          "src": "VCAA 2018 Exam 1 Matrices Q2"
+         }
+        ],
+        "cas": [
+         "matrix-operations"
+        ],
+        "casYouTry": "Edrolo 7C WE2 Method 2 (PQ on CAS)",
+        "note": "Edrolo U1&2 5C WE2 (XY by hand), 5C WE3 (B²) and 5D WE2 (carnival snacks) are spare You trys for Examples 20, 23 and 22."
        }
       },
       {
@@ -8765,7 +9114,102 @@
            "note": "The 10E section"
           }
          ]
-        }
+        },
+        "keyVocab": [
+         "Identity matrix I: 1s on the leading diagonal, 0s elsewhere; AI = IA = A",
+         "A and B are inverses if AB = BA = I; the inverse of A is A⁻¹",
+         "Determinant of [a b; c d] = ad − bc",
+         "det(A) = 0 → A is singular: no inverse",
+         "AX = B → X = A⁻¹B (pre-multiply); XA = B → X = BA⁻¹ (post-multiply)"
+        ],
+        "weDo": [
+         {
+          "n": 24,
+          "sub": "10E",
+          "title": "Demonstrating that two matrices are inverses",
+          "youTry": "Written (modelled on Cambridge Ex 24) · YT-10E-24",
+          "video": "Cambridge GO · 10E Resources"
+         },
+         {
+          "n": 25,
+          "sub": "10E",
+          "title": "Finding the determinant of a 2 × 2 matrix",
+          "youTry": "Edrolo 7D WE1a",
+          "video": "Cambridge GO · 10E Resources"
+         },
+         {
+          "n": 26,
+          "sub": "10E",
+          "title": "Using the rule to find the inverse of a 2 × 2 matrix",
+          "youTry": "Edrolo 7D WE2",
+          "video": "Cambridge GO · 10E Resources"
+         },
+         {
+          "n": 27,
+          "sub": "10E",
+          "title": "Solving matrix equations",
+          "youTry": "Edrolo U1&2 5F WE1",
+          "video": "Cambridge GO · 10E Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 4D checklist #11",
+          "text": "I can identify and construct an identity matrix of a given size."
+         },
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 4E checklist #12",
+          "text": "I can find the inverse of a matrix."
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 5F Q15",
+          "text": "VCAA 2017 Exam 2 Matrices Q1ci (60%)"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 Exam 1 Q26",
+          "sec": "10D"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2026 Exam 1 Q1",
+          "sec": "1F"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2023 Exam 2 Q9b",
+          "sec": "10D"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2025 Exam 2 Q6a",
+          "sec": "5A"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 7D Q15",
+          "src": "VCAA 2018 Exam 1 Matrices Q1"
+         },
+         {
+          "ref": "Edrolo U3&4 7D Q16",
+          "src": "VCAA 2020 Exam 2 Matrices Q2"
+         },
+         {
+          "ref": "Edrolo U3&4 7D Q17",
+          "src": "VCAA 2016 Exam 1 Matrices Q3"
+         }
+        ],
+        "cas": [
+         "matrix-det-inverse"
+        ],
+        "casYouTry": "Edrolo 7D WE1b (determinant on CAS)",
+        "note": "Edrolo 7D WE3 (simultaneous equations with matrices) and U1&2 5F WE2 (AX = B) are spare You trys for Example 27. U1&2 5E WE1–3 are spares for Examples 25–26."
        }
       },
       {
@@ -8857,7 +9301,113 @@
            "note": "The 10F and 10G sections"
           }
          ]
-        }
+        },
+        "keyVocab": [
+         "Binary matrix: every element is 0 or 1",
+         "Permutation matrix: a square binary matrix with exactly one 1 in each row and column; PA reorders the rows of A, AP the columns",
+         "P⁻¹ = Pᵀ for a permutation matrix",
+         "Communication matrix: 1 = a one-step (direct) link; C² counts two-step links; C + C² = one- and two-step links",
+         "Dominance matrix: 1 = row player dominates column player; rank by row sums of D (then D + D² if tied)"
+        ],
+        "weDo": [
+         {
+          "n": 28,
+          "sub": "10F",
+          "title": "Applying a permutation matrix",
+          "youTry": "Edrolo 7E WE1",
+          "video": "Cambridge GO · 10F Resources"
+         },
+         {
+          "n": 29,
+          "sub": "10F",
+          "title": "Finding a permutation matrix",
+          "youTry": "Edrolo 7E WE3",
+          "video": "Cambridge GO · 10F Resources"
+         },
+         {
+          "n": 30,
+          "sub": "10F",
+          "title": "The inverse of a permutation matrix",
+          "youTry": "Written (modelled on Cambridge Ex 30) · YT-10F-30",
+          "video": "Cambridge GO · 10F Resources"
+         },
+         {
+          "n": 31,
+          "sub": "10F",
+          "title": "Constructing a communication matrix",
+          "youTry": "Edrolo 7F WE1",
+          "video": "Cambridge GO · 10F Resources"
+         },
+         {
+          "n": 32,
+          "sub": "10G",
+          "title": "Determining dominance",
+          "youTry": "Edrolo 7F WE2",
+          "video": "Cambridge GO · 10G Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 4F checklist #14",
+          "text": "I can represent a road network in a matrix."
+         },
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 4F checklist #15",
+          "text": "I can summarise relationships in a network in a matrix."
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 5D Q14",
+          "text": "VCAA 2019 Exam 1 Matrices Q7 (adapted by Edrolo; 54%)"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 Exam 1 Q27",
+          "sec": "10E"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2024 Exam 1 Q13",
+          "sec": "5C"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2025 NHT Exam 2 Q11b",
+          "sec": "10E"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2023 Exam 2 Q1bi",
+          "sec": "1F"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 7E Q9",
+          "src": "VCAA 2018 Exam 1 Matrices Q4"
+         },
+         {
+          "ref": "Edrolo U3&4 7E Q10",
+          "src": "VCAA 2020 Exam 1 Matrices Q3"
+         },
+         {
+          "ref": "Edrolo U3&4 7F Q12",
+          "src": "VCAA 2017 Exam 1 Matrices Q5"
+         },
+         {
+          "ref": "Edrolo U3&4 7F Q13",
+          "src": "VCAA 2021 Exam 2 Matrices Q2"
+         }
+        ],
+        "cas": [
+         "matrix-operations"
+        ],
+        "casYouTry": "Edrolo 7F WE1b (C + C² on CAS)",
+        "note": "Edrolo 7E WE2 (row permutation) and U1&2 5D WE3 are spare You trys for Examples 28 and 31. Spare exits (not reserved): Edrolo 7E Q8 (VCAA 2016 E1 Matrices Q2), 7E Q11 (VCAA 2019 E2 Matrices Q2d, 20%)."
        }
       },
       {
