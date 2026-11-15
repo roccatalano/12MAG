@@ -1,0 +1,641 @@
+{
+ "_about": "Master CAS skill list (Rocco, 15 Nov): each skill once, with condensed TI-Nspire and ClassPad steps plus videos. Lesson cards list skill ids in card.cas; the planner, slides, worksheets and bound reference cards read from here. Empty steps = to write on first use (check against the official CAS guides / videos).",
+ "skills": [
+  {
+   "id": "stats-list",
+   "skill": "Setting up the statistics app",
+   "subs": [
+    "1A",
+    "1B"
+   ],
+   "ti": [
+    "New document → Lists & Spreadsheet.",
+    "Name a column (top cell, e.g. <i>marks</i>).",
+    "Enter the data down the column."
+   ],
+   "classpad": [
+    "Open the Statistics app.",
+    "Name a list (top cell, e.g. <i>marks</i>).",
+    "Enter the data down the list."
+   ],
+   "tip": "",
+   "videos": {
+    "ti": [
+     {
+      "title": "Analysing data | Getting Started Series – Lists & Spreadsheets",
+      "url": "https://www.youtube.com/watch?v=qDZRQeUvC0I"
+     }
+    ],
+    "classpad": [
+     {
+      "title": "ClassPad Help 400 – Statistics: basic settings and actions",
+      "url": "https://www.youtube.com/watch?v=Qqg8vWK3SE8"
+     }
+    ]
+   }
+  },
+  {
+   "id": "histogram",
+   "skill": "Creating a histogram",
+   "subs": [
+    "1C",
+    "1D",
+    "1E"
+   ],
+   "ti": [
+    "Lists & Spreadsheet: name a column, enter the data.",
+    "Add Data & Statistics; put the variable on the x-axis.",
+    "Menu › Plot Type › Histogram.",
+    "Menu › Plot Properties › Histogram Properties › Bin Settings › Equal Bin Width: set width and alignment (start).",
+    "Window/Zoom › Zoom-Data. Hover over a bar to read it."
+   ],
+   "classpad": [
+    "Statistics app: name a list, enter the data.",
+    "SetGraph › Setting: Draw On, Type Histogram, XList main\\<i>list</i>, Freq 1. Set.",
+    "Tap the graph icon.",
+    "Set Interval: HStart (start), HStep (width). OK.",
+    "Analysis › Trace to read each bar."
+   ],
+   "tip": "",
+   "videos": {
+    "ti": [
+     {
+      "title": "Creating histograms | Getting Started Series – Data & Statistics",
+      "url": "https://www.youtube.com/watch?v=YrluejAQRK4"
+     }
+    ],
+    "classpad": [
+     {
+      "title": "ClassPad Help 406 – Create a histogram from a list",
+      "url": "https://www.youtube.com/watch?v=2YuJoKS4XvM"
+     },
+     {
+      "title": "ClassPad Help 407 – Create a histogram from a frequency table",
+      "url": "https://www.youtube.com/watch?v=E3JIz_SDywE"
+     },
+     {
+      "title": "ClassPad Help 440 – Histogram class intervals",
+      "url": "https://www.youtube.com/watch?v=nnJtqIB6yWM"
+     }
+    ]
+   }
+  },
+  {
+   "id": "dotplot",
+   "skill": "Creating a dot plot",
+   "subs": [
+    "1C",
+    "1D",
+    "1E"
+   ],
+   "ti": [],
+   "classpad": [],
+   "tip": "",
+   "videos": {
+    "ti": [
+     {
+      "title": "Dot plots & box plots | Getting Started Series – Data & Statistics",
+      "url": "https://www.youtube.com/watch?v=73Ymuvv-BU8"
+     }
+    ],
+    "classpad": []
+   }
+  },
+  {
+   "id": "logs",
+   "skill": "Finding logs (base 10)",
+   "subs": [
+    "1C",
+    "1D",
+    "1E"
+   ],
+   "ti": [
+    "Calculator: type <b>log(45)</b>, enter.",
+    "Undo a log: type <b>10^2.7125</b>, enter."
+   ],
+   "classpad": [
+    "Main: type <b>log(45)</b>, EXE.",
+    "Undo a log: type <b>10^2.7125</b>, EXE."
+   ],
+   "tip": "",
+   "videos": {
+    "ti": [
+     {
+      "title": "Settings and calculations | Getting Started Series – Calculator",
+      "url": "https://www.youtube.com/watch?v=35RcQzXqj6o"
+     }
+    ],
+    "classpad": [
+     {
+      "title": "ClassPad Help 007 – Simple calculations in Main",
+      "url": "https://www.youtube.com/watch?v=Zb9V3RwXVLA"
+     }
+    ]
+   }
+  },
+  {
+   "id": "data-walkthrough",
+   "skill": "Full walkthrough: dot plots, boxplots and histograms",
+   "subs": [
+    "1C",
+    "1D",
+    "1E"
+   ],
+   "ti": [],
+   "classpad": [],
+   "tip": "",
+   "videos": {
+    "ti": [
+     {
+      "title": "Data analysis: box-plots, dot-plots and histograms (long walkthrough)",
+      "url": "https://www.youtube.com/watch?v=wCb6z1IbVy8&t=965s"
+     }
+    ],
+    "classpad": []
+   }
+  },
+  {
+   "id": "one-var-stats",
+   "skill": "Calculating summary statistics (mean, median, standard deviation)",
+   "subs": [
+    "1F"
+   ],
+   "ti": [
+    "Lists & Spreadsheet: name a list, enter the data.",
+    "Add Calculator › Menu › Statistics › Stat Calculations › One-Variable Statistics. Num of Lists: 1.",
+    "X1 List: the list (Frequency List: 1, or the frequency column). OK.",
+    "Read x̄, <b>sx</b>, n, MinX, Q₁X, MedianX, Q₃X, MaxX."
+   ],
+   "classpad": [
+    "Statistics app: name a list, enter the data.",
+    "Calc › One-Variable.",
+    "XList: main\\<i>list</i>; Freq: 1 (or the frequency list). OK.",
+    "Read x̄, <b>sx</b>, n; scroll for minX, Q₁, Med, Q₃, maxX."
+   ],
+   "tip": "Use sx, not σx. With a frequency table, check that n = total frequency.",
+   "videos": {
+    "ti": [
+     {
+      "title": "Analysing data | Getting Started Series – Lists & Spreadsheets",
+      "url": "https://www.youtube.com/watch?v=qDZRQeUvC0I"
+     },
+     {
+      "title": "Data analysis – univariate data (long walkthrough)",
+      "url": "https://www.youtube.com/watch?v=lqml9PBBhV0&t=630s"
+     }
+    ],
+    "classpad": [
+     {
+      "title": "ClassPad Help 401 – Statistical calcs from a list",
+      "url": "https://www.youtube.com/watch?v=K93TBJP-uaA"
+     },
+     {
+      "title": "ClassPad Help 402 – Statistical calcs from a frequency table",
+      "url": "https://www.youtube.com/watch?v=GjbQKBD9f00"
+     }
+    ]
+   }
+  },
+  {
+   "id": "boxplot",
+   "skill": "Creating a boxplot",
+   "subs": [
+    "1G"
+   ],
+   "ti": [
+    "Lists & Spreadsheet: name a list, enter the data.",
+    "Add Data & Statistics; put the list on the x-axis.",
+    "Menu › Plot Type › Box Plot (outliers show as dots).",
+    "Menu › Analyze › Graph Trace to read the values."
+   ],
+   "classpad": [
+    "Statistics app: name a list, enter the data.",
+    "SetGraph: Draw On · Type MedBox · XList main\\<i>list</i> · Freq 1.",
+    "Tick <b>Show Outliers</b>; Set; plot.",
+    "Tap Trace; move with the cursor arrows."
+   ],
+   "tip": "",
+   "videos": {
+    "ti": [
+     {
+      "title": "Dot plots & box plots | Getting Started Series – Data & Statistics",
+      "url": "https://www.youtube.com/watch?v=73Ymuvv-BU8"
+     },
+     {
+      "title": "Data analysis: box-plots, dot-plots and histograms (long walkthrough)",
+      "url": "https://www.youtube.com/watch?v=wCb6z1IbVy8&t=965s"
+     }
+    ],
+    "classpad": [
+     {
+      "title": "ClassPad Help 403 – Create a boxplot from a list",
+      "url": "https://www.youtube.com/watch?v=HBS1g3cja2g"
+     },
+     {
+      "title": "ClassPad Help 404 – Create a boxplot from a frequency table",
+      "url": "https://www.youtube.com/watch?v=sw2xy8_x1k0"
+     }
+    ]
+   }
+  },
+  {
+   "id": "parallel-boxplots",
+   "skill": "Creating parallel boxplots",
+   "subs": [
+    "1G",
+    "2C"
+   ],
+   "ti": [],
+   "classpad": [],
+   "tip": "",
+   "videos": {
+    "ti": [
+     {
+      "title": "Dot plots & box plots | Getting Started Series – Data & Statistics",
+      "url": "https://www.youtube.com/watch?v=73Ymuvv-BU8"
+     },
+     {
+      "title": "Data analysis: box-plots, dot-plots and histograms (long walkthrough)",
+      "url": "https://www.youtube.com/watch?v=wCb6z1IbVy8&t=965s"
+     }
+    ],
+    "classpad": [
+     {
+      "title": "ClassPad Help 405 – Create multiple boxplots",
+      "url": "https://www.youtube.com/watch?v=NCoE4Z-irZ0"
+     }
+    ]
+   }
+  },
+  {
+   "id": "z-score",
+   "skill": "Calculating z-scores",
+   "subs": [
+    "1H",
+    "1I"
+   ],
+   "ti": [
+    "Calculator: type <b>(172−160)/8</b> with the brackets, enter.",
+    "Many values: in Lists & Spreadsheet use a column formula <b>=(a[]−160)/8</b>."
+   ],
+   "classpad": [
+    "Main: type <b>(172−160)÷8</b> with the brackets, EXE.",
+    "Many values: Statistics app, type <b>(list1−160)÷8</b> into list2’s Cal row."
+   ],
+   "tip": "Brackets matter: without them the CAS divides first.",
+   "videos": {
+    "ti": [
+     {
+      "title": "Calculating and understanding z-scores with TI-nspire",
+      "url": "https://www.youtube.com/watch?v=yrR9IALJD6g"
+     }
+    ],
+    "classpad": [
+     {
+      "title": "ClassPad Help 007 – Simple calculations in Main",
+      "url": "https://www.youtube.com/watch?v=Zb9V3RwXVLA"
+     }
+    ]
+   }
+  },
+  {
+   "id": "normal-probability",
+   "skill": "Normal probability calculations",
+   "subs": [
+    "1H",
+    "1I"
+   ],
+   "ti": [],
+   "classpad": [],
+   "tip": "",
+   "videos": {
+    "ti": [],
+    "classpad": [
+     {
+      "title": "ClassPad Help 80 – Normal probability calculations",
+      "url": "https://www.youtube.com/watch?v=OGBTcuB7S8E"
+     },
+     {
+      "title": "ClassPad Help 470 – Normal probability calculations",
+      "url": "https://www.youtube.com/watch?v=awgngSed02c"
+     },
+     {
+      "title": "ClassPad Help 81 – Inverse normal probability calculations",
+      "url": "https://www.youtube.com/watch?v=3VFcgs8Mp40"
+     }
+    ]
+   },
+   "note": "Not used in General Maths (the 68–95–99.7% rule replaces normCdf). Kept for reference only."
+  },
+  {
+   "id": "scatterplot",
+   "skill": "Creating a scatterplot",
+   "subs": [
+    "2D",
+    "2E"
+   ],
+   "ti": [],
+   "classpad": [],
+   "tip": "",
+   "videos": {
+    "ti": [
+     {
+      "title": "Scatterplots | Getting Started Series – Lists & Spreadsheets",
+      "url": "https://www.youtube.com/watch?v=AMH-Dj-VYm8"
+     },
+     {
+      "title": "Analysing scatterplots | Getting Started Series – Data & Statistics",
+      "url": "https://www.youtube.com/watch?v=97ptJ2fbafM"
+     },
+     {
+      "title": "Statistical plots & bivariate data | Getting Started Series – Data & Statistics",
+      "url": "https://www.youtube.com/watch?v=5ZrJDq4RqD4&t=364s"
+     }
+    ],
+    "classpad": [
+     {
+      "title": "ClassPad Help 411 – Scatterplot and regression",
+      "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
+     }
+    ]
+   }
+  },
+  {
+   "id": "correlation-r",
+   "skill": "Finding the correlation coefficient r",
+   "subs": [
+    "2F"
+   ],
+   "ti": [],
+   "classpad": [],
+   "tip": "",
+   "videos": {
+    "ti": [
+     {
+      "title": "How to perform linear regression with TI-nspire",
+      "url": "https://www.youtube.com/watch?v=Xse7Aqb0fLI"
+     }
+    ],
+    "classpad": [
+     {
+      "title": "ClassPad Help 411 – Scatterplot and regression",
+      "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
+     }
+    ]
+   }
+  },
+  {
+   "id": "r-and-r2",
+   "skill": "Finding r and r²",
+   "subs": [
+    "2G",
+    "2H"
+   ],
+   "ti": [],
+   "classpad": [],
+   "tip": "",
+   "videos": {
+    "ti": [
+     {
+      "title": "How to perform linear regression with TI-nspire",
+      "url": "https://www.youtube.com/watch?v=Xse7Aqb0fLI"
+     }
+    ],
+    "classpad": [
+     {
+      "title": "ClassPad Help 411 – Scatterplot and regression",
+      "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
+     }
+    ]
+   }
+  },
+  {
+   "id": "lsrl",
+   "skill": "Finding the least squares regression line",
+   "subs": [
+    "3A"
+   ],
+   "ti": [],
+   "classpad": [],
+   "tip": "",
+   "videos": {
+    "ti": [
+     {
+      "title": "How to perform linear regression with TI-nspire",
+      "url": "https://www.youtube.com/watch?v=Xse7Aqb0fLI"
+     }
+    ],
+    "classpad": [
+     {
+      "title": "ClassPad Help 411 – Scatterplot and regression",
+      "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
+     }
+    ]
+   }
+  },
+  {
+   "id": "lsrl-predict",
+   "skill": "Making predictions from the regression line",
+   "subs": [
+    "3B"
+   ],
+   "ti": [],
+   "classpad": [],
+   "tip": "",
+   "videos": {
+    "ti": [
+     {
+      "title": "How to perform linear regression with TI-nspire",
+      "url": "https://www.youtube.com/watch?v=Xse7Aqb0fLI"
+     }
+    ],
+    "classpad": [
+     {
+      "title": "ClassPad Help 441 – Prediction from regression line",
+      "url": "https://www.youtube.com/watch?v=hr_53Cu1xSs"
+     }
+    ]
+   }
+  },
+  {
+   "id": "residuals",
+   "skill": "Residuals and residual plots",
+   "subs": [
+    "3C"
+   ],
+   "ti": [],
+   "classpad": [],
+   "tip": "",
+   "videos": {
+    "ti": [
+     {
+      "title": "Analysing scatterplots | Getting Started Series – Data & Statistics",
+      "url": "https://www.youtube.com/watch?v=97ptJ2fbafM"
+     }
+    ],
+    "classpad": [
+     {
+      "title": "ClassPad Help 442 – Residuals and residual plots",
+      "url": "https://www.youtube.com/watch?v=q5mm9-QHhlE"
+     }
+    ]
+   }
+  },
+  {
+   "id": "regression-analysis",
+   "skill": "Full regression analysis",
+   "subs": [
+    "3C"
+   ],
+   "ti": [],
+   "classpad": [],
+   "tip": "",
+   "videos": {
+    "ti": [
+     {
+      "title": "How to perform linear regression with TI-nspire",
+      "url": "https://www.youtube.com/watch?v=Xse7Aqb0fLI"
+     }
+    ],
+    "classpad": [
+     {
+      "title": "ClassPad Help 411 – Scatterplot and regression",
+      "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
+     },
+     {
+      "title": "ClassPad Help 442 – Residuals and residual plots",
+      "url": "https://www.youtube.com/watch?v=q5mm9-QHhlE"
+     }
+    ]
+   }
+  },
+  {
+   "id": "transformed-lsrl",
+   "skill": "Fitting a regression line to transformed data",
+   "subs": [
+    "4A",
+    "4B",
+    "4C"
+   ],
+   "ti": [],
+   "classpad": [],
+   "tip": "",
+   "videos": {
+    "ti": [
+     {
+      "title": "How to perform linear regression with TI-nspire",
+      "url": "https://www.youtube.com/watch?v=Xse7Aqb0fLI"
+     }
+    ],
+    "classpad": [
+     {
+      "title": "ClassPad Help 411 – Scatterplot and regression",
+      "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
+     }
+    ]
+   }
+  },
+  {
+   "id": "transformation-check",
+   "skill": "Checking a transformation: residual plot and r²",
+   "subs": [
+    "4D"
+   ],
+   "ti": [],
+   "classpad": [],
+   "tip": "",
+   "videos": {
+    "ti": [
+     {
+      "title": "How to perform linear regression with TI-nspire",
+      "url": "https://www.youtube.com/watch?v=Xse7Aqb0fLI"
+     },
+     {
+      "title": "Analysing scatterplots | Getting Started Series – Data & Statistics",
+      "url": "https://www.youtube.com/watch?v=97ptJ2fbafM"
+     }
+    ],
+    "classpad": [
+     {
+      "title": "ClassPad Help 442 – Residuals and residual plots",
+      "url": "https://www.youtube.com/watch?v=q5mm9-QHhlE"
+     },
+     {
+      "title": "ClassPad Help 411 – Scatterplot and regression",
+      "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
+     }
+    ]
+   }
+  },
+  {
+   "id": "time-series-plot",
+   "skill": "Plotting a time series",
+   "subs": [
+    "5A"
+   ],
+   "ti": [],
+   "classpad": [],
+   "tip": "",
+   "videos": {
+    "ti": [],
+    "classpad": [
+     {
+      "title": "ClassPad Help 412 – xyLine time series",
+      "url": "https://www.youtube.com/watch?v=g8HfR10oVtY"
+     }
+    ]
+   }
+  },
+  {
+   "id": "moving-means",
+   "skill": "Smoothing a time series (moving means)",
+   "subs": [
+    "5B"
+   ],
+   "ti": [],
+   "classpad": [],
+   "tip": "",
+   "videos": {
+    "ti": [],
+    "classpad": [
+     {
+      "title": "ClassPad Help 545 – Smoothing time series",
+      "url": "https://www.youtube.com/watch?v=tzfG4MilCQ4"
+     },
+     {
+      "title": "ClassPad Help 945 – Smoothing time series using mavII",
+      "url": "https://www.youtube.com/watch?v=WMEW4LykEgA"
+     }
+    ]
+   }
+  },
+  {
+   "id": "trend-line",
+   "skill": "Fitting a trend line (least squares)",
+   "subs": [
+    "5E"
+   ],
+   "ti": [],
+   "classpad": [],
+   "tip": "",
+   "videos": {
+    "ti": [
+     {
+      "title": "How to perform linear regression with TI-nspire",
+      "url": "https://www.youtube.com/watch?v=Xse7Aqb0fLI"
+     }
+    ],
+    "classpad": [
+     {
+      "title": "ClassPad Help 411 – Scatterplot and regression",
+      "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
+     },
+     {
+      "title": "ClassPad Help 441 – Prediction from regression line",
+      "url": "https://www.youtube.com/watch?v=hr_53Cu1xSs"
+     }
+    ]
+   }
+  }
+ ]
+}

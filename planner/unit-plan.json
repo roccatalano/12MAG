@@ -150,21 +150,7 @@
          }
         ],
         "cas": [
-         {
-          "skill": "Setting up the statistics app",
-          "classpad": [
-           {
-            "title": "ClassPad Help 400 – Statistics: basic settings and actions",
-            "url": "https://www.youtube.com/watch?v=Qqg8vWK3SE8"
-           }
-          ],
-          "ti": [
-           {
-            "title": "Analysing data | Getting Started Series – Lists & Spreadsheets",
-            "url": "https://www.youtube.com/watch?v=qDZRQeUvC0I"
-           }
-          ]
-         }
+         "stats-list"
         ],
         "materials": [
          {
@@ -452,70 +438,10 @@
          }
         ],
         "cas": [
-         {
-          "skill": "Creating a histogram",
-          "classpad": [
-           {
-            "title": "ClassPad Help 406 – Create a histogram from a list",
-            "url": "https://www.youtube.com/watch?v=2YuJoKS4XvM"
-           },
-           {
-            "title": "ClassPad Help 407 – Create a histogram from a frequency table",
-            "url": "https://www.youtube.com/watch?v=E3JIz_SDywE"
-           }
-          ],
-          "ti": [
-           {
-            "title": "Creating histograms | Getting Started Series – Data & Statistics",
-            "url": "https://www.youtube.com/watch?v=YrluejAQRK4"
-           }
-          ]
-         },
-         {
-          "skill": "Setting histogram class intervals",
-          "classpad": [
-           {
-            "title": "ClassPad Help 440 – Histogram class intervals",
-            "url": "https://www.youtube.com/watch?v=nnJtqIB6yWM"
-           }
-          ],
-          "ti": []
-         },
-         {
-          "skill": "Creating a dot plot",
-          "classpad": [],
-          "ti": [
-           {
-            "title": "Dot plots & box plots | Getting Started Series – Data & Statistics",
-            "url": "https://www.youtube.com/watch?v=73Ymuvv-BU8"
-           }
-          ]
-         },
-         {
-          "skill": "Finding logs (base 10)",
-          "classpad": [
-           {
-            "title": "ClassPad Help 007 – Simple calculations in Main",
-            "url": "https://www.youtube.com/watch?v=Zb9V3RwXVLA"
-           }
-          ],
-          "ti": [
-           {
-            "title": "Settings and calculations | Getting Started Series – Calculator",
-            "url": "https://www.youtube.com/watch?v=35RcQzXqj6o"
-           }
-          ]
-         },
-         {
-          "skill": "Full walkthrough: dot plots, boxplots and histograms",
-          "classpad": [],
-          "ti": [
-           {
-            "title": "Data analysis: box-plots, dot-plots and histograms (long walkthrough)",
-            "url": "https://www.youtube.com/watch?v=wCb6z1IbVy8&t=965s"
-           }
-          ]
-         }
+         "histogram",
+         "dotplot",
+         "logs",
+         "data-walkthrough"
         ],
         "materials": [
          {
@@ -821,29 +747,7 @@
          }
         ],
         "cas": [
-         {
-          "skill": "Calculating summary statistics (mean, median, standard deviation)",
-          "classpad": [
-           {
-            "title": "ClassPad Help 401 – Statistical calcs from a list",
-            "url": "https://www.youtube.com/watch?v=K93TBJP-uaA"
-           },
-           {
-            "title": "ClassPad Help 402 – Statistical calcs from a frequency table",
-            "url": "https://www.youtube.com/watch?v=GjbQKBD9f00"
-           }
-          ],
-          "ti": [
-           {
-            "title": "Analysing data | Getting Started Series – Lists & Spreadsheets",
-            "url": "https://www.youtube.com/watch?v=qDZRQeUvC0I"
-           },
-           {
-            "title": "Data analysis – univariate data (long walkthrough)",
-            "url": "https://www.youtube.com/watch?v=lqml9PBBhV0&t=630s"
-           }
-          ]
-         }
+         "one-var-stats"
         ],
         "cfats": [
          {
@@ -1447,39 +1351,8 @@
          }
         ],
         "cas": [
-         {
-          "skill": "Creating a boxplot",
-          "classpad": [
-           {
-            "title": "ClassPad Help 403 – Create a boxplot from a list",
-            "url": "https://www.youtube.com/watch?v=HBS1g3cja2g"
-           },
-           {
-            "title": "ClassPad Help 404 – Create a boxplot from a frequency table",
-            "url": "https://www.youtube.com/watch?v=sw2xy8_x1k0"
-           }
-          ],
-          "ti": [
-           {
-            "title": "Dot plots & box plots | Getting Started Series – Data & Statistics",
-            "url": "https://www.youtube.com/watch?v=73Ymuvv-BU8"
-           },
-           {
-            "title": "Data analysis: box-plots, dot-plots and histograms (long walkthrough)",
-            "url": "https://www.youtube.com/watch?v=wCb6z1IbVy8&t=965s"
-           }
-          ]
-         },
-         {
-          "skill": "Creating parallel boxplots",
-          "classpad": [
-           {
-            "title": "ClassPad Help 405 – Create multiple boxplots",
-            "url": "https://www.youtube.com/watch?v=NCoE4Z-irZ0"
-           }
-          ],
-          "ti": []
-         }
+         "boxplot",
+         "parallel-boxplots"
         ],
         "materials": [
          {
@@ -1728,39 +1601,8 @@
          }
         ],
         "cas": [
-         {
-          "skill": "Calculating z-scores",
-          "classpad": [
-           {
-            "title": "ClassPad Help 007 – Simple calculations in Main",
-            "url": "https://www.youtube.com/watch?v=Zb9V3RwXVLA"
-           }
-          ],
-          "ti": [
-           {
-            "title": "Calculating and understanding z-scores with TI-nspire",
-            "url": "https://www.youtube.com/watch?v=yrR9IALJD6g"
-           }
-          ]
-         },
-         {
-          "skill": "Normal probability calculations",
-          "classpad": [
-           {
-            "title": "ClassPad Help 80 – Normal probability calculations",
-            "url": "https://www.youtube.com/watch?v=OGBTcuB7S8E"
-           },
-           {
-            "title": "ClassPad Help 470 – Normal probability calculations",
-            "url": "https://www.youtube.com/watch?v=awgngSed02c"
-           },
-           {
-            "title": "ClassPad Help 81 – Inverse normal probability calculations",
-            "url": "https://www.youtube.com/watch?v=3VFcgs8Mp40"
-           }
-          ],
-          "ti": []
-         }
+         "z-score",
+         "normal-probability"
         ],
         "cfats": [
          {
@@ -2906,25 +2748,7 @@
          }
         ],
         "cas": [
-         {
-          "skill": "Creating parallel boxplots",
-          "classpad": [
-           {
-            "title": "ClassPad Help 405 – Create multiple boxplots",
-            "url": "https://www.youtube.com/watch?v=NCoE4Z-irZ0"
-           }
-          ],
-          "ti": [
-           {
-            "title": "Dot plots & box plots | Getting Started Series – Data & Statistics",
-            "url": "https://www.youtube.com/watch?v=73Ymuvv-BU8"
-           },
-           {
-            "title": "Data analysis: box-plots, dot-plots and histograms (long walkthrough)",
-            "url": "https://www.youtube.com/watch?v=wCb6z1IbVy8&t=965s"
-           }
-          ]
-         }
+         "parallel-boxplots"
         ],
         "cfats": [
          {
@@ -3073,29 +2897,7 @@
          }
         ],
         "cas": [
-         {
-          "skill": "Creating a scatterplot",
-          "classpad": [
-           {
-            "title": "ClassPad Help 411 – Scatterplot and regression",
-            "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
-           }
-          ],
-          "ti": [
-           {
-            "title": "Scatterplots | Getting Started Series – Lists & Spreadsheets",
-            "url": "https://www.youtube.com/watch?v=AMH-Dj-VYm8"
-           },
-           {
-            "title": "Analysing scatterplots | Getting Started Series – Data & Statistics",
-            "url": "https://www.youtube.com/watch?v=97ptJ2fbafM"
-           },
-           {
-            "title": "Statistical plots & bivariate data | Getting Started Series – Data & Statistics",
-            "url": "https://www.youtube.com/watch?v=5ZrJDq4RqD4&t=364s"
-           }
-          ]
-         }
+         "scatterplot"
         ],
         "homework": {
          "source": "default",
@@ -3204,21 +3006,7 @@
          }
         ],
         "cas": [
-         {
-          "skill": "Finding the correlation coefficient r",
-          "classpad": [
-           {
-            "title": "ClassPad Help 411 – Scatterplot and regression",
-            "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
-           }
-          ],
-          "ti": [
-           {
-            "title": "How to perform linear regression with TI-nspire",
-            "url": "https://www.youtube.com/watch?v=Xse7Aqb0fLI"
-           }
-          ]
-         }
+         "correlation-r"
         ],
         "cfats": [
          {
@@ -3384,21 +3172,7 @@
          }
         ],
         "cas": [
-         {
-          "skill": "Finding r and r²",
-          "classpad": [
-           {
-            "title": "ClassPad Help 411 – Scatterplot and regression",
-            "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
-           }
-          ],
-          "ti": [
-           {
-            "title": "How to perform linear regression with TI-nspire",
-            "url": "https://www.youtube.com/watch?v=Xse7Aqb0fLI"
-           }
-          ]
-         }
+         "r-and-r2"
         ],
         "homework": {
          "source": "default",
@@ -3591,21 +3365,7 @@
          }
         ],
         "cas": [
-         {
-          "skill": "Finding the least squares regression line",
-          "classpad": [
-           {
-            "title": "ClassPad Help 411 – Scatterplot and regression",
-            "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
-           }
-          ],
-          "ti": [
-           {
-            "title": "How to perform linear regression with TI-nspire",
-            "url": "https://www.youtube.com/watch?v=Xse7Aqb0fLI"
-           }
-          ]
-         }
+         "lsrl"
         ],
         "cfats": [
          {
@@ -3754,21 +3514,7 @@
          }
         ],
         "cas": [
-         {
-          "skill": "Making predictions from the regression line",
-          "classpad": [
-           {
-            "title": "ClassPad Help 441 – Prediction from regression line",
-            "url": "https://www.youtube.com/watch?v=hr_53Cu1xSs"
-           }
-          ],
-          "ti": [
-           {
-            "title": "How to perform linear regression with TI-nspire",
-            "url": "https://www.youtube.com/watch?v=Xse7Aqb0fLI"
-           }
-          ]
-         }
+         "lsrl-predict"
         ],
         "homework": {
          "source": "default",
@@ -3912,40 +3658,8 @@
          }
         ],
         "cas": [
-         {
-          "skill": "Residuals and residual plots",
-          "classpad": [
-           {
-            "title": "ClassPad Help 442 – Residuals and residual plots",
-            "url": "https://www.youtube.com/watch?v=q5mm9-QHhlE"
-           }
-          ],
-          "ti": [
-           {
-            "title": "Analysing scatterplots | Getting Started Series – Data & Statistics",
-            "url": "https://www.youtube.com/watch?v=97ptJ2fbafM"
-           }
-          ]
-         },
-         {
-          "skill": "Full regression analysis",
-          "classpad": [
-           {
-            "title": "ClassPad Help 411 – Scatterplot and regression",
-            "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
-           },
-           {
-            "title": "ClassPad Help 442 – Residuals and residual plots",
-            "url": "https://www.youtube.com/watch?v=q5mm9-QHhlE"
-           }
-          ],
-          "ti": [
-           {
-            "title": "How to perform linear regression with TI-nspire",
-            "url": "https://www.youtube.com/watch?v=Xse7Aqb0fLI"
-           }
-          ]
-         }
+         "residuals",
+         "regression-analysis"
         ],
         "cfats": [
          {
@@ -4086,21 +3800,7 @@
          }
         ],
         "cas": [
-         {
-          "skill": "Fitting a regression line to transformed data",
-          "classpad": [
-           {
-            "title": "ClassPad Help 411 – Scatterplot and regression",
-            "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
-           }
-          ],
-          "ti": [
-           {
-            "title": "How to perform linear regression with TI-nspire",
-            "url": "https://www.youtube.com/watch?v=Xse7Aqb0fLI"
-           }
-          ]
-         }
+         "transformed-lsrl"
         ],
         "cfats": [
          {
@@ -4228,21 +3928,7 @@
          }
         ],
         "cas": [
-         {
-          "skill": "Fitting a regression line to transformed data",
-          "classpad": [
-           {
-            "title": "ClassPad Help 411 – Scatterplot and regression",
-            "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
-           }
-          ],
-          "ti": [
-           {
-            "title": "How to perform linear regression with TI-nspire",
-            "url": "https://www.youtube.com/watch?v=Xse7Aqb0fLI"
-           }
-          ]
-         }
+         "transformed-lsrl"
         ],
         "homework": {
          "source": "default",
@@ -4348,21 +4034,7 @@
          }
         ],
         "cas": [
-         {
-          "skill": "Fitting a regression line to transformed data",
-          "classpad": [
-           {
-            "title": "ClassPad Help 411 – Scatterplot and regression",
-            "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
-           }
-          ],
-          "ti": [
-           {
-            "title": "How to perform linear regression with TI-nspire",
-            "url": "https://www.youtube.com/watch?v=Xse7Aqb0fLI"
-           }
-          ]
-         }
+         "transformed-lsrl"
         ],
         "homework": {
          "source": "default",
@@ -4473,29 +4145,7 @@
          }
         ],
         "cas": [
-         {
-          "skill": "Checking a transformation: residual plot and r²",
-          "classpad": [
-           {
-            "title": "ClassPad Help 442 – Residuals and residual plots",
-            "url": "https://www.youtube.com/watch?v=q5mm9-QHhlE"
-           },
-           {
-            "title": "ClassPad Help 411 – Scatterplot and regression",
-            "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
-           }
-          ],
-          "ti": [
-           {
-            "title": "How to perform linear regression with TI-nspire",
-            "url": "https://www.youtube.com/watch?v=Xse7Aqb0fLI"
-           },
-           {
-            "title": "Analysing scatterplots | Getting Started Series – Data & Statistics",
-            "url": "https://www.youtube.com/watch?v=97ptJ2fbafM"
-           }
-          ]
-         }
+         "transformation-check"
         ],
         "cfats": [
          {
@@ -4692,16 +4342,7 @@
          }
         ],
         "cas": [
-         {
-          "skill": "Plotting a time series",
-          "classpad": [
-           {
-            "title": "ClassPad Help 412 – xyLine time series",
-            "url": "https://www.youtube.com/watch?v=g8HfR10oVtY"
-           }
-          ],
-          "ti": []
-         }
+         "time-series-plot"
         ],
         "cfats": [
          {
@@ -4818,20 +4459,7 @@
          }
         ],
         "cas": [
-         {
-          "skill": "Smoothing a time series (moving means)",
-          "classpad": [
-           {
-            "title": "ClassPad Help 545 – Smoothing time series",
-            "url": "https://www.youtube.com/watch?v=tzfG4MilCQ4"
-           },
-           {
-            "title": "ClassPad Help 945 – Smoothing time series using mavII",
-            "url": "https://www.youtube.com/watch?v=WMEW4LykEgA"
-           }
-          ],
-          "ti": []
-         }
+         "moving-means"
         ],
         "homework": {
          "source": "default",
@@ -4945,20 +4573,7 @@
          }
         ],
         "cas": [
-         {
-          "skill": "Smoothing a time series (moving means)",
-          "classpad": [
-           {
-            "title": "ClassPad Help 545 – Smoothing time series",
-            "url": "https://www.youtube.com/watch?v=tzfG4MilCQ4"
-           },
-           {
-            "title": "ClassPad Help 945 – Smoothing time series using mavII",
-            "url": "https://www.youtube.com/watch?v=WMEW4LykEgA"
-           }
-          ],
-          "ti": []
-         }
+         "moving-means"
         ],
         "homework": {
          "source": "default",
@@ -5445,25 +5060,7 @@
          }
         ],
         "cas": [
-         {
-          "skill": "Fitting a trend line (least squares)",
-          "classpad": [
-           {
-            "title": "ClassPad Help 411 – Scatterplot and regression",
-            "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
-           },
-           {
-            "title": "ClassPad Help 441 – Prediction from regression line",
-            "url": "https://www.youtube.com/watch?v=hr_53Cu1xSs"
-           }
-          ],
-          "ti": [
-           {
-            "title": "How to perform linear regression with TI-nspire",
-            "url": "https://www.youtube.com/watch?v=Xse7Aqb0fLI"
-           }
-          ]
-         }
+         "trend-line"
         ],
         "cfats": [
          {

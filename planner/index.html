@@ -174,7 +174,8 @@ function nests(l){const c=cfs(l),n=a=>(a||[]).reduce((t,g)=>t+(g.items?g.items.l
    +nest('sc','Success criteria',l.successCriteria?.length?grouped(l.successCriteria):'',n(l.successCriteria))
    +nest('sd','Study Design',l.studyDesign?.length?list(l.studyDesign):'',l.studyDesign?.length)
    +nest('voc','Key vocabulary',l.keyVocab?.length?`<ul>${l.keyVocab.map(v=>{const i=v.indexOf(': ');return `<li>${i>0?`<b>${esc(v.slice(0,i))}</b>: ${esc(v.slice(i+2))}`:esc(v)}</li>`}).join('')}</ul>`:'',l.keyVocab?.length)
-   +nest('cas','CAS skills',l.cas?.length?l.cas.map(k=>`<details class="sk"><summary><span>${esc(k.skill)}</span><span class="cnt">${[k.classpad.length?'ClassPad '+k.classpad.length:'',k.ti.length?'TI '+k.ti.length:''].filter(Boolean).join(' · ')}</span></summary><div class="casg"><div><h4>Casio ClassPad</h4>${vids(k.classpad)}</div><div><h4>TI-nspire</h4>${vids(k.ti)}</div></div></details>`).join(''):'',l.cas?.length)
+   +nest('cas','CAS skills',l.cas?.length?l.cas.map(id=>CAS[id]).filter(Boolean).map(k=>`<details class="sk"><summary><span>${esc(k.skill)}</span><span class="cnt">${k.ti.length||k.classpad.length?'steps · ':''}${(k.videos.ti.length+k.videos.classpad.length)} video${k.videos.ti.length+k.videos.classpad.length==1?'':'s'}</span></summary>${k.note?`<div class="sub" style="padding:0 10px">${esc(k.note)}</div>`:''}<div class="casg"><div><h4>Casio ClassPad</h4>${steps(k.classpad)}${vids(k.videos.classpad)}</div><div><h4>TI-nspire</h4>${steps(k.ti)}${vids(k.videos.ti)}</div></div>${k.tip?`<div class="sub" style="padding:0 10px 8px"><b>Tip:</b> ${k.tip}</div>`:''}</details>`).join(''):'',l.cas?.length)
+   +nest('vid','Self-study videos',lessonVids(l).length?`<div class="casg" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">${lessonVids(l).map(v=>`<div><div class="sub"><b>${esc(v.sub)}</b> · ${esc(v.channel)} · ${esc(v.length)}${v.status!='approved'?' · <span class="ms draft">To check</span>':''}</div>${vids([v])}</div>`).join('')}</div>`:'',lessonVids(l).length)
    +nest('donow','Do Now',l.doNow?.length?`<ul class="apk">${l.doNow.map(x=>`<li><span class="ak ex">${esc(x.exam)}</span> ${esc(x.ref)}</li>`).join('')}</ul>`:'',l.doNow?.length)
    +nest('apk','APK (prior knowledge)',l.apk?.length?`<ul class="apk">${l.apk.map(x=>`<li><span class="ak ${x.kind=='Exam'?'ex':''}">${x.kind=='Exam'?'Exam Q':'Skill'}</span> ${esc(x.text)}<div class="sub">${esc(x.ref)}</div></li>`).join('')}</ul>`:'',l.apk?.length)
    +nest('wedo','Worked examples &amp; you trys',l.weDo?.length?`<ol class="wedo">${l.weDo.map(x=>`<li><span class="sub">${esc(x.sub)}</span> <b>Example ${x.n}</b> · ${esc(x.title)}${x.video?`<span class="cgo" title="${esc(x.video)}">▶ video</span>`:''}<div class="${x.youTry&&x.youTry!='TBM'?'ytry':'ytry none'}">${x.youTry=='TBM'?'You try: to be mapped':x.youTry?'You try: '+esc(x.youTry):'No you try'}</div></li>`).join('')}</ol>${l.weDoNote?`<div class="sub">${esc(l.weDoNote)}</div>`:''}`:'',l.weDo?.length)
@@ -182,6 +183,8 @@ function nests(l){const c=cfs(l),n=a=>(a||[]).reduce((t,g)=>t+(g.items?g.items.l
    +nest('hw','Coursework',l.homework?.sets?.length?l.homework.sets.map(s=>`<h4>${esc(s.title)}</h4>${s.items.length?`<ul class="apk">${s.items.map(i=>`<li class="hwrow"><span class="hws">${esc(i.skill)}</span><b>${esc(i.q)}</b></li>`).join('')}</ul>`:''}${s.note?`<div class="sub">${esc(s.note)}</div>`:''}`).join(''):'',l.homework?.sets?.length?l.homework.sets.length+' exercise'+(l.homework.sets.length>1?'s':''):null)}
 const ytId=u=>{const m=String(u).match(/[?&]v=([\w-]{11})/)||String(u).match(/youtu\.be\/([\w-]{11})/);return m?m[1]:''};
 const ytStart=u=>{const m=String(u).match(/[?&]t=(\d+)/);return m?m[1]:''};
+function steps(a){return a?.length?`<ol class="st" style="margin:0 0 6px;padding-left:18px;font-size:12.5px;line-height:1.45">${a.map(x=>`<li>${x}</li>`).join('')}</ol>`:'<div class="empty">Steps to write</div>'}
+function lessonVids(l){const S=l.subchapters||[];return VIDS.filter(v=>S.includes(v.sub))}
 function vids(arr){return (arr||[]).map(v=>{const id=ytId(v.url);return `<div class="vid"><button class="yt" data-yt="${id}" data-start="${ytStart(v.url)}" aria-label="Play ${esc(v.title)}"><img loading="lazy" src="https://i.ytimg.com/vi/${id}/mqdefault.jpg" alt=""></button><div class="vt">${esc(v.title)}</div><a href="${esc(v.url)}" target="_blank" rel="noopener">Open on YouTube ↗</a></div>`}).join('')||'<div class="empty">No video</div>'}
 
 /* ---------- data ---------- */
@@ -204,7 +207,7 @@ function lessons(){const out=[];let n=0;
 function card(l,extra){return `<div class="card t-${l.type} ${l.shell?'shell':''} ${cfs(l).length?'has-cfat':''} ${openId==l.id?'open':''}" data-id="${l.id}">
   <div class="meta"><span>${typeof l.n=='number'?'L'+l.n+(l.section?' · ':''):''}${l.section?esc(l.section):''}</span><span class="tags">${cfs(l).length?`<span class="tag cfat">${cfs(l).length>1?cfs(l).length+' CFATs':'CFAT'}</span>`:''}<span class="tag">${l.shell?'To plan':TYPE[l.type]}</span></span></div>
   <div class="ttl">${esc(l.title)}</div>${extra||''}</div>`}
-const DECKS={};
+const DECKS={},CAS={};let VIDS=[];
 function deckOf(l){const m=(l.materials||[]).find(x=>x.kind=='Guided slides'&&x.file);return m?m.file:null}
 const SHAPES_ON=false; // Rocco, 15 Nov: lesson shapes cleared; fill them in last (set true to bring back the slide-read outline)
 function shapePane(l){
@@ -331,6 +334,8 @@ $('#aosFilter').onchange=()=>render();
 $('#expand').onclick=()=>{expandAll=!expandAll;$('#expand').textContent=expandAll?'Collapse all':'Expand all';render()};
 (async()=>{try{
   UP=await (await fetch('unit-plan.json',{cache:'no-store'})).json();
+  try{(await (await fetch('cas-skills.json',{cache:'no-store'})).json()).skills.forEach(k=>CAS[k.id]=k)}catch(e){}
+  try{VIDS=(await (await fetch('videos.json',{cache:'no-store'})).json()).videos}catch(e){}
   YEARS=await (await fetch('years/index.json',{cache:'no-store'})).json();
   for(const y of YEARS){try{YD[y]=await (await fetch(`years/${y}.json`,{cache:'no-store'})).json()}catch(e){YD[y]=null}}
   render();
