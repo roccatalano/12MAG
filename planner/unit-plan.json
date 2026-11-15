@@ -9561,6 +9561,30 @@
             "pdf": "lessons/CFAT 3.10.1 (10A-10C) solutions.pdf"
            }
           ]
+         },
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: CFAT, Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/10D slides.html",
+          "pdf": "lessons/10D slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "5 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/10D worksheet.html",
+            "pdf": "lessons/10D worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/10D worksheet solutions.html",
+            "pdf": "lessons/10D worksheet solutions.pdf"
+           }
+          ]
          }
         ]
        }
