@@ -44,6 +44,13 @@ Build a lesson with a `tools/deck/<S#>/build.py` that only fills content into th
 - **MC:** answer card → next click "What's the distractor?" → next click the option + why. No distractor card unless there is a real one.
 - **Learn:** rule card + the related key formula/definition cards on top, picture, one tip. **CAS:** TI and ClassPad step cards, then small embedded YouTube cards, then the read-off card.
 
+## Bound reference entries (Rocco, 15 Nov)
+- **One card per subchapter**, in colour, with dashed cut lines so it can be trimmed and stuck in the top left of a double page in the student's A4 bound reference (the rest of the double page is for their own notes). The lesson card's "Bound reference entry" links that lesson's subchapter cards (single or combined for printing).
+- **Half A4 by default; full A4 if it doesn't fit.** One fixed text size for every card (never scale fonts to fill). Fill spare space with useful content, e.g. a VCAA question.
+- Content: Study Design dot points covered, definitions, key ideas, formulas, diagrams, Cambridge examples (cited), condensed TI/ClassPad CAS steps where relevant.
+- **Reuse the lesson's own exam questions** (Do Now, APK, exits) on the card: this does NOT burn them again. Prefer the original VCAA wording when the lesson used an adapted version. The box title names the VCAA source (e.g. 'VCAA 2019 Exam 2 Q1a' + % tile): no extra source line, no Edrolo reference.
+- Build: `tools/bref/build.py` (content in `tools/bref/cards.py`, styles `bref.css`) → `lessons/<sub> bound reference.html` + `<lesson subs> bound reference.html`.
+
 ## Source files (G: drive)
 Root: `G:\Shared drives\1. EKC CURRICULUM\1. KLA Folders\MATHEMATICS\VCE Maths\General Maths U3 & 4\12MAG Course Planner\` (the old `12MAG 2027` folder is archived — don't use it).
 - `00 Admin\` Study Design, curriculum grid, Cambridge sample planner.

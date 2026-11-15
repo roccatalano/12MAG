@@ -1,17 +1,17 @@
-# 12MAG handover — 15 Nov 2026 (updated 12:15)
+# 12MAG handover — 15 Nov 2026 (updated 12:35)
 
 Read `CLAUDE.md` first (rules, item index, **slide template rules**), then this file.
 Repo: `roccatalano/12MAG` (GitHub Pages: roccatalano.github.io/12mag/ → `planner/`). Rocco's dashboard repo `roccatalano/teaching-dashboard-2027` is read-only unless he asks.
 Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through the desktop-app bridge (stage files to read; commit files to write; can't move/rename/delete).
 
-## NEXT JOB: suggested bound reference summaries (one per lesson)
-Rule 2: every lesson gets a **bound reference entry** = one A4 sheet students can put in their single bound reference (allowed in CFATs, SACs and the exams): key ideas, key formulas, simple how-tos and examples. Planner material: "Bound reference entry" (status `todo` on every lesson card).
-- **Start with Chapter 1** (lessons S1–S5: 1A–1I). None are made yet, including 1G.
-- **Content comes from what's already built:** each lesson's Key definitions/formulas slide, Learn slides (own words, cite Cambridge) and CAS steps (`tools/deck/s4/build.py`, `tools/deck/s5/build.py`; S1–S3 are the old layout but have the same content). Short worked "how-to" examples should use the Cambridge Examples already on the slides (cite them). Never write new questions.
-- **Before building, ask Rocco:** (1) one sheet per lesson or one per subchapter; (2) look: match the slides (blue/teal, white cards) or plain black-and-white for photocopying; (3) one side or two; (4) check `02 Sources\Bound references` on G: for any existing example or school format first.
-- **Format:** A4 HTML that opens as A4 pages (inline `a4view.js` + `paged.polyfill.min.js`, see `tools/revision/ch1/build.py`) + a PDF. Save as `lessons/<sub> bound reference.html/.pdf` style names here, and flat on G: as `01 Lesson materials\<subchapters> bound reference.pdf` (e.g. `1H-1I bound reference.pdf`). Then set each card's Bound reference material (`file`, `pdf`, status) in `planner/unit-plan.json`.
-- Normal curves: reuse `drawNorm` from `tools/deck/tpl/tpl.js` (static, with `sh` shading). Boxplots: `drawBox` in `tools/deck/engine.html`.
-- Check every page visually before handing over (rule 12).
+## NEXT JOB: bound reference cards for 1C, 1D and 1E
+Rules are in CLAUDE.md, "Bound reference entries" section (read it first). In short: one colour cut-out card per subchapter; half A4 by default, full A4 if it doesn't fit; ONE fixed text size (never scale fonts to fill); fill spare space with real content (e.g. a VCAA question from that lesson); no Edrolo/source line under VCAA boxes (the title says it).
+- **Model to copy: 1A (half) and 1B (full)**, done 15 Nov: `lessons/1A bound reference.html`, `lessons/1B bound reference.html`, combined `lessons/1A-1B bound reference.html`.
+- **Build:** add each card to `CARDS` in `tools/bref/cards.py` (`size`, `title`, `sd` = Study Design words, `body` HTML, `cite`), add the lesson to `LESSONS` (e.g. `'1C-1E': ['1C','1D','1E']`, = lesson S2), run `python3 tools/bref/build.py`. Box classes: `box` (blue notes), `box f` (formula), `box ex` (green Cambridge example), `box tip` (orange), `box cas` (purple CAS steps), `box vc` (red VCAA question with `<span class="pc">NN% correct</span>` and an `ans` answer strip). Tables `table.t` (`sm` for wide ones). Pictures: inline SVG (see `bars()`/`seg()`), or crop from the VCAA PDF (see `vcaa2017e1_q5.png`).
+- **Content source:** the lesson slides (S2 = 1C–1E, `lessons/S2-slides.html`): Key definitions/formulas, Learn slides, Cambridge Examples, CAS steps (condensed TI + ClassPad, not textbook screenshots), and that lesson's Do Now/APK/exit VCAA questions (reuse is fine, not burnt again; prefer the original VCAA wording; % correct from the examiner report). S1–S3 are the old deck layout: pull text with a quick regex strip of `lessons/S2-slides.html` etc.
+- **Check visually** (Playwright + /usr/bin/google-chrome; wait for `body[data-fit]`, then screenshot each `.page`; also check `.bd` scrollHeight == clientHeight so nothing overflows).
+- **Then:** update the lesson's "Bound reference entry" material in `planner/unit-plan.json` like S1's (status `ready`, `file` = combined file, `copies` one per sub + "print both"), copy the html flat to G: `01 Lesson materials\<sub> bound reference.html`, commit + push.
+- After 1C–1E: 1F, 1G, 1H, 1I (1I is Interactive-Textbook only: definitions only, or merge into 1H — ask Rocco).
 
 ## Done 15 Nov: Lesson 5 slides (1H–1I)
 - `lessons/S5-slides.html` (34 slides), also `01 Lesson materials\1H-1I slides.html` on G:. Build: `tools/deck/s5/build.py` (screenshots: `tools/deck/s5/shoot.py`).

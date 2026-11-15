@@ -183,9 +183,23 @@
          },
          {
           "kind": "Bound reference entry",
-          "desc": "One A4 sheet: key ideas, key formulas, simple how-tos and examples.",
-          "status": "todo",
-          "file": ""
+          "desc": "Cut-out card per subchapter for the bound reference.",
+          "status": "ready",
+          "file": "lessons/1A-1B bound reference.html",
+          "copies": [
+           {
+            "label": "1A",
+            "file": "lessons/1A bound reference.html"
+           },
+           {
+            "label": "1B",
+            "file": "lessons/1B bound reference.html"
+           },
+           {
+            "label": "1A + 1B (print both)",
+            "file": "lessons/1A-1B bound reference.html"
+           }
+          ]
          }
         ],
         "homework": {
@@ -515,7 +529,7 @@
          },
          {
           "kind": "Bound reference entry",
-          "desc": "One A4 sheet: key ideas, key formulas, simple how-tos and examples.",
+          "desc": "Cut-out card per subchapter for the bound reference.",
           "status": "todo",
           "file": ""
          }
@@ -1149,7 +1163,7 @@
          },
          {
           "kind": "Bound reference entry",
-          "desc": "One A4 sheet: key ideas, key formulas, simple how-tos and examples.",
+          "desc": "Cut-out card per subchapter for the bound reference.",
           "status": "todo",
           "file": ""
          },
@@ -1422,7 +1436,7 @@
          },
          {
           "kind": "Bound reference entry",
-          "desc": "One A4 sheet: key ideas, key formulas, simple how-tos and examples.",
+          "desc": "Cut-out card per subchapter for the bound reference.",
           "status": "todo",
           "file": ""
          }
@@ -2004,7 +2018,7 @@
          },
          {
           "kind": "Bound reference entry",
-          "desc": "One A4 sheet: key ideas, key formulas, simple how-tos and examples.",
+          "desc": "Cut-out card per subchapter for the bound reference.",
           "status": "todo",
           "file": ""
          },
