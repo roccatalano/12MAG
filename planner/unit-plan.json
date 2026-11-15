@@ -2515,7 +2515,7 @@
           "n": 1,
           "sub": "2A",
           "title": "Identifying associations as categorical or numerical",
-          "youTry": null,
+          "youTry": "Edrolo U1&2 1A WE1",
           "video": "Cambridge GO · 2A Resources"
          },
          {
@@ -3230,6 +3230,13 @@
           "title": "Calculating the correlation coefficient from the coefficient of determination",
           "youTry": null,
           "video": "Cambridge GO · 2G Resources"
+         },
+         {
+          "n": null,
+          "sub": "2H",
+          "title": "Correlation and causation (no Cambridge Example)",
+          "youTry": "Edrolo 2D WE2",
+          "video": "Cambridge GO · 2H Resources"
          }
         ],
         "apk": [
@@ -3320,8 +3327,7 @@
            "note": "The 2G, 2H sections"
           }
          ]
-        },
-        "note": "2H has no Cambridge Example: Edrolo 2D WE2 (third variable, causation) can be a 2H You try if Rocco wants one."
+        }
        }
       },
       {

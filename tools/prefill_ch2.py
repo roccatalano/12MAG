@@ -15,7 +15,7 @@ DN={
 'gm12-u3-l07':dn(('Exam 1','VCAA 2024 Exam 1 Q9','2F'),('Exam 1','VCAA 2024 NHT Exam 1 Q6','1H'),('Exam 2','VCAA 2025 NHT Exam 2 Q4g','2F'),('Exam 2','VCAA 2024 Exam 2 Q1aii','1F')),
 'gm12-u3-l08':dn(('Exam 1','VCAA 2023 Exam 1 Q10','2H'),('Exam 1','VCAA 2026 Exam 1 Q5','1H'),('Exam 2','VCAA 2024 Exam 2 Q3c','2G'),('Exam 2','VCAA 2024 NHT Exam 2 Q2b','2B')),
 }
-YT={1:None,2:'Edrolo 2C WE1',3:'Edrolo 2C WE2',4:'Edrolo 2A WE1',5:'Edrolo 2A WE4',6:'Edrolo 2A WE2',7:'Edrolo 2A WE3',8:'Edrolo 2A WE5',
+YT={1:'Edrolo U1&2 1A WE1',2:'Edrolo 2C WE1',3:'Edrolo 2C WE2',4:'Edrolo 2A WE1',5:'Edrolo 2A WE4',6:'Edrolo 2A WE2',7:'Edrolo 2A WE3',8:'Edrolo 2A WE5',
     9:'Edrolo 2B WE2',10:'Edrolo 2B WE1',11:'Edrolo 2B WE3',12:'Edrolo 2B WE4',13:'Edrolo U1&2 6B WE3',14:'Edrolo U1&2 6B WE1',15:'Edrolo 2C WE4',16:'Edrolo 2D WE1',
     17:'Edrolo 3C WE1a',18:'Edrolo 3C WE1b',19:None,20:None,21:None}
 def hw(sub,items): return {'title':f'Cambridge · Exercise {sub}','items':[{'skill':s,'q':q} for s,q in items],'note':''}
