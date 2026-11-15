@@ -9195,7 +9195,7 @@
          {
           "kind": "Exam",
           "ref": "Edrolo U1&2 5B Q15",
-          "text": "VCAA 2021 Exam 2 Matrices Q1b (adapted by Edrolo; 50%)"
+          "text": "VCAA 2021 Exam 2 Matrices Q1b (original wording, 5%; Edrolo adapts to 10%; 48%)"
          }
         ],
         "doNow": [
@@ -9234,7 +9234,33 @@
          "matrix-operations"
         ],
         "casYouTry": "Edrolo 7B WE2 Method 2 (3C on CAS)",
-        "note": "Edrolo U1&2 5B WE1 (is A + B defined?) and WE5 (find a in a scalar matrix equation) are spare You trys for Examples 12 and 11."
+        "note": "Edrolo U1&2 5B WE1 (is A + B defined?) and WE5 (find a in a scalar matrix equation) are spare You trys for Examples 12 and 11.",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/10C slides.html",
+          "pdf": "lessons/10C slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "4 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/10C worksheet.html",
+            "pdf": "lessons/10C worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/10C worksheet solutions.html",
+            "pdf": "lessons/10C worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
