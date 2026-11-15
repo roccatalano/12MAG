@@ -1,5 +1,7 @@
 # 12MAG handover — 15 Nov 2026 (updated 15:55)
 
+**16 Nov 10:37 (AoS4 #10):** Chapter 13 test + solutions built (Draft): `tools/test/ch13/build.py` → `lessons/Ch13 test` + `solutions` (Mathspace Ch 8 graphs and networks topic assessment, all 20 Qs, + Mathspace Ch 9 Q3–5 and Q10 shortest path, verbatim, /45, 8 pages each; figures cropped from the PDFs). On G: 01 Lesson materials and the gm12-ch13-test card; 24 ledger rows. **Chapter 13 queue finished**; next AoS 4 task: plan Ch 14.
+
 **16 Nov 10:33 (AoS3 #10):** Ch 10 revision booklet + solutions built (Draft): `tools/revision/ch10/` (build.py; seg.py + mk.py crop each Insight question from the scanned pages; crops/) → `lessons/Ch10-revision-booklet` (+ solutions, 20 pages each): Insight GM1 Unit 4 'Matrices and their applications' MC Q1–30 (Q24, Q29 = transition matrices, left for Ch 11) + GM2 Q1–9, sections 10A–10G; on G: and the Ch 10 test card. seg.py/mk.py are reusable for the Ch 11 booklet (Insight 'Transition matrices' sections). Next AoS 3 task: Ch 10 test.
 **16 Nov 10:28 (AoS2 #9):** Chapter 7 test built (Draft): `tools/test/ch7/build.py` → `lessons/Ch7 test` + `solutions` (Mathspace Ch 5 depreciation and interest topic assessment, all 20 Qs verbatim, /39, 5 pages each), on G: 01 Lesson materials and the l36 card (it had a stray Ch2 test link: replaced). `planner/tests.json` re-run; 20 ledger_manual rows. **Chapter 7 queue finished**; next AoS 2 task: prefill Ch 8 cards.
 

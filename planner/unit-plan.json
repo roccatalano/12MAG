@@ -11419,6 +11419,23 @@
             "pdf": "lessons/Ch13-revision-booklet-solutions.pdf"
            }
           ]
+         },
+         {
+          "kind": "Chapter test",
+          "desc": "Mathspace Ch 8 topic assessment (all 20) + Ch 9 Q3–5, Q10 (shortest path), verbatim, /45.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/Ch13 test.html",
+            "pdf": "lessons/Ch13 test.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/Ch13 test solutions.html",
+            "pdf": "lessons/Ch13 test solutions.pdf"
+           }
+          ]
          }
         ]
        }

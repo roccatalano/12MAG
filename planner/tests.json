@@ -295,6 +295,383 @@
    }
   ]
  },
+ "13": {
+  "chapter": 13,
+  "total": 45,
+  "mc": 12,
+  "sa": 12,
+  "about": "Source (rule 9), copied verbatim: Mathspace General Maths 3&4 'Chapter 8 - Graphs and networks' topic assessment + answer key (all 20 Qs), plus the Ch 13 (shortest path / Dijkstra) items of 'Chapter 9 - Applications of graphs and networks' topic assessment: Q3, Q4, Q5, Q10.",
+  "byLesson": [
+   {
+    "lesson": "8.01",
+    "marks": 2,
+    "qs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "lesson": "8.02",
+    "marks": 3,
+    "qs": [
+     "3",
+     "13"
+    ]
+   },
+   {
+    "lesson": "8.03",
+    "marks": 3,
+    "qs": [
+     "4",
+     "14"
+    ]
+   },
+   {
+    "lesson": "8.04",
+    "marks": 3,
+    "qs": [
+     "5",
+     "15"
+    ]
+   },
+   {
+    "lesson": "8.06",
+    "marks": 3,
+    "qs": [
+     "6",
+     "22a"
+    ]
+   },
+   {
+    "lesson": "8.09",
+    "marks": 2,
+    "qs": [
+     "7",
+     "16"
+    ]
+   },
+   {
+    "lesson": "8.10",
+    "marks": 4,
+    "qs": [
+     "8",
+     "18"
+    ]
+   },
+   {
+    "lesson": "8.05",
+    "marks": 5,
+    "qs": [
+     "9",
+     "19a"
+    ]
+   },
+   {
+    "lesson": "9.03",
+    "marks": 3,
+    "qs": [
+     "10",
+     "24"
+    ]
+   },
+   {
+    "lesson": "9.04",
+    "marks": 2,
+    "qs": [
+     "11",
+     "12"
+    ]
+   },
+   {
+    "lesson": "8.07",
+    "marks": 1,
+    "qs": [
+     "17"
+    ]
+   },
+   {
+    "lesson": "8.11",
+    "marks": 6,
+    "qs": [
+     "20a"
+    ]
+   },
+   {
+    "lesson": "8.08",
+    "marks": 8,
+    "qs": [
+     "21a",
+     "23"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "q": "1",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q1 · 8.01",
+    "text": "A simple graph has 5 vertices with degrees 1, 2, 3, 3, 3. How many edges does this graph have?",
+    "answer": "B"
+   },
+   {
+    "q": "2",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q2 · 8.01",
+    "text": "Which of the following best describes a directed graph (digraph)?",
+    "answer": "D"
+   },
+   {
+    "q": "3",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q3 · 8.02",
+    "text": "The adjacency matrix below represents an undirected graph. What is the degree of vertex B ? A B C D A 0 1 1 0…",
+    "answer": "D"
+   },
+   {
+    "q": "4",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q4 · 8.03",
+    "text": "Two graphs are isomorphic if they have the same number of vertices and edges, and the same degree sequence.…",
+    "answer": "A"
+   },
+   {
+    "q": "5",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q5 · 8.04",
+    "text": "A connected planar graph has 9 vertices and 14 edges. How many faces does it have?",
+    "answer": "B"
+   },
+   {
+    "q": "6",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q6 · 8.06",
+    "text": "Consider the graph shown. Which of the following is a valid walk from A to D ?",
+    "answer": "D"
+   },
+   {
+    "q": "7",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q7 · 8.09",
+    "text": "Which of the following is a property of a tree?",
+    "answer": "B"
+   },
+   {
+    "q": "8",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q8 · 8.10",
+    "text": "A weighted graph has the following edges and weights: AB = 4, AC = 7, BC = 2, BD = 5, CD = 3. What is the…",
+    "answer": "D"
+   },
+   {
+    "q": "9",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q9 · 8.05",
+    "text": "The complete graph K 5 has 5 vertices. How many edges does it have?",
+    "answer": "C"
+   },
+   {
+    "q": "10",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q3 · 9.03",
+    "text": "The weighted graph below shows travel times in minutes between suburbs. By inspection, what is the shortest…",
+    "answer": "B"
+   },
+   {
+    "q": "11",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q4 · 9.04",
+    "text": "In Dijkstra's algorithm, when a node is finalised (permanently labelled), it means:",
+    "answer": "B"
+   },
+   {
+    "q": "12",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q5 · 9.04",
+    "text": "Using Dijkstra's algorithm on the network shown, what is the shortest distance from A to D ?",
+    "answer": "B"
+   },
+   {
+    "q": "13",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q10 · 8.02",
+    "text": "Construct the adjacency matrix for the undirected graph shown."
+   },
+   {
+    "q": "14",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q11 · 8.03",
+    "text": "Determine whether the two graphs shown are isomorphic. Justify your answer."
+   },
+   {
+    "q": "15",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q12 · 8.04",
+    "text": "A connected planar graph has v = 7 vertices and f = 6 faces. Use Euler's formula to find the number of edges."
+   },
+   {
+    "q": "16",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q13 · 8.09",
+    "text": "Determine whether the graph below is a tree. Give a reason for your answer."
+   },
+   {
+    "q": "17",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q14 · 8.07",
+    "text": "A graph has 4 vertices each of degree 3. Determine whether this graph has an Eulerian circuit, an Eulerian…"
+   },
+   {
+    "q": "18",
+    "type": "SA",
+    "marks": 3,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q15 · 8.10",
+    "text": "The weighted graph below shows distances (in km) between five towns. By inspection, identify the minimum…"
+   },
+   {
+    "q": "19a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q16 · 8.05",
+    "text": "Rangers would like every pair of locations to be joined directly by a track. How many additional tracks would…"
+   },
+   {
+    "q": "19b",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q16 · 8.05",
+    "text": "Identify the two bridges in the network."
+   },
+   {
+    "q": "19c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q16 · 8.05",
+    "text": "Track T – U is closed after a storm. Explain the effect of this closure on walkers in the park."
+   },
+   {
+    "q": "20a",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q17 · 8.11",
+    "text": "Using Prim's algorithm, starting at P , list the pipes in the order they are added to the minimum spanning…"
+   },
+   {
+    "q": "20b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q17 · 8.11",
+    "text": "State the minimum total length of pipe needed."
+   },
+   {
+    "q": "20c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q17 · 8.11",
+    "text": "Pipe costs $38 per metre to lay. Calculate the cost of laying the pipes in the minimum spanning tree."
+   },
+   {
+    "q": "20d",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q17 · 8.11",
+    "text": "The owner decides that the pipe P – C must be included. Determine the minimum total length of pipe now needed."
+   },
+   {
+    "q": "20e",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q17 · 8.11",
+    "text": "Explain why every spanning tree for this network has exactly five pipes."
+   },
+   {
+    "q": "21a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q18 · 8.08",
+    "text": "Write the adjacency matrix for this network, with rows and columns in the order H , W , L , G , M ."
+   },
+   {
+    "q": "21b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q18 · 8.08",
+    "text": "The square of the adjacency matrix, calculated with a CAS, is shown below. 3 1 3 1 2 1 3 1 3 2 3 1 3 1 2 1 3…"
+   },
+   {
+    "q": "21c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q18 · 8.08",
+    "text": "Explain why the tourist cannot travel along every road exactly once."
+   },
+   {
+    "q": "21d",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q18 · 8.08",
+    "text": "Write a Hamiltonian cycle that starts and finishes at the hotel."
+   },
+   {
+    "q": "21e",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q18 · 8.08",
+    "text": "Find the Hamiltonian cycle that starts and finishes at the hotel and has the shortest total travel time, and…"
+   },
+   {
+    "q": "21f",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q18 · 8.08",
+    "text": "The tourist says that the cycle in part e uses every road in the network. Decide whether the tourist is…"
+   },
+   {
+    "q": "22a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q19 · 8.06",
+    "text": "A → B → C → A → D"
+   },
+   {
+    "q": "22b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q19 · 8.06",
+    "text": "A → C → B → A → D"
+   },
+   {
+    "q": "23",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 8 (graphs and networks) topic assessment Q20 · 8.08",
+    "text": "Consider the graph shown. Determine whether a Hamiltonian cycle exists. If it does, state one such cycle."
+   },
+   {
+    "q": "24",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q10 · 9.03",
+    "text": "The network below shows distances in kilometres between locations in regional Victoria. By inspection, find a…"
+   }
+  ]
+ },
  "2": {
   "chapter": 2,
   "total": 41,
