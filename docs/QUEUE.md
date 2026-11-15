@@ -140,7 +140,7 @@ _Notes for all AoS 2–4 runners (Rocco, 16 Nov):_
 3. `done 16 Nov 01:44 — CFAT 4.13.1 (13A-13B, /13, on 13c card), 4.13.2 (13C-13E, /12, on 13f card), 4.13.3 (13F, /12, on ch13-test card); Edrolo 8A-8D, 8F exercise Qs cropped verbatim; 23 ledger rows; G: copied` **CFATs for Chapter 13** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch13/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
 4. `done 16 Nov 01:58 — followUp lists on CFAT 4.13.1–4.13.3 (Jacaranda U3&4 Topic 9: 9.2–9.5 exercise Qs by Edrolo skill); tools/cfat/ch13/followups.py` **CFAT follow-ups for Chapter 13** (Jacaranda exercises; see notes above).
 5. `done 16 Nov 02:25 — 13A-13B slides (33, PDF 55 pages) + 6-page guided worksheet (student + solutions), HTML+PDF, Draft; new reusable graph helper tools/deck/tpl/net.py (net + amat); on G: and the card` **Lesson gm12-u4-13a13b (13A, 13B)**: slides (`tools/deck/gm12-u4-13a13b/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-6. `todo` **Lesson gm12-u4-13c (13C)**: slides (`tools/deck/gm12-u4-13c/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+6. `in progress 16 Nov 08:49` **Lesson gm12-u4-13c (13C)**: slides (`tools/deck/gm12-u4-13c/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 7. `todo` **Lesson gm12-u4-13d13e (13D, 13E)**: slides (`tools/deck/gm12-u4-13d13e/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 8. `todo` **Lesson gm12-u4-13f (13F)**: slides (`tools/deck/gm12-u4-13f/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 9. `todo` **Chapter 13 revision booklet** + solutions (Insight GM1 + GM2, sections per subchapter). Add to the gm12-ch13-test card.
