@@ -3707,7 +3707,7 @@
          {
           "sub": "2I",
           "items": [
-           "No learning intentions for this subchapter in the printed textbook."
+           "To choose an appropriate graph to display the association between two variables (written for 12MAG: the textbook prints none for 2I)"
           ]
          }
         ],
@@ -3760,7 +3760,43 @@
           "sec": "2B"
          }
         ],
-        "exit": []
+        "exit": [],
+        "successCriteria": [
+         {
+          "sub": "2I",
+          "items": [
+           "I can classify each variable as categorical or numerical.",
+           "I can identify the explanatory and response variables.",
+           "I can choose an appropriate graph for two variables from their types."
+          ]
+         }
+        ],
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, Learn (which graph?).",
+          "status": "draft",
+          "file": "lessons/2I slides.html",
+          "pdf": "lessons/2I slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "1 page: 'Which graph?' table to complete, checklist, coursework.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/2I worksheet.html",
+            "pdf": "lessons/2I worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/2I worksheet solutions.html",
+            "pdf": "lessons/2I worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {

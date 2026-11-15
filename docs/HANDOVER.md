@@ -7,6 +7,11 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 
 
+## 15 Nov 19:20 — Lesson l08 (2I) slides + guided worksheet (runner, task Ch2 #8)
+- `tools/deck/l08/build.py` → `lessons/2I slides.html/.pdf` (13 slides, PDF 17 pages; screenshots `tools/deck/l08/shoot.py`). `tools/deck/l08/worksheet.py` → `lessons/2I worksheet(.html/.pdf)` + `… worksheet solutions` (1 page each). Same names on G: `01 Lesson materials`. Draft on the l08 card.
+- Do Now (card): VCAA 2023 E1 Q10 (59%), 2026 E1 Q5 (report not out), 2024 E2 Q3c (57%), 2024 NHT E2 Q2b (no %). Learn: Cambridge 2I p. 155 table + flowchart. No APK/examples/exits (card). LI/SC written for 12MAG (none printed).
+- For Rocco to check: 2I MaffsGuru link still blank; worksheet is only the guideline table to complete.
+
 ## 15 Nov 19:15 — Lesson l07 (2G-2H) slides + guided worksheet (runner, task Ch2 #7)
 - `tools/deck/l07/build.py` → `lessons/2G-2H slides.html/.pdf` (30 slides, PDF 49 pages; screenshots `tools/deck/l07/shoot.py`). `tools/deck/l07/worksheet.py` → `lessons/2G-2H worksheet(.html/.pdf)` + `… worksheet solutions` (4 pages each). Same names on G: `01 Lesson materials`. Draft on the l07 card.
 - Do Now: VCAA 2025 E1 Q10 (63%) and 2024 E2 Q3d (78%) replace 2024 E1 Q9 (3A) and 2025 NHT E2 Q4g (2G) — see Decisions log; plus 2024 NHT E1 Q6, 2024 E2 Q1aii (77%). APK Cambridge U1&2 7C #6, VCAA 2019 E2 Q4a (84%). Examples 17–21 + Edrolo 3C WE1a/b, YT-2G-19/20/21; 2H You try Edrolo 2D WE2; exits VCAA 2017 E1 Q12 (81%), 2019 E2 Q4c (76%).
