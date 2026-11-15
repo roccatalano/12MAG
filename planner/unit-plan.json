@@ -5575,20 +5575,6 @@
         "cas": [
          "transformation-check"
         ],
-        "cfats": [
-         {
-          "id": "CFAT 1.4.1",
-          "title": "Applying transformations",
-          "covers": [
-           "4A",
-           "4B",
-           "4C"
-          ],
-          "format": "About 20 min · individual · CAS and single bound reference allowed",
-          "status": "Planned",
-          "plan": "Start of the 4D lesson (one subchapter)."
-         }
-        ],
         "homework": {
          "source": "prefill",
          "sets": [
@@ -5613,7 +5599,33 @@
           }
          ]
         },
-        "note": "Spare You try: Edrolo 3D WE1 (transformation wave: which transformations could linearise)."
+        "note": "Spare You try: Edrolo 3D WE1 (transformation wave: which transformations could linearise).",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked example, you try, CAS, exit tasks.",
+          "status": "draft",
+          "file": "lessons/4D slides.html",
+          "pdf": "lessons/4D slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "3 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/4D worksheet.html",
+            "pdf": "lessons/4D worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/4D worksheet solutions.html",
+            "pdf": "lessons/4D worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
