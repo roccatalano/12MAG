@@ -31,7 +31,6 @@ P.append(box('Question 3 · VCAA 2020 Exam 1 Q10', side(q('The data in the table
       + why('Low and high have a natural order (ordinal); no and yes only name a group (nominal).'), NIGHT, 58) + guess('57% · D (24%)'), '1 mark'))
 
 # ---------------------------------------------------------------- 1A
-P.append(PAGE)
 P.append(sect('1A Types of data', 'Example, then you try'))
 P.append(exyt('Example 1 · Types of data', q('Classify the following data as nominal, ordinal, discrete or continuous.')
       + parts([('a', 'The number of chocolate chips in each of 10 cookies is counted.', 'discrete', 'L'), ('b', 'The time taken for 20 students to complete a puzzle is recorded in seconds.', 'continuous', 'L'),
@@ -43,7 +42,6 @@ P.append(exyt('Example 1 · Types of data', q('Classify the following data as no
       + q('<b>3</b> Classify the following numerical variables as either discrete or continuous.') + parts([('a.', '<i>length</i> (m)', 'continuous', 'L'), ('b.', '<i>number of tennis racquets</i>', 'discrete', 'L')])))
 
 # ---------------------------------------------------------------- 1B
-P.append(PAGE)
 # (Examples keep the scaffold; You trys are blank space, answers in red on the solutions copy)
 P.append(sect('1B Displaying and describing categorical data', 'Example, then you try'))
 TH = 'average short tall tall short short average average tall short average short average average average tall tall short average tall tall average average tall'
@@ -63,17 +61,14 @@ P.append(exyt('Example 3 · Constructing a bar chart from a frequency table', q(
   'You try 3', q(TQ) + THT_A + q('Use the frequency table to construct a frequency bar chart.')
       + space(62, barchart(['short', 'average', 'tall'], [6, 10, 8], 10, 2, 'teacher’s height', 'frequency', H=150, mm=80), grow=True)))
 
-P.append(PAGE)
 P.append(exyt('Example 4 · Constructing a percentage segmented bar chart', q('The climate type of 23 countries is classified as ‘cold’, ‘mild’ or ‘hot’.')
       + CLIM + q('Construct a percentage frequency segmented bar chart to display this information.')
-      + segbar([13.0, 60.9, 26.1], ['Cold', 'Mild', 'Hot'], 100, 10, 'Percentage', draw=False, W=220, H=300, mm=75)
+      + segbar([13.0, 60.9, 26.1], ['Cold', 'Mild', 'Hot'], 100, 10, 'Percentage', draw=False, W=220, H=200, mm=62)
       + space(16, 'Cold: 0 to 13.0 · Mild: 13.0 to 13.0 + 60.9 = 73.9 · Hot: 73.9 to 100'),
   'You try 4', q(TQ) + THT_A
-      + parts([('a.', 'Use the frequency table to construct a segmented bar chart.', '', 0), ('b.', 'Use the frequency table to construct a percentage segmented bar chart.', '', 0)])
-      + space(70, '<div class="row"><div style="flex:1"><b>a.</b>' + segbar([6, 10, 8], ['short', 'average', 'tall'], 24, 4, 'frequency', W=170, H=170, mm=42) + '</div>'
-      + '<div style="flex:1"><b>b.</b>' + segbar([25, 41.7, 33.3], ['short', 'average', 'tall'], 100, 20, 'frequency (%)', W=170, H=170, mm=42) + '</div></div>', grow=True)))
+      + parts([('a.', 'Use the frequency table to construct a segmented bar chart.', segbar([6, 10, 8], ['short', 'average', 'tall'], 24, 4, 'frequency', W=200, H=150, mm=48), 50),
+               ('b.', 'Use the frequency table to construct a percentage segmented bar chart.', segbar([25, 41.7, 33.3], ['short', 'average', 'tall'], 100, 20, 'frequency (%)', W=200, H=150, mm=48), 50)])))
 
-P.append(PAGE)
 P.append(exyt('Example 5 · Describing the distribution of a categorical variable', q('In an investigation of the variation of climate type across countries, the climate types of 23 countries were classified as ‘cold’, ‘mild’ or ‘hot’. The data are displayed in a frequency table to show the percentages.')
       + CLIM + q('Use the information in the frequency table to write a concise report on the distribution of climate types across these 23 countries.')
       + report(['The ', ('variable', 'climate types'), ' of ', ('number', '23'), ' ', ('individuals', 'countries'), ' were classified as being ', ('categories', '‘cold’, ‘mild’ or ‘hot’'), '. The ', ('majority / most', 'majority'), ' of the countries, ',
@@ -91,7 +86,6 @@ P.append(box('Exit task 1 · VCAA 2019 Exam 2 Q1a', q('The table shows the <i>da
   + q('Which of the two variables in this data set is an ordinal variable?') + wline('<i>day number</i>') + guess('83%', mcq=False), '1 mark'))
 HEP = [(1, 1.76, 15.34, 41.22), (2, 1.79, 16.96, 42.41), (3, 1.83, 13.87, 46.53), (4, 1.82, 14.23, 40.53), (5, 1.87, 13.78, 40.62), (6, 1.73, 14.50, 45.62), (7, 1.68, 15.08, 42.33), (8, 1.82, 13.13, 40.88),
        (9, 1.83, 14.22, 39.22), (10, 1.87, 13.62, 42.51), (11, 1.87, 12.01, 42.75), (12, 1.80, 12.88, 38.12), (13, 1.83, 12.68, 42.65), (14, 1.87, 12.45, 41.32), (15, 1.78, 11.31, 42.88)]
-P.append(PAGE)
 P.append(box('Exit task 2 · VCAA 2021 Exam 2 Q1a', q('In the sport of heptathlon, athletes compete in seven events.<br>These events are the 100 m hurdles, high jump, shot-put, javelin, 200 m run, 800 m run and long jump.<br>Fifteen female athletes competed to qualify for the heptathlon at the Olympic Games.<br>Their results for three of the heptathlon events – high jump, shot-put and javelin – are shown in the table.')
   + table([['<i>athlete number</i>'] + [h[0] for h in HEP]] + [[n] + [f'{h[k]:.2f}' for h in HEP] for k, n in ((1, '<i>high jump</i> (metres)'), (2, '<i>shot-put</i> (metres)'), (3, '<i>javelin</i> (metres)'))], cls='t tiny')
   + q('Write down the number of numerical variables in the table.') + wline('3 (<i>athlete number</i> is a label)') + guess('52%', mcq=False) + src('Table turned to fit the page.'), '1 mark'))
