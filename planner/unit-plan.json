@@ -8037,7 +8037,7 @@
             "sub": "7A",
             "sc": "",
             "src": "Edrolo 5A Q1",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 5.2 Ex Q5, Q6"
            },
            {
             "q": 2,
@@ -8048,7 +8048,7 @@
             "sub": "7A",
             "sc": "",
             "src": "Edrolo 5A Q4",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 5.2 Ex Q12"
            },
            {
             "q": 3,
@@ -8059,7 +8059,7 @@
             "sub": "7A",
             "sc": "",
             "src": "Edrolo 5A Q9",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 5.2 Ex Q6–8"
            },
            {
             "q": 4,
@@ -8070,7 +8070,7 @@
             "sub": "7B",
             "sc": "",
             "src": "Edrolo 5B Q6",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 5.3 Ex Q1, Q2, Q5"
            },
            {
             "q": 5,
@@ -8081,7 +8081,7 @@
             "sub": "7B",
             "sc": "",
             "src": "Edrolo 5E Q1",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 6.2 Ex Q5–7"
            },
            {
             "q": 6,
@@ -8092,7 +8092,7 @@
             "sub": "7D",
             "sc": "",
             "src": "Edrolo 5C Q1",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 5.4 Ex Q1–4"
            },
            {
             "q": 7,
@@ -8103,7 +8103,7 @@
             "sub": "7A",
             "sc": "",
             "src": "Edrolo 5A Q14",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 5.2 Ex Q8–11"
            },
            {
             "q": 8,
@@ -8114,7 +8114,7 @@
             "sub": "7B",
             "sc": "",
             "src": "Edrolo 5B Q8",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 5.5 Ex Q1–3, Q6, Q7"
            },
            {
             "q": 9,
@@ -8125,7 +8125,7 @@
             "sub": "7D",
             "sc": "",
             "src": "Edrolo 5C Q6",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 5.4 Ex Q5, Q7"
            },
            {
             "q": 10,
@@ -8136,8 +8136,20 @@
             "sub": "7D",
             "sc": "",
             "src": "Edrolo 5F Q2",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 6.3 Ex Q1–3, Q11"
            }
+          ],
+          "followUp": [
+           "Initial term of a recurrence relation: Jacaranda U3&4 (2023) 5.2 Ex Q5, Q6",
+           "Recurrence relation from a sequence: Jacaranda U3&4 (2023) 5.2 Ex Q12",
+           "Generate terms: Jacaranda U3&4 (2023) 5.2 Ex Q6–8",
+           "Flat rate depreciation by recursion: Jacaranda U3&4 (2023) 5.3 Ex Q1, Q2, Q5",
+           "Simple interest recurrence relation: Jacaranda U3&4 (2023) 6.2 Ex Q5–7",
+           "Reducing balance recurrence relation: Jacaranda U3&4 (2023) 5.4 Ex Q1–4",
+           "Generate terms (linear + geometric): Jacaranda U3&4 (2023) 5.2 Ex Q8–11",
+           "Unit cost depreciation by recursion: Jacaranda U3&4 (2023) 5.5 Ex Q1–3, Q6, Q7",
+           "Reducing balance depreciation by recursion: Jacaranda U3&4 (2023) 5.4 Ex Q5, Q7",
+           "Compound interest recurrence relation: Jacaranda U3&4 (2023) 6.3 Ex Q1–3, Q11"
           ]
          }
         ],
@@ -8407,7 +8419,7 @@
             "sub": "7C",
             "sc": "",
             "src": "Edrolo 5D Q1",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 5.3 Ex Q3, Q4, Q8"
            },
            {
             "q": 2,
@@ -8418,7 +8430,7 @@
             "sub": "7C",
             "sc": "",
             "src": "Edrolo 5E Q6",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 6.2 Ex Q1, Q2, Q4"
            },
            {
             "q": 3,
@@ -8429,7 +8441,7 @@
             "sub": "7E",
             "sc": "",
             "src": "Edrolo 5D Q12",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 5.4 Ex Q9–11"
            },
            {
             "q": 4,
@@ -8440,7 +8452,7 @@
             "sub": "7E",
             "sc": "",
             "src": "Edrolo 5F Q8",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 6.4 Ex Q1–4, Q7"
            },
            {
             "q": 5,
@@ -8451,7 +8463,7 @@
             "sub": "7F",
             "sc": "",
             "src": "Edrolo 5G Q1",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 6.6 Ex Q4–7"
            },
            {
             "q": 6,
@@ -8462,7 +8474,7 @@
             "sub": "7F",
             "sc": "",
             "src": "Edrolo 5G Q4",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 6.6 Ex Q9, Q10"
            },
            {
             "q": 7,
@@ -8473,7 +8485,7 @@
             "sub": "7C",
             "sc": "",
             "src": "Edrolo 5D Q4",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 5.3 Ex Q9, Q10"
            },
            {
             "q": 8,
@@ -8484,7 +8496,7 @@
             "sub": "7C",
             "sc": "",
             "src": "Edrolo 5E Q11",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 6.2 Ex Q8–10"
            },
            {
             "q": 9,
@@ -8495,7 +8507,7 @@
             "sub": "7E",
             "sc": "",
             "src": "Edrolo 5D Q14",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 5.4 Ex Q17, Q18, Q20"
            },
            {
             "q": 10,
@@ -8506,8 +8518,20 @@
             "sub": "7F",
             "sc": "",
             "src": "Edrolo 5G Q2",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 6.6 Ex Q4–7"
            }
+          ],
+          "followUp": [
+           "Flat rate depreciation amount: Jacaranda U3&4 (2023) 5.3 Ex Q3, Q4, Q8",
+           "Simple interest over n periods: Jacaranda U3&4 (2023) 6.2 Ex Q1, Q2, Q4",
+           "Read a reducing balance rule: Jacaranda U3&4 (2023) 5.4 Ex Q9–11",
+           "Interpret a compound interest rule: Jacaranda U3&4 (2023) 6.4 Ex Q1–4, Q7",
+           "Effective interest rate: Jacaranda U3&4 (2023) 6.6 Ex Q4–7",
+           "Compare effective rates: Jacaranda U3&4 (2023) 6.6 Ex Q9, Q10",
+           "Flat rate depreciation rule: Jacaranda U3&4 (2023) 5.3 Ex Q9, Q10",
+           "Simple interest rule: Jacaranda U3&4 (2023) 6.2 Ex Q8–10",
+           "Reducing balance: time to reach a value: Jacaranda U3&4 (2023) 5.4 Ex Q17, Q18, Q20",
+           "Nominal to effective rate: Jacaranda U3&4 (2023) 6.6 Ex Q4–7"
           ]
          }
         ]

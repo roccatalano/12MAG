@@ -27,6 +27,9 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 - **15 Nov 22:15 (Ch5 #9):** l22 (5E trend lines and forecasting) built: `lessons/5E slides` (26 slides, CFAT 1.5.2 slide after the exit) + `5E worksheet`/solutions (4 pages), Draft, copied to G: 01 Lesson materials. APK 7E #10 (burnt in l10) dropped. Next Ch5 tasks: revision booklet, test.
 - **15 Nov 22:01 (Ch5 #8):** l21 (5D calculating seasonal indices + deseasonalising) built: `lessons/5D deseasonalising slides` (21 slides) + worksheet/solutions (3 pages), Draft, copied to G: 01 Lesson materials. APK 1B #6 (burnt in l20) → 1B #7. Next Ch5 task: l22 (5E).
 
+## 16 Nov 01:40 — AoS2 #3: CFAT 2.7.x follow-ups
+Each CFAT 2.7.1/2.7.2 question now has a Jacaranda U3&4 (2023) follow-up (exercise 5.2–5.5 / 6.2–6.6 + Q numbers) in its 'Follow-up if wrong' column, plus a `followUp` list per CFAT. Next AoS 2 task: lesson l31 (7A) slides + worksheet.
+
 ## 16 Nov 01:32 — AoS2 #2: Chapter 7 CFATs
 - `tools/cfat/ch7/` → `lessons/CFAT 2.7.1 (7A-7B-7D)` (l33 card) and `CFAT 2.7.2 (7C-7E-7F)` (l36 card), student + solutions, HTML + PDF, 2 pages each, Draft; copied to G: 01 Lesson materials. 20 Edrolo exercise items burnt in `tools/ledger_manual.csv`.
 ## 16 Nov 01:34 — AoS3: Chapter 10 CFATs (Draft)
