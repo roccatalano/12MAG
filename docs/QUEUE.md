@@ -88,7 +88,7 @@ _Notes for all AoS 2–4 runners (Rocco, 16 Nov):_
 
 ### Chapter 8: Reducing balance loans, annuities and investments (lessons gm12-u3-l37, gm12-u3-l38, gm12-u3-l39, gm12-u3-l40, gm12-u3-l41, gm12-u3-l42, gm12-u3-l43, gm12-u3-l44, gm12-u3-l45; check gm12-u3-l46)
 10. `done 16 Nov 10:52 — l37–l45 cards prefilled: LIs/SCs (Cambridge), Do Now ×4 each (AoS 1 + 7x/8x retrieval), APK, Examples 1–32 + You trys (Edrolo 6A–6F; 16 written YT-8x), exits (Edrolo 6B–6F, 17), new CAS skill finance-solver (Draft), coursework, videos (draft); 71 ledger rows; tools/prefill_ch8.py` **Prefill the lesson cards** (gm12-u3-l37, gm12-u3-l38, gm12-u3-l39, gm12-u3-l40, gm12-u3-l41, gm12-u3-l42, gm12-u3-l43, gm12-u3-l44, gm12-u3-l45) in `planner/unit-plan.json` (see notes above).
-11. `todo` **CFATs for Chapter 8** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch8/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
+11. `in progress 16 Nov 10:45` **CFATs for Chapter 8** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch8/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
 12. `todo` **CFAT follow-ups for Chapter 8** (Jacaranda exercises; see notes above).
 13. `todo` **Lesson gm12-u3-l37 (8A)**: slides (`tools/deck/gm12-u3-l37/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 14. `todo` **Lesson gm12-u3-l38 (8B)**: slides (`tools/deck/gm12-u3-l38/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
