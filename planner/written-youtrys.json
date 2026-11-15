@@ -25,6 +25,31 @@
    "text": "For the relationship described by this scatterplot, the coefficient of determination = 0.6384. Determine the value of the correlation coefficient, r, rounded to four decimal places.",
    "figure": "scatterplot showing a moderate-to-strong POSITIVE linear association (draw when the slides are made; keep it positive)",
    "answer": "r = ±√0.6384 = ±0.7990; the scatterplot shows a positive association, so r = +0.7990."
+  },
+  {
+   "id": "YT-3A-2",
+   "pairs": "Cambridge U3&4 Example 2",
+   "sub": "3A",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 2)",
+   "text": "Use the following information to find the value of the correlation coefficient r, rounded to three decimal places.\nhours of sleep: mean 7.42, standard deviation 2.05 · reaction test score: mean 61.8, standard deviation 9.42\nleast squares equation: reaction test score = 38.2 + 3.18 × hours of sleep",
+   "answer": "EV: hours of sleep (x), RV: reaction test score (y). b = 3.18, s_x = 2.05, s_y = 9.42. r = b × s_x / s_y = 3.18 × 2.05 / 9.42 = 0.692."
+  },
+  {
+   "id": "YT-3B-5",
+   "pairs": "Cambridge U3&4 Example 5",
+   "sub": "3B",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 5)",
+   "text": "In a recent study of a group of schools the correlation between Year 12 study score and hours of paid work per week was found to be −0.45, whilst the correlation between Year 12 study score and hours of sleep per night was found to be 0.31.\na Find the values of the coefficient of determination between Year 12 study score and hours of paid work per week, and hours of sleep per night respectively.\nb Which of the variables, hours of paid work per week or hours of sleep per night, is more important in explaining the variation in Year 12 study score?",
+   "answer": "a hours of paid work: r² = (−0.45)² = 20.3%; hours of sleep: r² = 0.31² = 9.6%. b Hours of paid work per week, because it explains a larger percentage of the variation in Year 12 study score (20.3% compared with 9.6%)."
+  },
+  {
+   "id": "YT-3B-8",
+   "pairs": "Cambridge U3&4 Example 8",
+   "sub": "3B",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 8)",
+   "text": "Construct a report to describe the association between the price and age of secondhand motorbikes.\nage (years): 1 2 2 3 4 5 5 6 7 8\nprice ($): 14 800 13 900 13 100 12 600 11 200 10 500 9800 9300 8100 7400",
+   "figure": "scatterplot of price against age with the least squares line, and the residual plot (residuals 203, 372, −428, 141, −191, 178, −522, 47, −84, 285: no clear pattern). Draw both from the data when the slides are made.",
+   "answer": "From the scatterplot we see that there is a strong negative, linear association between the price of a secondhand motorbike and its age, r = −0.993. There are no obvious outliers. The equation of the least squares regression line is: price = 15 700 − 1070 × age. The slope of the regression line predicts that, on average, the price of these secondhand motorbikes decreased by $1070 each year. The intercept predicts that, on average, the price of these motorbikes when new was $15 700. The coefficient of determination indicates that 98.5% of the variation in the price of these secondhand motorbikes is explained by the variation in their age. The lack of a clear pattern in the residual plot confirms the assumption of a linear association between the price and the age of these secondhand motorbikes."
   }
  ]
 }

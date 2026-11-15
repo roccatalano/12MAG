@@ -452,9 +452,19 @@
    "subs": [
     "3A"
    ],
-   "ti": [],
-   "classpad": [],
-   "tip": "",
+   "ti": [
+    "Lists & Spreadsheet: enter the EV and RV in named lists (e.g. height, weight).",
+    "Add Data & Statistics: EV on the horizontal axis, RV on the vertical axis (turn Diagnostics on in Settings to show r²).",
+    "Menu › Analyze › Regression › Show Linear (a+bx): the line and its equation appear on the plot.",
+    "Write the equation in the variable names, e.g. weight = −84.8 + 0.867 × height."
+   ],
+   "classpad": [
+    "Statistics app: enter the EV in list1 and the RV in list2 (or name the columns).",
+    "SetGraph: Scatter, XList = EV, YList = RV; tap the graph icon to draw the scatterplot.",
+    "Calc › Regression › Linear Reg; XList = EV, YList = RV; OK shows a, b, r, r²; OK again draws the line.",
+    "Write the equation in the variable names, e.g. weight = −84.8 + 0.867 × height."
+   ],
+   "tip": "Always check which variable is the EV before you start: “predict y from x” means x is the EV.",
    "videos": {
     "ti": [
      {
@@ -468,7 +478,8 @@
       "url": "https://www.youtube.com/watch?v=EShk1ze8Cpw"
      }
     ]
-   }
+   },
+   "checked": "Cambridge U3&4 3A CAS 1 / 3C CAS 2 (Draft, check against 02 Sources\\CAS guides)"
   },
   {
    "id": "lsrl-predict",
@@ -476,9 +487,15 @@
    "subs": [
     "3B"
    ],
-   "ti": [],
-   "classpad": [],
-   "tip": "",
+   "ti": [
+    "Find the least squares line (see lsrl); the line is stored as f1(x).",
+    "Calculator page: type f1(value of EV), e.g. f1(5), and press enter; or substitute by hand into the equation."
+   ],
+   "classpad": [
+    "Find the least squares line (see lsrl), with the formula copied to y1.",
+    "Main app: type y1(value of EV), e.g. y1(5), and press EXE; or substitute by hand into the equation."
+   ],
+   "tip": "Check the EV value is inside the range of the data (interpolation) or outside it (extrapolation: unreliable).",
    "videos": {
     "ti": [
      {
@@ -492,7 +509,8 @@
       "url": "https://www.youtube.com/watch?v=hr_53Cu1xSs"
      }
     ]
-   }
+   },
+   "checked": "Cambridge U3&4 3A CAS 1 / 3C CAS 2 (Draft, check against 02 Sources\\CAS guides)"
   },
   {
    "id": "residuals",
@@ -500,9 +518,17 @@
    "subs": [
     "3C"
    ],
-   "ti": [],
-   "classpad": [],
-   "tip": "",
+   "ti": [
+    "Draw the scatterplot and the least squares line (see lsrl).",
+    "Menu › Analyze › Residuals › Show Residual Plot (Hide Residual Plot to remove it).",
+    "Residual = actual − predicted: read the residual for a point, or calculate it from the equation."
+   ],
+   "classpad": [
+    "Calc › Regression › Linear Reg with Copy Residual: list3 (the residuals are stored in list3).",
+    "SetGraph: Scatter, XList = EV, YList = list3; draw it: this is the residual plot.",
+    "Residual = actual − predicted: read the residual for a point, or calculate it from the equation."
+   ],
+   "tip": "Random scatter around 0 supports linearity; a clear pattern (e.g. a curve) means the association is not linear.",
    "videos": {
     "ti": [
      {
@@ -516,7 +542,8 @@
       "url": "https://www.youtube.com/watch?v=q5mm9-QHhlE"
      }
     ]
-   }
+   },
+   "checked": "Cambridge U3&4 3A CAS 1 / 3C CAS 2 (Draft, check against 02 Sources\\CAS guides)"
   },
   {
    "id": "regression-analysis",
@@ -524,9 +551,21 @@
    "subs": [
     "3C"
    ],
-   "ti": [],
-   "classpad": [],
-   "tip": "",
+   "ti": [
+    "Write down the EV and RV; enter the data in named lists.",
+    "Data & Statistics: scatterplot (EV across, RV up); describe direction, form, strength, outliers.",
+    "Menu › Analyze › Regression › Show Linear (a+bx) (Diagnostics on for r²); read r from Stat Calculations if needed.",
+    "Menu › Analyze › Residuals › Show Residual Plot; check for no clear pattern.",
+    "Report: equation, slope and intercept in context, r and r², residual plot conclusion."
+   ],
+   "classpad": [
+    "Write down the EV and RV; enter the data in list1 (EV) and list2 (RV).",
+    "SetGraph: Scatter; draw the scatterplot; describe direction, form, strength, outliers.",
+    "Calc › Regression › Linear Reg, Copy Residual: list3; OK gives a, b, r, r²; OK again draws the line.",
+    "SetGraph: Scatter, XList = list1, YList = list3; draw the residual plot; check for no clear pattern.",
+    "Report: equation, slope and intercept in context, r and r², residual plot conclusion."
+   ],
+   "tip": "Use the variable names in every line of the report, not x and y.",
    "videos": {
     "ti": [
      {
@@ -544,7 +583,8 @@
       "url": "https://www.youtube.com/watch?v=q5mm9-QHhlE"
      }
     ]
-   }
+   },
+   "checked": "Cambridge U3&4 3A CAS 1 / 3C CAS 2 (Draft, check against 02 Sources\\CAS guides)"
   },
   {
    "id": "transformed-lsrl",

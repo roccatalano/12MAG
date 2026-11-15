@@ -9,6 +9,10 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 ## 15 Nov 19:36 — Ch 2 test (runner)
 - `lessons/Ch2 test(.html/.pdf)` + solutions: Mathspace Ch 2 topic assessment verbatim (8 MC + 12 SA, /41), CFAT layout, Draft; build `tools/test/ch2/build.py`; on G: `01 Lesson materials`; on the Ch 2 check card; Mathspace Q1–20 burnt in the ledger. **Chapter 2 queue finished**; Ch 2 runner turned off. Coursework check sheet on that card is still todo (not a queued task).
+## 15 Nov 19:39 — Chapter 3 lesson cards l09–l11 prefilled (runner, task Ch3 #1)
+- `tools/prefill_ch3.py` (sources in its docstring) → `planner/unit-plan.json`. Do Now: 6 burnt/duplicate or same-lesson picks replaced (see QUEUE Decisions log). You trys: Ex 1 Edrolo 3A WE3, Ex 3–4 Edrolo 3B WE1–2, Ex 6–7 Edrolo 3C WE2–3; Ex 2, 5, 8 written (`planner/written-youtrys.json` YT-3A-2, YT-3B-5, YT-3B-8). CAS You try l09 = Edrolo 3A WE1.
+- Coursework = Cambridge 3A Q1–16, 3B Q1–7 (l10), 3B Q8–20 + 3C Q1–3 (l11), by skill. CAS steps written for lsrl, lsrl-predict, residuals, regression-analysis (Cambridge CAS 1/2, Draft). 3A–3C videos added as `draft` (links blank). 27 planned rows in the ledgers. CFAT 1.2.3 kept on l09.
+- For Rocco to check: CAS steps against the CAS guides; the three written You trys.
 
 ## 15 Nov 19:30 — Chapter 2 revision booklet (runner, task Ch2 #9)
 - `tools/revision/ch2/build.py` (questions `qdata.py`, figure crops `crop.py` → `crops/`, PDF `pdf.py`) → `lessons/Ch2-revision-booklet(.html/.pdf)` + `-solutions` (10 pages each). G: `01 Lesson materials\Ch2 revision booklet(.html/.pdf)`, `… solutions`. Draft on the Ch 2 check card.

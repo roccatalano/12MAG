@@ -3895,14 +3895,14 @@
           "n": 1,
           "sub": "3A",
           "title": "Determining the equation of the least squares regression line using summary statistics and the correlation coefficient",
-          "youTry": "TBM",
+          "youTry": "Edrolo 3A WE3",
           "video": "Cambridge GO · 3A Resources"
          },
          {
           "n": 2,
           "sub": "3A",
           "title": "Determining the correlation coefficient using the slope of the least squares regression line",
-          "youTry": "TBM",
+          "youTry": "Written (modelled on Cambridge Ex 2) · YT-3A-2",
           "video": "Cambridge GO · 3A Resources"
          }
         ],
@@ -3931,23 +3931,23 @@
         "doNow": [
          {
           "exam": "Exam 1",
-          "ref": "VCAA 2023 Exam 1 Q2",
-          "sec": "2G"
+          "ref": "VCAA 2024 Exam 1 Q14",
+          "sec": "1F"
          },
          {
           "exam": "Exam 1",
-          "ref": "VCAA 2025 Exam 1 Q10",
+          "ref": "VCAA 2026 NHT Exam 1 Q11",
           "sec": "2H"
          },
          {
           "exam": "Exam 2",
-          "ref": "VCAA 2023 Exam 2 Q1e",
+          "ref": "VCAA 2023 Exam 2 Q3b",
           "sec": "2G"
          },
          {
           "exam": "Exam 2",
           "ref": "VCAA 2026 Exam 2 Q3c",
-          "sec": "1I"
+          "sec": "1H"
          }
         ],
         "exit": [
@@ -4091,12 +4091,38 @@
          }
         ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 3A",
+           "items": [
+            {
+             "skill": "Basic ideas",
+             "q": "Q1–3"
+            },
+            {
+             "skill": "Least squares line from summary statistics",
+             "q": "Q4–6"
+            },
+            {
+             "skill": "r from the slope",
+             "q": "Q7–9"
+            },
+            {
+             "skill": "Least squares line on CAS",
+             "q": "Q10–13"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q14–16"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 3A sections"
           }
          ]
         },
@@ -4118,7 +4144,9 @@
            }
           ]
          }
-        ]
+        ],
+        "casYouTry": "Edrolo 3A WE1 (least squares line on CAS)",
+        "note": "Edrolo 3A WE2 (estimate the line from a scatterplot) and WE4 (sketch the line from its equation) have no Cambridge Example: spare You trys if wanted."
        }
       },
       {
@@ -4164,21 +4192,21 @@
           "n": 3,
           "sub": "3B",
           "title": "Interpreting the slope and intercept of a regression line",
-          "youTry": "TBM",
+          "youTry": "Edrolo 3B WE1",
           "video": "Cambridge GO · 3B Resources"
          },
          {
           "n": 4,
           "sub": "3B",
           "title": "Using the regression line to make predictions",
-          "youTry": "TBM",
+          "youTry": "Edrolo 3B WE2",
           "video": "Cambridge GO · 3B Resources"
          },
          {
           "n": 5,
           "sub": "3B",
           "title": "Using the coefficient of determination to compare associations",
-          "youTry": "TBM",
+          "youTry": "Written (modelled on Cambridge Ex 5) · YT-3B-5",
           "video": "Cambridge GO · 3B Resources"
          }
         ],
@@ -4212,8 +4240,8 @@
          },
          {
           "exam": "Exam 1",
-          "ref": "VCAA 2025 NHT Exam 1 Q9",
-          "sec": "2H"
+          "ref": "VCAA 2025 NHT Exam 1 Q2",
+          "sec": "1B"
          },
          {
           "exam": "Exam 2",
@@ -4223,7 +4251,7 @@
          {
           "exam": "Exam 2",
           "ref": "VCAA 2023 Exam 2 Q2aii",
-          "sec": "2A"
+          "sec": "1B"
          }
         ],
         "exit": [
@@ -4244,15 +4272,34 @@
          "lsrl-predict"
         ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 3B",
+           "items": [
+            {
+             "skill": "Interpreting the intercept and slope",
+             "q": "Q1–3"
+            },
+            {
+             "skill": "Making predictions",
+             "q": "Q4–6"
+            },
+            {
+             "skill": "Comparing associations with r²",
+             "q": "Q7"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 3B sections"
           }
          ]
-        }
+        },
+        "note": "Edrolo 3B WE3 (rearranging the equation to predict the EV) is a spare You try for Example 4."
        }
       },
       {
@@ -4308,34 +4355,34 @@
           "n": 6,
           "sub": "3B",
           "title": "Calculating a residual",
-          "youTry": "TBM",
+          "youTry": "Edrolo 3C WE2",
           "video": "Cambridge GO · 3B Resources"
          },
          {
           "n": 7,
           "sub": "3B",
           "title": "Interpreting a residual plot",
-          "youTry": "TBM",
+          "youTry": "Edrolo 3C WE3",
           "video": "Cambridge GO · 3B Resources"
          },
          {
           "n": 8,
           "sub": "3B",
           "title": "Reporting the results of a regression analysis",
-          "youTry": "TBM",
+          "youTry": "Written (modelled on Cambridge Ex 8) · YT-3B-8",
           "video": "Cambridge GO · 3B Resources"
          }
         ],
         "apk": [
          {
           "kind": "Skill",
-          "ref": "Cambridge U1&2 7E checklist #10",
-          "text": "Make predictions: interpolation and extrapolation"
+          "ref": "Cambridge U1&2 5A checklist #1",
+          "text": "Substitute values into linear equations and formulas"
          },
          {
           "kind": "Skill",
-          "ref": "Cambridge U1&2 5A checklist #1",
-          "text": "Substitute values into linear equations and formulas"
+          "ref": "Cambridge U1&2 5E checklist #8",
+          "text": "Find the intercept and slope of a straight line from its equation"
          },
          {
           "kind": "Exam",
@@ -4351,7 +4398,7 @@
         "doNow": [
          {
           "exam": "Exam 1",
-          "ref": "VCAA 2023 Exam 1 Q8",
+          "ref": "VCAA 2023 Exam 1 Q9",
           "sec": "3B"
          },
          {
@@ -4361,13 +4408,13 @@
          },
          {
           "exam": "Exam 2",
-          "ref": "VCAA 2023 Exam 2 Q1cii",
+          "ref": "VCAA 2024 Exam 2 Q3e",
           "sec": "3B"
          },
          {
           "exam": "Exam 2",
-          "ref": "VCAA 2024 Exam 2 Q3d",
-          "sec": "2E"
+          "ref": "VCAA 2023 Exam 2 Q1cii",
+          "sec": "2A"
          }
         ],
         "exit": [
@@ -4402,15 +4449,52 @@
          }
         ],
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
+           "title": "Cambridge · Exercise 3B",
+           "items": [
+            {
+             "skill": "Residuals",
+             "q": "Q8–10"
+            },
+            {
+             "skill": "Interpreting residual plots",
+             "q": "Q11"
+            },
+            {
+             "skill": "Regression analysis",
+             "q": "Q12–15"
+            },
+            {
+             "skill": "Reporting a regression analysis",
+             "q": "Q16–17"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q18–20"
+            }
+           ],
+           "note": ""
+          },
+          {
            "title": "Cambridge · Exercise 3C",
+           "items": [
+            {
+             "skill": "Regression analysis from data on CAS",
+             "q": "Q1–3"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 3B, 3C sections"
           }
          ]
-        }
+        },
+        "casYouTry": "Cambridge 3C CAS 2 data (no Edrolo CAS worked example for a full regression analysis)"
        }
       },
       {
