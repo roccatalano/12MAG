@@ -48,6 +48,7 @@ body {{ font-family:Arial,"Liberation Sans",Helvetica,sans-serif; font-size:10pt
 .pg {{ height:271mm; display:flex; flex-direction:column; break-after:page; overflow:hidden; }} .pg:last-child {{ break-after:auto; }}
 .pg > .box, .pg > .pair {{ flex:1 1 auto; }} .pg > .title, .pg > .secthd, .pg > .box.lisbox {{ flex:none; }}
 .pg > .pair > .box {{ height:100%; }}
+.qsep {{ border-top:1.2px solid #000; margin:1.5mm -3mm 1.5mm; }}
 .src {{ font-size:8pt; font-style:italic; color:#444; text-align:right; margin-top:auto; padding-top:1mm; }}
 .guess {{ font-size:9pt; margin-top:1mm; padding:.6mm 2mm; border:1px dashed #000; display:flex; align-items:flex-end; gap:1.5mm; flex-wrap:wrap; }}
 .guess i {{ display:inline-block; width:14mm; border-bottom:1px solid #000; height:4mm; }}
@@ -94,6 +95,7 @@ def parts(items, cols=1):
     """items: (label, text, answer, mm of blank space under the part; 'L' = one writing line)"""
     return f'<div class="parts" style="grid-template-columns:repeat({cols},minmax(0,1fr))">' + ''.join(
         f'<div class="pt{" nb" if j >= len(items) - ((len(items) - 1) % cols + 1) else ""}"><b>{k}</b><div>{t}{space(7, a) if mm == "L" else space(mm, a)}</div></div>' for j, (k, t, a, mm) in enumerate(items)) + '</div>'
+QSEP = '<div class="qsep"></div>'   # solid line between separate questions (1, 2, 3) inside one box; dashed lines stay between parts a, b
 def exyt(eh, eb, yh, yb):
     """Example and You try in ONE box, split down the middle."""
     return (f'<div class="box ey"><div class="eyh"><div>{eh}</div><div>{yh}</div></div>'

@@ -38,8 +38,8 @@ P.append(exyt('Example 1 · Types of data', q('Classify the following data as no
                ('d', 'Students are asked to each choose their preferred colour from the list 1 = Blue, 2 = Green, 3 = Red, 4 = Yellow.', 'nominal', 'L'),
                ('e', 'Students weights were classified as ‘less than 60kg’, ‘60kg - 80kg’ or ‘more than 80kg’.', 'ordinal', 'L')]),
   'You try 1', q('<b>1</b> Classify the following variables as either categorical or numerical.') + parts([('a.', '<i>type of pasta</i>', 'categorical', 'L'), ('b.', '<i>number of candles</i>', 'numerical', 'L')])
-      + q('<b>2</b> Classify the following categorical variables as either nominal or ordinal.') + parts([('a.', '<i>type of shoe</i> (runners, boots, sandals, slides)', 'nominal', 'L'), ('b.', '<i>shirt size</i> (small, medium, large)', 'ordinal', 'L')])
-      + q('<b>3</b> Classify the following numerical variables as either discrete or continuous.') + parts([('a.', '<i>length</i> (m)', 'continuous', 'L'), ('b.', '<i>number of tennis racquets</i>', 'discrete', 'L')])))
+      + QSEP + q('<b>2</b> Classify the following categorical variables as either nominal or ordinal.') + parts([('a.', '<i>type of shoe</i> (runners, boots, sandals, slides)', 'nominal', 'L'), ('b.', '<i>shirt size</i> (small, medium, large)', 'ordinal', 'L')])
+      + QSEP + q('<b>3</b> Classify the following numerical variables as either discrete or continuous.') + parts([('a.', '<i>length</i> (m)', 'continuous', 'L'), ('b.', '<i>number of tennis racquets</i>', 'discrete', 'L')])))
 
 # ---------------------------------------------------------------- 1B
 # (Examples keep the scaffold; You trys are blank space, answers in red on the solutions copy)
