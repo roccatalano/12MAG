@@ -10349,6 +10349,23 @@
           ]
          },
          {
+          "kind": "Chapter test",
+          "desc": "Mathspace matrices topic assessment (Mathspace Ch 7), Ch 10 items only (17 Qs, /27), verbatim.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/Ch10 test.html",
+            "pdf": "lessons/Ch10 test.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/Ch10 test solutions.html",
+            "pdf": "lessons/Ch10 test solutions.pdf"
+           }
+          ]
+         },
+         {
           "kind": "Revision booklet",
           "desc": "Insight GM1 + GM2 matrices questions (28 MC + 9 short answer), one section per subchapter (10A–10G).",
           "status": "draft",
