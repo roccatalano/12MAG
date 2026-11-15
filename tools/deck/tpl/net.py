@@ -20,17 +20,18 @@ CSS = ('<style>.net path.hy,.net line.hy{stroke:#d9b100!important;stroke-width:6
 _OFF = {'n': (0, -1), 'ne': (.75, -.75), 'e': (1, 0), 'se': (.75, .85), 's': (0, 1.1), 'sw': (-.75, .85), 'w': (-1, 0), 'nw': (-.75, -.75)}
 
 
-def net(V, E, sid='', W=360, H=240, fs=18, r=5, ink=INK, lw=2.6, faces=(), mm=None, extra='', pad=0):
-    s = [f'<svg class="net"{" id=" + chr(34) + sid + chr(34) if sid else ""} viewBox="{-pad} {-pad} {W+2*pad} {H+2*pad}" width="100%" '
+def net(V, E, sid='', W=360, H=240, fs=18, r=5, ink=INK, lw=2.6, faces=(), mm=None, extra='', pad=0, padx=None):
+    px = pad if padx is None else padx
+    s = [f'<svg class="net"{" id=" + chr(34) + sid + chr(34) if sid else ""} viewBox="{-px} {-pad} {W+2*px} {H+2*pad}" width="100%" '
          f'style="display:block;{"max-width:" + str(mm) + "mm;margin:1mm auto;" if mm else ""}">{CSS}'
-         '<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">'
-         f'<path d="M0,0 L10,5 L0,10 z" fill="{ink}"/></marker></defs>']
+         '<defs>' + ''.join(f'<marker id="ah{c[1:]}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">'
+         f'<path d="M0,0 L10,5 L0,10 z" fill="{c}"/></marker>' for c in sorted({ink} | {(e[2].get('col') or ink) for e in E if len(e) > 2 and e[2].get('arrow')})) + '</defs>']
     P = {k: v[:2] for k, v in V.items()}
     for k, e in enumerate(E):
         a, b = e[0], e[1]; o = e[2] if len(e) > 2 else {}
         col = o.get('col', ink)
         att = f'data-i="{o.get("i", "e" + str(k))}"' + (' class="hid0"' if o.get('hid') else '')
-        st = f'fill="none" stroke="{col}" stroke-width="{lw}"' + (' stroke-dasharray="7 6"' if o.get('dash') else '') + (' marker-end="url(#ah)"' if o.get('arrow') else '')
+        st = f'fill="none" stroke="{col}" stroke-width="{lw}"' + (' stroke-dasharray="7 6"' if o.get('dash') else '') + (f' marker-end="url(#ah{col[1:]})"' if o.get('arrow') else '')
         (x1, y1), (x2, y2) = P[a], P[b]
         if a == b:
             ang = math.radians(o.get('loop', -90)); R = o.get('size', 16)

@@ -10758,6 +10758,30 @@
             "pdf": "lessons/CFAT 4.13.1 (13A-13B) solutions.pdf"
            }
           ]
+         },
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/13C slides.html",
+          "pdf": "lessons/13C slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "4 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/13C worksheet.html",
+            "pdf": "lessons/13C worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/13C worksheet solutions.html",
+            "pdf": "lessons/13C worksheet solutions.pdf"
+           }
+          ]
          }
         ]
        }
