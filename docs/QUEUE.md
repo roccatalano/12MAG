@@ -55,7 +55,7 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 3. `done 15 Nov 20:45 — 5A slides (32 slides) + 6-page guided worksheet (student + solutions), HTML+PDF, Draft; APK 7B #3 (burnt) → 7D #7` **Lesson l16 (5A)**: slides (`tools/deck/l16/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 4. `done 15 Nov 21:00 — 5B moving means slides (20) + 3-page guided worksheet (student + solutions), HTML+PDF, Draft; exits swapped with l18; APK 2E #10 (burnt) dropped` **Lesson l17 (5B, moving means)**: slides (`tools/deck/l17/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 5. `done 15 Nov 21:17 — 5B centring slides (22) + 3-page guided worksheet (student + solutions), HTML+PDF, Draft; Do Now 2023 E1 Q15 (centring = new content) → 2026 NHT E1 Q14; APK 2E #10 (burnt) dropped` **Lesson l18 (5B, centring)**: slides (`tools/deck/l18/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-6. `todo` **Lesson l19 (5C)**: slides (`tools/deck/l19/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+6. `in progress 15 Nov 21:19` **Lesson l19 (5C)**: slides (`tools/deck/l19/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 7. `todo` **Lesson l20 (5D, seasonal indices)**: slides (`tools/deck/l20/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 8. `todo` **Lesson l21 (5D, deseasonalising)**: slides (`tools/deck/l21/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 9. `todo` **Lesson l22 (5E)**: slides (`tools/deck/l22/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
