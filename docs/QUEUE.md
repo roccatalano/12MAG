@@ -53,3 +53,4 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 | Task | Start | Finish | Minutes | Tokens | Result / what slowed it |
 |---|---|---|---|---|---|
 | Ch2 #1 Prefill | 2026-11-15 16:52 | 2026-11-15 17:01 | 9 | | done; logged afterwards from GitHub history |
+| — (none started) | 2026-11-15 17:18 | 2026-11-15 17:18 | 1 | | G: not reachable — the 12MAG Course Planner folder is not connected to this run (names-only listing), so nothing was changed. next run: NOT fired — hourly schedule will retry |
