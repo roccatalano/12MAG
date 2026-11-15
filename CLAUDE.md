@@ -49,7 +49,8 @@ Build a lesson with a `tools/deck/<S#>/build.py` that only fills content into th
 - **Half A4 by default; full A4 if it doesn't fit.** One fixed text size for every card (never scale fonts to fill). Fill spare space with useful content, e.g. a VCAA question.
 - Content: Study Design dot points covered, definitions, key ideas, formulas, diagrams, Cambridge examples (cited), condensed TI/ClassPad CAS steps where relevant.
 - **Reuse the lesson's own exam questions** (Do Now, APK, exits) on the card: this does NOT burn them again. Prefer the original VCAA wording when the lesson used an adapted version. The box title names the VCAA source (e.g. 'VCAA 2019 Exam 2 Q1a' + % tile): no extra source line, no Edrolo reference.
-- Build: `tools/bref/build.py` (content in `tools/bref/cards.py`, styles `bref.css`) → `lessons/<sub> bound reference.html` + `<lesson subs> bound reference.html`.
+- Build: `tools/bref/build.py` (content in `tools/bref/cards.py`, styles `bref.css`) → `lessons/<sub> bound reference.html/.pdf` + `<lesson subs> bound reference.html/.pdf` (PDFs printed automatically; each html has an on-screen 'Download PDF' button).
+- **Planner (Rocco, 15 Nov):** the Bound reference entry always nests, even for a one-subchapter lesson: one copy per subchapter (Open + PDF), plus a 'print both/all' copy when there are several.
 
 ## Source files (G: drive)
 Root: `G:\Shared drives\1. EKC CURRICULUM\1. KLA Folders\MATHEMATICS\VCE Maths\General Maths U3 & 4\12MAG Course Planner\` (the old `12MAG 2027` folder is archived — don't use it).

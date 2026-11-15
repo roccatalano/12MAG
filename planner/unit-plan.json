@@ -189,17 +189,21 @@
           "copies": [
            {
             "label": "1A",
-            "file": "lessons/1A bound reference.html"
+            "file": "lessons/1A bound reference.html",
+            "pdf": "lessons/1A bound reference.pdf"
            },
            {
             "label": "1B",
-            "file": "lessons/1B bound reference.html"
+            "file": "lessons/1B bound reference.html",
+            "pdf": "lessons/1B bound reference.pdf"
            },
            {
             "label": "1A + 1B (print both)",
-            "file": "lessons/1A-1B bound reference.html"
+            "file": "lessons/1A-1B bound reference.html",
+            "pdf": "lessons/1A-1B bound reference.pdf"
            }
-          ]
+          ],
+          "pdf": "lessons/1A-1B bound reference.pdf"
          }
         ],
         "homework": {
@@ -548,21 +552,26 @@
           "copies": [
            {
             "label": "1C",
-            "file": "lessons/1C bound reference.html"
+            "file": "lessons/1C bound reference.html",
+            "pdf": "lessons/1C bound reference.pdf"
            },
            {
             "label": "1D",
-            "file": "lessons/1D bound reference.html"
+            "file": "lessons/1D bound reference.html",
+            "pdf": "lessons/1D bound reference.pdf"
            },
            {
             "label": "1E",
-            "file": "lessons/1E bound reference.html"
+            "file": "lessons/1E bound reference.html",
+            "pdf": "lessons/1E bound reference.pdf"
            },
            {
             "label": "1C + 1D + 1E (print all)",
-            "file": "lessons/1C-1E bound reference.html"
+            "file": "lessons/1C-1E bound reference.html",
+            "pdf": "lessons/1C-1E bound reference.pdf"
            }
-          ]
+          ],
+          "pdf": "lessons/1C-1E bound reference.pdf"
          }
         ],
         "homework": {
@@ -1209,7 +1218,15 @@
           "kind": "Bound reference entry",
           "desc": "Cut-out card per subchapter for the bound reference.",
           "status": "draft",
-          "file": "lessons/1F bound reference.html"
+          "file": "lessons/1F bound reference.html",
+          "pdf": "lessons/1F bound reference.pdf",
+          "copies": [
+           {
+            "label": "1F",
+            "file": "lessons/1F bound reference.html",
+            "pdf": "lessons/1F bound reference.pdf"
+           }
+          ]
          },
          {
           "kind": "CFAT 1.1.1",
@@ -1494,7 +1511,15 @@
           "kind": "Bound reference entry",
           "desc": "Cut-out card per subchapter for the bound reference.",
           "status": "draft",
-          "file": "lessons/1G bound reference.html"
+          "file": "lessons/1G bound reference.html",
+          "pdf": "lessons/1G bound reference.pdf",
+          "copies": [
+           {
+            "label": "1G",
+            "file": "lessons/1G bound reference.html",
+            "pdf": "lessons/1G bound reference.pdf"
+           }
+          ]
          }
         ],
         "homework": {
@@ -2093,17 +2118,21 @@
           "copies": [
            {
             "label": "1H",
-            "file": "lessons/1H bound reference.html"
+            "file": "lessons/1H bound reference.html",
+            "pdf": "lessons/1H bound reference.pdf"
            },
            {
             "label": "1I",
-            "file": "lessons/1I bound reference.html"
+            "file": "lessons/1I bound reference.html",
+            "pdf": "lessons/1I bound reference.pdf"
            },
            {
             "label": "1H + 1I (print both)",
-            "file": "lessons/1H-1I bound reference.html"
+            "file": "lessons/1H-1I bound reference.html",
+            "pdf": "lessons/1H-1I bound reference.pdf"
            }
-          ]
+          ],
+          "pdf": "lessons/1H-1I bound reference.pdf"
          },
          {
           "kind": "CFAT 1.1.2",
