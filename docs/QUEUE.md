@@ -16,7 +16,7 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 2. `done 2026-11-15 — CFAT 1.2.1 (2A-2B, /17) + 1.2.2 (2C-2D, /16), HTML + PDF like CFAT 1.1.x (Word version replaced, Rocco 15 Nov), student + solutions, Edrolo exercise Qs only; old 1.2.1 ledger rows freed` **CFATs for Chapter 2** + solutions — Rocco 15 Nov: RECREATE CFAT 1.2.1/1.2.2 from scratch under rule 8 (Edrolo U3&4 exercise questions only: `tools/y12_edrolo_exercise_questions.csv`; HTML + PDF in the CFAT 1.1.x layout (Rocco 15 Nov: NOT Word; model `tools/cfat/ch2/build_html.py`)). Add them to the planner.
 2b. `done 2026-11-15 — CFAT 1.2.3 (2E-2H, /15) HTML + PDF + solutions; sits on the l09 (3A) card` **CFAT 1.2.3** (Rocco, 15 Nov: was missed by task 2; covers 2E–2H, given at the start of the 3A lesson).
 3. `done 2026-11-15 — 2A-2B slides (35 slides, PDF 59 pages) + guided worksheet (6 pages, student + solutions), Draft; on G: and the l03 card` **Lesson l03 (2A, 2B)**: slides (`tools/deck/<id>/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-4. `in progress 2026-11-15 18:07` **Lesson l04 (2C)**: slides + worksheet.
+4. `done 2026-11-15 — 2C slides (27 slides, PDF 45 pages) + guided worksheet (5 pages, student + solutions), Draft; on G: and the l04 card` **Lesson l04 (2C)**: slides + worksheet.
 5. `todo` **Lesson l05 (2D, 2E)**: slides + worksheet.
 6. `todo` **Lesson l06 (2F)**: slides + worksheet.
 7. `todo` **Lesson l07 (2G, 2H)**: slides + worksheet.
@@ -50,6 +50,7 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 | 15 Nov 17:21 | Q3/Q6 | Rocco: Edrolo U1&2 WEs OK as You trys; Ex 19–21 written (written-youtrys.json) | Rocco's answer | Ch2 #2 |
 | 15 Nov 17:21 | Q4 | Rocco: OK | Rocco's answer | Ch2 #2 |
 | 15 Nov 17:21 | Q5 | Keep Ch 2 videos `draft`; each lesson task checks/fills its subchapters' MaffsGuru links when it builds the "Videos that might help" slide | no answer after 10 min; videos are only needed when the slides are built | Ch2 #2 |
+| 15 Nov 18:22 | — | l04: APK 'Cambridge U1&2 2I #16' has no question of its own (it points to Examples 27/28); used its Now try this 27 (Example 27 = U3&4 Example 10). All figures redrawn from values read off the sources (no image crops); 2019 E2 Q3 boxplots redrawn horizontally. Worked-example reports set out in SOCS order. | rule 1 + SOCS rule; Rocco can overrule | Ch2 #4 |
 | 15 Nov 17:58 | — | l03 videos slide: MaffsGuru 2B video kept (YouTube title checked); 2A MaffsGuru video is locked (paid), so its card stays blank; videos.json status left `draft` | only free, checked links on slides | Ch2 #3 |
 
 ## Later chapters (Rocco adds each when he's ready)
@@ -64,3 +65,4 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 | Ch2 #2 CFATs | 2026-11-15 17:20 | 17:27 | 7 | | done: 2 Word CFATs (2 pages each) + solutions; slowed by getting the Word layout to 2 pages (3 render rounds). next run: NOT fired — fire_trigger was refused by the permission check; the hourly schedule (:17) will pick up task 3 |
 | Ch2 #3 l03 (2A-2B) | 2026-11-15 17:36 | 2026-11-15 17:58 | 22 | | done: 35 slides + 6-page worksheet (both copies), Draft. Slowed by: a new grouped bar chart (Edrolo 2A WE2) and fitting the 5 table options of VCAA 2021 E1 Q3 on one slide; worksheet 7→6 pages by laying tables side by side. next run: not fired — built in live session |
 | Ch2 #2b CFAT 1.2.3 | 2026-11-15 18:01 | 2026-11-15 18:01 | ~15 | | done in live session (Rocco spotted the missing third CFAT). next run: not fired — live session |
+| Ch2 #4 l04 (2C) | 2026-11-15 18:07 | 2026-11-15 18:22 | 15 | | done: 27 slides + 5-page worksheet (both copies), Draft. Slowed by: new figure helpers (parallel boxplots, parallel dot plots, back-to-back stem plots in tools/deck/l04/figs.py) and reading values off source figures. next run: fired |

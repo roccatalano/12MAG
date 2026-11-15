@@ -2764,7 +2764,7 @@
          {
           "kind": "Skill",
           "ref": "Cambridge U1&2 2I checklist #16",
-          "text": "Compare distributions with a back-to-back stem plot or boxplot"
+          "text": "Compare distributions with a back-to-back stem plot or boxplot: Now try this 27 (hours relaxing)"
          },
          {
           "kind": "Exam",
@@ -2984,6 +2984,30 @@
             "label": "Solutions",
             "file": "lessons/CFAT 1.2.1 (2A-2B) solutions.html",
             "pdf": "lessons/CFAT 1.2.1 (2A-2B) solutions.pdf"
+           }
+          ]
+         },
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/2C slides.html",
+          "pdf": "lessons/2C slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "5 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/2C worksheet.html",
+            "pdf": "lessons/2C worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/2C worksheet solutions.html",
+            "pdf": "lessons/2C worksheet solutions.pdf"
            }
           ]
          }

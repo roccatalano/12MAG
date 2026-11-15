@@ -7,6 +7,12 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 
 
+## 15 Nov 18:22 — Lesson l04 (2C) slides + guided worksheet (runner, task Ch2 #4)
+- `tools/deck/l04/build.py` → `lessons/2C slides.html/.pdf` (27 slides, PDF 45 pages; screenshots `tools/deck/l04/shoot.py`). `tools/deck/l04/worksheet.py` → `lessons/2C worksheet(.html/.pdf)` + `… worksheet solutions` (5 pages each). Same names on G: `01 Lesson materials`. Draft on the l04 card.
+- From the l04 card: Do Now VCAA 2026 NHT E1 Q5 (no %), 2024 E1 Q6 (53%), 2023 E2 Q1ci (88%), Q2bi (87%); APK Cambridge U1&2 2I Now try this 27 (for checklist #16), VCAA 2019 E2 Q2aii (87%), 2021 E1 Q4 (60%, original wording); Examples 9–12 + Edrolo 2B WE2, WE1, WE3, WE4; exits VCAA 2016 E1 Q8 (45%), 2019 E2 Q3 (36% full marks), 2017 E2 Q2e (43% full marks). Nothing dropped.
+- New: `tools/deck/l04/figs.py` (parallel boxplots with highlightable box/median/whiskers/outliers, parallel dot plots, back-to-back stem plots; slide + worksheet). Example reports are in SOCS order with a 'Conclude' line. Ledger: l04 rows 'used'; Example/You try rows added (not burnt).
+- For Rocco to check: figures are redrawn (values read off the textbook/VCAA figures); 2C MaffsGuru video link still blank, so the videos slide is empty.
+
 ## 15 Nov 18:01 — CFAT 1.2.3 (2E–2H) added (live session)
 - Rocco: Chapter 2 has THREE CFATs; 1.2.3 sits on the l09 (3A) card. Built with the others by `tools/cfat/ch2/build_html.py`: /15 (5 MC + 4 short answer), Edrolo 2D Q1, Q2, Q3, Q4, Q6, Q7, Q9 + 3C Q1, Q2 (2G r² questions live in Edrolo 3C). Student + solutions, 2 pages each; planner card + ledger updated. CFAT subtitles now show ranges with an en dash (2A–2B).
 
