@@ -1,10 +1,13 @@
 # 12MAG handover — 15 Nov 2026 (updated 15:55)
 
+**16 Nov 10:55 (AoS4 #12):** Chapter 14 cards prefilled (`tools/prefill_ch14.py`): gm12-u4-14a … 14e Do Now, APK, Examples + You trys, exits; 2 written You trys (YT-14A-4, YT-14A-5: Cambridge Ex 4–5 have no Edrolo match); 14E has no APK (no U1&2 prerequisite); 40 ledger rows. Next AoS 4 task: #13 CFATs for Ch 14.
+
 **16 Nov 10:47 (AoS4 #11):** Chapter 14 planned: `tools/plan_ch14.py` fills gm12-u4-14a … 14e (titles, LIs, SCs, Study Design, coursework by Cambridge exercise heading). Split unchanged (5 lessons). Next AoS 4 task: #12 prefill Ch 14 cards.
 
 **16 Nov 10:45 (AoS3 #12):** Chapter 11 planned: `tools/plan_ch11.py` fills gm12-u4-11a … 11e (titles, LIs, SCs, Study Design, coursework by Cambridge exercise section). Split unchanged (5 lessons). Next AoS 3 task: prefill Ch 11 cards.
 
 **16 Nov 10:37 (AoS4 #10):** Chapter 13 test + solutions built (Draft): `tools/test/ch13/build.py` → `lessons/Ch13 test` + `solutions` (Mathspace Ch 8 graphs and networks topic assessment, all 20 Qs, + Mathspace Ch 9 Q3–5 and Q10 shortest path, verbatim, /45, 8 pages each; figures cropped from the PDFs). On G: 01 Lesson materials and the gm12-ch13-test card; 24 ledger rows. **Chapter 13 queue finished**; next AoS 4 task: plan Ch 14.
+
 ## 16 Nov 10:48 — AoS2 #11 CFATs for Chapter 8 (Draft)
 CFAT 2.8.1 (8A-8B-8C, start of l40) and CFAT 2.8.2 (8E-8H-8I, start of l46), student + solutions, HTML + PDF, built by tools/cfat/ch8/. Edrolo U3&4 6A–6F exercise questions only. 8D, 8F, 8G have no Edrolo exercise questions, so they are not in a CFAT. Follow-ups (Jacaranda) are task 12.
 

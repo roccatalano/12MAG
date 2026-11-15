@@ -13133,7 +13133,102 @@
         "studyDesign": [
          "use of networks to model flow problems: capacity, sinks and sources",
          "solution of small-scale network flow problems by inspection and the use of the ‘maximum-flow minimum-cut’ theorem to aid the solution of larger scale problems."
-        ]
+        ],
+        "keyVocab": [
+         "Directed graph (digraph): each edge has a direction (arrow); a flow network has a source (start) and a sink (end)",
+         "Capacity: the weight of an edge = the most that can flow along it",
+         "Flow along a route of edges in a row = the smallest capacity on that route",
+         "Cut: a line that separates the source from the sink; its capacity = sum of the capacities of the edges it cuts that flow from the source side to the sink side (edges flowing back are not counted)",
+         "Maximum flow = capacity of the minimum cut",
+         "More than one source or sink: look at each sink (outlet) on its own"
+        ],
+        "weDo": [
+         {
+          "n": 1,
+          "sub": "14A",
+          "title": "Calculating the maximum flow",
+          "youTry": "Edrolo 8E WE1",
+          "video": "Cambridge GO · 14A Resources"
+         },
+         {
+          "n": 2,
+          "sub": "14A",
+          "title": "Calculating cut capacity",
+          "youTry": "Edrolo 8E WE2",
+          "video": "Cambridge GO · 14A Resources"
+         },
+         {
+          "n": 3,
+          "sub": "14A",
+          "title": "Calculating maximum flow using cuts",
+          "youTry": "Edrolo 8E WE3",
+          "video": "Cambridge GO · 14A Resources"
+         },
+         {
+          "n": 4,
+          "sub": "14A",
+          "title": "Calculating maximum flow",
+          "youTry": "Written for 12MAG: YT-14A-4",
+          "video": "Cambridge GO · 14A Resources"
+         },
+         {
+          "n": 5,
+          "sub": "14A",
+          "title": "Calculating maximum flow from more than one source",
+          "youTry": "Written for 12MAG: YT-14A-5",
+          "video": "Cambridge GO · 14A Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 8A checklist #1",
+          "text": "I can identify the number of vertices, edges and loops of a graph."
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 7A Q14",
+          "text": "VCAA 2016 Exam 2 Networks and decision mathematics Q1a,bi (83%, 53%)"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2023 Exam 1 Q33",
+          "sec": "13F"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2024 Exam 1 Q9",
+          "sec": "3A"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2025 Exam 2 Q15d",
+          "sec": "13F"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2024 Exam 2 Q1c",
+          "sec": "1G"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 8E Q14",
+          "src": "VCAA 2016 Exam 1 Networks and decision mathematics Q2"
+         },
+         {
+          "ref": "Edrolo U3&4 8E Q15",
+          "src": "VCAA 2020 Exam 2 Networks and decision mathematics Q4b,c"
+         },
+         {
+          "ref": "Edrolo U3&4 8E Q16",
+          "src": "VCAA 2017 Exam 1 Networks and decision mathematics Q8"
+         }
+        ],
+        "cas": [],
+        "note": "Edrolo 8E WE1 (route through a digraph and its weight) is the closest match for Example 1. No Edrolo worked example for Examples 4 and 5: You trys written (planner/written-youtrys.json)."
        }
       },
       {
@@ -13193,7 +13288,88 @@
         "studyDesign": [
          "use of a bipartite graph and its tabular or matrix form to represent a matching problem",
          "determination of the optimum assignment(s) of people or machines to tasks by inspection or by use of the Hungarian algorithm for larger scale problems."
-        ]
+        ],
+        "keyVocab": [
+         "Bipartite graph: two groups of vertices; every edge joins a vertex in one group to a vertex in the other",
+         "Allocation (assignment) problem: match each person/machine to exactly one task",
+         "Cost matrix: rows = people, columns = tasks, entries = cost (time, money, distance)",
+         "By inspection: try the possible allocations and choose the smallest total",
+         "Hungarian algorithm: subtract row minimums, then column minimums; cover the zeros with the fewest lines; if fewer lines than rows, add/subtract the smallest uncovered value and repeat; allocate using the zeros",
+         "Minimum cost: add the ORIGINAL costs of the chosen allocation"
+        ],
+        "weDo": [
+         {
+          "n": 6,
+          "sub": "14B",
+          "title": "Bipartite graphs and allocation",
+          "youTry": "Edrolo 8G WE1",
+          "video": "Cambridge GO · 14B Resources"
+         },
+         {
+          "n": null,
+          "sub": "14B",
+          "title": "Allocation by inspection (no Cambridge Example)",
+          "youTry": "Edrolo 8G WE2",
+          "video": "Cambridge GO · 14B Resources"
+         },
+         {
+          "n": null,
+          "sub": "14B",
+          "title": "The Hungarian algorithm (no Cambridge Example: Cambridge works one in the text)",
+          "youTry": "Edrolo 8G WE3",
+          "video": "Cambridge GO · 14B Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 8B checklist #5",
+          "text": "I can use an adjacency matrix to represent a graph."
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 7B Q16",
+          "text": "Adapted from VCAA 2017 Exam 1 Networks and decision mathematics Q3 (92%)"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 Exam 1 Q36",
+          "sec": "14A"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 Exam 1 Q20",
+          "sec": "7B"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2024 Exam 2 Q14a",
+          "sec": "14A"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2025 Exam 2 Q4a",
+          "sec": "2A"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 8G Q10",
+          "src": "VCAA 2016 Exam 1 Networks and decision mathematics Q1"
+         },
+         {
+          "ref": "Edrolo U3&4 8G Q11",
+          "src": "VCAA 2020 Exam 2 Networks and decision mathematics Q2"
+         },
+         {
+          "ref": "Edrolo U3&4 8G Q13",
+          "src": "VCAA 2018 Exam 1 Networks and decision mathematics Q8"
+         }
+        ],
+        "cas": [],
+        "note": "Spare exit (not reserved): Edrolo 8G Q12 (VCAA 2017 E2 N&DM Q2a)."
        }
       },
       {
@@ -13257,7 +13433,78 @@
         ],
         "studyDesign": [
          "construction of an activity network from a precedence table (or equivalent) including the use of dummy activities where necessary"
-        ]
+        ],
+        "keyVocab": [
+         "Activity network: a directed graph where each edge is an activity (label, duration) and vertices are the points where activities start/finish",
+         "Immediate predecessor: an activity that must be finished just before another can start",
+         "Precedence table: lists each activity and its immediate predecessors",
+         "Dummy activity: a dashed edge of duration 0, used when two activities share some, but not all, of their immediate predecessors",
+         "Every network has one start and one finish vertex"
+        ],
+        "weDo": [
+         {
+          "n": 7,
+          "sub": "14C",
+          "title": "Drawing an activity network from a precedence table",
+          "youTry": "Edrolo 8H WE2",
+          "video": "Cambridge GO · 14C Resources"
+         },
+         {
+          "n": 8,
+          "sub": "14C",
+          "title": "Using a dummy activity in an activity network",
+          "youTry": "Edrolo 8H WE4",
+          "video": "Cambridge GO · 14C Resources"
+         },
+         {
+          "n": 9,
+          "sub": "14C",
+          "title": "Creating a precedence table from an activity network",
+          "youTry": "Edrolo 8H WE3",
+          "video": "Cambridge GO · 14C Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 7D Q12",
+          "text": "Adapted from VCAA 2018 Exam 1 Networks and decision mathematics Q4 (88%)"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 Exam 1 Q39",
+          "sec": "14B"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2024 Exam 1 Q28",
+          "sec": "10D"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2024 NHT Exam 2 Q14a",
+          "sec": "14B"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2025 Exam 2 Q8b",
+          "sec": "7B"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 8H Q14",
+          "src": "Adapted from VCAA 2017 Exam 2 Networks and decision mathematics Q4a"
+         },
+         {
+          "ref": "Edrolo U3&4 8H Q15",
+          "src": "Adapted from VCAA 2020 Exam 2 Networks and decision mathematics Q5a"
+         }
+        ],
+        "cas": [],
+        "note": "Edrolo 8H WE1 (reading a precedence table) is a spare You try. Both exits are Edrolo-adapted VCAA items (pill: adapted)."
        }
       },
       {
@@ -13327,7 +13574,75 @@
         "studyDesign": [
          "use of forward and backward scanning to determine the earliest starting times (EST) and latest starting times (LST) for each activity",
          "use of earliest starting times and latest starting times to identify the critical path in the network and determine the float times for non-critical activities"
-        ]
+        ],
+        "keyVocab": [
+         "Earliest start time (EST): forward scan; EST = the largest (EST + duration) over its immediate predecessors",
+         "Minimum completion time: the EST at the finish = the length of the longest path",
+         "Latest start time (LST): backward scan from the finish; LST = the smallest LST of the following activities − its duration",
+         "Float time = LST − EST: how long an activity can be delayed without delaying the project",
+         "Critical path: the activities with zero float; any delay on it delays the whole project"
+        ],
+        "weDo": [
+         {
+          "n": 10,
+          "sub": "14D",
+          "title": "Finding the critical path from a precedence table",
+          "youTry": "Edrolo 8I WE1 (network from weighted table) + WE2 (EST)",
+          "video": "Cambridge GO · 14D Resources"
+         },
+         {
+          "n": 11,
+          "sub": "14D",
+          "title": "Finding the critical path",
+          "youTry": "Edrolo 8I WE3 (LST) + WE4 (float, critical path)",
+          "video": "Cambridge GO · 14D Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 7E Q13",
+          "text": "Adapted from VCAA 2021 Exam 2 Networks and decision mathematics Q2a (85%)"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2023 Exam 1 Q38",
+          "sec": "14C"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 Exam 1 Q13",
+          "sec": "5C"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2023 Exam 2 Q14a",
+          "sec": "14C"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2023 Exam 2 Q9d",
+          "sec": "10F"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 8I Q15",
+          "src": "VCAA 2020 Exam 1 Networks and decision mathematics Q6"
+         },
+         {
+          "ref": "Edrolo U3&4 8I Q16",
+          "src": "VCAA 2018 Exam 2 Networks and decision mathematics Q3a,d"
+         },
+         {
+          "ref": "Edrolo U3&4 8I Q17",
+          "src": "VCAA 2021 Exam 1 Networks and decision mathematics Q6"
+         }
+        ],
+        "cas": [],
+        "note": "APK primes shortest path (the critical path is the longest path). Spare exit (not reserved): Edrolo 8I Q18 (VCAA 2021 E2 N&DM Q4a,b)."
        }
       },
       {
@@ -13385,7 +13700,67 @@
         ],
         "studyDesign": [
          "use of crashing to reduce the completion time of the project or task being modelled."
-        ]
+        ],
+        "keyVocab": [
+         "Crashing: reducing the duration of one or more activities to reduce the completion time of the project",
+         "Only crashing activities on the critical path can shorten the project; once another path becomes as long, it is critical too",
+         "Crashing with cost: reduce the cheapest critical activities first; stop when no further saving is possible or the budget runs out"
+        ],
+        "weDo": [
+         {
+          "n": 12,
+          "sub": "14E",
+          "title": "Crashing one activity with cost",
+          "youTry": "Edrolo 8J WE1",
+          "video": "Cambridge GO · 14E Resources"
+         },
+         {
+          "n": 13,
+          "sub": "14E",
+          "title": "Crashing multiple activities with cost",
+          "youTry": "Edrolo 8J WE2",
+          "video": "Cambridge GO · 14E Resources"
+         }
+        ],
+        "apk": [],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2024 NHT Exam 1 Q40",
+          "sec": "14D"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2023 Exam 1 Q31",
+          "sec": "11E"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2024 Exam 2 Q15a",
+          "sec": "14D"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2024 Exam 2 Q6a",
+          "sec": "7F"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 8J Q9",
+          "src": "VCAA 2017 Exam 2 Networks and decision mathematics Q4ci,ii"
+         },
+         {
+          "ref": "Edrolo U3&4 8J Q10",
+          "src": "VCAA 2020 Exam 1 Networks and decision mathematics Q10"
+         },
+         {
+          "ref": "Edrolo U3&4 8J Q11",
+          "src": "VCAA 2021 Exam 2 Networks and decision mathematics Q4c"
+         }
+        ],
+        "cas": [],
+        "note": "No APK: crashing has no Units 1&2 prerequisite (the Do Now retrieves 14D critical path). Spare exit (not reserved): Edrolo 8J Q12 (VCAA 2019 E2 N&DM Q3e)."
        }
       },
       {

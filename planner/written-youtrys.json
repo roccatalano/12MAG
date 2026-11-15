@@ -306,6 +306,147 @@
    "label": "Written for 12MAG (Claude, modelled on Cambridge Example 32)",
    "text": "A sports club has $40 000 to invest. It intends to award an annual prize of $1800 with the interest earned from investing this money in a perpetuity. What is the minimum interest rate that will allow this prize to be awarded indefinitely?",
    "answer": "1800 = r/100 × 40 000, so r = 1800 × 100 ÷ 40 000 = 4.5. The minimum interest rate is 4.5% per annum."
+  },
+  {
+   "id": "YT-14A-4",
+   "pairs": "Cambridge U3&4 Example 4",
+   "sub": "14A",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 4)",
+   "figure": {
+    "type": "digraph",
+    "source": "A",
+    "sink": "G",
+    "edges": [
+     [
+      "A",
+      "B",
+      14
+     ],
+     [
+      "A",
+      "D",
+      18
+     ],
+     [
+      "A",
+      "E",
+      7
+     ],
+     [
+      "B",
+      "C",
+      9
+     ],
+     [
+      "B",
+      "D",
+      6
+     ],
+     [
+      "C",
+      "G",
+      11
+     ],
+     [
+      "D",
+      "C",
+      4
+     ],
+     [
+      "D",
+      "G",
+      10
+     ],
+     [
+      "D",
+      "F",
+      8
+     ],
+     [
+      "E",
+      "F",
+      12
+     ],
+     [
+      "F",
+      "G",
+      20
+     ]
+    ]
+   },
+   "text": "A wildlife park allows visitors to walk through the park along one-way tracks. The park is represented by the network below, where the direction of travel on each track is shown by an arrow. The numbers on the edges indicate the maximum number of people who are permitted to walk along each track each hour.\na Starting at A, how many people are permitted to walk to G each hour?\nb Given that one group of eight people would like to walk from A to G together as a group, list all the different routes they could take so that the entire group of eight will stay together for the duration of their walk.\nc What is the largest group of people that could walk through the wildlife park if they must stay together in a group for the entire duration of the walk?",
+   "answer": "a 36 people per hour. Minimum cut: C→G 11, D→G 10, D→F 8 and A→E 7: 11 + 10 + 8 + 7 = 36.\nb A–B–C–G (smallest capacity 9), A–D–G (10), A–D–F–G (8).\nc 10 people (route A–D–G)."
+  },
+  {
+   "id": "YT-14A-5",
+   "pairs": "Cambridge U3&4 Example 5",
+   "sub": "14A",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 5)",
+   "figure": {
+    "type": "digraph",
+    "sources": [
+     "Source 1",
+     "Source 2"
+    ],
+    "sinks": [
+     "Outlet 1",
+     "Outlet 2"
+    ],
+    "edges": [
+     [
+      "Source 1",
+      "P",
+      500
+     ],
+     [
+      "Source 1",
+      "Q",
+      300
+     ],
+     [
+      "Source 2",
+      "Q",
+      200
+     ],
+     [
+      "Source 2",
+      "R",
+      400
+     ],
+     [
+      "P",
+      "Outlet 1",
+      350
+     ],
+     [
+      "P",
+      "Q",
+      150
+     ],
+     [
+      "Q",
+      "Outlet 1",
+      250
+     ],
+     [
+      "Q",
+      "R",
+      100
+     ],
+     [
+      "Q",
+      "Outlet 2",
+      200
+     ],
+     [
+      "R",
+      "Outlet 2",
+      450
+     ]
+    ]
+   },
+   "text": "Water enters a network of pipes at either Source 1 or Source 2 and flows out at either Outlet 1 or Outlet 2.\nThe numbers next to the arrows represent the maximum rate, in kilolitres per minute, at which water can flow through each pipe.\nDetermine the maximum rate, in kilolitres per minute, at which water can flow from these pipes at Outlet 1 and at Outlet 2.",
+   "answer": "Outlet 1: minimum cut through the two pipes into Outlet 1: 350 + 250 = 600 kilolitres per minute.\nOutlet 2: minimum cut through the two pipes into Outlet 2: 200 + 450 = 650 kilolitres per minute.\n(These cannot simply be added: both outlets may not reach their maximum at the same time.)"
   }
  ]
 }
