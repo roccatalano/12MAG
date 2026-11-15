@@ -4960,6 +4960,30 @@
             "pdf": "lessons/CFAT 1.3.2 (3B-3C) solutions.pdf"
            }
           ]
+         },
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, CAS.",
+          "status": "draft",
+          "file": "lessons/4A slides.html",
+          "pdf": "lessons/4A slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "3 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/4A worksheet.html",
+            "pdf": "lessons/4A worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/4A worksheet solutions.html",
+            "pdf": "lessons/4A worksheet solutions.pdf"
+           }
+          ]
          }
         ],
         "note": "No Edrolo exam-practice questions on the squared transformation, so no exits. Spare You trys: Edrolo 3E WE2a (prediction from (distance)²). CAS You try: Cambridge CAS 1 data.",

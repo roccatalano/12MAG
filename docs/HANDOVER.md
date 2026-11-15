@@ -7,6 +7,9 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 
 
+## 15 Nov 20:23 — Ch4 #3: lesson l12 (4A) built (Draft)
+`tools/deck/l12/` (build.py, worksheet.py, figs.py) → `lessons/4A slides`, `4A worksheet` (+ solutions), copied to G: 01 Lesson materials. Planner card has the materials; ledger rows added. No exits (card). See QUEUE Decisions log.
+
 ## 15 Nov 20:18 — CFAT 1.5.1 + 1.5.2 (runner, task Ch5 #2)
 - CFAT 1.5.1 (5A–5C) and CFAT 1.5.2 (5D–5E) built (`tools/cfat/ch5/`), Draft, HTML + PDF + solutions in `lessons/` and on G:. Planner l20/l22 cards updated; 19 Edrolo exercise Qs added to `tools/ledger_manual.csv`.
 ## 15 Nov 20:19 · Ch3 #4: lesson l10 (3B) (Draft)
