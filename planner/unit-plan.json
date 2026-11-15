@@ -7273,18 +7273,18 @@
          },
          {
           "kind": "Chapter test",
-          "desc": "Mathspace Ch 2 topic assessment (20 Qs, /41), verbatim.",
+          "desc": "Mathspace time series topic assessment (Mathspace Ch 4; 20 Qs, /47), verbatim.",
           "status": "draft",
           "copies": [
            {
             "label": "Student copy",
-            "file": "lessons/Ch2 test.html",
-            "pdf": "lessons/Ch2 test.pdf"
+            "file": "lessons/Ch5 test.html",
+            "pdf": "lessons/Ch5 test.pdf"
            },
            {
             "label": "Solutions",
-            "file": "lessons/Ch2 test solutions.html",
-            "pdf": "lessons/Ch2 test solutions.pdf"
+            "file": "lessons/Ch5 test solutions.html",
+            "pdf": "lessons/Ch5 test solutions.pdf"
            }
           ]
          },
