@@ -224,3 +224,20 @@ def assemble(S,doc_title,out,base=f'{ROOT}/tools/deck/engine.html'):
         assert tail.count(x)==1,x; tail=tail.replace(x,y)
     tail=tail.replace('/* ---------- reveal engine ---------- */',open(f'{HERE}/tpl.js',encoding='utf-8').read()+'\n/* ---------- reveal engine ---------- */',1)
     open(out,'w',encoding='utf-8').write(head+'\n'.join(S)+tail); return len(S)
+
+# ---------- SOCS: describing numerical data (Rocco, 15 Nov: "like a sock") ----------
+# Shape · Outliers (present or not: goes with the shape) · Centre (mean / median / mode; median unaffected by outliers)
+# · Spread (range / IQR; IQR unaffected by outliers). One template line per letter; every describe answer uses it.
+SOCS_LINES=[('S','Shape','#2f6fdf'),('O','Outliers','#c0632b'),('C','Centre','#1f9e74'),('S','Spread','#7b3fbf')]
+def _blank(cls,val,ph): return f'<span class="blank {cls}"><span class="ph">{ph}</span><span class="fill">{val}</span></span>'
+def socs(pre,shape='',outliers='',centre=('',''),spread=('',''),most='',fs=19,var='the distribution'):
+    """SOCS answer template, one row per letter, blanks filled by data-fill="<pre>1" … "<pre>4".
+    shape: 'positively skewed' · outliers: 'are no outliers' / 'is an outlier at 21' / 'are possible outliers below 34 weeks'
+    centre: (value, measure) e.g. ('38 weeks','median') · spread: (measure, value) e.g. ('IQR','2 weeks') · most: optional 'a and b' for 'Most values lie between …'"""
+    sent=[
+      ['The distribution is ',_blank(pre+'1',shape,'symmetric / positively skewed / negatively skewed'),'.'],
+      ['There ',_blank(pre+'2',outliers,'are no outliers / is an outlier at … / are outliers at …'),'.'],
+      ['The distribution is centred at ',_blank(pre+'3',centre[0],'value'),', the ',_blank(pre+'3',centre[1],'median / mean / mode'),'.'],
+      ['The ',_blank(pre+'4',spread[0],'range / IQR'),' is ',_blank(pre+'4',spread[1],'value'),'.']+([' Most values lie between ',_blank(pre+'4',most,'a and b'),'.'] if most else [])]
+    rows=''.join(f'<div class="socsr"><span class="socsl" style="background:{c}">{l}</span><span class="socsn" style="color:{c}">{n}</span><span class="socst">{"".join(s)}</span></div>' for (l,n,c),s in zip(SOCS_LINES,sent))
+    return f'<div class="socs report" style="font-size:{fs}px">{rows}</div>'

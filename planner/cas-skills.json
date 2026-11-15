@@ -115,7 +115,8 @@
     ],
     "classpad": []
    },
-   "note": "ClassPad has no dot plot graph type (to confirm): draw dot plots by hand, or use a histogram with interval width 1."
+   "note": "ClassPad cannot make dot plots (Rocco, 15 Nov): TI-Nspire only; ClassPad users draw them by hand.",
+   "tiOnly": true
   },
   {
    "id": "logs",

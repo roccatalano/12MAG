@@ -208,3 +208,9 @@
 .T .dlist span{padding:1px 5px;text-align:right}
 .T table.t.cmp td,.T table.t.cmp th{padding-top:3px;padding-bottom:3px}
 .T .tmpl .stem3,.T .tmpl .stemcap{color:#1d2330}.T .tmpl .stemcap{background:#fff;display:inline-block;padding:2px 8px;border-radius:6px}
+/* SOCS answer template */
+.T .socs{display:flex;flex-direction:column;gap:6px;background:#fff;color:#1d2330;border-radius:10px;padding:8px 10px;line-height:1.5}
+.T .socsr{display:grid;grid-template-columns:30px 86px 1fr;align-items:baseline;gap:6px}
+.T .socsl{color:#fff;font-weight:800;border-radius:6px;text-align:center;width:28px}
+.T .socsn{font-weight:800;font-size:.85em;text-transform:uppercase;letter-spacing:.04em}
+.T .socs .blank{display:inline}

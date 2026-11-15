@@ -33,6 +33,18 @@ These replace all older 12MAG rules (old Planning\CLAUDE.md, project docs).
 11. **% correct** only from examiner reports (past-design reports sit with the past papers); if a report is missing, say which one and ask Rocco.
 12. **Check every slide visually** (all steps shown + mid-reveal) before handing over. Finished resources go in `lessons/` here and flat into `01 Lesson materials` on G:.
 
+## Describing numerical data: SOCS (Rocco, 15 Nov)
+Every "describe" answer (and later "compare") uses **SOCS, like a sock**, in this order, one template line per letter (`socs()` in `tools/deck/tpl/tpl.py`):
+- **S**hape: The distribution is symmetric / positively skewed / negatively skewed.
+- **O**utliers: There are no outliers / is an outlier at … / are outliers at … (present or not: goes with the shape).
+- **C**entre: The distribution is centred at <value>, the median / mean / mode (median is unaffected by outliers).
+- **S**pread: The range / IQR is <value> (IQR is unaffected by outliers). Optional: Most values lie between a and b.
+Textbook solutions are set out in SOCS order (say so in the source line). Worksheets and bound reference cards use the same template.
+
+## The planner card is the basis (Rocco, 15 Nov)
+Each lesson's resources follow its planner card (APK, Do Now, examples/you trys, exits, CAS, coursework). If a source item can't be used, ask, don't silently drop it.
+CAS: ClassPad can't make dot plots: the dot plot skill is TI-Nspire only (`tiOnly` in cas-skills.json).
+
 ## Slide templates (Rocco, 14 Nov) — every deck is built from `tools/deck/tpl/tpl.py`
 Build a lesson with a `tools/deck/<S#>/build.py` that only fills content into the templates (see `tools/deck/s4/build.py`); the engine is `tools/deck/engine.html` (re-make with `make_engine.py`). Rules:
 - **Order:** title (formal topic) → Today's lesson (3 white cards: learning intentions · success criteria with tick boxes · lesson sequence) → Key definitions (with small pictures) and Key formulas (fences carry "x < LF → outlier") → Do Now ×4 → APK → Learn / WE / You try / CAS → exits → check-in (one tick-box card) → coursework (one card per subchapter) → **Videos that might help** (always last; blank cards to fill).

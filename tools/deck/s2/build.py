@@ -4,7 +4,10 @@ Run: python3 tools/deck/s2/build.py
 Sources (all checked against the PDFs on G: 15 Nov 2026):
 - Do Now: VCAA 2024 NHT Exam 1 Q2 (NHT report: answer B only) · VCAA 2024 Exam 1 Q1 (report: B 78%, A 18, C 3, D 1)
           VCAA 2023 Exam 2 Q1a (report: 50% scored 1) · VCAA 2023 Exam 2 Q2ai (report: 95% scored 1)
-- APK: Cambridge Units 1&2 Chapter 2 skills checklist 2C #6 + 2D #7 (AFL games), 2D #9 (party ages); Chapter 9 checklist 9D #6, #7 (logs)
+- APK (the planner card's list): Cambridge Units 1&2 Chapter 2 skills checklist 2C #6 + 2D #7 (AFL games), 2D #9 (party ages); Chapter 9 checklist 9D #6, #7 (logs);
+  Edrolo Units 1&2 1C Q17 (adapted from VCAA 2016 Exam 2 Q1d: report 52% scored 2/2) and 1C Q15 (adapted from VCAA 2017 Exam 2 Q2b: report 87%). Edrolo's adapted text is used verbatim
+  (the originals need the decimal rainfall dot plot / a back-to-back stem plot); goal values read off Edrolo's dot plot (p. 26).
+- Describing: SOCS template (tpl.socs). CAS dot plot: TI-Nspire only (ClassPad can't make dot plots: Rocco, 15 Nov).
 - Learn: Cambridge Units 3&4 1C pp. 14-23, 1D pp. 28-31, 1E pp. 34-36; Edrolo Units 3&4 1C pp. 20-21 (dot plot / stem plot theory figures)
 - Worked examples: Cambridge Units 3&4 Examples 6-13 (pp. 14-38). CAS: Cambridge 1C CAS 1 (27 marks); steps from planner/cas-skills.json
 - You try: Edrolo Units 3&4 1C WE4, WE5 (frequency table, histogram), 1C WE1 (dot plot), 1C WE2 (stem plot), 1D WE1 (logs), 1D WE3 (log histogram)
@@ -61,6 +64,7 @@ def growix(v):
     for i,x in enumerate(v):
         if x>0: out[i]=k; k+=1
     return out
+def dix(vals,test): return ','.join(str(i) for i,v in enumerate(sorted(vals)) if test(v))
 def nl(n): return ''.join('<span class="frag"></span>' for _ in range(n))
 CS={x['id']:x for x in json.load(open(os.path.join(ROOT,'planner','cas-skills.json')))['skills']}
 yid=lambda u:u.split('v=')[1].split('&')[0]
@@ -77,8 +81,8 @@ LI=['To be able to construct frequency tables for discrete numerical data.','To 
 SC=['I can construct a frequency table for discrete numerical data.','I can construct a grouped frequency table.','I can construct a histogram from a grouped frequency table.',
     'I can describe the features of a distribution from a histogram.','I can construct a dot plot.','I can construct a stem plot.',
     'I can use a CAS calculator to find logs.','I can interpret a histogram with a log scale.']
-TD=today(LI,SC,[('Do Now','· four VCAA questions on 1A–1B','#00838F'),('APK','· Year 11 histograms, stem plots and logs','var(--apk)'),
-  ('Frequency tables','→ WE 6, 7',None),('Histograms','→ WE 8 · CAS',None),('Shape, centre, spread, outliers','→ WE 9',None),
+TD=today(LI,SC,[('Do Now','· four VCAA questions on 1A–1B','#00838F'),('APK','· Year 11 skills and two VCAA questions','var(--apk)'),
+  ('Frequency tables','→ WE 6, 7',None),('Histograms','→ WE 8 · CAS',None),('Describing: SOCS','→ WE 9',None),
   ('Dot plots and stem plots','→ WE 10, 11',None),('Logs and log scales','→ WE 12 · CAS · WE 13',None),('Exit tasks','· three VCAA questions','var(--exit)'),('Check-in and coursework','','var(--muted)')])
 S.append(TD.replace('<div class="col3">','<style>.li9 .card3:first-child li{font-size:17px!important;padding-top:4px!important;padding-bottom:4px!important;line-height:1.3}</style><div class="col3 li9">',1))
 FPCT=F('percentage frequency = ',FR(['number of values in the interval'],['total number of values']),' × 100%')
@@ -144,6 +148,20 @@ S.append(qslide('apk','APK · Year 11 · Cambridge U1&amp;2 2C #6, 2D #7','What 
    ('ANS','<b>a</b><div style="width:430px">'+hist('a1h',{"start":0,"w":20,"v":AV,"ymax":8,"ystep":2,"tick":40,"xl":"number of games played","yl":"frequency","h":250,"W":620,"fs":17})+'</div>'),
    ('Tail','most players have under 100 games; a long tail runs out to the right.','data-pk="1"'),('ANS','<b>b</b> &nbsp;Positively skewed.')],
   '',f'{CAM12} · Chapter 2 skills checklist, 2C #6 and 2D #7 (teacher solution)',cmd=('Describe',None,'the shape')))
+# ================= APK: Edrolo U1&2 1C Q17 (adapted from VCAA 2016 E2 Q1d) — histogram from a dot plot
+GL=[0]*16+[0.3,0.6,1.2,1.6,1.6,2.2,2.6,3.2,6.4,7.2,7.8,12.4,16.8,17.8]
+GB=[21,3,0,3,0,0,1,0,2]; gi=growix(GB)
+S.append(qslide('apk','APK · VCAA 2016 Exam 2 Q1d (adapted)','A real VCAA question you can already do',
+  G('The following dot plot shows the average number of goals scored per season by each player within a soccer club.',
+    '<div style="width:100%">'+dot('a4d',{"min":0,"max":19,"vals":GL,"xl":"average goals scored","W":900,"h":400,"r":6,"fs":17})+'</div>',
+    'Use the grid to construct a histogram that displays the distribution of the average number of goals scored per season at the soccer club. Use interval widths of two with the first interval starting at 0. <span class="muted">(2 marks)</span>'),
+  [('Axes','<em>average goals scored</em> across, 0 to 18 in twos; frequency up, to 22.','data-ax="#a4h"'),
+   ('0–&lt;2','16 dots at 0 and 5 more below 2: 21',f'data-hi="#a4d|{dix(GL,lambda v:v<2)}|hy" data-grow="#a4h|{gi[0]}"'),
+   ('2–&lt;4','3',f'data-hi="#a4d|{dix(GL,lambda v:2<=v<4)}|hy" data-grow="#a4h|{gi[1]}"'),
+   ('6–&lt;8','3 (nothing from 4 to 6)',f'data-hi="#a4d|{dix(GL,lambda v:6<=v<8)}|hy" data-grow="#a4h|{gi[3]}"'),
+   ('12–&lt;14, 16–&lt;18','1 · 2 · check: 21 + 3 + 3 + 1 + 2 = 30',f'data-hi="#a4d|{dix(GL,lambda v:v>=12)}|hy" data-grow="#a4h|{gi[6]};#a4h|{gi[8]}"'),
+   ('TMPL','<div style="width:440px">'+hist('a4h',{"start":0,"w":2,"v":GB,"xmin":0,"xmax":18,"ymax":22,"ystep":2,"tick":2,"xl":"average goals scored","yl":"frequency","h":320,"W":600,"fs":15},'data-stepped="1" data-axhide').replace('class="chart"','class="chart noax"')+'</div>','','data-stat="52"')],
+  '','Edrolo General Mathematics Units 1&amp;2 · 1C Q17 · Adapted from VCAA 2016 Exam 2 Data analysis Q1d (examiner report: many drew interval widths of one)',stat=('mark',52),cmd=('Construct',2,'intervals of width 2, from 0')))
 # ================= APK 2: Cambridge U1&2 2D #9 (party ages)
 PA=[19,21,22,56,34,19,27,28,34,17,66,37,20,20,21,45,26,19,23,29]
 prow=[(s,sorted(v%10 for v in PA if v//10==s)) for s in range(1,7)]
@@ -155,6 +173,15 @@ S.append(qslide('apk','APK · Year 11 · Cambridge U1&amp;2 2D #9','And a stem p
   [('Stems 4–6','45 · 56 · 66',f'data-hi="#a2d|{idx(PA,lambda v:v>=40)}|hy" data-show="#a2s|{J2(pix[3]+pix[4]+pix[5])}"'),
    ('TMPL',ph)],
   '',f'{CAM12} · Chapter 2 skills checklist, 2D #9 (teacher solution)',cmd=('Construct',None,'ordered leaves and a key')))
+# ================= APK: Edrolo U1&2 1C Q15 (adapted from VCAA 2017 E2 Q2b) — mode from a stem plot
+MR=[(1,[8]),(2,[2,2,4,4,4]),(2,[5,5,9]),(3,[0,0,1,2,3,4]),(3,[6,8]),(4,[0,3])]
+mh_,mix=stemB('a5s',MR,'Key: 1 | 2 = 12',24,hid=False,var='<em>wingspan</em> (mm)')
+S.append(qslide('apk','APK · VCAA 2017 Exam 2 Q2b (adapted)','And another',
+  G('The following stem plot displays the <em class="v">wingspan</em>, in millimetres, of 19 moths that were captured.',mh_,
+    'Write down the modal <em class="v">wingspan</em>, in millimetres, of the moths captured. <span class="muted">(1 mark)</span>'),
+  [('Most leaves','leaf 4 appears three times on the first 2 stem; no other value appears more than twice.',f'data-hi="#a5s|{J2(mix[1][2:])}|hy"'),('Key','2 | 4 = 24 mm')],
+  'The modal wingspan is <b>24 mm</b>.','Edrolo General Mathematics Units 1&amp;2 · 1C Q15 · Adapted from VCAA 2017 Exam 2 Data analysis Q2b (examiner report, original question)',
+  stat=('mark',87),cmd=('Write',1,'one value, in mm')))
 # ================= APK 3: Cambridge U1&2 9D #6, #7 (logs)
 S.append(qslide('apk','APK · Year 11 · Cambridge U1&amp;2 9D #6, #7','Logs and powers of ten',
   plist([('a','Find the log of 592 to two decimal places.'),('b','What is the order of magnitude of 478 000?')]),
@@ -269,33 +296,29 @@ pic='<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">'+''
 S.append(learn('Learn · 1C','Shape: what to look for',
   '<h4>Shape</h4><p>Is the histogram single-peaked? Does it tail off <b>evenly</b> (symmetric) or mostly in <b>one direction</b> (skewed)?</p>',pic,
   'The tail names the skew. Salaries and house prices: positively skewed. Age at death: negatively skewed.','Cambridge General Mathematics Units 3&amp;4, 1C p. 21 (shapes: teacher illustrations)'))
-# ================= Learn 1C: centre, spread, outliers
-CSO=[('Centre','the middle: the line that splits the <b>area</b> in half',mh([1,5,9,6,4,3,2,1,1],vline=3.1)),('Spread','narrow peak: tightly clustered · broad peak: widely spread',mh([0,0,1,3,10,3,1,0,0])),
-     ('Outliers','values that stand out from the main body: check them, they may be errors',mh([1,0,0,0,3,7,9,6,2],col='#4f84e6'))]
-pic='<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">'+''.join(f'<div class="key frag" style="text-align:center"><h4>{a}</h4>{c}<p style="font-size:19px;margin-top:4px">{b}</p></div>' for a,b,c in CSO)+'</div>'
-S.append(learn('Learn · 1C','Centre, spread and outliers',
-  '<h4>Describe a distribution with four features</h4><p><b>S</b>hape · <b>C</b>entre · <b>S</b>pread · <b>O</b>utliers</p>',pic,
-  'From a histogram you can only <b>estimate</b> the centre and spread, and only flag <b>possible</b> outliers.','Cambridge General Mathematics Units 3&amp;4, 1C pp. 22–23 (teacher illustrations)'))
+# ================= Learn 1C: SOCS (Rocco's paradigm for describing numerical data)
+SC4=[('S','Shape','#2f6fdf','symmetric · positively skewed · negatively skewed',mh([1,2,4,7,9,7,4,2,1],h=95)),
+     ('O','Outliers','#c0632b','present or not present: they go with the shape',mh([1,0,0,0,3,7,9,6,2],h=95)),
+     ('C','Centre','#1f9e74','mean · median · mode<br><b>median</b> is unaffected by outliers',mh([1,5,9,6,4,3,2,1,1],vline=3.1,h=95)),
+     ('S','Spread','#7b3fbf','range · IQR<br><b>IQR</b> is unaffected by outliers',mh([0,0,1,3,10,3,1,0,0],h=95))]
+pic=('<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">'+''.join(f'<div class="key frag" style="text-align:center;border-color:{c}"><h4 style="color:{c}"><span style="background:{c};color:#fff;border-radius:6px;padding:0 8px;margin-right:6px">{l}</span>{n}</h4>{h}<p style="font-size:18px;margin-top:4px">{t}</p></div>' for l,n,c,t,h in SC4)+'</div>'
+     '<div class="frag" style="margin-top:12px">'+socs('ls')+'</div>')
+S.append(learn('Learn · 1C','Describing a distribution: SOCS',
+  '<h4>SOCS, like a sock</h4><p>Describe numerical data in this order, one sentence each: <b>S</b>hape · <b>O</b>utliers · <b>C</b>entre · <b>S</b>pread.</p>',pic,
+  'Skewed, or outliers? Give the <b>median</b> for the centre and the <b>IQR</b> for the spread: outliers don’t affect them. From a histogram, centre and spread are only estimates.',
+  'Cambridge General Mathematics Units 3&amp;4, 1C pp. 21–23 (SOCS order: class convention; charts: teacher illustrations)'))
 # ================= WE9: Cambridge Example 9 (report template)
 GV=[2,2,2,2,2,2,2,4,6,10,16,34,95,233,300,207,86,4]
-def report(parts):
-    out=''
-    for hl,bc,toks in parts:
-        out+=f'<span class="{hl}">'+''.join(t if isinstance(t,str) else B(bc,t[1],t[0]) for t in toks)+'</span> '
-    return f'<div class="report"><p class="tpl" style="font-size:18px;line-height:1.75;margin:0">{out}</p></div>'
-WREP=report([('hl1','r1',['The distribution is clearly ',('shape','negatively skewed, with a long lower tail'),'.']),
-  ('hl2','r2',['The centre of the distribution is around ',('centre','38-39 weeks'),'.']),
-  ('hl3','r3',['The data values range from ',('min–max','25-42 weeks'),', but most of the data values are close to the centre, in the range of ',('range','36-41 weeks'),'.']),
-  ('hl1','r4',['Those values which are less than ',('value','34 weeks'),' seem to be small in comparison to the rest of the data, but which values are outliers ',('can / cannot','cannot'),' be determined from the histogram.'])])
+WSOCS=socs('r','negatively skewed','are possible outliers below 34 weeks',('around 38–39 weeks','median (the line that halves the area)'),('range','17 weeks (25 to 42 weeks)'),most='36 and 41 weeks',fs=17)
 S.append(qslide('we','Worked example 9 · 1C','Describing the features of a distribution from a histogram',
   G('The histogram shows the gestation period (completed weeks) for a sample for 1000 babies born in Australia one year.',
     '<div style="width:100%">'+hist('w9h',{"start":25,"w":1,"v":GV,"xmin":25,"xmax":44,"ymax":300,"ystep":100,"tick":1,"xl":"Gestation period (weeks)","yl":"Frequency","h":360,"W":760,"fs":15,"L":64})+'</div>',
     'Describe this histogram in terms of shape, centre, spread and outliers.'),
-  [('Shape','the bars tail off to the left.','data-hi="#w9h|0,1,2,3,4,5,6,7,8,9,10|hy" data-fill="r1"'),
-   ('Centre','the line that halves the area is between 38 and 39.','data-hi="#w9h|13,14|hb" data-fill="r2"'),
-   ('Spread','25 to 42 weeks; most values 36–41.','data-hi="#w9h|11,12,13,14,15,16|hg" data-fill="r3"'),
-   ('Outliers','below 34 weeks look small, but a histogram can’t tell us which are outliers.','data-hi="#w9h|0,1,2,3,4,5,6,7,8|hc" data-fill="r4"'),('TMPL',WREP)],
-  '',f'{CAM} · Example 9 (pp. 23–24, solution verbatim; histogram redrawn)',video='Cambridge GO · Example 9 (1C Resources)',cmd=('Describe',None,'shape, centre, spread, outliers')))
+  [('Shape','the bars tail off to the left: a long lower tail.','data-hi="#w9h|0,1,2,3,4,5,6,7,8,9,10|hy" data-fill="r1"'),
+   ('Outliers','values below 34 weeks look small compared with the rest, but a histogram can’t tell us which are outliers.','data-hi="#w9h|0,1,2,3,4,5,6,7,8|hc" data-fill="r2"'),
+   ('Centre','the line that halves the area is between 38 and 39.','data-hi="#w9h|13,14|hb" data-fill="r3"'),
+   ('Spread','25 to 42 weeks; most values 36–41.','data-hi="#w9h|11,12,13,14,15,16|hg" data-fill="r4"'),('TMPL',WSOCS)],
+  '',f'{CAM} · Example 9 (pp. 23–24; Cambridge’s solution set out in SOCS order; histogram redrawn)',video='Cambridge GO · Example 9 (1C Resources)',cmd=('Describe',None,'SOCS: shape, outliers, centre, spread')))
 
 # ================= Learn 1D: dot plots and stem plots
 DP=dot('ldp',{"min":2,"max":7,"vals":[2,3,3,4,4,4,4,5,5,6,7],"xl":"board games owned","h":190,"W":520,"r":11})
@@ -309,7 +332,6 @@ S.append(learn('Learn · 1D','Dot plots and stem plots',
 # ================= WE10: Cambridge Example 10 (dot plot)
 CR=[22,19,18,19,23,25,22,29,18,22,23,24,22]
 srt=sorted(CR)
-def dix(vals,test): return ','.join(str(i) for i,v in enumerate(sorted(vals)) if test(v))
 S.append(qslide('we','Worked example 10 · 1D','Constructing a dot plot',
   G('The ages (in years) of the 13 members of a cricket team are:',dl('w10d',CR,7,26),'Construct a dot plot.'),
   [('Number line','scaled to include all data values (17 to 30); label it <em>Age (years)</em>.','data-ax="#w10p"'),
@@ -330,6 +352,12 @@ S.append(qslide('yt','You try · Edrolo 1C WE1','Constructing a dot plot',
    ('TMPL','<b>a.</b><div style="width:470px">'+f'<div class="chart noax" id="y10p" data-chart="dot3" data-axhide data-cfg=\'{J({"min":0,"max":5,"vals":PET,"xl":"number of pets","h":230,"W":700,"r":14,"fs":20,"hid":True})}\'></div></div>'),
    ('Mode','the most dots: 4 families own 1 pet.',f'data-pk="1" data-hi="#y10p|{dix(PET,lambda v:v==1)}|hg"'),('ANS','<b>b.</b> &nbsp;<b>1 pet</b>')],
   '',f'{EDR} · 1C Worked example 1 (pp. 20–21)',cmd=('Construct',None,'scaled, labelled number line')))
+# ================= CAS: dot plot (TI-Nspire only: ClassPad has no dot plot)
+C=CS['dotplot']
+S.append(cas('CAS · 1D','Constructing a dot plot (TI-Nspire)',
+  '<p>The ages (in years) of the 13 members of a cricket team are:</p>'+dl('cdd',CR,7,24)+'<p style="margin-top:12px">Enter the ages into a list named <b>age</b> and display them as a dot plot.</p>',
+  C['ti'],['<b>No dot plot on the ClassPad.</b> Draw dot plots by hand.'],'Each dot is one cricketer: 22 has four dots, the most of any age.',
+  'Cambridge General Mathematics Units 3&amp;4, Example 10 data (p. 29) · Steps: CAS guide (planner)',videos=[yt(v['title'],yid(v['url'])) for v in C['videos']['ti'][:2]]))
 # ================= WE11: Cambridge Example 11 (stem plot: unordered, then ordered)
 UR=[26,3,12,20,36,1,25,26,13,9,26,27,15,21,7,8,22,3,37,17,55,30,1]
 urow=[(s,[v%10 for v in UR if v//10==s]) for s in range(6)]
