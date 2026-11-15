@@ -34,8 +34,8 @@ body {{ font-family:Arial,"Liberation Sans",Helvetica,sans-serif; font-size:10pt
 .ans {{ visibility:hidden; color:{RED}; font-size:9.3pt; }}
 .sol .ans {{ visibility:visible; }}
 .space > .ans {{ position:absolute; left:0; right:0; top:.5mm; }}
-.pt {{ display:flex; gap:2mm; padding:.5mm 0; border-bottom:1px dashed #bbb; }} .parts > .pt.nb {{ border-bottom:none; }} .pt > b {{ min-width:4mm; flex:none; }} .pt > div {{ flex:1; }}
-.parts {{ display:grid; gap:.5mm 4mm; }}
+.pt {{ display:flex; gap:2mm; padding:.5mm 6mm .5mm 3mm; margin:0 -3mm; border-bottom:1px dashed #bbb; }} .parts > .pt.nb {{ border-bottom:none; }} .pt > b {{ min-width:4mm; flex:none; }} .pt > div {{ flex:1; }}
+.parts {{ display:grid; gap:.5mm 0; }}
 .mc {{ display:grid; gap:.4mm 4mm; margin:1mm 0; }} .mc b {{ display:inline-block; width:5mm; }}
 .mc .ok {{ display:none; color:{RED}; font-weight:bold; }} .sol .mc .right .ok {{ display:inline; }} .sol .mc .right span {{ color:{RED}; }}
 .why {{ visibility:hidden; color:{RED}; font-size:8.6pt; line-height:1.2; }} .sol .why {{ visibility:visible; }}
