@@ -37,7 +37,8 @@ Planner card: `gm12-u3-s5` in `planner/unit-plan.json` ("Normal distribution, z-
 - Insight GM1 Q1–36 + GM2 Q1–12 "Investigating data distributions", CFAT style, one section per subchapter 1A–1H (gradual homework). Multi-part questions go in the latest subchapter they need; shared Insight stems repeated in each box.
 - Build: `tools/revision/ch1/build.py` (questions in `qdata.py`, figures pre-rendered TikZ SVGs in `figs.json`). Template for later chapters.
 - Notes: GM2 Q6a keeps Insight's answer (3); GM2 Q2a Insight median 35 vs stem plot 36 (noted in solutions).
-- Rocco to delete on G: `Ch1 revision booklet PRINT.pdf`, `... solutions PRINT.pdf`, `... LaTeX.zip`, `... build files.zip` (superseded).\n- CFAT 1.1.1–1.1.3 cards now use Student copy / Solutions (solutions not made yet). CFAT 1.1.3 added to the Ch 1 check card.
+- Rocco to delete on G: `Ch1 revision booklet PRINT.pdf`, `... solutions PRINT.pdf`, `... LaTeX.zip`, `... build files.zip` (superseded).
+- CFAT 1.1.1–1.1.3 cards now use Student copy / Solutions (solutions not made yet). CFAT 1.1.3 added to the Ch 1 check card.
 
 ## Open / later
 - **Lessons 1–3 (S1–S3)** still use the old layout → rebuild on the templates (also fixes 'Homework' → 'Coursework', S2 Do Now count, S3 extra exit, S2 '?%' → 71%).
