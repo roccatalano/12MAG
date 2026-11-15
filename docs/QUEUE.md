@@ -266,4 +266,4 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 | AoS3 runner: G: not reachable | 2026-11-16 01:02 | 2026-11-16 01:04 | 2 | | stopped: 12MAG Course Planner folder not connected to this session; nothing changed |
 | AoS4 runner: G: not reachable | 2026-11-16 01:03 | 2026-11-16 01:04 | 1 | | stopped: G: folder not connected to this session (device shows no connected folders); no task claimed; next run: NOT fired — G: access needed |
 | — (AoS2 runner) | 2026-11-16 01:10 | 01:10 | 1 | | AoS2 runner: G: not reachable — get_device_info showed connectedFolders: [] (12MAG Course Planner gives names-only listing); nothing changed |
-| AoS4 #1 Plan Ch 13 | 2026-11-16 01:11 | 01:12 | ~1 | | done: 4 lesson cards planned from the Cambridge book (text PDF, quick). next run: fired |
+| AoS4 #1 Plan Ch 13 | 2026-11-16 01:11 | 01:12 | ~1 | | done: 4 lesson cards planned from the Cambridge book (text PDF, quick). next run: NOT fired — fire_trigger denied by the permission check; hourly schedule (:47) will pick up task 2 |
