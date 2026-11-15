@@ -7,6 +7,10 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 
 
+## 15 Nov 20:01 — Lesson l09 (3A) slides + worksheet (runner, task Ch3 #3)
+- `tools/deck/l09/build.py` (+ figs.py, shoot.py, worksheet.py; sources in docstrings) → `lessons/3A slides.html/.pdf` (26 slides, CFAT 1.2.3 slide first) and `lessons/3A worksheet(.pdf)` + solutions (4 pages). Copied to G: `01 Lesson materials`. Draft.
+- Do Now 2026 NHT E1 Q11 replaced by 2026 E1 Q7 (see Decisions log). Ledger + planner card updated. 3A MaffsGuru video link still blank.
+
 ## 15 Nov 19:59 — Chapter 4 lesson cards l12–l15 prefilled (runner, task Ch4 #1)
 - `tools/prefill_ch4.py` (sources in docstring) → `planner/unit-plan.json`. You trys: Ex 1 Edrolo 3D WE2, Ex 2 3E WE1a, Ex 3 3E WE1b, Ex 5 3E WE1c, Ex 6 3D WE4, Ex 7 3E WE1d; Ex 4 (log y) written: `planner/written-youtrys.json` YT-4B-4. Exits: l13 Edrolo 3E Q10, Q12a–b; l14 3E Q11; l15 3D Q14, 3E Q13; l12 none.
 - Coursework by skill (Cambridge 4A–4D). CAS steps written for transformed-lsrl, transformation-check (Draft). 4A–4D videos added as `draft`. 31 planned rows in `tools/ledger_manual.csv`.

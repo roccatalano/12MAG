@@ -3952,8 +3952,9 @@
          },
          {
           "exam": "Exam 1",
-          "ref": "VCAA 2026 NHT Exam 1 Q11",
-          "sec": "2H"
+          "ref": "VCAA 2026 Exam 1 Q7",
+          "sec": "2E",
+          "note": "replaces VCAA 2026 NHT Exam 1 Q11 (reciprocal-transformed least squares line: not yet taught)"
          },
          {
           "exam": "Exam 2",
@@ -4157,6 +4158,30 @@
             "label": "Solutions",
             "file": "lessons/CFAT 1.2.3 (2E-2H) solutions.html",
             "pdf": "lessons/CFAT 1.2.3 (2E-2H) solutions.pdf"
+           }
+          ]
+         },
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/3A slides.html",
+          "pdf": "lessons/3A slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "4 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/3A worksheet.html",
+            "pdf": "lessons/3A worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/3A worksheet solutions.html",
+            "pdf": "lessons/3A worksheet solutions.pdf"
            }
           ]
          }
