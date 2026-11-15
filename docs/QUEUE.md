@@ -35,7 +35,7 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 2. `done 15 Nov 19:45 — CFAT 1.3.1 (3A-3B, /15, on l11) + CFAT 1.3.2 (3B-3C, /15, on l12), HTML+PDF + solutions, Draft` **CFATs for Chapter 3** + solutions (CFAT 1.3.x, Edrolo U3&4 exercise questions only, HTML + PDF in the CFAT 1.1.x layout; copy `tools/cfat/ch2/build_html.py` to `tools/cfat/ch3/`). Decide the split by subchapter as Ch 2 did; each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
 3. `done 15 Nov 20:00 — 3A slides (26) + 4-page worksheet (student + solutions), HTML+PDF, Draft; Do Now 2026 NHT E1 Q11 replaced by 2026 E1 Q7` **Lesson l09 (3A)**: slides (`tools/deck/l09/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 4. `done 15 Nov 20:19 — 3B slides (27) + 5-page worksheet (student + solutions), HTML+PDF, Draft` **Lesson l10 (3B)**: slides + worksheet.
-5. `todo` **Lesson l11 (3C)**: slides + worksheet.
+5. `in progress 15 Nov 20:21` **Lesson l11 (3C)**: slides + worksheet.
 6. `todo` **Chapter 3 revision booklet** + solutions (template `tools/revision/ch2/build.py`): the Insight GM1 + GM2 'Investigating associations … and modelling linear associations' questions and parts NOT used in the Ch 2 booklet (regression: least squares line, slope/intercept, predictions, residuals, residual plots), plus any whole questions on 3A–3C. Leave transformation questions (Ch 4) out. Insight is never burnt.
 7. `todo` **Chapter 3 test** from the Mathspace Chapter 3 topic assessment (`02 Sources\Textbooks\Mathspace\Chapter 3 - Model linear associations`). Leave out the transformation questions (lessons 3.05–3.07): they go to the Ch 4 test. If it can't be built from what's there, mark `needs Rocco`.
 
