@@ -8671,15 +8671,152 @@
        "title": "Compound interest investments with regular additions",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 8A",
+           "items": [
+            {
+             "skill": "Generating a sequence using a recurrence relation",
+             "q": "Q1"
+            },
+            {
+             "skill": "Modelling compound interest investments with additions to the principal",
+             "q": "Q2–7"
+            },
+            {
+             "skill": "Using a recurrence relation to model and analyse an investment with additions to the principal",
+             "q": "Q8–11"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q12–14"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 8A section"
           }
          ]
-        }
+        },
+        "learningObjectives": [
+         {
+          "sub": "8A",
+          "items": [
+           "To be able to generate a sequence from a recurrence relation that combines both geometric and linear growth or decay.",
+           "To be able to model compound interest investments with additions to the principal.",
+           "To be able to use a recurrence relation to analyse compound interest investments with additions to the principal.",
+           "To be able to determine the annual interest rate from a recurrence relation."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "8A",
+          "items": [
+           "I can generate a sequence from a recurrence relation that combines both geometric and linear growth or decay.",
+           "I can model compound interest investments with additions to the principal.",
+           "I can use a recurrence relation to analyse compound interest investments with additions to the principal.",
+           "I can determine the annual interest rate from a recurrence relation."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "use of a first-order linear recurrence relation of the form u₀ = initial value, uₙ₊₁ = Ruₙ + d, where R and d are constants to generate the terms of a sequence",
+         "use of a first-order linear recurrence relation to model and analyse (numerically and graphically) annuity investment, including the use of a recurrence relation to determine the value of the investment after n payments have been made for an initial sequence from first principles"
+        ],
+        "keyVocab": [
+         "Vₙ₊₁ = R × Vₙ + D: grow by R (interest) then add D (regular addition) each period",
+         "Annuity investment: compound interest investment with regular equal additions to the principal",
+         "Rate per period = (R − 1) × 100%; annual rate = rate per period × periods per year"
+        ],
+        "weDo": [
+         {
+          "n": 1,
+          "sub": "8A",
+          "title": "Generating a sequence from a recurrence relation of the form Vₙ₊₁ = R × Vₙ ± D",
+          "youTry": "Written (modelled on Cambridge Ex 1) · YT-8A-1",
+          "video": "Cambridge GO · 8A Resources"
+         },
+         {
+          "n": 2,
+          "sub": "8A",
+          "title": "Modelling compound interest investments with additions to the principal (1)",
+          "youTry": "Written (modelled on Cambridge Ex 2) · YT-8A-2",
+          "video": "Cambridge GO · 8A Resources"
+         },
+         {
+          "n": 3,
+          "sub": "8A",
+          "title": "Modelling compound interest investments with additions to the principal (2)",
+          "youTry": "Edrolo 6F WE1a",
+          "video": "Cambridge GO · 8A Resources"
+         },
+         {
+          "n": 4,
+          "sub": "8A",
+          "title": "Using a recurrence relation to analyse compound interest investments with additions to the principal",
+          "youTry": "Edrolo 6F WE1b",
+          "video": "Cambridge GO · 8A Resources"
+         },
+         {
+          "n": 5,
+          "sub": "8A",
+          "title": "Determining the annual interest rate from a recurrence relation",
+          "youTry": "Written (modelled on Cambridge Ex 5) · YT-8A-5",
+          "video": "Cambridge GO · 8A Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 3H checklist #22",
+          "text": "Use a recurrence relation to model compound interest for investments or loans"
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 3E Q12",
+          "text": "VCAA 2017 Exam 2 Q5c"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2026 Exam 1 Q17",
+          "sec": "7F"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2026 Exam 1 Q2",
+          "sec": "1F"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2026 Exam 2 Q8a",
+          "sec": "7D"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2026 Exam 2 Q1a",
+          "sec": "1F"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 6F Q16",
+          "src": "VCAA 2018 Exam 1 Q17"
+         },
+         {
+          "ref": "Edrolo U3&4 6F Q17",
+          "src": "VCAA 2021 Exam 1 Q22"
+         }
+        ],
+        "cas": [
+         "recursion-sequence"
+        ]
        }
       },
       {
@@ -8691,15 +8828,145 @@
        "title": "Reducing balance loans and annuities",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 8B",
+           "items": [
+            {
+             "skill": "Modelling reducing balance loans with recurrence relations",
+             "q": "Q1–6"
+            },
+            {
+             "skill": "Using a recurrence relation to analyse a reducing balance loan",
+             "q": "Q7–8"
+            },
+            {
+             "skill": "Modelling and analysing an annuity with a recurrence relation",
+             "q": "Q9–15"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q16–18"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 8B section"
           }
          ]
-        }
+        },
+        "learningObjectives": [
+         {
+          "sub": "8B",
+          "items": [
+           "To be able to model a reducing balance loan with a recurrence relation.",
+           "To be able to use a recurrence relation to analyse a reducing balance loan.",
+           "To be able to model an annuity with a recurrence relation.",
+           "To be able to use a recurrence relation to analyse an annuity."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "8B",
+          "items": [
+           "I can model a reducing balance loan with a recurrence relation.",
+           "I can use a recurrence relation to analyse a reducing balance loan.",
+           "I can model an annuity with a recurrence relation.",
+           "I can use a recurrence relation to analyse an annuity."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "use of a first-order linear recurrence relation to model and analyse (numerically and graphically) the amortisation of a reducing balance loan, including the use of a recurrence relation to determine the value of the loan or investment after n payments for an initial sequence from first principles",
+         "use of a first-order linear recurrence relation to model and analyse (numerically and graphically) the amortisation of an annuity, including the use of a recurrence relation to determine the value of the annuity after n payments for an initial sequence from first principles"
+        ],
+        "keyVocab": [
+         "Reducing balance loan: interest is added each period, then a regular payment D is subtracted: Vₙ₊₁ = R × Vₙ − D",
+         "Annuity: an investment that pays out a regular amount D each period until the balance runs out: Vₙ₊₁ = R × Vₙ − D",
+         "R = 1 + r/(100 × periods per year)"
+        ],
+        "weDo": [
+         {
+          "n": 6,
+          "sub": "8B",
+          "title": "Modelling a reducing balance loan with a recurrence relation (1)",
+          "youTry": "Written (modelled on Cambridge Ex 6) · YT-8B-6",
+          "video": "Cambridge GO · 8B Resources"
+         },
+         {
+          "n": 7,
+          "sub": "8B",
+          "title": "Modelling a reducing balance loan with a recurrence relation (2)",
+          "youTry": "Edrolo 6B WE1a",
+          "video": "Cambridge GO · 8B Resources"
+         },
+         {
+          "n": 8,
+          "sub": "8B",
+          "title": "Using a recurrence relation to analyse a reducing balance loan",
+          "youTry": "Edrolo 6B WE1b",
+          "video": "Cambridge GO · 8B Resources"
+         },
+         {
+          "n": 9,
+          "sub": "8B",
+          "title": "Modelling an annuity with a recurrence relation",
+          "youTry": "Edrolo 6D WE1",
+          "video": "Cambridge GO · 8B Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 3B checklist #5",
+          "text": "Generate a sequence from a recurrence relation"
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 3F Q13",
+          "text": "VCAA 2020 Exam 1 Q22"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 Exam 1 Q18",
+          "sec": "8A"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2026 Exam 1 Q3",
+          "sec": "1G"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2026 Exam 2 Q9a",
+          "sec": "7B"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2026 Exam 2 Q2a",
+          "sec": "1C"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 6B Q18",
+          "src": "VCAA 2017 Exam 1 Q17"
+         },
+         {
+          "ref": "Edrolo U3&4 6D Q17",
+          "src": "VCAA 2016 Exam 1 Q18"
+         }
+        ],
+        "cas": [
+         "recursion-sequence"
+        ]
        }
       },
       {
@@ -8711,15 +8978,157 @@
        "title": "Amortisation tables",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 8C",
+           "items": [
+            {
+             "skill": "Applying the amortisation process and constructing an amortisation table for a reducing balance loan",
+             "q": "Q1–3"
+            },
+            {
+             "skill": "Reading and interpreting an amortisation table for a reducing balance loan",
+             "q": "Q4–6"
+            },
+            {
+             "skill": "Analysing an amortisation table for an annuity to find the interest rate",
+             "q": "Q7"
+            },
+            {
+             "skill": "Interpreting and constructing an amortisation table for a compound investment with additional payments",
+             "q": "Q8"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q9–11"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 8C section"
           }
          ]
-        }
+        },
+        "learningObjectives": [
+         {
+          "sub": "8C",
+          "items": [
+           "To be able to apply the amortisation process.",
+           "To be able to construct an amortisation table.",
+           "To be able to analyse an amortisation table for a reducing balance loan.",
+           "To be able to read and interpret an amortisation table for an annuity to find the interest rate.",
+           "To be able to interpret and construct an amortisation table for a compound interest investment with additions to the principal."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "8C",
+          "items": [
+           "I can apply the amortisation process.",
+           "I can construct an amortisation table for a reducing balance loan.",
+           "I can analyse an amortisation table for a reducing balance loan.",
+           "I can analyse an amortisation table for an annuity to find the interest rate.",
+           "I can interpret and construct an amortisation table for a compound interest investment with additional payments."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "use of a table to investigate and analyse the amortisation of a reducing balance loan on a step-by-step basis, the payment made, the amount of interest paid, the reduction in the principal and the balance of the loan",
+         "use of a table to investigate and analyse the amortisation of an annuity on a step-by-step basis, the payment made, the interest earned, the reduction in the principal and the balance of the annuity"
+        ],
+        "keyVocab": [
+         "Amortisation table columns: payment number · payment · interest · principal reduction · balance",
+         "Interest = rate per period × previous balance; principal reduction = payment − interest; new balance = old balance − principal reduction",
+         "Investment with additions: principal increase = payment + interest; new balance = old balance + principal increase"
+        ],
+        "weDo": [
+         {
+          "n": 10,
+          "sub": "8C",
+          "title": "Applying the amortisation process",
+          "youTry": "Edrolo 6A WE1",
+          "video": "Cambridge GO · 8C Resources"
+         },
+         {
+          "n": 11,
+          "sub": "8C",
+          "title": "Constructing an amortisation table for a reducing balance loan",
+          "youTry": "Written (modelled on Cambridge Ex 11) · YT-8C-11",
+          "video": "Cambridge GO · 8C Resources"
+         },
+         {
+          "n": 12,
+          "sub": "8C",
+          "title": "Analysing an amortisation table for a reducing balance loan",
+          "youTry": "Edrolo 6B WE2",
+          "video": "Cambridge GO · 8C Resources"
+         },
+         {
+          "n": 13,
+          "sub": "8C",
+          "title": "Analysing an amortisation table for an annuity to find the interest rate",
+          "youTry": "Written (modelled on Cambridge Ex 13) · YT-8C-13",
+          "video": "Cambridge GO · 8C Resources"
+         },
+         {
+          "n": 14,
+          "sub": "8C",
+          "title": "Interpreting and constructing an amortisation table for a compound interest investment with additional payments",
+          "youTry": "Edrolo 6F WE2",
+          "video": "Cambridge GO · 8C Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 3E checklist #11",
+          "text": "Find the amount of simple interest each year"
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 3C Q18",
+          "text": "VCAA 2021 Exam 2 Q7a"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2026 NHT Exam 1 Q22",
+          "sec": "8B"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2026 Exam 1 Q4",
+          "sec": "1F"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2026 Exam 2 Q10a",
+          "sec": "8B"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2026 Exam 2 Q3b",
+          "sec": "1H"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 6B Q19",
+          "src": "VCAA 2016 Exam 1 Q22"
+         },
+         {
+          "ref": "Edrolo U3&4 6F Q18",
+          "src": "VCAA 2017 Exam 1 Q23"
+         }
+        ],
+        "cas": [],
+        "note": "Edrolo 6C WE2 (interest-only table) and 6E WE2 (perpetuity table) are spare table You trys."
        }
       },
       {
@@ -8731,15 +9140,135 @@
        "title": "Analysing financial situations with amortisation tables",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 8D",
+           "items": [
+            {
+             "skill": "Finding the final payment in a reducing balance loan and an annuity",
+             "q": "Q1–4"
+            },
+            {
+             "skill": "Finding the total payment made/received and the total interest paid/earned",
+             "q": "Q5–8"
+            },
+            {
+             "skill": "Plotting points from an amortisation table",
+             "q": "Q9–10"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q11–12"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 8D section"
           }
          ]
-        }
+        },
+        "learningObjectives": [
+         {
+          "sub": "8D",
+          "items": [
+           "To be able to find the final payment in a reducing balance loan and an annuity.",
+           "To be able to find the total payment made/received and the total interest paid/earned.",
+           "To be able to plot points using an amortisation table for a reducing balance loan, an annuity and a compound interest investment with additional payments."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "8D",
+          "items": [
+           "I can find the final payment for a reducing balance loan or annuity.",
+           "I can find the total payment made and the total interest paid.",
+           "I can plot from an amortisation table."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "use of a first-order linear recurrence relation to model and analyse (numerically and graphically) the amortisation of a reducing balance loan, including the use of a recurrence relation to determine the value of the loan or investment after n payments for an initial sequence from first principles",
+         "use of a table to investigate and analyse the amortisation of a reducing balance loan on a step-by-step basis, the payment made, the amount of interest paid, the reduction in the principal and the balance of the loan",
+         "use of a table to investigate and analyse the amortisation of an annuity on a step-by-step basis, the payment made, the interest earned, the reduction in the principal and the balance of the annuity"
+        ],
+        "keyVocab": [
+         "Final payment = balance before it × R (the balance plus one period of interest), so the balance ends at 0",
+         "Total paid = sum of all payments; total interest = total paid − amount borrowed (loan)",
+         "Plot balance (vertical) against payment number (horizontal): a loan/annuity curves down to 0, an investment curves up"
+        ],
+        "weDo": [
+         {
+          "n": 15,
+          "sub": "8D",
+          "title": "Finding the final payment for a reducing balance loan or annuity",
+          "youTry": "Edrolo 6D WE2b",
+          "video": "Cambridge GO · 8D Resources"
+         },
+         {
+          "n": 16,
+          "sub": "8D",
+          "title": "Finding the total payment made and total interest paid",
+          "youTry": "Edrolo 6D WE2c",
+          "video": "Cambridge GO · 8D Resources"
+         },
+         {
+          "n": 17,
+          "sub": "8D",
+          "title": "Plotting from an amortisation table",
+          "youTry": "Written (modelled on Cambridge Ex 17) · YT-8D-17",
+          "video": "Cambridge GO · 8D Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 3C checklist #8",
+          "text": "Tabulate and graph an arithmetic sequence"
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 3D Q15",
+          "text": "VCAA 2020 Exam 2 Q9a (adapted by Edrolo)"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2026 Exam 1 Q24",
+          "sec": "8C"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2026 Exam 1 Q8",
+          "sec": "3A"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2026 NHT Exam 2 Q5a",
+          "sec": "8B"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2026 Exam 2 Q4a",
+          "sec": "2B"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 6E Q15",
+          "src": "VCAA 2020 Exam 1 Q25"
+         },
+         {
+          "ref": "Edrolo U3&4 6B Q20",
+          "src": "VCAA 2021 Exam 1 Q23"
+         }
+        ],
+        "cas": []
        }
       },
       {
@@ -8751,15 +9280,137 @@
        "title": "Finance solver: balance and final payment",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 8E",
+           "items": [
+            {
+             "skill": "Determining the value of an investment with regular additions made to the principal",
+             "q": "Q1–2"
+            },
+            {
+             "skill": "Determining the balance of a reducing balance loan using a financial calculator",
+             "q": "Q3–6"
+            },
+            {
+             "skill": "Determining the balance of an annuity using a financial calculator",
+             "q": "Q7–9"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q10–12"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 8E section"
           }
          ]
-        }
+        },
+        "learningObjectives": [
+         {
+          "sub": "8E",
+          "items": [
+           "To be able to use the finance solver to find the value of a compounding interest investment with additional payments.",
+           "To be able to use the finance solver to find the balance and final payment of a reducing balance loan.",
+           "To be able to use the finance solver to find the balance of an annuity."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "8E",
+          "items": [
+           "I can determine the value of an investment with regular additions made to the principal using a financial solver.",
+           "I can determine the balance and final payment of a reducing balance loan after a given number of payments.",
+           "I can determine the balance of an annuity using a finance solver."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "use of technology with financial modelling functionality to solve problems involving reducing balance loans, such as repaying a personal loan or a mortgage, including the impact of a change in interest rate on repayment amount, time to repay the loan, total interest paid and the total cost of the loan.",
+         "use of technology to solve problems involving annuities including determining the amount to be invested in an annuity to provide a regular income paid, for example, monthly, quarterly"
+        ],
+        "keyVocab": [
+         "Finance solver: N (number of payments), I% (annual rate), PV (present value), Pmt (payment), FV (future value), PpY = CpY (payments/compounding per year)",
+         "Sign rule: money you hand over is negative, money you receive is positive",
+         "Final payment of a loan = balance before it × R (or last regular payment + FV left over)"
+        ],
+        "weDo": [
+         {
+          "n": 18,
+          "sub": "8E",
+          "title": "Determining the value of an investment with regular additions made to the principal using a financial solver",
+          "youTry": "Edrolo 6F WE3a",
+          "video": "Cambridge GO · 8E Resources"
+         },
+         {
+          "n": 19,
+          "sub": "8E",
+          "title": "Determining the balance and final payment of a reducing balance loan after a given number of payments",
+          "youTry": "Edrolo 6B WE3a",
+          "video": "Cambridge GO · 8E Resources"
+         },
+         {
+          "n": 20,
+          "sub": "8E",
+          "title": "Determining the balance of an annuity using a finance solver",
+          "youTry": "Edrolo 6D WE3a",
+          "video": "Cambridge GO · 8E Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 3I checklist #25",
+          "text": "Use the rule for determining the value of an investment with compounding interest"
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 3B Q16",
+          "text": "VCAA 2020 Exam 1 Q21 (adapted by Edrolo)"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2026 Exam 1 Q22",
+          "sec": "8D"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2026 Exam 1 Q9",
+          "sec": "3C"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2026 NHT Exam 2 Q6a",
+          "sec": "7B"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2026 Exam 2 Q5a",
+          "sec": "3A"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 6D Q19",
+          "src": "VCAA 2021 Exam 1 Q19"
+         },
+         {
+          "ref": "Edrolo U3&4 6B Q21",
+          "src": "VCAA 2021 Exam 2 Q8b"
+         }
+        ],
+        "cas": [
+         "finance-solver"
+        ],
+        "casYouTry": "Edrolo 6A WE2 (finance solver inputs)"
        }
       },
       {
@@ -8771,15 +9422,149 @@
        "title": "Finance solver: interest rate, time and payment",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 8F",
+           "items": [
+            {
+             "skill": "Analysing an investment with additional payments using a financial calculator",
+             "q": "Q1–3"
+            },
+            {
+             "skill": "Analysing a reducing balance loan using a financial calculator",
+             "q": "Q4–9"
+            },
+            {
+             "skill": "Analysing an annuity using a financial calculator",
+             "q": "Q10–12"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q13–15"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 8F section"
           }
          ]
-        }
+        },
+        "learningObjectives": [
+         {
+          "sub": "8F",
+          "items": [
+           "To be able to use the finance solver to find the interest rate or time taken for a compounding interest investment with additional payments.",
+           "To be able to use the finance solver to find the regular payment for a reducing balance loan.",
+           "To be able to use the finance solver to find the interest rate, time taken or regular payment for an annuity."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "8F",
+          "items": [
+           "I can find the interest rate for an investment with additional payments.",
+           "I can find the regular monthly payment and the time taken for an investment with additions to the principal.",
+           "I can determine the payment amount, total cost and total amount of interest paid for a reducing balance loan.",
+           "I can find the interest rate, time taken and regular payment for an annuity."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "use of technology with financial modelling functionality to solve problems involving reducing balance loans, such as repaying a personal loan or a mortgage, including the impact of a change in interest rate on repayment amount, time to repay the loan, total interest paid and the total cost of the loan.",
+         "use of technology to solve problems involving annuities including determining the amount to be invested in an annuity to provide a regular income paid, for example, monthly, quarterly"
+        ],
+        "keyVocab": [
+         "Leave the unknown blank in the finance solver and solve for it (I%, N or Pmt)",
+         "N: round UP to a whole number of payments when asked for the time taken",
+         "Total cost of a loan = total of all repayments; total interest = total cost − principal"
+        ],
+        "weDo": [
+         {
+          "n": 21,
+          "sub": "8F",
+          "title": "Finding the interest rate for an investment with additional payments",
+          "youTry": "Written (modelled on Cambridge Ex 21) · YT-8F-21",
+          "video": "Cambridge GO · 8F Resources"
+         },
+         {
+          "n": 22,
+          "sub": "8F",
+          "title": "Finding the regular monthly payment and time taken for an investment with additions to the principal",
+          "youTry": "Written (modelled on Cambridge Ex 22) · YT-8F-22",
+          "video": "Cambridge GO · 8F Resources"
+         },
+         {
+          "n": 23,
+          "sub": "8F",
+          "title": "Determining the payment amount, total repayment and total amount of interest paid for a reducing balance loan",
+          "youTry": "Written (modelled on Cambridge Ex 23) · YT-8F-23",
+          "video": "Cambridge GO · 8F Resources"
+         },
+         {
+          "n": 24,
+          "sub": "8F",
+          "title": "Finding the interest rate, time taken and regular payment for an annuity",
+          "youTry": "Written (modelled on Cambridge Ex 24) · YT-8F-24",
+          "video": "Cambridge GO · 8F Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 3I checklist #26",
+          "text": "Use a rule to analyse an investment"
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 3E Q11",
+          "text": "VCAA 2017 Exam 2 Q6a (adapted by Edrolo)"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 NHT Exam 1 Q19",
+          "sec": "8E"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2026 Exam 1 Q12",
+          "sec": "3A"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2026 NHT Exam 2 Q7",
+          "sec": "8C"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2026 Exam 2 Q6",
+          "sec": "5A"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 6D Q18",
+          "src": "VCAA 2018 Exam 2 Q6bi"
+         },
+         {
+          "ref": "Edrolo U3&4 6F Q19",
+          "src": "VCAA 2017 Exam 2 Q7b"
+         },
+         {
+          "ref": "Edrolo U3&4 6D Q20",
+          "src": "VCAA 2021 Exam 2 Q9"
+         }
+        ],
+        "cas": [
+         "finance-solver"
+        ],
+        "note": "Edrolo has no worked example that solves for I%, N or Pmt, so all four You trys are written (YT-8F-21…24)."
        }
       },
       {
@@ -8791,15 +9576,127 @@
        "title": "Harder financial problems",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 8G",
+           "items": [
+            {
+             "skill": "Changing the regular payment",
+             "q": "Q1–3"
+            },
+            {
+             "skill": "Reducing balance loans with changing conditions",
+             "q": "Q4–6"
+            },
+            {
+             "skill": "Changed conditions with annuities",
+             "q": "Q7–9"
+            },
+            {
+             "skill": "Changed conditions on investments",
+             "q": "Q10–11"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q12–14"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 8G section"
           }
          ]
-        }
+        },
+        "learningObjectives": [
+         {
+          "sub": "8G",
+          "items": [
+           "To be able to find the value of an investment when the regular payment changes.",
+           "To be able to analyse the impact of a change in the interest rate on a reducing balance loan, an annuity and an investment."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "8G",
+          "items": [
+           "I can find the value of an investment when the regular payment changes.",
+           "I can analyse the impact of a change in the interest rate on a reducing balance loan, an annuity and an investment."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "use of technology with financial modelling functionality to solve problems involving reducing balance loans, such as repaying a personal loan or a mortgage, including the impact of a change in interest rate on repayment amount, time to repay the loan, total interest paid and the total cost of the loan.",
+         "use of technology to solve problems involving annuities including determining the amount to be invested in an annuity to provide a regular income paid, for example, monthly, quarterly"
+        ],
+        "keyVocab": [
+         "Two-stage problem: solve stage 1 for FV, then use that FV (sign flipped as needed) as the PV of stage 2",
+         "A rate rise with the same payment makes a loan take longer (or leaves a bigger final payment)"
+        ],
+        "weDo": [
+         {
+          "n": 25,
+          "sub": "8G",
+          "title": "Finding the value of an investment when the regular payment changes",
+          "youTry": "Written (modelled on Cambridge Ex 25) · YT-8G-25",
+          "video": "Cambridge GO · 8G Resources"
+         },
+         {
+          "n": 26,
+          "sub": "8G",
+          "title": "Finding the final payment of a reducing balance loan when the interest rate changes",
+          "youTry": "Edrolo 6B WE3b",
+          "video": "Cambridge GO · 8G Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 1B checklist #7",
+          "text": "Find percentage increase or decrease"
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 3C Q19",
+          "text": "VCAA 2016 Exam 2 Q6c (adapted by Edrolo)"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 Exam 1 Q22",
+          "sec": "8F"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2026 Exam 1 Q13",
+          "sec": "5C"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2026 NHT Exam 2 Q8ai",
+          "sec": "8F"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2026 Exam 2 Q7",
+          "sec": "5B"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 6B Q22",
+          "src": "VCAA 2016 Exam 2 Q7b"
+         }
+        ],
+        "cas": [
+         "finance-solver"
+        ],
+        "note": "Edrolo 6D WE3b (annuity rate drops after 6 months) is a spare You try for the annuity part of Example 26 / Exercise 8G Q7–9."
        }
       },
       {
@@ -8811,15 +9708,131 @@
        "title": "Interest-only loans",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 8H",
+           "items": [
+            {
+             "skill": "Finding the regular payment for an interest-only loan",
+             "q": "Q1–7"
+            },
+            {
+             "skill": "Finding the amount borrowed for an interest-only loan",
+             "q": "Q8–10"
+            },
+            {
+             "skill": "Finding the interest rate for an interest-only loan",
+             "q": "Q11–14"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q15–17"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 8H section"
           }
          ]
-        }
+        },
+        "learningObjectives": [
+         {
+          "sub": "8H",
+          "items": [
+           "To be able to find the regular payment amount for an interest-only loan with and without a financial solver.",
+           "To be able to find the amount borrowed for an interest-only loan.",
+           "To be able to find the interest rate for an interest-only loan."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "8H",
+          "items": [
+           "I can find the repayment amount for an interest-only loan with and without finance solver.",
+           "I can find the amount borrowed for an interest-only loan.",
+           "I can find the interest rate for an interest-only loan."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "use of technology with financial modelling functionality to solve problems involving reducing balance loans, such as repaying a personal loan or a mortgage, including the impact of a change in interest rate on repayment amount, time to repay the loan, total interest paid and the total cost of the loan."
+        ],
+        "keyVocab": [
+         "Interest-only loan: each payment equals the interest, so the balance never changes: Vₙ₊₁ = R × Vₙ − D with D = r/(100 × p) × V₀",
+         "In the finance solver FV = −PV (the balance at the end equals the amount borrowed)"
+        ],
+        "weDo": [
+         {
+          "n": 27,
+          "sub": "8H",
+          "title": "Finding the regular payment for an interest-only loan",
+          "youTry": "Edrolo 6C WE1a",
+          "video": "Cambridge GO · 8H Resources"
+         },
+         {
+          "n": 28,
+          "sub": "8H",
+          "title": "Finding the amount borrowed for an interest-only loan",
+          "youTry": "Written (modelled on Cambridge Ex 28) · YT-8H-28",
+          "video": "Cambridge GO · 8H Resources"
+         },
+         {
+          "n": 29,
+          "sub": "8H",
+          "title": "Finding the interest rate for an interest-only loan",
+          "youTry": "Written (modelled on Cambridge Ex 29) · YT-8H-29",
+          "video": "Cambridge GO · 8H Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 1B checklist #6",
+          "text": "Increase or decrease a value by a percentage"
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 3B Q15",
+          "text": "VCAA 2020 Exam 2 Q7a (adapted by Edrolo)"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2026 Exam 1 Q23",
+          "sec": "8G"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2026 Exam 1 Q14",
+          "sec": "5D"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2026 Exam 2 Q11",
+          "sec": "8G"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2026 NHT Exam 2 Q1e",
+          "sec": "1G"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 6C Q13",
+          "src": "VCAA 2021 Exam 1 Q24"
+         }
+        ],
+        "cas": [
+         "finance-solver"
+        ],
+        "note": "Edrolo 6C WE3a (interest-only payment on the finance solver) is a spare You try for Example 27."
        }
       },
       {
@@ -8831,15 +9844,136 @@
        "title": "Perpetuities",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "prefill",
          "sets": [
           {
            "title": "Cambridge · Exercise 8I",
+           "items": [
+            {
+             "skill": "Calculating the payment from a perpetuity",
+             "q": "Q1–3"
+            },
+            {
+             "skill": "Calculating the investment required to establish a perpetuity",
+             "q": "Q4–6"
+            },
+            {
+             "skill": "Calculating the interest rate of a perpetuity",
+             "q": "Q7–11"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q12–13"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 8I section"
           }
          ]
-        }
+        },
+        "learningObjectives": [
+         {
+          "sub": "8I",
+          "items": [
+           "To be able to calculate the regular payment from a perpetuity.",
+           "To be able to calculate the investment required to establish a perpetuity.",
+           "To be able to calculate the interest rate of a perpetuity."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "8I",
+          "items": [
+           "I can calculate the payment from a perpetuity.",
+           "I can calculate the investment required to establish a perpetuity.",
+           "I can calculate the interest rate of a perpetuity."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "simple perpetuity as a special case of an annuity that lasts indefinitely."
+        ],
+        "keyVocab": [
+         "Perpetuity: an annuity that pays only the interest each period, so it lasts forever",
+         "D = r/(100 × p) × V₀; rearrange for V₀ = D ÷ (r/(100 × p)) or r = 100 × p × D ÷ V₀"
+        ],
+        "weDo": [
+         {
+          "n": 30,
+          "sub": "8I",
+          "title": "Calculating the payment from a perpetuity",
+          "youTry": "Edrolo 6E WE1a",
+          "video": "Cambridge GO · 8I Resources"
+         },
+         {
+          "n": 31,
+          "sub": "8I",
+          "title": "Calculating the investment required to establish a perpetuity",
+          "youTry": "Written (modelled on Cambridge Ex 31) · YT-8I-31",
+          "video": "Cambridge GO · 8I Resources"
+         },
+         {
+          "n": 32,
+          "sub": "8I",
+          "title": "Calculating the interest rate of a perpetuity",
+          "youTry": "Written (modelled on Cambridge Ex 32) · YT-8I-32",
+          "video": "Cambridge GO · 8I Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 1F checklist #14",
+          "text": "Use the unitary method to solve problems"
+         },
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 1A checklist #3",
+          "text": "Convert percentages to fractions"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2026 NHT Exam 1 Q24",
+          "sec": "8G"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2026 Exam 1 Q15",
+          "sec": "5D"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2025 Exam 2 Q7a",
+          "sec": "8C"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2026 NHT Exam 2 Q2a",
+          "sec": "3A"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 6E Q16",
+          "src": "VCAA 2016 Exam 1 Q21"
+         },
+         {
+          "ref": "Edrolo U3&4 6E Q17",
+          "src": "VCAA 2021 Exam 2 Q6"
+         }
+        ],
+        "cas": [
+         "finance-solver"
+        ],
+        "casYouTry": "Edrolo 6E WE3a (perpetuity on the finance solver)",
+        "note": "No Edrolo U1&2 exam question fits perpetuities (both APK items are Cambridge skills)."
        }
       },
       {

@@ -918,6 +918,33 @@
     "classpad": []
    },
    "checked": "Cambridge U3&4 10E CAS 5 + Edrolo 7D WE1b, WE2 (Draft, check against 02 Sources\\CAS guides)"
+  },
+  {
+   "id": "finance-solver",
+   "skill": "Finance solver (TVM): loans, annuities, investments, perpetuities",
+   "subs": [
+    "8E",
+    "8F",
+    "8G",
+    "8H",
+    "8I"
+   ],
+   "ti": [
+    "Calculator page: Menu › Finance › Finance Solver.",
+    "Enter N (number of payments), I(%) (annual rate), PV, Pmt, FV, PpY and CpY (payments/compounding per year; tab down). Money paid out by the person is negative, money received is positive.",
+    "Leave the unknown, move the cursor to it and press enter to solve. Read it off and round as asked (round N up to whole payments)."
+   ],
+   "classpad": [
+    "Main menu › Financial › Compound Interest.",
+    "Enter N, I%, PV, PMT, FV, P/Y and C/Y (End of period payments). Money paid out by the person is negative, money received is positive.",
+    "Tap the button of the unknown (N, I%, PV, PMT or FV) to solve it. Read it off and round as asked (round N up to whole payments)."
+   ],
+   "tip": "Loan: PV +, Pmt −. Investment/annuity: PV −, Pmt + (annuity) or − (additions). Interest-only loan or perpetuity: FV = −PV.",
+   "videos": {
+    "ti": [],
+    "classpad": []
+   },
+   "checked": "Cambridge U3&4 8E–8I Examples 18–32 + Edrolo 6A WE2 (Draft, check against 02 Sources\\CAS guides)"
   }
  ]
 }
