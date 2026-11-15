@@ -6056,14 +6056,9 @@
         ],
         "apk": [
          {
-          "kind": "Skill",
-          "ref": "Cambridge U1&2 2E checklist #10",
-          "text": "Determine the median and mean as measures of centre"
-         },
-         {
           "kind": "Exam",
           "ref": "Edrolo U1&2 1E Q11",
-          "text": "adapted from VCAA 2017 Exam 1 Q3"
+          "text": "VCAA 2017 Exam 1 Q3 (original wording and data used). Cambridge U1&2 2E checklist #10 dropped: already used in S3"
          }
         ],
         "doNow": [
@@ -6090,8 +6085,8 @@
         ],
         "exit": [
          {
-          "ref": "Edrolo U3&4 4B Q16",
-          "src": "VCAA 2017 Exam 1 Q15"
+          "ref": "Edrolo U3&4 4B Q15",
+          "src": "VCAA 2019 Exam 1 Q16"
          },
          {
           "ref": "Edrolo U3&4 4B Q17",
@@ -6124,7 +6119,33 @@
            "note": "The 5B section"
           }
          ]
-        }
+        },
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/5B moving means slides.html",
+          "pdf": "lessons/5B moving means slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "3 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/5B moving means worksheet.html",
+            "pdf": "lessons/5B moving means worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/5B moving means worksheet solutions.html",
+            "pdf": "lessons/5B moving means worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        },
        "part": 1
       },
@@ -6218,8 +6239,8 @@
         ],
         "exit": [
          {
-          "ref": "Edrolo U3&4 4B Q15",
-          "src": "VCAA 2019 Exam 1 Q16"
+          "ref": "Edrolo U3&4 4B Q16",
+          "src": "VCAA 2017 Exam 1 Q15"
          },
          {
           "ref": "Edrolo U3&4 4B Q18",
