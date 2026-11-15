@@ -9268,7 +9268,148 @@
           "src": "VCAA 2021 Exam 1 Q23"
          }
         ],
-        "cas": []
+        "cas": [],
+        "cfats": [
+         {
+          "id": "CFAT 2.8.1",
+          "title": "Annuity investments, reducing balance loans and amortisation tables",
+          "covers": [
+           "8A",
+           "8B",
+           "8C"
+          ],
+          "format": "About 20 min · individual · CAS and single bound reference allowed",
+          "status": "Draft",
+          "plan": "Start of the 8D lesson (after 8A, 8B, 8C).",
+          "marks": 14,
+          "mcMarks": 6,
+          "saMarks": 8,
+          "file": "lessons/CFAT 2.8.1 (8A-8B-8C).html",
+          "sources": [
+           "Edrolo GM U3&4 2023 exercise questions only (rule 8): 6F Q5, 6F Q9, 6A Q1b, 6B Q6b, 6B Q6c, 6B Q11, 6F Q4, 6B Q2, 6B Q10"
+          ],
+          "questions": [
+           {
+            "q": 1,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Principal addition in an annuity table",
+            "sd": [],
+            "sub": "8A",
+            "sc": "",
+            "src": "Edrolo 6F Q5",
+            "fu": ""
+           },
+           {
+            "q": 2,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Annuity investment value with a financial solver",
+            "sd": [],
+            "sub": "8A",
+            "sc": "",
+            "src": "Edrolo 6F Q9",
+            "fu": ""
+           },
+           {
+            "q": 3,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Balance from an amortisation table",
+            "sd": [],
+            "sub": "8C",
+            "sc": "",
+            "src": "Edrolo 6A Q1b",
+            "fu": ""
+           },
+           {
+            "q": 4,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Principal reduction from an amortisation table",
+            "sd": [],
+            "sub": "8C",
+            "sc": "",
+            "src": "Edrolo 6B Q6b",
+            "fu": ""
+           },
+           {
+            "q": 5,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Interest rate from an amortisation table",
+            "sd": [],
+            "sub": "8C",
+            "sc": "",
+            "src": "Edrolo 6B Q6c",
+            "fu": ""
+           },
+           {
+            "q": 6,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Loan interest rate with a financial solver",
+            "sd": [],
+            "sub": "8C",
+            "sc": "",
+            "src": "Edrolo 6B Q11",
+            "fu": ""
+           },
+           {
+            "q": 7,
+            "marks": 3,
+            "type": "SA",
+            "skill": "Annuity recurrence relation: rate, balance, time",
+            "sd": [],
+            "sub": "8A",
+            "sc": "",
+            "src": "Edrolo 6F Q4",
+            "fu": ""
+           },
+           {
+            "q": 8,
+            "marks": 3,
+            "type": "SA",
+            "skill": "Reading a reducing balance loan recurrence relation",
+            "sd": [],
+            "sub": "8B",
+            "sc": "",
+            "src": "Edrolo 6B Q2",
+            "fu": ""
+           },
+           {
+            "q": 9,
+            "marks": 2,
+            "type": "SA",
+            "skill": "Completing an amortisation table",
+            "sd": [],
+            "sub": "8C",
+            "sc": "",
+            "src": "Edrolo 6B Q10",
+            "fu": ""
+           }
+          ]
+         }
+        ],
+        "materials": [
+         {
+          "kind": "CFAT 2.8.1",
+          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/CFAT 2.8.1 (8A-8B-8C).html",
+            "pdf": "lessons/CFAT 2.8.1 (8A-8B-8C).pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/CFAT 2.8.1 (8A-8B-8C) solutions.html",
+            "pdf": "lessons/CFAT 2.8.1 (8A-8B-8C) solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
@@ -9990,6 +10131,23 @@
           "file": ""
          },
          {
+          "kind": "CFAT 2.8.2",
+          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/CFAT 2.8.2 (8E-8H-8I).html",
+            "pdf": "lessons/CFAT 2.8.2 (8E-8H-8I).pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/CFAT 2.8.2 (8E-8H-8I) solutions.html",
+            "pdf": "lessons/CFAT 2.8.2 (8E-8H-8I) solutions.pdf"
+           }
+          ]
+         },
+         {
           "kind": "Chapter test",
           "desc": "Mathspace Ch 2 topic assessment (20 Qs, /41), verbatim.",
           "status": "draft",
@@ -10003,6 +10161,117 @@
             "label": "Solutions",
             "file": "lessons/Ch2 test solutions.html",
             "pdf": "lessons/Ch2 test solutions.pdf"
+           }
+          ]
+         }
+        ],
+        "cfats": [
+         {
+          "id": "CFAT 2.8.2",
+          "title": "Financial solver, interest-only loans and perpetuities",
+          "covers": [
+           "8E",
+           "8H",
+           "8I"
+          ],
+          "format": "About 20 min · individual · CAS and single bound reference allowed",
+          "status": "Draft",
+          "plan": "Start of the Chapter 8 check lesson (after 8E, 8H, 8I). 8D, 8F, 8G have no Edrolo exercise questions.",
+          "marks": 15,
+          "mcMarks": 3,
+          "saMarks": 12,
+          "file": "lessons/CFAT 2.8.2 (8E-8H-8I).html",
+          "sources": [
+           "Edrolo GM U3&4 2023 exercise questions only (rule 8): 6A Q4, 6C Q7, 6E Q7, 6A Q5, 6C Q3, 6C Q4, 6E Q3, 6E Q4"
+          ],
+          "questions": [
+           {
+            "q": 1,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Financial solver N",
+            "sd": [],
+            "sub": "8E",
+            "sc": "",
+            "src": "Edrolo 6A Q4",
+            "fu": ""
+           },
+           {
+            "q": 2,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Interest-only loan rate",
+            "sd": [],
+            "sub": "8H",
+            "sc": "",
+            "src": "Edrolo 6C Q7",
+            "fu": ""
+           },
+           {
+            "q": 3,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Perpetuity interest rate",
+            "sd": [],
+            "sub": "8I",
+            "sc": "",
+            "src": "Edrolo 6E Q7",
+            "fu": ""
+           },
+           {
+            "q": 4,
+            "marks": 3,
+            "type": "SA",
+            "skill": "Financial solver inputs and signs",
+            "sd": [],
+            "sub": "8E",
+            "sc": "",
+            "src": "Edrolo 6A Q5",
+            "fu": ""
+           },
+           {
+            "q": 5,
+            "marks": 2,
+            "type": "SA",
+            "skill": "Interest-only repayment",
+            "sd": [],
+            "sub": "8H",
+            "sc": "",
+            "src": "Edrolo 6C Q3",
+            "fu": ""
+           },
+           {
+            "q": 6,
+            "marks": 2,
+            "type": "SA",
+            "skill": "Interest-only loan principal and recurrence relation",
+            "sd": [],
+            "sub": "8H",
+            "sc": "",
+            "src": "Edrolo 6C Q4",
+            "fu": ""
+           },
+           {
+            "q": 7,
+            "marks": 3,
+            "type": "SA",
+            "skill": "Reading a perpetuity recurrence relation",
+            "sd": [],
+            "sub": "8I",
+            "sc": "",
+            "src": "Edrolo 6E Q3",
+            "fu": ""
+           },
+           {
+            "q": 8,
+            "marks": 2,
+            "type": "SA",
+            "skill": "Perpetuity payments without a solver",
+            "sd": [],
+            "sub": "8I",
+            "sc": "",
+            "src": "Edrolo 6E Q4",
+            "fu": ""
            }
           ]
          }
