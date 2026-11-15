@@ -1,0 +1,30 @@
+{
+ "_about": "Claude-written You trys, only where no Edrolo U3&4 or U1&2 worked example matches (Rocco, 15 Nov): very close to the Cambridge Example's wording, new context and numbers. Not burnt (You trys aren't).",
+ "items": [
+  {
+   "id": "YT-2G-19",
+   "pairs": "Cambridge U3&4 Example 19",
+   "sub": "2G",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 19)",
+   "text": "The number of bottles of sunscreen sold at a beach kiosk and the daily maximum temperature are linearly related, with r = +0.912. Determine the value of the coefficient of determination, write it in percentage terms and interpret. In this relationship, daily maximum temperature is the explanatory variable.",
+   "answer": "r² = (0.912)² = 0.8317; 83.2% of the variation in the number of bottles of sunscreen sold can be explained by the variation in the daily maximum temperature."
+  },
+  {
+   "id": "YT-2G-20",
+   "pairs": "Cambridge U3&4 Example 20",
+   "sub": "2G",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 20)",
+   "text": "Scores on tests of reading speed and spelling ability are linearly related with correlation coefficient r = +0.342. Determine the value of the coefficient of determination, write it in percentage terms, and interpret. In this relationship, reading speed is the explanatory variable.",
+   "answer": "r² = (0.342)² = 0.1170; only 11.7% of the variation in spelling ability test scores can be explained by the variation in reading speed test scores."
+  },
+  {
+   "id": "YT-2G-21",
+   "pairs": "Cambridge U3&4 Example 21",
+   "sub": "2G",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 21)",
+   "text": "For the relationship described by this scatterplot, the coefficient of determination = 0.6384. Determine the value of the correlation coefficient, r, rounded to four decimal places.",
+   "figure": "scatterplot showing a moderate-to-strong POSITIVE linear association (draw when the slides are made; keep it positive)",
+   "answer": "r = ±√0.6384 = ±0.7990; the scatterplot shows a positive association, so r = +0.7990."
+  }
+ ]
+}

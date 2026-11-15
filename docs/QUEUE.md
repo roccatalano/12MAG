@@ -39,7 +39,7 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 - Q3: "are you sure there is no matching worked examples anywhere?" → re-searched Edrolo U3&4 + U1&2: added Edrolo U1&2 6B WE3 (Ex 13), 6B WE1 (Ex 14); split Edrolo U3&4 3C WE1 into a (Ex 17) and b (Ex 18). Still nothing for Ex 1, 19, 20, 21. See Q6.
 - Q4: easy (OK).
 - Q6 (15 Nov, follow-up) OK to use Edrolo U1&2 worked examples as You trys? And Edrolo 2D WE2 for 2H?
-- Q6: Yes: relevant Edrolo U1&2 WEs are fine; use judgement finding WEs in both Edrolo books. → Ex 1 = Edrolo U1&2 1A WE1; 2H gets Edrolo 2D WE2 (You try with no Example). Ex 19–21: nothing in either book (r² questions in Edrolo 3C are exercises, not WEs).
+- Q6: Yes: relevant Edrolo U1&2 WEs are fine; use judgement finding WEs in both Edrolo books. → Ex 1 = Edrolo U1&2 1A WE1; 2H gets Edrolo 2D WE2 (You try with no Example). Ex 19–21: nothing in either book → Rocco: write our own, close to Cambridge wording (done: `planner/written-youtrys.json`).
 
 ## Decisions log
 | When | Question | Decision taken | Why | Run |
