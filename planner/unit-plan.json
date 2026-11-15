@@ -3268,7 +3268,7 @@
         "doNow": [
          {
           "exam": "Exam 1",
-          "ref": "VCAA 2024 Exam 1 Q10",
+          "ref": "VCAA 2025 NHT Exam 1 Q9",
           "sec": "2E"
          },
          {
@@ -3453,6 +3453,30 @@
             "label": "Solutions",
             "file": "lessons/CFAT 1.2.2 (2C-2D) solutions.html",
             "pdf": "lessons/CFAT 1.2.2 (2C-2D) solutions.pdf"
+           }
+          ]
+         },
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/2F slides.html",
+          "pdf": "lessons/2F slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "3 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/2F worksheet.html",
+            "pdf": "lessons/2F worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/2F worksheet solutions.html",
+            "pdf": "lessons/2F worksheet solutions.pdf"
            }
           ]
          }
