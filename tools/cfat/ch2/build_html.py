@@ -11,6 +11,7 @@ body{font-size:9pt;line-height:1.2} .title{padding:1.5mm 3mm} .title h1{font-siz
 .sol .mc div.right span{color:#c00;font-weight:bold}
 .colstack{display:flex;flex-direction:column;gap:2.5mm} .colstack .box{flex:1}
 .sa .part .ans{margin-top:1mm}
+table.ct th,table.ct td{padding:.4mm .6mm} table.ct th{width:24%}
 """
 E = html.escape
 def img(k, mm): return f'<img src="data:image/png;base64,{base64.b64encode(open(FIG(k),"rb").read()).decode()}" style="width:{mm}mm">'
@@ -33,6 +34,7 @@ def sabox(n, q):
     marks = sum(p[2] for p in q['parts'])
     stem = ''.join(f'<p class="q">{E(l)}</p>' for l in q['stem'].split('\n'))
     if q.get('fig'): stem += f'<div class="fig">{img(q["fig"], mm(q["w"]))}</div>'
+    if q.get('table'): stem += '<table class="t ct" style="font-size:7.8pt;width:100%;table-layout:fixed">' + ''.join('<tr>' + ''.join((f'<th class="l">{E(c)}</th>' if j == 0 else f'<td>{E(c)}</td>') for j, c in enumerate(r)) + '</tr>' for r in q['table']) + '</table>'
     src = q['src'].replace('Edrolo ', 'Edrolo U3&amp;4 ')
     parts = ''
     for p in q['parts']:
@@ -46,7 +48,7 @@ def sabox(n, q):
 
 def page(c, sol):
     mcs = c['mc']; total = len(mcs) + sum(p[2] for q in c['sa'] for p in q['parts'])
-    subs = c['subs'].replace('-', ', ') if c['subs'].count('-') == 1 else c['subs']
+    subs = c['subs'].replace('-', '–')
     out = [f'<div class="title"><div class="code">CFAT<br>{c["id"][5:]}</div><h1>{E(c["title"])}<div style="font-size:10pt;font-weight:normal;margin-top:1mm">{subs} · CAS and bound reference allowed{" · <b style=color:#c00>SOLUTIONS</b>" if sol else ""}</div></h1><div class="who"><div><b>Name</b> <i></i></div><div class="sc">/{total}</div></div></div>',
            f'<div class="secthd">Section A · Multiple choice<span>Circle one answer. {len(mcs)} marks</span></div>']
     for row in c['layout']:

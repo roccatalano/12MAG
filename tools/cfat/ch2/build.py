@@ -1,4 +1,4 @@
-"""CONTENT for CFAT 1.2.1 / 1.2.2 (CFATS list) + the retired Word builder. The live output is build_html.py
+"""CONTENT for CFAT 1.2.1 / 1.2.2 / 1.2.3 (CFATS list; 1.2.3 = 2E-2H: Edrolo 2D Q1, Q2, Q3, Q4, Q6, Q7, Q9 + 3C Q1, Q2, answers pp. 674 and 679) + the retired Word builder. The live output is build_html.py
 (HTML + PDF, Rocco 15 Nov). CFAT 1.2.1 (Cambridge 2A-2B) and CFAT 1.2.2 (Cambridge 2C-2D), Word layout per the 12mag-cfat-word skill.
 
 Rule 8: Edrolo U3&4 (2023) exercise questions ONLY (no VCAA reprints). Rebuilt from scratch 15 Nov 2026
@@ -83,6 +83,35 @@ CFATS = [
    dict(src='Edrolo 2C Q11', stem='For each of the following scatterplots, describe the association between the variables in terms of strength, direction, form and potential outliers.',
         parts=[('a.','',2,'Strong, positive and linear with no visible outliers  (2 marks; −1 per missing/wrong feature, max −2)','2C_Q11a',3.8),
                ('b.','',2,'Strong, negative and linear with one visible outlier at (30, 60)  (2 marks)','2C_Q11b',3.8)]),
+  ]),
+ dict(id='CFAT 1.2.3', subs='2E-2H', title='Correlation coefficient r, coefficient of determination r², correlation and causation',
+  layout=[([0,2],[1,3]),('full',4)],
+  mc=[
+   dict(src='Edrolo 2D Q1', stem='An r value of 1.00 indicates an association that is',
+        opts=['strong, positive, and linear','moderate, positive, and linear','moderate, negative, and linear','strong, negative, and linear'], ans=0),
+   dict(src='Edrolo 2D Q2', stem='In which of the following circumstances would calculating the correlation coefficient, r, be most useful?',
+        opts=['Bradley is collecting data on the favourite sport of the students in his class.','The weight (g) and leg length (mm) of 10 different mice was measured.','Susie records how long it takes her to get to school on each day of the school week.','Raj measures the distance between his house and the five closest shopping centres.'], ans=1),
+   dict(src='Edrolo 3C Q1', stem='The price of burgers and revenue (per annum) for seven different burger stores are collected and studied. The r value for the collected data is 0.785.\nThe coefficient of determination for the study is closest to',
+        opts=['0.616','0.617','0.785','0.886'], ans=0),
+   dict(src='Edrolo 2D Q6', stem='A strong, positive, linear association was observed between two variables that are seemingly unrelated.\nA circumstance that could have caused this association is',
+        opts=['a common response to a third variable.','an external variable(s) that also causes a change in the response variable.','a coincidence.','all of the above.'], ans=3),
+   dict(src='Edrolo 2D Q7', full=True, stem='The total number of Nobel Prize winners from each country was found to have a strong, positive correlation (r = 0.84) with the number of space rock impacts per year within the country.\nThis strong correlation is likely due to',
+        opts=['a common response to a third variable.','an external variable(s) that also causes a change in the response variable.','a coincidence.','a direct causal relationship.'], ans=2),
+  ],
+  sa=[
+   dict(src='Edrolo 2D Q3', stem='Max and Penelope collect data on the goals conceded by their soccer team each week and the average sleep, in hours, of all members of the soccer team the night before each game. They calculated the value of the correlation coefficient to be r = −0.21.\nMax says that goals conceded and average sleep have a negative association.\nPenelope says there is no association.',
+        parts=[('','Who is correct and why?',2,'Penelope is correct (1). An r value between −0.25 and 0.25 is too weak for any association to be determined (1).')]),
+   dict(src='Edrolo 2D Q4', stem='A group of people were surveyed on the number of hours they spent playing Pokémon GO over one weekend and how many Pokémon they caught in that time. The results are shown in the following table.',
+        table=[['hours spent playing Pokémon GO','7','3','4','8','16','9','11','10','9'],['Pokémon caught','13','2','6','10','38','11','23','16','12']],
+        parts=[('a.','Is the Pearson correlation coefficient, r, an appropriate statistic for this data set? Assume that hours spent playing Pokemon GO is the explanatory variable.',1,'Yes'),
+               ('b.','Determine the value of Pearson’s correlation coefficient, r, for the data shown correct to two decimal places.',1,'r = 0.95'),
+               ('c.','If possible, describe the association between the variables in terms of strength, direction, and form.',2,'Strong, positive and linear  (2 marks; −1 per missing/wrong feature)')]),
+   dict(src='Edrolo 3C Q2', stem='A study was conducted to research the impacts of hours worked on hours slept. The results are summarised in the following table.',
+        table=[['hours worked','4','5','6','7','8','9','10'],['hours slept','9.0','8.5','8.3','8.0','7.5','7.0','6.8']],
+        parts=[('a.','What is the coefficient of determination, rounded to two decimal places?',1,'r² = 0.99'),
+               ('b.','Interpret the coefficient of determination in terms of the amount of hours worked and hours slept.',2,'99% of the variation in hours slept can be explained by the variation in the amount of hours worked.')]),
+   dict(src='Edrolo 2D Q9', stem='In a study of American cities, there was found to be a positive correlation between the number of gyms and the number of crimes committed in each city.',
+        parts=[('','What variable could cause a common response that would explain this association?',1,'population')]),
   ]),
 ]
 

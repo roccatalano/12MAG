@@ -3811,7 +3811,7 @@
         "cfats": [
          {
           "id": "CFAT 1.2.3",
-          "title": "Direction, form, strength, r, r² and causation",
+          "title": "Correlation coefficient r, coefficient of determination r², correlation and causation",
           "covers": [
            "2E",
            "2F",
@@ -3819,8 +3819,116 @@
            "2H"
           ],
           "format": "About 20 min · individual · CAS and single bound reference allowed",
-          "status": "Planned",
-          "plan": "Start of the 3A lesson (the Chapter 2 review lesson stays CFAT-free)."
+          "status": "Draft",
+          "plan": "Start of the 3A lesson (the Chapter 2 review lesson stays CFAT-free).",
+          "marks": 15,
+          "mcMarks": 5,
+          "saMarks": 10,
+          "file": "lessons/CFAT 1.2.3 (2E-2H).html",
+          "sources": [
+           "Edrolo GM U3&4 2023 exercise questions only (rule 8): 2D Q1, Q2, Q3, Q4a–c, Q6, Q7, Q9 · 3C Q1, Q2a–b (2G content). No 2E-only questions (Edrolo has none that are not VCAA reprints or the l05 exits)."
+          ],
+          "questions": [
+           {
+            "q": 1,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Interpret r = 1",
+            "sd": [],
+            "sub": "2F",
+            "sc": "",
+            "src": "Edrolo 2D Q1",
+            "fu": ""
+           },
+           {
+            "q": 2,
+            "marks": 1,
+            "type": "MC",
+            "skill": "When r is useful (two numerical variables)",
+            "sd": [],
+            "sub": "2F",
+            "sc": "",
+            "src": "Edrolo 2D Q2",
+            "fu": ""
+           },
+           {
+            "q": 3,
+            "marks": 1,
+            "type": "MC",
+            "skill": "r² from r",
+            "sd": [],
+            "sub": "2G",
+            "sc": "",
+            "src": "Edrolo 3C Q1",
+            "fu": ""
+           },
+           {
+            "q": 4,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Non-causal explanations",
+            "sd": [],
+            "sub": "2H",
+            "sc": "",
+            "src": "Edrolo 2D Q6",
+            "fu": ""
+           },
+           {
+            "q": 5,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Coincidence",
+            "sd": [],
+            "sub": "2H",
+            "sc": "",
+            "src": "Edrolo 2D Q7",
+            "fu": ""
+           },
+           {
+            "q": 6,
+            "marks": 2,
+            "type": "SA",
+            "skill": "Interpret a weak r",
+            "sd": [],
+            "sub": "2F",
+            "sc": "",
+            "src": "Edrolo 2D Q3",
+            "fu": ""
+           },
+           {
+            "q": "7a–c",
+            "marks": 4,
+            "type": "SA",
+            "skill": "r with CAS; strength, direction, form",
+            "sd": [],
+            "sub": "2F",
+            "sc": "",
+            "src": "Edrolo 2D Q4",
+            "fu": ""
+           },
+           {
+            "q": "8a–b",
+            "marks": 3,
+            "type": "SA",
+            "skill": "Calculate and interpret r²",
+            "sd": [],
+            "sub": "2G",
+            "sc": "",
+            "src": "Edrolo 3C Q2",
+            "fu": ""
+           },
+           {
+            "q": 9,
+            "marks": 1,
+            "type": "SA",
+            "skill": "Common response variable",
+            "sd": [],
+            "sub": "2H",
+            "sc": "",
+            "src": "Edrolo 2D Q9",
+            "fu": ""
+           }
+          ]
          }
         ],
         "homework": {
@@ -3832,7 +3940,26 @@
            "note": "All questions. Skill-by-skill breakdown added when the slides are made."
           }
          ]
-        }
+        },
+        "materials": [
+         {
+          "kind": "CFAT 1.2.3",
+          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/CFAT 1.2.3 (2E-2H).html",
+            "pdf": "lessons/CFAT 1.2.3 (2E-2H).pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/CFAT 1.2.3 (2E-2H) solutions.html",
+            "pdf": "lessons/CFAT 1.2.3 (2E-2H) solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {

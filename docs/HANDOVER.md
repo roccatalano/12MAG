@@ -6,6 +6,10 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 
 
+
+## 15 Nov 18:01 — CFAT 1.2.3 (2E–2H) added (live session)
+- Rocco: Chapter 2 has THREE CFATs; 1.2.3 sits on the l09 (3A) card. Built with the others by `tools/cfat/ch2/build_html.py`: /15 (5 MC + 4 short answer), Edrolo 2D Q1, Q2, Q3, Q4, Q6, Q7, Q9 + 3C Q1, Q2 (2G r² questions live in Edrolo 3C). Student + solutions, 2 pages each; planner card + ledger updated. CFAT subtitles now show ranges with an en dash (2A–2B).
+
 ## 15 Nov 17:58 — Lesson l03 (2A-2B) slides + guided worksheet (live session, task Ch2 #3)
 - `tools/deck/l03/build.py` → `lessons/2A-2B slides.html/.pdf` (35 slides, PDF 59 pages; screenshots `tools/deck/l03/shoot.py`). `tools/deck/l03/worksheet.py` → `lessons/2A-2B worksheet(.html/.pdf)` + `… worksheet solutions` (6 pages each). Same names on G: `01 Lesson materials`. All Draft on the l03 card (materials added; no bound reference: paused).
 - Built only from the l03 card: Do Now VCAA 2024 E1 Q7 (82%), 2023 E1 Q5 (84%), 2024 E2 Q1ai (96%), Q1b (84%); APK Cambridge U1&2 2A #2, 1A #2; Examples 1–8 + the 8 mapped You trys; exits VCAA 2018 E2 Q1d (94%) and 2021 E1 Q3 (A 50%, distractor C 28%). % from the examiner reports on G:. Nothing dropped.
