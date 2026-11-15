@@ -7011,11 +7011,6 @@
           "text": "Find the equation of a line from two points"
          },
          {
-          "kind": "Skill",
-          "ref": "Cambridge U1&2 7E checklist #10",
-          "text": "Make predictions: interpolation and extrapolation"
-         },
-         {
           "kind": "Exam",
           "ref": "Edrolo U1&2 4D Q13",
           "text": "VCAA 2014 Exam 1 Q4"
@@ -7219,6 +7214,30 @@
         },
         "casYouTry": "Edrolo 4E WE1a (trend line on CAS)",
         "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit task.",
+          "status": "draft",
+          "file": "lessons/5E slides.html",
+          "pdf": "lessons/5E slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "4 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/5E worksheet.html",
+            "pdf": "lessons/5E worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/5E worksheet solutions.html",
+            "pdf": "lessons/5E worksheet solutions.pdf"
+           }
+          ]
+         },
          {
           "kind": "CFAT 1.5.2",
           "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
