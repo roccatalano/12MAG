@@ -176,7 +176,6 @@ function nest(k,title,body,cnt,cls){return body?`<details class="nest ${cls||''}
 function grouped(arr){return (arr||[]).map(g=>`<h4>${esc(g.sub)}</h4>${list(g.items)}`).join('')}
 function nests(l){const c=cfs(l),n=a=>(a||[]).reduce((t,g)=>t+(g.items?g.items.length:1),0);
   return nest('mat','Lesson materials',l.materials?.length?`<ul class="mat">${l.materials.map(x=>`<li><div class="mrow"><b>${esc(x.kind)}</b>${x.file&&!x.copies?.length?` · <a class="mlink" href="${esc(x.file)}" target="_blank" rel="noopener">Open ↗</a>`:''}${x.pdf&&!x.copies?.length?` <a class="mlink pdf" href="${esc(x.pdf)}" download>PDF ⬇</a>`:''}<span class="ms ${x.status}">${x.status=='ready'?'Ready':x.status=='draft'?'Draft':'To make'}</span></div><div class="sub">${esc(x.desc)}</div>${x.copies?.length?`<div class="copies">${x.copies.map(c=>`<div class="copy"><b>${esc(c.label)}</b>${c.note?`<div class="sub">${esc(c.note)}</div>`:''}<div class="cl">${c.file?`<a class="mlink" href="${esc(c.file)}" target="_blank" rel="noopener">Open ↗</a>`:''}${c.pdf?`<a class="mlink pdf" href="${esc(c.pdf)}" download>PDF ⬇</a>`:''}${!c.file&&!c.pdf?`<span class="ms">To make</span>`:''}</div></div>`).join('')}</div>`:''}</li>`).join('')}</ul>`:'',l.materials?.filter(x=>x.status=='ready').length+'/'+l.materials?.length,'n-mat')
-   +nest('cfat',c.length>1?'CFAT details · '+c.length+' CFATs':'CFAT details',c.map(cfatDetails).join('<hr style="border:0;border-top:1px solid #d9cff5">'),c.map(x=>x.id).join(', '),'n-cfat')
    +nest('lo','Learning objectives',l.learningObjectives?.length?grouped(l.learningObjectives):'',n(l.learningObjectives))
    +nest('sc','Success criteria',l.successCriteria?.length?grouped(l.successCriteria):'',n(l.successCriteria))
    +nest('sd','Study Design',l.studyDesign?.length?list(l.studyDesign):'',l.studyDesign?.length)
@@ -252,6 +251,7 @@ function wire(rerender){
   $('#main').querySelectorAll('.detail').forEach(dv=>{
     dv.querySelectorAll('[data-nest]').forEach(n=>n.ontoggle=()=>store.set('nest:'+n.dataset.nest,n.open));
     dv.querySelectorAll('.yt[data-yt]').forEach(bt=>bt.onclick=()=>{bt.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${bt.dataset.yt}?autoplay=1${bt.dataset.start?'&start='+bt.dataset.start:''}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;bt.onclick=null;bt.style.cursor='default';bt.classList.add('on')});});
+  $('#main').querySelectorAll('.card.fa [data-nest]').forEach(n=>n.ontoggle=()=>store.set('nest:'+n.dataset.nest,n.open));
   typeset(); fillDecks(); fitRows();
   document.querySelectorAll('[data-nest="hw"]').forEach(n=>n.addEventListener('toggle',fitRows));
 }
@@ -269,7 +269,7 @@ function formatives(C){const seen=new Set(),out=[];
   return out.length?out.map(({m,l})=>{const test=/^Chapter test/i.test(m.kind),c=cfs(l).find(x=>x.id==m.kind);
     return `<div class="card fa ${test?'t-check':'t-cfat'}"><div class="meta"><span>Set in L${l.n}${c&&c.covers?' · covers '+esc(c.covers.join(', ')):''}</span><span class="ms ${m.status}">${m.status=='ready'?'Ready':m.status=='draft'?'Draft':'To make'}</span></div>
     <div class="ttl"><b>${test?'Chapter '+l.ch+' test':esc(m.kind)}</b>${c&&c.title?' · '+esc(c.title):''}</div>
-    <div class="cpl">${m.copies?.length?m.copies.map(k=>`<span><span class="sub">${esc(k.label)}</span> ${k.file||k.pdf?links(k):'<span class="sub">to make</span>'}</span>`).join(''):links(m)}</div></div>`}).join(''):'<div class="empty">None yet</div>'}
+    <div class="cpl">${m.copies?.length?m.copies.map(k=>`<span><span class="sub">${esc(k.label)}</span> ${k.file||k.pdf?links(k):'<span class="sub">to make</span>'}</span>`).join(''):links(m)}</div>${c?nest('cfat-'+c.id,'CFAT details',cfatDetails(c),null,'n-cfat'):''}</div>`}).join(''):'<div class="empty">None yet</div>'}
 /* ---------- Course plan ---------- */
 function renderCourse(){
   const all=lessons(),L=aosFilter(all);
