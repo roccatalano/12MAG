@@ -81,7 +81,7 @@
           "n": 1,
           "sub": "1A",
           "title": "Types of data",
-          "youTry": "Edrolo 1A Q11 a–e",
+          "youTry": "Edrolo 1A WE1, WE2, WE3",
           "video": "Cambridge GO · 1A Resources"
          },
          {
@@ -120,11 +120,6 @@
           "text": "Classify data as nominal, ordinal, discrete or continuous"
          },
          {
-          "kind": "Skill",
-          "ref": "Cambridge U1&2 2B checklist #5",
-          "text": "Interpret and describe a frequency table and bar chart"
-         },
-         {
           "kind": "Exam",
           "ref": "Edrolo U1&2 1A Q13",
           "text": "VCAA 2021 Exam 1 Q1"
@@ -155,10 +150,9 @@
         "materials": [
          {
           "kind": "Guided slides",
-          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "desc": "Teach the new content and project every question: APK, worked examples, you trys, exit tasks (no Do Now in Lesson 1).",
           "status": "draft",
-          "file": "lessons/S1-slides.html",
-          "pdf": "lessons/S1-slides.pdf"
+          "file": "lessons/S1-slides.html"
          },
          {
           "kind": "Guided worksheet",

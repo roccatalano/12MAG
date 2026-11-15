@@ -34,7 +34,16 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 - **Lesson shapes cleared (Rocco, 15 Nov):** the planner's right-hand 'Lesson shape' pane now says 'To be filled in last' for every lesson (`SHAPES_ON=false` in `planner/index.html`). Fill them in at the very end.
 
-## NEXT JOB: deep review of Lesson 1 (1A–1B) — Rocco, 15 Nov: "make sure they are up to standard and not AI slop"
+## Done 15 Nov (afternoon): Lesson 1 slides rebuilt on the templates (deep review, resource 1 of 4)
+- `lessons/S1-slides.html` (28 slides), build `tools/deck/s1/build.py`, screenshots `tools/deck/s1/shoot.py`. G: `01 Lesson materials\1A-1B slides.html`. **No PDF** (as S4); `1A-1B slides.pdf` on G: is stale — Rocco to delete.
+- **No Do Now in Lesson 1** (Rocco: first lesson of the year, nothing to retrieve).
+- Fixed vs old deck: 1A You try was Edrolo 1A **Q11** (an exercise) → now Edrolo 1A WE1–3; old 1B Learn used invented data (40 students' travel) → removed; APK '?%' → 70% (2021 E1 Q1), 57% (2020 E1 Q10) with distractor %s from the reports; exit 3 '?%' → 76%; exit 1 81% (Edrolo) → **83%** (2019 E2 report: 83% scored 1); 'Homework' → Coursework; check-in, Key definitions/formulas and Videos slides added; CAS slide (stats-list set-up, Cambridge 1A survey data).
+- Dropped: the old think-pair-share survey slide; APK Cambridge U1&2 2B #5 (needs the 2A #2 table) removed from the planner card.
+- Ledger: 'Lesson handout' and 'Exam Q (1A)' rows freed (Rocco agreed; `build_ledger.py` now skips them); S1 rows re-logged.
+- Note: `y12_edrolo_exam_practice.csv` 1A Q14 says 90 (avg 0.9); the report shows 83% scored the mark.
+
+## NEXT JOB: deep review of Lesson 1 (1A–1B), continued: worksheet → bound reference → planner card
+### Original brief: deep review of Lesson 1 (1A–1B) — Rocco, 15 Nov: "make sure they are up to standard and not AI slop"
 Everything is **Draft** on the planner. Review one resource at a time, show Rocco what you found (with screenshots), fix what he agrees to, then mark it Ready only when he says so.
 
 **Lesson 1 resources** (planner card `gm12-u3-s1`, subchapters 1A Types of data, 1B Displaying and describing categorical data):

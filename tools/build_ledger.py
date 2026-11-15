@@ -73,7 +73,8 @@ if len(sys.argv)>1:
         c=[x.strip() for x in l.strip().strip('|').split('|')]
         if len(c)!=4 or c[0] in ('Use','---') or c[0].startswith('-'): continue
         use,src,paper,qs=c
-        if 'Insight' in src: continue  # Rocco 14 Nov: nothing from Insight is ever burnt (rejected CFAT 1.1)
+        if 'Insight' in src: continue
+        if use.startswith('Lesson handout') or use.startswith('Exam Q ('): continue  # Rocco 15 Nov: old handout/exam-Q rows are freed (never used in class)  # Rocco 14 Nov: nothing from Insight is ever burnt (rejected CFAT 1.1)
         u=use+' '+qs
         role=('Do Now/Exit' if use.startswith('Deck') else 'Do Now' if 'Do Now' in use else 'Exit' if ('Exit' in use or use.startswith('Exam Q'))
               else 'APK' if 'APK' in u else 'CFAT' if use.startswith('CFAT') else 'You try' if 'You' in u else 'Example' if ('Example' in u or 'WE' in use)

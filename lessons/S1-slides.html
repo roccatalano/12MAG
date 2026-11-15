@@ -147,426 +147,263 @@ table.t tr.tot td{font-weight:700}
 .cfu div{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:12px;font-weight:600;color:#8a919c;width:78px;text-align:center;line-height:1.1}
 .cfu img{width:42px;height:42px;opacity:.85}
 #prog{position:fixed;left:0;bottom:0;height:4px;background:#2f6fdf;transition:width .3s}
+
+.dn .pill{background:#00838F}
+.dot svg circle.dt{opacity:0;transition:opacity .2s}.dot svg circle.dt.on{opacity:1}
+.stemplot{font-family:ui-monospace,Menlo,monospace;font-size:26px;border-collapse:collapse;background:#fff}
+.stemplot td{padding:2px 8px;line-height:1.35}.stemplot td.st{text-align:right;border-right:3px solid var(--ink);padding-right:12px;font-weight:700}
+.stemplot td.lv{letter-spacing:.35em;padding-left:12px;min-width:200px}
+.stemplot .lf{opacity:0;transition:opacity .2s}.stemplot .lf.on{opacity:1}
+.stemcap{font-size:20px;margin-bottom:6px}.stemcap b{font-style:italic}
+.data{font-family:ui-monospace,Menlo,monospace;font-size:24px;word-spacing:.35em;line-height:1.55;margin:8px 0}
+.cas{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.cas .key{padding:16px 22px}.cas ol{margin-left:28px}.cas li{font-size:21px;line-height:1.4;padding:2px 0}
+.mini{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.mini .key{padding:12px 14px;text-align:center}.mini .key h4{margin-bottom:2px}.mini p{font-size:20px!important;line-height:1.3}
+.logline{background:#fff;border:1px solid var(--line);border-radius:14px;padding:6px 10px}
+.sol p.big{font-size:27px}
+.ansbox.e2 p{font-size:22px}
+
+/* ---------- S3: centre and spread ---------- */
+.seqrow{display:flex;gap:9px;flex-wrap:nowrap;font-family:ui-monospace,Menlo,monospace;font-size:25px;margin:6px 0}
+.seqrow span{min-width:46px;text-align:center;padding:3px 6px;border-radius:9px;background:#fff;border:1.5px solid var(--line);transition:all .3s}
+.seqrow span.cnt,.lf2.cnt{opacity:.28}
+.seqrow span.gap{border:0;background:none;min-width:14px;padding:0}
+.mid{background:#ffd9de!important;border-color:#d2475b!important;color:#b0263a!important;font-weight:800}
+.q1m{background:#ece3fd!important;border-color:var(--dis)!important;color:#5b33b0!important;font-weight:800}
+.ext{background:#fff1c9!important;border-color:#d98a1f!important;color:#8a4d00!important;font-weight:800}
+.stem3{font-family:ui-monospace,Menlo,monospace;font-size:26px;border-collapse:collapse;background:#fff}
+.stem3 td{padding:2px 8px;line-height:1.38}
+.stem3 td.st{text-align:right;border-right:3px solid var(--ink);padding-right:12px;font-weight:700}
+.stem3 td.lv{padding-left:10px;min-width:200px;white-space:nowrap}
+.lf2{display:inline-block;min-width:.95em;text-align:center;margin-right:.32em;border-radius:6px;border:1.5px solid transparent;transition:all .3s}
+.lf2.mid,.lf2.q1m,.lf2.ext{padding:0 2px}
+.xp{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.chip3{position:absolute;width:74px;height:58px;border-radius:12px;border:2.5px solid var(--we);background:#fff;font:700 27px Inter,sans-serif;color:var(--ink);display:flex;align-items:center;justify-content:center;transition:left .75s cubic-bezier(.5,0,.2,1),top .5s,opacity .35s,background .3s,border-color .3s}
+.chip3.cnt{opacity:.25}
+.chip3.new{border-color:#d98a1f}
+.xlab{position:absolute;font:600 24px Inter,sans-serif;color:var(--ink);transition:opacity .35s,left .6s;white-space:nowrap}
+.xlab.c{transform:translateX(-50%)}
+.xlab .red{color:#d2475b}.xlab .pur{color:#6a3fc7}
+.band{position:absolute;background:rgba(47,111,223,.12);border:2px dashed var(--we);border-radius:14px;transition:opacity .4s}
+.band b{position:absolute;top:-30px;left:50%;transform:translateX(-50%);font:700 18px Inter,sans-serif;color:var(--we);white-space:nowrap}
+.mk{position:absolute;width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:15px solid #d2475b;transform:translateX(-50%);transition:opacity .35s}
+.mk.p{border-top-color:#7b4fd6}
+.hide{opacity:0!important}
+.rowtag{position:absolute;left:20px;font:700 20px Inter,sans-serif;color:var(--muted)}
+#balx svg g.mv{transition:transform .9s cubic-bezier(.5,0,.2,1)}
+#balx.drag svg g.mv{transition:none}
+#balx .dragdot{cursor:ew-resize}
+.formula{background:#fff;border:2px solid var(--ink);border-radius:16px;padding:14px 26px;font-size:28px}
+.timer{font:800 120px Inter,sans-serif;letter-spacing:-.02em;color:var(--ink);text-align:center;font-variant-numeric:tabular-nums}
+.timer.go{color:#00838F}
+.chart svg text.cum{font-weight:800;fill:#1f4fb0;transition:opacity .3s}
+.cfat .pill{background:#00838F}
+.smallnote{font-size:18px;color:var(--muted);margin-top:6px}
+
+/* ---------- S4: boxplots ---------- */
+.bxp{transition:opacity .45s}
+.bxo{transition:fill .3s}
+.mini4{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.mini4 .key{padding:10px 18px}
+.mini4 .key h4{margin-bottom:2px}
+.mini4 p{font-size:19px;line-height:1.35}
+.scos{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px}
+.scos div{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px 16px;font-size:20px;line-height:1.35}
+.scos b{display:block;font-size:24px;color:var(--we)}
+.tbl1{display:flex;gap:18px}
+.tbl1 table td,.tbl1 table th{padding:1px 12px}
+.hj87{transition:all .3s}
+
+/* ---------- 12MAG slide templates (tpl): fixed zones on every slide ---------- */
+.slide.T{padding:56px 80px 64px}
+.T .hd{display:flex;align-items:center;justify-content:space-between;height:44px}
+.T .hd .pill{position:static;margin:0}
+.T .hd .stat{position:static;margin:0}
+.T h2.tt{font-size:38px;line-height:1.15;margin:14px 0 18px;height:44px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.T .src{position:absolute;left:80px;right:200px;bottom:26px}
+/* question slides: given (left) | produced (right) */
+.T .qg{display:grid;grid-template-columns:46% 1fr;gap:34px;height:630px}
+.T .L,.T .R{display:flex;flex-direction:column;min-height:0}
+.T .L .q{flex:1;margin:0;font-size:22px;line-height:1.42;padding:18px 24px;display:flex;flex-direction:column;gap:10px;overflow:hidden}
+.T .L .q .fig{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.T .L .q .fig>*{width:100%}
+.T .L .q .fig svg{max-height:300px}
+.T .L .mc{margin-top:auto}
+.T .R ol.wk{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.T .R{border-left:5px solid var(--we);padding-left:28px}
+.T .R ol.wk li{font-size:21px;line-height:1.45;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:9px 16px}
+.T .R ol.wk li.ans{background:#eaf7f0;border:2px solid #1f9e74}
+.T .R ol.wk li.ans .wn{background:#1f9e74}
+.T .R ol.wk li.ans .sl{color:#137a59}
+.T .R ol.wk li.dis{background:#f3eefe;border:2px solid var(--dis)}
+.T .R ol.wk li.dis .dlab{font:800 14px Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--dis);margin-bottom:2px}
+.T .R ol.wk+.made,.T .R .made+ol.wk,.T .R ol.wk+ol.wk{margin-top:10px}
+.T .R ol.wk li .wn{display:inline-block;min-width:26px;height:26px;border-radius:50%;background:var(--ink);color:#fff;font:800 15px/26px Inter,sans-serif;text-align:center;margin-right:10px}
+.T .R ol.wk li .sl{font-weight:800;margin-right:8px}
+.T .R .made{margin-top:10px}
+.T .R .made svg{max-height:200px}
+.T .R .end{margin-top:auto;display:flex;flex-direction:column;gap:10px}
+.T .R .ans{font-size:24px;margin:0}
+.T .R .ans p{font-size:24px}
+.T .R .dbox{margin:0}
+/* learn slides: rule / picture / tip */
+.T .lrn{display:flex;flex-direction:column;gap:16px;height:630px}
+.T .lrn .key{margin:0;padding:14px 26px}
+.T .lrn .key p,.T .lrn .key li{font-size:23px;line-height:1.45}
+.T .lrn .pic{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px 20px}
+.T .lrn .pic>*{width:100%}
+.T .lrn .tip{margin:0;font-size:22px}
+/* CAS slides: task left, TI | ClassPad right */
+.T .cas2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.T .cas2 .key{margin:0;padding:12px 16px}
+.T .cas2 ol{font-size:19px;line-height:1.4;padding-left:22px}
+.T .L table.t.tight td,.T .L table.t.tight th{padding:0 6px;height:auto}
+.T .L .q>div:first-child{flex:none}
+
+/* command word: chip on the question, decoded first on the right */
+.T .cmd{display:inline-flex;align-self:flex-start;align-items:center;gap:10px;background:var(--ink);color:#fff;border-radius:999px;padding:4px 14px 4px 14px;font:700 15px Inter,sans-serif;letter-spacing:.06em;flex:none}
+.T .cmd b{color:#ffd166;font-weight:900;letter-spacing:.12em}
+.T .cmd span{opacity:.85;font-weight:600;letter-spacing:.02em}
+.T .cmdbox{background:#fff8e1;border:2px solid #f2b705;border-radius:14px;padding:10px 18px;margin-bottom:12px;flex:none}
+.T .cmdbox .lab{font:800 14px Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#8a6100}
+.T .cmdbox p{font-size:22px;line-height:1.35;margin-top:2px}
+.T .L .q>div:not(.fig){flex:none}
+.T .L .q .fig{flex:1 1 0;min-height:0;overflow:hidden}
+.T .L .q .fig .chart{height:100%;display:flex;align-items:center}
+.T .L .q .fig svg{max-height:100%;height:100%}
+.T mark.cw{background:#ffe066;color:inherit;font-weight:800;padding:0 6px;border-radius:6px;box-shadow:0 0 0 2px #f2b705}
+
+/* header tiles: command word + VCAA % */
+.T .tiles{display:flex;gap:12px;align-items:center}
+.T .cmdt{background:#fff8e1;border:2px solid #f2b705;border-radius:999px;padding:7px 18px;font-size:18px;color:#5a4100;white-space:nowrap}
+.T .cmdt b{font-weight:900;letter-spacing:.1em;color:#8a6100}
+/* distractor letter inline with its heading */
+.T .dl{margin-left:0!important;margin-right:6px;display:inline-block;margin-left:8px;background:var(--dis);color:#fff;border-radius:6px;padding:0 8px;letter-spacing:0}
+/* formulas */
+.frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 4px;font-size:.92em}
+.frac>span:first-child{border-bottom:2px solid currentColor;padding:0 6px}
+.frac>span:last-child{padding:0 6px}
+.fv{position:relative;display:inline-grid;vertical-align:baseline}
+.fv>i,.fv>b{grid-area:1/1;text-align:center;transition:opacity .45s,transform .45s}
+.fv>i{font-style:italic}
+.fv>b{opacity:0;transform:translateY(-14px);color:#1f4fb0;background:#e6efff;border-radius:6px;padding:0 4px}
+.fx.sub .fv>i{opacity:0;transform:translateY(14px)}
+.fx.sub .fv>b{opacity:1;transform:none}
+.fx{display:inline-flex;align-items:center;flex-wrap:wrap;gap:2px 4px}
+.fx .lhs{font-weight:600}
+.fx .fxr b{color:#137a59}
+/* opening slides */
+.T .col3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:36px}
+.T .col2{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.T .col3 h3,.T .col2 h3{font:800 16px Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.T .col3 ul{list-style:none;padding:0;margin:0}
+.T .col3 ul li{font-size:20px;line-height:1.4;padding:8px 0;border-bottom:1px solid var(--line)}
+.T .col3 ol.seq li{font-size:20px}
+.T .kd{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:10px 16px;margin-bottom:10px;font-size:20px;line-height:1.4}
+.T .kd b{display:block;font-size:21px}
+.T .kf{background:#fff;border:2px solid var(--ink);border-radius:12px;padding:10px 16px;margin-bottom:10px;display:flex;flex-direction:column;gap:4px}
+.T .kf .kn{font:800 14px Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.T .kf .kx{font-size:26px}
+
+.T .card3{background:#fff;border:2px solid var(--ink);border-radius:18px;padding:18px 22px}
+.T ul.tick li{position:relative;padding-left:34px}
+.T ul.tick li:before{content:'';position:absolute;left:0;top:11px;width:20px;height:20px;border:2.5px solid var(--we);border-radius:5px}
+.T .kd{display:flex;gap:16px;align-items:center}
+.T .kd>div:first-child{flex:1}
+.T .kd .kpic{flex:0 0 46%}
+.T .kf .kr{font-size:19px;color:#b0263a;font-weight:600}
+.dsplit{pointer-events:none}
+.T .kd{padding:6px 14px;margin-bottom:8px;font-size:18px;line-height:1.3}
+.T .kd b{font-size:19px}
+.T .kd .kpic svg{max-height:96px}
+.T .kf{padding:7px 16px;margin-bottom:8px}
+.T .kf .kx{font-size:24px}
+
+/* round 4 */
+.T .tiles .vid{position:static;margin:0}
+.T .R ol.wk li.ans .bl{font-size:20px;margin-top:4px;padding-left:4px;color:#1f3d33}
+.T .R ol.wk li.ans .bl:before{content:'▸ ';color:#1f9e74}
+.T .R ol.wk li.ans .afig{background:#fff;border-radius:10px;margin-top:8px;padding:4px 8px}
+.T .R ol.wk li.ans .afig svg{max-height:210px}
+.T .lrn .ltop{display:flex;gap:16px;align-items:stretch}
+.T .lrn .ltop>.key{flex:1.3}
+.T .lrn .kcs{flex:1;display:flex;flex-direction:column;gap:8px}
+.T .lrn .kcs .kf{margin:0}
+.T .ytrow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+.T .ytc{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:6px;display:flex;flex-direction:column;gap:4px}
+.T .ytf{position:relative;width:100%;aspect-ratio:16/9;background:#eef0f4;border-radius:8px;overflow:hidden}
+.T .ytf iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.T .ytt{font-size:14px;line-height:1.25;color:var(--ink)}
+.T .ytc.blank .ytf{border:2px dashed #c9ced8;background:#f7f8fb}
+.T .ytc.blank .ytt{color:var(--muted)}
+.T .ytgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.T .ytgrid .ytt{font-size:17px}
+.T .card3.ci{max-width:900px}
+.T .card3.ci ul.tick li{font-size:24px;padding:10px 0 10px 40px}
+.T .card3.ci ul.tick li:before{top:14px;width:22px;height:22px}
+.T .cwgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.T .cw .cwq{font-size:26px;font-weight:700;margin:4px 0 8px}
+.T .cw .cwn{font-size:19px;line-height:1.4;color:#444}
+.T .card3 ul.tick{list-style:none;padding:0;margin:0}
+.T .c5 b{color:#1f4fb0}
+
+.T .card3 h3{font:800 16px Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.T .lrn .pic{flex-direction:column;gap:6px}
+.T .lrn .pic:has(.mini4){background:none;border:0;padding:0}
+.T .lrn .mini4{width:100%;gap:10px}
+.T .lrn .mini4 .key{padding:6px 14px;margin:0}
+.T .lrn .mini4 .key h4{font-size:14px;margin:0}
+.T .lrn .mini4 p{font-size:16px;line-height:1.3;margin:0}
+.T .lrn .mini4 svg{max-height:70px}
+.T .cas2 ol li{font-size:17px;line-height:1.35}
+.T .cas2 .key h4{font-size:14px}
+.T .lrn .kcs .kf{padding:5px 14px;gap:1px}
+.T .lrn .kcs .kf .kx{font-size:20px}
+.T .lrn .kcs .kf .kr{font-size:16px}
+.T .lrn .pic>.chart{flex:1 1 0;min-height:0;width:100%}
+.T .lrn .pic>.chart svg{height:100%;max-height:none}
+.T .lrn .pic{overflow:hidden}
+.T .lrn .pic .chart{display:flex;justify-content:center}
+
+.T ol.parts{list-style:none;padding:0;margin:4px 0 0;display:flex;flex-direction:column;gap:4px}
+.T ol.parts li{display:flex;gap:10px;font-size:20px;line-height:1.35}
+.T ol.parts li b{min-width:22px}
+.T .R ol.wk li.ans.big .pa{display:flex;gap:10px;align-items:center;flex-wrap:nowrap;padding:7px 0;border-top:1px solid #bfe3d2;font-size:20px}
+.T .R ol.wk li.ans.big .pa:first-of-type{border-top:0}
+.T .R ol.wk li.ans.big .pa .pl{min-width:26px;color:#137a59;font-size:21px}
 </style>
 </head>
 <body>
 <div id="stage">
-<section class="slide s-title">
-  <div class="kicker"><i></i>Unit 3<i></i>AOS 1 Data Analysis<i></i>Lesson 1</div>
-  <h1>What kind of <span>data</span> is this?</h1>
-  <div class="sub">1A Types of data &nbsp;·&nbsp; 1B Displaying and describing categorical data</div>
-
-  <div class="flow"><div style="border-color:var(--apk)">APK</div><div style="border-color:var(--learn)">Learn</div><div style="border-color:var(--we)">Worked examples</div><div style="border-color:var(--yt)">You try</div><div style="border-color:var(--exit)">Exit tasks</div></div>
-  <div class="foot"><span>12MAG · General Mathematics 3&amp;4</span><span>S1</span></div>
-</section>
-
-<section class="slide">
-  <div class="pill">Today’s lesson</div>
-  <h2>Today’s lesson</h2>
-  <div class="lisc">
-    <div><h3>Learning intentions</h3><ul>
-      <li>To be able to classify data as categorical or numerical.</li>
-      <li>To be able to further classify categorical data as nominal or ordinal.</li>
-      <li>To be able to further classify numerical data as discrete or continuous.</li>
-      <li>To be able to construct frequency and percentage frequency tables for categorical data.</li>
-      <li>To be able to construct bar charts and percentage bar charts from frequency tables.</li>
-      <li>To be able to interpret and describe frequency tables and bar charts.</li>
-      <li>To be able to answer statistical questions about a categorical variable.</li></ul></div>
-    <div><h3>Lesson sequence</h3><ol class="seq">
-      <li style="--c:var(--apk)">APK <small>· Year 11 skills and two VCAA questions</small></li>
-      <li>Learn 1A <small>· types of data</small></li>
-      <li style="--c:var(--we)">Worked example 1 → <span style="color:var(--yt)">you try</span></li>
-      <li>Learn 1B <small>· frequency tables</small> <span style="color:var(--we)">→ WE 2</span> <span style="color:var(--yt)">→ you try</span></li>
-      <li style="--c:var(--we)">Bar charts <small>· WE 3 → you try</small></li>
-      <li>Segmented bar charts <small>· learn → WE 4 → you try</small></li>
-      <li>Describing the distribution <small>· learn → WE 5 → you try</small></li>
-      <li style="--c:var(--exit)">Exit tasks <small>· three VCAA questions</small></li>
-      <li style="--c:var(--muted)">Check-in and homework</li></ol></div>
-  </div>
-</section>
-
-<section class="slide">
-  <div class="pill">Success criteria</div>
-  <h2>By the end of this lesson you’ll be able to say…</h2>
-  <div class="lisc" style="grid-template-columns:1fr"><ul>
-      <li>I can identify types of data.</li>
-      <li>I can construct a frequency table for categorical data.</li>
-      <li>I can construct a bar chart from a frequency table.</li>
-      <li>I can construct a percentage segmented bar chart from a frequency table.</li>
-      <li>I can describe the distribution of a categorical variable.</li></ul></div>
-</section>
-
-<section class="slide apk" data-cfu="qw">
-  <div class="pill">APK · from Year 11</div>
-  <h2>What do you remember?</h2>
-  <div class="q">Classify the following data as nominal, ordinal, discrete or continuous:
-    <ol class="sub">
-      <li data-part="a"><b>a</b>The time between people arriving at the coffee shop.</li>
-      <li data-part="b"><b>b</b>The number of people in the queue at the coffee shop.</li>
-      <li data-part="c"><b>c</b>Customer’s coffee preference (latte, cappuccino, black).</li>
-      <li data-part="d"><b>d</b>Customer’s rating of the coffee (excellent, quite good, not that good).</li></ol></div>
-  <div class="sol">
-    <p class="frag" data-p="a"><b>a</b> <span class="reveal">Continuous</span>: time is measured.</p>
-    <p class="frag" data-p="b"><b>b</b> <span class="reveal">Discrete</span>: people are counted.</p>
-    <p class="frag" data-p="c"><b>c</b> <span class="reveal">Nominal</span>: the categories just name the coffee.</p>
-    <p class="frag" data-p="d"><b>d</b> <span class="reveal">Ordinal</span>: the ratings have a natural order.</p></div>
-  <div class="src">Cambridge General Mathematics Units 1&amp;2 · Chapter 2 skills checklist, 2A #1</div></section>
-
-<section class="slide mcslide apk" data-cfu="mc cold">
-  <div class="pill">APK · VCAA 2021 Exam 1 Q1</div>
-  <div class="stat">VCAA: <b>?%</b> of students answered correctly</div>
-  <h2>A real VCAA question you can already do</h2>
-  <div class="row"><div class="q" style="flex:1.45"><div class="stem">The percentage segmented bar chart provided shows the <em class="v">age</em> (under 55 years, 55 years and over) of visitors at a travel convention, segmented by <em class="v">preferred travel destination</em> (domestic, international).<br><br>The variables <em class="v">age</em> (under 55 years, 55 years and over) and <em class="v">preferred travel destination</em> (domestic, international) are</div><div class="mc" data-dist="70,3,21,4,2"><div data-o="A"><b>A.</b>both categorical variables.</div><div data-o="B"><b>B.</b>both numerical variables.</div><div data-o="C"><b>C.</b>a numerical variable and a categorical variable respectively.</div><div data-o="D"><b>D.</b>a categorical variable and a numerical variable respectively.</div><div data-o="E"><b>E.</b>a discrete variable and a continuous variable respectively.</div></div></div><div style="flex:.6"><div class="chart" data-chart="seg" data-cfg='{"bars":[{"label":"under 55 years","v":[35,65]},{"label":"55 years and over","v":[55,45]}],"names":["international","domestic"],"yl":"percentage","xl":"age (years)","legendTop":["domestic","international"]}'></div></div></div>
-  <div class="mcsol"><div class="ansbox frag" data-key="A" data-stat="70" data-s="sol"><div class="lab">Solution · A</div><p>Age has been recorded in groups (ordinal) and destination is a name (nominal). Both are categorical.</p></div><div class="frag" data-s="sol" style="flex:1;display:flex"><div class="dbox"><div class="lab">What’s the distractor?</div><div class="frag" data-dis="C"><div class="lab2">Distractor · C</div><p>Students saw <em class="v">age</em> and assumed it was numerical. Here it has been recorded in groups (under 55, 55 and over), so it is categorical.</p></div></div></div></div><span class="frag" data-pct="1"></span>
-  <div class="src">Edrolo General Mathematics Units 1&amp;2 · 1A Q13 · VCAA 2021 Exam 1 Data analysis Q1</div>
-</section>
-
-<section class="slide mcslide apk" data-cfu="mc cold">
-  <div class="pill">APK · VCAA 2020 Exam 1 Q10</div>
-  <div class="stat">VCAA: <b>?%</b> of students answered correctly</div>
-  <h2>And another</h2>
-  <div class="row"><div class="q" style="flex:1.45"><div class="stem">The data in the table shown was collected in a study of the association between the variables <em class="v">frequency of nightmares</em> (low, high) and <em class="v">snores</em> (no, yes).<br><br>The variables in this study, <em class="v">frequency of nightmares</em> (low, high) and <em class="v">snores</em> (no, yes), are</div><div class="mc" data-dist="57,5,3,24,11"><div data-o="A"><b>A.</b>ordinal and nominal respectively.</div><div data-o="B"><b>B.</b>nominal and ordinal respectively.</div><div data-o="C"><b>C.</b>both numerical.</div><div data-o="D"><b>D.</b>both ordinal.</div><div data-o="E"><b>E.</b>both nominal.</div></div></div><div style="flex:.6"><table class="t" style="font-size:22px"><tr><th rowspan="2" class="l"><em class="v">frequency of<br>nightmares</em></th><th colspan="2"><em class="v">snores</em></th><th rowspan="2">total</th></tr><tr><th>no</th><th>yes</th></tr>
- <tr><td class="l">low</td><td>80</td><td>58</td><td>138</td></tr><tr><td class="l">high</td><td>11</td><td>12</td><td>23</td></tr><tr class="tot"><td class="l">total</td><td>91</td><td>70</td><td>161</td></tr></table></div></div>
-  <div class="mcsol"><div class="ansbox frag" data-key="A" data-stat="57" data-s="sol"><div class="lab">Solution · A</div><p>Low and high have a natural order: <b>ordinal</b>. No and yes only name a group: <b>nominal</b>.</p></div><div class="frag" data-s="sol" style="flex:1;display:flex"><div class="dbox"><div class="lab">What’s the distractor?</div><div class="frag" data-dis="D"><div class="lab2">Distractor · D</div><p>Students treated <em class="v">snores</em> (no, yes) as ordered. No and yes only name a group, so it is nominal, not ordinal.</p></div></div></div></div><span class="frag" data-pct="1"></span>
-  <div class="src">Edrolo General Mathematics Units 1&amp;2 · 1A Q14 · VCAA 2020 Exam 1 Data analysis Q10</div>
-</section>
-
-<section class="slide" data-cfu="cold">
-  <div class="pill">Learn · 1A</div>
-  <h2>Two types of variable, each with two sub-types</h2>
-  <div class="tree">
-    <svg viewBox="0 0 1400 560" preserveAspectRatio="none">
-      <line x1="700" y1="50" x2="350" y2="190"/><line x1="700" y1="50" x2="1050" y2="190"/>
-      <line class="tl" data-l="1" x1="350" y1="190" x2="175" y2="380"/><line class="tl" data-l="1" x1="350" y1="190" x2="525" y2="380"/>
-      <line class="tl" data-l="2" x1="1050" y1="190" x2="875" y2="380"/><line class="tl" data-l="2" x1="1050" y1="190" x2="1225" y2="380"/>
-    </svg>
-    <div class="node" style="left:50%;top:50px">Variable</div>
-    <div class="node cat" style="left:25%;top:190px">Categorical<small>names a quality or group</small></div>
-    <div class="node num" style="left:75%;top:190px">Numerical<small>a quantity: counted or measured</small></div>
-    <div class="node cat frag" data-g="1" style="left:12.5%;top:410px"><svg viewBox="0 0 64 40" class="ic"><path d="M2 20 Q32 -6 62 20 Q32 46 2 20Z" fill="none" stroke="currentColor" stroke-width="3.5"/><circle cx="32" cy="20" r="9" fill="currentColor"/></svg>Nominal<small>names only<br>e.g. eye colour</small></div>
-    <div class="node cat frag" data-g="1" style="left:37.5%;top:410px"><svg viewBox="0 0 64 44" class="ic"><rect x="22" y="8" width="20" height="34" fill="none" stroke="currentColor" stroke-width="3.5"/><rect x="2" y="20" width="20" height="22" fill="none" stroke="currentColor" stroke-width="3.5"/><rect x="42" y="28" width="20" height="14" fill="none" stroke="currentColor" stroke-width="3.5"/><text x="32" y="32" font-size="15" font-weight="800" text-anchor="middle" fill="currentColor">1</text><text x="12" y="37" font-size="13" font-weight="800" text-anchor="middle" fill="currentColor">2</text><text x="52" y="40" font-size="11" font-weight="800" text-anchor="middle" fill="currentColor">3</text></svg>Ordinal<small>names <b>and</b> orders<br>e.g. fitness level</small></div>
-    <div class="node num frag" data-g="2" style="left:62.5%;top:410px"><svg viewBox="0 0 64 44" class="ic" stroke="currentColor" stroke-width="4" stroke-linecap="round"><line x1="10" y1="6" x2="10" y2="38"/><line x1="20" y1="6" x2="20" y2="38"/><line x1="30" y1="6" x2="30" y2="38"/><line x1="40" y1="6" x2="40" y2="38"/><line x1="4" y1="32" x2="48" y2="12"/><line x1="56" y1="6" x2="56" y2="38"/></svg>Discrete<small>countable values<br><span class="q-tag">How many?</span></small></div>
-    <div class="node num frag" data-g="2" style="left:87.5%;top:410px"><svg viewBox="0 0 64 48" class="ic" fill="none" stroke="currentColor" stroke-width="3"><circle cx="18" cy="9" r="6"/><path d="M18 15 V33 M10 21 H26 M18 33 L12 46 M18 33 L24 46"/><rect x="40" y="2" width="12" height="44"/><path d="M40 10h5M40 18h7M40 26h5M40 34h7M40 42h5"/></svg>Continuous<small>any value in a range<br><span class="q-tag">How much?</span></small></div>
-  </div>
-</section>
-
-<section class="slide" data-cfu="disc">
-  <div class="pill">Learn · 1A</div>
-  <h2>When you’re not sure: two tests</h2>
-  <div class="row">
-    <div class="key frag"><h4>Test 1 · Can you average it?</h4>
-      <p>It makes sense to calculate the average <em class="v">weight</em> of a group of people, but not the average <em class="v">house number</em> in a street.</p>
-      <p class="muted" style="margin-top:12px">Numbers that are just labels are <b>categorical</b>.</p></div>
-    <div class="key frag"><h4>Test 2 · How was it recorded?</h4>
-      <p><em class="v">weight</em> recorded in kilograms → <b style="color:var(--we)">numerical</b></p>
-      <p><em class="v">weight</em> recorded as ‘underweight’, ‘normal weight’, ‘overweight’ → <b style="color:#c0632b">categorical</b></p>
-      <p class="muted" style="margin-top:12px">The variable name alone doesn’t decide.</p></div>
-  </div>
-</section>
-
-<section class="slide" data-cfu="tps">
-  <div class="pill">Learn · 1A · think-pair-share</div>
-  <h2>A university survey: classify each variable</h2>
-  <p class="muted" style="font-size:24px;margin:-12px 0 12px">Decide with your partner. Each click reveals the next card.</p>
-  <div class="cards"><div class="card"><div class="nm">Height</div><div class="eg">e.g. 173, 179, 167 (cm)</div><div class="ans n">Numerical · continuous</div></div><div class="card"><div class="nm">Age</div><div class="eg">e.g. 18, 19, 22 (years)</div><div class="ans n">Numerical · continuous*</div></div><div class="card"><div class="nm">Pulse rate</div><div class="eg">e.g. 86, 82, 96 (beats/min)</div><div class="ans n">Numerical · discrete (counted beats)</div></div><div class="card"><div class="nm">Study mode</div><div class="eg">C = on-campus, O = online</div><div class="ans c">Categorical · nominal</div></div><div class="card"><div class="nm">Fitness level</div><div class="eg">1 = high, 2 = medium, 3 = low</div><div class="ans c">Categorical · ordinal</div></div><div class="card"><div class="nm">Weight</div><div class="eg">e.g. 57, 58, 62 (kg)</div><div class="ans n">Numerical · continuous</div></div></div>
-  <p class="muted" style="font-size:20px;margin-top:16px">* Age is continuous (time passes continuously), even when it’s recorded in whole years.</p>
-  <div class="src">Survey data: Cambridge General Mathematics Units 3&amp;4, 1A</div></section>
-
-<section class="slide we" data-cfu="cold">
-  <div class="pill">Worked example 1 · 1A</div><button class="vid" data-src="" data-label="Cambridge GO · Example 1 (1A Resources)">▶ Video</button>
-  <div class="wename">Types of data</div>
-  <div class="q" style="margin-top:14px;padding:18px 30px;font-size:25px">Classify the following data as nominal, ordinal, discrete or continuous.
-    <ol class="sub">
-      <li data-part="a"><b>a</b>The number of chocolate chips in each of 10 cookies is counted.</li>
-      <li data-part="b"><b>b</b>The time taken for 20 students to complete a puzzle is recorded in seconds.</li>
-      <li data-part="c"><b>c</b>Member of a football club were asked to rate how they felt about the current coach, 1 = Very satisfied, 2 = Satisfied, 3 = Indifferent, 4 = Dissatisfied, 5 = Very dissatisfied.</li>
-      <li data-part="d"><b>d</b>Students are asked to each choose their preferred colour from the list 1 = Blue, 2 = Green, 3 = Red, 4 = Yellow.</li>
-      <li data-part="e"><b>e</b>Students weights were classified as ‘less than 60kg’, ‘60kg - 80kg’ or ‘more than 80kg’.</li></ol></div>
-  <div class="sol">
-    <p class="frag" data-p="a"><b>a</b> <span class="reveal">Discrete</span>, as the number of chocolate chips will only take whole number values.</p>
-    <p class="frag" data-p="b"><b>b</b> <span class="reveal">Continuous</span>, as the data can take any value, limited only by the accuracy to which the time can be measured.</p>
-    <p class="frag" data-p="c"><b>c</b> <span class="reveal">Ordinal</span>, as the numbers in this data do not represent quantities, they represent each person’s level of approval of the coach.</p>
-    <p class="frag" data-p="d"><b>d</b> <span class="reveal">Nominal</span>, as the numbers in this data again do not represent quantities, they represent colours.</p>
-    <p class="frag" data-p="e"><b>e</b> <span class="reveal">Ordinal</span>, as each student’s weight has been recorded into three categories which can be ordered.</p></div>
-  <div class="src">Cambridge General Mathematics Units 3&amp;4 · Example 1</div></section>
-
-<section class="slide yt" data-cfu="qw">
-  <div class="pill">You try · 1A</div>
-  <div class="wename">Types of data</div>
-  <div class="q" style="margin-top:14px;padding:18px 30px;font-size:27px">Classify the following variables as either nominal, ordinal, discrete or continuous.
-    <ol class="sub">
-      <li data-part="a"><b>a</b><em class="v">car brand</em> (1 = Toyota, 2 = Holden, 3 = Ford, 4 = other)</li>
-      <li data-part="b"><b>b</b><em class="v">number of employees</em></li>
-      <li data-part="c"><b>c</b><em class="v">weight of textbook</em> (kg)</li>
-      <li data-part="d"><b>d</b><em class="v">height of basketball players</em> (cm)</li>
-      <li data-part="e"><b>e</b><em class="v">perfume brand</em></li></ol></div>
-  <div class="sol">
-    <p class="frag" data-p="a"><b>a</b> <span class="reveal">Nominal</span>: the numbers are labels, not quantities.</p>
-    <p class="frag" data-p="b"><b>b</b> <span class="reveal">Discrete</span>: employees are counted.</p>
-    <p class="frag" data-p="c"><b>c</b> <span class="reveal">Continuous</span>: weight is measured.</p>
-    <p class="frag" data-p="d"><b>d</b> <span class="reveal">Continuous</span>: height is measured.</p>
-    <p class="frag" data-p="e"><b>e</b> <span class="reveal">Nominal</span>: brands are names with no order.</p></div>
-  <div class="src">Edrolo General Mathematics Units 3&amp;4 · 1A Q11 a–e</div></section>
-
-<section class="slide" data-cfu="disc">
-  <div class="pill">Learn · 1B</div>
-  <h2 style="margin-bottom:4px">From raw data to a frequency table</h2>
-  <p class="muted" style="font-size:22px;margin-bottom:12px">A <b>frequency table</b> lists each category and how often it occurs: as a number and as a percentage. Here: the <em class="v">study mode</em> of 60 university students.</p>
-  <div class="row" style="gap:34px">
-    <div style="flex:1.3"><div class="chips"><div class="chip" data-v="O">online</div><div class="chip" data-v="O">online</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="O">online</div><div class="chip" data-v="O">online</div><div class="chip" data-v="O">online</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="O">online</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="O">online</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="O">online</div><div class="chip" data-v="O">online</div><div class="chip" data-v="O">online</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="O">online</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="O">online</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="O">online</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="O">online</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="O">online</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="O">online</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="O">online</div><div class="chip" data-v="O">online</div><div class="chip" data-v="O">online</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="O">online</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="O">online</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="O">online</div><div class="chip" data-v="O">online</div><div class="chip" data-v="O">online</div><div class="chip" data-v="O">online</div><div class="chip" data-v="O">online</div><div class="chip" data-v="O">online</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="O">online</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="O">online</div><div class="chip" data-v="O">online</div><div class="chip" data-v="O">online</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="O">online</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="C">campus</div><div class="chip" data-v="O">online</div></div></div>
-    <div style="flex:.85">
-      <table class="t ft" style="font-size:25px;width:100%">
-        <tr><th rowspan="2" class="l"><em class="v">study mode</em></th><th colspan="2">Frequency</th></tr><tr><th>Number</th><th>%</th></tr>
-        <tr data-part="campus"><td class="l"><span class="cell" data-c="1">campus</span></td><td><b class="cell" data-c="2" id="nC"></b></td><td><span class="cell" data-c="4">45.0</span></td></tr>
-        <tr data-part="online"><td class="l"><span class="cell" data-c="1">online</span></td><td><b class="cell" data-c="2" id="nO"></b></td><td><span class="cell" data-c="5">55.0</span></td></tr>
-        <tr class="tot" data-part="total"><td class="l">Total</td><td><span class="cell" data-c="3">60</span></td><td><span class="cell" data-c="6">100.0</span></td></tr>
-      </table>
-      <div class="key frag" data-s="f12" style="margin-top:14px;padding:12px 18px"><h4>Percentage frequency</h4><div style="font-size:22px">\[\text{percentage frequency}=\frac{\text{number of times a value occurs}}{\text{total number of values}}\times 100\%\]</div></div></div>
-  </div>
-  <div class="stepsH"><div class="sc"><div class="n">1</div><div class="frag"><div class="st">Set up the table</div><div class="sb">One row for each category.</div></div></div><div class="sc"><div class="n">2</div><div class="frag" data-act="tally"><div class="st">Count</div><div class="sb">Count each category.</div></div></div><div class="sc"><div class="n">3</div><div class="frag" data-p="total"><div class="st">Total</div><div class="sb">\(27+33=60\)</div></div></div><div class="sc"><div class="n">4</div><div class="frag" data-p="campus" data-s="f12"><div class="st">% campus</div><div class="sb">\(\tfrac{27}{60}\times100\%=45.0\%\)</div></div></div><div class="sc"><div class="n">5</div><div class="frag" data-p="online"><div class="st">% online</div><div class="sb">\(\tfrac{33}{60}\times100\%=55.0\%\)</div></div></div><div class="sc"><div class="n">6</div><div class="frag" data-p="total"><div class="st">Check</div><div class="sb">\(45.0+55.0=100\%\)</div></div></div></div>
-  <div class="src">Data: Cambridge General Mathematics Units 3&amp;4, 1B</div></section>
-
-<section class="slide we" data-cfu="cold">
-  <div class="pill">Worked example 2 · 1B</div><button class="vid" data-src="" data-label="Cambridge GO · Example 2 (1B Resources)">▶ Video</button>
-  <div class="wename">Frequency table for a categorical variable</div>
-  <div class="row" style="margin-top:16px">
-    <div class="q" style="flex:1.1">A group of 11 preschool children were asked to choose between chocolate and vanilla ice-cream (C = chocolate, V = vanilla):
-      <p style="font-family:ui-monospace,monospace;letter-spacing:.3em;font-size:30px;margin:12px 0">C V V C C V C C C V V</p>
-      Construct a frequency table (including percentage frequencies) to display the data.</div>
-    <div class="soltab" style="flex:.9">
-      <table class="t ft" style="font-size:27px;width:100%">
-        <tr><th rowspan="2" class="l">flavour</th><th colspan="2">Frequency</th></tr><tr><th>Number</th><th>Percentage</th></tr>
-        <tr data-part="choc"><td class="l"><span class="cell" data-c="1">chocolate</span></td><td><span class="cell" data-c="2">6</span></td><td><span class="cell" data-c="4">54.5</span></td></tr>
-        <tr data-part="van"><td class="l"><span class="cell" data-c="1">vanilla</span></td><td><span class="cell" data-c="2">5</span></td><td><span class="cell" data-c="5">45.5</span></td></tr>
-        <tr class="tot" data-part="total"><td class="l">Total</td><td><span class="cell" data-c="3">11</span></td><td><span class="cell" data-c="6">100.0</span></td></tr></table></div>
-  </div>
-  <div class="stepsH"><div class="sc"><div class="n">1</div><div class="frag"><div class="st">Set up the table</div><div class="sb">One row per flavour, columns for number and percentage.</div></div></div><div class="sc"><div class="n">2</div><div class="frag"><div class="st">Count</div><div class="sb">chocolate 6, vanilla 5</div></div></div><div class="sc"><div class="n">3</div><div class="frag" data-p="total"><div class="st">Total</div><div class="sb">\(6+5=11\)</div></div></div><div class="sc"><div class="n">4</div><div class="frag" data-p="choc"><div class="st">% chocolate</div><div class="sb">\(\tfrac{6}{11}\times100\%=54.5\%\)</div></div></div><div class="sc"><div class="n">5</div><div class="frag" data-p="van"><div class="st">% vanilla</div><div class="sb">\(\tfrac{5}{11}\times100\%=45.5\%\)</div></div></div><div class="sc"><div class="n">6</div><div class="frag" data-p="total"><div class="st">Check</div><div class="sb">\(54.5+45.5=100\%\)<br><span class="tiny">If it totals 99.9 or 100.1, leave it: that’s rounding, and it’s fine.</span></div></div></div></div>
-  <div class="src">Cambridge General Mathematics Units 3&amp;4 · Example 2</div></section>
-
-<section class="slide yt" data-cfu="qw">
-  <div class="pill">You try · 1B</div>
-  <div class="wename">Frequency table for a categorical variable</div>
-  <div class="row" style="margin-top:16px">
-    <div class="q" style="flex:1.15;font-size:24px;padding:20px 28px">The students in a prep class were asked the question, ‘Would you describe your teacher’s height as short, average or tall?’. Their responses were as follows:
-      <table style="margin:10px 0 10px -26px;font-size:22px;border-spacing:26px 2px">
-        <tr><td>average</td><td>short</td><td>tall</td><td>tall</td><td>short</td><td>short</td></tr>
-        <tr><td>average</td><td>average</td><td>tall</td><td>short</td><td>average</td><td>short</td></tr>
-        <tr><td>average</td><td>average</td><td>average</td><td>tall</td><td>tall</td><td>short</td></tr>
-        <tr><td>average</td><td>tall</td><td>tall</td><td>average</td><td>average</td><td>tall</td></tr></table>
-      Use this data to create a frequency table displaying both frequency and percentage frequency, correct to the nearest decimal place.</div>
-    <div class="soltab" style="flex:.85">
-      <table class="t ft" style="font-size:25px;width:100%">
-        <tr><th rowspan="2" class="l"><em class="v">teacher’s height</em></th><th colspan="2">frequency</th></tr><tr><th>number</th><th>%</th></tr>
-        <tr data-part="short"><td class="l"><span class="cell" data-c="1">short</span></td><td><span class="cell" data-c="2">6</span></td><td><span class="cell" data-c="4">25.0</span></td></tr>
-        <tr data-part="avg"><td class="l"><span class="cell" data-c="1">average</span></td><td><span class="cell" data-c="2">10</span></td><td><span class="cell" data-c="5">41.7</span></td></tr>
-        <tr data-part="tall"><td class="l"><span class="cell" data-c="1">tall</span></td><td><span class="cell" data-c="2">8</span></td><td><span class="cell" data-c="6">33.3</span></td></tr>
-        <tr class="tot" data-part="total"><td class="l">total</td><td><span class="cell" data-c="3">24</span></td><td><span class="cell" data-c="7">100.0</span></td></tr></table></div>
-  </div>
-  <div class="stepsH"><div class="sc"><div class="n">1</div><div class="frag"><div class="st">Set up</div><div class="sb">One row per response.</div></div></div><div class="sc"><div class="n">2</div><div class="frag"><div class="st">Count</div><div class="sb">short 6, average 10, tall 8</div></div></div><div class="sc"><div class="n">3</div><div class="frag" data-p="total"><div class="st">Total</div><div class="sb">\(6+10+8=24\)</div></div></div><div class="sc"><div class="n">4</div><div class="frag" data-p="short"><div class="st">% short</div><div class="sb">\(\tfrac{6}{24}\times100\%=25.0\%\)</div></div></div><div class="sc"><div class="n">5</div><div class="frag" data-p="avg"><div class="st">% average</div><div class="sb">\(\tfrac{10}{24}\times100\%=41.7\%\)</div></div></div><div class="sc"><div class="n">6</div><div class="frag" data-p="tall"><div class="st">% tall</div><div class="sb">\(\tfrac{8}{24}\times100\%=33.3\%\)</div></div></div><div class="sc"><div class="n">7</div><div class="frag" data-p="total"><div class="st">Check</div><div class="sb">\(25.0+41.7+33.3\)<br>\(=100\%\)<br><span class="tiny">99.9 or 100.1 is fine: that’s rounding.</span></div></div></div></div>
-  <div class="src">Edrolo General Mathematics Units 3&amp;4 · 1B Worked example 1</div></section>
-
-<section class="slide we" data-cfu="cold">
-  <div class="pill">Worked example 3 · 1B</div><button class="vid" data-src="" data-label="Cambridge GO · Example 3 (1B Resources)">▶ Video</button>
-  <div class="wename">Constructing a bar chart from a frequency table</div>
-  <div class="row" style="margin-top:14px;gap:36px">
-    <div style="flex:1">
-      <div class="q" style="font-size:24px;padding:18px 26px">The climate type of 23 countries is classified as ‘cold’, ‘mild’ or ‘hot’. The results are summarised in the table opposite.
-        <ol class="sub"><li data-part="a"><b>a</b>What is the level of measurement of the variable climate type?</li>
-        <li data-part="b"><b>b</b>Construct a frequency bar chart to display this information.</li></ol></div>
-      <div style="margin-top:16px"><table class="t" style="font-size:27px;width:100%">
-        <tr><th rowspan="2" class="l">Climate type</th><th colspan="2">Frequency</th></tr><tr><th>Number</th><th>Percentage</th></tr>
-        <tr data-part="r0"><td class="l">Cold</td><td>3</td><td>13.0</td></tr><tr data-part="r1"><td class="l">Mild</td><td>14</td><td>60.9</td></tr>
-        <tr data-part="r2"><td class="l">Hot</td><td>6</td><td>26.1</td></tr><tr class="tot"><td class="l">Total</td><td>23</td><td>100.0</td></tr></table></div>
-      <div class="tip"><b>✏ Use a ruler</b> for axes and bars, and label both axes.</div>
-    </div>
-    <div class="sol" style="flex:.95;margin-top:0">
-      <p class="frag" data-p="a r0 r1 r2"><b>a</b> <span class="reveal">Ordinal</span>: the data both group the countries by climate type and put the groups in a natural order of ‘warmth’.</p>
-      <p class="frag" data-p="b" data-s="b15"><b>b</b> Frequency on the vertical axis, one bar per category, gaps between bars.</p>
-      <div class="chart frag" data-s="b15" style="margin-top:6px" data-chart="bar" data-stepped="1" data-cfg='{"cats":["Cold","Mild","Hot"],"v":[3,14,6],"max":15,"step":5,"yl":"Frequency","xl":"Climate type","h":330}'></div>
-      <span class="frag" data-bar="0" data-p="r0 b"></span><span class="frag" data-bar="1" data-p="r1 b"></span><span class="frag" data-bar="2" data-p="r2 b"></span>
-    </div>
-  </div>
-  <div class="src">Cambridge General Mathematics Units 3&amp;4 · Example 3</div></section>
-
-<section class="slide yt" data-cfu="qw">
-  <div class="pill">You try · 1B</div>
-  <div class="wename">Constructing a bar chart from a frequency table</div>
-  <div class="row" style="margin-top:14px;gap:36px">
-    <div style="flex:1">
-      <div class="q" style="font-size:24px;padding:18px 26px">24 students in a prep class were asked the question, ‘Would you describe your <em class="v">teacher’s height</em> as short, average or tall?’. Their responses are recorded in the frequency table shown.<br><br>Use the frequency table to construct a frequency bar chart.</div>
-      <div style="margin-top:16px"><table class="t" style="font-size:27px;width:100%">
-        <tr><th rowspan="2" class="l"><em class="v">teacher’s height</em></th><th colspan="2">frequency</th></tr><tr><th>number</th><th>%</th></tr>
-        <tr data-part="r0"><td class="l">short</td><td>6</td><td>25.0</td></tr><tr data-part="r1"><td class="l">average</td><td>10</td><td>41.7</td></tr>
-        <tr data-part="r2"><td class="l">tall</td><td>8</td><td>33.3</td></tr><tr class="tot"><td class="l">total</td><td>24</td><td>100.0</td></tr></table></div>
-      <div class="tip"><b>✏ Use a ruler</b> for axes and bars, and label both axes.</div>
-    </div>
-    <div class="sol" style="flex:.95;margin-top:0">
-      <p class="frag" data-s="b16">Frequency on the vertical axis (up to 10), one bar per category, gaps between bars.</p>
-      <div class="chart frag" data-s="b16" style="margin-top:6px" data-chart="bar" data-stepped="1" data-cfg='{"cats":["short","average","tall"],"v":[6,10,8],"max":10,"step":2,"yl":"frequency","xl":"teacher’s height","h":380}'></div>
-      <span class="frag" data-bar="0" data-p="r0"></span><span class="frag" data-bar="1" data-p="r1"></span><span class="frag" data-bar="2" data-p="r2"></span>
-    </div>
-  </div>
-  <div class="src">Edrolo General Mathematics Units 3&amp;4 · 1B Worked example 2</div></section>
-
-<section class="slide" data-cfu="disc">
-  <div class="pill">Learn · 1B</div>
-  <h2>From a bar chart to a segmented bar chart</h2>
-  <div class="row" style="gap:40px">
-    <div style="flex:1.2"><div class="chart" id="morph" style="height:560px;padding:0"></div></div>
-    <div style="flex:.8">
-      <div class="key frag" data-act="stack"><h4>1 · Stack the bars</h4><p style="font-size:24px">Same frequencies, one on top of the other. The total height is 23.</p></div>
-      <div class="key frag" data-act="pct" style="margin-top:18px"><h4>2 · Convert to percentages</h4><p style="font-size:24px">Each segment becomes its percentage, so the bar is exactly 100% tall.</p></div>
-      <div class="key frag" style="margin-top:18px"><h4>Why?</h4><p style="font-size:24px">One compact bar shows each category’s <b>share</b> of the whole, and makes groups easy to compare.</p></div>
-    </div>
-  </div>
-  <div class="src">Data: Cambridge General Mathematics Units 3&amp;4, Example 3</div></section>
-
-<section class="slide we" data-cfu="cold">
-  <div class="pill">Worked example 4 · 1B</div><button class="vid" data-src="" data-label="Cambridge GO · Example 4 (1B Resources)">▶ Video</button>
-  <div class="wename">Constructing a percentage segmented bar chart from a frequency table</div>
-  <div class="row" style="margin-top:14px;gap:36px">
-    <div style="flex:1.1">
-      <div class="q" style="font-size:24px;padding:18px 26px">The climate type of 23 countries is classified as ‘cold’, ‘mild’ or ‘hot’.<br>Construct a percentage frequency segmented bar chart to display this information.</div>
-      <div style="margin-top:14px"><table class="t" style="font-size:25px;width:100%">
-        <tr><th rowspan="2" class="l">Climate type</th><th colspan="2">Frequency</th></tr><tr><th>Number</th><th>Percentage</th></tr>
-        <tr data-part="r0"><td class="l">Cold</td><td>3</td><td>13.0</td></tr><tr data-part="r1"><td class="l">Mild</td><td>14</td><td>60.9</td></tr>
-        <tr data-part="r2"><td class="l">Hot</td><td>6</td><td>26.1</td></tr><tr class="tot"><td class="l">Total</td><td>23</td><td>100.0</td></tr></table></div>
-    </div>
-    <div style="flex:.7"><div class="chart" data-chart="seg" data-stepped="1" data-cfg='{"bars":[{"label":"","v":[13,60.9,26.1]}],"names":["Cold","Mild","Hot"],"yl":"Percentage","xl":"","legendTop":["Hot","Mild","Cold"],"h":420,"ticks":10}'></div></div>
-  </div>
-  <div class="stepsH"><div class="sc"><div class="n">1</div><div class="frag"><div class="st">One bar</div><div class="sb">Height 100%, no label on the horizontal axis.</div></div></div><div class="sc"><div class="n">2</div><div class="frag" data-p="r0" data-act="seg0"><div class="st">Cold</div><div class="sb">Segment from \(0\) to \(13\%\).</div></div></div><div class="sc"><div class="n">3</div><div class="frag" data-p="r1" data-act="seg1"><div class="st">Mild</div><div class="sb">From \(13\%\) to \(13+60.9=73.9\%\).</div></div></div><div class="sc"><div class="n">4</div><div class="frag" data-p="r2" data-act="seg2"><div class="st">Hot</div><div class="sb">From \(73.9\%\) to \(100\%\).</div></div></div><div class="sc"><div class="n">5</div><div class="frag" data-act="legend"><div class="st">Legend</div><div class="sb">Shade each segment and add a legend.</div></div></div></div>
-  <div class="src">Cambridge General Mathematics Units 3&amp;4 · Example 4</div></section>
-
-<section class="slide yt" data-cfu="qw">
-  <div class="pill">You try · 1B</div>
-  <div class="wename">Constructing a percentage segmented bar chart from a frequency table</div>
-  <div class="row" style="margin-top:14px;gap:30px">
-    <div class="q" style="flex:1.5;font-size:23px;padding:16px 24px">24 students in a prep class were asked the question, ‘Would you describe your <em class="v">teacher’s height</em> as short, average or tall?’. Their responses are recorded in the frequency table shown.
-      <ol class="sub"><li data-part="a"><b>a</b>Use the frequency table to construct a segmented bar chart.</li>
-      <li data-part="b"><b>b</b>Use the frequency table to construct a percentage segmented bar chart.</li></ol></div>
-    <div style="flex:.8"><table class="t" style="font-size:21px;width:100%">
-        <tr><th rowspan="2" class="l"><em class="v">teacher’s height</em></th><th colspan="2">frequency</th></tr><tr><th>number</th><th>%</th></tr>
-        <tr data-part="r0"><td class="l">short</td><td>6</td><td>25.0</td></tr><tr data-part="r1"><td class="l">average</td><td>10</td><td>41.7</td></tr>
-        <tr data-part="r2"><td class="l">tall</td><td>8</td><td>33.3</td></tr><tr class="tot"><td class="l">total</td><td>24</td><td>100.0</td></tr></table></div>
-  </div>
-  <div class="row" style="margin-top:14px;gap:30px">
-    <div class="sol" style="margin-top:0">
-      <p class="frag" data-p="a"><b>a</b> Segments end at \(6\), \(6+10=16\) and \(16+8=24\).</p>
-      <div class="chart" style="width:78%;margin-top:6px" data-chart="seg" data-stepped="1" data-cfg='{"bars":[{"label":"","v":[25,41.7,33.3]}],"names":["short","average","tall"],"yl":"frequency","xl":"","legendTop":["short","average","tall"],"h":250,"ticks":25,"scale":24}'></div>
-      <span class="frag" data-seg="0" data-p="r0 a"></span><span class="frag" data-seg="1" data-p="r1 a"></span><span class="frag" data-seg="2" data-p="r2 a"></span></div>
-    <div class="sol" style="margin-top:0">
-      <p class="frag" data-p="b"><b>b</b> Segments end at \(25\%\), \(25+41.7=66.7\%\) and \(100\%\).</p>
-      <div class="chart" style="width:78%;margin-top:6px" data-chart="seg" data-stepped="1" data-cfg='{"bars":[{"label":"","v":[25,41.7,33.3]}],"names":["short","average","tall"],"yl":"frequency (%)","xl":"","legendTop":["short","average","tall"],"h":250,"ticks":20}'></div>
-      <span class="frag" data-seg="0" data-p="r0 b"></span><span class="frag" data-seg="1" data-p="r1 b"></span><span class="frag" data-seg="2" data-p="r2 b"></span></div>
-  </div>
-  <div class="src">Edrolo General Mathematics Units 3&amp;4 · 1B Worked example 3</div></section>
-
-<section class="slide" data-cfu="disc">
-  <div class="pill">Learn · 1B</div>
-  <h2>Describing the distribution of a categorical variable</h2>
-  <div class="row" style="gap:30px">
-    <div class="key" style="flex:.75"><h4>The mode</h4><p style="font-size:25px">The most frequently occurring category: the <b>tallest bar</b> or <b>longest segment</b>.</p>
-      <h4 style="margin-top:18px">A report includes</h4><p style="font-size:24px;line-height:1.7"><span class="hl1">the context and how many</span><br><span class="hl2">the modal category</span><br><span class="hl3">percentages for the others</span></p></div>
-    <div style="flex:1.25">
-      <div class="q" style="font-size:23px;padding:16px 24px"><b>Context:</b> 40 students were asked how they travel to school: car 22 (55%), bus 12 (30%), walk 6 (15%).</div>
-      <div class="report" style="margin-top:16px"><p class="tpl"><span class="hl1">The <span class="blank h1"><span class="ph">variable</span><span class="fill">mode of travel to school</span></span> of <span class="blank h1"><span class="ph">number</span><span class="fill">40</span></span> <span class="blank h1"><span class="ph">individuals</span><span class="fill">students</span></span> were classified as being <span class="blank h1"><span class="ph">categories</span><span class="fill">‘car’, ‘bus’ or ‘walk’</span></span>.</span> <span class="hl2">The <span class="blank h2"><span class="ph">majority / most</span><span class="fill">majority</span></span> of the <span class="blank h2"><span class="ph">individuals</span><span class="fill">students</span></span>, <span class="blank h2"><span class="ph">%</span><span class="fill">55%</span></span>, were found to <span class="blank h2"><span class="ph">modal category</span><span class="fill">travel by car</span></span>.</span> <span class="hl3">Of the remaining <span class="blank h3"><span class="ph">individuals</span><span class="fill">students</span></span>, <span class="blank h3"><span class="ph">%</span><span class="fill">30%</span></span> were found to <span class="blank h3"><span class="ph">category</span><span class="fill">catch the bus</span></span>, while <span class="blank h3"><span class="ph">%</span><span class="fill">15%</span></span> were found to <span class="blank h3"><span class="ph">category</span><span class="fill">walk</span></span>.</span></p></div>
-      <span class="frag" data-fill="h1"></span><span class="frag" data-fill="h2"></span><span class="frag" data-fill="h3"></span>
-    </div>
-  </div>
-  <p class="muted" style="font-size:20px;margin-top:14px">Use ‘majority’ only when the modal category is more than 50%. Otherwise, say ‘the most common’.</p>
-</section>
-
-<section class="slide we" data-cfu="cold">
-  <div class="pill">Worked example 5 · 1B</div><button class="vid" data-src="" data-label="Cambridge GO · Example 5 (1B Resources)">▶ Video</button>
-  <div class="wename">Describing the distribution of a categorical variable</div>
-  <div class="row" style="margin-top:14px">
-    <div class="q" style="flex:1.35;font-size:24px;padding:18px 26px">In an investigation of the variation of climate type across countries, the climate types of 23 countries were classified as ‘cold’, ‘mild’ or ‘hot’. The data are displayed in a frequency table to show the percentages.<br><br>Use the information in the frequency table to write a concise report on the distribution of climate types across these 23 countries.</div>
-    <div style="flex:.65"><table class="t" style="font-size:23px;width:100%">
-        <tr><th rowspan="2" class="l">Climate type</th><th colspan="2">Frequency</th></tr><tr><th>Number</th><th>%</th></tr>
-        <tr data-part="r0"><td class="l">Cold</td><td>3</td><td>13.0</td></tr><tr data-part="r1"><td class="l">Mild</td><td>14</td><td>60.9</td></tr>
-        <tr data-part="r2"><td class="l">Hot</td><td>6</td><td>26.1</td></tr><tr class="tot"><td class="l">Total</td><td>23</td><td>100.0</td></tr></table></div>
-  </div>
-  <div class="sol" style="margin-top:14px"><div class="report swap">
-    <div class="tplwrap"><p class="tpl"><span class="hl1">The <span class="blank h1"><span class="ph">variable</span><span class="fill">climate types</span></span> of <span class="blank h1"><span class="ph">number</span><span class="fill">23</span></span> <span class="blank h1"><span class="ph">individuals</span><span class="fill">countries</span></span> were classified as being <span class="blank h1"><span class="ph">categories</span><span class="fill">‘cold’, ‘mild’ or ‘hot’</span></span>.</span> <span class="hl2">The <span class="blank h2"><span class="ph">majority / most</span><span class="fill">majority</span></span> of the <span class="blank h2"><span class="ph">individuals</span><span class="fill">countries</span></span>, <span class="blank h2"><span class="ph">%</span><span class="fill">60.9%</span></span>, were found to <span class="blank h2"><span class="ph">modal category</span><span class="fill">have a mild climate</span></span>.</span> <span class="hl3">Of the remaining <span class="blank h3"><span class="ph">individuals</span><span class="fill">countries</span></span>, <span class="blank h3"><span class="ph">%</span><span class="fill">26.1%</span></span> were found to <span class="blank h3"><span class="ph">category</span><span class="fill">have a hot climate</span></span>, while <span class="blank h3"><span class="ph">%</span><span class="fill">13.0%</span></span> were found to <span class="blank h3"><span class="ph">category</span><span class="fill">have a cold climate</span></span>.</span></p></div>
-    <p class="final">Report: <span class="hl1">The climate types of 23 countries were classified as being, ‘cold’, ‘mild’ or ‘hot’.</span> <span class="hl2">The majority of the countries, 60.9%, were found to have a mild climate.</span> <span class="hl3">Of the remaining countries, 26.1% were found to have a hot climate, while 13.0% were found to have a cold climate.</span></p>
-  </div>
-  <span class="frag" data-fill="h1"></span><span class="frag" data-fill="h2"></span><span class="frag" data-fill="h3"></span><span class="frag" data-act="final"></span></div>
-  <div class="src">Cambridge General Mathematics Units 3&amp;4 · Example 5 (report verbatim)</div></section>
-
-<section class="slide yt" data-cfu="qw">
-  <div class="pill">You try · 1B</div>
-  <div class="wename">Describing the distribution of a categorical variable</div>
-  <div class="row" style="margin-top:14px">
-    <div class="q" style="flex:1.35;font-size:24px;padding:18px 26px">24 students in a prep class were asked the question, ‘Would you describe your <em class="v">teacher’s height</em> as short, average or tall?’. Their responses are shown in the given percentage segmented bar chart.
-      <ol class="sub"><li data-part="a"><b>a</b>Find the modal category of the data set.</li><li data-part="b"><b>b</b>Describe the distribution of the data set.</li></ol></div>
-    <div class="chart" style="flex:.55" data-chart="seg" data-cfg='{"bars":[{"label":"","v":[25,41.7,33.3]}],"names":["short","average","tall"],"yl":"frequency (%)","xl":"teacher’s height","legendTop":["short","average","tall"],"h":330,"ticks":20}'></div>
-  </div>
-  <div class="sol" style="margin-top:12px">
-    <p class="frag" data-p="a"><b>a</b> <span class="reveal">Average</span>: the longest segment (41.7%).</p>
-    <div class="frag" data-p="b"><p style="margin-bottom:4px"><b>b</b></p><div class="report"><p class="tpl"><span class="hl1">The <span class="blank h1"><span class="ph">variable</span><span class="fill">responses</span></span> of <span class="blank h1"><span class="ph">number</span><span class="fill">24</span></span> <span class="blank h1"><span class="ph">individuals</span><span class="fill">prep students</span></span> were classified as being <span class="blank h1"><span class="ph">categories</span><span class="fill">‘short’, ‘average’ or ‘tall’</span></span>.</span> <span class="hl2">The <span class="blank h2"><span class="ph">majority / most</span><span class="fill">most common response</span></span> of the <span class="blank h2"><span class="ph">individuals</span><span class="fill">students</span></span>, <span class="blank h2"><span class="ph">%</span><span class="fill">41.7%</span></span>, were found to <span class="blank h2"><span class="ph">modal category</span><span class="fill">describe their teacher as average</span></span>.</span> <span class="hl3">Of the remaining <span class="blank h3"><span class="ph">individuals</span><span class="fill">students</span></span>, <span class="blank h3"><span class="ph">%</span><span class="fill">33.3%</span></span> were found to <span class="blank h3"><span class="ph">category</span><span class="fill">say tall</span></span>, while <span class="blank h3"><span class="ph">%</span><span class="fill">25%</span></span> were found to <span class="blank h3"><span class="ph">category</span><span class="fill">say short</span></span>.</span></p></div></div>
-    <span class="frag" data-fill="h1" data-p="b"></span><span class="frag" data-fill="h2" data-p="b"></span><span class="frag" data-fill="h3" data-p="b"></span></div>
-  <div class="src">Edrolo General Mathematics Units 3&amp;4 · 1B Worked example 4</div></section>
-
-<section class="slide ex" data-cfu="qw">
-  <div class="pill">Exit task 1 of 3 · VCAA 2019 Exam 2 Q1a</div>
-  <div class="stat">VCAA: <b>81%</b> scored 1/1</div>
-  <h2>Show what you know</h2>
-  <div class="q" style="font-size:22px;padding:16px 24px">The table shows the <em class="v">day number</em> and the <em class="v">minimum temperature</em>, in degrees Celsius, for 15 consecutive days in May 2017.
-    <div style="margin:12px 0"><table class="t" style="font-size:17px;width:100%"><tr><th class="l"><em class="v">day number</em></th><td style="padding:2px 6px">1</td><td style="padding:2px 6px">2</td><td style="padding:2px 6px">3</td><td style="padding:2px 6px">4</td><td style="padding:2px 6px">5</td><td style="padding:2px 6px">6</td><td style="padding:2px 6px">7</td><td style="padding:2px 6px">8</td><td style="padding:2px 6px">9</td><td style="padding:2px 6px">10</td><td style="padding:2px 6px">11</td><td style="padding:2px 6px">12</td><td style="padding:2px 6px">13</td><td style="padding:2px 6px">14</td><td style="padding:2px 6px">15</td></tr><tr><th class="l"><em class="v">minimum temperature</em> (°C)</th><td style="padding:2px 6px">12.7</td><td style="padding:2px 6px">11.8</td><td style="padding:2px 6px">10.7</td><td style="padding:2px 6px">9.0</td><td style="padding:2px 6px">6.0</td><td style="padding:2px 6px">7.0</td><td style="padding:2px 6px">4.1</td><td style="padding:2px 6px">4.8</td><td style="padding:2px 6px">9.2</td><td style="padding:2px 6px">6.7</td><td style="padding:2px 6px">7.5</td><td style="padding:2px 6px">8.0</td><td style="padding:2px 6px">8.6</td><td style="padding:2px 6px">9.8</td><td style="padding:2px 6px">7.7</td></tr></table></div>
-    Which of the two variables in this data set is an ordinal variable? <span class="muted">(1 mark)</span>
-    <div class="ansbox frag" data-stat="81" style="margin-top:14px"><div class="lab">Solution</div><p><b><em class="v">day number</em></b>. It labels each day and has a natural order, but it is not counted or measured, so it is categorical (ordinal). <em class="v">minimum temperature</em> is measured, so it is numerical.</p><p class="muted" style="font-size:18px">Common error: answering ‘neither’ because <em class="v">day number</em> uses numbers.</p></div></div>
-  <div class="src">Edrolo General Mathematics Units 3&amp;4 · 1A Q14 · VCAA 2019 Exam 2 Data analysis Q1a</div>
-</section>
-
-<section class="slide ex" data-cfu="qw">
-  <div class="pill">Exit task 2 of 3 · VCAA 2021 Exam 2 Q1a</div>
-  <div class="stat">VCAA: <b>52%</b> scored 1/1</div>
-  <div class="row" style="margin-top:14px;gap:30px">
-    <div class="q" style="flex:1.1;font-size:22px;padding:16px 24px">In the sport of heptathlon, athletes compete in seven events.<br>These events are the 100 m hurdles, high jump, shot-put, javelin, 200 m run, 800 m run and long jump.<br>Fifteen female athletes competed to qualify for the heptathlon at the Olympic Games.<br>Their results for three of the heptathlon events – high jump, shot-put and javelin – are shown in the table.<br><br>Write down the number of numerical variables in the table. <span class="muted">(1 mark)</span>
-      <div class="ansbox frag" data-stat="52" style="margin-top:14px"><div class="lab">Solution</div><p><b>3</b>: <em class="v">high jump</em>, <em class="v">shot-put</em> and <em class="v">javelin</em> are measured. <em class="v">athlete number</em> only labels each athlete, so it is categorical.</p></div></div>
-    <div style="flex:.9"><table class="t" style="font-size:15px;width:100%"><tr><th><em class="v">athlete number</em></th><th><em class="v">high jump</em> (metres)</th><th><em class="v">shot-put</em> (metres)</th><th><em class="v">javelin</em> (metres)</th></tr><tr><td style="padding:0 8px">1</td><td style="padding:0 8px">1.76</td><td style="padding:0 8px">15.34</td><td style="padding:0 8px">41.22</td></tr><tr><td style="padding:0 8px">2</td><td style="padding:0 8px">1.79</td><td style="padding:0 8px">16.96</td><td style="padding:0 8px">42.41</td></tr><tr><td style="padding:0 8px">3</td><td style="padding:0 8px">1.83</td><td style="padding:0 8px">13.87</td><td style="padding:0 8px">46.53</td></tr><tr><td style="padding:0 8px">4</td><td style="padding:0 8px">1.82</td><td style="padding:0 8px">14.23</td><td style="padding:0 8px">40.53</td></tr><tr><td style="padding:0 8px">5</td><td style="padding:0 8px">1.87</td><td style="padding:0 8px">13.78</td><td style="padding:0 8px">40.62</td></tr><tr><td style="padding:0 8px">6</td><td style="padding:0 8px">1.73</td><td style="padding:0 8px">14.50</td><td style="padding:0 8px">45.62</td></tr><tr><td style="padding:0 8px">7</td><td style="padding:0 8px">1.68</td><td style="padding:0 8px">15.08</td><td style="padding:0 8px">42.33</td></tr><tr><td style="padding:0 8px">8</td><td style="padding:0 8px">1.82</td><td style="padding:0 8px">13.13</td><td style="padding:0 8px">40.88</td></tr><tr><td style="padding:0 8px">9</td><td style="padding:0 8px">1.83</td><td style="padding:0 8px">14.22</td><td style="padding:0 8px">39.22</td></tr><tr><td style="padding:0 8px">10</td><td style="padding:0 8px">1.87</td><td style="padding:0 8px">13.62</td><td style="padding:0 8px">42.51</td></tr><tr><td style="padding:0 8px">11</td><td style="padding:0 8px">1.87</td><td style="padding:0 8px">12.01</td><td style="padding:0 8px">42.75</td></tr><tr><td style="padding:0 8px">12</td><td style="padding:0 8px">1.80</td><td style="padding:0 8px">12.88</td><td style="padding:0 8px">38.12</td></tr><tr><td style="padding:0 8px">13</td><td style="padding:0 8px">1.83</td><td style="padding:0 8px">12.68</td><td style="padding:0 8px">42.65</td></tr><tr><td style="padding:0 8px">14</td><td style="padding:0 8px">1.87</td><td style="padding:0 8px">12.45</td><td style="padding:0 8px">41.32</td></tr><tr><td style="padding:0 8px">15</td><td style="padding:0 8px">1.78</td><td style="padding:0 8px">11.31</td><td style="padding:0 8px">42.88</td></tr></table></div>
-  </div>
-  <div class="src">Edrolo General Mathematics Units 3&amp;4 · 1A Q16 · VCAA 2021 Exam 2 Data analysis Q1a</div>
-</section>
-
-<section class="slide mcslide ex" data-cfu="mc qw">
-  <div class="pill">Exit task 3 of 3 · VCAA 2017 Exam 1 Q5 (adapted)</div>
-  <div class="stat">VCAA (original question): <b>?%</b> of students answered correctly</div>
-  <h2>Show what you know</h2>
-  <div class="row"><div class="q" style="flex:1.45"><div class="stem">A study was conducted that investigated the <em class="v">number of moths</em> caught in a sugar moth trap (less than 250, 250–500, more than 500). The results are summarised in the percentage segmented bar chart shown.<br><br>There were 300 sugar traps.<br><br>The number of sugar traps that caught less than 250 moths is closest to</div><div class="mc cols" data-dist="21,76,2,1,1"><div data-o="A"><b>A.</b>30</div><div data-o="B"><b>B.</b>90</div><div data-o="C"><b>C.</b>250</div><div data-o="D"><b>D.</b>300</div><div data-o="E"><b>E.</b>500</div></div></div><div style="flex:.6"><div class="chart" data-chart="seg" data-cfg='{"bars":[{"label":"","v":[30,46,24]}],"names":["less than 250","250–500","more than 500"],"yl":"frequency (%)","xl":"number of moths","legendTop":["less than 250","250–500","more than 500"],"h":330,"ticks":20}'></div></div></div>
-  <div class="mcsol"><div class="ansbox frag" data-key="B" data-stat="76" data-s="sol"><div class="lab">Solution · B</div><p>The ‘less than 250’ segment reaches 30%: \(0.30\times 300=90\)</p></div><div class="frag" data-s="sol" style="flex:1;display:flex"><div class="dbox"><div class="lab">What’s the distractor?</div><div class="frag" data-dis="A"><div class="lab2">Distractor · A</div><p>Students read the 30% straight off the chart as 30 traps, without finding 30% of the 300 traps.</p></div></div></div></div><span class="frag" data-pct="1"></span>
-  <div class="src">Edrolo General Mathematics Units 3&amp;4 · 1B Q13 · Adapted from VCAA 2017 Exam 1 Data analysis Q5</div>
-</section>
-
-<section class="slide" data-cfu="tf">
-  <div class="pill">Check-in</div>
-  <h2>How did you go?</h2>
-  <div class="lisc" style="grid-template-columns:1fr"><ul>
-      <li>I can identify types of data.</li>
-      <li>I can construct a frequency table for categorical data.</li>
-      <li>I can construct a bar chart from a frequency table.</li>
-      <li>I can construct a percentage segmented bar chart from a frequency table.</li>
-      <li>I can describe the distribution of a categorical variable.</li></ul></div>
-  <p class="muted" style="font-size:24px;margin-top:22px">Thumbs up, sideways or down for each one, then rate it on your worksheet: ✓ got it · ~ nearly · ✗ not yet</p>
-</section>
-
-<section class="slide">
-  <div class="pill" style="background:#4b5563">Homework</div>
-  <h2>Homework</h2>
-  <div class="row" style="gap:34px">
-    <div class="key hw"><h4>Cambridge · Exercise 1A</h4><table>
-      <tr><td>Types of variables: categorical or numerical</td><td>Q1</td></tr>
-      <tr><td>Categorical variables: nominal or ordinal</td><td>Q2</td></tr>
-      <tr><td>Numerical variables: discrete or continuous</td><td>Q3</td></tr>
-      <tr><td>Exam 1 style questions</td><td>Q4–6</td></tr></table></div>
-    <div class="key hw"><h4>Cambridge · Exercise 1B</h4><table>
-      <tr><td>Constructing a frequency table for categorical data</td><td>Q1–3</td></tr>
-      <tr><td>Constructing a percentage segmented bar chart from a frequency table</td><td>Q4–5</td></tr>
-      <tr><td>Using the distribution of a categorical variable to answer statistical questions</td><td>Q6–8</td></tr>
-      <tr><td>Exam 1 style questions</td><td>Q9</td></tr></table></div>
-  </div>
-  <div class="key hw" style="margin-top:22px"><h4>Revision book</h4><p style="font-size:26px">The <b>1A</b> and <b>1B</b> sections</p></div>
-</section>
+<section class="slide s-title"><div class="kicker"><i></i>Unit 3<i></i>AOS 1 Data Analysis<i></i>Lesson 1</div><h1 style="font-size:84px">Types of data and categorical data</h1><div class="sub">Cambridge General Mathematics Units 3&amp;4 · 1A Types of data · 1B Displaying and describing the distributions of categorical variables</div><div class="flow"><div style="border-color:var(--apk)">APK</div><div style="border-color:var(--learn)">Learn</div><div style="border-color:var(--we)">Worked examples</div><div style="border-color:var(--yt)">You try</div><div style="border-color:var(--exit)">Exit tasks</div></div><div class="foot"><span>12MAG · General Mathematics 3&amp;4</span><span>S1</span></div></section>
+<section class="slide T " data-cfu=""><div class="hd"><div class="pill">Today’s lesson</div><div class="tiles"></div></div><h2 class="tt">Today’s lesson</h2><div class="col3"><div class="card3"><h3>Learning intentions</h3><ul class=""><li>To be able to classify data as categorical or numerical.</li><li>To be able to further classify categorical data as nominal or ordinal.</li><li>To be able to further classify numerical data as discrete or continuous.</li><li>To be able to construct frequency and percentage frequency tables for categorical data.</li><li>To be able to construct bar charts and percentage bar charts from frequency tables.</li><li>To be able to interpret and describe frequency tables and bar charts.</li><li>To be able to answer statistical questions about a categorical variable.</li></ul></div><div class="card3"><h3>Success criteria</h3><ul class="tick"><li>I can identify types of data.</li><li>I can construct a frequency table for categorical data.</li><li>I can construct a bar chart from a frequency table.</li><li>I can construct a percentage segmented bar chart from a frequency table.</li><li>I can describe the distribution of a categorical variable.</li></ul></div><div class="card3"><h3>Lesson sequence</h3><ol class="seq"><li style="--c:var(--apk)">APK <small>· Year 11 types of data, two VCAA questions</small></li><li>Types of data <small>→ WE 1 · CAS set-up</small></li><li>Frequency tables <small>→ WE 2</small></li><li>Bar charts <small>→ WE 3</small></li><li>Segmented bar charts <small>→ WE 4</small></li><li>Describing the distribution <small>→ WE 5</small></li><li style="--c:var(--exit)">Exit tasks <small>· three VCAA questions</small></li><li style="--c:var(--muted)">Check-in and coursework <small></small></li></ol></div></div><div class="src"></div></section>
+<section class="slide T " data-cfu=""><div class="hd"><div class="pill">Key ideas</div><div class="tiles"></div></div><h2 class="tt">Key definitions and formulas</h2><div class="col2"><div><h3>Key definitions</h3><div class="kd frag"><div><b>Categorical variable</b><span>names a quality or group: nominal (names only) or ordinal (names and orders)</span></div></div><div class="kd frag"><div><b>Numerical variable</b><span>a quantity: discrete (counted, ‘How many?’) or continuous (measured, ‘How much?’)</span></div></div><div class="kd frag"><div><b>Bar chart</b><span>one bar per category, with gaps; height = frequency</span></div><div class="kpic"><div class="chart" id="kb" data-chart="bar" data-cfg='{"cats": ["A", "B", "C"], "v": [3, 6, 4], "max": 6, "step": 2, "xl": "", "yl": "", "h": 200}'></div></div></div><div class="kd frag"><div><b>Percentage segmented bar chart</b><span>one 100% bar, a segment per category, with a legend</span></div><div class="kpic"><div class="chart" id="ks" data-chart="seg" data-cfg='{"bars": [{"v": [25, 45, 30]}], "names": ["A", "B", "C"], "yl": "%", "h": 220, "ticks": 50}'></div></div></div><div class="kd frag"><div><b>Mode (modal category)</b><span>the category that occurs most often: the tallest bar or longest segment</span></div></div></div><div><h3>Key formulas</h3><div class="kf frag"><span class="kn">Percentage frequency</span><span class="kx">percentage frequency = <span class="frac"><span>number of times a value occurs</span><span>total number of values</span></span> × 100%</span></div><div class="kf frag"><span class="kn">Number from a percentage</span><span class="kx">number = <span class="frac"><span>percentage</span><span>100</span></span> × total</span></div><div class="kf frag"><span class="kn">Segmented bar</span><span class="kx">segment ends at previous end + its %</span></div></div></div><div class="src">Cambridge General Mathematics Units 3&amp;4, 1A pp. 2–4 and 1B pp. 7–10 · Charts: teacher illustrations</div></section>
+<section class="slide T apk" data-cfu="qw"><div class="hd"><div class="pill">APK · Year 11 · Cambridge U1&amp;2 2A #1</div><div class="tiles"><div class="cmdt"><b>CLASSIFY</b> · one type for each</div></div></div><h2 class="tt">What do you remember?</h2><div class="qg"><div class="L"><div class="q"><div><mark class="cw">Classify</mark> the following data as nominal, ordinal, discrete or continuous:<ol class="parts"><li><b>a</b><span>The time between people arriving at the coffee shop.</span></li><li><b>b</b><span>The number of people in the queue at the coffee shop.</span></li><li><b>c</b><span>Customer’s coffee preference (latte, cappuccino, black).</span></li><li><b>d</b><span>Customer’s rating of the coffee (excellent, quite good, not that good).</span></li></ol></div></div></div><div class="R"><ol class="wk"></ol><ol class="wk"><li class="frag ans big"><span class="wn">✓</span><span class="sl">Answers</span><div class="frag pa" ><b class="pl">a</b><span><b>Continuous</b>: time is measured.</span></div><div class="frag pa" ><b class="pl">b</b><span><b>Discrete</b>: people are counted.</span></div><div class="frag pa" ><b class="pl">c</b><span><b>Nominal</b>: the categories only name the coffee.</span></div><div class="frag pa" ><b class="pl">d</b><span><b>Ordinal</b>: the ratings have a natural order.</span></div></li></ol></div></div><div class="src">Cambridge General Mathematics Units 1&amp;2 · Chapter 2 skills checklist, 2A #1 (teacher solution)</div></section>
+<section class="slide T apk mcslide" data-cfu="mc"><div class="hd"><div class="pill">APK · Edrolo U1&amp;2 1A Q13</div><div class="tiles"><div class="stat">VCAA: <b>?%</b> of students answered correctly</div></div></div><h2 class="tt">A real VCAA question you can already do</h2><div class="qg"><div class="L"><div class="q"><div><div class="row" style="gap:12px;align-items:center"><div style="flex:1">The percentage segmented bar chart provided shows the <em class="v">age</em> (under 55 years, 55 years and over) of visitors at a travel convention, segmented by <em class="v">preferred travel destination</em> (domestic, international).</div><div style="width:300px;flex:none"><div class="chart" id="a2s" data-chart="seg" data-cfg='{"bars": [{"v": [65, 35], "label": "under 55"}, {"v": [45, 55], "label": "55 and over"}], "names": ["domestic", "international"], "yl": "percentage", "xl": "age", "h": 330, "ticks": 20}'></div></div></div></div><div class="fig"></div><div>The variables <em class="v">age</em> (under 55 years, 55 years and over) and <em class="v">preferred travel destination</em> (domestic, international) are</div><div class="mc" data-dist="70,3,21,4,2"><div data-o="A"><b>A.</b>both categorical variables.</div><div data-o="B"><b>B.</b>both numerical variables.</div><div data-o="C"><b>C.</b>a numerical variable and a categorical variable respectively.</div><div data-o="D"><b>D.</b>a categorical variable and a numerical variable respectively.</div><div data-o="E"><b>E.</b>a discrete variable and a continuous variable respectively.</div></div></div></div><div class="R"><ol class="wk"><li class="frag" ><span class="wn">1</span><span class="sl">Age</span>recorded in two groups (under 55, 55 and over), not as a number of years: categorical.</li><li class="frag" ><span class="wn">2</span><span class="sl">Destination</span>domestic or international names a group: categorical.</li></ol><ol class="wk"><li class="frag ans" data-key="A" data-stat="70"><span class="wn">✓</span><span class="sl">Answer · A</span>Both variables are <b>categorical</b>.</li><li class="frag dis"><div class="dlab">What’s the distractor?</div><div class="frag" data-dis="C"><span class="dl">C</span> 21% chose this: they saw <em class="v">age</em> and assumed it was numerical. Here age is recorded in groups, so it is categorical.</div></li><span class="frag" data-pct="1"></span></ol></div></div><div class="src">Edrolo General Mathematics Units 1&amp;2 · 1A Q13 · VCAA 2021 Exam 1 Data analysis Q1 (examiner report)</div></section>
+<section class="slide T apk mcslide" data-cfu="mc"><div class="hd"><div class="pill">APK · Edrolo U1&amp;2 1A Q14</div><div class="tiles"><div class="stat">VCAA: <b>?%</b> of students answered correctly</div></div></div><h2 class="tt">And another</h2><div class="qg"><div class="L"><div class="q"><div>The data in the table shown was collected in a study of the association between the variables <em class="v">frequency of nightmares</em> (low, high) and <em class="v">snores</em> (no, yes).</div><div class="fig"><table class="t" style="font-size:19px"><tr><th></th><th colspan="2"><em>snores</em></th><th></th></tr><tr><th><em>frequency of nightmares</em></th><th>no</th><th>yes</th><th>total</th></tr><tr><td class="l">low</td><td>80</td><td>58</td><td>138</td></tr><tr><td class="l">high</td><td>11</td><td>12</td><td>23</td></tr><tr><td class="l">total</td><td>91</td><td>70</td><td>161</td></tr></table></div><div>The variables in this study, <em class="v">frequency of nightmares</em> (low, high) and <em class="v">snores</em> (no, yes), are</div><div class="mc" data-dist="57,5,3,24,11"><div data-o="A"><b>A.</b>ordinal and nominal respectively.</div><div data-o="B"><b>B.</b>nominal and ordinal respectively.</div><div data-o="C"><b>C.</b>both numerical.</div><div data-o="D"><b>D.</b>both ordinal.</div><div data-o="E"><b>E.</b>both nominal.</div></div></div></div><div class="R"><ol class="wk"><li class="frag" ><span class="wn">1</span><span class="sl">Nightmares</span>low and high have a natural order: ordinal.</li><li class="frag" ><span class="wn">2</span><span class="sl">Snores</span>no and yes only name a group: nominal.</li></ol><ol class="wk"><li class="frag ans" data-key="A" data-stat="57"><span class="wn">✓</span><span class="sl">Answer · A</span><em class="v">frequency of nightmares</em> is <b>ordinal</b> and <em class="v">snores</em> is <b>nominal</b>.</li><li class="frag dis"><div class="dlab">What’s the distractor?</div><div class="frag" data-dis="D"><span class="dl">D</span> 24% chose this: they treated no and yes as ordered. No and yes only name a group, so <em class="v">snores</em> is nominal.</div></li><span class="frag" data-pct="1"></span></ol></div></div><div class="src">Edrolo General Mathematics Units 1&amp;2 · 1A Q14 · VCAA 2020 Exam 1 Data analysis Q10 (examiner report)</div></section>
+<section class="slide T learn" data-cfu="disc"><div class="hd"><div class="pill">Learn · 1A</div><div class="tiles"></div></div><h2 class="tt">Types of variable</h2><div class="lrn"><div class="ltop"><div class="key frag"><h4>Two types, each with two sub-types</h4><p>Categorical data put people into groups. Numerical data are quantities you can do arithmetic with.</p></div><div class="kcs frag"><div class="kf"><span class="kn">Categorical</span><span class="kx">nominal (names) · ordinal (names and orders)</span></div><div class="kf"><span class="kn">Numerical</span><span class="kx">discrete (counted) · continuous (measured)</span></div></div></div><div class="pic"><div class="tree" style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px 18px;font-size:22px;text-align:center;width:1180px;margin:0 auto"><div class="frag key" style="grid-column:1/5;justify-self:center;padding:10px 40px"><b>Variable</b></div><div class="frag key" style="grid-column:1/3;border-color:#1f9e74"><b>Categorical</b><br><small>names a quality or group</small></div><div class="frag key" style="grid-column:3/5;border-color:#2f6fdf"><b>Numerical</b><br><small>a quantity: counted or measured</small></div><div class="frag key"><b>Nominal</b><br><small>names only<br>e.g. eye colour, study mode</small></div><div class="frag key"><b>Ordinal</b><br><small>names <i>and</i> orders<br>e.g. fitness level (1 high, 2 medium, 3 low)</small></div><div class="frag key"><b>Discrete</b><br><small>‘How many?’ counted<br>e.g. cars in a car park</small></div><div class="frag key"><b>Continuous</b><br><small>‘How much?’ measured<br>e.g. weight, height</small></div></div></div><div class="tip frag"><b>Not sure?</b> Can you average it? (average weight: yes · average house number: no). And check how it was recorded: weight in kg is numerical; ‘underweight, normal, overweight’ is categorical.</div></div><div class="src">Cambridge General Mathematics Units 3&amp;4, 1A pp. 2–4</div></section>
+<section class="slide T we" data-cfu="cold"><div class="hd"><div class="pill">Worked example 1 · 1A</div><div class="tiles"><div class="cmdt"><b>CLASSIFY</b> · one type for each</div><button class="vid" data-src="" data-label="Cambridge GO · Example 1 (1A Resources)">▶ Video</button></div></div><h2 class="tt">Types of data</h2><div class="qg"><div class="L"><div class="q"><div><mark class="cw">Classify</mark> the following data as nominal, ordinal, discrete or continuous.<ol class="parts"><li><b>a</b><span>The number of chocolate chips in each of 10 cookies is counted.</span></li><li><b>b</b><span>The time taken for 20 students to complete a puzzle is recorded in seconds.</span></li><li><b>c</b><span>Member of a football club were asked to rate how they felt about the current coach, 1 = Very satisfied, 2 = Satisfied, 3 = Indifferent, 4 = Dissatisfied, 5 = Very dissatisfied.</span></li><li><b>d</b><span>Students are asked to each choose their preferred colour from the list 1 = Blue, 2 = Green, 3 = Red, 4 = Yellow.</span></li><li><b>e</b><span>Students weights were classified as ‘less than 60kg’, ‘60kg - 80kg’ or ‘more than 80kg’.</span></li></ol></div></div></div><div class="R"><ol class="wk"></ol><ol class="wk"><li class="frag ans big"><span class="wn">✓</span><span class="sl">Answers</span><div class="frag pa" ><b class="pl">a</b><span><b>Discrete</b>: the number of chips can only be a whole number.</span></div><div class="frag pa" ><b class="pl">b</b><span><b>Continuous</b>: time can take any value, limited only by how accurately it is measured.</span></div><div class="frag pa" ><b class="pl">c</b><span><b>Ordinal</b>: the numbers are not quantities; they rank how much each person approves of the coach.</span></div><div class="frag pa" ><b class="pl">d</b><span><b>Nominal</b>: the numbers are not quantities; they just name colours.</span></div><div class="frag pa" ><b class="pl">e</b><span><b>Ordinal</b>: weight was recorded in three groups that can be ordered.</span></div></li></ol></div></div><div class="src">Cambridge General Mathematics Units 3&amp;4 · Example 1 (p. 4)</div></section>
+<section class="slide T yt" data-cfu="qw"><div class="hd"><div class="pill">You try · Edrolo 1A WE1, WE2, WE3</div><div class="tiles"><div class="cmdt"><b>CLASSIFY</b> · one type for each</div></div></div><h2 class="tt">Types of data</h2><div class="qg"><div class="L"><div class="q"><div><div style="font-size:21px"><p><b>WE1</b> Classify the following variables as either categorical or numerical.</p><ol class="parts"><li><b>a.</b><span><em class="v">type of pasta</em></span></li><li><b>b.</b><span><em class="v">number of candles</em></span></li></ol><p><b>WE2</b> Classify the following categorical variables as either nominal or ordinal.</p><ol class="parts"><li><b>a.</b><span><em class="v">type of shoe</em> (runners, boots, sandals, slides)</span></li><li><b>b.</b><span><em class="v">shirt size</em> (small, medium, large)</span></li></ol><p><b>WE3</b> <mark class="cw">Classify</mark> the following numerical variables as either discrete or continuous.</p><ol class="parts"><li><b>a.</b><span><em class="v">length</em> (m)</span></li><li><b>b.</b><span><em class="v">number of tennis racquets</em></span></li></ol></div></div></div></div><div class="R"><ol class="wk"></ol><ol class="wk"><li class="frag ans big"><span class="wn">✓</span><span class="sl">Answers</span><div class="frag pa" ><b class="pl">1a</b><span><b>Categorical</b>: grouped into pasta types.</span></div><div class="frag pa" ><b class="pl">1b</b><span><b>Numerical</b>: candles are counted.</span></div><div class="frag pa" ><b class="pl">2a</b><span><b>Nominal</b>: shoe types have no natural order.</span></div><div class="frag pa" ><b class="pl">2b</b><span><b>Ordinal</b>: small → medium → large.</span></div><div class="frag pa" ><b class="pl">3a</b><span><b>Continuous</b>: length is measured and can be any value.</span></div><div class="frag pa" ><b class="pl">3b</b><span><b>Discrete</b>: racquets are counted.</span></div></li></ol></div></div><div class="src">Edrolo General Mathematics Units 3&amp;4 · 1A Worked examples 1, 2 and 3 (pp. 2–4)</div></section>
+<section class="slide T kcas" data-cfu="disc"><div class="hd"><div class="pill">CAS · 1A</div><div class="tiles"></div></div><h2 class="tt">Setting up the statistics app</h2><div class="qg"><div class="L"><div class="q">A university survey of eight students (Study mode: C = on-campus, O = online; Fitness level: 1 = high, 2 = medium, 3 = low).<table class="t" style="font-size:17px;"><tr><th>Height (cm)</th><th>Weight (kg)</th><th>Age (years)</th><th>Study mode</th><th>Fitness level</th><th>Pulse rate (beats/min)</th></tr><tr><td class="l">173</td><td>57</td><td>18</td><td>C</td><td>2</td><td>86</td></tr><tr><td class="l">179</td><td>58</td><td>19</td><td>C</td><td>2</td><td>82</td></tr><tr><td class="l">167</td><td>62</td><td>18</td><td>C</td><td>1</td><td>96</td></tr><tr><td class="l">195</td><td>84</td><td>18</td><td>O</td><td>1</td><td>71</td></tr><tr><td class="l">173</td><td>64</td><td>18</td><td>C</td><td>3</td><td>90</td></tr><tr><td class="l">184</td><td>74</td><td>22</td><td>O</td><td>3</td><td>78</td></tr><tr><td class="l">175</td><td>60</td><td>19</td><td>O</td><td>3</td><td>88</td></tr><tr><td class="l">140</td><td>50</td><td>34</td><td>C</td><td>3</td><td>70</td></tr></table><p>Enter the <em class="v">height</em> data into a list named <b>height</b>. Only numerical variables go into a list you calculate with.</p></div></div><div class="R"><div class="cas2"><div class="key frag"><h4>TI-Nspire</h4><ol><li>New document → Lists & Spreadsheet.</li><li>Name a column (top cell, e.g. <i>marks</i>).</li><li>Enter the data down the column.</li><li>Check: the number of rows filled = the number of data values.</li></ol></div><div class="key frag"><h4>ClassPad</h4><ol><li>Open the Statistics app.</li><li>Name a list (top cell, e.g. <i>marks</i>).</li><li>Enter the data down the list.</li><li>Check: the number of rows filled = the number of data values.</li></ol></div></div><div class="ytrow"><div class="ytc"><div class="ytf"><iframe src="https://www.youtube-nocookie.com/embed/qDZRQeUvC0I" title="Analysing data | Getting Started Series – Lists & Spreadsheets" allow="encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="ytt">Analysing data | Getting Started Series – Lists & Spreadsheets</div></div><div class="ytc"><div class="ytf"><iframe src="https://www.youtube-nocookie.com/embed/Qqg8vWK3SE8" title="ClassPad Help 400 – Statistics: basic settings and actions" allow="encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="ytt">ClassPad Help 400 – Statistics: basic settings and actions</div></div></div><ol class="wk" style="margin-top:12px"><li class="frag ans"><span class="wn">✓</span><span class="sl">Read off</span>8 rows filled = 8 students. The list is ready for one-variable statistics (1D onwards).</li></ol></div></div><div class="src">Cambridge General Mathematics Units 3&amp;4, 1A p. 2 (survey data) · Steps: CAS guide (planner)</div></section>
+<section class="slide T learn" data-cfu="disc"><div class="hd"><div class="pill">Learn · 1B</div><div class="tiles"></div></div><h2 class="tt">The frequency table</h2><div class="lrn"><div class="ltop"><div class="key frag"><h4>Frequency table</h4><p>Lists each value of a variable with how often it occurs: as a number and as a percentage. It is the first step in making sense of raw data.</p></div><div class="kcs frag"><div class="kf"><span class="kn">Percentage frequency</span><span class="kx">percentage frequency = <span class="frac"><span>number of times a value occurs</span><span>total number of values</span></span> × 100%</span></div></div></div><div class="pic"><div class="data" id="l3d" style="font-size:22px;letter-spacing:.06em;font-family:inherit"><span data-i="0" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="1" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="2" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="3" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="4" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="5" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="6" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="7" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="8" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="9" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="10" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="11" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="12" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="13" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="14" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="15" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="16" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="17" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="18" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="19" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="20" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="21" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="22" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="23" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="24" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="25" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="26" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="27" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="28" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="29" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="30" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="31" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="32" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="33" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="34" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="35" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="36" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="37" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="38" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="39" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="40" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="41" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="42" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="43" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="44" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="45" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="46" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="47" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="48" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="49" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="50" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="51" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="52" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="53" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="54" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="55" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span> <span data-i="56" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="57" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="58" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="59" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">O</span></div><div class="frag" style="display:flex;justify-content:center;margin-top:10px"><table class="t" style="font-size:19px"><thead><tr><th rowspan="2">Study mode</th><th colspan="2">Frequency</th></tr><tr><th>Number</th><th>Percentage</th></tr></thead><tr><td class="l">on-campus (C)</td><td>27</td><td>27/60 × 100 = 45.0</td></tr><tr><td class="l">online (O)</td><td>33</td><td>33/60 × 100 = 55.0</td></tr><tr><td class="l"><b>Total</b></td><td><b>60</b></td><td><b>100.0</b></td></tr></table></div></div><span class="frag" data-mark="#l3d|2,6,8,9,10,12,16,17,18,20,22,24,25,26,28,30,32,36,38,40,47,48,50,54,56,57,58|q1m"></span><div class="tip frag"><b>Total both columns.</b> The numbers must add to the number of values and the percentages to 100. Rounding can give 99.9 or 100.1: that is fine.</div></div><div class="src">Cambridge General Mathematics Units 3&amp;4, 1B p. 7 (study mode of 60 students)</div></section>
+<section class="slide T we" data-cfu="cold"><div class="hd"><div class="pill">Worked example 2 · 1B</div><div class="tiles"><div class="cmdt"><b>CONSTRUCT</b> · numbers, percentages, totals</div><button class="vid" data-src="" data-label="Cambridge GO · Example 2 (1B Resources)">▶ Video</button></div></div><h2 class="tt">Frequency table for a categorical variable</h2><div class="qg"><div class="L"><div class="q"><div>A group of 11 preschool children were asked to choose between chocolate and vanilla ice-cream (C = chocolate, V = vanilla):</div><div class="fig"><div class="data" id="w2d" style="font-size:30px;letter-spacing:.06em;font-family:inherit"><span data-i="0" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="1" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">V</span> <span data-i="2" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">V</span> <span data-i="3" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="4" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="5" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">V</span> <span data-i="6" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="7" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="8" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">C</span> <span data-i="9" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">V</span> <span data-i="10" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">V</span></div></div><div><mark class="cw">Construct</mark> a frequency table (including percentage frequencies) to display the data.</div></div></div><div class="R"><ol class="wk"><li class="frag" data-mark="#w2d|0,3,4,6,7,8|q1m"><span class="wn">1</span><span class="sl">Count</span>chocolate: 6 · vanilla: 5 · total: 6 + 5 = 11</li><li class="frag" ><span class="wn">2</span><span class="sl">Percentage frequency</span><span class="fx"><span class="lhs">% chocolate</span> = <span class="rhs"><span class="frac"><span><span class="fv"><i>number</i><b>6</b></span></span><span><span class="fv"><i>total</i><b>11</b></span></span></span> × 100%</span><span class="frag fxs" data-fx="sub"></span><span class="frag fxr" > = <b>54.5%</b></span></span></li><li class="frag" ><span class="wn">3</span><span class="sl">Percentage frequency</span><span class="fx"><span class="lhs">% vanilla</span> = <span class="rhs"><span class="frac"><span><span class="fv"><i>number</i><b>5</b></span></span><span><span class="fv"><i>total</i><b>11</b></span></span></span> × 100%</span><span class="frag fxs" data-fx="sub"></span><span class="frag fxr" > = <b>45.5%</b></span></span></li><li class="frag" ><span class="wn">4</span><span class="sl">Check</span>6 + 5 = 11 and 54.5 + 45.5 = 100.0</li></ol><ol class="wk"><li class="frag ans"><span class="wn">✓</span><span class="sl">Answer</span><table class="t" style="font-size:19px"><thead><tr><th rowspan="2">Flavour</th><th colspan="2">Frequency</th></tr><tr><th>Number</th><th>Percentage</th></tr></thead><tr><td class="l">chocolate</td><td>6</td><td>54.5</td></tr><tr><td class="l">vanilla</td><td>5</td><td>45.5</td></tr><tr><td class="l"><b>Total</b></td><td><b>11</b></td><td><b>100.0</b></td></tr></table></li></ol></div></div><div class="src">Cambridge General Mathematics Units 3&amp;4 · Example 2 (p. 7)</div></section>
+<section class="slide T yt" data-cfu="qw"><div class="hd"><div class="pill">You try · Edrolo 1B WE1</div><div class="tiles"><div class="cmdt"><b>CREATE</b> · number and % columns, total row</div></div></div><h2 class="tt">Constructing a frequency table</h2><div class="qg"><div class="L"><div class="q"><div>The students in a prep class were asked the question, ‘Would you describe your teacher’s height as short, average or tall?’. Their responses were as follows:</div><div class="fig"><div class="data" id="y2d" style="display:grid;grid-template-columns:repeat(6,auto);gap:2px 16px;font-size:19px;justify-content:center;font-family:inherit"><span data-i="0" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">average</span><span data-i="1" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">short</span><span data-i="2" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">tall</span><span data-i="3" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">tall</span><span data-i="4" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">short</span><span data-i="5" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">short</span><span data-i="6" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">average</span><span data-i="7" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">average</span><span data-i="8" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">tall</span><span data-i="9" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">short</span><span data-i="10" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">average</span><span data-i="11" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">short</span><span data-i="12" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">average</span><span data-i="13" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">average</span><span data-i="14" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">average</span><span data-i="15" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">tall</span><span data-i="16" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">tall</span><span data-i="17" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">short</span><span data-i="18" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">average</span><span data-i="19" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">tall</span><span data-i="20" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">tall</span><span data-i="21" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">average</span><span data-i="22" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">average</span><span data-i="23" style="padding:0 3px;border-radius:5px;border:1.5px solid transparent">tall</span></div></div><div>Use this data to <mark class="cw">create</mark> a frequency table displaying both frequency and percentage frequency, correct to the nearest decimal place.</div></div></div><div class="R"><ol class="wk"><li class="frag" data-mark="#y2d|1,4,5,9,11,17|q1m"><span class="wn">1</span><span class="sl">Count</span>short 6 · average 10 · tall 8 · total 24</li><li class="frag" ><span class="wn">2</span><span class="sl">Percentage frequency</span><span class="fx"><span class="lhs">% short</span> = <span class="rhs"><span class="frac"><span><span class="fv"><i>number</i><b>6</b></span></span><span><span class="fv"><i>total</i><b>24</b></span></span></span> × 100</span><span class="frag fxs" data-fx="sub"></span><span class="frag fxr" > = <b>25.0</b></span></span></li><li class="frag" ><span class="wn">3</span><span class="sl">Percentage frequency</span><span class="fx"><span class="lhs">% average</span> = <span class="rhs"><span class="frac"><span><span class="fv"><i>number</i><b>10</b></span></span><span><span class="fv"><i>total</i><b>24</b></span></span></span> × 100</span><span class="frag fxs" data-fx="sub"></span><span class="frag fxr" > = <b>41.7</b></span></span></li><li class="frag" ><span class="wn">4</span><span class="sl">Percentage frequency</span><span class="fx"><span class="lhs">% tall</span> = <span class="rhs"><span class="frac"><span><span class="fv"><i>number</i><b>8</b></span></span><span><span class="fv"><i>total</i><b>24</b></span></span></span> × 100</span><span class="frag fxs" data-fx="sub"></span><span class="frag fxr" > = <b>33.3</b></span></span></li></ol><ol class="wk"><li class="frag ans"><span class="wn">✓</span><span class="sl">Answer</span><table class="t" style="font-size:19px"><thead><tr><th rowspan="2">teacher’s height</th><th colspan="2">Frequency</th></tr><tr><th>Number</th><th>Percentage</th></tr></thead><tr><td class="l">short</td><td>6</td><td>25.0</td></tr><tr><td class="l">average</td><td>10</td><td>41.7</td></tr><tr><td class="l">tall</td><td>8</td><td>33.3</td></tr><tr><td class="l"><b>Total</b></td><td><b>24</b></td><td><b>100.0</b></td></tr></table></li></ol></div></div><div class="src">Edrolo General Mathematics Units 3&amp;4 · 1B Worked example 1 (pp. 9–10)</div></section>
+<section class="slide T learn" data-cfu="disc"><div class="hd"><div class="pill">Learn · 1B</div><div class="tiles"></div></div><h2 class="tt">The bar chart</h2><div class="lrn"><div class="ltop"><div class="key frag"><h4>Bar chart</h4><p>A picture of a frequency table, made for categorical data.</p><ul class="bul" style="font-size:20px;margin-left:24px"><li>frequency (or %) on the vertical axis</li><li>the variable on the horizontal axis</li><li>one bar per category, with gaps between them</li></ul></div></div><div class="pic"><div style="width:520px;margin:0 auto"><div class="chart" id="l4b" data-chart="bar" data-cfg='{"cats": ["on-campus", "online"], "v": [27, 33], "max": 35, "step": 5, "xl": "Study mode", "yl": "Frequency", "h": 330}' data-stepped="1"></div></div></div><span class="frag" data-bar="0"></span><span class="frag" data-bar="1"></span><div class="tip frag"><b>Gaps matter.</b> They show each category is separate. A histogram (numerical data, 1C) has no gaps.</div></div><div class="src">Cambridge General Mathematics Units 3&amp;4, 1B p. 8 · Data: 1B p. 7</div></section>
+<section class="slide T we" data-cfu="cold"><div class="hd"><div class="pill">Worked example 3 · 1B</div><div class="tiles"><div class="cmdt"><b>CONSTRUCT</b> · labelled axes, bars with gaps</div><button class="vid" data-src="" data-label="Cambridge GO · Example 3 (1B Resources)">▶ Video</button></div></div><h2 class="tt">Constructing a bar chart from a frequency table</h2><div class="qg"><div class="L"><div class="q"><div>The climate type of 23 countries is classified as ‘cold’, ‘mild’ or ‘hot’. The results are summarised in the table opposite.<div class="fig"><table class="t" style="font-size:19px"><thead><tr><th rowspan="2">Climate type</th><th colspan="2">Frequency</th></tr><tr><th>Number</th><th>Percentage</th></tr></thead><tr><td class="l">Cold</td><td>3</td><td>13.0</td></tr><tr><td class="l">Mild</td><td>14</td><td>60.9</td></tr><tr><td class="l">Hot</td><td>6</td><td>26.1</td></tr><tr><td class="l"><b>Total</b></td><td><b>23</b></td><td><b>100.0</b></td></tr></table></div><ol class="parts"><li><b>a</b><span>What is the level of measurement of the variable <em class="v">climate type</em>?</span></li><li><b>b</b><span><mark class="cw">Construct</mark> a frequency bar chart to display this information.</span></li></ol></div></div></div><div class="R"><ol class="wk"><li class="frag" ><span class="wn">1</span><span class="sl">a</span>the groups can be put in a natural order of ‘warmth’: cold, mild, hot. The variable is <b>ordinal</b>.</li></ol><ol class="wk"><li class="frag ans"><span class="wn">✓</span><span class="sl">Answer</span><b>b</b><div class="frag bl" >1 Horizontal axis: <em>Climate type</em>, three equal intervals. Vertical axis: <em>Frequency</em>, scaled to 15.</div><div class="frag bl" data-bar="0">2 Cold: bar of height 3</div><div class="frag bl" data-bar="1">3 Mild: bar of height 14 (gaps between bars)</div><div class="frag bl" data-bar="2">4 Hot: bar of height 6</div><div class="afig"><div style="width:520px"><div class="chart" id="w3b" data-chart="bar" data-cfg='{"cats": ["Cold", "Mild", "Hot"], "v": [3, 14, 6], "max": 15, "step": 5, "xl": "Climate type", "yl": "Frequency", "h": 330}' data-stepped="1"></div></div></div></li></ol></div></div><div class="src">Cambridge General Mathematics Units 3&amp;4 · Example 3 (p. 8)</div></section>
+<section class="slide T yt" data-cfu="qw"><div class="hd"><div class="pill">You try · Edrolo 1B WE2</div><div class="tiles"><div class="cmdt"><b>CONSTRUCT</b> · labelled axes, bars with gaps</div></div></div><h2 class="tt">Constructing a bar chart</h2><div class="qg"><div class="L"><div class="q"><div>24 students in a prep class were asked the question, ‘Would you describe your teacher’s height as short, average or tall?’. Their responses are recorded in the frequency table shown.</div><div class="fig"><table class="t" style="font-size:19px"><thead><tr><th rowspan="2">teacher’s height</th><th colspan="2">Frequency</th></tr><tr><th>Number</th><th>Percentage</th></tr></thead><tr><td class="l">short</td><td>6</td><td>25.0</td></tr><tr><td class="l">average</td><td>10</td><td>41.7</td></tr><tr><td class="l">tall</td><td>8</td><td>33.3</td></tr><tr><td class="l"><b>Total</b></td><td><b>24</b></td><td><b>100.0</b></td></tr></table></div><div>Use the frequency table to <mark class="cw">construct</mark> a frequency bar chart.</div></div></div><div class="R"><ol class="wk"><li class="frag" ><span class="wn">1</span><span class="sl">Axes</span>frequency on the vertical axis (up to at least 10), <em>teacher’s height</em> on the horizontal axis.</li></ol><ol class="wk"><li class="frag ans"><span class="wn">✓</span><span class="sl">Answer</span>The bar chart:<div class="frag bl" data-bar="0">short: 6</div><div class="frag bl" data-bar="1">average: 10</div><div class="frag bl" data-bar="2">tall: 8</div><div class="afig"><div style="width:520px"><div class="chart" id="y3b" data-chart="bar" data-cfg='{"cats": ["short", "average", "tall"], "v": [6, 10, 8], "max": 10, "step": 2, "xl": "teacher\u2019s height", "yl": "frequency", "h": 330}' data-stepped="1"></div></div></div></li></ol></div></div><div class="src">Edrolo General Mathematics Units 3&amp;4 · 1B Worked example 2 (p. 11)</div></section>
+<section class="slide T learn" data-cfu="disc"><div class="hd"><div class="pill">Learn · 1B</div><div class="tiles"></div></div><h2 class="tt">The segmented bar chart</h2><div class="lrn"><div class="ltop"><div class="key frag"><h4>Segmented bar chart</h4><p>The bars are stacked into one bar, a segment per category, with a legend. In a <b>percentage</b> segmented bar chart each segment is its %, so the bar is 100% tall.</p></div><div class="kcs frag"><div class="kf"><span class="kn">Segmented bar</span><span class="kx">segment ends at previous end + its %</span></div></div></div><div class="pic"><div class="row" style="gap:60px;justify-content:center"><div style="width:420px"><div class="chart" id="l5f" data-chart="seg" data-cfg='{"bars": [{"v": [12, 56, 24]}], "names": ["Cold", "Mild", "Hot"], "legendTop": ["Hot", "Mild", "Cold"], "yl": "Frequency", "scale": 25, "ticks": 20, "h": 270}'></div></div><div class="frag" style="width:420px"><div class="chart" id="l5p" data-chart="seg" data-cfg='{"bars": [{"v": [13.0, 60.9, 26.1]}], "names": ["Cold", "Mild", "Hot"], "legendTop": ["Hot", "Mild", "Cold"], "yl": "Percentage", "ticks": 10, "h": 270}'></div></div></div></div><div class="tip frag"><b>Segment ends:</b> add the percentages as you go up: 13.0, then 13.0 + 60.9 = 73.9, then 100.</div></div><div class="src">Cambridge General Mathematics Units 3&amp;4, 1B p. 9 (climate data, Example 3)</div></section>
+<section class="slide T we" data-cfu="cold"><div class="hd"><div class="pill">Worked example 4 · 1B</div><div class="tiles"><div class="cmdt"><b>CONSTRUCT</b> · one 100% bar, segments, legend</div><button class="vid" data-src="" data-label="Cambridge GO · Example 4 (1B Resources)">▶ Video</button></div></div><h2 class="tt">Constructing a percentage segmented bar chart from a frequency table</h2><div class="qg"><div class="L"><div class="q"><div>The climate type of 23 countries is classified as ‘cold’, ‘mild’ or ‘hot’.</div><div class="fig"><table class="t" style="font-size:19px"><thead><tr><th rowspan="2">Climate type</th><th colspan="2">Frequency</th></tr><tr><th>Number</th><th>Percentage</th></tr></thead><tr><td class="l">Cold</td><td>3</td><td>13.0</td></tr><tr><td class="l">Mild</td><td>14</td><td>60.9</td></tr><tr><td class="l">Hot</td><td>6</td><td>26.1</td></tr><tr><td class="l"><b>Total</b></td><td><b>23</b></td><td><b>100.0</b></td></tr></table></div><div><mark class="cw">Construct</mark> a percentage frequency segmented bar chart to display this information.</div></div></div><div class="R"><ol class="wk"><li class="frag" ><span class="wn">1</span><span class="sl">Axes</span>no label on the horizontal axis. Vertical axis: <em>Percentage</em>, 0 to 100 in tens.</li><li class="frag" ><span class="wn">2</span><span class="sl">Ends</span>Cold ends at 13.0 · Mild ends at 13.0 + 60.9 = 73.9 · Hot ends at 100</li></ol><ol class="wk"><li class="frag ans"><span class="wn">✓</span><span class="sl">Answer</span>The percentage segmented bar chart:<div class="frag bl" data-act="seg0">Cold: 0 to 13.0</div><div class="frag bl" data-act="seg1">Mild: 13.0 to 73.9</div><div class="frag bl" data-act="seg2">Hot: 73.9 to 100, then the legend</div><div class="afig"><div style="width:440px"><div class="chart" id="w4s" data-chart="seg" data-cfg='{"bars": [{"v": [13.0, 60.9, 26.1]}], "names": ["Cold", "Mild", "Hot"], "legendTop": ["Hot", "Mild", "Cold"], "yl": "Percentage", "ticks": 10, "h": 330}' data-stepped="1"></div></div></div></li></ol></div></div><div class="src">Cambridge General Mathematics Units 3&amp;4 · Example 4 (p. 9)</div></section>
+<section class="slide T yt" data-cfu="qw"><div class="hd"><div class="pill">You try · Edrolo 1B WE3</div><div class="tiles"><div class="cmdt"><b>CONSTRUCT</b> · segments, legend</div></div></div><h2 class="tt">Constructing segmented bar charts</h2><div class="qg"><div class="L"><div class="q"><div>24 students in a prep class were asked the question, ‘Would you describe your teacher’s height as short, average or tall?’. Their responses are recorded in the frequency table shown.<div class="fig"><table class="t" style="font-size:19px"><thead><tr><th rowspan="2">teacher’s height</th><th colspan="2">Frequency</th></tr><tr><th>Number</th><th>Percentage</th></tr></thead><tr><td class="l">short</td><td>6</td><td>25.0</td></tr><tr><td class="l">average</td><td>10</td><td>41.7</td></tr><tr><td class="l">tall</td><td>8</td><td>33.3</td></tr><tr><td class="l"><b>Total</b></td><td><b>24</b></td><td><b>100.0</b></td></tr></table></div><ol class="parts"><li><b>a.</b><span>Use the frequency table to construct a segmented bar chart.</span></li><li><b>b.</b><span>Use the frequency table to <mark class="cw">construct</mark> a percentage segmented bar chart.</span></li></ol></div></div></div><div class="R"><ol class="wk"></ol><ol class="wk"><li class="frag ans big"><span class="wn">✓</span><span class="sl">Answers</span><div class="frag pa" ><b class="pl">a.</b><span>Segments end at 6, 6 + 10 = 16 and 16 + 8 = 24.<div style="width:330px"><div class="chart" id="y4a" data-chart="seg" data-cfg='{"bars": [{"v": [25, 41.67, 33.33]}], "names": ["short", "average", "tall"], "legendTop": ["short", "average", "tall"], "yl": "frequency", "xl": "teacher\u2019s height", "scale": 24, "ticks": 25, "h": 300}'></div></div></span></div><div class="frag pa" ><b class="pl">b.</b><span>Segments end at 25, 25 + 41.7 = 66.7 and 100.<div style="width:330px"><div class="chart" id="y4b" data-chart="seg" data-cfg='{"bars": [{"v": [25, 41.7, 33.3]}], "names": ["short", "average", "tall"], "legendTop": ["short", "average", "tall"], "yl": "frequency (%)", "xl": "teacher\u2019s height", "ticks": 20, "h": 300}'></div></div></span></div></li></ol></div></div><div class="src">Edrolo General Mathematics Units 3&amp;4 · 1B Worked example 3 (pp. 12–13)</div></section>
+<section class="slide T learn" data-cfu="disc"><div class="hd"><div class="pill">Learn · 1B</div><div class="tiles"></div></div><h2 class="tt">Describing the distribution of a categorical variable</h2><div class="lrn"><div class="ltop"><div class="key frag"><h4>Writing a report</h4><ul class="bul" style="font-size:20px;margin-left:24px"><li>the context and how many individuals</li><li>the modal category, if there is a clear one</li><li>percentages (preferred to counts)</li><li>with many categories, you don’t need them all, but always give the mode</li></ul></div><div class="kcs frag"><div class="kf"><span class="kn">Mode</span><span class="kx">the most frequent category: tallest bar or longest segment</span></div></div></div><div class="pic"><div style="width:420px;margin:0 auto"><div class="chart" id="l6p" data-chart="seg" data-cfg='{"bars": [{"v": [13.0, 60.9, 26.1]}], "names": ["Cold", "Mild", "Hot"], "legendTop": ["Hot", "Mild", "Cold"], "yl": "Percentage", "ticks": 10, "h": 330}'></div></div></div><div class="tip frag"><b>Majority</b> means more than 50%. If the mode is 50% or less, say ‘the most common’ instead.</div></div><div class="src">Cambridge General Mathematics Units 3&amp;4, 1B pp. 9–10</div></section>
+<section class="slide T we" data-cfu="cold"><div class="hd"><div class="pill">Worked example 5 · 1B</div><div class="tiles"><div class="cmdt"><b>WRITE</b> · context, mode, percentages</div><button class="vid" data-src="" data-label="Cambridge GO · Example 5 (1B Resources)">▶ Video</button></div></div><h2 class="tt">Describing the distribution of a categorical variable</h2><div class="qg"><div class="L"><div class="q"><div>In an investigation of the variation of climate type across countries, the climate types of 23 countries were classified as ‘cold’, ‘mild’ or ‘hot’. The data are displayed in a frequency table to show the percentages.</div><div class="fig"><table class="t" style="font-size:19px"><thead><tr><th rowspan="2">Climate type</th><th colspan="2">Frequency</th></tr><tr><th>Number</th><th>%</th></tr></thead><tr><td class="l">Cold</td><td>3</td><td>13.0</td></tr><tr><td class="l">Mild</td><td>14</td><td>60.9</td></tr><tr><td class="l">Hot</td><td>6</td><td>26.1</td></tr><tr><td class="l"><b>Total</b></td><td><b>23</b></td><td><b>100.0</b></td></tr></table></div><div>Use the information in the frequency table to <mark class="cw">write</mark> a concise report on the distribution of climate types across these 23 countries.</div></div></div><div class="R"><ol class="wk"><li class="frag" ><span class="wn">1</span><span class="sl">Context</span>23 countries; climate type cold, mild or hot.</li><li class="frag" ><span class="wn">2</span><span class="sl">Mode</span>Mild, 60.9%: more than 50%, so ‘the majority’.</li><li class="frag" ><span class="wn">3</span><span class="sl">Others</span>hot 26.1%, cold 13.0%</li></ol><ol class="wk"><li class="frag ans"><span class="wn">✓</span><span class="sl">Answer</span>The climate types of 23 countries were classified as being ‘cold’, ‘mild’ or ‘hot’. The majority of the countries, 60.9%, were found to have a mild climate. Of the remaining countries, 26.1% were found to have a hot climate, while 13.0% were found to have a cold climate.</li></ol></div></div><div class="src">Cambridge General Mathematics Units 3&amp;4 · Example 5 (pp. 10–11)</div></section>
+<section class="slide T yt" data-cfu="qw"><div class="hd"><div class="pill">You try · Edrolo 1B WE4</div><div class="tiles"><div class="cmdt"><b>DESCRIBE</b> · context, mode, percentages</div></div></div><h2 class="tt">Describing the distribution</h2><div class="qg"><div class="L"><div class="q"><div>24 students in a prep class were asked the question, ‘Would you describe your teacher’s height as short, average or tall?’. Their responses are shown in the given percentage segmented bar chart.<div class="fig" style="width:380px;margin:0 auto"><div class="chart" id="y5s" data-chart="seg" data-cfg='{"bars": [{"v": [25, 41.7, 33.3]}], "names": ["short", "average", "tall"], "legendTop": ["short", "average", "tall"], "yl": "frequency (%)", "xl": "teacher\u2019s height", "ticks": 20, "h": 290}'></div></div><ol class="parts"><li><b>a.</b><span>Find the modal category of the data set.</span></li><li><b>b.</b><span><mark class="cw">Describe</mark> the distribution of the data set.</span></li></ol></div></div></div><div class="R"><ol class="wk"></ol><ol class="wk"><li class="frag ans big"><span class="wn">✓</span><span class="sl">Answers</span><div class="frag pa" ><b class="pl">a.</b><span><b>Average</b>: the tallest segment (41.7%).</span></div><div class="frag pa" ><b class="pl">b.</b><span>24 prep students were surveyed on how tall they thought their teacher was. The most common response was average, accounting for 41.7% of responses, while 25% said their teacher was short, and 33.3% said their teacher was tall.</span></div></li></ol></div></div><div class="src">Edrolo General Mathematics Units 3&amp;4 · 1B Worked example 4 (p. 14)</div></section>
+<section class="slide T ex" data-cfu="qw"><div class="hd"><div class="pill">Exit task 1 of 3 · Edrolo U3&amp;4 1A Q14</div><div class="tiles"><div class="cmdt"><b>WHICH</b> · name the variable</div><div class="stat">VCAA: <b>?%</b> scored full marks</div></div></div><h2 class="tt">Show what you know</h2><div class="qg"><div class="L"><div class="q"><div>The table shows the <em class="v">day number</em> and the <em class="v">minimum temperature</em>, in degrees Celsius, for 15 consecutive days in May 2017.</div><div class="fig"><div style="display:flex;flex-direction:column;gap:6px"><table class="t" style="font-size:16px;margin:4px auto"><tr><td class="l"><em>day number</em></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr><tr><td class="l"><em>minimum temperature</em> (°C)</td><td>12.7</td><td>11.8</td><td>10.7</td><td>9.0</td><td>6.0</td><td>7.0</td><td>4.1</td><td>4.8</td></tr></table><table class="t" style="font-size:16px;margin:4px auto"><tr><td class="l"><em>day number</em></td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr><tr><td class="l"><em>minimum temperature</em> (°C)</td><td>9.2</td><td>6.7</td><td>7.5</td><td>8.0</td><td>8.6</td><td>9.8</td><td>7.7</td></tr></table></div></div><div><mark class="cw">Which</mark> of the two variables in this data set is an ordinal variable? <span class="muted">(1 mark)</span></div></div></div><div class="R"><ol class="wk"><li class="frag" ><span class="wn">1</span><span class="sl">Temperature</span>measured in °C: numerical.</li><li class="frag" ><span class="wn">2</span><span class="sl">Day number</span>labels each day and puts the days in order; you wouldn’t average it: categorical, ordinal.</li></ol><ol class="wk"><li class="frag ans" data-stat="83"><span class="wn">✓</span><span class="sl">Answer</span><em class="v">day number</em> is the ordinal variable.</li></ol></div></div><div class="src">Edrolo General Mathematics Units 3&amp;4 · 1A Q14 · VCAA 2019 Exam 2 Data analysis Q1a (examiner report)</div></section>
+<section class="slide T ex" data-cfu="qw"><div class="hd"><div class="pill">Exit task 2 of 3 · Edrolo U3&amp;4 1A Q16</div><div class="tiles"><div class="cmdt"><b>WRITE</b> · just the number</div><div class="stat">VCAA: <b>?%</b> scored full marks</div></div></div><h2 class="tt">Show what you know</h2><div class="qg"><div class="L"><div class="q"><div>In the sport of heptathlon, athletes compete in seven events.<br>These events are the 100 m hurdles, high jump, shot-put, javelin, 200 m run, 800 m run and long jump.<br>Fifteen female athletes competed to qualify for the heptathlon at the Olympic Games.<br>Their results for three of the heptathlon events – high jump, shot-put and javelin – are shown in the table.</div><div class="fig"><div class="row" style="gap:16px;justify-content:center"><table class="t" style="font-size:13px;line-height:1"><tr><th style="padding:2px 4px"><em>athlete number</em></th><th style="padding:2px 4px"><em>high jump</em> (metres)</th><th style="padding:2px 4px"><em>shot-put</em> (metres)</th><th style="padding:2px 4px"><em>javelin</em> (metres)</th></tr><tr><td style="padding:1px 5px" class="l">1</td><td style="padding:1px 5px">1.76</td><td style="padding:1px 5px">15.34</td><td style="padding:1px 5px">41.22</td></tr><tr><td style="padding:1px 5px" class="l">2</td><td style="padding:1px 5px">1.79</td><td style="padding:1px 5px">16.96</td><td style="padding:1px 5px">42.41</td></tr><tr><td style="padding:1px 5px" class="l">3</td><td style="padding:1px 5px">1.83</td><td style="padding:1px 5px">13.87</td><td style="padding:1px 5px">46.53</td></tr><tr><td style="padding:1px 5px" class="l">4</td><td style="padding:1px 5px">1.82</td><td style="padding:1px 5px">14.23</td><td style="padding:1px 5px">40.53</td></tr><tr><td style="padding:1px 5px" class="l">5</td><td style="padding:1px 5px">1.87</td><td style="padding:1px 5px">13.78</td><td style="padding:1px 5px">40.62</td></tr><tr><td style="padding:1px 5px" class="l">6</td><td style="padding:1px 5px">1.73</td><td style="padding:1px 5px">14.50</td><td style="padding:1px 5px">45.62</td></tr><tr><td style="padding:1px 5px" class="l">7</td><td style="padding:1px 5px">1.68</td><td style="padding:1px 5px">15.08</td><td style="padding:1px 5px">42.33</td></tr><tr><td style="padding:1px 5px" class="l">8</td><td style="padding:1px 5px">1.82</td><td style="padding:1px 5px">13.13</td><td style="padding:1px 5px">40.88</td></tr></table><table class="t" style="font-size:13px;line-height:1"><tr><th style="padding:2px 4px"><em>athlete number</em></th><th style="padding:2px 4px"><em>high jump</em> (metres)</th><th style="padding:2px 4px"><em>shot-put</em> (metres)</th><th style="padding:2px 4px"><em>javelin</em> (metres)</th></tr><tr><td style="padding:1px 5px" class="l">9</td><td style="padding:1px 5px">1.83</td><td style="padding:1px 5px">14.22</td><td style="padding:1px 5px">39.22</td></tr><tr><td style="padding:1px 5px" class="l">10</td><td style="padding:1px 5px">1.87</td><td style="padding:1px 5px">13.62</td><td style="padding:1px 5px">42.51</td></tr><tr><td style="padding:1px 5px" class="l">11</td><td style="padding:1px 5px">1.87</td><td style="padding:1px 5px">12.01</td><td style="padding:1px 5px">42.75</td></tr><tr><td style="padding:1px 5px" class="l">12</td><td style="padding:1px 5px">1.80</td><td style="padding:1px 5px">12.88</td><td style="padding:1px 5px">38.12</td></tr><tr><td style="padding:1px 5px" class="l">13</td><td style="padding:1px 5px">1.83</td><td style="padding:1px 5px">12.68</td><td style="padding:1px 5px">42.65</td></tr><tr><td style="padding:1px 5px" class="l">14</td><td style="padding:1px 5px">1.87</td><td style="padding:1px 5px">12.45</td><td style="padding:1px 5px">41.32</td></tr><tr><td style="padding:1px 5px" class="l">15</td><td style="padding:1px 5px">1.78</td><td style="padding:1px 5px">11.31</td><td style="padding:1px 5px">42.88</td></tr></table></div></div><div><mark class="cw">Write</mark> down the number of numerical variables in the table. <span class="muted">(1 mark)</span></div></div></div><div class="R"><ol class="wk"><li class="frag" ><span class="wn">1</span><span class="sl">Measured</span><em>high jump</em>, <em>shot-put</em> and <em>javelin</em> are measured in metres: numerical.</li><li class="frag" ><span class="wn">2</span><span class="sl">Label</span><em>athlete number</em> only names each athlete: categorical.</li></ol><ol class="wk"><li class="frag ans" data-stat="52"><span class="wn">✓</span><span class="sl">Answer</span>There are <b>3</b> numerical variables.</li></ol></div></div><div class="src">Edrolo General Mathematics Units 3&amp;4 · 1A Q16 · VCAA 2021 Exam 2 Data analysis Q1a (examiner report: a common error was counting the 45 values)</div></section>
+<section class="slide T ex mcslide" data-cfu="mc"><div class="hd"><div class="pill">Exit task 3 of 3 · Edrolo U3&amp;4 1B Q13</div><div class="tiles"><div class="stat">VCAA: <b>?%</b> of students answered correctly</div></div></div><h2 class="tt">Show what you know</h2><div class="qg"><div class="L"><div class="q"><div>A study was conducted that investigated the <em class="v">number of moths</em> caught in a sugar moth trap (less than 250, 250–500, more than 500). The results are summarised in the percentage segmented bar chart shown.</div><div class="fig"><div style="width:380px;margin:0 auto"><div class="chart" id="e3s" data-chart="seg" data-cfg='{"bars": [{"v": [30, 46, 24]}], "names": ["less than 250", "250\u2013500", "more than 500"], "legendTop": ["less than 250", "250\u2013500", "more than 500"], "yl": "frequency (%)", "xl": "number of moths", "ticks": 10, "h": 250}'></div></div></div><div>There were 300 sugar traps.<br>The number of sugar traps that caught less than 250 moths is closest to</div><div class="mc" data-dist="21,76,2,1,1"><div data-o="A"><b>A.</b>30</div><div data-o="B"><b>B.</b>90</div><div data-o="C"><b>C.</b>250</div><div data-o="D"><b>D.</b>300</div><div data-o="E"><b>E.</b>500</div></div></div></div><div class="R"><ol class="wk"><li class="frag" ><span class="wn">1</span><span class="sl">Read</span>the ‘less than 250’ segment runs from 0 to 30%.</li><li class="frag" ><span class="wn">2</span><span class="sl">Number from a percentage</span><span class="fx">= <span class="rhs"><span class="frac"><span><span class="fv"><i>percentage</i><b>30</b></span></span><span>100</span></span> × <span class="fv"><i>total</i><b>300</b></span></span><span class="frag fxs" data-fx="sub"></span><span class="frag fxr" > = <b>90</b></span></span></li></ol><ol class="wk"><li class="frag ans" data-key="B" data-stat="76"><span class="wn">✓</span><span class="sl">Answer · B</span><b>90</b> sugar traps caught less than 250 moths.</li><li class="frag dis"><div class="dlab">What’s the distractor?</div><div class="frag" data-dis="A"><span class="dl">A</span> 21% chose this on the original: they read 30% off the chart as 30 traps, instead of finding 30% of 300.</div></li><span class="frag" data-pct="1"></span></ol></div></div><div class="src">Edrolo General Mathematics Units 3&amp;4 · 1B Q13 · Adapted from VCAA 2017 Exam 1 Data analysis Q5 (examiner report, original question)</div></section>
+<section class="slide T " data-cfu="tf"><div class="hd"><div class="pill">Check-in</div><div class="tiles"></div></div><h2 class="tt">How did you go?</h2><div class="card3 ci"><h3>Success criteria</h3><ul class="tick"><li>I can identify types of data.</li><li>I can construct a frequency table for categorical data.</li><li>I can construct a bar chart from a frequency table.</li><li>I can construct a percentage segmented bar chart from a frequency table.</li><li>I can describe the distribution of a categorical variable.</li></ul></div><p class="muted" style="font-size:22px;margin-top:14px">Thumbs up, sideways or down for each one, then tick it on your worksheet: ✓ got it · ~ nearly · ✗ not yet</p><div class="src"></div></section>
+<section class="slide T " data-cfu=""><div class="hd"><div class="pill">Coursework</div><div class="tiles"></div></div><h2 class="tt">Coursework</h2><div class="cwgrid"><div class="card3 cw"><h3>1A Types of data</h3><p class="cwq">Cambridge Exercise 1A: Q1–6</p></div><div class="card3 cw"><h3>1B Displaying and describing categorical data</h3><p class="cwq">Cambridge Exercise 1B: Q1–9</p></div></div><div class="src"></div></section>
+<section class="slide T " data-cfu=""><div class="hd"><div class="pill">Videos</div><div class="tiles"></div></div><h2 class="tt">Videos that might help</h2><div class="ytgrid"><div class="ytc"><div class="ytf"><iframe src="https://www.youtube-nocookie.com/embed/aegvEuf2bt4" title="1A · Types of data (MaffsGuru)" allow="encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="ytt">1A · Types of data (MaffsGuru)</div></div><div class="ytc"><div class="ytf"><iframe src="https://www.youtube-nocookie.com/embed/T6bFzr-YBr0" title="1B · Displaying and describing the distributions of categorical variables (MaffsGuru)" allow="encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="ytt">1B · Displaying and describing the distributions of categorical variables (MaffsGuru)</div></div><div class="ytc blank"><div class="ytf"></div><div class="ytt">Video to add</div></div><div class="ytc blank"><div class="ytf"></div><div class="ytt">Video to add</div></div><div class="ytc blank"><div class="ytf"></div><div class="ytt">Video to add</div></div><div class="ytc blank"><div class="ytf"></div><div class="ytt">Video to add</div></div><div class="ytc blank"><div class="ytf"></div><div class="ytt">Video to add</div></div><div class="ytc blank"><div class="ytf"></div><div class="ytt">Video to add</div></div></div><div class="src"></div></section>
 </div>
 <div id="prog"></div>
 <div id="vmodal"><div class="box"></div></div>
@@ -596,7 +433,35 @@ function drawSeg(box,c){const nb=c.bars.length,H=c.h||420,L=78,B=c.xl?(nb>1?95:6
   s.append(el('line',{x1:L,x2:L+pw,y1:T+ph,y2:T+ph,stroke:'#333','stroke-width':2}),el('line',{x1:L,x2:L,y1:T,y2:T+ph,stroke:'#333','stroke-width':2}),el('text',{x:22,y:T+ph/2,'text-anchor':'middle','font-size':20,'font-weight':600,transform:`rotate(-90 22 ${T+ph/2})`},c.yl));
   if(c.xl)s.append(el('text',{x:L+pw/2,y:H-14,'text-anchor':'middle','font-size':20,'font-weight':600,'font-style':'italic'},c.xl));
   const g=el('g',{class:'lg'});(c.legendTop||c.names).forEach((n,k)=>{const j=c.names.indexOf(n);g.append(el('rect',{x:L+pw+24,y:T+8+k*36,width:24,height:24,fill:col(c,j)}),el('text',{x:L+pw+58,y:T+28+k*36,'font-size':19,'font-weight':600},n))});s.append(g);box.append(s)}
-document.querySelectorAll('[data-chart]').forEach(b=>{const c=JSON.parse(b.dataset.cfg);(b.dataset.chart==='bar'?drawBar:drawSeg)(b,c)});
+document.querySelectorAll('[data-chart="bar"],[data-chart="seg"]').forEach(b=>{const c=JSON.parse(b.dataset.cfg);(b.dataset.chart==='bar'?drawBar:drawSeg)(b,c)});
+/* ---------- S2: histograms, dot plots, stem leaves ---------- */
+function fmtx(x,d){return d!=null?x.toFixed(d).replace('-','−'):String(+x.toFixed(6)).replace('-','−')}
+function drawHist(box,c){const W=c.W||640,H=c.h||400,L=c.L||74,B=c.xl?76:44,T=16,R=24,ph=H-T-B,pw=W-L-R,fs=c.fs||19;
+  const x0=c.xmin!=null?c.xmin:c.start,x1=c.xmax!=null?c.xmax:c.start+c.w*c.v.length,sx=x=>L+(x-x0)/(x1-x0)*pw;
+  const s=el('svg',{viewBox:`0 0 ${W} ${H}`,width:'100%'});
+  for(let y=0;y<=c.ymax+1e-9;y+=c.ystep){const yy=T+ph-y/c.ymax*ph;s.append(el('line',{x1:L,x2:W-R,y1:yy,y2:yy,stroke:'#e3e6ee'}));if(!c.noy)s.append(el('text',{x:L-10,y:yy+7,'text-anchor':'end','font-size':fs,fill:'#555'},(c.pct?y+'%':y)))}
+  c.v.forEach((v,i)=>{if(v<=0)return;const h=v/c.ymax*ph,a=sx(c.start+i*c.w),b=sx(c.start+(i+1)*c.w);
+    s.append(el('rect',{x:a,width:b-a,y:T+ph-h,height:h,fill:c.col||'#4f84e6',stroke:'#1f4fb0','stroke-width':1.5,class:'grow','data-y':T+ph-h,'data-h':h,'data-d':i*70,'data-i':i}))});
+  if(!c.nox){const tk=c.tick||c.w;for(let x=x0;x<=x1+1e-9;x+=tk){const xx=sx(x);s.append(el('line',{x1:xx,x2:xx,y1:T+ph,y2:T+ph+7,stroke:'#333','stroke-width':1.5}),el('text',{x:xx,y:T+ph+29,'text-anchor':'middle','font-size':fs},fmtx(x,c.dec)))}}
+  s.append(el('line',{x1:L,x2:W-R,y1:T+ph,y2:T+ph,stroke:'#333','stroke-width':2}),el('line',{x1:L,x2:L,y1:T,y2:T+ph,stroke:'#333','stroke-width':2}));
+  if(c.xl)s.append(el('text',{x:L+pw/2,y:H-10,'text-anchor':'middle','font-size':fs+1,'font-weight':600,'font-style':'italic'},c.xl));
+  if(c.yl)s.append(el('text',{x:20,y:T+ph/2,'text-anchor':'middle','font-size':fs+1,'font-weight':600,transform:`rotate(-90 20 ${T+ph/2})`},c.yl));
+  if(c.vline!=null){const xx=sx(c.vline);s.append(el('line',{x1:xx,x2:xx,y1:T,y2:T+ph,stroke:'#d2475b','stroke-width':3,'stroke-dasharray':'8 6'}))}
+  box.append(s)}
+function drawDot(box,c){const W=c.W||860,H=c.h||250,L=34,R=34,B=74,r=c.r||12,fs=c.fs||20,n=c.max-c.min,pw=W-L-R,sx=x=>L+(x-c.min)/n*pw,base=H-B;
+  const s=el('svg',{viewBox:`0 0 ${W} ${H}`,width:'100%'});
+  s.append(el('line',{x1:L-14,x2:W-R+14,y1:base,y2:base,stroke:'#333','stroke-width':2}));
+  for(let x=c.min;x<=c.max;x+=(c.step||1)){const xx=sx(x);s.append(el('line',{x1:xx,x2:xx,y1:base,y2:base+8,stroke:'#333','stroke-width':1.5}),el('text',{x:xx,y:base+32,'text-anchor':'middle','font-size':fs},x))}
+  if(c.xl)s.append(el('text',{x:L+pw/2,y:H-8,'text-anchor':'middle','font-size':fs+1,'font-weight':600,'font-style':'italic'},c.xl));
+  const cnt={};c.vals.forEach(v=>{cnt[v]=(cnt[v]||0)+1;s.append(el('circle',{cx:sx(v),cy:base-r-5-(cnt[v]-1)*(2*r+3),r,fill:'#1f4fb0',class:'dt'+(c.show?' on keep':'')}))});
+  box.append(s)}
+document.querySelectorAll('[data-chart="hist"]').forEach(b=>drawHist(b,JSON.parse(b.dataset.cfg)));
+document.querySelectorAll('[data-chart="dot"]').forEach(b=>drawDot(b,JSON.parse(b.dataset.cfg)));
+function s2apply(s,f){
+  if(f.dataset.dots!=null)[...s.querySelectorAll('circle.dt')].forEach((c,k)=>setTimeout(()=>c.classList.add('on'),k*(+f.dataset.dots||110)));
+  if(f.dataset.leaves){const t=s.querySelector(f.dataset.leaves);[...t.querySelectorAll('.lf')].sort((a,b)=>a.dataset.o-b.dataset.o).forEach((x,k)=>setTimeout(()=>x.classList.add('on'),k*110))}}
+function s2reset(s){s.querySelectorAll('circle.dt:not(.keep)').forEach(c=>c.classList.remove('on'));s.querySelectorAll('.lf').forEach(x=>x.classList.remove('on'))}
+
 function grow(r,delay=0){const Y=+r.dataset.y,Hh=+r.dataset.h;r.setAttribute('y',Y+Hh);r.setAttribute('height',0);
   setTimeout(()=>{const t0=performance.now();(function st(t){const p=Math.min(1,(t-t0)/600),e=1-Math.pow(1-p,3);r.setAttribute('height',Math.max(0,Hh*e));r.setAttribute('y',Y+Hh*(1-e));if(p<1)requestAnimationFrame(st)})(t0)},delay)}
 function zero(r){r.setAttribute('y',+r.dataset.y+ +r.dataset.h);r.setAttribute('height',0)}
@@ -629,6 +494,242 @@ function tally(s){const ch=[...s.querySelectorAll('.chip')];let c=0,o=0;const nC
 /* shrink any equation that would wrap inside a step card */
 function fitEq(){document.querySelectorAll('.sc .sb').forEach(sb=>{sb.querySelectorAll('.katex').forEach(k=>{let fs=parseFloat(getComputedStyle(k).fontSize);const w=sb.clientWidth;
   while(k.scrollWidth>w&&fs>9){fs-=0.5;k.style.fontSize=fs+'px'}})})}
+
+/* ---------- S3: explainers (median, quartiles, balance point, standard deviation) ---------- */
+const S3T=[];function later(fn,ms){S3T.push(setTimeout(fn,ms))}
+function sortIdx(v){return v.map((x,i)=>[x,i]).sort((a,b)=>a[0]-b[0]||a[1]-b[1]).map(p=>p[1])}
+/* --- 1. median: chips slide into order, count in from both ends --- */
+const MED={base:[6,2,9,4,7,3,8],extra:5};
+function medBuild(){const box=document.getElementById('medx');if(!box)return;box.innerHTML='';
+  [...MED.base,MED.extra].forEach((v,k)=>{const c=document.createElement('div');c.className='chip3'+(k===MED.base.length?' new':'');c.textContent=v;c.dataset.k=k;box.append(c)});
+  box.insertAdjacentHTML('beforeend','<div class="xlab c" id="medlab" style="left:50%;top:150px"></div><div class="xlab c" id="medlab2" style="left:50%;top:196px;font-size:21px;color:#6b7280"></div>');medSet({extra:0,ordered:0,dim:0,mid:0})}
+function medSet(st){const box=document.getElementById('medx');if(!box)return;box._st=Object.assign(box._st||{},st);const s=box._st;
+  const vals=s.extra?[...MED.base,MED.extra]:MED.base.slice(),n=vals.length,W=74,G=18,tot=n*W+(n-1)*G,x0=(box.clientWidth||1400)/2-tot/2;
+  const ord=s.ordered?sortIdx(vals):vals.map((_,i)=>i);const slot={};ord.forEach((k,j)=>slot[k]=j);
+  box.querySelectorAll('.chip3').forEach(c=>{const k=+c.dataset.k;if(k>=n){c.classList.add('hide');c.style.left=(x0+tot+G)+'px';c.style.top='40px';return}
+    c.classList.remove('hide');const j=slot[k];c.style.left=(x0+j*(W+G))+'px';c.style.top='60px';
+    c.classList.toggle('cnt',s.dim>0&&(j<s.dim||j>=n-s.dim));
+    const mids=n%2?[(n-1)/2]:[n/2-1,n/2];c.classList.toggle('mid',!!s.mid&&mids.includes(j))});
+  const L=document.getElementById('medlab'),L2=document.getElementById('medlab2');
+  if(!s.ordered){L.innerHTML='n = '+n+' values, not in order yet';L2.textContent=''}
+  else if(!s.mid){L.innerHTML='Ordered. Now count in from both ends…';L2.textContent=''}
+  else if(n%2){L.innerHTML='n = 7 is odd: the median is the <span class="red">4th value</span>, &nbsp;M = <span class="red">6</span>';L2.innerHTML='3 values below it, 3 values above it'}
+  else{L.innerHTML='n = 8 is even: average the <span class="red">4th and 5th values</span>, &nbsp;M = (5 + 6) ÷ 2 = <span class="red">5.5</span>';L2.innerHTML='4 values below it, 4 values above it'}}
+function medCount(){const box=document.getElementById('medx');const n=box._st.extra?8:7,h=Math.floor((n-1)/2);
+  for(let k=1;k<=h;k++)later(()=>medSet({dim:k}),k*420);later(()=>medSet({mid:1}),(h+1)*420)}
+/* --- 2. quartiles: two rows (n odd, n even) --- */
+const QX=[{v:[2,4,5,7,8,10,11,13,14,16,19],m:[5],q1:[2],q3:[8],M:'10',Q1:'5',Q3:'14'},
+          {v:[2,4,5,7,8,10,11,13,14,16,19,20],m:[5,6],q1:[2,3],q3:[8,9],M:'(10 + 11) ÷ 2 = 10.5',Q1:'(5 + 7) ÷ 2 = 6',Q3:'(14 + 16) ÷ 2 = 15'}];
+function qBuild(){const box=document.getElementById('qx');if(!box)return;box.innerHTML='';const W=66,G=14;box._g={W,G};
+  QX.forEach((r,ri)=>{const n=r.v.length,tot=n*W+(n-1)*G,x0=700-tot/2,top=56+ri*210;r.x0=x0;r.top=top;
+    box.insertAdjacentHTML('beforeend',`<div class="rowtag" style="top:${top+16}px" id="qt${ri}">n = ${n} (${n%2?'odd':'even'})</div>`);
+    box.insertAdjacentHTML('beforeend',`<div class="band hide" id="qb${ri}"><b>middle 50% · IQR = 9</b></div>`);
+    r.v.forEach((v,k)=>{const c=document.createElement('div');c.className='chip3';c.style.width=W+'px';c.style.height='52px';c.style.fontSize='24px';c.textContent=v;c.dataset.r=ri;c.dataset.k=k;c.style.left=(x0+k*(W+G))+'px';c.style.top=top+'px';box.append(c)});
+    const cx=ks=>x0+(ks.reduce((a,b)=>a+b,0)/ks.length)*(W+G)+W/2;r.cx=cx;
+    [['m',r.m,'M = '+r.M,''],['q1',r.q1,'Q<sub>1</sub> = '+r.Q1,'p'],['q3',r.q3,'Q<sub>3</sub> = '+r.Q3,'p']].forEach(([id,ks,t,p],z)=>{
+      box.insertAdjacentHTML('beforeend',`<div class="mk ${p} hide" id="mk${id}${ri}" style="left:${cx(ks)}px;top:${top+60}px"></div><div class="xlab c hide" id="lb${id}${ri}" style="left:${cx(ks)}px;top:${top+78+(id==='m'?0:0)}px;font-size:${ri?18:20}px">${t}</div>`)});
+    if(ri===0)box.insertAdjacentHTML('beforeend',`<div class="xlab hide" id="omit0" style="left:${cx([5])+60}px;top:${top+112}px;font-size:17px;color:#b0263a">n odd: leave the median out of both halves</div>`);
+    const b=document.getElementById('qb'+ri);b.style.left=(cx(r.q1)-W/2-6)+'px';b.style.width=(cx(r.q3)-cx(r.q1)+W+12)+'px';b.style.top=(top-10)+'px';b.style.height='72px'});
+  qSet(null)}
+function qSet(a){const box=document.getElementById('qx');if(!box)return;box._st=box._st||[{},{}];if(a===null)box._st=[{},{show:0},];
+  if(a){const [ri,k]=a;box._st[ri][k]=1}
+  box._st.forEach((s,ri)=>{const r=QX[ri],show=ri===0||s.show;
+    box.querySelectorAll(`.chip3[data-r="${ri}"]`).forEach(c=>{const k=+c.dataset.k;c.classList.toggle('hide',!show);c.classList.toggle('mid',!!s.m&&r.m.includes(k));c.classList.toggle('q1m',!!s.q&&(r.q1.includes(k)||r.q3.includes(k)))});
+    document.getElementById('qt'+ri).classList.toggle('hide',!show);
+    document.getElementById('mkm'+ri).classList.toggle('hide',!s.m);document.getElementById('lbm'+ri).classList.toggle('hide',!s.m);
+    ['q1','q3'].forEach(q=>{document.getElementById('mk'+q+ri).classList.toggle('hide',!s.q);document.getElementById('lb'+q+ri).classList.toggle('hide',!s.q)});
+    document.getElementById('qb'+ri).classList.toggle('hide',!s.band);if(ri===0)document.getElementById('omit0').classList.toggle('hide',!s.m)})}
+/* --- 3. mean as the balance point --- */
+const BAL={v:[2,3,3,4],mv:3};
+function balBuild(){const box=document.getElementById('balx');if(!box)return;box.innerHTML='';const W=1400,H=330,L=110,R=1290,Y=196,sx=x=>L+x/10*(R-L);box._sx=sx;
+  const s=el('svg',{viewBox:`0 0 ${W} ${H}`,width:'100%'});
+  s.append(el('rect',{x:L-30,y:Y,width:R-L+60,height:10,rx:5,fill:'#1b1f2a'}));
+  for(let x=0;x<=10;x++){s.append(el('line',{x1:sx(x),x2:sx(x),y1:Y+10,y2:Y+20,stroke:'#555','stroke-width':2}),el('text',{x:sx(x),y:Y+44,'text-anchor':'middle','font-size':22,fill:'#444'},x))}
+  const fg=el('g',{class:'mv',id:'bfulc'});fg.append(el('path',{d:'M0,0 L-34,62 L34,62 Z',fill:'#2f6fdf',transform:`translate(0,${Y+10})`}),el('text',{id:'bmean',x:0,y:Y+102,'text-anchor':'middle','font-size':24,'font-weight':700,fill:'#2f6fdf'},''));s.append(fg);
+  const mg=el('g',{class:'mv',id:'bmed'});mg.append(el('path',{d:'M-12,0 L12,0 L0,16 Z',fill:'#d2475b',transform:'translate(0,40)'}),el('text',{id:'bmedt',x:0,y:30,'text-anchor':'middle','font-size':24,'font-weight':700,fill:'#d2475b'},''));s.append(mg);
+  BAL.v.forEach((v,k)=>{const g=el('g',{class:'mv'+(k===BAL.mv?' dragdot':''),id:'bd'+k});g.append(el('circle',{r:17,cx:0,cy:0,fill:k===BAL.mv?'#d98a1f':'#1f4fb0'}));s.append(g)});
+  box.append(s);
+  const dot=s.querySelector('#bd'+BAL.mv);let drag=false;
+  const toVal=e=>{const p=s.createSVGPoint();p.x=e.clientX;p.y=e.clientY;const q=p.matrixTransform(s.getScreenCTM().inverse());return Math.max(0,Math.min(10,Math.round((q.x-L)/(R-L)*20)/2))};
+  dot.addEventListener('pointerdown',e=>{drag=true;box.classList.add('drag');dot.setPointerCapture(e.pointerId);e.stopPropagation()});
+  dot.addEventListener('pointermove',e=>{if(drag)balSet(toVal(e))});
+  dot.addEventListener('pointerup',e=>{drag=false;box.classList.remove('drag')});
+  s.addEventListener('click',e=>{if(e.target.closest('.dragdot'))e.stopPropagation()});
+  balSet(4)}
+function balSet(x){const box=document.getElementById('balx');if(!box)return;const sx=box._sx,Y=196,v=BAL.v.slice();v[BAL.mv]=x;box._x=x;
+  const cnt={};v.forEach((a,k)=>{cnt[a]=(cnt[a]||0)+1;const g=box.querySelector('#bd'+k);g.style.transform=`translate(${sx(a)}px,${Y-19-(cnt[a]-1)*37}px)`});
+  const mean=v.reduce((a,b)=>a+b,0)/v.length,sv=v.slice().sort((a,b)=>a-b),med=(sv[1]+sv[2])/2;
+  box.querySelector('#bfulc').style.transform=`translate(${sx(mean)}px,0)`;box.querySelector('#bmean').textContent='mean = '+(+mean.toFixed(3));
+  box.querySelector('#bmed').style.transform=`translate(${sx(med)}px,0)`;box.querySelector('#bmedt').textContent='M = '+med;
+  const t=document.getElementById('balread');if(t)t.innerHTML=`Data: ${sv.join('&nbsp;&nbsp;')} &nbsp;→&nbsp; mean = ${sv.join(' + ')} ÷ 4 = <b style="color:#2f6fdf">${+mean.toFixed(3)}</b>, &nbsp;median = <b style="color:#d2475b">${med}</b>`}
+/* --- 4. standard deviation: distances from the mean --- */
+const SDX=[{n:'Set A',v:[3,4,5,6,7],s:'1.58'},{n:'Set B',v:[1,3,5,7,9],s:'3.16'}];
+function sdBuild(){const box=document.getElementById('sdx');if(!box)return;box.innerHTML='';const W=1400,H=360,L=250,R=1250,sx=x=>L+x/10*(R-L);
+  const s=el('svg',{viewBox:`0 0 ${W} ${H}`,width:'100%'});
+  const defs=el('defs');const m=el('marker',{id:'arr',markerWidth:8,markerHeight:8,refX:6,refY:4,orient:'auto'});m.append(el('path',{d:'M0,0 L8,4 L0,8 Z',fill:'#d98a1f'}));defs.append(m);s.append(defs);
+  SDX.forEach((d,ri)=>{const Y=130+ri*170,g=el('g',{id:'sdg'+ri});
+    g.append(el('text',{x:40,y:Y+8,'font-size':26,'font-weight':800,fill:'#1b1f2a'},d.n));
+    g.append(el('line',{x1:L-20,x2:R+20,y1:Y,y2:Y,stroke:'#333','stroke-width':2.5}));
+    for(let x=0;x<=10;x++)g.append(el('line',{x1:sx(x),x2:sx(x),y1:Y,y2:Y+9,stroke:'#555','stroke-width':1.5}),el('text',{x:sx(x),y:Y+32,'text-anchor':'middle','font-size':19,fill:'#555'},x));
+    g.append(el('line',{x1:sx(5),x2:sx(5),y1:Y-100,y2:Y,stroke:'#2f6fdf','stroke-width':3,'stroke-dasharray':'8 6'}),el('text',{x:sx(5),y:Y-106,'text-anchor':'middle','font-size':20,'font-weight':700,fill:'#2f6fdf'},'mean = 5'));
+    const dv=el('g',{id:'sdd'+ri,class:'sdd'}),devs=[...new Set(d.v.map(v=>Math.abs(v-5)).filter(x=>x))].sort((a,b)=>a-b);
+    d.v.forEach(v=>{if(v===5)return;const lev=devs.indexOf(Math.abs(v-5)),yy=Y-36-lev*32;dv.append(el('line',{x1:sx(5),x2:sx(v)+(v>5?-6:6),y1:yy,y2:yy,stroke:'#d98a1f','stroke-width':4,'marker-end':'url(#arr)'}),el('text',{x:(sx(5)+sx(v))/2,y:yy-7,'text-anchor':'middle','font-size':18,'font-weight':700,fill:'#9a5a00'},(v>5?'+':'−')+Math.abs(v-5)))});
+    g.append(dv);d.v.forEach(v=>g.append(el('circle',{cx:sx(v),cy:Y-14,r:13,fill:'#1f4fb0'})));
+    g.append(el('text',{id:'sds'+ri,x:R+40,y:Y+8,'font-size':28,'font-weight':800,fill:'#1f9e74'},'s ≈ '+d.s));s.append(g)});
+  box.append(s);sdSet({})}
+function sdSet(st){const box=document.getElementById('sdx');if(!box)return;box._st=Object.assign(box._st||{},st);const s=box._st;
+  [0,1].forEach(ri=>{box.querySelector('#sdg'+ri).style.opacity=(ri===0?s.a:s.b)?1:0;box.querySelector('#sdd'+ri).style.opacity=(ri===0?s.ad:s.bd)?1:0;box.querySelector('#sds'+ri).style.opacity=s.s?1:0})}
+/* --- stem plots / data rows: count in from both ends, mark values --- */
+function idxEls(sel){return [...document.querySelectorAll(sel+' [data-i]')].sort((a,b)=>a.dataset.i-b.dataset.i)}
+function countIn(spec){const [sel,lo,hi,cls]=spec.split('|');const all=idxEls(sel),a=lo?+lo:0,b=hi?+hi:all.length-1,set=all.slice(a,b+1),n=set.length,h=Math.floor((n-1)/2);
+  for(let k=0;k<h;k++)later(()=>{set[k].classList.add('cnt');set[n-1-k].classList.add('cnt')},k*170+60);
+  later(()=>{set.forEach(e=>e.classList.remove('cnt'));(n%2?[set[h]]:[set[h],set[h+1]]).forEach(e=>e.classList.add(cls||'mid'))},h*170+260)}
+function markIdx(spec){const [sel,ks,cls]=spec.split('|');const all=idxEls(sel);ks.split(',').forEach(k=>all[+k]&&all[+k].classList.add(cls||'mid'))}
+/* --- histogram running totals --- */
+function cumBars(spec){const [sel,hl]=spec.split('|');const box=document.querySelector(sel),svg=box.querySelector('svg');let tot=0;
+  [...svg.querySelectorAll('rect.grow')].forEach((r,k)=>{const v=+r.dataset.v;tot+=v;const t=tot;later(()=>{svg.append(el('text',{class:'cum',x:+r.getAttribute('x')+ +r.getAttribute('width')/2,y:+r.dataset.y-8,'text-anchor':'middle','font-size':18},t))},k*260)})}
+function hlBar(spec){const [sel,i,col]=spec.split('|');const r=document.querySelector(sel+' rect.grow[data-i="'+i+'"]');if(r){r.setAttribute('fill',col);r.setAttribute('stroke',col)}}
+/* --- dot plot with markable dots --- */
+function drawDot3(box,c){const W=c.W||900,H=c.h||240,L=34,R=34,B=72,r=c.r||12,fs=c.fs||20,n=c.max-c.min,pw=W-L-R,sx=x=>L+(x-c.min)/n*pw,base=H-B;
+  const s=el('svg',{viewBox:`0 0 ${W} ${H}`,width:'100%'});s.append(el('line',{x1:L-14,x2:W-R+14,y1:base,y2:base,stroke:'#333','stroke-width':2}));
+  for(let x=c.min;x<=c.max;x+=(c.step||1)){const xx=sx(x);s.append(el('line',{x1:xx,x2:xx,y1:base,y2:base+8,stroke:'#333','stroke-width':1.5}),el('text',{x:xx,y:base+32,'text-anchor':'middle','font-size':fs},x))}
+  if(c.xl)s.append(el('text',{x:L+pw/2,y:H-8,'text-anchor':'middle','font-size':fs+1,'font-weight':600,'font-style':'italic'},c.xl));
+  const cnt={};let i=0;c.vals.slice().sort((a,b)=>a-b).forEach(v=>{cnt[v]=(cnt[v]||0)+1;s.append(el('circle',{cx:sx(v),cy:base-r-5-(cnt[v]-1)*(2*r+3),r,fill:'#1f4fb0','data-i':i++,class:'d3'}))});box.append(s)}
+function markDots(spec){const [sel,ks,col]=spec.split('|');ks.split(',').forEach(k=>{const d=document.querySelector(sel+' circle[data-i="'+k+'"]');if(d){d.setAttribute('fill',col||'#d2475b');d.setAttribute('r',+d.getAttribute('r')+2)}})}
+/* --- CFAT timer --- */
+let TIM=null;function timerReset(){clearInterval(TIM);TIM=null;const t=document.getElementById('cfatT');if(t){t.textContent='20:00';t.classList.remove('go')}}
+function timerGo(){const t=document.getElementById('cfatT');if(!t)return;clearInterval(TIM);let s=1200;t.classList.add('go');TIM=setInterval(()=>{s--;t.textContent=String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');if(s<=0)clearInterval(TIM)},1000)}
+function s3apply(s,f){const a=f.dataset.act;
+  if(a==='m-order')medSet({ordered:1});if(a==='m-count')medCount();
+  if(a==='m-even'){medSet({extra:1,ordered:0,dim:0,mid:0});later(()=>medSet({ordered:1}),500)}
+  if(a==='m-evenmid')medCount();
+  if(a&&a.startsWith('q-')){const [_,ri,k]=a.split('-');qSet([+ri,k])}
+  if(a==='b-8')balSet(8);
+  if(a&&a.startsWith('sd-'))sdSet({[a.slice(3)]:1});
+  if(a==='timer')timerGo();
+  if(f.dataset.count)f.dataset.count.split(' ').forEach(countIn);
+  if(f.dataset.mark)f.dataset.mark.split(' ').forEach(markIdx);
+  if(f.dataset.cum)cumBars(f.dataset.cum);
+  if(f.dataset.hlbar)f.dataset.hlbar.split(' ').forEach(hlBar);
+  if(f.dataset.showbar){const [sel,ks]=f.dataset.showbar.split('|');ks.split(',').forEach(k=>{const r=document.querySelector(sel+' rect.grow[data-i="'+k+'"]');if(r){r.style.opacity=1;r.setAttribute('fill','#d98a1f');r.setAttribute('stroke','#9a5a00');grow(r)}})}
+  if(f.dataset.dotmark)markDots(f.dataset.dotmark)}
+function s3reset(s){S3T.splice(0).forEach(clearTimeout);
+  s.querySelectorAll('[data-i]').forEach(e=>e.classList.remove('cnt','mid','q1m','ext'));
+  s.querySelectorAll('text.cum').forEach(t=>t.remove());
+  s.querySelectorAll('rect.grow[data-c0]').forEach(r=>{r.setAttribute('fill',r.dataset.c0);r.setAttribute('stroke','#1f4fb0')});
+  s.querySelectorAll('[data-miss]').forEach(b=>b.dataset.miss.split(',').forEach(k=>{const r=b.querySelector('rect.grow[data-i="'+k+'"]');if(r)r.style.opacity=0}));
+  s.querySelectorAll('circle.d3').forEach(d=>{d.setAttribute('fill','#1f4fb0');d.setAttribute('r',d.dataset.r0||d.getAttribute('r'))});
+  if(s.querySelector('#medx'))medSet({extra:0,ordered:0,dim:0,mid:0});
+  if(s.querySelector('#qx'))qSet(null);
+  if(s.querySelector('#balx'))balSet(4);
+  if(s.querySelector('#sdx'))sdSet({a:0,ad:0,b:0,bd:0,s:0});
+  if(s.querySelector('#cfatT'))timerReset()}
+function s3init(){document.querySelectorAll('[data-chart="dot3"]').forEach(b=>drawDot3(b,JSON.parse(b.dataset.cfg)));
+  document.querySelectorAll('circle.d3').forEach(d=>d.dataset.r0=d.getAttribute('r'));
+  document.querySelectorAll('[data-chart="hist"] rect.grow').forEach(r=>{r.dataset.c0=r.getAttribute('fill')});
+  document.querySelectorAll('[data-chart="hist"]').forEach(b=>{const c=JSON.parse(b.dataset.cfg);b.querySelectorAll('rect.grow').forEach(r=>r.dataset.v=c.v[+r.dataset.i])});
+  document.querySelectorAll('[data-lab]').forEach(b=>{const svg=b.querySelector('svg');JSON.parse(b.dataset.lab).forEach(([i,t])=>{const r=svg.querySelector('rect.grow[data-i="'+i+'"]');svg.append(el('text',{x:+r.getAttribute('x')+ +r.getAttribute('width')/2,y:+r.dataset.y-8,'text-anchor':'middle','font-size':20,'font-weight':700},t))})});
+  /* explainers need real widths: build once the slide is first shown */
+  medBuild();qBuild();balBuild();sdBuild()}
+
+s3init();s4init();
+/* ---------- S4: boxplots (stepped build, marks, fences, % bands) ---------- */
+function drawBox(box,c){const W=c.W||1000,L=c.L||34,R=c.R||34,fs=c.fs||20,bh=c.bh||56,T=c.top!=null?c.top:64,dec=c.dec||0;
+  const cy=T+bh/2+10,ay=cy+bh/2+30,H=ay+(c.xl?66:42),sx=x=>L+(x-c.min)/(c.max-c.min)*(W-L-R);box._sx=sx;
+  const s=el('svg',{viewBox:`0 0 ${W} ${H}`,width:'100%'});const hide=new Set(c.hide||[]);
+  const g=p=>{const e=el('g',{class:'bxp','data-p':p});if(hide.has(p))e.style.opacity=0;s.append(e);return e};
+  /* axis */
+  const ax=g('axis');
+  ax.append(el('line',{x1:L-14,x2:W-R+14,y1:ay,y2:ay,stroke:'#333','stroke-width':2}));
+  const st=c.step||1,lb=c.lab||st,n=Math.round((c.max-c.min)/st);
+  for(let k=0;k<=n;k++){const x=c.min+k*st,xx=sx(x),big=Math.abs(((x-c.min)/lb)-Math.round((x-c.min)/lb))<1e-6;
+    ax.append(el('line',{x1:xx,x2:xx,y1:ay,y2:ay+(big?10:6),stroke:'#333','stroke-width':big?2:1.2}));
+    if(big&&!c.nolab)ax.append(el('text',{x:xx,y:ay+34,'text-anchor':'middle','font-size':fs},(c.fmt==='k'?x.toLocaleString('en-AU').replace(/,/g,' '):x.toFixed(dec))))}
+  if(c.xl)ax.append(el('text',{x:(L+W-R)/2,y:H-10,'text-anchor':'middle','font-size':fs+1,'font-weight':600,'font-style':'italic'},c.xl));
+  /* bands (behind the plot) */
+  (c.bands||[]).forEach(b=>{const e=g(b.p);if(!b.show){e.style.opacity=0;e.dataset.h=1}e.dataset.band=1;
+    e.append(el('rect',{x:sx(b.a),width:sx(b.b)-sx(b.a),y:cy-bh/2-8,height:bh+16,rx:6,fill:b.col||'rgba(217,138,31,.22)',stroke:b.sc||'#d98a1f','stroke-width':2,'stroke-dasharray':'6 4'}),
+      el('text',{x:(sx(b.a)+sx(b.b))/2,y:cy-bh/2-16-(b.lv||0)*26,'text-anchor':'middle','font-size':fs,'font-weight':800,fill:b.tc||'#8a4d00'},b.t))});
+  (c.rows||[c]).forEach(r=>{const col=r.col||c.col||'#cfe0fb',sc='#1b1f2a';
+    const wl=g('wl');wl.append(el('line',{x1:sx(r.lw),x2:sx(r.q1),y1:cy,y2:cy,stroke:sc,'stroke-width':2.5}));if(c.caps)wl.append(el('line',{x1:sx(r.lw),x2:sx(r.lw),y1:cy-12,y2:cy+12,stroke:sc,'stroke-width':2.5}));
+    const wu=g('wu');if(r.uw>r.q3){wu.append(el('line',{x1:sx(r.q3),x2:sx(r.uw),y1:cy,y2:cy,stroke:sc,'stroke-width':2.5}));if(c.caps)wu.append(el('line',{x1:sx(r.uw),x2:sx(r.uw),y1:cy-12,y2:cy+12,stroke:sc,'stroke-width':2.5}))}
+    g('box').append(el('rect',{x:sx(r.q1),width:sx(r.q3)-sx(r.q1),y:cy-bh/2,height:bh,fill:col,stroke:sc,'stroke-width':2.5}));
+    g('med').append(el('line',{x1:sx(r.m),x2:sx(r.m),y1:cy-bh/2,y2:cy+bh/2,stroke:sc,'stroke-width':3.5}));
+    const o=g('out');(r.out||[]).forEach(v=>o.append(el('circle',{cx:sx(v),cy,r:9,fill:'#fff',stroke:sc,'stroke-width':2.5,class:'bxo'})))});
+  /* fences: dashed red lines */
+  (c.fences||[]).forEach(f=>{const e=g(f.p);if(!f.show){e.style.opacity=0;e.dataset.h=1}
+    e.append(el('line',{x1:sx(f.x),x2:sx(f.x),y1:T-24,y2:ay,stroke:'#d2475b','stroke-width':3,'stroke-dasharray':'9 6'}),
+      el('text',{x:sx(f.x)+(f.left?-8:8),y:T-30-(f.lv||0)*28,'text-anchor':f.left?'end':'start','font-size':fs-1,'font-weight':800,fill:'#b0263a'},f.t))});
+  /* marks: value guides with labels */
+  (c.marks||[]).forEach(m=>{const e=g(m.p);if(!m.show&&!c.show){e.style.opacity=0;e.dataset.h=1}const xx=sx(m.x),col=m.col||'#6a3fc7',ly=T-30-(m.lv||0)*28;
+    e.append(el('line',{x1:xx,x2:xx,y1:ly+8,y2:ay,stroke:col,'stroke-width':2.5,'stroke-dasharray':'5 5'}),
+      el('text',{x:xx+(m.dx||0),y:ly,'text-anchor':m.anchor||'middle','font-size':fs,'font-weight':800,fill:col},m.t))});
+  box.append(s)}
+function bxShow(spec){let [sel,ps]=spec.split('|');const b=document.querySelector(sel);if(!b)return;
+  if(ps[0]==='='){ps=ps.slice(1);b.querySelectorAll('g.bxp[data-band]').forEach(e=>e.style.opacity=0)}
+  ps.split(',').forEach(p=>b.querySelectorAll(`g.bxp[data-p="${p}"]`).forEach(e=>e.style.opacity=1))}
+function bxOut(spec){const [sel,col]=spec.split('|');document.querySelectorAll(sel+' circle.bxo').forEach(o=>{o.setAttribute('fill',col||'#d2475b')})}
+function s4apply(s,f){if(f.dataset.bx)f.dataset.bx.split(' ').forEach(bxShow);if(f.dataset.bxo)bxOut(f.dataset.bxo)}
+function s4reset(s){s.querySelectorAll('[data-chart="box"]').forEach(b=>{const c=JSON.parse(b.dataset.cfg),h=new Set(c.hide||[]);
+  b.querySelectorAll('g.bxp').forEach(e=>e.style.opacity=(h.has(e.dataset.p)||e.dataset.h)?0:1);b.querySelectorAll('circle.bxo').forEach(o=>o.setAttribute('fill','#fff'))})}
+function s4init(){document.querySelectorAll('[data-chart="box"]').forEach(b=>drawBox(b,JSON.parse(b.dataset.cfg)));
+  document.querySelectorAll('[data-hidelab]').forEach(b=>{const hs=JSON.parse(b.dataset.hidelab);b.querySelectorAll('svg text').forEach(t=>{if(hs.includes(t.textContent))t.remove()})})}
+
+/* ---------- tpl: formula substitution ---------- */
+/* dot plot: a dashed line between two neighbouring dots (e.g. the 20.5th position) */
+function dotSplit(spec){const [sel,i,lab]=spec.split('|');const box=document.querySelector(sel);if(!box)return;const svg=box.querySelector('svg');
+  const a=svg.querySelector('circle[data-i="'+i+'"]'),b=svg.querySelector('circle[data-i="'+(+i+1)+'"]');if(!a||!b)return;
+  const ax=+a.getAttribute('cx'),ay=+a.getAttribute('cy'),bx=+b.getAttribute('cx'),by=+b.getAttribute('cy'),r=+a.getAttribute('r');
+  const g=el('g',{class:'dsplit'});
+  if(Math.abs(ax-bx)<1){const y=(ay+by)/2;g.append(el('line',{x1:ax-r*2.6,x2:ax+r*2.6,y1:y,y2:y,stroke:'#d2475b','stroke-width':4,'stroke-dasharray':'7 5'}),el('text',{x:ax+r*3,y:y+7,'font-size':22,'font-weight':800,fill:'#b0263a'},lab||''))}
+  else{const x=(ax+bx)/2;g.append(el('line',{x1:x,x2:x,y1:Math.min(ay,by)-r*2,y2:Math.max(ay,by)+r,stroke:'#d2475b','stroke-width':4,'stroke-dasharray':'7 5'}),el('text',{x:x+6,y:Math.min(ay,by)-r*2,'font-size':22,'font-weight':800,fill:'#b0263a'},lab||''))}
+  svg.append(g)}
+function tplapply(s,f){normApply(f);if(f.dataset.dsplit)dotSplit(f.dataset.dsplit);if(f.dataset.fx==='sub'){const x=f.closest('.fx');if(x)x.classList.add('sub')}}
+function tplreset(s){normReset(s);s.querySelectorAll('g.dsplit').forEach(g=>g.remove());s.querySelectorAll('.fx.sub').forEach(x=>x.classList.remove('sub'))}
+/* ---------- tpl: normal curve (68–95–99.7%) ----------
+   cfg: m (mean) · s (SD) · rows ['x','z'] axis rows · hide ['x','z','pct'] hidden until shown · xl axis title · W h fs · dec · sh [[a,b,col,label]] always shaded
+   frags: data-nclear="#id" (clear earlier shading/marks) · data-nshade="#id|a,b|col|label" (z units; spaces separate several) · data-nshow="#id|x,z,pct" · data-nmark="#id|z|label|col" */
+const NPDF=z=>Math.exp(-z*z/2);
+function normGeo(c){const W=c.W||900,rows=c.rows||['z'],fs=c.fs||18,T=c.T||52,B=rows.length*30+(c.xl?30:10),H=c.h||330,base=H-B,L=24,R=24,pw=W-L-R,
+  sx=z=>L+(z+3.6)/7.2*pw,sy=z=>base-NPDF(z)*(base-T);return {W,H,rows,fs,T,B,base,L,R,pw,sx,sy}}
+function normPath(g,a,b){a=Math.max(a,-3.6);b=Math.min(b,3.6);let d=`M${g.sx(a)},${g.base}`;for(let k=0;k<=80;k++){const z=a+(b-a)*k/80;d+=` L${g.sx(z).toFixed(1)},${g.sy(z).toFixed(1)}`}return d+` L${g.sx(b)},${g.base} Z`}
+function nfmt(v,d){return (d!=null?(+v).toFixed(d):String(+(+v).toFixed(6))).replace('-','−')}
+function drawNorm(box,c){const g=normGeo(c),s=el('svg',{viewBox:`0 0 ${g.W} ${g.H}`,width:'100%'});box._g=g;
+  s.append(el('g',{class:'nsh'}));
+  (c.sh||[]).forEach(r=>normShade(s,g,r));
+  for(let z=-3;z<=3;z++)s.append(el('line',{x1:g.sx(z),x2:g.sx(z),y1:g.base,y2:g.sy(z),stroke:'#8a93a6','stroke-width':z?1.2:2,'stroke-dasharray':z?'5 4':''}));
+  let d='';for(let k=0;k<=200;k++){const z=-3.6+7.2*k/200;d+=(k?' L':'M')+g.sx(z).toFixed(1)+','+g.sy(z).toFixed(1)}
+  s.append(el('path',{d,fill:'none',stroke:'#1f4fb0','stroke-width':3}));
+  s.append(el('line',{x1:g.L-6,x2:g.W-g.R+6,y1:g.base,y2:g.base,stroke:'#333','stroke-width':2}));
+  const pg=el('g',{class:'npct'});[[.5,'34%'],[1.5,'13.5%'],[2.5,'2.35%'],[3.3,'0.15%']].forEach(([z,t])=>[-z,z].forEach(zz=>{
+    const y=Math.min(g.sy(zz)-8,g.base-(Math.abs(zz)>3?16:Math.abs(zz)>2?30:0));pg.append(el('text',{x:g.sx(zz),y,'text-anchor':'middle','font-size':g.fs-2,'font-weight':700,fill:'#5b33b0'},t))}));s.append(pg);
+  g.rows.forEach((r,k)=>{const rg=el('g',{class:'n'+r}),y=g.base+24+k*30;
+    for(let z=-3;z<=3;z++){let t;if(r==='z')t='z = '+nfmt(z);else t=nfmt(c.m+z*c.s,c.dec);
+      rg.append(el('text',{x:g.sx(z),y,'text-anchor':'middle','font-size':g.fs,'font-weight':r==='z'?600:400,fill:r==='z'?'#5b33b0':'#222'},t))}
+    if(r==='x'&&c.xl)rg.append(el('text',{x:g.L+g.pw/2,y:g.H-6,'text-anchor':'middle','font-size':g.fs+1,'font-weight':600,'font-style':'italic'},c.xl));
+    s.append(rg)});
+  s.append(el('g',{class:'nmk'}));box.append(s);normHide(box,c)}
+function normHide(box,c){const h=c.hide||[];['x','z','pct'].forEach(k=>{const e=box.querySelector('g.n'+k);if(e)e.style.opacity=h.includes(k)?0:1})}
+function normShade(s,g,r,dyn){const [a,b,col,lab]=r;const dc=dyn?' dyn':'';const grp=s.querySelector('g.nsh');
+  const p=el('path',{d:normPath(g,a,b),fill:col||'rgba(79,132,230,.45)',stroke:'none',class:'nsp'+dc});grp.append(p);
+  if(lab){const zc=(Math.max(a,-3.6)+Math.min(b,3.6))/2,w=Math.min(b,3.6)-Math.max(a,-3.6),y=w>1.2?g.base-(g.base-g.sy(zc))*.4:g.sy(zc)-34;
+    grp.append(el('text',{x:g.sx(zc),y,'text-anchor':'middle','font-size':g.fs+4,'font-weight':800,fill:'#0b2a6b',class:'nsl'+dc},lab.replace(/_/g,' ')))}}
+function normApply(f){
+  if(f.dataset.nclear)f.dataset.nclear.split(' ').forEach(sel=>document.querySelectorAll(sel+' g.nsh .dyn,'+sel+' g.nmk > *').forEach(e=>e.remove()));
+  if(f.dataset.nshade)f.dataset.nshade.split(' ').forEach(sp=>{const [sel,ab,col,lab]=sp.split('|');const box=document.querySelector(sel);if(!box)return;
+    const [a,b]=ab.split(',').map(Number);normShade(box.querySelector('svg'),box._g,[a,b,col,lab],1)});
+  if(f.dataset.nshow)f.dataset.nshow.split(' ').forEach(sp=>{const [sel,ks]=sp.split('|');ks.split(',').forEach(k=>{const e=document.querySelector(sel+' g.n'+k);if(e)e.style.opacity=1})});
+  if(f.dataset.nmark)f.dataset.nmark.split(' ').forEach(sp=>{const [sel,z,lab,col]=sp.split('|');const box=document.querySelector(sel);if(!box)return;const g=box._g,x=g.sx(+z),m=box.querySelector('g.nmk'),cl=col||'#d2475b';
+    m.append(el('line',{x1:x,x2:x,y1:g.T-30,y2:g.base,stroke:cl,'stroke-width':3.5}),el('text',{x,y:g.T-36,'text-anchor':'middle','font-size':g.fs+2,'font-weight':800,fill:cl},(lab||'').replace(/_/g,' ')))})}
+function normReset(s){s.querySelectorAll('[data-chart="norm"]').forEach(b=>{const c=JSON.parse(b.dataset.cfg);b.querySelectorAll('g.nsh .dyn').forEach(e=>e.remove());
+  b.querySelectorAll('g.nmk > *').forEach(e=>e.remove());normHide(b,c)})}
+/* fixed shades are drawn first; mark them so reset keeps them */
+document.querySelectorAll('[data-chart="norm"]').forEach(b=>drawNorm(b,JSON.parse(b.dataset.cfg)));
+/* histogram: labels centred under each column (discrete values), cfg.clab */
+document.querySelectorAll('[data-chart="hist"]').forEach(b=>{const c=JSON.parse(b.dataset.cfg);if(!c.clab)return;const W=c.W||640,H=c.h||400,L=c.L||74,B=c.xl?76:44,T=16,R=24,ph=H-T-B,pw=W-L-R,fs=c.fs||19;
+  const x0=c.xmin!=null?c.xmin:c.start,x1=c.xmax!=null?c.xmax:c.start+c.w*c.v.length,sx=x=>L+(x-x0)/(x1-x0)*pw,svg=b.querySelector('svg');
+  c.clab.forEach((t,i)=>svg.append(el('text',{x:sx(c.start+(i+.5)*c.w),y:T+ph+29,'text-anchor':'middle','font-size':fs},t)))});
+
 /* ---------- reveal engine ---------- */
 const frags=s=>[...s.querySelectorAll('.frag')];
 function groups(s){const fr=frags(s),out=[],seen={};fr.forEach(f=>{const k=f.dataset.s||f.dataset.g;if(k){if(seen[k])seen[k].push(f);else{seen[k]=[f];out.push(seen[k])}}else out.push([f])});
@@ -644,7 +745,7 @@ function apply(s,f){
   if(a&&a.startsWith('seg')){const ch=s.querySelector('[data-chart][data-stepped]');grow(ch.querySelectorAll('rect.grow')[+a.slice(3)])}
   if(a==='legend')s.querySelectorAll('[data-chart][data-stepped]').forEach(c=>c.classList.remove('hidelg'));
   if(a==='final')s.querySelector('.report.swap').classList.add('done');
-  if(f.dataset.bar!=null){const ch=s.querySelector('[data-chart][data-stepped]');grow(ch.querySelectorAll('rect.grow')[+f.dataset.bar])}
+  if(f.dataset.bar!=null){const ch=s.querySelector('[data-chart][data-stepped]');grow(ch.querySelector('rect.grow[data-i="'+f.dataset.bar+'"]')||ch.querySelectorAll('rect.grow')[+f.dataset.bar])}s2apply(s,f);s3apply(s,f);s4apply(s,f);tplapply(s,f);
   if(f.dataset.seg!=null){const ch=f.parentElement.querySelector('[data-chart]');grow(ch.querySelectorAll('rect.grow')[+f.dataset.seg]);if(+f.dataset.seg===2)ch.classList.remove('hidelg')}
   if(f.dataset.fill){const sc=f.closest('.sol')||s;sc.querySelectorAll('.blank.'+f.dataset.fill).forEach((b,k)=>setTimeout(()=>b.classList.add('filled'),k*220))}
   if(f.dataset.key){optByLetter(s,f.dataset.key)?.classList.add('right')}
@@ -653,11 +754,11 @@ function apply(s,f){
   if(f.dataset.pct){s.classList.add('pct');const mc=s.querySelector('.mc');const d=mc.dataset.dist.split(',').map(Number);
     mc.querySelectorAll('div[data-o]').forEach((o,k)=>{o.querySelector('.pb').style.width=d[k]+'%'})}
   if(f.dataset.chart&&!f.dataset.stepped)animate(f);f.querySelectorAll?.('[data-chart]:not([data-stepped])').forEach(animate)}
-function reset(s){frags(s).forEach(f=>f.classList.remove('shown'));s.classList.remove('pct');
+function reset(s){frags(s).forEach(f=>f.classList.remove('shown'));s2reset(s);s3reset(s);s4reset(s);tplreset(s);s.classList.remove('pct');
   s.querySelectorAll('.dim').forEach(e=>e.classList.remove('dim'));s.querySelectorAll('.cell').forEach(c=>c.classList.remove('on'));
   s.querySelectorAll('.chip').forEach(x=>x.classList.remove('hc','ho'));s.querySelectorAll('.card').forEach(c=>c.classList.remove('open'));
   s.querySelectorAll('.mc div').forEach(o=>o.classList.remove('right','dis'));s.querySelectorAll('.mc .pb').forEach(p=>p.style.width=0);
-  const st=s.querySelector('.stat');if(st){st.querySelector('b').textContent='?%';st.classList.remove('done')}
+  const st=s.querySelector('.stat');if(st&&st.querySelector('b')){st.querySelector('b').textContent='?%';st.classList.remove('done')}
   s.querySelectorAll('.blank').forEach(b=>b.classList.remove('filled'));s.querySelectorAll('.report.swap').forEach(r=>r.classList.remove('done'));
   s.querySelectorAll('line.tl').forEach(l=>l.style.opacity=0);
   s.querySelectorAll('[data-chart][data-stepped]').forEach(c=>{c.querySelectorAll('rect.grow').forEach(zero);if(c.dataset.chart==='seg')c.classList.add('hidelg')});
