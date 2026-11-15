@@ -1,5 +1,7 @@
 # 12MAG handover — 15 Nov 2026 (updated 15:55)
 
+**16 Nov 10:47 (AoS4 #11):** Chapter 14 planned: `tools/plan_ch14.py` fills gm12-u4-14a … 14e (titles, LIs, SCs, Study Design, coursework by Cambridge exercise heading). Split unchanged (5 lessons). Next AoS 4 task: #12 prefill Ch 14 cards.
+
 **16 Nov 10:45 (AoS3 #12):** Chapter 11 planned: `tools/plan_ch11.py` fills gm12-u4-11a … 11e (titles, LIs, SCs, Study Design, coursework by Cambridge exercise section). Split unchanged (5 lessons). Next AoS 3 task: prefill Ch 11 cards.
 
 **16 Nov 10:37 (AoS4 #10):** Chapter 13 test + solutions built (Draft): `tools/test/ch13/build.py` → `lessons/Ch13 test` + `solutions` (Mathspace Ch 8 graphs and networks topic assessment, all 20 Qs, + Mathspace Ch 9 Q3–5 and Q10 shortest path, verbatim, /45, 8 pages each; figures cropped from the PDFs). On G: 01 Lesson materials and the gm12-ch13-test card; 24 ledger rows. **Chapter 13 queue finished**; next AoS 4 task: plan Ch 14.

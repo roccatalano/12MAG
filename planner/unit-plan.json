@@ -12792,20 +12792,80 @@
        "subchapters": [
         "14A"
        ],
-       "title": "",
+       "title": "Flow problems",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "plan",
          "sets": [
           {
            "title": "Cambridge · Exercise 14A",
+           "items": [
+            {
+             "skill": "Directed graphs",
+             "q": "Q1"
+            },
+            {
+             "skill": "Cuts",
+             "q": "Q2–3"
+            },
+            {
+             "skill": "Maximum-flow",
+             "q": "Q4"
+            },
+            {
+             "skill": "Minimum-cut maximum-flow",
+             "q": "Q5"
+            },
+            {
+             "skill": "Networks with more than one source",
+             "q": "Q6"
+            },
+            {
+             "skill": "Analysis of maximum-flow problems",
+             "q": "Q7–8"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q9–11"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 14A section"
           }
          ]
-        }
-       },
-       "shell": true
+        },
+        "learningObjectives": [
+         {
+          "sub": "14A",
+          "items": [
+           "To be able to define and describe flow.",
+           "To be able to calculate the maximum flow through a flow network by observation.",
+           "To be able to identify cuts and calculate cut capacities.",
+           "To be able to determine the maximum flow through a flow network by finding the capacity of the minimum cut.",
+           "To be able to solve flow problems by finding minimum cut capacities."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "14A",
+          "items": [
+           "I can define and describe a directed graph.",
+           "I can determine the maximum flow for any section of sequential edges of a directed graph.",
+           "I can determine cut capacities.",
+           "I can determine the maximum flow as equal to the minimum cut capacity."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "use of networks to model flow problems: capacity, sinks and sources",
+         "solution of small-scale network flow problems by inspection and the use of the ‘maximum-flow minimum-cut’ theorem to aid the solution of larger scale problems."
+        ]
+       }
       },
       {
        "id": "gm12-u4-14b",
@@ -12813,20 +12873,59 @@
        "subchapters": [
         "14B"
        ],
-       "title": "",
+       "title": "Matching and allocation problems",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "plan",
          "sets": [
           {
            "title": "Cambridge · Exercise 14B",
+           "items": [
+            {
+             "skill": "Bipartite graphs",
+             "q": "Q1–4"
+            },
+            {
+             "skill": "The Hungarian algorithm",
+             "q": "Q5–10"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q11–14"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 14B section"
           }
          ]
-        }
-       },
-       "shell": true
+        },
+        "learningObjectives": [
+         {
+          "sub": "14B",
+          "items": [
+           "To be able to define and describe bipartite graphs.",
+           "To be able to solve assignment problems using the Hungarian Algorithm."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "14B",
+          "items": [
+           "I can draw directed and weighted bipartite graphs.",
+           "I can use the Hungarian algorithm to determine an optimum allocation in order to minimise cost."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "use of a bipartite graph and its tabular or matrix form to represent a matching problem",
+         "determination of the optimum assignment(s) of people or machines to tasks by inspection or by use of the Hungarian algorithm for larger scale problems."
+        ]
+       }
       },
       {
        "id": "gm12-u4-14c",
@@ -12834,20 +12933,63 @@
        "subchapters": [
         "14C"
        ],
-       "title": "",
+       "title": "Precedence tables and activity networks",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "plan",
          "sets": [
           {
            "title": "Cambridge · Exercise 14C",
+           "items": [
+            {
+             "skill": "Constructing activity networks from precedence tables",
+             "q": "Q1–2"
+            },
+            {
+             "skill": "Constructing precedence tables from activity networks",
+             "q": "Q3–7"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q8–10"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 14C section"
           }
          ]
-        }
-       },
-       "shell": true
+        },
+        "learningObjectives": [
+         {
+          "sub": "14C",
+          "items": [
+           "To be able to identify activities in a project.",
+           "To be able to understand the precedence that some activities have over others in a project.",
+           "To be able to identify immediate predecessors of activities from an activity network.",
+           "To be able to draw an activity network from a precedence table.",
+           "To be able to understand and explain the need for dummy activities in projects.",
+           "To be able to include dummy activities in activity networks as required."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "14C",
+          "items": [
+           "I can create an activity network from a precedence table.",
+           "I can write down a precedence table from an activity network.",
+           "I can decide when to use dummy activities in an activity network."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "construction of an activity network from a precedence table (or equivalent) including the use of dummy activities where necessary"
+        ]
+       }
       },
       {
        "id": "gm12-u4-14d",
@@ -12855,20 +12997,69 @@
        "subchapters": [
         "14D"
        ],
-       "title": "",
+       "title": "Scheduling problems and critical path analysis",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "plan",
          "sets": [
           {
            "title": "Cambridge · Exercise 14D",
+           "items": [
+            {
+             "skill": "Calculations from elements of an activity network",
+             "q": "Q1–6"
+            },
+            {
+             "skill": "Critical path analysis from a given activity network",
+             "q": "Q7–11"
+            },
+            {
+             "skill": "Critical path analysis from precedence table only",
+             "q": "Q12–13"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q14–18"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 14D section"
           }
          ]
-        }
-       },
-       "shell": true
+        },
+        "learningObjectives": [
+         {
+          "sub": "14D",
+          "items": [
+           "To be able to understand activity networks that include weights (durations) of each activity.",
+           "To be able to determine the EST for activities using forward scanning.",
+           "To be able to determine the LST for activities using backward scanning.",
+           "To be able to calculate and understand the existence of float times for some activities.",
+           "To be able to identify the critical path and completion time of a project."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "14D",
+          "items": [
+           "I can use forward scanning to determine the earliest starting time of activities in an activity network.",
+           "I can use backward scanning to determine the latest starting time of activities in an activity network.",
+           "I can determine the float time for activities in an activity network.",
+           "I can determine the overall minimum completion time for a project using critical path analysis.",
+           "I can determine the critical path for an activity network."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "use of forward and backward scanning to determine the earliest starting times (EST) and latest starting times (LST) for each activity",
+         "use of earliest starting times and latest starting times to identify the critical path in the network and determine the float times for non-critical activities"
+        ]
+       }
       },
       {
        "id": "gm12-u4-14e",
@@ -12876,28 +13067,64 @@
        "subchapters": [
         "14E"
        ],
-       "title": "",
+       "title": "Crashing",
        "card": {
         "homework": {
-         "source": "default",
+         "source": "plan",
          "sets": [
           {
            "title": "Cambridge · Exercise 14E",
+           "items": [
+            {
+             "skill": "Crashing",
+             "q": "Q1–4"
+            },
+            {
+             "skill": "Crashing with cost",
+             "q": "Q5–8"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q9–11"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Revision book",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "The 14E section"
           }
          ]
-        }
-       },
-       "shell": true
+        },
+        "learningObjectives": [
+         {
+          "sub": "14E",
+          "items": [
+           "To be able to use crashing to reduce the completion time of a project.",
+           "To be able to minimise the cost of crashing activities to achieve the maximum reduction in completion time of a project."
+          ]
+         }
+        ],
+        "successCriteria": [
+         {
+          "sub": "14E",
+          "items": [
+           "I can use crashing to reduce the completion time of a project."
+          ]
+         }
+        ],
+        "studyDesign": [
+         "use of crashing to reduce the completion time of the project or task being modelled."
+        ]
+       }
       },
       {
        "id": "gm12-ch14-test",
        "kind": "check",
        "subchapters": [],
        "title": "Chapter 14 coursework check + test",
-       "card": {},
-       "shell": true
+       "card": {}
       }
      ]
     }
