@@ -59,7 +59,7 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 7. `done 15 Nov 21:49 — 5D seasonal indices slides (24, CFAT 1.5.1 first) + 3-page guided worksheet (student + solutions), HTML+PDF, Draft; APK 1A #2 (burnt) → 1B #6` **Lesson l20 (5D, seasonal indices)**: slides (`tools/deck/l20/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 8. `done 15 Nov 22:01 — 5D deseasonalising slides (21) + 3-page guided worksheet (student + solutions), HTML+PDF, Draft; APK 1B #6 (burnt) → 1B #7` **Lesson l21 (5D, deseasonalising)**: slides (`tools/deck/l21/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 9. `done 15 Nov 22:15 — 5E slides (26, CFAT 1.5.2 slide after the exit) + 4-page guided worksheet (student + solutions), HTML+PDF, Draft; APK 7E #10 (burnt l10) dropped` **Lesson l22 (5E)**: slides (`tools/deck/l22/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-10. `todo` **Chapter 5 revision booklet** + solutions (template `tools/revision/ch2/build.py`): Insight GM1 + GM2 time series questions, sections per subchapter 5A–5E. Insight is never burnt.
+10. `in progress 15 Nov 22:17` **Chapter 5 revision booklet** + solutions (template `tools/revision/ch2/build.py`): Insight GM1 + GM2 time series questions, sections per subchapter 5A–5E. Insight is never burnt.
 11. `todo` **Chapter 5 test** (model `tools/test/ch2/build.py`) from the Mathspace time series topic assessment: Mathspace calls it Chapter 4 (`02 Sources\Textbooks\Mathspace\Chapter 4 - Time series data`). If it can't be built from what's there, mark `needs Rocco`.
 
 ## Questions for Rocco
