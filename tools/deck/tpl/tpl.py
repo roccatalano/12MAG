@@ -165,8 +165,8 @@ def cas(pill,head,task,ti,cp,answer,src,videos=()):
     videos: yt(...) cards shown small under the step cards."""
     ol=lambda xs:'<ol>'+''.join(f'<li>{x}</li>' for x in xs)+'</ol>'
     vc=f'<div class="ytrow">{"".join(videos)}</div>' if videos else ''
-    R=(f'<div class="R"><div class="cas2"><div class="key frag"><h4>TI-Nspire</h4>{ol(ti)}</div>'
-       f'<div class="key frag"><h4>ClassPad</h4>{ol(cp)}</div></div>{vc}<ol class="wk" style="margin-top:12px"><li class="frag ans"><span class="wn">✓</span><span class="sl">Read off</span>{answer}</li></ol></div>')
+    R=(f'<div class="R"><div class="cas2"><div class="key"><h4>TI-Nspire</h4>{ol(ti)}</div>'
+       f'<div class="key"><h4>ClassPad</h4>{ol(cp)}</div></div>{vc}<ol class="wk" style="margin-top:12px"><li class="ans"><span class="wn">✓</span><span class="sl">Read off</span>{answer}</li></ol></div>')
     return _frame('kcas',pill,head,f'<div class="qg"><div class="L"><div class="q">{task}</div></div>{R}</div>',src,cfu='disc')
 
 def title(lesson,topic,sub,code,flow=('Do Now','APK','Learn','Worked examples','You try','Exit tasks')):
@@ -200,8 +200,12 @@ def checkin(sc):
           '<p class="muted" style="font-size:22px;margin-top:14px">Thumbs up, sideways or down for each one, then tick it on your worksheet: ✓ got it · ~ nearly · ✗ not yet</p>')
     return _frame('','Check-in','How did you go?',body,'',cfu='tf')
 def coursework(subs):
-    """one card per subchapter: (subchapter title, questions line, [notes])"""
-    k=''.join(f'<div class="card3 cw"><h3>{t}</h3><p class="cwq">{q}</p>'+''.join(f'<p class="cwn">{n}</p>' for n in (x[0] if x else []))+'</div>' for t,q,*x in subs)
+    """one card per set (mirrors the planner's coursework card): (title, note line, [items]); items are tick boxes like the success criteria"""
+    def card(t,q,items):
+        li=items or ([q] if q else [])
+        return (f'<div class="card3 cw"><h3>{t}</h3>'+(f'<p class="cwn">{q}</p>' if q and items else '')+
+                '<ul class="tick">'+''.join(f'<li>{x}</li>' for x in li)+'</ul></div>')
+    k=''.join(card(t,q,(x[0] if x else [])) for t,q,*x in subs)
     return _frame('','Coursework','Coursework',f'<div class="cwgrid">{k}</div>','',cfu='')
 def videos(items=(),blank=8):
     """last slide of every deck: 'Videos that might help'. items: yt(...) cards; the rest are blank cards to fill later."""

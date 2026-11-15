@@ -47,7 +47,10 @@ Build a lesson with a `tools/deck/<S#>/build.py` that only fills content into th
 - **Questions take normal spacing** (`G(text, figure, question)`), not the stretched figure zone, unless filling the card makes sense (multi-part lists: parts fill the card).
 - **Learn slides for displays follow the data → frequency table → graph flow** (tally chips into the table, then grow the bars; bars → stacked → % for segmented bar charts; report templates filled part by part with the three highlight colours).
 - **Coursework slide mirrors the planner's coursework card** (Cambridge exercises with skills + Q numbers, and the chapter revision booklet sections).
-- **Learn:** rule card + the related key formula/definition cards on top, picture, one tip. **CAS:** TI and ClassPad step cards, then small embedded YouTube cards, then the read-off card.
+- **Charts are built, not shown:** axes and labels appear on their own step (chart `ax=True` + `data-ax="#id"`), then bars/segments grow one per step (`data-grow`, several with `;`).
+- **Flowcharts/trees reveal top-down, one branch at a time** (parent → first branch → its children → next branch → its children); use `data-s` groups and trailing empty frags to fix the order.
+- **Coursework items are tick boxes** (same look as the success criteria).
+- **Learn:** rule card + the related key formula/definition cards on top, picture, one tip. **CAS slides are static** (Rocco, 15 Nov): TI and ClassPad step cards, small embedded YouTube cards stretched to the width of the step cards, then the read-off card, all shown at once.
 
 ## Bound reference entries (Rocco, 15 Nov)
 - **One card per subchapter**, in colour, with dashed cut lines so it can be trimmed and stuck in the top left of a double page in the student's A4 bound reference (the rest of the double page is for their own notes). The lesson card's "Bound reference entry" links that lesson's subchapter cards (single or combined for printing).

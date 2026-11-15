@@ -192,3 +192,9 @@
 .T [data-pks]{transition:opacity .35s}.T [data-pks].dim{opacity:.22}
 .T .ytrow{grid-template-columns:repeat(auto-fit,minmax(0,1fr))}
 .s-title .sub div{margin-bottom:10px}
+
+/* axes hidden until their step (data-axhide on the chart, data-ax="#id" on the step) */
+.T .chart svg>*:not(rect){transition:opacity .4s}
+.T .chart.noax svg>*:not(rect){opacity:0}
+.T .cw ul.tick li{font-size:20px;padding:7px 0 7px 36px}
+.T .cw .cwn{font-size:20px;font-weight:700;color:var(--ink);margin:2px 0 4px}

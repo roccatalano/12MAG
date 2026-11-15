@@ -46,7 +46,11 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 - New template features (tpl.py/js/css): answer TEMPLATE cards (dark → filled → green), inline ANS cards, data-hi highlights, data-grow, data-pks stem fading, final click restores all, every command word highlighted (not in quotes), title subtext one line each, key ideas as two static cards, video row stretches. Rules added to CLAUDE.md. S4/S5 rebuilt with the templates (not re-reviewed).
 - S1: pills name the VCAA source; tree with arrows; Learn 1B slides = original tally/morph/report designs (study-mode and climate data); WE2–WE5 + You trys use answer templates; ice-cream cone icons on WE2; coursework from the planner card (incl. Ch 1 revision booklet).
 
-## NEXT JOB: deep review of Lesson 1 (1A–1B), continued: worksheet → bound reference → planner card
+## Done 15 Nov (14:50): S1 slides round 3 — Rocco: "amazing"; slides DONE, move on
+- Tree reveals branch by branch; CAS slides static (template); % frequency formula on the left in one row; chart axes hidden until the Axes step; coursework as tick boxes; rules in CLAUDE.md.
+- Still Draft on the planner until Rocco says Ready.
+
+## NEXT JOB: deep review of Lesson 1 (1A–1B), continued — next is the **worksheet**: worksheet → bound reference → planner card
 ### Original brief: deep review of Lesson 1 (1A–1B) — Rocco, 15 Nov: "make sure they are up to standard and not AI slop"
 Everything is **Draft** on the planner. Review one resource at a time, show Rocco what you found (with screenshots), fix what he agrees to, then mark it Ready only when he says so.
 

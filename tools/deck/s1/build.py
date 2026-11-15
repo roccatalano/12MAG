@@ -6,8 +6,8 @@ H=os.path.dirname(os.path.abspath(__file__)); ROOT=os.path.abspath(os.path.join(
 sys.path.insert(0,os.path.join(H,'..','tpl'))
 from tpl import *
 CAM='Cambridge General Mathematics Units 3&amp;4'; EDR='Edrolo General Mathematics Units 3&amp;4'; EDR12='Edrolo General Mathematics Units 1&amp;2'
-def bar(rid,cfg,stepped=False): return f'<div class="chart" id="{rid}" data-chart="bar" data-cfg=\'{J(cfg)}\'{" data-stepped=\"1\"" if stepped else ""}></div>'
-def seg(rid,cfg,stepped=False): return f'<div class="chart" id="{rid}" data-chart="seg" data-cfg=\'{J(cfg)}\'{" data-stepped=\"1\"" if stepped else ""}></div>'
+def bar(rid,cfg,stepped=False,ax=False): return f'<div class="chart{" noax" if ax else ""}" id="{rid}" data-chart="bar" data-cfg=\'{J(cfg)}\'{" data-stepped=\"1\"" if stepped else ""}{" data-axhide" if ax else ""}></div>'
+def seg(rid,cfg,stepped=False,ax=False): return f'<div class="chart{" noax" if ax else ""}" id="{rid}" data-chart="seg" data-cfg=\'{J(cfg)}\'{" data-stepped=\"1\"" if stepped else ""}{" data-axhide" if ax else ""}></div>'
 def table(head,rows,fs=19,extra=''):
     th=''.join(f'<th>{h}</th>' for h in head)
     tr=''.join('<tr>'+''.join(f'<td{" class=\"l\"" if j==0 else ""}>{c}</td>' for j,c in enumerate(r))+'</tr>' for r in rows)
@@ -97,18 +97,20 @@ W=1180;cw=(W-54)/4;cx=[cw/2+k*(cw+18) for k in range(4)];cat=(cx[0]+cx[1])/2;num
 def arrows(pairs,h=30):
     l=''.join(f'<line x1="{a}" y1="2" x2="{b}" y2="{h-6}" stroke="#5a6170" stroke-width="2.5" marker-end="url(#ah)"/>' for a,b in pairs)
     return f'<svg width="{W}" height="{h}" style="display:block"><defs><marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5a6170"/></marker></defs>{l}</svg>'
+def arow(groups,h=30):
+    # one arrow row; each (data-s key, pairs) is its own frag so branches reveal separately
+    return f'<div style="position:relative;height:{h}px">'+''.join(f'<div class="frag" data-s="{k}" style="position:absolute;inset:0">{arrows(p,h)}</div>' for k,p in groups)+'</div>'
+BOX=lambda k,html,extra='':f'<div class="key frag" data-s="{k}" {extra}>{html}</div>'
 TREE=(f'<div style="width:{W}px;margin:0 auto;font-size:20px;line-height:1.25;text-align:center">'
-  '<div class="key" style="width:300px;margin:0 auto;padding:8px 20px"><b>Variable</b></div>'
-  f'<div class="frag" data-s="t1">{arrows([(W/2,cat),(W/2,num)])}</div>'
-  '<div class="frag" data-s="t1" style="display:grid;grid-template-columns:1fr 1fr;gap:18px">'
-  '<div class="key" style="border-color:#1f9e74"><b>Categorical</b><br><small>names a quality or group</small></div>'
-  '<div class="key" style="border-color:#2f6fdf"><b>Numerical</b><br><small>a quantity: counted or measured</small></div></div>'
-  f'<div class="frag" data-s="t2">{arrows([(cat,cx[0]),(cat,cx[1]),(num,cx[2]),(num,cx[3])])}</div>'
-  '<div class="frag" data-s="t2" style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px">'
-  '<div class="key"><b>Nominal</b><br><small>names only · e.g. eye colour</small></div>'
-  '<div class="key"><b>Ordinal</b><br><small>names <i>and</i> orders · e.g. fitness level</small></div>'
-  '<div class="key"><b>Discrete</b><br><small>‘How many?’ counted · e.g. cars</small></div>'
-  '<div class="key"><b>Continuous</b><br><small>‘How much?’ measured · e.g. weight</small></div></div></div>')
+  '<div class="key frag" data-s="t0" style="width:300px;margin:0 auto;padding:8px 20px"><b>Variable</b></div>'
+  +arow([('t1',[(W/2,cat)]),('t3',[(W/2,num)])])+
+  '<div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">'
+  +BOX('t1','<b>Categorical</b><br><small>names a quality or group</small>','style="border-color:#1f9e74"')
+  +BOX('t3','<b>Numerical</b><br><small>a quantity: counted or measured</small>','style="border-color:#2f6fdf"')+'</div>'
+  +arow([('t2',[(cat,cx[0]),(cat,cx[1])]),('t4',[(num,cx[2]),(num,cx[3])])])+
+  '<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px">'
+  +BOX('t2','<b>Nominal</b><br><small>names only · e.g. eye colour</small>')+BOX('t2','<b>Ordinal</b><br><small>names <i>and</i> orders · e.g. fitness level</small>')
+  +BOX('t4','<b>Discrete</b><br><small>‘How many?’ counted · e.g. cars</small>')+BOX('t4','<b>Continuous</b><br><small>‘How much?’ measured · e.g. weight</small>')+'</div></div><span class="frag" data-s="t3"></span><span class="frag" data-s="t4"></span>')  # order: categorical branch, then numerical branch
 S.append(learn('Learn · 1A','Types of variable',
   '<h4>Two types, each with two sub-types</h4><p>Categorical data put people into groups. Numerical data are quantities you can do arithmetic with.</p>',
   TREE,
@@ -155,8 +157,8 @@ def ftcells(fs=25,pct=True,cells=(1,2,3,4,5,6)):
       f'<tr data-part="online"><td class="l"><span class="cell" data-c="{c1}">online</span></td><td><b class="cell" data-c="{c2}" id="nO"></b></td>'+(f'<td><span class="cell" data-c="{c5}">55.0</span></td>' if pct else '')+'</tr>'
       f'<tr class="tot" data-part="total"><td class="l">Total</td><td><span class="cell" data-c="{c3}">60</span></td>'+(f'<td><span class="cell" data-c="{c6}">100.0</span></td>' if pct else '')+'</tr></table>')
 body=('<p class="muted" style="font-size:22px;margin:0 0 12px">A <b>frequency table</b> lists each category and how often it occurs: as a number and as a percentage. Here: the <em class="v">study mode</em> (C = on-campus, O = online) of 60 students.</p>'
-  f'<div class="row" style="gap:34px"><div style="flex:1.3">{CHIPS}</div><div style="flex:.85">{ftcells()}'
-  f'<div class="kf frag" data-s="f12" style="margin-top:14px"><span class="kn">Percentage frequency</span><span class="kx" style="font-size:21px">{FPCT}</span></div></div></div>'
+  f'<div class="row" style="gap:34px"><div style="flex:1.3">{CHIPS}<div class="kf frag" data-s="f12" style="margin-top:16px;flex-direction:row;align-items:center;gap:16px"><span class="kn" style="white-space:nowrap">Percentage frequency</span><span class="kx" style="font-size:26px;white-space:nowrap">{FPCT}</span></div></div><div style="flex:1">{ftcells()}'
+  '</div></div>'
   +stepsH([('Set up the table','One row for each category.',''),('Count','Count each category.','data-act="tally"'),('Total','27 + 33 = 60','data-p="total"'),
            ('% on-campus','27/60 × 100% = 45.0%','data-p="campus" data-s="f12"'),('% online','33/60 × 100% = 55.0%','data-p="online"'),('Check','45.0 + 55.0 = 100%','data-p="campus online total"')]))
 S.append(TPL._frame('learn','Learn · 1B','From raw data to a frequency table',body,'Cambridge General Mathematics Units 3&amp;4, 1B p. 7 (study mode of 60 students)',cfu='disc'))
@@ -193,9 +195,9 @@ CH2='<div class="chips" style="grid-template-columns:repeat(12,1fr)">'+''.join(f
 body=('<div class="row" style="gap:28px;align-items:stretch"><div class="key" style="flex:1"><h4>Data → frequency table</h4>'+CH2+
   '<div style="margin-top:12px">'+ftcells(21,pct=False,cells=(1,1,2,0,0,0))+'</div></div>'
   '<div class="key" style="flex:1"><h4>Frequency table → bar chart</h4><div style="width:520px;margin:0 auto">'+
-  bar('l4b',{"cats":["on-campus","online"],"v":[27,33],"max":35,"step":5,"xl":"Study mode","yl":"Frequency","h":320},True)+'</div></div></div>'
+  bar('l4b',{"cats":["on-campus","online"],"v":[27,33],"max":35,"step":5,"xl":"Study mode","yl":"Frequency","h":320},True,True)+'</div></div></div>'
   +stepsH([('Count','Tally each category into the table.','data-act="tally"'),('Total','27 + 33 = 60','data-p="total"'),
-           ('Axes','Study mode across, Frequency up (to 35).',''),('on-campus','A bar 27 high.','data-bar="0" data-p="campus"'),('online','A bar 33 high, with a gap.','data-bar="1" data-p="campus online total"')]))
+           ('Axes','Study mode across, Frequency up (to 35).','data-ax="#l4b"'),('on-campus','A bar 27 high.','data-bar="0" data-p="campus"'),('online','A bar 33 high, with a gap.','data-bar="1" data-p="campus online total"')]))
 S.append(TPL._frame('learn','Learn · 1B','The bar chart: data → frequency table → graph',body,'Cambridge General Mathematics Units 3&amp;4, 1B pp. 7–8 (study mode of 60 students)',cfu='disc'))
 # ================= WE3: Cambridge Example 3
 CLIMR=[('Cold',3,'13.0'),('Mild',14,'60.9'),('Hot',6,'26.1')]
@@ -204,19 +206,19 @@ S.append(qslide('we','Worked example 3 · 1B','Constructing a bar chart from a f
   f'<div style="margin:12px 0">{fttab("Climate type",CLIMR,(23,"100.0"),rid="w3t")}</div>'+
   plist([('a','What is the level of measurement of the variable <em class="v">climate type</em>?'),('b','Construct a frequency bar chart to display this information.')]),
   [('Order?','cold, mild, hot can be put in a natural order of ‘warmth’.','data-pk="0"'),('ANS','<b>a</b> &nbsp;Ordinal'),
-   ('Axes','<em>Climate type</em> across (three equal intervals); <em>Frequency</em> up, scaled to 15.','data-pk="1" data-hi="#w3t||"'),
+   ('Axes','<em>Climate type</em> across (three equal intervals); <em>Frequency</em> up, scaled to 15.','data-pk="1" data-hi="#w3t||" data-ax="#w3b"'),
    ('Cold','bar of height 3','data-pk="1" data-hi="#w3t|0|hy" data-grow="#w3b|0"'),('Mild','bar of height 14, with gaps between bars','data-pk="1" data-hi="#w3t|1|hy" data-grow="#w3b|1"'),
    ('Hot','bar of height 6','data-pk="1" data-hi="#w3t|2|hy" data-grow="#w3b|2"'),
-   ('TMPL','<b>b</b><div style="width:430px;margin-top:6px">'+bar('w3b',{"cats":["Cold","Mild","Hot"],"v":[3,14,6],"max":15,"step":5,"xl":"Climate type","yl":"Frequency","h":300},True)+'</div>')],
+   ('TMPL','<b>b</b><div style="width:430px;margin-top:6px">'+bar('w3b',{"cats":["Cold","Mild","Hot"],"v":[3,14,6],"max":15,"step":5,"xl":"Climate type","yl":"Frequency","h":300},True,True)+'</div>')],
   '',f'{CAM} · Example 3 (p. 8)',video='Cambridge GO · Example 3 (1B Resources)',cmd=('Construct',None,'labelled axes, bars with gaps')))
 # ================= You try: Edrolo 1B WE2
 THR=[('short',6,'25.0'),('average',10,'41.7'),('tall',8,'33.3')]
 S.append(qslide('yt','You try · Edrolo 1B WE2','Constructing a bar chart',
   G('24 students in a prep class were asked the question, ‘Would you describe your teacher’s height as short, average or tall?’. Their responses are recorded in the frequency table shown.',
     fttab('teacher’s height',THR,(24,'100.0'),rid='y3t',pcth='%'),'Use the frequency table to construct a frequency bar chart.'),
-  [('Axes','frequency up (to at least 10); <em>teacher’s height</em> across.'),('short','bar of height 6','data-hi="#y3t|0|hy" data-grow="#y3b|0"'),
+  [('Axes','frequency up (to at least 10); <em>teacher’s height</em> across.','data-ax="#y3b"'),('short','bar of height 6','data-hi="#y3t|0|hy" data-grow="#y3b|0"'),
    ('average','bar of height 10','data-hi="#y3t|1|hy" data-grow="#y3b|1"'),('tall','bar of height 8','data-hi="#y3t|2|hy" data-grow="#y3b|2"'),
-   ('TMPL','<div style="width:430px">'+bar('y3b',{"cats":["short","average","tall"],"v":[6,10,8],"max":10,"step":2,"xl":"teacher’s height","yl":"frequency","h":300},True)+'</div>')],
+   ('TMPL','<div style="width:430px">'+bar('y3b',{"cats":["short","average","tall"],"v":[6,10,8],"max":10,"step":2,"xl":"teacher’s height","yl":"frequency","h":300},True,True)+'</div>')],
   '',f'{EDR} · 1B Worked example 2 (p. 11)',cmd=('Construct',None,'labelled axes, bars with gaps')))
 # ================= Learn 1B: segmented bar chart (table -> bars -> stacked -> percentage)
 body=('<div class="row" style="gap:30px;align-items:stretch"><div style="flex:.8;display:flex;flex-direction:column;gap:16px">'
@@ -228,22 +230,22 @@ S.append(TPL._frame('learn','Learn · 1B','From a bar chart to a segmented bar c
 # ================= WE4: Cambridge Example 4
 S.append(qslide('we','Worked example 4 · 1B','Constructing a percentage segmented bar chart from a frequency table',
   G('The climate type of 23 countries is classified as ‘cold’, ‘mild’ or ‘hot’.',fttab('Climate type',CLIMR,(23,'100.0'),rid='w4t'),'Construct a percentage frequency segmented bar chart to display this information.'),
-  [('Axes','no label on the horizontal axis. Vertical axis: <em>Percentage</em>, 0 to 100 in tens.'),
+  [('Axes','no label on the horizontal axis. Vertical axis: <em>Percentage</em>, 0 to 100 in tens.','data-ax="#w4s"'),
    ('Cold','from 0 to 13.0%','data-hi="#w4t|0|hy" data-grow="#w4s|0"'),('Mild','from 13.0 to 13.0 + 60.9 = 73.9%','data-hi="#w4t|1|hy" data-grow="#w4s|1"'),
    ('Hot','from 73.9 to 100%; add the legend','data-hi="#w4t|2|hy" data-grow="#w4s|2" data-lg'),
-   ('TMPL','<div style="width:400px">'+seg('w4s',{"bars":[{"v":[13.0,60.9,26.1]}],"names":["Cold","Mild","Hot"],"legendTop":["Hot","Mild","Cold"],"yl":"Percentage","ticks":10,"h":320},True)+'</div>')],
+   ('TMPL','<div style="width:400px">'+seg('w4s',{"bars":[{"v":[13.0,60.9,26.1]}],"names":["Cold","Mild","Hot"],"legendTop":["Hot","Mild","Cold"],"yl":"Percentage","ticks":10,"h":320},True,True)+'</div>')],
   '',f'{CAM} · Example 4 (p. 9)',video='Cambridge GO · Example 4 (1B Resources)',cmd=('Construct',None,'one 100% bar, segments, legend')))
 # ================= You try: Edrolo 1B WE3
 S.append(qslide('yt','You try · Edrolo 1B WE3','Constructing segmented bar charts',
   '24 students in a prep class were asked the question, ‘Would you describe your teacher’s height as short, average or tall?’. Their responses are recorded in the frequency table shown.'+
   f'<div style="margin:12px 0">{fttab("teacher’s height",THR,(24,"100.0"),rid="y4t",pcth="%")}</div>'+
   plist([('a.','Use the frequency table to construct a segmented bar chart.'),('b.','Use the frequency table to construct a percentage segmented bar chart.')]),
-  [('short','ends at 6','data-pk="0" data-hi="#y4t|0|hy" data-grow="#y4a|0"'),('average','ends at 6 + 10 = 16','data-pk="0" data-hi="#y4t|1|hy" data-grow="#y4a|1"'),
+  [('short, average','axes to 24; short ends at 6, average at 6 + 10 = 16','data-pk="0" data-ax="#y4a" data-hi="#y4t|0,1|hy" data-grow="#y4a|0;#y4a|1"'),
    ('tall','ends at 16 + 8 = 24; add the legend','data-pk="0" data-hi="#y4t|2|hy" data-grow="#y4a|2" data-lg'),
-   ('TMPL','<div style="display:flex;gap:14px;align-items:center"><b>a.</b><div style="width:260px">'+seg('y4a',{"bars":[{"v":[25,41.67,33.33]}],"names":["short","average","tall"],"legendTop":["short","average","tall"],"yl":"frequency","xl":"teacher’s height","scale":24,"ticks":25,"h":185},True)+'</div></div>'),
-   ('short','ends at 25%','data-pk="1" data-hi="#y4t|0|hy" data-grow="#y4b|0"'),('average','ends at 25 + 41.7 = 66.7%','data-pk="1" data-hi="#y4t|1|hy" data-grow="#y4b|1"'),
+   ('TMPL','<div style="display:flex;gap:14px;align-items:center"><b>a.</b><div style="width:260px">'+seg('y4a',{"bars":[{"v":[25,41.67,33.33]}],"names":["short","average","tall"],"legendTop":["short","average","tall"],"yl":"frequency","xl":"teacher’s height","scale":24,"ticks":25,"h":185},True,True)+'</div></div>'),
+   ('short, average','axes to 100%; short ends at 25%, average at 25 + 41.7 = 66.7%','data-pk="1" data-ax="#y4b" data-hi="#y4t|0,1|hy" data-grow="#y4b|0;#y4b|1"'),
    ('tall','ends at 100%; add the legend','data-pk="1" data-hi="#y4t|2|hy" data-grow="#y4b|2" data-lg'),
-   ('TMPL','<div style="display:flex;gap:14px;align-items:center"><b>b.</b><div style="width:260px">'+seg('y4b',{"bars":[{"v":[25,41.7,33.3]}],"names":["short","average","tall"],"legendTop":["short","average","tall"],"yl":"frequency (%)","xl":"teacher’s height","ticks":20,"h":185},True)+'</div></div>')],
+   ('TMPL','<div style="display:flex;gap:14px;align-items:center"><b>b.</b><div style="width:260px">'+seg('y4b',{"bars":[{"v":[25,41.7,33.3]}],"names":["short","average","tall"],"legendTop":["short","average","tall"],"yl":"frequency (%)","xl":"teacher’s height","ticks":20,"h":185},True,True)+'</div></div>')],
   '',f'{EDR} · 1B Worked example 3 (pp. 12–13)',cmd=('Construct',None,'segments, legend')))
 # ================= Learn 1B: describing the distribution (report template, filled part by part)
 def report(parts):
