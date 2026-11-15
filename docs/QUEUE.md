@@ -24,12 +24,20 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 10. `todo` **Chapter 2 test** from the Mathspace Chapter 2 topic assessment (`02 Sources\Textbooks\Mathspace\Chapter 2 - Investigate associations`). If it can't be built from what's there, mark `needs Rocco`.
 
 ## Questions for Rocco
-(The runner adds one line per question here instead of guessing.)
-- (15 Nov, prefill) Draft CFAT 1.2.1 burnt VCAA reprints Edrolo 2B Q11 (VCAA 2016 E1 Q8) and 2B Q12 (VCAA 2019 E2 Q3), which are l04's planned exits (and against rule 8). Plan: task 2 rebuilds the Ch 2 CFATs from exercise questions only, which frees them for the exits. OK?
-- (15 Nov) 2I 'Which graph?' (l08) has no Edrolo U3&4 exam-practice questions, so no exits. Use current-design 2I items (VCAA 2024 NHT E1 Q7, 2025 E1 Q8) instead, or leave none?
-- (15 Nov) No Edrolo worked example matches Cambridge Examples 1, 13, 14, 17, 18, 20, 21 → no You try (rule 6). 2H has no Cambridge Example; Edrolo 2D WE2 (third variable) could be a 2H You try. Want it?
-- (15 Nov) APK duplicates removed: Cambridge U1&2 2H #14 (l04, already used in S4) and 7C #5 (l07, also in l06). l03 has no Edrolo U1&2 exam APK (the U1&2 categorical items are burnt).
-- (15 Nov) Ch 2 videos added as `draft`; 2A, 2C, 2E, 2G, 2I still need their YouTube links checked/filled from the MaffsGuru pages.
+(The runner adds questions here, numbered Q1, Q2 …, with the date and time asked, and sends Rocco a phone notification. Rocco answers in the setup chat (Claude writes them under "Answers") or edits this file.
+If there is no answer after 10 minutes, the runner decides with its best judgement and records it in the Decisions log. Rocco can overrule any decision later.)
+- Q1 (15 Nov 17:01, prefill) Draft CFAT 1.2.1 burnt VCAA reprints Edrolo 2B Q11 (VCAA 2016 E1 Q8) and 2B Q12 (VCAA 2019 E2 Q3), which are l04's planned exits (and against rule 8). Plan: task 2 rebuilds the Ch 2 CFATs from exercise questions only, which frees them for the exits. OK?
+- Q2 (15 Nov 17:01, prefill) 2I 'Which graph?' (l08) has no Edrolo U3&4 exam-practice questions, so no exits. Use current-design 2I items (VCAA 2024 NHT E1 Q7, 2025 E1 Q8) instead, or leave none?
+- Q3 (15 Nov 17:01, prefill) No Edrolo worked example matches Cambridge Examples 1, 13, 14, 17, 18, 20, 21 → no You try (rule 6). 2H has no Cambridge Example; Edrolo 2D WE2 (third variable) could be a 2H You try. Want it?
+- Q4 (15 Nov 17:01, prefill) APK duplicates removed: Cambridge U1&2 2H #14 (l04, already used in S4) and 7C #5 (l07, also in l06). l03 has no Edrolo U1&2 exam APK (the U1&2 categorical items are burnt).
+- Q5 (15 Nov 17:01, prefill) Ch 2 videos added as `draft`; 2A, 2C, 2E, 2G, 2I still need their YouTube links checked/filled from the MaffsGuru pages.
+
+## Answers from Rocco
+(Write `Q<n>: answer`.)
+
+## Decisions log
+| When | Question | Decision taken | Why | Run |
+|---|---|---|---|---|
 
 ## Later chapters (Rocco adds each when he's ready)
 - Chapter 1 leftovers: rebuild S3–S5 slides on the templates; worksheets S2–S5 on ws2.py; CFAT 1.1.1–1.1.3 solutions; Ch 1 test.
