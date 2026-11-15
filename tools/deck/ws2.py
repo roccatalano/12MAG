@@ -57,7 +57,7 @@ table.t.tiny {{ font-size:7.2pt; margin:0; }} table.t.tiny th, table.t.tiny td {
 table.t .a {{ color:{RED}; visibility:hidden; }} .sol table.t .a {{ visibility:visible; }}
 .data {{ font-family:"Courier New",monospace; font-size:10pt; letter-spacing:.4px; margin:1mm 0 1.5mm; text-align:center; }}
 .tpl {{ line-height:1.95; margin:1mm 0; }}
-.bx {{ display:inline-block; border:1px solid #000; min-width:20mm; height:5.6mm; line-height:5.2mm; padding:0 1.5mm; vertical-align:middle; text-align:center; position:relative; }}
+.bx {{ display:inline-block; border-bottom:1px solid #000; min-width:20mm; height:5.6mm; line-height:5.2mm; padding:0 1.5mm; vertical-align:middle; text-align:center; position:relative; }}
 .bx i {{ position:absolute; left:0; right:0; top:100%; font-size:6.5pt; font-style:normal; color:#666; line-height:1.1; white-space:nowrap; }}
 .bx u {{ text-decoration:none; color:{RED}; visibility:hidden; font-size:9pt; white-space:nowrap; }} .sol .bx u {{ visibility:visible; }}
 .solfig {{ visibility:hidden; }} .sol .solfig {{ visibility:visible; }}
