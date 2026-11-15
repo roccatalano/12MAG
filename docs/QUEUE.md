@@ -135,7 +135,7 @@ _Notes for all AoS 2–4 runners (Rocco, 16 Nov):_
 ## AoS 4: Networks and decision mathematics (runner "12MAG AoS 4 runner")
 
 ### Chapter 13: Graphs, networks and trees (lessons gm12-u4-13a13b, gm12-u4-13c, gm12-u4-13d13e, gm12-u4-13f; check gm12-ch13-test)
-1. `todo` **Plan Chapter 13**: lesson split, titles, learning intentions, success criteria, coursework (gm12-u4-13a13b, gm12-u4-13c, gm12-u4-13d13e, gm12-u4-13f; see notes above). Update the lesson ids/list below if you split or merge.
+1. `in progress 16 Nov 01:12` **Plan Chapter 13**: lesson split, titles, learning intentions, success criteria, coursework (gm12-u4-13a13b, gm12-u4-13c, gm12-u4-13d13e, gm12-u4-13f; see notes above). Update the lesson ids/list below if you split or merge.
 2. `todo` **Prefill the lesson cards** (gm12-u4-13a13b, gm12-u4-13c, gm12-u4-13d13e, gm12-u4-13f) in `planner/unit-plan.json` (see notes above).
 3. `todo` **CFATs for Chapter 13** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch13/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
 4. `todo` **CFAT follow-ups for Chapter 13** (Jacaranda exercises; see notes above).
