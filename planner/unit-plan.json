@@ -5431,6 +5431,30 @@
             "pdf": "lessons/CFAT 1.4.1 (4A-4B) solutions.pdf"
            }
           ]
+         },
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, CAS, exit.",
+          "status": "draft",
+          "file": "lessons/4C slides.html",
+          "pdf": "lessons/4C slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "4 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/4C worksheet.html",
+            "pdf": "lessons/4C worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/4C worksheet solutions.html",
+            "pdf": "lessons/4C worksheet solutions.pdf"
+           }
+          ]
          }
         ]
        }
