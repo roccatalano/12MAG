@@ -366,16 +366,16 @@ Edrolo U3&4 5D Q4,,CFAT,yes,CFAT 2.7.2,2026-11-16,Ch7 CFAT (exercise questions o
 Edrolo U3&4 5E Q11,,CFAT,yes,CFAT 2.7.2,2026-11-16,Ch7 CFAT (exercise questions only)
 Edrolo U3&4 5D Q14,,CFAT,yes,CFAT 2.7.2,2026-11-16,Ch7 CFAT (exercise questions only)
 Edrolo U3&4 5G Q2,,CFAT,yes,CFAT 2.7.2,2026-11-16,Ch7 CFAT (exercise questions only)
-VCAA 2024 E1 Q30,,Do Now,yes,gm12-u4-13a13b,2026-11-16,reserved by AoS4 prefill
-VCAA 2026 E1 Q6,,Do Now,yes,gm12-u4-13a13b,2026-11-16,reserved by AoS4 prefill
-VCAA 2025 E2 Q12a,,Do Now,yes,gm12-u4-13a13b,2026-11-16,reserved by AoS4 prefill
-VCAA 2024 E2 Q7c,,Do Now,yes,gm12-u4-13a13b,2026-11-16,reserved by AoS4 prefill
-"VCAA 2021 E2 Networks Q1a,b",Edrolo U3&4 8A Q18,exit,yes,gm12-u4-13a13b,2026-11-16,reserved by AoS4 prefill
-VCAA 2021 E1 Networks Q3,Edrolo U3&4 8A Q20,exit,yes,gm12-u4-13a13b,2026-11-16,reserved by AoS4 prefill
-VCAA 2019 E1 Networks Q6,Edrolo U3&4 8B Q15,exit,yes,gm12-u4-13a13b,2026-11-16,reserved by AoS4 prefill
-Cambridge U1&2 skills checklist 8A #2,,APK,yes,gm12-u4-13a13b,2026-11-16,reserved by AoS4 prefill
-Cambridge U1&2 skills checklist 8C #8,,APK,yes,gm12-u4-13a13b,2026-11-16,reserved by AoS4 prefill
-VCAA 2017 E1 Networks Q2,Edrolo U1&2 7A Q13,APK,yes,gm12-u4-13a13b,2026-11-16,reserved by AoS4 prefill
+VCAA 2024 E1 Q30,,Do Now,yes,gm12-u4-13a13b,2026-11-16,used in 13A-13B slides + worksheet
+VCAA 2026 E1 Q6,,Do Now,yes,gm12-u4-13a13b,2026-11-16,used in 13A-13B slides + worksheet
+VCAA 2025 E2 Q12a,,Do Now,yes,gm12-u4-13a13b,2026-11-16,used in 13A-13B slides + worksheet
+VCAA 2024 E2 Q7c,,Do Now,yes,gm12-u4-13a13b,2026-11-16,used in 13A-13B slides + worksheet
+"VCAA 2021 E2 Networks Q1a,b",Edrolo U3&4 8A Q18,exit,yes,gm12-u4-13a13b,2026-11-16,used in 13A-13B slides + worksheet
+VCAA 2021 E1 Networks Q3,Edrolo U3&4 8A Q20,exit,yes,gm12-u4-13a13b,2026-11-16,used in 13A-13B slides + worksheet
+VCAA 2019 E1 Networks Q6,Edrolo U3&4 8B Q15,exit,yes,gm12-u4-13a13b,2026-11-16,used in 13A-13B slides + worksheet
+Cambridge U1&2 skills checklist 8A #2,,APK,yes,gm12-u4-13a13b,2026-11-16,used in 13A-13B slides + worksheet
+Cambridge U1&2 skills checklist 8C #8,,APK,yes,gm12-u4-13a13b,2026-11-16,used in 13A-13B slides + worksheet
+VCAA 2017 E1 Networks Q2,Edrolo U1&2 7A Q13,APK,yes,gm12-u4-13a13b,2026-11-16,used in 13A-13B slides + worksheet
 VCAA 2024 E1 Q33,,Do Now,yes,gm12-u4-13c,2026-11-16,reserved by AoS4 prefill
 VCAA 2025 E1 Q29,,Do Now,yes,gm12-u4-13c,2026-11-16,reserved by AoS4 prefill
 VCAA 2024 E2 Q13a,,Do Now,yes,gm12-u4-13c,2026-11-16,reserved by AoS4 prefill
@@ -478,3 +478,15 @@ Edrolo U3&4 7A WE3,,You try,no,gm12-u4-10a10b,2026-11-16,10A-10B slides + worksh
 Edrolo U1&2 5D WE3,,You try,no,gm12-u4-10a10b,2026-11-16,10A-10B slides + worksheet
 YT-10B-8 (written),,You try,no,gm12-u4-10a10b,2026-11-16,10A-10B slides + worksheet
 YT-10B-10 (written),,You try,no,gm12-u4-10a10b,2026-11-16,10A-10B slides + worksheet
+Cambridge U3&4 Example 1,,Example,no,gm12-u4-13a13b,2026-11-16,13A-13B slides + worksheet
+Cambridge U3&4 Example 2,,Example,no,gm12-u4-13a13b,2026-11-16,13A-13B slides + worksheet
+Cambridge U3&4 Example 3,,Example,no,gm12-u4-13a13b,2026-11-16,13A-13B slides + worksheet
+Cambridge U3&4 Example 4,,Example,no,gm12-u4-13a13b,2026-11-16,13A-13B slides + worksheet
+Cambridge U3&4 Example 5,,Example,no,gm12-u4-13a13b,2026-11-16,13A-13B slides + worksheet
+Cambridge U3&4 Example 6,,Example,no,gm12-u4-13a13b,2026-11-16,13A-13B slides + worksheet
+Edrolo U3&4 8A WE1,,You try,no,gm12-u4-13a13b,2026-11-16,13A-13B slides + worksheet
+Edrolo U3&4 8A WE2a,,You try,no,gm12-u4-13a13b,2026-11-16,13A-13B slides + worksheet
+Edrolo U3&4 8A WE3a,,You try,no,gm12-u4-13a13b,2026-11-16,13A-13B slides + worksheet
+Edrolo U3&4 8A WE3b,,You try,no,gm12-u4-13a13b,2026-11-16,13A-13B slides + worksheet
+Edrolo U3&4 8B WE2,,You try,no,gm12-u4-13a13b,2026-11-16,13A-13B slides + worksheet
+Edrolo U3&4 8B WE1,,You try,no,gm12-u4-13a13b,2026-11-16,13A-13B slides + worksheet

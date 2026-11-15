@@ -10511,7 +10511,33 @@
          }
         ],
         "cas": [],
-        "note": "Spare exits (not reserved): Edrolo 8A Q19 (VCAA 2020 E2 N&DM Q1b, 58%), 8B Q14 (VCAA 2020 E1 N&DM Q8, 75%), 8B Q16 (VCAA 2021 E1 N&DM Q7, 33%). Edrolo 8B WE3–WE4 (digraph ↔ adjacency matrix) are spare You trys."
+        "note": "Spare exits (not reserved): Edrolo 8A Q19 (VCAA 2020 E2 N&DM Q1b, 58%), 8B Q14 (VCAA 2020 E1 N&DM Q8, 75%), 8B Q16 (VCAA 2021 E1 N&DM Q7, 33%). Edrolo 8B WE3–WE4 (digraph ↔ adjacency matrix) are spare You trys.",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/13A-13B slides.html",
+          "pdf": "lessons/13A-13B slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "6 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/13A-13B worksheet.html",
+            "pdf": "lessons/13A-13B worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/13A-13B worksheet solutions.html",
+            "pdf": "lessons/13A-13B worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
