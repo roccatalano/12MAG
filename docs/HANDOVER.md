@@ -27,6 +27,8 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 - Worksheets follow the S4 shape (no Do Now section; APK → Example/You try pairs → CAS → exits with "guess the %" → skills checklist → coursework).
 - `ws.css` (shared with S4) gained: stem leaves left-aligned, `stemfill` frames, taller answer cells in tables.
 
+- **Lesson shapes cleared (Rocco, 15 Nov):** the planner's right-hand 'Lesson shape' pane now says 'To be filled in last' for every lesson (`SHAPES_ON=false` in `planner/index.html`). Fill them in at the very end.
+
 ## NEXT JOB: fine-tooth-comb review of every Chapter 1 resource (Rocco, 15 Nov: "make sure they are up to standard and not AI slop")
 Suggested order per lesson: slides → worksheet → bound reference → CFAT; check verbatim wording against the sources, % correct against reports, maths, layout/print, page limits. (was: 1C, 1D and 1E — the notes below still apply)
 Rules are in CLAUDE.md, "Bound reference entries" section (read it first). In short: one colour cut-out card per subchapter; half A4 by default, full A4 if it doesn't fit; ONE fixed text size (never scale fonts to fill); fill spare space with real content (e.g. a VCAA question from that lesson); no Edrolo/source line under VCAA boxes (the title says it).

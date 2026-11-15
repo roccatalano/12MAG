@@ -206,7 +206,9 @@ function card(l,extra){return `<div class="card t-${l.type} ${l.shell?'shell':''
   <div class="ttl">${esc(l.title)}</div>${extra||''}</div>`}
 const DECKS={};
 function deckOf(l){const m=(l.materials||[]).find(x=>x.kind=='Guided slides'&&x.file);return m?m.file:null}
+const SHAPES_ON=false; // Rocco, 15 Nov: lesson shapes cleared; fill them in last (set true to bring back the slide-read outline)
 function shapePane(l){
+  if(!SHAPES_ON)return `<div class="seqhead"><h3 style="margin-top:0">Lesson shape</h3></div><div class="seqempty">To be filled in last.</div>`;
   if(l.type=='check')return `<div class="seqhead"><h3 style="margin-top:0">Coursework check + chapter test</h3></div><ol class="shape">
     <li><span class="sphase ph-cfat">Check</span><span>Coursework checklist: CFATs, bound reference, guided notes, Cambridge coursework exercises</span></li>
     <li><span class="sphase ph-exit">Test</span><span>Chapter test: Mathspace topic assessment</span></li></ol>`;
