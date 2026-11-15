@@ -61,7 +61,9 @@ For each lesson: slides → worksheet (student + solutions) → bound reference 
 ## E. Self-study videos and CAS (Rocco, 15 Nov)
 - [x] Ch 1 videos checked (Rocco, 15 Nov)
 - [ ] Find videos for Ch 2–14 the same way (MaffsGuru course page lists one per subchapter)
-- [ ] CAS guide (master list): write steps for skills still marked "Steps to write" (dot plot, parallel boxplots, Ch 2–5 skills) and add recursion/finance, matrices and networks skills
+- [x] CAS guide Ch 1: one main video per calculator (+ More videos), all Ch 1 steps written, each ending with what to read off
+- [ ] Confirm: ClassPad has no dot plot graph type (noted on the dot plot card)
+- [ ] CAS guide (master list): write steps for Ch 2–5 skills and add recursion/finance, matrices and networks skills
 - [ ] Make slides / worksheets / bound reference cards read their CAS steps and videos from the master files
 
 ## D. Planner and tools

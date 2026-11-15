@@ -440,8 +440,7 @@
         "cas": [
          "histogram",
          "dotplot",
-         "logs",
-         "data-walkthrough"
+         "logs"
         ],
         "materials": [
          {
@@ -1601,8 +1600,7 @@
          }
         ],
         "cas": [
-         "z-score",
-         "normal-probability"
+         "z-score"
         ],
         "cfats": [
          {
