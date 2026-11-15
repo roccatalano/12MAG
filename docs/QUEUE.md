@@ -263,3 +263,4 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 | Ch5 #11 Ch5 test | 22:26 | 22:26 | ~12 | | done: Mathspace topic assessment copied whole (no transformation-style split needed); answer key checked with numpy; Chapter 5 section finished → runner turned off | next run: NOT fired — no Ch5 todo left; scheduled task disabled |
 | AoS2 runner: G: not reachable | 2026-11-16 01:02 | 01:03 | 1 | | the 12MAG Course Planner folder is not connected to this run (names-only listing); nothing changed. next run: NOT fired — hourly schedule will retry |
 | AoS3 runner: G: not reachable | 2026-11-16 01:02 | 2026-11-16 01:04 | 2 | | stopped: 12MAG Course Planner folder not connected to this session; nothing changed |
+| AoS4 runner: G: not reachable | 2026-11-16 01:03 | 2026-11-16 01:04 | 1 | | stopped: G: folder not connected to this session (device shows no connected folders); no task claimed; next run: NOT fired — G: access needed |
