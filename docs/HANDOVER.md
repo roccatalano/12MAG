@@ -17,6 +17,7 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 ## 15 Nov 20:57 — Ch3 #7: Chapter 3 test (Draft) · Chapter 3 queue finished
 `tools/test/ch3/build.py` → `lessons/Ch3 test` + `Ch3 test solutions` (HTML + PDF, 4 pages, /28) from the Mathspace Ch 3 topic assessment regression questions; transformation questions left for Ch 4. On G: and the Ch 3 check card. All Chapter 3 queue tasks are done; the '12MAG Ch 3 runner' scheduled task is turned off.
 
+- **15 Nov 21:15 (Ch4 runner):** Chapter 4 test + solutions built (`tools/test/ch4/build.py`, Mathspace Ch 3 topic assessment transformation Qs + Ch 3 review Q8–13, /39, Draft). **Chapter 4 queue finished**; Ch 4 runner turned off.
 - **15 Nov 20:51 (Ch4 #5):** l14 (4C) slides (`lessons/4C slides.html/.pdf`, 20 slides) + worksheet (4 pp, student + solutions) built from `tools/deck/l14/`; Draft; copied to G: 01 Lesson materials; 11 ledger rows.
 ## 15 Nov 20:52 — Ch3 #6: Chapter 3 revision booklet (Draft)
 Chapter 3 revision booklet + solutions built (`tools/revision/ch3/`, 16 pages each, Draft) from the Insight regression questions not used in Ch 2; transformation questions left for Ch 4. On G: and the Ch 3 check card. Note: that card's 'Chapter test' entry still points at the Ch2 test (task 7 will replace it).

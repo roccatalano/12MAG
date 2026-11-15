@@ -1,0 +1,139 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Ch4 test</title><style>@page { size: A4; margin: 11mm 12mm 12mm 12mm; }
+* { box-sizing: border-box; }
+body { font-family: Arial, "Liberation Sans", Helvetica, sans-serif; font-size: 10.3pt; line-height: 1.32; color:#000; margin:0; }
+.title { display:flex; align-items:center; gap:4mm; border:2px solid #000; padding:2mm 4mm; margin-bottom:3mm; }
+.title .code { font-size:15pt; line-height:1.1; text-align:center; font-weight:bold; border-right:2px solid #000; padding-right:4mm; }
+.title h1 { font-size:16pt; margin:0; flex:1; }
+.title .pg { font-size:10pt; text-align:right; white-space:nowrap; }
+.box { border:1.2px solid #000; margin-bottom:3mm; break-inside: avoid; }
+.box > .hd { font-weight:bold; font-size:10.5pt; text-transform:uppercase; letter-spacing:.4px; border-bottom:1.2px solid #000; padding:1mm 3mm; background:#eee; display:flex; justify-content:space-between; white-space:nowrap; }
+.box > .hd span { text-transform:none; font-weight:normal; letter-spacing:0; }
+.box > .bd { padding:2mm 3mm; }
+ul { margin:0; padding-left:5mm; } li { margin:0.6mm 0; }
+.ki { column-count:2; column-gap:6mm; } .ki li { margin:1mm 0; break-inside:avoid; }
+.pair { display:grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); border:1.2px solid #000; margin-bottom:3mm; break-inside: avoid; }
+.pair > div:nth-child(odd) { border-right:1.2px solid #000; } .pair .hd { display:flex; align-items:center; }
+.pair .hd { font-weight:bold; border-bottom:1.2px solid #000; padding:1mm 3mm; background:#eee; font-size:10pt; }
+.pair .bd { padding:2mm 3mm; display:flex; flex-direction:column; }
+.q { margin:0 0 1.5mm; }
+.ytp { display:flex; gap:2mm; border-bottom:1px dashed #bbb; padding-top:1mm; flex-direction:column; }
+.ytp:last-child { border-bottom:none; }
+.ytp .pq { display:flex; gap:2mm; } .ytp .pq > b { min-width:4mm; }
+.sp { position:relative; } .sp > .ans { position:absolute; left:6mm; right:0; top:0; font-size:8.6pt; line-height:1.25; }
+.ans { display:none; color:#c00; font-size:10pt; }
+.sol .ans { display:block; } .mc + .ans { margin-top:-1mm; }
+.sol .ans.in { display:inline; }
+.kf { border-collapse:collapse; width:100%; }
+.kf td { border-bottom:1px solid #999; padding:1.4mm 2mm; vertical-align:middle; }
+.kf tr:last-child td { border-bottom:none; }
+.kf td:first-child { font-weight:bold; width:36mm; border-right:1px solid #999; }
+table.t { border-collapse:collapse; font-size:10pt; margin:1mm 0; }
+table.t th, table.t td { border:1px solid #000; padding:.6mm 2.5mm; text-align:center; }
+table.t th { background:#eee; } table.t .l { text-align:left; } table.t tr.tot td { font-weight:bold; }
+table.fill td { height:6.5mm; min-width:16mm; } table.fill td:first-child { min-width:22mm; text-align:left; }
+.raw { font-size:10pt; border-collapse:collapse; margin:1mm 0; } .raw td { padding:0 2mm 0 0; }
+.mc { display:grid; gap:.3mm 4mm; margin:1mm 0; } .mc b { display:inline-block; width:5mm; }
+.grid { background-image:linear-gradient(#bbb .2mm,transparent .2mm),linear-gradient(90deg,#bbb .2mm,transparent .2mm); background-size:5mm 5mm; border-right:.2mm solid #bbb; border-bottom:.2mm solid #bbb; margin:1mm auto 0; }
+.sol .grid { display:none; }
+.sol .stu { display:none; }
+.chart { display:none; text-align:center; } .sol .chart { display:block; }
+.chart.always { display:block; }
+.fig { text-align:center; }
+.row { display:flex; gap:3mm; align-items:flex-start; } .row > * { min-width:0; }
+.tpl { line-height:2.3; font-size:10.5pt; }
+.tpl .s { display:inline-block; border-bottom:1px solid #000; min-width:22mm; text-align:center; position:relative; line-height:1.2; }
+.tpl .s i { position:absolute; left:0; right:0; top:100%; font-size:7pt; font-style:normal; color:#555; text-align:center; line-height:1.2; }
+.tpl .s u { text-decoration:none; color:#c00; font-size:9.5pt; visibility:hidden; white-space:nowrap; } .sol .tpl .s u { visibility:visible; }
+.scg { display:grid; grid-template-columns:1fr 1fr; }
+.sc { display:grid; grid-template-columns:6mm 1fr; gap:1mm 2mm; padding:2mm; border-bottom:1px solid #000; }
+.scg .sc:nth-child(odd) { border-right:1px solid #000; }
+.scg .sc:nth-last-child(-n+1) { border-bottom:none; }
+.tick { width:5mm; height:5mm; border:1.2px solid #000; margin-top:.5mm; }
+.hwg { display:grid; grid-template-columns:repeat(3,1fr); border:1px solid #000; }
+.hwg > div { border-right:1px solid #000; padding:2mm; text-align:center; display:flex; flex-direction:column; align-items:center; gap:1mm; }
+.hwg > div:last-child { border-right:none; }
+.hwh { font-weight:bold; text-transform:uppercase; font-size:9.5pt; }
+.hwq { font-size:10.5pt; line-height:1.5; }
+.sig { display:flex; gap:4mm; margin-top:3mm; align-items:stretch; }
+.stamp { width:32mm; height:24mm; border:1.2px dashed #000; font-size:8.5pt; color:#555; display:flex; align-items:flex-end; justify-content:center; padding-bottom:1mm; flex:none; }
+.sig .lines { flex:1; display:flex; flex-direction:column; justify-content:space-around; }
+.sig .lines > div { display:flex; align-items:flex-end; gap:2mm; font-size:10pt; }
+.sig .lines i { flex:1; border-bottom:1px solid #000; height:6mm; } .sig .lines i.d { flex:none; width:28mm; }
+.cite { font-size:8pt; font-style:italic; color:#444; text-align:right; margin-top:auto; padding-top:1mm; }
+.box.split { break-inside:auto; } .box.split .row, .box.split p, .box.split .mc { break-inside:avoid; }
+.sol .sp.wk { min-height:auto !important; } .sol .sp.wk > .ans { position:static; }
+.guess { font-size:9.5pt; margin-top:1.5mm; padding:1.2mm 2mm; border:1px dashed #000; display:flex; align-items:flex-end; gap:1.5mm; flex-wrap:wrap; }
+.guess span { display:inline-block; width:16mm; border-bottom:1px solid #000; height:4mm; } .guess span.sh { width:12mm; }
+.sol .guess::after { content:attr(data-a); color:#c00; font-weight:bold; margin-left:2mm; }
+.lines { margin-top:2mm; } .lines div { height:8mm; border-bottom:1px solid #999; }
+.bl { border-bottom:1px solid #000; width:45mm; height:6mm; margin:1mm 0 1.5mm auto; font-size:10pt; } .bl span { visibility:hidden; color:#c00; } .sol .bl span { visibility:visible; }
+.pagebreak { break-after: page; }
+.solmark { display:none; } .sol .solmark { display:inline; color:#c00; }
+body { font-size:9.8pt; line-height:1.28; }
+.secthd{margin-bottom:1.5mm} .qgrid{gap:2.5mm;margin-bottom:2.5mm} .title{margin-bottom:2mm}
+
+.title .who { font-size:10.5pt; white-space:nowrap; display:flex; flex-direction:column; gap:2mm; align-items:flex-end; }
+.title .who b { font-weight:normal; }
+.title .who i { display:inline-block; border-bottom:1px solid #000; width:52mm; height:5mm; vertical-align:bottom; }
+.title .who .sc { display:inline-block; border:1.5px solid #000; width:26mm; height:9mm; text-align:right; padding:1mm 2mm; font-size:12pt; font-weight:bold; }
+.qgrid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:3mm; margin-bottom:3mm; }
+.qgrid .box { margin-bottom:0; display:flex; flex-direction:column; }
+.qgrid .box > .bd { flex:1; display:flex; flex-direction:column; }
+.mc { grid-template-columns:1fr; }
+.mc div { display:flex; gap:1mm; } .mc b { flex:none; }
+.fig img { max-width:100%; }
+.fig.gs img { filter:grayscale(1) contrast(1.1); }
+.sa { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+.sa > .stem { border-right:1.2px solid #000; padding:2mm 3mm; display:flex; flex-direction:column; }
+.sa > .parts { display:flex; flex-direction:column; }
+.sa .part { padding:2mm 3mm; border-bottom:1px dashed #bbb; display:flex; flex-direction:column; }
+.sa .part:last-child { border-bottom:none; }
+.sa .part .pq { display:flex; gap:2mm; } .sa .part .pq > b { min-width:4mm; }
+.sa .part .grid { width:100%; flex:1; min-height:20mm; }
+.sa .part .blank { flex:1; min-height:12mm; }
+.sa1 { border-top:1.2px solid #000; } .sa1 .part { padding:2mm 3mm; display:flex; flex-direction:column; } .sa1 .pq{display:flex;gap:2mm} .sa1 .pq>b{min-width:4mm}
+.sa1 .blank { flex:1; min-height:11mm; }
+.brk { break-before:page; }
+.secthd { font-weight:bold; text-transform:uppercase; letter-spacing:.4px; font-size:10.5pt; margin:0 0 2mm; display:flex; justify-content:space-between; }
+.secthd span { text-transform:none; letter-spacing:0; font-weight:normal; font-size:9.5pt; }
+
+body{font-size:9.6pt;line-height:1.25}
+.qgrid{display:grid;grid-template-columns:1fr 1fr;gap:3mm} .qgrid .box{margin-bottom:0}
+.mcl div{margin:.6mm 0} .mcl b{display:inline-block;width:5mm}
+.mc2{display:grid;grid-template-columns:1fr 1fr;gap:.5mm 3mm}
+.ans{color:#c00;display:none;white-space:pre-wrap} .sol .ans{display:block}
+.ok{color:#c00;font-weight:bold;display:none} .sol .ok{display:inline}
+.part{border-top:1px dashed #000;padding:1mm 0 0;margin-top:1mm} .part .pq b{margin-right:2mm}
+.sp{min-height:var(--h)} .mk{color:#555;font-size:8.5pt}
+table.t{border-collapse:collapse;margin:1mm 0} table.t td,table.t th{border:1px solid #000;padding:.5mm 2mm;text-align:center}
+.cite{font-size:7.5pt;color:#555;margin-top:1mm}
+.stem3 td{border:none!important;padding:0 2mm!important;font-family:monospace;font-size:10pt} .stem3 td.s{border-left:1px solid #000!important;border-right:1px solid #000!important}
+.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;font-size:.9em;line-height:1.05}.fr span:first-child{border-bottom:1px solid #000;padding:0 1px}
+.mc2 b{display:inline-block;width:5mm}
+.blk{display:inline-block;min-width:9mm;height:4mm;text-align:center;line-height:4mm;border:1px solid #000;vertical-align:middle}
+.secthd{font-weight:bold;border-bottom:2px solid #000;margin:2mm 0;display:flex;justify-content:space-between}
+</style><script src="a4view.js"></script><script src="paged.polyfill.min.js"></script></head><body class="">
+<div class="title"><div class="code">Ch 4<br>test</div><h1>Data transformations<div style="font-size:10pt;font-weight:normal;margin-top:1mm">4A–4D · CAS and bound reference allowed</div></h1><div class="who"><div><b>Name</b> <i></i></div><div class="sc">/39</div></div></div>
+<div class="secthd">Section A · Multiple choice<span>Circle one answer. 3 marks</span></div>
+<div class="qgrid" style="margin-bottom:3mm"><div class="box"><div class="hd">Question 1<span>1 mark</span></div><div class="bd"><p class="q">The following data set has an upward-curving (parabolic) shape when plotted. Which transformation is most likely to linearise the data?<table class="t"><tr><td>x</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><td>y</td><td>2.1</td><td>8.3</td><td>18.5</td><td>32.2</td><td>50.1</td></tr></table></p><div class="mcl"><div><b>A</b><span class="fr"><span>1</span><span>y</span></span> transformation </div><div><b>B</b>x² transformation <span class=ok>✓</span></div><div><b>C</b><span class="fr"><span>1</span><span>x</span></span> transformation </div><div><b>D</b>log(x) transformation </div></div><div class="cite">Mathspace Ch 3 topic assessment Q3 · 3.05</div></div></div><div class="box"><div class="hd">Question 2<span>1 mark</span></div><div class="bd"><p class="q">A data set shows a non-linear relationship where y decreases rapidly as x increases. Which transformation is most likely to linearise this data?</p><div class="mcl"><div><b>A</b>log(x) transformation </div><div><b>B</b>y² transformation </div><div><b>C</b>x² transformation </div><div><b>D</b><span class="fr"><span>1</span><span>x</span></span> transformation <span class=ok>✓</span></div></div><div class="cite">Mathspace Ch 3 topic assessment Q4 · 3.06</div></div></div></div>
+<div class="qgrid" style="margin-bottom:3mm"><div class="box"><div class="hd">Question 3<span>1 mark</span></div><div class="bd"><p class="q">A scatterplot of data on the population of bacteria (y) over time in hours (x) shows an upward-curving shape. After applying a log(y) transformation, the data appears linear. The regression equation on the transformed data is log(y) = 0.5 + 0.3x. What is the predicted value of y when x = 4?</p><div class="mc2"><div><b>A</b>50.1 <span class=ok>✓</span></div><div><b>B</b>5.01 </div><div><b>C</b>1.7 </div><div><b>D</b>501 </div></div><div class="cite">Mathspace Ch 3 topic assessment Q6 · 3.07</div></div></div></div>
+<div class="secthd">Section B · Short answer<span>Show your working. 36 marks</span></div>
+<div class="box"><div class="hd">Question 4<span>6 marks</span></div><div class="bd"><p class="q">After a storm in Gippsland, teams of volunteers cleared fallen branches from sections of walking track of equal length. The number of volunteers in each team and the time taken, in hours, are shown below.<table class="t"><tr><td>Volunteers</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>8</td></tr><tr><td>Time (hours)</td><td>24.5</td><td>12.8</td><td>8.6</td><td>6.7</td><td>5.3</td><td>4.6</td><td>3.4</td></tr></table>A reciprocal transformation is applied to the number of volunteers, so that time is modelled against <span class="fr"><span>1</span><span>volunteers</span></span>.</p><div class="part"><div class="pq"><b>a</b>Use technology to find the equation of the least-squares regression line for time against <span class="fr"><span>1</span><span>volunteers</span></span>. Write the values rounded to two decimal places. <span class="mk">(2 marks)</span></div><div class="sp" style="--h:14mm"><div class="ans">time = 0.57 + 24.03 × <span class="fr"><span>1</span><span>volunteers</span></span></div></div></div><div class="part"><div class="pq"><b>b</b>Write the value of r² for the transformed data, rounded to four decimal places, and comment on how well the model fits. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:12mm"><div class="ans">r² = 0.9997. The model fits the transformed data very well.</div></div></div><div class="part"><div class="pq"><b>c</b>Use the rounded equation from part (a) to predict the time taken by a team of 7 volunteers, rounded to two decimal places. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:12mm"><div class="ans">time = 0.57 + 24.03 × <span class="fr"><span>1</span><span>7</span></span> = 4.00 hours</div></div></div><div class="part"><div class="pq"><b>d</b>Use the model to find the minimum number of volunteers needed to clear a section in 2 hours or less, and comment on the reliability of this prediction. <span class="mk">(2 marks)</span></div><div class="sp" style="--h:20mm"><div class="ans">2 = 0.57 + 24.03 × <span class="fr"><span>1</span><span>volunteers</span></span> → volunteers = 24.03 ÷ 1.43 ≈ 16.8, so 17 volunteers.
+The prediction is unreliable because it is an extrapolation beyond the data (1 to 8 volunteers).</div></div></div><div class="cite">Mathspace Ch 3 topic assessment Q17 · 3.07</div></div></div>
+<div class="box"><div class="hd">Question 5<span>2 marks</span></div><div class="bd"><p class="q">A data set shows a non-linear relationship. After applying an x² transformation, the regression equation is y = 2.4 + 0.85x². Predict the value of y when x = 5. State whether this prediction is an interpolation or extrapolation, given the original data had x values between 1 and 6.</p><div class="part"><div class="sp" style="--h:18mm"><div class="ans">y = 2.4 + 0.85 × 5² = 23.65
+This is an interpolation since x = 5 is within the original data range.</div></div></div><div class="cite">Mathspace Ch 3 topic assessment Q18 · 3.07</div></div></div>
+<div class="box"><div class="hd">Question 6<span>2 marks</span></div><div class="bd"><p class="q">For Victorian towns with populations between 2000 and 80 000, a logarithmic transformation was used to linearise the relationship between the number of cafés in a town and the town's population. The equation of the least-squares regression line is cafés = −21.4 + 9.6 × log<sub>10</sub>(population).</p><div class="part"><div class="pq"><b>a</b>Use this equation to predict the number of cafés in a town with a population of 25 000. Round your answer to the nearest whole number. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:12mm"><div class="ans">cafés = −21.4 + 9.6 × log<sub>10</sub>(25 000) = 20.8 → 21 cafés</div></div></div><div class="part"><div class="pq"><b>b</b>Explain why the equation should not be used to predict the number of cafés in a town with a population of 100. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:14mm"><div class="ans">It predicts a negative number of cafés (−2.2), which is impossible; this is an extrapolation well outside the population range of the data.</div></div></div><div class="cite">Mathspace Ch 3 topic assessment Q19 · 3.07</div></div></div>
+<div class="box"><div class="hd">Question 7<span>4 marks</span></div><div class="bd"><p class="q">The table shows a non-linear relationship between variables x and y:<table class="t"><tr><td>x</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td>y</td><td>3</td><td>10</td><td>25</td><td>45</td><td>75</td><td>110</td></tr></table></p><div class="part"><div class="pq"><b>a</b>Complete the transformation of the x-values by completing the table:<table class="t"><tr><td>x²</td><td><span class="blk"><span class="ok">1</span></span></td><td><span class="blk"><span class="ok">4</span></span></td><td><span class="blk"><span class="ok">9</span></span></td><td><span class="blk"><span class="ok">16</span></span></td><td><span class="blk"><span class="ok">25</span></span></td><td><span class="blk"><span class="ok">36</span></span></td></tr><tr><td>y</td><td>3</td><td>10</td><td>25</td><td>45</td><td>75</td><td>110</td></tr></table> <span class="mk">(1 mark)</span></div><div class="sp" style="--h:2mm"><div class="ans"></div></div></div><div class="part"><div class="pq"><b>b</b>Determine the equation of the least-squares regression line for the transformed data set. Give the answer in the form y = a + bx², where a and b are rounded to one decimal place. <span class="mk">(2 marks)</span></div><div class="sp" style="--h:14mm"><div class="ans">y = −2.1 + 3.1x²</div></div></div><div class="part"><div class="pq"><b>c</b>Using technology, determine the value of the correlation coefficient, r, for the transformed data. Round the answer to four decimal places. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:10mm"><div class="ans">r = 0.9994</div></div></div><div class="cite">Mathspace Chapter 3 review Q8 · 3.05</div></div></div>
+<div class="box"><div class="hd">Question 8<span>3 marks</span></div><div class="bd"><p class="q">A data set has been collected, and the scatterplot shows a curved shape:<table class="t"><tr><td>x</td><td>0.5</td><td>1.5</td><td>2.5</td><td>3.5</td><td>4.5</td><td>5.5</td></tr><tr><td>y</td><td>25.1</td><td>23.2</td><td>19.5</td><td>14.8</td><td>8.3</td><td>1.7</td></tr></table></p><div class="part"><div class="pq"><b>a</b>Use technology to create a scatterplot. Which transformation is most suitable to linearise the data?<div class="mc2" style="grid-template-columns:repeat(4,1fr);margin-top:1mm"><div><b>A</b> <span class="fr"><span>1</span><span>x</span></span></div><div><b>B</b> x²</div><div><b>C</b> log<sub>10</sub>(x)</div><div><b>D</b> log<sub>10</sub>(y)</div></div> <span class="mk">(1 mark)</span></div><div class="sp" style="--h:8mm"><div class="ans">B (x²): it gives the highest r² (0.9967; 1/x 0.483, log<sub>10</sub>(x) 0.754, log<sub>10</sub>(y) 0.777).</div></div></div><div class="part"><div class="pq"><b>b</b>Determine the equation of the least-squares regression line for the transformed data. Give the answer in the form y = a + bx², where a and b are rounded to two decimal places. <span class="mk">(2 marks)</span></div><div class="sp" style="--h:14mm"><div class="ans">y = 24.76 − 0.78x²</div></div></div><div class="cite">Mathspace Chapter 3 review Q9 · 3.05</div></div></div>
+<div class="box"><div class="hd">Question 9<span>5 marks</span></div><div class="bd"><p class="q">Consider the data set, where all y-values are positive:<table class="t"><tr><td>x</td><td>1</td><td>2</td><td>3</td><td>5</td><td>8</td><td>10</td></tr><tr><td>y</td><td>2.3</td><td>2.8</td><td>3.4</td><td>4.0</td><td>5.2</td><td>5.6</td></tr></table></p><div class="part"><div class="pq"><b>a</b>Transform the data by applying a squared transformation to the y-values. Complete the table, rounding y² values to two decimal places:<table class="t"><tr><td>x</td><td>1</td><td>2</td><td>3</td><td>5</td><td>8</td><td>10</td></tr><tr><td>y²</td><td><span class="blk"><span class="ok">5.29</span></span></td><td><span class="blk"><span class="ok">7.84</span></span></td><td><span class="blk"><span class="ok">11.56</span></span></td><td><span class="blk"><span class="ok">16.00</span></span></td><td><span class="blk"><span class="ok">27.04</span></span></td><td><span class="blk"><span class="ok">31.36</span></span></td></tr></table> <span class="mk">(1 mark)</span></div><div class="sp" style="--h:2mm"><div class="ans"></div></div></div><div class="part"><div class="pq"><b>b</b>Determine the equation of the least-squares regression line for the transformed data. Give the answer in the form y² = a + bx, where a and b are rounded to one decimal place. <span class="mk">(2 marks)</span></div><div class="sp" style="--h:14mm"><div class="ans">y² = 2.2 + 3.0x</div></div></div><div class="part"><div class="pq"><b>c</b>Predict the value of y when x = 7. Round the answer to two decimal places. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:14mm"><div class="ans">y² = 2.2 + 3.0 × 7 = 23.2
+y = √23.2 ≈ 4.82</div></div></div><div class="part"><div class="pq"><b>d</b>Comment on the reliability of this prediction. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:12mm"><div class="ans">Reliable: it is an interpolation (x = 7 is within 1 to 10) and the transformed model is strong (r ≈ 0.997).</div></div></div><div class="cite">Mathspace Chapter 3 review Q10 · 3.05</div></div></div>
+<div class="box"><div class="hd">Question 10<span>6 marks</span></div><div class="bd"><p class="q">For each of the data sets, a scatterplot reveals a non-linear relationship. Apply an appropriate logarithmic or reciprocal transformation to linearise the data:<div style="margin:1mm 0 0 4mm"><b>i</b>&nbsp; Based on the shape of the data, identify the most appropriate transformation to apply.<br><b>ii</b>&nbsp; State the coefficient of determination, r², for the transformed data, to four decimal places.<br><b>iii</b> Determine the equation of the least-squares regression line for the transformed data. Round coefficients as specified.</div></p><div class="part"><div class="pq"><b>a</b>A biologist observes that the relationship between the age of a tree (in years) and its height (in metres) is non-linear:<table class="t"><tr><td>Age (x)</td><td>1</td><td>2</td><td>5</td><td>10</td><td>20</td><td>30</td></tr><tr><td>Height (y)</td><td>0.5</td><td>1.1</td><td>2.0</td><td>2.8</td><td>3.8</td><td>4.5</td></tr></table> <span class="mk">(3 marks)</span></div><div class="sp" style="--h:26mm"><div class="ans">i log<sub>10</sub>(x) (increasing curve that flattens out)
+ii r² = 0.9867
+iii y = 0.32 + 2.68 log<sub>10</sub>(x)</div></div></div><div class="part"><div class="pq"><b>b</b>The relationship between the pressure (P in kPa) and volume (V in L) of a gas is non-linear:<table class="t"><tr><td>Volume (x)</td><td>1</td><td>2</td><td>4</td><td>5</td><td>8</td><td>10</td></tr><tr><td>Pressure (y)</td><td>100</td><td>52</td><td>24</td><td>21</td><td>13</td><td>10</td></tr></table> <span class="mk">(3 marks)</span></div><div class="sp" style="--h:26mm"><div class="ans">i <span class="fr"><span>1</span><span>x</span></span> (decreasing curve that drops sharply then flattens out)
+ii r² = 0.9991
+iii y = 0.35 + 100.18 × <span class="fr"><span>1</span><span>x</span></span></div></div></div><div class="cite">Mathspace Chapter 3 review Q11 · 3.06</div></div></div>
+<div class="box"><div class="hd">Question 11<span>2 marks</span></div><div class="bd"><p class="q">The value of a piece of industrial machinery is modelled using a log<sub>10</sub>(y) transformation, where y is the value in dollars and x is the age in years. The least-squares regression line for the transformed data is: log<sub>10</sub>(y) = 4.8 − 0.05x. The original data for the age (x) was collected for machinery aged between 1 and 8 years. The coefficient of determination for this model was r² = 0.96:</p><div class="part"><div class="pq"><b>a</b>Predict the value of the machinery (y) when it is 5 years old. Round the answer to the nearest dollar. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:16mm"><div class="ans">log<sub>10</sub>(y) = 4.8 − 0.05 × 5 = 4.55
+y = 10<sup>4.55</sup> ≈ $35 481</div></div></div><div class="part"><div class="pq"><b>b</b>Choose the description which best describes the reliability of this prediction.<div class="mcl" style="margin-top:1mm"><div><b>A</b>Unreliable, as it is an extrapolation.</div><div><b>B</b>Reliable, as it is an interpolation and the model is a strong fit.</div><div><b>C</b>Unreliable, because the r² value is too low.</div><div><b>D</b>Reliable, even though it is an extrapolation, because the correlation is strong.</div></div> <span class="mk">(1 mark)</span></div><div class="sp" style="--h:6mm"><div class="ans">B: x = 5 is within 1 to 8 years (interpolation) and r² = 0.96 is a strong fit.</div></div></div><div class="cite">Mathspace Chapter 3 review Q12 · 3.07</div></div></div>
+<div class="box"><div class="hd">Question 12<span>6 marks</span></div><div class="bd"><p class="q">The table shows data collected on the relationship between the dosage of a medication (in mg) and the reduction in blood pressure (in mmHg). A scatterplot of the data reveals a non-linear relationship:<table class="t"><tr><td>Dosage (mg), x</td><td>2</td><td>5</td><td>10</td><td>20</td><td>50</td><td>100</td></tr><tr><td>Reduction (mmHg), y</td><td>5.0</td><td>12.0</td><td>17.5</td><td>22.8</td><td>30.1</td><td>35.5</td></tr></table></p><div class="part"><div class="pq"><b>a</b>To pick the best model, a researcher tests three transformations: x², log<sub>10</sub>(x), and <span class="fr"><span>1</span><span>x</span></span>. Determine the coefficient of determination (r²) for each transformation and identify which one is the most appropriate. <span class="mk">(2 marks)</span></div><div class="sp" style="--h:18mm"><div class="ans">x²: r² ≈ 0.6057; log<sub>10</sub>(x): r² ≈ 0.99996; <span class="fr"><span>1</span><span>x</span></span>: r² ≈ 0.7686
+log<sub>10</sub>(x) is the most appropriate (highest r²).</div></div></div><div class="part"><div class="pq"><b>b</b>Using the best transformation from part (a), state the equation of the least-squares regression line. Round coefficients to two decimal places. <span class="mk">(2 marks)</span></div><div class="sp" style="--h:12mm"><div class="ans">y = −0.49 + 17.98 log<sub>10</sub>(x)</div></div></div><div class="part"><div class="pq"><b>c</b>Use the model to predict the reduction in blood pressure for a dosage of 15 mg. Round the answer to one decimal place. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:12mm"><div class="ans">y = −0.49 + 17.98 × log<sub>10</sub>(15) ≈ 20.7 mmHg</div></div></div><div class="part"><div class="pq"><b>d</b>Comment on the reliability of the prediction. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:12mm"><div class="ans">Reliable: the model is an extremely strong fit (r² ≈ 1.000) and 15 mg is within 2 to 100 mg (interpolation).</div></div></div><div class="cite">Mathspace Chapter 3 review Q13 · 3.07</div></div></div>
+</body></html>
