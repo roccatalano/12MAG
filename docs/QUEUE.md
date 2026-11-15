@@ -13,7 +13,7 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 
 ## Chapter 2: Investigating associations between two variables (lessons gm12-u3-l03 … l08, check gm12-u3-ch2-test)
 1. `done 2026-11-15 — l03–l08 cards prefilled: Do Now ×4 each (burnt ones replaced), You trys mapped, coursework Q ranges, CAS steps (scatterplot, r, r²), Ch2 videos (draft); 46 items reserved in the ledger` **Prefill the lesson cards** (l03–l08) in `planner/unit-plan.json` from the indexes, following the rules in CLAUDE.md: Do Now ×4 per lesson (current-design VCAA from `tools/vcaa_current_index.csv`, not burnt), APK (Cambridge U1&2 skills checklist + Edrolo U1&2 exam questions), Examples (Cambridge) with mapped Edrolo You trys, exits (Edrolo U3&4 exam practice), CAS skill ids (add new skills to `planner/cas-skills.json`, steps checked against `02 Sources\CAS guides`), coursework (Cambridge exercises), self-study videos (`planner/videos.json`, MaffsGuru first; status `draft` until Rocco checks). Reserve every chosen exam item in the ledger (`tools/ledger_manual.csv`, role as planned) so later tasks don't reuse it.
-2. `todo` **CFATs for Chapter 2** + solutions (Edrolo U3&4 exercise questions only: `tools/y12_edrolo_exercise_questions.csv`; Word layout per the 12mag-cfat-word skill if listed, otherwise as CFAT 1.1.x). Add them to the planner.
+2. `todo` **CFATs for Chapter 2** + solutions — Rocco 15 Nov: RECREATE CFAT 1.2.1/1.2.2 from scratch under rule 8 (Edrolo U3&4 exercise questions only: `tools/y12_edrolo_exercise_questions.csv`; Word layout per the 12mag-cfat-word skill if listed, otherwise as CFAT 1.1.x). Add them to the planner.
 3. `todo` **Lesson l03 (2A, 2B)**: slides (`tools/deck/<id>/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 4. `todo` **Lesson l04 (2C)**: slides + worksheet.
 5. `todo` **Lesson l05 (2D, 2E)**: slides + worksheet.
@@ -34,6 +34,11 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 
 ## Answers from Rocco
 (Write `Q<n>: answer`.)
+- Q1: recreate them using the new rule (task 2 rebuilds CFAT 1.2.1/1.2.2 from exercise questions only; Edrolo 2B Q11/Q12 freed for the l04 exits).
+- Q2: leave it with none (l08 has no exits).
+- Q3: "are you sure there is no matching worked examples anywhere?" → re-searched Edrolo U3&4 + U1&2: added Edrolo U1&2 6B WE3 (Ex 13), 6B WE1 (Ex 14); split Edrolo U3&4 3C WE1 into a (Ex 17) and b (Ex 18). Still nothing for Ex 1, 19, 20, 21. See Q6.
+- Q4: easy (OK).
+- Q6 (15 Nov, follow-up) OK to use Edrolo U1&2 worked examples as You trys (Ex 13, 14)? And use Edrolo 2D WE2 (third variable) as a 2H You try?
 
 ## Decisions log
 | When | Question | Decision taken | Why | Run |

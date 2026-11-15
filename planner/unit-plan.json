@@ -2894,14 +2894,14 @@
           "n": 13,
           "sub": "2E",
           "title": "Direction of association",
-          "youTry": null,
+          "youTry": "Edrolo U1&2 6B WE3",
           "video": "Cambridge GO · 2E Resources"
          },
          {
           "n": 14,
           "sub": "2E",
           "title": "Form of an association",
-          "youTry": null,
+          "youTry": "Edrolo U1&2 6B WE1",
           "video": "Cambridge GO · 2E Resources"
          },
          {
@@ -3200,21 +3200,21 @@
           "n": 17,
           "sub": "2G",
           "title": "Calculating the coefficient of determination",
-          "youTry": null,
+          "youTry": "Edrolo 3C WE1a",
           "video": "Cambridge GO · 2G Resources"
          },
          {
           "n": 18,
           "sub": "2G",
           "title": "Interpreting the coefficient of determination",
-          "youTry": null,
+          "youTry": "Edrolo 3C WE1b",
           "video": "Cambridge GO · 2G Resources"
          },
          {
           "n": 19,
           "sub": "2G",
           "title": "Calculating and interpreting the coefficient of determination",
-          "youTry": "Edrolo 3C WE1",
+          "youTry": null,
           "video": "Cambridge GO · 2G Resources"
          },
          {
@@ -3389,8 +3389,7 @@
           "sec": "2B"
          }
         ],
-        "exit": [],
-        "note": "No Edrolo U3&4 exam-practice questions for 2I (Edrolo has no Which graph? lesson): exits to confirm with Rocco."
+        "exit": []
        }
       },
       {
