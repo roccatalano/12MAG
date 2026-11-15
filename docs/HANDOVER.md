@@ -8,6 +8,9 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 
 
+## 15 Nov 21:32 — Ch5 #6: lesson l19 (5C moving medians) built (Draft)
+`tools/deck/l19/` (build.py, worksheet.py, figs.py with `mmed()` and `tsm()` = ts plot + revealable median crosses/guides) → `lessons/5C slides` (20), `5C worksheet` (+ solutions, 3 pages), copied to G: 01 Lesson materials. APK = VCAA 2020 E2 Q3b (original); 2E #10 burnt → dropped. 5C video links still blank.
+
 **15 Nov 21:07 (Ch4 runner #6):** l15 (4D) built: `lessons/4D slides` (20) + `4D worksheet` (3 pp) + solutions, Draft, copied to 01 Lesson materials. Next Ch4 tasks: revision booklet, test.
 
 ## 15 Nov 21:17 — Ch5 #5: lesson l18 (5B centring) built (Draft)
