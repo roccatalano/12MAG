@@ -1,6 +1,6 @@
 # 12MAG handover — 15 Nov 2026 (updated 13:10)
 
-Read `CLAUDE.md` first (rules, item index, **slide template rules**), then this file.
+Read `CLAUDE.md` first (rules, item index, **slide template rules**), then this file. The full to-do list is `docs/TODO.md`.
 Repo: `roccatalano/12MAG` (GitHub Pages: roccatalano.github.io/12mag/ → `planner/`). Rocco's dashboard repo `roccatalano/teaching-dashboard-2027` is read-only unless he asks.
 Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through the desktop-app bridge (stage files to read; commit files to write; can't move/rename/delete).
 
