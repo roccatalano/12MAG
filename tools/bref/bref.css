@@ -59,3 +59,4 @@ table.stem{border-collapse:collapse;font-size:.92em;font-family:"DejaVu Sans Mon
 table.stem td{padding:0 1.2mm}table.stem td.st{border-right:.35mm solid var(--ink);text-align:right;font-weight:700}
 table.stem td.small{font-family:Inter,Arial;padding-bottom:.6mm}
 .mcq span{white-space:nowrap}table.stem{line-height:1.2}
+.box.f .inl mjx-container{display:inline-block!important;margin:0!important}

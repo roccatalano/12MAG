@@ -9,7 +9,10 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 - New helpers in `tools/bref/cards.py`: `hist()` (any histogram, axes optional), `mini()` (shape thumbnails), `dots()`, `stem()` (stem plot table, styles in bref.css). Neck-size dot plot image: `tools/bref/vcaa2020e2_q2a.png`.
 - VCAA boxes: 1D = 2020 E2 Q2a (93%), 2016 E1 Q3 (87%, from the exam-practice index; S2 slide still says ?%); 1E = 2019 E1 Q3 (71%). 1C has no VCAA question from the lesson, so it carries Examples 6–9 + a description checklist.
 
-## NEXT JOB: bound reference cards for 1F, then 1G, 1H–1I (was: 1C, 1D and 1E — the notes below still apply)
+## Done 15 Nov (13:30): bound reference card 1F (full A4)
+- `lessons/1F bound reference.html` (+ G:), planner S3 card updated. VCAA boxes: 2017 E2 Q1ai (87%, the S3 APK) and 2026 NHT E2 Q1b, d (the S3 exit; NHT = answers only). Exit 1 (Edrolo 1G Q11, adapted from VCAA 2020 E2 Q4aii) left off: the original VCAA wording wasn't to hand.
+
+## NEXT JOB: bound reference cards for 1G, then 1H–1I (was: 1C, 1D and 1E — the notes below still apply)
 Rules are in CLAUDE.md, "Bound reference entries" section (read it first). In short: one colour cut-out card per subchapter; half A4 by default, full A4 if it doesn't fit; ONE fixed text size (never scale fonts to fill); fill spare space with real content (e.g. a VCAA question from that lesson); no Edrolo/source line under VCAA boxes (the title says it).
 - **Model to copy: 1A (half) and 1B (full)**, done 15 Nov: `lessons/1A bound reference.html`, `lessons/1B bound reference.html`, combined `lessons/1A-1B bound reference.html`.
 - **Build:** add each card to `CARDS` in `tools/bref/cards.py` (`size`, `title`, `sd` = Study Design words, `body` HTML, `cite`), add the lesson to `LESSONS` (e.g. `'1C-1E': ['1C','1D','1E']`, = lesson S2), run `python3 tools/bref/build.py`. Box classes: `box` (blue notes), `box f` (formula), `box ex` (green Cambridge example), `box tip` (orange), `box cas` (purple CAS steps), `box vc` (red VCAA question with `<span class="pc">NN% correct</span>` and an `ans` answer strip). Tables `table.t` (`sm` for wide ones). Pictures: inline SVG (see `bars()`/`seg()`), or crop from the VCAA PDF (see `vcaa2017e1_q5.png`).

@@ -229,6 +229,57 @@ E1 = f"""
 </div>
 """
 
+MAM = [('okapi','250'),('gorilla','210'),('pig','190'),('Brazilian tapir','160'),('jaguar','100'),('grey seal','85'),('giant armadillo','60'),('sheep','56'),('chimpanzee','52'),('kangaroo','35'),('goat','28'),('roedeer','15'),('baboon','11'),('rhesus monkey','6.8'),('raccoon','4.3'),('red fox','4.2'),('cat','3.3'),('echidna','3.0'),('rabbit','2.5')]
+def mamtab():
+    h = lambda r: '<tr><th>Mammal</th>' + ''.join(f'<td>{m}</td>' for m, _ in r) + '</tr><tr><th>Body weight (kg)</th>' + ''.join(f'<td>{w}</td>' for _, w in r) + '</tr>'
+    return f'<table class="t sm" style="width:100%;margin:1mm 0">{h(MAM[:10])}</table><table class="t sm" style="width:100%;margin-bottom:1mm">{h(MAM[10:])}</table>'
+
+F1 = f"""
+<div class="row">
+ <div class="box" style="flex:1"><h4>Two questions about any distribution</h4>
+  <table class="t" style="width:100%"><tr><th></th><th>Centre</th><th>Spread</th></tr>
+  <tr><td>skewed or outliers</td><td><b>median</b> M: the middle value</td><td><b>IQR</b>: spread of the middle 50%</td></tr>
+  <tr><td>symmetric, no outliers</td><td><b>mean</b> \\(\\bar x\\): the balance point</td><td><b>standard deviation</b> s: spread around the mean</td></tr></table>
+  <div class="small" style="margin-top:1mm">They come in pairs: median with IQR, mean with standard deviation. <b>Range</b> = largest − smallest (uses only two values).</div>
+  <div class="box tip" style="margin-top:1.2mm"><h4>Mean or median?</h4>The mean and the median are both measures of the centre of a distribution. If the distribution is <b>symmetric and there are no outliers</b>, either the mean or the median can be used to indicate the centre of the distribution. If it is <b>clearly skewed and/or there are outliers</b>, it is more appropriate to use the median. <span class="mut">The median is <b>resistant</b>: changing the largest value moves the mean but not the median.</span></div></div>
+ <div class="box f" style="flex:.8"><h4>Key formulas</h4>
+  <b>Median</b> at position <span class="inl">\\(\\tfrac{{n+1}}{{2}}\\)</span> in the <b>ordered</b> data <span class="small mut">(n odd: middle value; n even: average of the two middle values)</span>
+  <div style="margin-top:1.2mm"><b>Q<sub>1</sub></b> = median of the lower half · <b>Q<sub>3</sub></b> = median of the upper half <span class="small mut">(n odd: leave the median out of both halves)</span></div>
+  \\[\\text{{IQR}}=Q_3-Q_1 \\qquad R=\\text{{largest}}-\\text{{smallest}}\\]
+  \\[\\bar x=\\dfrac{{\\sum x}}{{n}} \\qquad s=\\sqrt{{\\dfrac{{\\sum (x-\\bar x)^2}}{{n-1}}}}\\]
+  <span class="small">s is roughly the typical distance of the values from the mean.</span></div>
+</div>
+<div class="row">
+ <div class="box ex" style="flex:1"><h4>Example 14 · median</h4>
+  <b>a</b> 2 9 1 8 3 5 3 8 1 → 1 1 2 3 <b>3</b> 5 8 8 9<br><span class="small">n = 9: \\(\\tfrac{{9+1}}{{2}}\\) = 5th value, M = <b>3</b></span><br>
+  <b>b</b> 10 1 3 4 8 6 10 1 2 9 → 1 1 2 3 <b>4 6</b> 8 9 10 10<br><span class="small">n = 10: average of 5th and 6th, M = \\(\\tfrac{{4+6}}{{2}}\\) = <b>5</b></span></div>
+ <div class="box ex" style="flex:1.25"><h4>Example 18 · IQR, n even (18 cats)</h4>
+  <div class="row">{stem([('1',['9']),('2','1 3 5 8'.split()),('3','0 0 4 9 9'.split()),('4','0 4 5 8'.split()),('5','0 3'.split()),('6','3 4'.split())],'1|2 = 1.2 kg','Weight (kg)')}
+  <div class="small" style="flex:1">9 values in each half.<br>Lower: 1.9 2.1 2.3 2.5 <b>2.8</b> 3.0 3.0 3.4 3.9 → Q<sub>1</sub> = 2.8<br>Upper: 3.9 4.0 4.4 4.5 <b>4.8</b> 5.0 5.3 6.3 6.4 → Q<sub>3</sub> = 4.8<br>IQR = 4.8 − 2.8 = <b>2.0</b></div></div></div>
+ <div class="box ex" style="flex:.85"><h4>Example 21 · mean</h4>
+  38 36 35 43 46 64 48 25 <span class="mut">(ms)</span><br>n = 8, \\(\\sum x\\) = 335<br>\\(\\bar x=\\tfrac{{335}}{{8}}=41.875\\) → <b>41.9</b></div>
+</div>
+<div class="box cas"><h4>CAS · mean, standard deviation and five-number summary (one-variable statistics)</h4>
+ <div class="row"><div style="flex:1"><b>TI-Nspire</b><ol class="st small"><li>Lists &amp; Spreadsheet: name a list (e.g. <i>height</i>), enter the data.</li><li>Add Calculator › Menu › Statistics › Stat Calculations › One-Variable Statistics.</li><li>X1 List: <i>height</i>. OK.</li><li>Read \\(\\bar x\\), <b>sx</b>, n, MinX, Q₁X, MedianX, Q₃X, MaxX.</li></ol></div>
+ <div style="flex:1"><b>ClassPad</b><ol class="st small"><li>Statistics app: name a list (e.g. <i>height</i>), enter the data.</li><li>Calc › One-Variable; XList: main\\height, Freq: 1.</li><li>Read \\(\\bar x\\), <b>sx</b>, n; scroll for minX, Q₁, Med, Q₃, maxX.</li></ol></div>
+ <div style="flex:.8"><b>Frequency table?</b><div class="small">Values in one list, frequencies in another; set the Frequency List (TI) or Freq (ClassPad) to it. Check that n = total frequency.</div>
+ <div class="ans small" style="margin-top:1mm">Use <b>sx</b>, not σx: General Maths always uses the sample standard deviation.</div></div></div>
+</div>
+<div class="row">
+ <div class="box vc" style="flex:1"><h4>VCAA 2017 Exam 2 Q1ai <span class="pc">87% correct</span></h4>
+  The number of eggs counted in a sample of 12 clusters of moth eggs is recorded in the following table.
+  <table class="t sm" style="margin:1mm 0"><tr><th>number of eggs</th><td>172</td><td>192</td><td>159</td><td>125</td><td>197</td><td>135</td><td>140</td><td>140</td><td>138</td><td>166</td><td>136</td><td>131</td></tr></table>
+  From the information given, determine the range. <span class="mut">(1 mark)</span>
+  <div class="ans" style="margin-top:1mm"><b>72 eggs</b>: 197 − 125 = 72.</div></div>
+</div>
+<div class="box vc"><h4>VCAA 2026 NHT Exam 2 Q1b, d <span class="pc">NHT report: answers only</span></h4>
+ The table below displays the typical body weight, in kilograms, for a sample of 19 different mammals.{mamtab()}
+ <div class="row"><div style="flex:1"><b>b.</b> Complete the five-number summary in the table below for the variable <i>body weight</i>, in kilograms, by writing in the values for the minimum and the median. <span class="mut">(2 marks)</span>
+ <table class="t sm" style="margin-top:1mm"><tr><th>Minimum</th><th>Q<sub>1</sub></th><th>Median</th><th>Q<sub>3</sub></th><th>Maximum</th></tr><tr><td></td><td>4.3</td><td></td><td>100</td><td>250</td></tr></table></div>
+ <div style="flex:1"><b>d.</b> The mean body weight is 67 kg, rounded to the nearest whole number.<br>Explain why the median is a better measure of the centre of the body weight data than the mean. <span class="mut">(1 mark)</span></div></div>
+ <div class="ans" style="margin-top:1mm"><b>b</b> Minimum = <b>2.5</b>; n = 19, median = 10th value = <b>35</b>. &nbsp; <b>d</b> The data is positively skewed (and/or has outliers), so the mean is pulled above most values; the median is not affected.</div></div>
+"""
+
 CARDS = {
  '1A': dict(size='half', title='Types of data', sd='Study Design: types of data', body=A1,
             cite='Notes: own words, from Cambridge General Mathematics Units 3&amp;4, 1A. Example: Cambridge U3&amp;4 Example 1.'),
@@ -245,6 +296,10 @@ CARDS = {
  '1E': dict(size='half', title='Logarithmic scales',
             sd='Study Design: the use of a logarithmic (base 10) scale to display data ranging over several orders of magnitude and their interpretation in terms of powers of ten', body=E1,
             cite='Notes: own words, from Cambridge General Mathematics Units 3&amp;4, 1E. Example: Cambridge U3&amp;4 Example 13 (histogram redrawn).'),
+
+ '1F': dict(size='full', title='Measures of centre and spread',
+            sd='Study Design: summary of the distributions of numerical variables; the sample mean and standard deviation and their use in comparing data distributions in terms of centre and spread', body=F1,
+            cite='Notes: own words, from Cambridge General Mathematics Units 3&amp;4, 1F ("Mean or median?" box verbatim, p. 52). Examples: Cambridge U3&amp;4 Examples 14, 18, 21.'),
 }
 
 LESSONS = {'1A-1B': ['1A', '1B'], '1C-1E': ['1C', '1D', '1E']}
