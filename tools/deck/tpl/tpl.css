@@ -156,3 +156,18 @@
 .T .R ol.wk li.ans.big .pa{display:flex;gap:10px;align-items:center;flex-wrap:nowrap;padding:7px 0;border-top:1px solid #bfe3d2;font-size:20px}
 .T .R ol.wk li.ans.big .pa:first-of-type{border-top:0}
 .T .R ol.wk li.ans.big .pa .pl{min-width:26px;color:#137a59;font-size:21px}
+
+/* multi-part questions: parts fill the left card; the part being answered stays bright (15 Nov) */
+.T ol.parts li,.T .pa{transition:opacity .35s}
+.T ol.parts li.dim,.T .R ol.wk li.ans.big .pa.dim{opacity:.22}
+.T.mp .L .q{display:flex;flex-direction:column}
+.T.mp .L .q>div:last-child{flex:1;display:flex;flex-direction:column}
+.T.mp .L .q>div>ol.parts{flex:1;justify-content:space-evenly;gap:14px}
+.T.mp ol.parts li{font-size:24px;line-height:1.4}
+.T.mp ol.parts li b{min-width:30px}
+/* key ideas: two big cards, no animation */
+.T .col2.keys{align-items:start}
+.T .col2.keys .card3 .kd,.T .col2.keys .card3 .kf{border-color:var(--line)}
+/* title: textbook and subchapters one per line */
+.s-title .sub div{line-height:1.35}
+.s-title .sub div:first-child{font-weight:700;color:var(--ink)}

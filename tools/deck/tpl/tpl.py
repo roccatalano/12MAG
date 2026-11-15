@@ -80,7 +80,10 @@ def qslide(kind,pill,head,given,steps,answer,src,stat=None,mc=None,key=None,dist
     steps may include fx(...) steps: formula → substitute → solve. The answer is a concluding statement."""
     if isinstance(given,tuple):  # (text before, figure, text after): text blocks stay whole, figure fills the middle
         pre,fig,post=given; given=f'<div>{pre}</div><div class="fig">{fig}</div>'+(f'<div>{post}</div>' if post else '')
-    else: given=f'<div>{given}</div>'
+    else:
+        i=given.find('<ol class="parts">')
+        if parts and i>0: given=f'<span style="display:block">{given[:i]}</span>{given[i:]}'  # lead text stays one block when the parts fill the card
+        given=f'<div>{given}</div>'
     if cmd and cmd[0]!='Multiple choice':  # highlight the command word where it appears in the question (last occurrence = the actual question line)
         rx=re.compile(r'(?<![\w-])('+re.escape(cmd[0])+r')(?![\w-])(?![^<]*>)',re.I)
         ms=list(rx.finditer(given))
@@ -103,14 +106,15 @@ def qslide(kind,pill,head,given,steps,answer,src,stat=None,mc=None,key=None,dist
         if dis: R+=f'<li class="frag dis"><div class="dlab">What’s the distractor?</div><div class="frag" data-dis="{dis[0]}"><span class="dl">{dis[0]}</span> {dis[1]}</div></li>'
         if dist: R+='<span class="frag" data-pct="1"></span>'
     elif parts:  # multi-part question: one big answer card, one part per click
-        pl=''.join(f'<div class="frag pa" {(p+("",))[2]}><b class="pl">{p[0]}</b><span>{p[1]}</span></div>' for p in parts)
+        pl=''.join(f'<div class="frag pa" data-pk="{k}" {(p+("",))[2]}><b class="pl">{p[0]}</b><span>{p[1]}</span></div>' for k,p in enumerate(parts))
+        pl+='<span class="frag" data-pall="1"></span>'  # last click: every part back in full (for the static PDF)
         R+=f'<li class="frag ans big"{sa}><span class="wn">✓</span><span class="sl">Answers</span>{answer}{pl}</li>'
     else:
         bl=''.join(f'<div class="frag bl" {a}>{t}</div>' for t,a in build)
         fig=f'<div class="afig">{afig}</div>' if afig else ''
         R+=f'<li class="frag ans"{sa}><span class="wn">✓</span><span class="sl">Answer</span>{answer}{bl}{fig}</li>'
     R+='</ol></div>'
-    cls=kind+(' mcslide' if mc else '')
+    cls=kind+(' mcslide' if mc else '')+(' mp' if parts else '')
     v=f'<button class="vid" data-src="" data-label="{video}">▶ Video</button>' if video else ''
     return _frame(cls,pill,head,f'<div class="qg">{L}{R}</div>',src,stat,cfu or ('mc' if mc else 'cold' if kind=='we' else 'qw'),v,cmd if cmd and cmd[0]!='Multiple choice' else None)
 
@@ -147,7 +151,7 @@ def cas(pill,head,task,ti,cp,answer,src,videos=()):
 def title(lesson,topic,sub,code,flow=('Do Now','APK','Learn','Worked examples','You try','Exit tasks')):
     """topic: the formal topic name (e.g. the Cambridge subchapter title) · sub: subchapter code(s) and textbook."""
     col={'CFAT':'#00838F','Do Now':'#00838F','APK':'var(--apk)','Learn':'var(--learn)','Worked examples':'var(--we)','You try':'var(--yt)','Exit tasks':'var(--exit)'}
-    return (f'<section class="slide s-title"><div class="kicker"><i></i>Unit 3<i></i>AOS 1 Data Analysis<i></i>Lesson {lesson}</div><h1 style="font-size:84px">{topic}</h1><div class="sub">{sub}</div>'
+    return (f'<section class="slide s-title"><div class="kicker"><i></i>Unit 3<i></i>AOS 1 Data Analysis<i></i>Lesson {lesson}</div><h1 style="font-size:84px">{topic}</h1><div class="sub">{"".join(f"<div>{x}</div>" for x in sub.split(" · "))}</div>'
             '<div class="flow">'+''.join(f'<div style="border-color:{col.get(f,"var(--ink)")}">{f}</div>' for f in flow)+
             f'</div><div class="foot"><span>12MAG · General Mathematics 3&amp;4</span><span>{code}</span></div></section>')
 
@@ -161,9 +165,9 @@ def today(li,sc,seq):
 
 def keys(defs,forms,src):
     """Two columns: key definitions (term, meaning[, picture html]) · key formulas (name, formula html built with F[, rule line])."""
-    d=''.join(f'<div class="kd frag"><div><b>{x[0]}</b><span>{x[1]}</span></div>'+(f'<div class="kpic">{x[2]}</div>' if len(x)>2 else '')+'</div>' for x in defs)
-    f=''.join(f'<div class="kf frag"><span class="kn">{x[0]}</span><span class="kx">{x[1]}</span>'+(f'<span class="kr">{x[2]}</span>' if len(x)>2 else '')+'</div>' for x in forms)
-    body=f'<div class="col2"><div><h3>Key definitions</h3>{d}</div><div><h3>Key formulas</h3>{f}</div></div>'
+    d=''.join(f'<div class="kd"><div><b>{x[0]}</b><span>{x[1]}</span></div>'+(f'<div class="kpic">{x[2]}</div>' if len(x)>2 else '')+'</div>' for x in defs)
+    f=''.join(f'<div class="kf"><span class="kn">{x[0]}</span><span class="kx">{x[1]}</span>'+(f'<span class="kr">{x[2]}</span>' if len(x)>2 else '')+'</div>' for x in forms)
+    body=f'<div class="col2 keys"><div class="card3"><h3>Key definitions</h3>{d}</div><div class="card3"><h3>Key formulas</h3>{f}</div></div>'
     return _frame('',"Key ideas","Key definitions and formulas",body,src,cfu='')
 
 def scgrid(sc):

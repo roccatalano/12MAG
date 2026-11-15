@@ -7,8 +7,9 @@ function dotSplit(spec){const [sel,i,lab]=spec.split('|');const box=document.que
   if(Math.abs(ax-bx)<1){const y=(ay+by)/2;g.append(el('line',{x1:ax-r*2.6,x2:ax+r*2.6,y1:y,y2:y,stroke:'#d2475b','stroke-width':4,'stroke-dasharray':'7 5'}),el('text',{x:ax+r*3,y:y+7,'font-size':22,'font-weight':800,fill:'#b0263a'},lab||''))}
   else{const x=(ax+bx)/2;g.append(el('line',{x1:x,x2:x,y1:Math.min(ay,by)-r*2,y2:Math.max(ay,by)+r,stroke:'#d2475b','stroke-width':4,'stroke-dasharray':'7 5'}),el('text',{x:x+6,y:Math.min(ay,by)-r*2,'font-size':22,'font-weight':800,fill:'#b0263a'},lab||''))}
   svg.append(g)}
-function tplapply(s,f){normApply(f);if(f.dataset.dsplit)dotSplit(f.dataset.dsplit);if(f.dataset.fx==='sub'){const x=f.closest('.fx');if(x)x.classList.add('sub')}}
-function tplreset(s){normReset(s);s.querySelectorAll('g.dsplit').forEach(g=>g.remove());s.querySelectorAll('.fx.sub').forEach(x=>x.classList.remove('sub'))}
+function tplapply(s,f){normApply(f);if(f.dataset.dsplit)dotSplit(f.dataset.dsplit);if(f.dataset.fx==='sub'){const x=f.closest('.fx');if(x)x.classList.add('sub')}if(f.dataset.pk!=null){const k=+f.dataset.pk;s.querySelectorAll('.L ol.parts li').forEach((li,i)=>li.classList.toggle('dim',i!==k));s.querySelectorAll('.pa').forEach((p,i)=>p.classList.toggle('dim',i!==k))}
+if(f.dataset.pall){s.querySelectorAll('.L ol.parts li.dim,.pa.dim').forEach(e=>e.classList.remove('dim'))}}
+function tplreset(s){s.querySelectorAll('ol.parts li.dim,.pa.dim').forEach(e=>e.classList.remove('dim'));normReset(s);s.querySelectorAll('g.dsplit').forEach(g=>g.remove());s.querySelectorAll('.fx.sub').forEach(x=>x.classList.remove('sub'))}
 /* ---------- tpl: normal curve (68–95–99.7%) ----------
    cfg: m (mean) · s (SD) · rows ['x','z'] axis rows · hide ['x','z','pct'] hidden until shown · xl axis title · W h fs · dec · sh [[a,b,col,label]] always shaded
    frags: data-nclear="#id" (clear earlier shading/marks) · data-nshade="#id|a,b|col|label" (z units; spaces separate several) · data-nshow="#id|x,z,pct" · data-nmark="#id|z|label|col" */
