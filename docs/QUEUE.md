@@ -76,7 +76,7 @@ _Notes for all AoS 2–4 runners (Rocco, 16 Nov):_
 ## AoS 2: Recursion and financial modelling (runner "12MAG AoS 2 runner")
 
 ### Chapter 7: Modelling growth and decay using recursion (lessons gm12-u3-l31, gm12-u3-l32, gm12-u3-l33, gm12-u3-l34; check gm12-u3-l36)
-1. `todo` **Prefill the lesson cards** (gm12-u3-l31, gm12-u3-l32, gm12-u3-l33, gm12-u3-l34) in `planner/unit-plan.json` (see notes above).
+1. `in progress 16 Nov 01:11` **Prefill the lesson cards** (gm12-u3-l31, gm12-u3-l32, gm12-u3-l33, gm12-u3-l34) in `planner/unit-plan.json` (see notes above).
 2. `todo` **CFATs for Chapter 7** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch7/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
 3. `todo` **CFAT follow-ups for Chapter 7** (Jacaranda exercises; see notes above).
 4. `todo` **Lesson gm12-u3-l31 (7A)**: slides (`tools/deck/gm12-u3-l31/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
