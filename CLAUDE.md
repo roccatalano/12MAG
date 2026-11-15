@@ -55,3 +55,4 @@ Claude can create/overwrite files on G: but cannot move, rename or delete them.
 ## Planner decisions (Rocco, 14 Nov)
 - Keep the Cambridge suggested teaching sequence as the lesson order. No drag-and-drop or auto-built slides: too complicated.
 - The planner must look and work like the teacher dashboard's nested-card system.
+- **Keep card text minimal** (Rocco, 15 Nov): a material's description is one line max; side-by-side copies (e.g. Student copy / Solutions) get a label and buttons only, no subtext.
