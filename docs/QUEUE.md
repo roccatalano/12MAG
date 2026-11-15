@@ -40,7 +40,7 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 7. `todo` **Chapter 3 test** from the Mathspace Chapter 3 topic assessment (`02 Sources\Textbooks\Mathspace\Chapter 3 - Model linear associations`). Leave out the transformation questions (lessons 3.05–3.07): they go to the Ch 4 test. If it can't be built from what's there, mark `needs Rocco`.
 
 ## Chapter 4: Data transformations (lessons gm12-u3-l12 … l15, check gm12-u3-ch4-test)
-1. `todo` **Prefill the lesson cards** (l12–l15) in `planner/unit-plan.json`, same rules as Ch 3 task 1 (Do Now ×4 retrieval from `tools/vcaa_current_index.csv`, APK, Examples + mapped Edrolo You trys, exits, CAS skill ids, coursework, videos `draft`). Reserve every chosen exam item in `tools/ledger_manual.csv`. Check the ledger first: the Ch 3 runner reserves items at the same time.
+1. `in progress 15 Nov 19:54` **Prefill the lesson cards** (l12–l15) in `planner/unit-plan.json`, same rules as Ch 3 task 1 (Do Now ×4 retrieval from `tools/vcaa_current_index.csv`, APK, Examples + mapped Edrolo You trys, exits, CAS skill ids, coursework, videos `draft`). Reserve every chosen exam item in `tools/ledger_manual.csv`. Check the ledger first: the Ch 3 runner reserves items at the same time.
 2. `todo` **CFATs for Chapter 4** + solutions (CFAT 1.4.x, Edrolo U3&4 exercise questions only, HTML + PDF; copy `tools/cfat/ch2/build_html.py` to `tools/cfat/ch4/`). Each CFAT sits at the start of the lesson after the content it covers.
 3. `todo` **Lesson l12 (4A)**: slides (`tools/deck/l12/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 4. `todo` **Lesson l13 (4B)**: slides + worksheet.
