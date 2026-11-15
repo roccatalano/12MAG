@@ -280,6 +280,82 @@ F1 = f"""
  <div class="ans" style="margin-top:1mm"><b>b</b> Minimum = <b>2.5</b>; n = 19, median = 10th value = <b>35</b>. &nbsp; <b>d</b> The data is positively skewed (and/or has outliers), so the mean is pulled above most values; the median is not affected.</div></div>
 """
 
+def box(lo, hi, lw, q1, m, q3, uw, out=(), step=None, lab=None, xl='', W=300, H=58, fences=(), bands=False, mw='100%', col='#cfe0fb', axis=True):
+    """Horizontal boxplot SVG on a scaled axis; fences = [(x, label)]."""
+    x0, x1, yb, bh, ya = 12, W - 12, 22, 16, H - (22 if xl else 12)
+    X = lambda v: x0 + (v - lo) / (hi - lo) * (x1 - x0)
+    s = [f'<svg viewBox="0 0 {W} {H}" width="100%" style="max-width:{mw}">']
+    for fx, ft in fences:
+        s.append(f'<line x1="{X(fx):.1f}" y1="10" x2="{X(fx):.1f}" y2="{ya}" stroke="#d2475b" stroke-dasharray="3 2"/><text x="{X(fx):.1f}" y="8" font-size="7.5" fill="#d2475b" text-anchor="middle">{ft}</text>')
+    if bands:
+        for a, b in [(lw, q1), (q1, m), (m, q3), (q3, uw)]:
+            s.append(f'<text x="{(X(a)+X(b))/2:.1f}" y="{yb-bh/2-3}" font-size="7.5" fill="#6b7280" text-anchor="middle">25%</text>')
+    yc = yb + bh / 2
+    s.append(f'<line x1="{X(lw):.1f}" y1="{yc}" x2="{X(q1):.1f}" y2="{yc}" stroke="#1b1f2a" stroke-width="1.2"/><line x1="{X(q3):.1f}" y1="{yc}" x2="{X(uw):.1f}" y2="{yc}" stroke="#1b1f2a" stroke-width="1.2"/>')
+    s.append(f'<rect x="{X(q1):.1f}" y="{yb}" width="{X(q3)-X(q1):.1f}" height="{bh}" fill="{col}" stroke="#1b1f2a" stroke-width="1.2"/><line x1="{X(m):.1f}" y1="{yb}" x2="{X(m):.1f}" y2="{yb+bh}" stroke="#d2475b" stroke-width="2"/>')
+    for o in out:
+        s.append(f'<circle cx="{X(o):.1f}" cy="{yc}" r="2.6" fill="#fff" stroke="#1b1f2a" stroke-width="1.1"/>')
+    if axis: s.append(f'<line x1="{x0}" y1="{ya}" x2="{x1}" y2="{ya}" stroke="#1b1f2a" stroke-width="1.2"/>')
+    if step:
+        v = lo
+        while v <= hi + 1e-9:
+            big = lab and abs((v - lo) / lab - round((v - lo) / lab)) < 1e-6
+            s.append(f'<line x1="{X(v):.1f}" y1="{ya}" x2="{X(v):.1f}" y2="{ya+(4 if big else 2.5)}" stroke="#1b1f2a" stroke-width=".8"/>')
+            if big: s.append(f'<text x="{X(v):.1f}" y="{ya+11}" font-size="8" text-anchor="middle">{v:g}</text>')
+            v += step
+    if xl: s.append(f'<text x="{W/2}" y="{H-1}" font-size="8.5" font-weight="700" text-anchor="middle">{xl}</text>')
+    s.append('</svg>')
+    return ''.join(s)
+
+def sbox(lw, q1, m, q3, uw, out, cap):
+    return f'<div style="flex:1;text-align:center">{box(0, 20, lw, q1, m, q3, uw, out, W=120, H=44, axis=False)}<div class="small"><b>{cap[0]}</b><br><span class="mut">{cap[1]}</span></div></div>'
+
+HEP = [('1','1.76','15.34','41.22'),('2','1.79','16.96','42.41'),('3','1.83','13.87','46.53'),('4','1.82','14.23','40.53'),('5','1.87','13.78','40.62'),('6','1.73','14.50','45.62'),('7','1.68','15.08','42.33'),('8','1.82','13.13','40.88'),('9','1.83','14.22','39.22'),('10','1.87','13.62','42.51'),('11','1.87','12.01','42.75'),('12','1.80','12.88','38.12'),('13','1.83','12.68','42.65'),('14','1.87','12.45','41.32'),('15','1.78','11.31','42.88')]
+def heptab():
+    rows = [('athlete number', 0), ('high jump (metres)', 1), ('shot-put (metres)', 2), ('javelin (metres)', 3)]
+    return '<table class="t sm" style="width:100%;margin:1mm 0">' + ''.join(f'<tr><th>{n}</th>' + ''.join(f'<td>{r[i]}</td>' for r in HEP) + '</tr>' for n, i in rows) + '</table>'
+
+G1 = f"""
+<div class="row">
+ <div class="box" style="flex:1"><h4>Five-number summary and boxplot</h4>
+  <b>Five-number summary:</b> minimum, Q<sub>1</sub>, median, Q<sub>3</sub>, maximum.<br>
+  <b>Boxplot:</b> a picture of it. The box runs Q<sub>1</sub> to Q<sub>3</sub> (the middle 50%) with a line at the median; the <b>whiskers</b> run to the smallest and largest values that are <b>not outliers</b>.
+  {box(0, 100, 12, 35, 50, 62, 95, step=5, lab=10, bands=True, H=50)}
+  <span class="small">Each of the four sections holds about <b>25%</b> of the data, however long it looks: a long whisker means spread out, not more values.</span></div>
+ <div class="box f" style="flex:.9"><h4>Key formulas</h4>
+  \\[\\text{{IQR}}=Q_3-Q_1 \\qquad \\text{{range}}=\\max-\\min\\]
+  \\[\\text{{LF}}=Q_1-1.5\\times\\text{{IQR}} \\qquad \\text{{UF}}=Q_3+1.5\\times\\text{{IQR}}\\]
+  <b>Outlier:</b> x &lt; LF → outlier · x &gt; UF → outlier. Drawn as a dot; the whisker stops at the last value inside the fence.
+  <div class="box ex" style="margin-top:1.2mm"><h4>CAS 4 · 19 marks</h4>Q<sub>1</sub> = 23, Q<sub>3</sub> = 35, IQR = 12<br>LF = 23 − 1.5 × 12 = 5 · UF = 35 + 1.5 × 12 = 53<br>3 &lt; 5 = LF → <b>3 is an outlier</b>; lower whisker stops at 21.
+  {box(0, 55, 21, 23, 30, 35, 48, [3], step=1, lab=5, fences=[(5, 'LF = 5'), (53, 'UF = 53')], H=54)}</div></div>
+</div>
+<div class="box cas"><h4>CAS · boxplot with outliers (then read the five numbers with trace)</h4>
+ <div class="row"><div style="flex:1"><b>TI-Nspire</b><ol class="st small"><li>Lists &amp; Spreadsheet: name a list (e.g. <i>marks</i>), enter the data.</li><li>Add Data &amp; Statistics; x-axis → <i>marks</i>.</li><li>Menu › Plot Type › Box Plot (outliers shown as dots).</li><li>Menu › Analyze › Graph Trace to read the values.</li></ol></div>
+ <div style="flex:1"><b>ClassPad</b><ol class="st small"><li>Statistics app: name a list (e.g. <i>marks</i>), enter the data.</li><li>SetGraph: Draw On · Type MedBox · XList main\\marks · Freq 1.</li><li>Tick <b>Show Outliers</b>; Set; plot.</li><li>Tap Trace; move with the cursor arrows.</li></ol></div></div></div>
+<div class="row">
+ <div class="box ex" style="flex:1"><h4>Example 22 · boxplot from a five-number summary</h4>
+  Life expectancy (years), 23 countries: <b>52, 66, 73, 75, 77</b>
+  {box(50, 80, 52, 66, 73, 75, 77, step=1, lab=5, xl='Life expectancy (years)', H=56)}
+  <span class="small">1 Scaled, labelled axis · 2 box Q<sub>1</sub> to Q<sub>3</sub> · 3 median line · 4 whiskers to min and max.</span></div>
+ <div class="box ex" style="flex:1"><h4>Examples 23 + 24 · reading a boxplot</h4>
+  {box(0, 100, 10, 30, 36, 44, 60, [4, 70, 84, 92], step=2, lab=10, fences=[(9, 'LF = 9'), (65, 'UF = 65')], H=50)}
+  <span class="small">M = 36 · Q<sub>1</sub> = 30 · Q<sub>3</sub> = 44 · IQR = 14 · min 4, max 92 · outliers 4, 70, 84, 92.<br>
+  <b>Percentages:</b> below Q<sub>1</sub> 25% · below M 50% · below Q<sub>3</sub> 75% · Q<sub>1</sub> to Q<sub>3</sub> 50% · Q<sub>1</sub> to max 75%.</span></div>
+</div>
+<div class="box"><h4>Shape from a boxplot: where is the median in the box, and which whisker is longer?</h4>
+ <div class="row" style="gap:3mm">{sbox(2,7,10,13,18,[],('Symmetric','median central, equal whiskers'))}{sbox(2,4,6,10,18,[],('Positively skewed','median left, long right whisker'))}{sbox(2,10,14,16,18,[],('Negatively skewed','median right, long left whisker'))}{sbox(6,8,9,10,12,[1,18],('With outliers','dots past the whiskers'))}</div>
+ <div class="row" style="margin-top:1mm"><div class="box tip" style="flex:1"><h4>Describe in this order</h4>Shape (and outliers) · centre (the median) · spread (IQR and range) · outliers by value.</div>
+ <div class="rep" style="flex:2"><b>Example 26:</b> The distribution is symmetric but with outliers. The distribution is centred at 41, the median value. The spread of the distribution, as measured by the IQR, is 5.5 and, as measured by the range, 37. There are four outliers: 10, 15, 20 and 25.</div></div></div>
+<div class="row">
+ <div class="box vc" style="flex:1"><h4>VCAA 2020 Exam 2 Q2c <span class="pc">55% correct</span></h4>
+  <div class="row"><div style="flex:1">The five-number summary for this sample of neck sizes, in centimetres, is given in the following table.
+  <table class="t sm" style="margin:1mm 0"><tr><th>minimum</th><th>first quartile (Q<sub>1</sub>)</th><th>median</th><th>third quartile (Q<sub>3</sub>)</th><th>maximum</th></tr><tr><td>31</td><td>36</td><td>38</td><td>39</td><td>44</td></tr></table>
+  Use the five-number summary to construct a boxplot, showing any outliers if appropriate. <span class="mut">(2 marks)</span></div>
+  <div class="ans" style="flex:1">IQR = 39 − 36 = 3 · LF = 36 − 1.5 × 3 = 31.5 · UF = 39 + 1.5 × 3 = 43.5<br>31 &lt; 31.5 = LF and 44 &gt; 43.5 = UF → <b>31 and 44 are outliers</b>; whiskers to 32 and 43.
+  {box(30, 45, 32, 36, 38, 39, 43, [31, 44], step=1, lab=1, fences=[(31.5, 'LF = 31.5'), (43.5, 'UF = 43.5')], xl='neck size (cm)', H=60)}</div></div></div>
+</div>
+"""
+
 CARDS = {
  '1A': dict(size='half', title='Types of data', sd='Study Design: types of data', body=A1,
             cite='Notes: own words, from Cambridge General Mathematics Units 3&amp;4, 1A. Example: Cambridge U3&amp;4 Example 1.'),
@@ -300,6 +376,10 @@ CARDS = {
  '1F': dict(size='full', title='Measures of centre and spread',
             sd='Study Design: summary of the distributions of numerical variables; the sample mean and standard deviation and their use in comparing data distributions in terms of centre and spread', body=F1,
             cite='Notes: own words, from Cambridge General Mathematics Units 3&amp;4, 1F ("Mean or median?" box verbatim, p. 52). Examples: Cambridge U3&amp;4 Examples 14, 18, 21.'),
+
+ '1G': dict(size='full', title='The five-number summary and the boxplot',
+            sd='Study Design: the five-number summary and boxplots (including the use of the lower fence (Q1 – 1.5 × IQR) and upper fence (Q3 + 1.5 × IQR) to identify and display possible outliers)', body=G1,
+            cite='Notes: own words, from Cambridge General Mathematics Units 3&amp;4, 1G. Examples: Cambridge U3&amp;4 Examples 22–24, 26 (Example 26 description verbatim) and CAS 4; boxplots redrawn.'),
 }
 
 LESSONS = {'1A-1B': ['1A', '1B'], '1C-1E': ['1C', '1D', '1E']}

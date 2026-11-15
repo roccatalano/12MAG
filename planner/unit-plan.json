@@ -1455,8 +1455,8 @@
          {
           "kind": "Bound reference entry",
           "desc": "Cut-out card per subchapter for the bound reference.",
-          "status": "todo",
-          "file": ""
+          "status": "ready",
+          "file": "lessons/1G bound reference.html"
          }
         ],
         "homework": {
