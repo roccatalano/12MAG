@@ -54,6 +54,7 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 - Rocco: "excellent", then asked for the CFAT / revision-booklet look: header (VCE General Maths 3&4 · AoS 1 · Data analysis), page numbers, simple title box, no references except VCAA sources, 'Example n' / 'You try n' headings, blank space instead of ruled lines. Rules in CLAUDE.md "Guided worksheets".
 - New library `tools/deck/ws2.py`; `tools/deck/s1/worksheet.py` rewritten on it → `lessons/S1-worksheet(-solutions).html/.pdf`, 4 pages each; G: `1A-1B worksheet(.pdf)`, `1A-1B worksheet solutions(.pdf)`.
 - Space-savers: heptathlon table turned (noted in its source line); Ex 4, Ex 5 → '(Table: see Example 3.)'; You try 4 → '(Table: see You try 3.)'; Example 1 and You try 1 are full-width boxes (one above the other).
+- Round 3 (Rocco): VCAA source in the box header; writing lines for one-word answers; Example + You try in one split box; You trys = blank space, no scaffolding (red answers on solutions). Still 4 pages.
 - Older worksheets S2–S5 are still in the old style (wslib.py) with CAS/Key ideas boxes: rebuild on ws2 (TODO).
 
 ## >>> NEXT JOB: Rocco reviews the S1 worksheet; then Lesson 1 bound reference (cards 1A, 1B) → planner card review <<<

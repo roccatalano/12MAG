@@ -39,6 +39,12 @@ body {{ font-family:Arial,"Liberation Sans",Helvetica,sans-serif; font-size:9pt;
 .mc {{ display:grid; gap:.4mm 4mm; margin:1mm 0; }} .mc b {{ display:inline-block; width:5mm; }}
 .mc .ok {{ display:none; color:{RED}; font-weight:bold; }} .sol .mc .right .ok {{ display:inline; }} .sol .mc .right span {{ color:{RED}; }}
 .why {{ visibility:hidden; color:{RED}; font-size:9pt; }} .sol .why {{ visibility:visible; }}
+.wl {{ border-bottom:1px solid #777; height:6.5mm; margin:.5mm 0 1mm; display:flex; align-items:flex-end; padding-bottom:.6mm; }}
+.ey .eyh {{ display:grid; grid-template-columns:1fr 1fr; border-bottom:1.2px solid #000; background:#eee; font-weight:bold; font-size:10pt; text-transform:uppercase; letter-spacing:.3px; }}
+.ey .eyh > div {{ padding:1mm 3mm; }} .ey .eyh > div:first-child, .ey .eyb > div:first-child {{ border-right:1.2px solid #000; }}
+.ey .eyb {{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); flex:1; }}
+.ey .eyb > .bd {{ padding:2mm 3mm; display:flex; flex-direction:column; }}
+.space .ans svg line, .space .ans svg rect {{ stroke:{RED}; }} .space .ans svg text {{ fill:{RED}; }} .space .ans svg rect {{ fill-opacity:.25; }}
 .src {{ font-size:8pt; font-style:italic; color:#444; text-align:right; margin-top:auto; padding-top:1mm; }}
 .guess {{ font-size:9pt; margin-top:1.5mm; padding:1mm 2mm; border:1px dashed #000; display:flex; align-items:flex-end; gap:1.5mm; flex-wrap:wrap; }}
 .guess i {{ display:inline-block; width:14mm; border-bottom:1px solid #000; height:4mm; }}
@@ -50,7 +56,7 @@ table.t.fill td {{ height:6mm; min-width:15mm; }}
 table.t.tiny {{ font-size:7.2pt; margin:0; }} table.t.tiny th, table.t.tiny td {{ padding:.1mm .8mm; }} table.t.tiny th {{ font-weight:normal; }}
 table.t .a {{ color:{RED}; visibility:hidden; }} .sol table.t .a {{ visibility:visible; }}
 .data {{ font-family:"Courier New",monospace; font-size:10pt; letter-spacing:.4px; margin:1mm 0 1.5mm; text-align:center; }}
-.tpl {{ line-height:2.05; margin:1mm 0; }}
+.tpl {{ line-height:1.95; margin:1mm 0; }}
 .bx {{ display:inline-block; border:1px solid #000; min-width:20mm; height:5.6mm; line-height:5.2mm; padding:0 1.5mm; vertical-align:middle; text-align:center; position:relative; }}
 .bx i {{ position:absolute; left:0; right:0; top:100%; font-size:6.5pt; font-style:normal; color:#666; line-height:1.1; white-space:nowrap; }}
 .bx u {{ text-decoration:none; color:{RED}; visibility:hidden; font-size:9pt; white-space:nowrap; }} .sol .bx u {{ visibility:visible; }}
@@ -77,10 +83,20 @@ def q(t): return f'<p class="q">{t}</p>'
 def src(t): return f'<div class="src">{t}</div>'
 def space(mm, a='', grow=False): return f'<div class="space{" grow" if grow else ""}" style="min-height:{mm}mm"><div class="ans">{a}</div></div>'
 def ans(a): return f'<span class="ans">{a}</span>'
+def wline(a=''):
+    """One ruled writing line for a one-word / one-line answer (red on the solutions copy)."""
+    return f'<div class="wl"><span class="ans">{a}</span></div>'
 def parts(items, cols=1):
-    """items: (label, text, answer, mm of blank space under the part)"""
+    """items: (label, text, answer, mm of blank space under the part; 'L' = one writing line)"""
     return f'<div class="parts" style="grid-template-columns:repeat({cols},minmax(0,1fr))">' + ''.join(
-        f'<div class="pt"><b>{k}</b><div>{t}{space(mm, a)}</div></div>' for k, t, a, mm in items) + '</div>'
+        f'<div class="pt"><b>{k}</b><div>{t}{wline(a) if mm == "L" else space(mm, a)}</div></div>' for k, t, a, mm in items) + '</div>'
+def exyt(eh, eb, yh, yb):
+    """Example and You try in ONE box, split down the middle."""
+    return (f'<div class="box ey"><div class="eyh"><div>{eh}</div><div>{yh}</div></div>'
+            f'<div class="eyb"><div class="bd">{eb}</div><div class="bd">{yb}</div></div></div>')
+def solfig(mm, fig):
+    """Blank space for students; the answer figure drawn in red on the solutions copy."""
+    return space(mm, fig)
 def mc(opts, key, cols=1):
     return f'<div class="mc" style="grid-template-columns:repeat({cols},auto)">' + ''.join(
         f'<div class="{"right" if "ABCDE"[i] == key else ""}"><b>{"ABCDE"[i]}.</b><span>{o}</span><span class="ok">&nbsp;✓</span></div>' for i, o in enumerate(opts)) + '</div>'
