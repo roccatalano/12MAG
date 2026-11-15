@@ -77,7 +77,7 @@ _Notes for all AoS 2–4 runners (Rocco, 16 Nov):_
 
 ### Chapter 7: Modelling growth and decay using recursion (lessons gm12-u3-l31, gm12-u3-l32, gm12-u3-l33, gm12-u3-l34; check gm12-u3-l36)
 1. `done 16 Nov 01:18 — l31–l34 cards prefilled: LIs/SCs (Cambridge), Do Now ×4 each, APK, Examples 1–32 + You trys (Ex 1, 2, 26, 27 written), exits (Edrolo 5A–5G), CAS skills recursion-sequence / solve-n-r / effective-rate (Draft), coursework, videos (draft); 38 ledger rows` **Prefill the lesson cards** (gm12-u3-l31, gm12-u3-l32, gm12-u3-l33, gm12-u3-l34) in `planner/unit-plan.json` (see notes above).
-2. `in progress 16 Nov 01:30` **CFATs for Chapter 7** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch7/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
+2. `done 16 Nov 01:32 — CFAT 2.7.1 (7A-7B-7D, 15 marks, start of l33) + CFAT 2.7.2 (7C-7E-7F, 16 marks, start of l36), Edrolo 5A–5G exercise Qs only, no figures; 20 ledger rows; PDFs on G:` **CFATs for Chapter 7** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch7/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
 3. `todo` **CFAT follow-ups for Chapter 7** (Jacaranda exercises; see notes above).
 4. `todo` **Lesson gm12-u3-l31 (7A)**: slides (`tools/deck/gm12-u3-l31/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 5. `todo` **Lesson gm12-u3-l32 (7B, 7D)**: slides (`tools/deck/gm12-u3-l32/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
@@ -275,3 +275,4 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 | AoS3 #2 Prefill Ch 10 | 2026-11-16 01:20 | 01:28 | ~8 | | done: Cambridge + Edrolo U3&4/U1&2 PDFs staged and text-extracted (fast); 7 written You trys; Do Now kept off Ch 7–8 items (left for AoS2). next run: NOT fired — fire_trigger denied by the permission check; hourly schedule (:27) picks up task 3 |
 | AoS4 runner (duplicate) | 2026-11-16 01:27 | 01:29 | 2 | | stopped: task 2 claimed seconds earlier by a parallel AoS4 run (commit bab8020); nothing changed; next run: not fired (owner run continues) |
 | AoS3 runner (duplicate) | 2026-11-16 01:28 | 01:30 | 2 | | stopped: task 3 (CFATs Ch 10) claimed 01:29 by a parallel AoS3 run (commit cc121bf); G: reachable; nothing changed; next run: not fired (owner run continues) |
+| AoS2 #2 CFATs Ch7 | 2026-11-16 01:29 | 2026-11-16 01:32 | ~3 | | done: Edrolo PDF staged + text-extracted; answers checked against Edrolo answer pages. next run: see below |

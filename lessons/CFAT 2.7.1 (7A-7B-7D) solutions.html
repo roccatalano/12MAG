@@ -1,0 +1,116 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>CFAT 2.7.1 (7A-7B-7D) solutions</title><style>@page { size: A4; margin: 11mm 12mm 12mm 12mm; }
+* { box-sizing: border-box; }
+body { font-family: Arial, "Liberation Sans", Helvetica, sans-serif; font-size: 10.3pt; line-height: 1.32; color:#000; margin:0; }
+.title { display:flex; align-items:center; gap:4mm; border:2px solid #000; padding:2mm 4mm; margin-bottom:3mm; }
+.title .code { font-size:15pt; line-height:1.1; text-align:center; font-weight:bold; border-right:2px solid #000; padding-right:4mm; }
+.title h1 { font-size:16pt; margin:0; flex:1; }
+.title .pg { font-size:10pt; text-align:right; white-space:nowrap; }
+.box { border:1.2px solid #000; margin-bottom:3mm; break-inside: avoid; }
+.box > .hd { font-weight:bold; font-size:10.5pt; text-transform:uppercase; letter-spacing:.4px; border-bottom:1.2px solid #000; padding:1mm 3mm; background:#eee; display:flex; justify-content:space-between; white-space:nowrap; }
+.box > .hd span { text-transform:none; font-weight:normal; letter-spacing:0; }
+.box > .bd { padding:2mm 3mm; }
+ul { margin:0; padding-left:5mm; } li { margin:0.6mm 0; }
+.ki { column-count:2; column-gap:6mm; } .ki li { margin:1mm 0; break-inside:avoid; }
+.pair { display:grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); border:1.2px solid #000; margin-bottom:3mm; break-inside: avoid; }
+.pair > div:nth-child(odd) { border-right:1.2px solid #000; } .pair .hd { display:flex; align-items:center; }
+.pair .hd { font-weight:bold; border-bottom:1.2px solid #000; padding:1mm 3mm; background:#eee; font-size:10pt; }
+.pair .bd { padding:2mm 3mm; display:flex; flex-direction:column; }
+.q { margin:0 0 1.5mm; }
+.ytp { display:flex; gap:2mm; border-bottom:1px dashed #bbb; padding-top:1mm; flex-direction:column; }
+.ytp:last-child { border-bottom:none; }
+.ytp .pq { display:flex; gap:2mm; } .ytp .pq > b { min-width:4mm; }
+.sp { position:relative; } .sp > .ans { position:absolute; left:6mm; right:0; top:0; font-size:8.6pt; line-height:1.25; }
+.ans { display:none; color:#c00; font-size:10pt; }
+.sol .ans { display:block; } .mc + .ans { margin-top:-1mm; }
+.sol .ans.in { display:inline; }
+.kf { border-collapse:collapse; width:100%; }
+.kf td { border-bottom:1px solid #999; padding:1.4mm 2mm; vertical-align:middle; }
+.kf tr:last-child td { border-bottom:none; }
+.kf td:first-child { font-weight:bold; width:36mm; border-right:1px solid #999; }
+table.t { border-collapse:collapse; font-size:10pt; margin:1mm 0; }
+table.t th, table.t td { border:1px solid #000; padding:.6mm 2.5mm; text-align:center; }
+table.t th { background:#eee; } table.t .l { text-align:left; } table.t tr.tot td { font-weight:bold; }
+table.fill td { height:6.5mm; min-width:16mm; } table.fill td:first-child { min-width:22mm; text-align:left; }
+.raw { font-size:10pt; border-collapse:collapse; margin:1mm 0; } .raw td { padding:0 2mm 0 0; }
+.mc { display:grid; gap:.3mm 4mm; margin:1mm 0; } .mc b { display:inline-block; width:5mm; }
+.grid { background-image:linear-gradient(#bbb .2mm,transparent .2mm),linear-gradient(90deg,#bbb .2mm,transparent .2mm); background-size:5mm 5mm; border-right:.2mm solid #bbb; border-bottom:.2mm solid #bbb; margin:1mm auto 0; }
+.sol .grid { display:none; }
+.sol .stu { display:none; }
+.chart { display:none; text-align:center; } .sol .chart { display:block; }
+.chart.always { display:block; }
+.fig { text-align:center; }
+.row { display:flex; gap:3mm; align-items:flex-start; } .row > * { min-width:0; }
+.tpl { line-height:2.3; font-size:10.5pt; }
+.tpl .s { display:inline-block; border-bottom:1px solid #000; min-width:22mm; text-align:center; position:relative; line-height:1.2; }
+.tpl .s i { position:absolute; left:0; right:0; top:100%; font-size:7pt; font-style:normal; color:#555; text-align:center; line-height:1.2; }
+.tpl .s u { text-decoration:none; color:#c00; font-size:9.5pt; visibility:hidden; white-space:nowrap; } .sol .tpl .s u { visibility:visible; }
+.scg { display:grid; grid-template-columns:1fr 1fr; }
+.sc { display:grid; grid-template-columns:6mm 1fr; gap:1mm 2mm; padding:2mm; border-bottom:1px solid #000; }
+.scg .sc:nth-child(odd) { border-right:1px solid #000; }
+.scg .sc:nth-last-child(-n+1) { border-bottom:none; }
+.tick { width:5mm; height:5mm; border:1.2px solid #000; margin-top:.5mm; }
+.hwg { display:grid; grid-template-columns:repeat(3,1fr); border:1px solid #000; }
+.hwg > div { border-right:1px solid #000; padding:2mm; text-align:center; display:flex; flex-direction:column; align-items:center; gap:1mm; }
+.hwg > div:last-child { border-right:none; }
+.hwh { font-weight:bold; text-transform:uppercase; font-size:9.5pt; }
+.hwq { font-size:10.5pt; line-height:1.5; }
+.sig { display:flex; gap:4mm; margin-top:3mm; align-items:stretch; }
+.stamp { width:32mm; height:24mm; border:1.2px dashed #000; font-size:8.5pt; color:#555; display:flex; align-items:flex-end; justify-content:center; padding-bottom:1mm; flex:none; }
+.sig .lines { flex:1; display:flex; flex-direction:column; justify-content:space-around; }
+.sig .lines > div { display:flex; align-items:flex-end; gap:2mm; font-size:10pt; }
+.sig .lines i { flex:1; border-bottom:1px solid #000; height:6mm; } .sig .lines i.d { flex:none; width:28mm; }
+.cite { font-size:8pt; font-style:italic; color:#444; text-align:right; margin-top:auto; padding-top:1mm; }
+.box.split { break-inside:auto; } .box.split .row, .box.split p, .box.split .mc { break-inside:avoid; }
+.sol .sp.wk { min-height:auto !important; } .sol .sp.wk > .ans { position:static; }
+.guess { font-size:9.5pt; margin-top:1.5mm; padding:1.2mm 2mm; border:1px dashed #000; display:flex; align-items:flex-end; gap:1.5mm; flex-wrap:wrap; }
+.guess span { display:inline-block; width:16mm; border-bottom:1px solid #000; height:4mm; } .guess span.sh { width:12mm; }
+.sol .guess::after { content:attr(data-a); color:#c00; font-weight:bold; margin-left:2mm; }
+.lines { margin-top:2mm; } .lines div { height:8mm; border-bottom:1px solid #999; }
+.bl { border-bottom:1px solid #000; width:45mm; height:6mm; margin:1mm 0 1.5mm auto; font-size:10pt; } .bl span { visibility:hidden; color:#c00; } .sol .bl span { visibility:visible; }
+.pagebreak { break-after: page; }
+.solmark { display:none; } .sol .solmark { display:inline; color:#c00; }
+body { font-size:9.8pt; line-height:1.28; }
+.secthd{margin-bottom:1.5mm} .qgrid{gap:2.5mm;margin-bottom:2.5mm} .title{margin-bottom:2mm}
+
+.title .who { font-size:10.5pt; white-space:nowrap; display:flex; flex-direction:column; gap:2mm; align-items:flex-end; }
+.title .who b { font-weight:normal; }
+.title .who i { display:inline-block; border-bottom:1px solid #000; width:52mm; height:5mm; vertical-align:bottom; }
+.title .who .sc { display:inline-block; border:1.5px solid #000; width:26mm; height:9mm; text-align:right; padding:1mm 2mm; font-size:12pt; font-weight:bold; }
+.qgrid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:3mm; margin-bottom:3mm; }
+.qgrid .box { margin-bottom:0; display:flex; flex-direction:column; }
+.qgrid .box > .bd { flex:1; display:flex; flex-direction:column; }
+.mc { grid-template-columns:1fr; }
+.mc div { display:flex; gap:1mm; } .mc b { flex:none; }
+.fig img { max-width:100%; }
+.fig.gs img { filter:grayscale(1) contrast(1.1); }
+.sa { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+.sa > .stem { border-right:1.2px solid #000; padding:2mm 3mm; display:flex; flex-direction:column; }
+.sa > .parts { display:flex; flex-direction:column; }
+.sa .part { padding:2mm 3mm; border-bottom:1px dashed #bbb; display:flex; flex-direction:column; }
+.sa .part:last-child { border-bottom:none; }
+.sa .part .pq { display:flex; gap:2mm; } .sa .part .pq > b { min-width:4mm; }
+.sa .part .grid { width:100%; flex:1; min-height:20mm; }
+.sa .part .blank { flex:1; min-height:12mm; }
+.sa1 { border-top:1.2px solid #000; } .sa1 .part { padding:2mm 3mm; display:flex; flex-direction:column; } .sa1 .pq{display:flex;gap:2mm} .sa1 .pq>b{min-width:4mm}
+.sa1 .blank { flex:1; min-height:11mm; }
+.brk { break-before:page; }
+.secthd { font-weight:bold; text-transform:uppercase; letter-spacing:.4px; font-size:10.5pt; margin:0 0 2mm; display:flex; justify-content:space-between; }
+.secthd span { text-transform:none; letter-spacing:0; font-weight:normal; font-size:9.5pt; }
+
+.mc .ok{color:#c00;font-weight:bold;display:none} .sol .mc div.right .ok{display:inline}
+body{font-size:9pt;line-height:1.2} .title{padding:1.5mm 3mm} .title h1{font-size:13pt} .box>.hd{padding:.6mm 3mm} .box>.bd{padding:1.5mm 2.5mm} .q{margin:0 0 1mm}
+.sol .mc div.right span{color:#c00;font-weight:bold}
+.colstack{display:flex;flex-direction:column;gap:2.5mm} .colstack .box{flex:1}
+.sa .part .ans{margin-top:1mm}
+table.ct th,table.ct td{padding:.4mm .6mm} table.ct th{width:24%}
+</style><script src="a4view.js"></script><script src="paged.polyfill.min.js"></script></head><body class="sol">
+<div class="title"><div class="code">CFAT<br>2.7.1</div><h1>Recurrence relations: growth and decay<div style="font-size:10pt;font-weight:normal;margin-top:1mm">7A–7B–7D · CAS and bound reference allowed · <b style=color:#c00>SOLUTIONS</b></div></h1><div class="who"><div><b>Name</b> <i></i></div><div class="sc">/15</div></div></div>
+<div class="secthd">Section A · Multiple choice<span>Circle one answer. 6 marks</span></div>
+<div class="qgrid"><div class="colstack"><div class="box"><div class="hd">Question 1<span>1 mark</span></div><div class="bd"><p class="q">What is the initial term of the following recurrence relation?</p><p class="q">M₀ = 2, Mₙ₊₁ = Mₙ − 4</p><div class="mc"><div class=""><b>A.</b><span>−4 <i class="ok">✓</i></span></div><div class=""><b>B.</b><span>0 <i class="ok">✓</i></span></div><div class="right"><b>C.</b><span>2 <i class="ok">✓</i></span></div><div class=""><b>D.</b><span>4 <i class="ok">✓</i></span></div></div><div class="cite">Edrolo U3&amp;4 5A Q1</div></div></div></div><div class="colstack"><div class="box"><div class="hd">Question 2<span>1 mark</span></div><div class="bd"><p class="q">The first five terms of a sequence are 3, 7, 15, 31, 63 …</p><p class="q">The recurrence relation that generates this sequence is</p><div class="mc"><div class=""><b>A.</b><span>H₀ = 3, Hₙ₊₁ = Hₙ + 4 <i class="ok">✓</i></span></div><div class="right"><b>B.</b><span>H₀ = 3, Hₙ₊₁ = 2 × Hₙ + 1 <i class="ok">✓</i></span></div><div class=""><b>C.</b><span>H₀ = 3, Hₙ₊₁ = 2.333 × Hₙ <i class="ok">✓</i></span></div><div class=""><b>D.</b><span>H₀ = 3, Hₙ₊₁ = 4 × Hₙ − 5 <i class="ok">✓</i></span></div></div><div class="cite">Edrolo U3&amp;4 5A Q4</div></div></div></div></div>
+<div class="qgrid"><div class="colstack"><div class="box"><div class="hd">Question 3<span>1 mark</span></div><div class="bd"><p class="q">Using the following recurrence relation, what is the value of S₃?</p><p class="q">S₀ = 15, Sₙ₊₁ = Sₙ + 2</p><div class="mc"><div class=""><b>A.</b><span>15 <i class="ok">✓</i></span></div><div class=""><b>B.</b><span>19 <i class="ok">✓</i></span></div><div class="right"><b>C.</b><span>21 <i class="ok">✓</i></span></div><div class=""><b>D.</b><span>23 <i class="ok">✓</i></span></div></div><div class="cite">Edrolo U3&amp;4 5A Q9</div></div></div></div><div class="colstack"><div class="box"><div class="hd">Question 4<span>1 mark</span></div><div class="bd"><p class="q">Isaac bought new DJ decks for $740 which depreciate by 20% of the initial value each year. This is represented by the following recurrence relation.</p><p class="q">V₀ = 740, Vₙ₊₁ = Vₙ − 148</p><p class="q">How much will the DJ decks be worth after 2 years?</p><div class="mc"><div class=""><b>A.</b><span>$296 <i class="ok">✓</i></span></div><div class="right"><b>B.</b><span>$444 <i class="ok">✓</i></span></div><div class=""><b>C.</b><span>$592 <i class="ok">✓</i></span></div><div class=""><b>D.</b><span>$740 <i class="ok">✓</i></span></div></div><div class="cite">Edrolo U3&amp;4 5B Q6</div></div></div></div></div>
+<div class="qgrid"><div class="colstack"><div class="box"><div class="hd">Question 5<span>1 mark</span></div><div class="bd"><p class="q">A $13 000 investment earns simple interest at a rate of 1.5% per period. Which of the following recurrence relations can be used to model the investment?</p><div class="mc"><div class=""><b>A.</b><span>V₀ = 195, Vₙ₊₁ = Vₙ + 13 000 <i class="ok">✓</i></span></div><div class=""><b>B.</b><span>V₀ = 13 000, Vₙ₊₁ = Vₙ + 19 500 <i class="ok">✓</i></span></div><div class=""><b>C.</b><span>V₀ = 13 000, Vₙ₊₁ = Vₙ + 1.5 × V₀ <i class="ok">✓</i></span></div><div class="right"><b>D.</b><span>V₀ = 13 000, Vₙ₊₁ = Vₙ + 195 <i class="ok">✓</i></span></div></div><div class="cite">Edrolo U3&amp;4 5E Q1</div></div></div></div><div class="colstack"><div class="box"><div class="hd">Question 6<span>1 mark</span></div><div class="bd"><p class="q">Alex recently purchased a new tractor to use on his farm for $13 000. The value of the tractor depreciates on a reducing balance basis at a rate of 10% per annum. Which of the following recurrence relations models the depreciation of Alex’s tractor?</p><div class="mc"><div class=""><b>A.</b><span>V₀ = 13 000, Vₙ₊₁ = Vₙ − 1300 <i class="ok">✓</i></span></div><div class=""><b>B.</b><span>V₀ = 13 000, Vₙ₊₁ = Vₙ + 1300 <i class="ok">✓</i></span></div><div class=""><b>C.</b><span>V₀ = 13 000, Vₙ₊₁ = 1.1Vₙ <i class="ok">✓</i></span></div><div class="right"><b>D.</b><span>V₀ = 13 000, Vₙ₊₁ = 0.9Vₙ <i class="ok">✓</i></span></div></div><div class="cite">Edrolo U3&amp;4 5C Q1</div></div></div></div></div>
+<div style="break-inside:avoid"><div class="secthd" style="margin-top:2mm">Section B · Short answer<span>Show your working. 9 marks</span></div><div class="box"><div class="hd">Question 7<span>2 marks</span></div><div class="sa"><div class="stem"><p class="q">Consider the following recurrence relation:</p><p class="q">u₀ = 64, uₙ₊₁ = 0.5 × uₙ + 4</p><div class="cite">Edrolo U3&amp;4 5A Q14</div></div><div class="parts"><div class="part" style="flex:1"><div class="pq"><b>a</b><span>What is the initial value of the sequence generated by this recurrence relation? <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">64</div></div></div><div class="part" style="flex:1"><div class="pq"><b>b</b><span>Calculate the value of u₅. <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">u₁ = 36, u₂ = 22, u₃ = 15, u₄ = 11.5<br>u₅ = 9.75</div></div></div></div></div></div></div>
+<div class="box"><div class="hd">Question 8<span>3 marks</span></div><div class="sa"><div class="stem"><p class="q">Let Vₙ represent the value of an item after n uses, in dollars. The value of the item depreciating using the unit cost method could be modelled using the following recurrence relation.</p><p class="q">V₀ = 184, Vₙ₊₁ = Vₙ − 14</p><div class="cite">Edrolo U3&amp;4 5B Q8</div></div><div class="parts"><div class="part" style="flex:1"><div class="pq"><b>a</b><span>What is the initial value of the item? <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">$184</div></div></div><div class="part" style="flex:1"><div class="pq"><b>b</b><span>What will the value of the item be after four uses? <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">V₄ = 184 − 4 × 14 = $128</div></div></div><div class="part" style="flex:1"><div class="pq"><b>c</b><span>After how many uses will the item be worth $100? <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">(184 − 100) ÷ 14 = 6 uses</div></div></div></div></div></div>
+<div class="box"><div class="hd">Question 9<span>2 marks</span></div><div class="sa"><div class="stem"><p class="q">Maddy has saved up to buy a second hand car from her cousin. The car is worth $11 800 and is depreciated by 9% per annum according to the reducing balance method.</p><p class="q">The following recurrence relation models the depreciation of Maddy’s car.</p><p class="q">M₀ = 11 800, Mₙ₊₁ = 0.91Mₙ</p><div class="cite">Edrolo U3&amp;4 5C Q6</div></div><div class="parts"><div class="part" style="flex:1"><div class="pq"><b>a</b><span>What is the value of the car after Maddy has owned it for three years? <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">M₃ = 0.91 × 0.91 × 0.91 × 11 800 = $8892.14</div></div></div><div class="part" style="flex:1"><div class="pq"><b>b</b><span>What is the total amount of depreciation for the three years after Maddy buys the car? <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">11 800 − 8892.14 = $2907.86</div></div></div></div></div></div>
+<div class="box"><div class="hd">Question 10<span>2 marks</span></div><div class="sa"><div class="stem"><p class="q">The amount of money in Said’s bank account, Vₙ, after n months, is given by the following recurrence relation.</p><p class="q">V₀ = 3000, Vₙ₊₁ = 1.03 × Vₙ</p><div class="cite">Edrolo U3&amp;4 5F Q2</div></div><div class="parts"><div class="part" style="flex:1"><div class="pq"><b>a</b><span>What was the initial balance in Said’s account? <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">$3000</div></div></div><div class="part" style="flex:1"><div class="pq"><b>b</b><span>What is the monthly interest rate for this account? <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">R = 1.03 = 1 + r/100 → 3% per month</div></div></div></div></div></div>
+</body></html>

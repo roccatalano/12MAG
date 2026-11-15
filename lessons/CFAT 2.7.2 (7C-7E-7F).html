@@ -1,0 +1,116 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>CFAT 2.7.2 (7C-7E-7F)</title><style>@page { size: A4; margin: 11mm 12mm 12mm 12mm; }
+* { box-sizing: border-box; }
+body { font-family: Arial, "Liberation Sans", Helvetica, sans-serif; font-size: 10.3pt; line-height: 1.32; color:#000; margin:0; }
+.title { display:flex; align-items:center; gap:4mm; border:2px solid #000; padding:2mm 4mm; margin-bottom:3mm; }
+.title .code { font-size:15pt; line-height:1.1; text-align:center; font-weight:bold; border-right:2px solid #000; padding-right:4mm; }
+.title h1 { font-size:16pt; margin:0; flex:1; }
+.title .pg { font-size:10pt; text-align:right; white-space:nowrap; }
+.box { border:1.2px solid #000; margin-bottom:3mm; break-inside: avoid; }
+.box > .hd { font-weight:bold; font-size:10.5pt; text-transform:uppercase; letter-spacing:.4px; border-bottom:1.2px solid #000; padding:1mm 3mm; background:#eee; display:flex; justify-content:space-between; white-space:nowrap; }
+.box > .hd span { text-transform:none; font-weight:normal; letter-spacing:0; }
+.box > .bd { padding:2mm 3mm; }
+ul { margin:0; padding-left:5mm; } li { margin:0.6mm 0; }
+.ki { column-count:2; column-gap:6mm; } .ki li { margin:1mm 0; break-inside:avoid; }
+.pair { display:grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); border:1.2px solid #000; margin-bottom:3mm; break-inside: avoid; }
+.pair > div:nth-child(odd) { border-right:1.2px solid #000; } .pair .hd { display:flex; align-items:center; }
+.pair .hd { font-weight:bold; border-bottom:1.2px solid #000; padding:1mm 3mm; background:#eee; font-size:10pt; }
+.pair .bd { padding:2mm 3mm; display:flex; flex-direction:column; }
+.q { margin:0 0 1.5mm; }
+.ytp { display:flex; gap:2mm; border-bottom:1px dashed #bbb; padding-top:1mm; flex-direction:column; }
+.ytp:last-child { border-bottom:none; }
+.ytp .pq { display:flex; gap:2mm; } .ytp .pq > b { min-width:4mm; }
+.sp { position:relative; } .sp > .ans { position:absolute; left:6mm; right:0; top:0; font-size:8.6pt; line-height:1.25; }
+.ans { display:none; color:#c00; font-size:10pt; }
+.sol .ans { display:block; } .mc + .ans { margin-top:-1mm; }
+.sol .ans.in { display:inline; }
+.kf { border-collapse:collapse; width:100%; }
+.kf td { border-bottom:1px solid #999; padding:1.4mm 2mm; vertical-align:middle; }
+.kf tr:last-child td { border-bottom:none; }
+.kf td:first-child { font-weight:bold; width:36mm; border-right:1px solid #999; }
+table.t { border-collapse:collapse; font-size:10pt; margin:1mm 0; }
+table.t th, table.t td { border:1px solid #000; padding:.6mm 2.5mm; text-align:center; }
+table.t th { background:#eee; } table.t .l { text-align:left; } table.t tr.tot td { font-weight:bold; }
+table.fill td { height:6.5mm; min-width:16mm; } table.fill td:first-child { min-width:22mm; text-align:left; }
+.raw { font-size:10pt; border-collapse:collapse; margin:1mm 0; } .raw td { padding:0 2mm 0 0; }
+.mc { display:grid; gap:.3mm 4mm; margin:1mm 0; } .mc b { display:inline-block; width:5mm; }
+.grid { background-image:linear-gradient(#bbb .2mm,transparent .2mm),linear-gradient(90deg,#bbb .2mm,transparent .2mm); background-size:5mm 5mm; border-right:.2mm solid #bbb; border-bottom:.2mm solid #bbb; margin:1mm auto 0; }
+.sol .grid { display:none; }
+.sol .stu { display:none; }
+.chart { display:none; text-align:center; } .sol .chart { display:block; }
+.chart.always { display:block; }
+.fig { text-align:center; }
+.row { display:flex; gap:3mm; align-items:flex-start; } .row > * { min-width:0; }
+.tpl { line-height:2.3; font-size:10.5pt; }
+.tpl .s { display:inline-block; border-bottom:1px solid #000; min-width:22mm; text-align:center; position:relative; line-height:1.2; }
+.tpl .s i { position:absolute; left:0; right:0; top:100%; font-size:7pt; font-style:normal; color:#555; text-align:center; line-height:1.2; }
+.tpl .s u { text-decoration:none; color:#c00; font-size:9.5pt; visibility:hidden; white-space:nowrap; } .sol .tpl .s u { visibility:visible; }
+.scg { display:grid; grid-template-columns:1fr 1fr; }
+.sc { display:grid; grid-template-columns:6mm 1fr; gap:1mm 2mm; padding:2mm; border-bottom:1px solid #000; }
+.scg .sc:nth-child(odd) { border-right:1px solid #000; }
+.scg .sc:nth-last-child(-n+1) { border-bottom:none; }
+.tick { width:5mm; height:5mm; border:1.2px solid #000; margin-top:.5mm; }
+.hwg { display:grid; grid-template-columns:repeat(3,1fr); border:1px solid #000; }
+.hwg > div { border-right:1px solid #000; padding:2mm; text-align:center; display:flex; flex-direction:column; align-items:center; gap:1mm; }
+.hwg > div:last-child { border-right:none; }
+.hwh { font-weight:bold; text-transform:uppercase; font-size:9.5pt; }
+.hwq { font-size:10.5pt; line-height:1.5; }
+.sig { display:flex; gap:4mm; margin-top:3mm; align-items:stretch; }
+.stamp { width:32mm; height:24mm; border:1.2px dashed #000; font-size:8.5pt; color:#555; display:flex; align-items:flex-end; justify-content:center; padding-bottom:1mm; flex:none; }
+.sig .lines { flex:1; display:flex; flex-direction:column; justify-content:space-around; }
+.sig .lines > div { display:flex; align-items:flex-end; gap:2mm; font-size:10pt; }
+.sig .lines i { flex:1; border-bottom:1px solid #000; height:6mm; } .sig .lines i.d { flex:none; width:28mm; }
+.cite { font-size:8pt; font-style:italic; color:#444; text-align:right; margin-top:auto; padding-top:1mm; }
+.box.split { break-inside:auto; } .box.split .row, .box.split p, .box.split .mc { break-inside:avoid; }
+.sol .sp.wk { min-height:auto !important; } .sol .sp.wk > .ans { position:static; }
+.guess { font-size:9.5pt; margin-top:1.5mm; padding:1.2mm 2mm; border:1px dashed #000; display:flex; align-items:flex-end; gap:1.5mm; flex-wrap:wrap; }
+.guess span { display:inline-block; width:16mm; border-bottom:1px solid #000; height:4mm; } .guess span.sh { width:12mm; }
+.sol .guess::after { content:attr(data-a); color:#c00; font-weight:bold; margin-left:2mm; }
+.lines { margin-top:2mm; } .lines div { height:8mm; border-bottom:1px solid #999; }
+.bl { border-bottom:1px solid #000; width:45mm; height:6mm; margin:1mm 0 1.5mm auto; font-size:10pt; } .bl span { visibility:hidden; color:#c00; } .sol .bl span { visibility:visible; }
+.pagebreak { break-after: page; }
+.solmark { display:none; } .sol .solmark { display:inline; color:#c00; }
+body { font-size:9.8pt; line-height:1.28; }
+.secthd{margin-bottom:1.5mm} .qgrid{gap:2.5mm;margin-bottom:2.5mm} .title{margin-bottom:2mm}
+
+.title .who { font-size:10.5pt; white-space:nowrap; display:flex; flex-direction:column; gap:2mm; align-items:flex-end; }
+.title .who b { font-weight:normal; }
+.title .who i { display:inline-block; border-bottom:1px solid #000; width:52mm; height:5mm; vertical-align:bottom; }
+.title .who .sc { display:inline-block; border:1.5px solid #000; width:26mm; height:9mm; text-align:right; padding:1mm 2mm; font-size:12pt; font-weight:bold; }
+.qgrid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:3mm; margin-bottom:3mm; }
+.qgrid .box { margin-bottom:0; display:flex; flex-direction:column; }
+.qgrid .box > .bd { flex:1; display:flex; flex-direction:column; }
+.mc { grid-template-columns:1fr; }
+.mc div { display:flex; gap:1mm; } .mc b { flex:none; }
+.fig img { max-width:100%; }
+.fig.gs img { filter:grayscale(1) contrast(1.1); }
+.sa { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+.sa > .stem { border-right:1.2px solid #000; padding:2mm 3mm; display:flex; flex-direction:column; }
+.sa > .parts { display:flex; flex-direction:column; }
+.sa .part { padding:2mm 3mm; border-bottom:1px dashed #bbb; display:flex; flex-direction:column; }
+.sa .part:last-child { border-bottom:none; }
+.sa .part .pq { display:flex; gap:2mm; } .sa .part .pq > b { min-width:4mm; }
+.sa .part .grid { width:100%; flex:1; min-height:20mm; }
+.sa .part .blank { flex:1; min-height:12mm; }
+.sa1 { border-top:1.2px solid #000; } .sa1 .part { padding:2mm 3mm; display:flex; flex-direction:column; } .sa1 .pq{display:flex;gap:2mm} .sa1 .pq>b{min-width:4mm}
+.sa1 .blank { flex:1; min-height:11mm; }
+.brk { break-before:page; }
+.secthd { font-weight:bold; text-transform:uppercase; letter-spacing:.4px; font-size:10.5pt; margin:0 0 2mm; display:flex; justify-content:space-between; }
+.secthd span { text-transform:none; letter-spacing:0; font-weight:normal; font-size:9.5pt; }
+
+.mc .ok{color:#c00;font-weight:bold;display:none} .sol .mc div.right .ok{display:inline}
+body{font-size:9pt;line-height:1.2} .title{padding:1.5mm 3mm} .title h1{font-size:13pt} .box>.hd{padding:.6mm 3mm} .box>.bd{padding:1.5mm 2.5mm} .q{margin:0 0 1mm}
+.sol .mc div.right span{color:#c00;font-weight:bold}
+.colstack{display:flex;flex-direction:column;gap:2.5mm} .colstack .box{flex:1}
+.sa .part .ans{margin-top:1mm}
+table.ct th,table.ct td{padding:.4mm .6mm} table.ct th{width:24%}
+</style><script src="a4view.js"></script><script src="paged.polyfill.min.js"></script></head><body class="">
+<div class="title"><div class="code">CFAT<br>2.7.2</div><h1>Rules for the nth term and effective interest rates<div style="font-size:10pt;font-weight:normal;margin-top:1mm">7C–7E–7F · CAS and bound reference allowed</div></h1><div class="who"><div><b>Name</b> <i></i></div><div class="sc">/16</div></div></div>
+<div class="secthd">Section A · Multiple choice<span>Circle one answer. 6 marks</span></div>
+<div class="qgrid"><div class="colstack"><div class="box"><div class="hd">Question 1<span>1 mark</span></div><div class="bd"><p class="q">A $15 000 asset depreciates by a flat rate of 9% each year. By what dollar amount does the asset depreciate each year?</p><div class="mc"><div class=""><b>A.</b><span>$900 <i class="ok">✓</i></span></div><div class=""><b>B.</b><span>$1250 <i class="ok">✓</i></span></div><div class="right"><b>C.</b><span>$1350 <i class="ok">✓</i></span></div><div class=""><b>D.</b><span>$1500 <i class="ok">✓</i></span></div></div><div class="cite">Edrolo U3&amp;4 5D Q1</div></div></div></div><div class="colstack"><div class="box"><div class="hd">Question 2<span>1 mark</span></div><div class="bd"><p class="q">If $9354 was invested in an account that earns simple interest at a rate of 0.7% per month, what is the total amount of simple interest paid at the end of a 22-month period, rounded to a whole number?</p><div class="mc"><div class=""><b>A.</b><span>120 <i class="ok">✓</i></span></div><div class=""><b>B.</b><span>1200 <i class="ok">✓</i></span></div><div class=""><b>C.</b><span>1440 <i class="ok">✓</i></span></div><div class="right"><b>D.</b><span>1441 <i class="ok">✓</i></span></div></div><div class="cite">Edrolo U3&amp;4 5E Q6</div></div></div></div></div>
+<div class="qgrid"><div class="colstack"><div class="box"><div class="hd">Question 3<span>1 mark</span></div><div class="bd"><p class="q">Max uses the following rule to calculate Vₙ, the value of his photocopier after n years.</p><p class="q">Vₙ = 2500 × 0.95ⁿ</p><p class="q">By how much does the photocopier depreciate each year?</p><div class="mc"><div class=""><b>A.</b><span>0.05% <i class="ok">✓</i></span></div><div class=""><b>B.</b><span>0.5% <i class="ok">✓</i></span></div><div class=""><b>C.</b><span>0.95% <i class="ok">✓</i></span></div><div class="right"><b>D.</b><span>5% <i class="ok">✓</i></span></div></div><div class="cite">Edrolo U3&amp;4 5D Q12</div></div></div></div><div class="colstack"><div class="box"><div class="hd">Question 4<span>1 mark</span></div><div class="bd"><p class="q">The rule Vₙ = 6000 × 1.09ⁿ could be used to model which of the following scenarios?</p><div class="mc"><div class=""><b>A.</b><span>An investment of $6000 with an interest rate of 0.09% p.a, compounding monthly. <i class="ok">✓</i></span></div><div class=""><b>B.</b><span>An investment of $6000 with an interest rate of 0.09% p.a, compounding quarterly. <i class="ok">✓</i></span></div><div class=""><b>C.</b><span>An investment of $6000 with an interest rate of 9% p.a, compounding monthly. <i class="ok">✓</i></span></div><div class="right"><b>D.</b><span>An investment of $6000 with an interest rate of 9% p.a, compounding annually. <i class="ok">✓</i></span></div></div><div class="cite">Edrolo U3&amp;4 5F Q8</div></div></div></div></div>
+<div class="qgrid"><div class="colstack"><div class="box"><div class="hd">Question 5<span>1 mark</span></div><div class="bd"><p class="q">For a loan with a nominal interest rate of 4.30% per annum, compounding fortnightly, the effective interest rate is closest to</p><div class="mc"><div class=""><b>A.</b><span>4.19% <i class="ok">✓</i></span></div><div class=""><b>B.</b><span>4.30% <i class="ok">✓</i></span></div><div class="right"><b>C.</b><span>4.39% <i class="ok">✓</i></span></div><div class=""><b>D.</b><span>4.51% <i class="ok">✓</i></span></div></div><div class="cite">Edrolo U3&amp;4 5G Q1</div></div></div></div><div class="colstack"><div class="box"><div class="hd">Question 6<span>1 mark</span></div><div class="bd"><p class="q">Which of the following nominal interest rates returns the lowest effective interest rate?</p><div class="mc"><div class=""><b>A.</b><span>5.5% per annum, compounding weekly <i class="ok">✓</i></span></div><div class=""><b>B.</b><span>5.5% per annum, compounding fortnightly <i class="ok">✓</i></span></div><div class=""><b>C.</b><span>5.5% per annum, compounding monthly <i class="ok">✓</i></span></div><div class="right"><b>D.</b><span>5.5% per annum, compounding annually <i class="ok">✓</i></span></div></div><div class="cite">Edrolo U3&amp;4 5G Q4</div></div></div></div></div>
+<div style="break-inside:avoid"><div class="secthd" style="margin-top:2mm">Section B · Short answer<span>Show your working. 10 marks</span></div><div class="box"><div class="hd">Question 7<span>3 marks</span></div><div class="sa"><div class="stem"><p class="q">Steve buys a smartphone for $550. It depreciates by 10% of the sale price every year.</p><div class="cite">Edrolo U3&amp;4 5D Q4</div></div><div class="parts"><div class="part" style="flex:1"><div class="pq"><b>a</b><span>Write a rule to determine Sₙ, the value of the smartphone after n years. <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">d = 10% × 550 = 55<br>Sₙ = 550 − 55n</div></div></div><div class="part" style="flex:1"><div class="pq"><b>b</b><span>What is the value of the smartphone after the third year? <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">S₃ = 550 − 55 × 3 = $385</div></div></div><div class="part" style="flex:1"><div class="pq"><b>c</b><span>After how many years will the smartphone have no value? <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">550 − 55n = 0 → n = 10 years</div></div></div></div></div></div></div>
+<div class="box"><div class="hd">Question 8<span>3 marks</span></div><div class="sa"><div class="stem"><p class="q">Janine put $400 into her savings account when she opened it. It pays simple interest at a rate of 3% per month.</p><div class="cite">Edrolo U3&amp;4 5E Q11</div></div><div class="parts"><div class="part" style="flex:1"><div class="pq"><b>a</b><span>Construct a rule to calculate the balance of the account, Jₙ, at month n. <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">d = 3% × 400 = 12<br>Jₙ = 400 + 12n</div></div></div><div class="part" style="flex:1"><div class="pq"><b>b</b><span>How much money will be in the account after six months? <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">J₆ = 400 + 12 × 6 = $472</div></div></div><div class="part" style="flex:1"><div class="pq"><b>c</b><span>After how many months will the balance exceed $500? <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">400 + 12n &gt; 500 → n &gt; 8.33 → 9 months</div></div></div></div></div></div>
+<div class="box"><div class="hd">Question 9<span>2 marks</span></div><div class="sa"><div class="stem"><p class="q">Marko wants to buy a new smartwatch, which is currently priced at $779, but he only has $700. After doing some market research, he finds that this exact model of watch depreciates at a rate of 1.75% every three months, using a reducing balance depreciation method. How long will Marko have to wait before he can buy the new smartwatch?</p><div class="cite">Edrolo U3&amp;4 5D Q14</div></div><div class="parts"><div class="part" style="flex:2"><div class="pq"><b></b><span> <span style="color:#555;font-size:8.5pt">(2 marks)</span></span></div><div class="blank" style="min-height:8.0mm"><div class="ans">Vₙ = 779 × 0.9825ⁿ (n = quarters)<br>V₆ = 700.70 &gt; 700, V₇ = 688.44 ≤ 700 → n = 7 quarters<br>one year and nine months</div></div></div></div></div></div>
+<div class="box"><div class="hd">Question 10<span>2 marks</span></div><div class="sa"><div class="stem"><p class="q">Convert the following nominal interest rates to effective interest rates, correct to two decimal places.</p><div class="cite">Edrolo U3&amp;4 5G Q2</div></div><div class="parts"><div class="part" style="flex:1"><div class="pq"><b>a</b><span>10% per annum, compounding monthly. <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">((1 + 0.10/12)¹² − 1) × 100 = 10.47%</div></div></div><div class="part" style="flex:1"><div class="pq"><b>b</b><span>8% per annum, compounding weekly. <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">((1 + 0.08/52)⁵² − 1) × 100 = 8.32%</div></div></div></div></div></div>
+</body></html>

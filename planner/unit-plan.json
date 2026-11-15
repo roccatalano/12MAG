@@ -8007,7 +8007,159 @@
         "cas": [
          "solve-n-r"
         ],
-        "note": "Big lesson (11 Examples): split it into 7C and 7E on the planner if it runs over. Edrolo 5D WE3 (reducing balance rule) is a spare You try for Example 23/25."
+        "note": "Big lesson (11 Examples): split it into 7C and 7E on the planner if it runs over. Edrolo 5D WE3 (reducing balance rule) is a spare You try for Example 23/25.",
+        "cfats": [
+         {
+          "id": "CFAT 2.7.1",
+          "title": "Recurrence relations: growth and decay",
+          "covers": [
+           "7A",
+           "7B",
+           "7D"
+          ],
+          "format": "About 20 min · individual · CAS and single bound reference allowed",
+          "status": "Draft",
+          "plan": "Start of the 7C-7E lesson (after 7A, 7B, 7D).",
+          "marks": 15,
+          "mcMarks": 6,
+          "saMarks": 9,
+          "file": "lessons/CFAT 2.7.1 (7A-7B-7D).html",
+          "sources": [
+           "Edrolo GM U3&4 2023 exercise questions only (rule 8): 5A Q1, 5A Q4, 5A Q9, 5B Q6, 5E Q1, 5C Q1, 5A Q14, 5B Q8, 5C Q6, 5F Q2"
+          ],
+          "questions": [
+           {
+            "q": 1,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Initial term of a recurrence relation",
+            "sd": [],
+            "sub": "7A",
+            "sc": "",
+            "src": "Edrolo 5A Q1",
+            "fu": ""
+           },
+           {
+            "q": 2,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Recurrence relation from a sequence",
+            "sd": [],
+            "sub": "7A",
+            "sc": "",
+            "src": "Edrolo 5A Q4",
+            "fu": ""
+           },
+           {
+            "q": 3,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Generate terms",
+            "sd": [],
+            "sub": "7A",
+            "sc": "",
+            "src": "Edrolo 5A Q9",
+            "fu": ""
+           },
+           {
+            "q": 4,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Flat rate depreciation by recursion",
+            "sd": [],
+            "sub": "7B",
+            "sc": "",
+            "src": "Edrolo 5B Q6",
+            "fu": ""
+           },
+           {
+            "q": 5,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Simple interest recurrence relation",
+            "sd": [],
+            "sub": "7B",
+            "sc": "",
+            "src": "Edrolo 5E Q1",
+            "fu": ""
+           },
+           {
+            "q": 6,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Reducing balance recurrence relation",
+            "sd": [],
+            "sub": "7D",
+            "sc": "",
+            "src": "Edrolo 5C Q1",
+            "fu": ""
+           },
+           {
+            "q": 7,
+            "marks": 2,
+            "type": "SA",
+            "skill": "Generate terms (linear + geometric)",
+            "sd": [],
+            "sub": "7A",
+            "sc": "",
+            "src": "Edrolo 5A Q14",
+            "fu": ""
+           },
+           {
+            "q": 8,
+            "marks": 3,
+            "type": "SA",
+            "skill": "Unit cost depreciation by recursion",
+            "sd": [],
+            "sub": "7B",
+            "sc": "",
+            "src": "Edrolo 5B Q8",
+            "fu": ""
+           },
+           {
+            "q": 9,
+            "marks": 2,
+            "type": "SA",
+            "skill": "Reducing balance depreciation by recursion",
+            "sd": [],
+            "sub": "7D",
+            "sc": "",
+            "src": "Edrolo 5C Q6",
+            "fu": ""
+           },
+           {
+            "q": 10,
+            "marks": 2,
+            "type": "SA",
+            "skill": "Compound interest recurrence relation",
+            "sd": [],
+            "sub": "7D",
+            "sc": "",
+            "src": "Edrolo 5F Q2",
+            "fu": ""
+           }
+          ]
+         }
+        ],
+        "materials": [
+         {
+          "kind": "CFAT 2.7.1",
+          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/CFAT 2.7.1 (7A-7B-7D).html",
+            "pdf": "lessons/CFAT 2.7.1 (7A-7B-7D).pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/CFAT 2.7.1 (7A-7B-7D) solutions.html",
+            "pdf": "lessons/CFAT 2.7.1 (7A-7B-7D) solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
@@ -8192,6 +8344,23 @@
           "file": ""
          },
          {
+          "kind": "CFAT 2.7.2",
+          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/CFAT 2.7.2 (7C-7E-7F).html",
+            "pdf": "lessons/CFAT 2.7.2 (7C-7E-7F).pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/CFAT 2.7.2 (7C-7E-7F) solutions.html",
+            "pdf": "lessons/CFAT 2.7.2 (7C-7E-7F) solutions.pdf"
+           }
+          ]
+         },
+         {
           "kind": "Chapter test",
           "desc": "Mathspace Ch 2 topic assessment (20 Qs, /41), verbatim.",
           "status": "draft",
@@ -8205,6 +8374,139 @@
             "label": "Solutions",
             "file": "lessons/Ch2 test solutions.html",
             "pdf": "lessons/Ch2 test solutions.pdf"
+           }
+          ]
+         }
+        ],
+        "cfats": [
+         {
+          "id": "CFAT 2.7.2",
+          "title": "Rules for the nth term and effective interest rates",
+          "covers": [
+           "7C",
+           "7E",
+           "7F"
+          ],
+          "format": "About 20 min · individual · CAS and single bound reference allowed",
+          "status": "Draft",
+          "plan": "Start of the Chapter 7 check + test lesson (after 7C, 7E, 7F).",
+          "marks": 16,
+          "mcMarks": 6,
+          "saMarks": 10,
+          "file": "lessons/CFAT 2.7.2 (7C-7E-7F).html",
+          "sources": [
+           "Edrolo GM U3&4 2023 exercise questions only (rule 8): 5D Q1, 5E Q6, 5D Q12, 5F Q8, 5G Q1, 5G Q4, 5D Q4, 5E Q11, 5D Q14, 5G Q2"
+          ],
+          "questions": [
+           {
+            "q": 1,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Flat rate depreciation amount",
+            "sd": [],
+            "sub": "7C",
+            "sc": "",
+            "src": "Edrolo 5D Q1",
+            "fu": ""
+           },
+           {
+            "q": 2,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Simple interest over n periods",
+            "sd": [],
+            "sub": "7C",
+            "sc": "",
+            "src": "Edrolo 5E Q6",
+            "fu": ""
+           },
+           {
+            "q": 3,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Read a reducing balance rule",
+            "sd": [],
+            "sub": "7E",
+            "sc": "",
+            "src": "Edrolo 5D Q12",
+            "fu": ""
+           },
+           {
+            "q": 4,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Interpret a compound interest rule",
+            "sd": [],
+            "sub": "7E",
+            "sc": "",
+            "src": "Edrolo 5F Q8",
+            "fu": ""
+           },
+           {
+            "q": 5,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Effective interest rate",
+            "sd": [],
+            "sub": "7F",
+            "sc": "",
+            "src": "Edrolo 5G Q1",
+            "fu": ""
+           },
+           {
+            "q": 6,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Compare effective rates",
+            "sd": [],
+            "sub": "7F",
+            "sc": "",
+            "src": "Edrolo 5G Q4",
+            "fu": ""
+           },
+           {
+            "q": 7,
+            "marks": 3,
+            "type": "SA",
+            "skill": "Flat rate depreciation rule",
+            "sd": [],
+            "sub": "7C",
+            "sc": "",
+            "src": "Edrolo 5D Q4",
+            "fu": ""
+           },
+           {
+            "q": 8,
+            "marks": 3,
+            "type": "SA",
+            "skill": "Simple interest rule",
+            "sd": [],
+            "sub": "7C",
+            "sc": "",
+            "src": "Edrolo 5E Q11",
+            "fu": ""
+           },
+           {
+            "q": 9,
+            "marks": 2,
+            "type": "SA",
+            "skill": "Reducing balance: time to reach a value",
+            "sd": [],
+            "sub": "7E",
+            "sc": "",
+            "src": "Edrolo 5D Q14",
+            "fu": ""
+           },
+           {
+            "q": 10,
+            "marks": 2,
+            "type": "SA",
+            "skill": "Nominal to effective rate",
+            "sd": [],
+            "sub": "7F",
+            "sc": "",
+            "src": "Edrolo 5G Q2",
+            "fu": ""
            }
           ]
          }
