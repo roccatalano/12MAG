@@ -1,5 +1,7 @@
 # 12MAG handover — 15 Nov 2026 (updated 15:55)
 
+**16 Nov 01:40 (AoS3 #4):** CFAT 3.10.1–3.10.3 follow-ups: every question now has a skill, subchapter and 'Follow-up if wrong' (Jacaranda Topic 8 exercises, 8.2–8.6) in `planner/unit-plan.json` (`tools/cfat/ch10/followups.py`). Jacaranda has no transpose exercise question. Next AoS 3 task: lesson 10A-10B.
+
 
 **16 Nov 01:33 (AoS4 #2):** Ch 13 cards prefilled (`tools/prefill_ch13.py`): Examples 1–13 with Edrolo You trys (none written), APK (Cambridge U1&2 Ch 8 checklist + Edrolo U1&2 7A–7F exam Qs), Do Now, exits (Edrolo 8A–8D, 8F), no CAS, videos (draft); 36 ledger rows. Next AoS 4 task: CFATs for Ch 13.
 

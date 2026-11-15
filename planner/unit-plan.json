@@ -9366,78 +9366,78 @@
             "q": 1,
             "marks": 1,
             "type": "MC",
-            "skill": "",
+            "skill": "Identifying matrix properties and types",
             "sd": [],
-            "sub": "",
+            "sub": "10A",
             "sc": "",
             "src": "Edrolo 7A Q1",
-            "fu": ""
+            "fu": "Jacaranda 8.2 Q1–8"
            },
            {
             "q": 2,
             "marks": 1,
             "type": "MC",
-            "skill": "",
+            "skill": "Adding and subtracting matrices",
             "sd": [],
-            "sub": "",
+            "sub": "10C",
             "sc": "",
             "src": "Edrolo 7B Q1",
-            "fu": ""
+            "fu": "Jacaranda 8.3 Q1–5, 8–12"
            },
            {
             "q": 3,
             "marks": 1,
             "type": "MC",
-            "skill": "",
+            "skill": "Adding and subtracting matrices",
             "sd": [],
-            "sub": "",
+            "sub": "10C",
             "sc": "",
             "src": "Edrolo 7B Q4",
-            "fu": ""
+            "fu": "Jacaranda 8.3 Q1–5, 8–12"
            },
            {
             "q": 4,
             "marks": 1,
             "type": "MC",
-            "skill": "",
+            "skill": "Determining the transpose of a matrix",
             "sd": [],
-            "sub": "",
+            "sub": "10C",
             "sc": "",
             "src": "Edrolo 7B Q7",
-            "fu": ""
+            "fu": "No Jacaranda exercise Q on transpose: re-read Jacaranda 8.2 (transpose notes) + Cambridge 10C"
            },
            {
             "q": 5,
             "marks": 3,
             "type": "SA",
-            "skill": "",
+            "skill": "Identifying matrix properties and types",
             "sd": [],
-            "sub": "",
+            "sub": "10A",
             "sc": "",
             "src": "Edrolo 7A Q2",
-            "fu": ""
+            "fu": "Jacaranda 8.2 Q1–8"
            },
            {
             "q": 6,
             "marks": 4,
             "type": "SA",
-            "skill": "",
+            "skill": "Identifying matrix properties and types",
             "sd": [],
-            "sub": "",
+            "sub": "10A",
             "sc": "",
             "src": "Edrolo 7A Q4",
-            "fu": ""
+            "fu": "Jacaranda 8.2 Q1–8"
            },
            {
             "q": 7,
             "marks": 4,
             "type": "SA",
-            "skill": "",
+            "skill": "Adding and subtracting matrices",
             "sd": [],
-            "sub": "",
+            "sub": "10C",
             "sc": "",
             "src": "Edrolo 7B Q5",
-            "fu": ""
+            "fu": "Jacaranda 8.3 Q1–5, 8–12"
            }
           ]
          }
@@ -9849,100 +9849,100 @@
             "q": 1,
             "marks": 1,
             "type": "MC",
-            "skill": "",
+            "skill": "Defining matrix products",
             "sd": [],
-            "sub": "",
+            "sub": "10D",
             "sc": "",
             "src": "Edrolo 7C Q1",
-            "fu": ""
+            "fu": "Jacaranda 8.4 Q3, 7, 8, 10"
            },
            {
             "q": 2,
             "marks": 1,
             "type": "MC",
-            "skill": "",
+            "skill": "Calculating a matrix product",
             "sd": [],
-            "sub": "",
+            "sub": "10D",
             "sc": "",
             "src": "Edrolo 7C Q4",
-            "fu": ""
+            "fu": "Jacaranda 8.4 Q1, 2, 4, 9, 11–13"
            },
            {
             "q": 3,
             "marks": 1,
             "type": "MC",
-            "skill": "",
+            "skill": "Calculating a matrix power",
             "sd": [],
-            "sub": "",
+            "sub": "10D",
             "sc": "",
             "src": "Edrolo 7C Q12",
-            "fu": ""
+            "fu": "Jacaranda 8.4 Q20 (CAS)"
            },
            {
             "q": 4,
             "marks": 1,
             "type": "MC",
-            "skill": "",
+            "skill": "Calculating the determinant of a matrix",
             "sd": [],
-            "sub": "",
+            "sub": "10E",
             "sc": "",
             "src": "Edrolo 7D Q1",
-            "fu": ""
+            "fu": "Jacaranda 8.5 Q1–4"
            },
            {
             "q": 5,
             "marks": 1,
             "type": "MC",
-            "skill": "",
+            "skill": "Calculating the inverse of a matrix",
             "sd": [],
-            "sub": "",
+            "sub": "10E",
             "sc": "",
             "src": "Edrolo 7D Q5",
-            "fu": ""
+            "fu": "Jacaranda 8.5 Q5–12"
            },
            {
             "q": 6,
             "marks": 1,
             "type": "MC",
-            "skill": "",
+            "skill": "Solving simultaneous equations using matrix equations",
             "sd": [],
-            "sub": "",
+            "sub": "10E",
             "sc": "",
             "src": "Edrolo 7D Q9",
-            "fu": ""
+            "fu": "Jacaranda 8.5 Q14–18 (matrix equations)"
            },
            {
             "q": 7,
             "marks": 3,
             "type": "SA",
-            "skill": "",
+            "skill": "Calculating a matrix product",
             "sd": [],
-            "sub": "",
+            "sub": "10D",
             "sc": "",
             "src": "Edrolo 7C Q6",
-            "fu": ""
+            "fu": "Jacaranda 8.4 Q1, 2, 4, 9, 11–13"
            },
            {
             "q": 8,
             "marks": 3,
             "type": "SA",
-            "skill": "",
+            "skill": "Calculating a matrix power",
             "sd": [],
-            "sub": "",
+            "sub": "10D",
             "sc": "",
             "src": "Edrolo 7C Q14",
-            "fu": ""
+            "fu": "Jacaranda 8.4 Q20 (CAS)"
            },
            {
             "q": 9,
             "marks": 3,
             "type": "SA",
-            "skill": "",
+            "skill": "Solving simultaneous equations using matrix equations",
             "sd": [],
-            "sub": "",
+            "sub": "10E",
             "sc": "",
             "src": "Edrolo 7D Q11",
-            "fu": ""
+            "fu": "Jacaranda 8.5 Q14–18 (matrix equations)"
            }
           ]
          }
@@ -9996,67 +9996,67 @@
             "q": 1,
             "marks": 1,
             "type": "MC",
-            "skill": "",
+            "skill": "Constructing permutation matrices",
             "sd": [],
-            "sub": "",
+            "sub": "10F",
             "sc": "",
             "src": "Edrolo 7E Q4",
-            "fu": ""
+            "fu": "Jacaranda 8.4 Q5, 6, 16"
            },
            {
             "q": 2,
             "marks": 1,
             "type": "MC",
-            "skill": "",
+            "skill": "Interpreting and constructing communication matrices",
             "sd": [],
-            "sub": "",
+            "sub": "10F",
             "sc": "",
             "src": "Edrolo 7F Q1",
-            "fu": ""
+            "fu": "Jacaranda 8.6 Q1–7, 14–17"
            },
            {
             "q": 3,
             "marks": 1,
             "type": "MC",
-            "skill": "",
+            "skill": "Interpreting and constructing dominance matrices",
             "sd": [],
-            "sub": "",
+            "sub": "10G",
             "sc": "",
             "src": "Edrolo 7F Q6",
-            "fu": ""
+            "fu": "Jacaranda 8.6 Q8–13"
            },
            {
             "q": 4,
             "marks": 2,
             "type": "SA",
-            "skill": "",
+            "skill": "Applying permutations to matrices",
             "sd": [],
-            "sub": "",
+            "sub": "10F",
             "sc": "",
             "src": "Edrolo 7E Q1",
-            "fu": ""
+            "fu": "Jacaranda 8.4 Q5, 6, 16"
            },
            {
             "q": 5,
             "marks": 3,
             "type": "SA",
-            "skill": "",
+            "skill": "Interpreting and constructing communication matrices",
             "sd": [],
-            "sub": "",
+            "sub": "10F",
             "sc": "",
             "src": "Edrolo 7F Q3",
-            "fu": ""
+            "fu": "Jacaranda 8.6 Q1–7, 14–17"
            },
            {
             "q": 6,
             "marks": 3,
             "type": "SA",
-            "skill": "",
+            "skill": "Interpreting and constructing dominance matrices",
             "sd": [],
-            "sub": "",
+            "sub": "10G",
             "sc": "",
             "src": "Edrolo 7F Q8",
-            "fu": ""
+            "fu": "Jacaranda 8.6 Q8–13"
            }
           ]
          }
