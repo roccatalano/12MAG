@@ -131,6 +131,13 @@ main{max-width:1200px;margin:0 auto;padding:16px 20px 80px}
 .ystats div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 12px}.ystats b{font-size:17px;display:block}
 .placeholder ul{text-align:left;display:inline-block;margin:10px 0 0;line-height:1.7}
 .hwrow{display:flex;gap:10px;align-items:baseline}.hwrow .hws{flex:1;min-width:0;white-space:nowrap;overflow:hidden}.hwrow b{white-space:nowrap}
+.chgrid{display:grid;grid-template-columns:110px minmax(0,1.6fr) minmax(0,1fr);gap:10px;align-items:start;margin-bottom:14px}
+.col{display:flex;flex-direction:column;gap:6px}.colh{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600}
+.chgrid .card{min-height:0}.chgrid .detail{grid-column:auto;grid-template-columns:1fr;gap:10px}
+.t-cfat{--c:#8a6ad8}.card.fa{cursor:default}.card.fa .ms{font-size:10.5px;font-weight:600;padding:1px 6px;border-radius:5px}
+.card.fa .ms.draft{background:var(--review);color:var(--review-i)}.card.fa .ms.ready{background:var(--prac);color:var(--prac-i)}
+.cpl{display:flex;flex-direction:column;gap:3px;font-size:12px}.cpl a{color:#1d7266;text-decoration:none;border:1px solid #9fd3c9;border-radius:6px;padding:0 6px;margin-left:3px;font-weight:600}
+@media(max-width:760px){.chgrid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -253,6 +260,16 @@ window.addEventListener('resize',fitRows);
 function aosFilter(L){const sel=$('#aosFilter'),f=sel.value;
   sel.innerHTML='<option value="">All areas of study</option>'+UP.aos.map(a=>`<option value="AoS ${a.n}" ${f=='AoS '+a.n?'selected':''}>AoS ${a.n}: ${esc(a.title)}</option>`).join('');
   return L.filter(l=>!f||l.aos==f)}
+const isFA=m=>/^(CFAT|Chapter test)/i.test(m.kind);
+function links(x){return `${x.file?`<a class="mlink" href="${esc(x.file)}" target="_blank" rel="noopener">Open ↗</a>`:''}${x.pdf?` <a class="mlink pdf" href="${esc(x.pdf)}" download>PDF ⬇</a>`:''}`}
+function formatives(C){const seen=new Set(),out=[];
+  C.forEach(l=>{(l.materials||[]).filter(isFA).forEach(m=>{if(!seen.has(m.kind)){seen.add(m.kind);out.push({m,l})}});
+    cfs(l).forEach(c=>{if(!seen.has(c.id)){seen.add(c.id);out.push({m:{kind:c.id,status:/ready/i.test(c.status)?'ready':/draft/i.test(c.status)?'draft':'',file:c.file},l})}})});
+  out.sort((x,y)=>(/^Chapter test/i.test(x.m.kind)?1:0)-(/^Chapter test/i.test(y.m.kind)?1:0));
+  return out.length?out.map(({m,l})=>{const test=/^Chapter test/i.test(m.kind),c=cfs(l).find(x=>x.id==m.kind);
+    return `<div class="card fa ${test?'t-check':'t-cfat'}"><div class="meta"><span>Set in L${l.n}${c&&c.covers?' · covers '+esc(c.covers.join(', ')):''}</span><span class="ms ${m.status}">${m.status=='ready'?'Ready':m.status=='draft'?'Draft':'To make'}</span></div>
+    <div class="ttl"><b>${test?'Chapter '+l.ch+' test':esc(m.kind)}</b>${c&&c.title?' · '+esc(c.title):''}</div>
+    <div class="cpl">${m.copies?.length?m.copies.map(k=>`<span><span class="sub">${esc(k.label)}</span> ${k.file||k.pdf?links(k):'<span class="sub">to make</span>'}</span>`).join(''):links(m)}</div></div>`}).join(''):'<div class="empty">None yet</div>'}
 /* ---------- Course plan ---------- */
 function renderCourse(){
   const all=lessons(),L=aosFilter(all);
@@ -264,11 +281,9 @@ function renderCourse(){
     const C=L.filter(l=>l.ch==ch);
     if(C[0].aos!=lastA){ if(lastA)h+=`<div class="revrow">${esc(L.find(l=>l.aos==lastA).revision)}: practice only, not in the lesson sequence.</div>`;
       lastA=C[0].aos;h+=`<div class="aos"><b>${esc(lastA)}</b><span>${esc(C[0].aosTitle)}</span></div>`}
-    for(let i=0;i<C.length;i++){const W=C.slice(i,i+1);
-      h+=`<div class="week chap"><div class="wl">${i==0?`<span class="cn">Chapter ${ch}</span><b>${esc(C[0].chTitle)}</b>${C.length} lessons`:''}</div>`;
-      for(const l of W)h+=card(l);
-      W.filter(l=>expandAll||l.id==openId).forEach(l=>h+=detail(l));
-      h+='</div>';}
+    h+=`<div class="chgrid"><div class="wl"><span class="cn">Chapter ${ch}</span><b>${esc(C[0].chTitle)}</b>${C.length} lessons</div>
+      <div class="col"><div class="colh">Lessons</div>${C.map(l=>card(l)+(expandAll||l.id==openId?detail(l):'')).join('')}</div>
+      <div class="col"><div class="colh">Formative assessments</div>${formatives(C)}</div></div>`;
   }
   if(lastA)h+=`<div class="revrow">${esc(L.find(l=>l.aos==lastA).revision)}: practice only, not in the lesson sequence.</div>`;
   $('#main').innerHTML=h; wire(renderCourse);
