@@ -6,6 +6,10 @@ from qdata import Q, SUBS
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 FIG = json.load(open('figs.json'))
+LOADER = ("document.addEventListener('DOMContentLoaded',()=>{if(!matchMedia('screen').matches)return;const d=document.createElement('div');d.id='a4load';"
+          "d.style.cssText='position:fixed;inset:0;z-index:99999;background:#6b6b6b;color:#fff;font:600 16px Arial;display:flex;align-items:center;justify-content:center';"
+          "d.textContent='Loading A4 pages…';document.documentElement.appendChild(d)});"
+          "window.__a4done=()=>{const d=document.getElementById('a4load');if(d)d.remove()};")
 
 def fig(key, sol, w=None):
     svg = FIG[f'{key}_{1 if sol else 0}']
@@ -129,6 +133,8 @@ def build(sol):
     title = 'Ch1 revision booklet' + (' solutions' if sol else '')
     L = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..', 'lessons')
     js = ''.join(f'<script>{open(os.path.join(L, f)).read()}</script>' for f in ('a4view.js', 'paged.polyfill.min.js')) if A4VIEW else ''
+    if A4VIEW:  # cover the page with a grey 'Loading A4 pages' screen until Paged.js has finished laying out the pages
+        js = js.replace('<script>', '<script>' + LOADER + '</script><script>', 1).replace('document.head.appendChild(s);}', 'document.head.appendChild(s);window.__a4done&&window.__a4done();}', 1)
     return f'<!DOCTYPE html><html><head><meta charset="utf-8"><title>{title}</title><style>{css}</style>{js}</head><body class="{"sol" if sol else ""}">{body}</body></html>'
 
 os.makedirs('out', exist_ok=True)

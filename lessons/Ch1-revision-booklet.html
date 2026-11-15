@@ -128,8 +128,8 @@ table.fill td{height:6mm}
 .mcfig div{display:flex;gap:1mm;align-items:flex-start}
 .cover td{padding:1.2mm 3mm}
 .sol .stu{display:none}
-</style><script>// Screen preview of A4 print files: Paged.js lays out real A4 pages, then this adds the grey desk and page shadows.
-window.PagedConfig={after:()=>{const s=document.createElement('style');s.textContent=`@media screen{html,body{background:#6b6b6b!important}.pagedjs_pages{display:flex;flex-direction:column;align-items:center;padding:10mm 0;gap:8mm}.pagedjs_page{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.45)}}`;document.head.appendChild(s);}};
+</style><script>document.addEventListener('DOMContentLoaded',()=>{if(!matchMedia('screen').matches)return;const d=document.createElement('div');d.id='a4load';d.style.cssText='position:fixed;inset:0;z-index:99999;background:#6b6b6b;color:#fff;font:600 16px Arial;display:flex;align-items:center;justify-content:center';d.textContent='Loading A4 pages…';document.documentElement.appendChild(d)});window.__a4done=()=>{const d=document.getElementById('a4load');if(d)d.remove()};</script><script>// Screen preview of A4 print files: Paged.js lays out real A4 pages, then this adds the grey desk and page shadows.
+window.PagedConfig={after:()=>{const s=document.createElement('style');s.textContent=`@media screen{html,body{background:#6b6b6b!important}.pagedjs_pages{display:flex;flex-direction:column;align-items:center;padding:10mm 0;gap:8mm}.pagedjs_page{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.45)}}`;document.head.appendChild(s);window.__a4done&&window.__a4done();}};
 </script><script>/**
  * @license Paged.js v0.4.3 | MIT | https://gitlab.coko.foundation/pagedjs/pagedjs
  */
