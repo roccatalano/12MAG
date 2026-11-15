@@ -14,6 +14,10 @@ KIND={'dn':'Do Now','apk':'APK','we':'Worked example','yt':'You try','ex':'Exit 
 def J(o): return json.dumps(o).replace("'","&#39;")
 def box(rid,cfg): return f'<div class="chart" id="{rid}" data-chart="box" data-cfg=\'{J(cfg)}\'></div>'
 def hist(rid,cfg,extra=''): return f'<div class="chart" id="{rid}" data-chart="hist" data-cfg=\'{J(cfg)}\' {extra}></div>'
+def norm(rid,cfg,extra=''):
+    """normal curve (tpl.js drawNorm). cfg: m, s, rows ['x','z'], hide ['x','z','pct'], xl, W, h, fs, dec, sh [[a,b,col,label]] (z units).
+    Frag attrs: data-nshade="#id|a,b|col|label" (label: _ for spaces) · data-nshow="#id|x,z,pct" · data-nmark="#id|z|label|col\""""
+    return f'<div class="chart" id="{rid}" data-chart="norm" data-cfg=\'{J(cfg)}\' {extra}></div>'
 def dot(rid,cfg): return f'<div class="chart" id="{rid}" data-chart="dot3" data-cfg=\'{J(cfg)}\'></div>'
 def stem(rid,rows,key,fs=24):
     i=0; tr=''
@@ -110,6 +114,13 @@ def qslide(kind,pill,head,given,steps,answer,src,stat=None,mc=None,key=None,dist
     v=f'<button class="vid" data-src="" data-label="{video}">▶ Video</button>' if video else ''
     return _frame(cls,pill,head,f'<div class="qg">{L}{R}</div>',src,stat,cfu or ('mc' if mc else 'cold' if kind=='we' else 'qw'),v,cmd if cmd and cmd[0]!='Multiple choice' else None)
 
+def cfat(code,title,subs,marks,where):
+    """CFAT slide (first slide after Today's lesson): how it runs + 20-minute timer (starts on the click)."""
+    body=('<div class="row" style="gap:40px;align-items:stretch"><div class="key" style="flex:1"><h4>How it runs</h4><ul class="bul" style="font-size:26px;line-height:1.6;margin-left:30px">'
+          f'<li>Individual, in silence</li><li>CAS and your bound reference allowed</li><li>Multiple choice + short answer · <b>{marks} marks</b></li><li>Covers {subs}</li><li>Pens down when the timer ends</li></ul></div>'
+          '<div class="key" style="flex:.8;display:flex;flex-direction:column;justify-content:center"><h4 style="text-align:center">Time remaining</h4><div class="timer" id="cfatT">20:00</div>'
+          '<p class="frag muted" data-act="timer" style="text-align:center;font-size:20px">Timer running</p></div></div>')
+    return _frame('cfat',f'{code} · {subs}',f'{code}: {title}',body,where,cfu='qw')
 def kcard(name,body,rule=''):
     """a key formula/definition card, same look as the Key definitions and formulas slide"""
     return f'<div class="kf"><span class="kn">{name}</span><span class="kx">{body}</span>'+(f'<span class="kr">{rule}</span>' if rule else '')+'</div>'
@@ -175,8 +186,9 @@ def videos(items=(),blank=8):
 def assemble(S,doc_title,out,base=f'{ROOT}/tools/deck/engine.html'):
     """Wrap slides in the slide engine (tools/deck/engine.html: CSS, charts, reveal engine) plus the template CSS/JS."""
     h=open(base,encoding='utf-8').read()
-    i=h.find('</style>'); head,tail=h.split('<!--SLIDES-->')
+    head,tail=h.split('<!--SLIDES-->')
     head=re.sub(r'<title>.*?</title>',f'<title>{doc_title}</title>',head)
+    i=head.find('</style>')  # after the title swap, so the insert point is not shifted
     css=open(f'{HERE}/tpl.css',encoding='utf-8').read()
     head=head[:i]+css+head[i:]
     for x,y in [('s4apply(s,f);','s4apply(s,f);tplapply(s,f);'),('s4reset(s);','s4reset(s);tplreset(s);')]:

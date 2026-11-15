@@ -1519,6 +1519,12 @@
            "I can convert standardised scores into actual scores.",
            "I can solve for the values of the mean and standard deviation."
           ]
+         },
+         {
+          "sub": "1I",
+          "items": [
+           "I can explain the difference between a population and a sample."
+          ]
          }
         ],
         "studyDesign": [
@@ -1557,7 +1563,7 @@
           "n": 31,
           "sub": "1H",
           "title": "Using standardised scores to find percentages",
-          "youTry": "Edrolo 1H WE2a",
+          "youTry": "Edrolo 1H WE2",
           "video": "Cambridge GO · 1H Resources"
          },
          {
@@ -1578,25 +1584,15 @@
           "n": 34,
           "sub": "1H",
           "title": "Finding the mean and standard deviation",
-          "youTry": "Edrolo 1H WE3a",
+          "youTry": "Edrolo 1H WE3",
           "video": "Cambridge GO · 1H Resources"
          }
         ],
         "apk": [
          {
           "kind": "Skill",
-          "ref": "Cambridge U1&2 2F checklist #12",
-          "text": "Find the standard deviation of a data set"
-         },
-         {
-          "kind": "Skill",
           "ref": "Cambridge U1&2 2G checklist #13",
           "text": "Use the 68–95–99.7% rule"
-         },
-         {
-          "kind": "Exam",
-          "ref": "Edrolo U1&2 1G Q13",
-          "text": "adapted from VCAA 2017 Exam 2 Q1bi"
          },
          {
           "kind": "Exam",
@@ -1607,13 +1603,23 @@
         "doNow": [
          {
           "exam": "Exam 1",
+          "ref": "VCAA 2025 Exam 1 Q1",
+          "sec": "1F"
+         },
+         {
+          "exam": "Exam 1",
           "ref": "VCAA 2024 Exam 1 Q4",
-          "sec": "1G"
+          "sec": "1E"
          },
          {
           "exam": "Exam 2",
-          "ref": "VCAA 2024 NHT Exam 2 Q1b",
-          "sec": "1G"
+          "ref": "VCAA 2025 Exam 2 Q1ci",
+          "sec": "1F"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2025 Exam 2 Q1cii",
+          "sec": "1F"
          }
         ],
         "exit": [
@@ -1987,8 +1993,8 @@
          {
           "kind": "Guided slides",
           "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
-          "status": "todo",
-          "file": ""
+          "status": "draft",
+          "file": "lessons/S5-slides.html"
          },
          {
           "kind": "Guided worksheet",
@@ -2019,17 +2025,61 @@
          }
         ],
         "homework": {
-         "source": "default",
+         "source": "slides",
          "sets": [
           {
-           "title": "Cambridge · Exercise 1H",
-           "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "title": "Cambridge · Exercise 1H (part 1)",
+           "items": [
+            {
+             "skill": "The 68–95–99.7% rule",
+             "q": "Q1–5"
+            },
+            {
+             "skill": "Calculating standardised scores",
+             "q": "Q6–7"
+            },
+            {
+             "skill": "Comparing with standardised scores",
+             "q": "Q8"
+            },
+            {
+             "skill": "Percentages from standardised scores",
+             "q": "Q9–10"
+            }
+           ],
+           "note": ""
+          },
+          {
+           "title": "Cambridge · Exercise 1H (part 2)",
+           "items": [
+            {
+             "skill": "Actual scores from standardised scores",
+             "q": "Q11"
+            },
+            {
+             "skill": "Finding the mean and standard deviation",
+             "q": "Q12–15"
+            },
+            {
+             "skill": "Applications",
+             "q": "Q16–18"
+            },
+            {
+             "skill": "Exam 1 style questions",
+             "q": "Q19–23"
+            }
+           ],
+           "note": ""
           },
           {
            "title": "Cambridge · Exercise 1I",
            "items": [],
-           "note": "All questions. Skill-by-skill breakdown added when the slides are made."
+           "note": "Interactive Textbook only (Cambridge GO)"
+          },
+          {
+           "title": "Revision book",
+           "items": [],
+           "note": "The 1H section"
           }
          ]
         }

@@ -4,19 +4,15 @@ Read `CLAUDE.md` first (rules, item index, **slide template rules**), then this 
 Repo: `roccatalano/12MAG` (GitHub Pages: roccatalano.github.io/12mag/ → `planner/`). Rocco's dashboard repo `roccatalano/teaching-dashboard-2027` is read-only unless he asks.
 Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through the desktop-app bridge (stage files to read; commit files to write; can't move/rename/delete).
 
-## NEXT JOB: Lesson 5 slides (1H–1I) — the last Chapter 1 teaching lesson
-Planner card: `gm12-u3-s5` in `planner/unit-plan.json` ("Normal distribution, z-scores; populations and samples"). CFAT 1.1.2 is delivered at the start of this lesson (rule 3: CFAT → Do Now → …).
-- **Build it like Lesson 4:** copy `tools/deck/s4/build.py` to `tools/deck/s5/build.py` and fill content into the templates (`tools/deck/tpl/tpl.py`). Follow CLAUDE.md "Slide templates" exactly (order, question-slide layout, command-word tile, green answer card, MC distractor, multi-part `plist` + `parts=`). Output `lessons/S5-slides.html`; copy to G: as `01 Lesson materials\1H-1I slides.html`. **No slide PDF** (Rocco, 14 Nov).
-- **What the card already has:**
-  - Success criteria (1H): apply the 68–95–99.7% rule; calculate standardised scores; compare using standardised scores; standardised scores → percentages; standardised → actual scores; solve for mean and SD. 1I has no learning intentions in the textbook (not in the CFATs).
-  - Do Now: only 2 so far (VCAA 2024 E1 Q4; 2024 NHT E2 Q1b). **Needs 2 × Exam 1 + 2 × Exam 2** (rule 4) from `tools/vcaa_current_index.csv`, not burnt in `tools/ledger.csv`, mixing earlier Ch 1 content.
-  - APK: Cambridge U1&2 2F checklist #12 (SD), 2G #13 (68–95–99.7%); Edrolo U1&2 1G Q13 (VCAA 2017 E2 Q1bi), 1G Q14 (VCAA 2020 E2 Q2bi). Check them against the ledger.
-  - CAS: z-scores and normal probability video links (TI + ClassPad) already on the card.
-  - Coursework: Cambridge Ex 1H and 1I; skill-by-skill breakdown to add when the slides are made.
-- **Still to pick:** Cambridge 1H/1I Examples (WE) + mapped Edrolo You trys (rule 6), exit tasks = VCAA reprints at the back of Edrolo U3&4 1H/1I (rule 7; % correct from the past-design examiner reports, rule 11). Match burnt items by ORIGINAL VCAA source (rule 10).
-- **Avoid overlap with the Ch 1 revision booklet?** Insight items are never burnt, so no clash, but don't reuse its exact questions as Do Now/exits.
-- After the deck: log every item (`tools/build_ledger.py` or `tools/ledger_manual.csv`), update the s5 planner card (Do Now, WE/You try, exits, coursework breakdown, Guided slides link + status), **check every slide visually** (all steps + mid-reveal, rule 12), commit and push.
-- Then (later): 1H–1I guided worksheet (as `lessons/S4-worksheet*.html`), bound reference entries, Ch 1 test.
+## Done 15 Nov: Lesson 5 slides (1H–1I)
+- `lessons/S5-slides.html` (34 slides), also `01 Lesson materials\1H-1I slides.html` on G:. Build: `tools/deck/s5/build.py` (screenshots: `tools/deck/s5/shoot.py`).
+- Order: title → Today's lesson → **CFAT 1.1.2 slide (20-min timer)** → Key definitions/formulas → Do Now ×4 → APK ×2 → Learn/WE/You try (+ CAS after WE29) → Learn 1I → exits ×2 → check-in → coursework → videos.
+- Do Now: VCAA 2025 E1 Q1 (75%), 2024 E1 Q4 (68%), 2025 E2 Q1ci (69%), Q1cii (47%). APK: Cambridge U1&2 2G #13; Edrolo U1&2 1G Q14 (VCAA 2020 E2 Q2bi, 40%). Exits: Edrolo U3&4 1H Q12 (VCAA 2019 E2 Q2b, 58%), 1I Q13 (VCAA 2021 E2 Q1c, 78%). WE 28–34; You trys Edrolo 1H WE1, WE2, WE3, 1I WE1, WE2, WE3 (WE33: none). All logged in the ledger; planner card updated.
+- Dropped from the card's APK (already burnt): Cambridge U1&2 2F #12 (S3) and Edrolo U1&2 1G Q13 (= VCAA 2017 E2 Q1bi, burnt by CFAT 1.1.3 via Edrolo U3&4 1H Q13).
+- **1I is Interactive-Textbook only**: its Learn slide is in own words (population, sample, random sample) and no 1I examples exist in print. Rocco to check it against Cambridge GO. A 1I success criterion was added ("I can explain the difference between a population and a sample.").
+- Template changes (reusable): `norm()` normal-curve chart (tpl.js `drawNorm`: x/z axis rows, section %, frag shading/marks), `cfat()` CFAT slide, histogram `clab` centred labels; **bug fix in `assemble`** (template CSS was inserted at the wrong place when the deck title differed from the engine's).
+- Normal-probability CAS videos (ClassPad Help 80/470/81) are on the planner card but not on the slides: GM uses the 68–95–99.7% rule, not normCdf.
+- Next: 1H–1I guided worksheet, bound reference entries (1G, 1H–1I), Ch 1 test (L6).
 
 ## Planner conventions (15 Nov)
 - Material with several versions → `copies: [{label, file, pdf}]` renders side-by-side cards (Student copy / Solutions). A copy with no file shows "To make".
@@ -42,7 +38,7 @@ Planner card: `gm12-u3-s5` in `planner/unit-plan.json` ("Normal distribution, z-
 
 ## Open / later
 - **Lessons 1–3 (S1–S3)** still use the old layout → rebuild on the templates (also fixes 'Homework' → 'Coursework', S2 Do Now count, S3 extra exit, S2 '?%' → 71%).
-- **1H–1I (L5)** slides not made. Ch 1 coursework check + test (L6).
+- 1H–1I worksheet not made. Ch 1 coursework check + test (L6).
 - Bound reference entry for 1G not made.
 - Embedded YouTube cards (CAS slide) show "Error 153" when the file is opened from disk; check they play on GitHub Pages.
 - Heptathlon exit (slide 26): fits, but the 15-row table text is small.
