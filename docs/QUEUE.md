@@ -5,6 +5,8 @@ When the chapter has no `todo` tasks left, the runner turns itself off and waits
 
 **ACTIVE: Chapter 2** (runner "12MAG Ch 2 runner")
 
+**ACTIVE (third runner): Chapter 4** (runner "12MAG Ch 4 runner", added 15 Nov by Rocco; runs alongside Ch 3, same rule: only its own section)
+
 **ACTIVE (second runner): Chapter 3** (runner "12MAG Ch 3 runner", added 15 Nov by Rocco; runs alongside Ch 2: each runner only takes tasks from its own chapter section)
 
 Status words: `todo` · `in progress <date time>` · `done <date> — what was made` · `needs Rocco — why` (skipped; ask him).
@@ -33,7 +35,17 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 4. `todo` **Lesson l10 (3B)**: slides + worksheet.
 5. `todo` **Lesson l11 (3C)**: slides + worksheet.
 6. `todo` **Chapter 3 revision booklet** + solutions (template `tools/revision/ch2/build.py`): the Insight GM1 + GM2 'Investigating associations … and modelling linear associations' questions and parts NOT used in the Ch 2 booklet (regression: least squares line, slope/intercept, predictions, residuals, residual plots), plus any whole questions on 3A–3C. Leave transformation questions (Ch 4) out. Insight is never burnt.
-7. `todo` **Chapter 3 test** from the Mathspace Chapter 3 topic assessment (`02 Sources\Textbooks\Mathspace\Chapter 3 - Model linear associations`). If it can't be built from what's there, mark `needs Rocco`.
+7. `todo` **Chapter 3 test** from the Mathspace Chapter 3 topic assessment (`02 Sources\Textbooks\Mathspace\Chapter 3 - Model linear associations`). Leave out the transformation questions (lessons 3.05–3.07): they go to the Ch 4 test. If it can't be built from what's there, mark `needs Rocco`.
+
+## Chapter 4: Data transformations (lessons gm12-u3-l12 … l15, check gm12-u3-ch4-test)
+1. `todo` **Prefill the lesson cards** (l12–l15) in `planner/unit-plan.json`, same rules as Ch 3 task 1 (Do Now ×4 retrieval from `tools/vcaa_current_index.csv`, APK, Examples + mapped Edrolo You trys, exits, CAS skill ids, coursework, videos `draft`). Reserve every chosen exam item in `tools/ledger_manual.csv`. Check the ledger first: the Ch 3 runner reserves items at the same time.
+2. `todo` **CFATs for Chapter 4** + solutions (CFAT 1.4.x, Edrolo U3&4 exercise questions only, HTML + PDF; copy `tools/cfat/ch2/build_html.py` to `tools/cfat/ch4/`). Each CFAT sits at the start of the lesson after the content it covers.
+3. `todo` **Lesson l12 (4A)**: slides (`tools/deck/l12/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+4. `todo` **Lesson l13 (4B)**: slides + worksheet.
+5. `todo` **Lesson l14 (4C)**: slides + worksheet.
+6. `todo` **Lesson l15 (4D)**: slides + worksheet.
+7. `todo` **Chapter 4 revision booklet** + solutions (template `tools/revision/ch2/build.py`): Insight GM1 + GM2 transformation questions and parts (the ones the Ch 2/Ch 3 booklets leave out). Insight is never burnt.
+8. `todo` **Chapter 4 test** (model `tools/test/ch2/build.py`). Mathspace has no transformations chapter: its transformation questions are lessons 3.05–3.07 in `02 Sources\Textbooks\Mathspace\Chapter 3 - Model linear associations` (topic assessment + Chapter 3 review). Use the transformation questions the Ch 3 test does not use; if that is too few for a test, mark `needs Rocco`.
 
 ## Questions for Rocco
 (Each runner adds questions here (prefix Ch 3 questions with 'Ch3'), numbered Q1, Q2 …, with the date and time asked, and sends Rocco a phone notification. Rocco answers in the setup chat (Claude writes them under "Answers") or edits this file.
