@@ -1,5 +1,7 @@
 # 12MAG handover — 15 Nov 2026 (updated 15:55)
 
+**16 Nov 02:17 (AoS2 #4):** Lesson l31 (7A) built: `tools/deck/gm12-u3-l31/` → `lessons/7A slides` (29 slides) + `7A worksheet`/solutions (3 pages), Draft, copied to G: 01 Lesson materials. You trys for Ex 3/5 remapped (Decisions log). Next AoS 2 task: l32 (7B, 7D).
+
 **16 Nov 01:44 (AoS4 #3):** CFAT 4.13.1 (13A-13B), 4.13.2 (13C-13E), 4.13.3 (13F) built in `tools/cfat/ch13/` (Edrolo 8A, 8B, 8C, 8D, 8F exercise questions, graphs cropped from the PDF; answers from Edrolo answer pages; 'answers may vary' drawings given as edge lists). On the 13C, 13F and Ch 13 test cards; files in lessons/ and on G: 01 Lesson materials. Draft. Next: CFAT follow-ups (Jacaranda).
 
 **16 Nov 01:40 (AoS3 #4):** CFAT 3.10.1–3.10.3 follow-ups: every question now has a skill, subchapter and 'Follow-up if wrong' (Jacaranda Topic 8 exercises, 8.2–8.6) in `planner/unit-plan.json` (`tools/cfat/ch10/followups.py`). Jacaranda has no transpose exercise question. Next AoS 3 task: lesson 10A-10B.

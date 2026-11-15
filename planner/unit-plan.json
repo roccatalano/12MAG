@@ -7414,21 +7414,21 @@
           "n": 3,
           "sub": "7A",
           "title": "Generating a sequence of numbers with a calculator",
-          "youTry": "Edrolo 5A WE5a",
+          "youTry": "Edrolo 5A WE5",
           "video": "Cambridge GO · 7A Resources"
          },
          {
           "n": 4,
           "sub": "7A",
           "title": "Generating a sequence from a recurrence relation",
-          "youTry": "Edrolo 5A WE4",
+          "youTry": "Edrolo 5A WE4a",
           "video": "Cambridge GO · 7A Resources"
          },
          {
           "n": 5,
           "sub": "7A",
           "title": "Using a calculator to generate sequences from recurrence relations",
-          "youTry": "Edrolo 5A WE5b–c",
+          "youTry": "Edrolo 5A WE4b",
           "video": "Cambridge GO · 7A Resources"
          },
          {
@@ -7491,7 +7491,33 @@
          "recursion-sequence"
         ],
         "casYouTry": "Edrolo 5A WE5 (sequence on CAS)",
-        "note": "Edrolo 5A WE1–3 (recurrence relation ↔ words / sequence) are spare You trys for Exercise 7A Q7–8."
+        "note": "Edrolo 5A WE1–3 (recurrence relation ↔ words / sequence) are spare You trys for Exercise 7A Q7–8.",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/7A slides.html",
+          "pdf": "lessons/7A slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "3 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/7A worksheet.html",
+            "pdf": "lessons/7A worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/7A worksheet solutions.html",
+            "pdf": "lessons/7A worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
