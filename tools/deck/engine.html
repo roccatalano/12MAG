@@ -232,7 +232,7 @@ slides.forEach((s,k)=>{const n=document.createElement('div');n.className='sn';n.
   if(s.dataset.cfu){const d=document.createElement('div');d.className='cfu';s.dataset.cfu.split(' ').forEach(c=>{const [u,l]=CFU[c];d.insertAdjacentHTML('beforeend',`<div><img src="${u}" alt="${l}">${l}</div>`)});s.append(d)}});
 
 /* ---------- charts ---------- */
-const PAL=['#9db8f0','#4f84e6','#1f4fb0'];
+const PAL=['#9db8f0','#4f84e6','#1f4fb0','#0b1f4d','#b9a3e8'];
 function el(t,a,x){const e=document.createElementNS('http://www.w3.org/2000/svg',t);for(const k in a)e.setAttribute(k,a[k]);if(x!=null)e.textContent=x;return e}
 const col=(c,j)=>PAL[c.names.length===2?(j===0?0:2):j];
 function drawBar(box,c){const W=560,H=c.h||380,L=78,B=70,T=18,R=18,ph=H-T-B,pw=W-L-R,s=el('svg',{viewBox:`0 0 ${W} ${H}`,width:'100%'});

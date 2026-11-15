@@ -4298,7 +4298,8 @@
         "exit": [
          {
           "ref": "Edrolo U3&4 3B Q11",
-          "src": "Adapted from VCAA 2019 Exam 2 Q5c"
+          "src": "Adapted from VCAA 2019 Exam 2 Q5c",
+          "note": "Edrolo adapted wording used (original Q5c refers to part b)"
          },
          {
           "ref": "Edrolo U3&4 3B Q12",
@@ -4340,7 +4341,33 @@
           }
          ]
         },
-        "note": "Edrolo 3B WE3 (rearranging the equation to predict the EV) is a spare You try for Example 4."
+        "note": "Edrolo 3B WE3 (rearranging the equation to predict the EV) is a spare You try for Example 4.",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/3B slides.html",
+          "pdf": "lessons/3B slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "5 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/3B worksheet.html",
+            "pdf": "lessons/3B worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/3B worksheet solutions.html",
+            "pdf": "lessons/3B worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
