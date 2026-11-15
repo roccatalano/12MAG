@@ -6541,8 +6541,8 @@
         "apk": [
          {
           "kind": "Skill",
-          "ref": "Cambridge U1&2 1A checklist #2",
-          "text": "Convert decimals to percentages"
+          "ref": "Cambridge U1&2 1B checklist #6",
+          "text": "Increase or decrease a value by a percentage (replaces 1A checklist #2: already used in l03)"
          },
          {
           "kind": "Skill",
@@ -6552,7 +6552,7 @@
          {
           "kind": "Exam",
           "ref": "Edrolo U1&2 1D Q19",
-          "text": "VCAA 2018 Exam 2 Q2a"
+          "text": "VCAA 2018 Exam 2 Q2a (original wording and data used)"
          }
         ],
         "doNow": [
@@ -6749,6 +6749,30 @@
             "label": "Solutions",
             "file": "lessons/CFAT 1.5.1 (5A-5C) solutions.html",
             "pdf": "lessons/CFAT 1.5.1 (5A-5C) solutions.pdf"
+           }
+          ]
+         },
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: CFAT, Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/5D seasonal indices slides.html",
+          "pdf": "lessons/5D seasonal indices slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "3 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/5D seasonal indices worksheet.html",
+            "pdf": "lessons/5D seasonal indices worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/5D seasonal indices worksheet solutions.html",
+            "pdf": "lessons/5D seasonal indices worksheet solutions.pdf"
            }
           ]
          }

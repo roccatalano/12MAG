@@ -8,6 +8,9 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 
 
+## 15 Nov 21:49 — Ch5 #7: lesson l20 (5D seasonal indices) built (Draft)
+`tools/deck/l20/` (build.py, worksheet.py, figs.py, shoot.py) → `lessons/5D seasonal indices slides` (24, CFAT 1.5.1 slide first), `5D seasonal indices worksheet` (+ solutions, 3 pages), copied to G: 01 Lesson materials. APK 1A #2 burnt → 1B #6. Files named '5D seasonal indices …' (l21 shares 5D: use '5D deseasonalising …'). 5D video link still blank.
+
 ## 15 Nov 21:32 — Ch5 #6: lesson l19 (5C moving medians) built (Draft)
 `tools/deck/l19/` (build.py, worksheet.py, figs.py with `mmed()` and `tsm()` = ts plot + revealable median crosses/guides) → `lessons/5C slides` (20), `5C worksheet` (+ solutions, 3 pages), copied to G: 01 Lesson materials. APK = VCAA 2020 E2 Q3b (original); 2E #10 burnt → dropped. 5C video links still blank.
 
