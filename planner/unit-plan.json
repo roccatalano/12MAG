@@ -2791,7 +2791,7 @@
         "cfats": [
          {
           "id": "CFAT 1.2.1",
-          "title": "Bivariate data and associations between categorical variables",
+          "title": "Response and explanatory variables; associations between two categorical variables",
           "covers": [
            "2A",
            "2B"
@@ -2799,11 +2799,114 @@
           "format": "About 20 min · individual · CAS and single bound reference allowed",
           "status": "Draft",
           "plan": "Start of the 2C lesson.",
-          "file": "1. Data Analysis\\\\CFATs\\\\Chapter 2\\\\CFAT 1.2.1 [2A, 2B].docx",
+          "file": "lessons/CFAT 1.2.1 (2A-2B).pdf",
           "sources": [
-           "Edrolo GM U3&4 2023 exercise questions (CFAT-only): 2A Q1b, Q2, Q5, Q8, Q12 · 2B Q3a, Q5, Q11, Q12 · 2C Q2b, Q2c"
+           "Edrolo GM U3&4 2023 exercise questions only (rule 8): 2C Q1, Q2a–d · 2A Q1a, Q1b, Q2, Q5, Q7, Q8, Q9a–b"
           ],
-          "marks": 14
+          "marks": 17,
+          "mcMarks": 5,
+          "saMarks": 12,
+          "questions": [
+           {
+            "q": 1,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Position of RV/EV on a scatterplot",
+            "sd": [],
+            "sub": "2A",
+            "sc": "",
+            "src": "Edrolo 2C Q1",
+            "fu": ""
+           },
+           {
+            "q": 2,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Read a column % from a two-way table",
+            "sd": [],
+            "sub": "2B",
+            "sc": "",
+            "src": "Edrolo 2A Q1a",
+            "fu": ""
+           },
+           {
+            "q": 3,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Read a column % from a two-way table",
+            "sd": [],
+            "sub": "2B",
+            "sc": "",
+            "src": "Edrolo 2A Q1b",
+            "fu": ""
+           },
+           {
+            "q": 4,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Read a % segmented bar chart",
+            "sd": [],
+            "sub": "2B",
+            "sc": "",
+            "src": "Edrolo 2A Q5",
+            "fu": ""
+           },
+           {
+            "q": 5,
+            "marks": 1,
+            "type": "MC",
+            "skill": "No association: similar column %s",
+            "sd": [],
+            "sub": "2B",
+            "sc": "",
+            "src": "Edrolo 2A Q7",
+            "fu": ""
+           },
+           {
+            "q": "6a–d",
+            "marks": 4,
+            "type": "SA",
+            "skill": "Identify RV and EV",
+            "sd": [],
+            "sub": "2A",
+            "sc": "",
+            "src": "Edrolo 2C Q2",
+            "fu": ""
+           },
+           {
+            "q": "7a–b",
+            "marks": 3,
+            "type": "SA",
+            "skill": "Complete a two-way % table",
+            "sd": [],
+            "sub": "2B",
+            "sc": "",
+            "src": "Edrolo 2A Q2",
+            "fu": ""
+           },
+           {
+            "q": 8,
+            "marks": 2,
+            "type": "SA",
+            "skill": "Is there an association? quote %s",
+            "sd": [],
+            "sub": "2B",
+            "sc": "",
+            "src": "Edrolo 2A Q8",
+            "fu": ""
+           },
+           {
+            "q": "9a–b",
+            "marks": 3,
+            "type": "SA",
+            "skill": "EV on horizontal axis; complete % table",
+            "sd": [],
+            "sub": "2B",
+            "sc": "",
+            "src": "Edrolo 2A Q9",
+            "fu": ""
+           }
+          ]
          }
         ],
         "homework": {
@@ -2837,7 +2940,26 @@
            "note": "The 2C sections"
           }
          ]
-        }
+        },
+        "materials": [
+         {
+          "kind": "CFAT 1.2.1",
+          "desc": "Word, 2 pages, about 20 min, CAS and bound reference allowed.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/CFAT 1.2.1 (2A-2B).docx",
+            "pdf": "lessons/CFAT 1.2.1 (2A-2B).pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/CFAT 1.2.1 (2A-2B) solutions.docx",
+            "pdf": "lessons/CFAT 1.2.1 (2A-2B) solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
@@ -3099,7 +3221,7 @@
         "cfats": [
          {
           "id": "CFAT 1.2.2",
-          "title": "Numerical vs categorical; scatterplots",
+          "title": "Numerical vs categorical variables; scatterplots",
           "covers": [
            "2C",
            "2D"
@@ -3107,7 +3229,103 @@
           "format": "About 20 min · individual · CAS and single bound reference allowed",
           "status": "Draft",
           "plan": "Start of the 2F lesson (one subchapter).",
-          "file": "1. Data Analysis\\\\CFATs\\\\Chapter 2\\\\CFAT 1.2.2 [2C, 2D].docx"
+          "file": "lessons/CFAT 1.2.2 (2C-2D).pdf",
+          "marks": 16,
+          "mcMarks": 5,
+          "saMarks": 11,
+          "sources": [
+           "Edrolo GM U3&4 2023 exercise questions only (rule 8): 2B Q1, Q3a, Q3b, Q5, Q7a, Q8a–b · 2C Q10, Q11a–b"
+          ],
+          "questions": [
+           {
+            "q": 1,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Classify a variable (ordinal categorical)",
+            "sd": [],
+            "sub": "2C",
+            "sc": "",
+            "src": "Edrolo 2B Q3a",
+            "fu": ""
+           },
+           {
+            "q": 2,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Describe a scatterplot (strength, direction, form)",
+            "sd": [],
+            "sub": "2D",
+            "sc": "",
+            "src": "Edrolo 2C Q10",
+            "fu": ""
+           },
+           {
+            "q": 3,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Compare parallel dot plots",
+            "sd": [],
+            "sub": "2C",
+            "sc": "",
+            "src": "Edrolo 2B Q3b",
+            "fu": ""
+           },
+           {
+            "q": 4,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Compare parallel boxplots",
+            "sd": [],
+            "sub": "2C",
+            "sc": "",
+            "src": "Edrolo 2B Q5",
+            "fu": ""
+           },
+           {
+            "q": 5,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Compare parallel boxplots (three groups)",
+            "sd": [],
+            "sub": "2C",
+            "sc": "",
+            "src": "Edrolo 2B Q7a",
+            "fu": ""
+           },
+           {
+            "q": 6,
+            "marks": 3,
+            "type": "SA",
+            "skill": "Medians from a back-to-back stem plot",
+            "sd": [],
+            "sub": "2C",
+            "sc": "",
+            "src": "Edrolo 2B Q1",
+            "fu": ""
+           },
+           {
+            "q": "7a–b",
+            "marks": 4,
+            "type": "SA",
+            "skill": "Association via centre and spread (dot plots)",
+            "sd": [],
+            "sub": "2C",
+            "sc": "",
+            "src": "Edrolo 2B Q8",
+            "fu": ""
+           },
+           {
+            "q": "8a–b",
+            "marks": 4,
+            "type": "SA",
+            "skill": "Describe association: strength, direction, form, outliers",
+            "sd": [],
+            "sub": "2D",
+            "sc": "",
+            "src": "Edrolo 2C Q11",
+            "fu": ""
+           }
+          ]
          }
         ],
         "homework": {
@@ -3141,7 +3359,26 @@
            "note": "The 2F sections"
           }
          ]
-        }
+        },
+        "materials": [
+         {
+          "kind": "CFAT 1.2.2",
+          "desc": "Word, 2 pages, about 20 min, CAS and bound reference allowed.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/CFAT 1.2.2 (2C-2D).docx",
+            "pdf": "lessons/CFAT 1.2.2 (2C-2D).pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/CFAT 1.2.2 (2C-2D) solutions.docx",
+            "pdf": "lessons/CFAT 1.2.2 (2C-2D) solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {

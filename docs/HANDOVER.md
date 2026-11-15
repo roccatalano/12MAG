@@ -4,6 +4,12 @@ Read `CLAUDE.md` first (rules, item index, **slide template rules**), then this 
 Repo: `roccatalano/12MAG` (GitHub Pages: roccatalano.github.io/12mag/ → `planner/`). Rocco's dashboard repo `roccatalano/teaching-dashboard-2027` is read-only unless he asks.
 Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through the desktop-app bridge (stage files to read; commit files to write; can't move/rename/delete).
 
+
+## 15 Nov 17:27 — Ch 2 CFATs rebuilt (runner, task Ch2 #2)
+- `lessons/CFAT 1.2.1 (2A-2B).docx/.pdf` (/17: 5 MC + 4 short answer) and `CFAT 1.2.2 (2C-2D).docx/.pdf` (/16: 5 MC + 3 short answer), each with a `solutions` copy (red answers + marks). Rule 8: Edrolo U3&4 exercise questions only. Built by `tools/cfat/ch2/build.py` (figures cropped by `crop.py`; sources in the docstring). Also on G: in 01 Lesson materials.
+- Planner: both CFAT cards updated (questions, marks, Draft) + material entries with Student copy / Solutions. Ledger: old CFAT 1.2.1 rows set burnt = no (incl. VCAA 2017 E1 Q6 via Edrolo 2A Q12, now free); 17 new rows.
+- Open questions Q1–Q6 logged in QUEUE Decisions log (Q5 decided: videos stay draft until each lesson task checks them).
+
 ## Done 15 Nov (17:30, queue runner): Ch 2 task 1 — lesson cards l03–l08 prefilled (Draft)
 - `tools/prefill_ch2.py` (sources in its docstring) → `planner/unit-plan.json`. Do Now: replaced burnt/duplicate picks (2023 E1 Q4, 2024 E1 Q1, 2025 E1 Q4, 2025 E2 Q1b, 2025 NHT E2 Q3a), the 4B-tagged 2025 NHT E1 Q10 and the same-lesson 2023 E2 Q3b; l08 got 4. Secs now follow vcaa_current_index.
 - You trys mapped from Edrolo U3&4 2A–2D + 3C WE1 (r²); coursework = Cambridge 2A–2I Q ranges by skill + revision book. CAS steps written for scatterplot, correlation-r, r-and-r2 (from Cambridge CAS 1/2; marked Draft). Ch 2 MaffsGuru videos in videos.json (draft).

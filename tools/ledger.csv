@@ -130,21 +130,21 @@ Edrolo U3&4 1H Q8,,CFAT,yes,CFAT 1.1.3,,HANDOFF burnt list
 Edrolo U3&4 1I Q1,,CFAT,yes,CFAT 1.1.3,,HANDOFF burnt list
 Edrolo U3&4 1I Q4,,CFAT,yes,CFAT 1.1.3,,HANDOFF burnt list
 Edrolo U3&4 1I Q9,,CFAT,yes,CFAT 1.1.3,,HANDOFF burnt list
-Edrolo U3&4 2A Q1b,,CFAT,yes,CFAT 1.2.1,,HANDOFF burnt list
-Edrolo U3&4 2A Q2,,CFAT,yes,CFAT 1.2.1,,HANDOFF burnt list
-Edrolo U3&4 2A Q5,,CFAT,yes,CFAT 1.2.1,,HANDOFF burnt list
-Edrolo U3&4 2A Q8,,CFAT,yes,CFAT 1.2.1,,HANDOFF burnt list
-Edrolo U3&4 2B Q3a,,CFAT,yes,CFAT 1.2.1,,HANDOFF burnt list
-Edrolo U3&4 2B Q5,,CFAT,yes,CFAT 1.2.1,,HANDOFF burnt list
-Edrolo U3&4 2C Q2b,,CFAT,yes,CFAT 1.2.1,,HANDOFF burnt list
-Edrolo U3&4 2C Q2c,,CFAT,yes,CFAT 1.2.1,,HANDOFF burnt list
+Edrolo U3&4 2A Q1b,,CFAT,no,CFAT 1.2.1,,replaced: CFAT 1.2.1 rebuilt 15 Nov under rule 8 (see new rows)
+Edrolo U3&4 2A Q2,,CFAT,no,CFAT 1.2.1,,replaced: CFAT 1.2.1 rebuilt 15 Nov under rule 8 (see new rows)
+Edrolo U3&4 2A Q5,,CFAT,no,CFAT 1.2.1,,replaced: CFAT 1.2.1 rebuilt 15 Nov under rule 8 (see new rows)
+Edrolo U3&4 2A Q8,,CFAT,no,CFAT 1.2.1,,replaced: CFAT 1.2.1 rebuilt 15 Nov under rule 8 (see new rows)
+Edrolo U3&4 2B Q3a,,CFAT,no,CFAT 1.2.1,,replaced: CFAT 1.2.1 rebuilt 15 Nov under rule 8 (see new rows)
+Edrolo U3&4 2B Q5,,CFAT,no,CFAT 1.2.1,,replaced: CFAT 1.2.1 rebuilt 15 Nov under rule 8 (see new rows)
+Edrolo U3&4 2C Q2b,,CFAT,no,CFAT 1.2.1,,replaced: CFAT 1.2.1 rebuilt 15 Nov under rule 8 (see new rows)
+Edrolo U3&4 2C Q2c,,CFAT,no,CFAT 1.2.1,,replaced: CFAT 1.2.1 rebuilt 15 Nov under rule 8 (see new rows)
 VCAA 2012 E1 Core Q2,,Do Now,yes,Do Now (1A),,HANDOFF burnt list
 VCAA 2012 E1 Core Q3,,Do Now,yes,Do Now (1A),,HANDOFF burnt list
 VCAA 2016 E1 Core Q8,Edrolo U3&4 2B Q11,CFAT,no,CFAT 1.2.1,,HANDOFF burnt list freed: CFAT 1.2.1 to be rebuilt under rule 8 (Rocco 15 Nov)
 VCAA 2016 E2 Core Q2bii,Edrolo U3&4 1E Q18,CFAT,yes,CFAT 1.1.2,,HANDOFF burnt list
 VCAA 2017 E1 Core Q10,Edrolo U3&4 1I Q15,CFAT,yes,CFAT 1.1.3,,HANDOFF burnt list
 VCAA 2017 E1 Core Q4,Edrolo U3&4 1D Q14,CFAT,yes,CFAT 1.1.1,,HANDOFF burnt list
-VCAA 2017 E1 Core Q6,Edrolo U3&4 2A Q12,CFAT,yes,CFAT 1.2.1,,HANDOFF burnt list
+VCAA 2017 E1 Core Q6,Edrolo U3&4 2A Q12,CFAT,no,CFAT 1.2.1,,replaced: CFAT 1.2.1 rebuilt 15 Nov under rule 8 (see new rows)
 VCAA 2017 E1 Core Q7,Edrolo U3&4 1A Q17,CFAT,yes,CFAT 1.1.1,,HANDOFF burnt list
 VCAA 2017 E2 Core Q1b,Edrolo U3&4 1H Q13,CFAT,yes,CFAT 1.1.3,,HANDOFF burnt list
 VCAA 2018 E1 Core Q3,Edrolo U3&4 1I Q12,CFAT,yes,CFAT 1.1.3,,HANDOFF burnt list
@@ -249,3 +249,20 @@ VCAA 2023 E1 Q10,,Do Now,yes,l08,2026-11-15,planned (Ch2 prefill)
 VCAA 2026 E1 Q5,,Do Now,yes,l08,2026-11-15,planned (Ch2 prefill)
 VCAA 2024 E2 Q3c,,Do Now,yes,l08,2026-11-15,planned (Ch2 prefill)
 VCAA 2024 NHT E2 Q2b,,Do Now,yes,l08,2026-11-15,planned (Ch2 prefill)
+Edrolo U3&4 2C Q1,,CFAT,yes,CFAT 1.2.1,2026-11-15,rebuilt Ch2 CFAT (exercise questions only)
+Edrolo U3&4 2A Q1a,,CFAT,yes,CFAT 1.2.1,2026-11-15,rebuilt Ch2 CFAT (exercise questions only)
+Edrolo U3&4 2A Q1b,,CFAT,yes,CFAT 1.2.1,2026-11-15,rebuilt Ch2 CFAT (exercise questions only)
+Edrolo U3&4 2A Q5,,CFAT,yes,CFAT 1.2.1,2026-11-15,rebuilt Ch2 CFAT (exercise questions only)
+Edrolo U3&4 2A Q7,,CFAT,yes,CFAT 1.2.1,2026-11-15,rebuilt Ch2 CFAT (exercise questions only)
+Edrolo U3&4 2C Q2,,CFAT,yes,CFAT 1.2.1,2026-11-15,rebuilt Ch2 CFAT (exercise questions only)
+Edrolo U3&4 2A Q2,,CFAT,yes,CFAT 1.2.1,2026-11-15,rebuilt Ch2 CFAT (exercise questions only)
+Edrolo U3&4 2A Q8,,CFAT,yes,CFAT 1.2.1,2026-11-15,rebuilt Ch2 CFAT (exercise questions only)
+Edrolo U3&4 2A Q9,,CFAT,yes,CFAT 1.2.1,2026-11-15,rebuilt Ch2 CFAT (exercise questions only)
+Edrolo U3&4 2B Q3a,,CFAT,yes,CFAT 1.2.2,2026-11-15,rebuilt Ch2 CFAT (exercise questions only)
+Edrolo U3&4 2C Q10,,CFAT,yes,CFAT 1.2.2,2026-11-15,rebuilt Ch2 CFAT (exercise questions only)
+Edrolo U3&4 2B Q3b,,CFAT,yes,CFAT 1.2.2,2026-11-15,rebuilt Ch2 CFAT (exercise questions only)
+Edrolo U3&4 2B Q5,,CFAT,yes,CFAT 1.2.2,2026-11-15,rebuilt Ch2 CFAT (exercise questions only)
+Edrolo U3&4 2B Q7a,,CFAT,yes,CFAT 1.2.2,2026-11-15,rebuilt Ch2 CFAT (exercise questions only)
+Edrolo U3&4 2B Q1,,CFAT,yes,CFAT 1.2.2,2026-11-15,rebuilt Ch2 CFAT (exercise questions only)
+Edrolo U3&4 2B Q8,,CFAT,yes,CFAT 1.2.2,2026-11-15,rebuilt Ch2 CFAT (exercise questions only)
+Edrolo U3&4 2C Q11,,CFAT,yes,CFAT 1.2.2,2026-11-15,rebuilt Ch2 CFAT (exercise questions only)
