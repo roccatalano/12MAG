@@ -1,5 +1,7 @@
 # 12MAG handover — 15 Nov 2026 (updated 15:55)
 
+**16 Nov 02:22 (AoS3 #5):** Lesson 10A-10B built: `lessons/10A-10B slides` (39 slides, Do Now ×4, APK ×3, Examples 1–10 + You trys, CAS matrix entry, exits VCAA 2018 E2 Q1 and 2017 E1 Q6) and `10A-10B worksheet` (+ solutions, 6 pages), Draft, on G: and the planner card. New reusable `tools/deck/mx.py` (matrices with brackets, labels, highlightable cells) for the rest of AoS 3. Next AoS 3 task: lesson 10C.
+
 **16 Nov 02:17 (AoS2 #4):** Lesson l31 (7A) built: `tools/deck/gm12-u3-l31/` → `lessons/7A slides` (29 slides) + `7A worksheet`/solutions (3 pages), Draft, copied to G: 01 Lesson materials. You trys for Ex 3/5 remapped (Decisions log). Next AoS 2 task: l32 (7B, 7D).
 
 **16 Nov 01:44 (AoS4 #3):** CFAT 4.13.1 (13A-13B), 4.13.2 (13C-13E), 4.13.3 (13F) built in `tools/cfat/ch13/` (Edrolo 8A, 8B, 8C, 8D, 8F exercise questions, graphs cropped from the PDF; answers from Edrolo answer pages; 'answers may vary' drawings given as edge lists). On the 13C, 13F and Ch 13 test cards; files in lessons/ and on G: 01 Lesson materials. Draft. Next: CFAT follow-ups (Jacaranda).

@@ -9033,7 +9033,33 @@
          "matrix-entry"
         ],
         "casYouTry": "Cambridge CAS 1 (entering a matrix) with the Example 4 matrices",
-        "note": "Edrolo 7A WE3c (interpreting a sum) is a spare You try for Example 10d–e."
+        "note": "Edrolo 7A WE3c (interpreting a sum) is a spare You try for Example 10d–e.",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/10A-10B slides.html",
+          "pdf": "lessons/10A-10B slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "6 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/10A-10B worksheet.html",
+            "pdf": "lessons/10A-10B worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/10A-10B worksheet solutions.html",
+            "pdf": "lessons/10A-10B worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
