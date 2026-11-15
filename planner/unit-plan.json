@@ -5066,8 +5066,8 @@
          },
          {
           "exam": "Exam 1",
-          "ref": "VCAA 2026 Exam 1 Q7",
-          "sec": "2E"
+          "ref": "VCAA 2024 NHT Exam 1 Q9",
+          "sec": "3A"
          },
          {
           "exam": "Exam 2",
@@ -5130,7 +5130,33 @@
          ]
         },
         "note": "Spare You trys: Edrolo 3D WE3 (log x, plot only), 3E WE2b (prediction). CAS You try: Cambridge CAS 2 data.",
-        "casYouTry": "Cambridge 4B CAS 2 data (lifespan vs log GDP)"
+        "casYouTry": "Cambridge 4B CAS 2 data (lifespan vs log GDP)",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, CAS, exits.",
+          "status": "draft",
+          "file": "lessons/4B slides.html",
+          "pdf": "lessons/4B slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "4 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/4B worksheet.html",
+            "pdf": "lessons/4B worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/4B worksheet solutions.html",
+            "pdf": "lessons/4B worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
