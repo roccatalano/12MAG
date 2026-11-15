@@ -34,8 +34,9 @@ body {{ font-family:Arial,"Liberation Sans",Helvetica,sans-serif; font-size:10pt
 .ans {{ visibility:hidden; color:{RED}; font-size:9.3pt; }}
 .sol .ans {{ visibility:visible; }}
 .space > .ans {{ position:absolute; left:0; right:0; top:.5mm; }}
-.pt {{ display:flex; gap:2mm; padding:.5mm 6mm .5mm 3mm; margin:0 -3mm; border-bottom:1px dashed #bbb; }} .parts > .pt.nb {{ border-bottom:none; }} .pt > b {{ min-width:4mm; flex:none; }} .pt > div {{ flex:1; }}
-.parts {{ display:grid; gap:.5mm 0; }}
+.pt {{ display:flex; gap:2mm; padding:.5mm 6mm .5mm 3mm; margin:0 -3mm; border-bottom:1px dashed #bbb; }} .parts > .pt.nb {{ border-bottom:none; }}
+.parts > .pt.vr {{ border-right:1px dashed #bbb; margin-right:0; }} .parts > .pt.cl:not(.c0) {{ margin-left:0; padding-left:3mm; }} .pt > b {{ min-width:4mm; flex:none; }} .pt > div {{ flex:1; }}
+.parts {{ display:grid; gap:0; }}
 .mc {{ display:grid; gap:.4mm 4mm; margin:1mm 0; }} .mc b {{ display:inline-block; width:5mm; }}
 .mc .ok {{ display:none; color:{RED}; font-weight:bold; }} .sol .mc .right .ok {{ display:inline; }} .sol .mc .right span {{ color:{RED}; }}
 .why {{ visibility:hidden; color:{RED}; font-size:8.6pt; line-height:1.2; }} .sol .why {{ visibility:visible; }}
@@ -94,7 +95,7 @@ def wline(a=''):
 def parts(items, cols=1):
     """items: (label, text, answer, mm of blank space under the part; 'L' = one writing line)"""
     return f'<div class="parts" style="grid-template-columns:repeat({cols},minmax(0,1fr))">' + ''.join(
-        f'<div class="pt{" nb" if j >= len(items) - ((len(items) - 1) % cols + 1) else ""}"><b>{k}</b><div>{t}{space(7, a) if mm == "L" else space(mm, a)}</div></div>' for j, (k, t, a, mm) in enumerate(items)) + '</div>'
+        f'<div class="pt{" nb" if j >= len(items) - ((len(items) - 1) % cols + 1) else ""}{(" c0" if j % cols == 0 else "") + (" cl" if j % cols == cols - 1 else " vr") if cols > 1 else ""}"><b>{k}</b><div>{t}{space(7, a) if mm == "L" else space(mm, a)}</div></div>' for j, (k, t, a, mm) in enumerate(items)) + '</div>'
 QSEP = '<div class="qsep"></div>'   # solid line between separate questions (1, 2, 3) inside one box; dashed lines stay between parts a, b
 def exyt(eh, eb, yh, yb):
     """Example and You try in ONE box, split down the middle."""
