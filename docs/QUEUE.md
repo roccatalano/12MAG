@@ -54,7 +54,7 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 2. `done 15 Nov 20:18 — CFAT 1.5.1 (5A–5C, 14 marks, start of l20) + CFAT 1.5.2 (5D–5E, 17 marks, end of l22), HTML + PDF, student + solutions, 2 pages each; 19 Edrolo 4A–4E exercise Qs burnt` **CFATs for Chapter 5** + solutions (CFAT 1.5.x, Edrolo U3&4 exercise questions only, HTML + PDF; copy `tools/cfat/ch2/build_html.py` to `tools/cfat/ch5/`). Each CFAT sits at the start of the lesson after the content it covers.
 3. `done 15 Nov 20:45 — 5A slides (32 slides) + 6-page guided worksheet (student + solutions), HTML+PDF, Draft; APK 7B #3 (burnt) → 7D #7` **Lesson l16 (5A)**: slides (`tools/deck/l16/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 4. `done 15 Nov 21:00 — 5B moving means slides (20) + 3-page guided worksheet (student + solutions), HTML+PDF, Draft; exits swapped with l18; APK 2E #10 (burnt) dropped` **Lesson l17 (5B, moving means)**: slides (`tools/deck/l17/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-5. `todo` **Lesson l18 (5B, centring)**: slides (`tools/deck/l18/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+5. `in progress 15 Nov 21:03` **Lesson l18 (5B, centring)**: slides (`tools/deck/l18/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 6. `todo` **Lesson l19 (5C)**: slides (`tools/deck/l19/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 7. `todo` **Lesson l20 (5D, seasonal indices)**: slides (`tools/deck/l20/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 8. `todo` **Lesson l21 (5D, deseasonalising)**: slides (`tools/deck/l21/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
