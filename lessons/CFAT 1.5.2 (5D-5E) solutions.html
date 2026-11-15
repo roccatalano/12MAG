@@ -1,0 +1,116 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>CFAT 1.5.2 (5D-5E) solutions</title><style>@page { size: A4; margin: 11mm 12mm 12mm 12mm; }
+* { box-sizing: border-box; }
+body { font-family: Arial, "Liberation Sans", Helvetica, sans-serif; font-size: 10.3pt; line-height: 1.32; color:#000; margin:0; }
+.title { display:flex; align-items:center; gap:4mm; border:2px solid #000; padding:2mm 4mm; margin-bottom:3mm; }
+.title .code { font-size:15pt; line-height:1.1; text-align:center; font-weight:bold; border-right:2px solid #000; padding-right:4mm; }
+.title h1 { font-size:16pt; margin:0; flex:1; }
+.title .pg { font-size:10pt; text-align:right; white-space:nowrap; }
+.box { border:1.2px solid #000; margin-bottom:3mm; break-inside: avoid; }
+.box > .hd { font-weight:bold; font-size:10.5pt; text-transform:uppercase; letter-spacing:.4px; border-bottom:1.2px solid #000; padding:1mm 3mm; background:#eee; display:flex; justify-content:space-between; white-space:nowrap; }
+.box > .hd span { text-transform:none; font-weight:normal; letter-spacing:0; }
+.box > .bd { padding:2mm 3mm; }
+ul { margin:0; padding-left:5mm; } li { margin:0.6mm 0; }
+.ki { column-count:2; column-gap:6mm; } .ki li { margin:1mm 0; break-inside:avoid; }
+.pair { display:grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); border:1.2px solid #000; margin-bottom:3mm; break-inside: avoid; }
+.pair > div:nth-child(odd) { border-right:1.2px solid #000; } .pair .hd { display:flex; align-items:center; }
+.pair .hd { font-weight:bold; border-bottom:1.2px solid #000; padding:1mm 3mm; background:#eee; font-size:10pt; }
+.pair .bd { padding:2mm 3mm; display:flex; flex-direction:column; }
+.q { margin:0 0 1.5mm; }
+.ytp { display:flex; gap:2mm; border-bottom:1px dashed #bbb; padding-top:1mm; flex-direction:column; }
+.ytp:last-child { border-bottom:none; }
+.ytp .pq { display:flex; gap:2mm; } .ytp .pq > b { min-width:4mm; }
+.sp { position:relative; } .sp > .ans { position:absolute; left:6mm; right:0; top:0; font-size:8.6pt; line-height:1.25; }
+.ans { display:none; color:#c00; font-size:10pt; }
+.sol .ans { display:block; } .mc + .ans { margin-top:-1mm; }
+.sol .ans.in { display:inline; }
+.kf { border-collapse:collapse; width:100%; }
+.kf td { border-bottom:1px solid #999; padding:1.4mm 2mm; vertical-align:middle; }
+.kf tr:last-child td { border-bottom:none; }
+.kf td:first-child { font-weight:bold; width:36mm; border-right:1px solid #999; }
+table.t { border-collapse:collapse; font-size:10pt; margin:1mm 0; }
+table.t th, table.t td { border:1px solid #000; padding:.6mm 2.5mm; text-align:center; }
+table.t th { background:#eee; } table.t .l { text-align:left; } table.t tr.tot td { font-weight:bold; }
+table.fill td { height:6.5mm; min-width:16mm; } table.fill td:first-child { min-width:22mm; text-align:left; }
+.raw { font-size:10pt; border-collapse:collapse; margin:1mm 0; } .raw td { padding:0 2mm 0 0; }
+.mc { display:grid; gap:.3mm 4mm; margin:1mm 0; } .mc b { display:inline-block; width:5mm; }
+.grid { background-image:linear-gradient(#bbb .2mm,transparent .2mm),linear-gradient(90deg,#bbb .2mm,transparent .2mm); background-size:5mm 5mm; border-right:.2mm solid #bbb; border-bottom:.2mm solid #bbb; margin:1mm auto 0; }
+.sol .grid { display:none; }
+.sol .stu { display:none; }
+.chart { display:none; text-align:center; } .sol .chart { display:block; }
+.chart.always { display:block; }
+.fig { text-align:center; }
+.row { display:flex; gap:3mm; align-items:flex-start; } .row > * { min-width:0; }
+.tpl { line-height:2.3; font-size:10.5pt; }
+.tpl .s { display:inline-block; border-bottom:1px solid #000; min-width:22mm; text-align:center; position:relative; line-height:1.2; }
+.tpl .s i { position:absolute; left:0; right:0; top:100%; font-size:7pt; font-style:normal; color:#555; text-align:center; line-height:1.2; }
+.tpl .s u { text-decoration:none; color:#c00; font-size:9.5pt; visibility:hidden; white-space:nowrap; } .sol .tpl .s u { visibility:visible; }
+.scg { display:grid; grid-template-columns:1fr 1fr; }
+.sc { display:grid; grid-template-columns:6mm 1fr; gap:1mm 2mm; padding:2mm; border-bottom:1px solid #000; }
+.scg .sc:nth-child(odd) { border-right:1px solid #000; }
+.scg .sc:nth-last-child(-n+1) { border-bottom:none; }
+.tick { width:5mm; height:5mm; border:1.2px solid #000; margin-top:.5mm; }
+.hwg { display:grid; grid-template-columns:repeat(3,1fr); border:1px solid #000; }
+.hwg > div { border-right:1px solid #000; padding:2mm; text-align:center; display:flex; flex-direction:column; align-items:center; gap:1mm; }
+.hwg > div:last-child { border-right:none; }
+.hwh { font-weight:bold; text-transform:uppercase; font-size:9.5pt; }
+.hwq { font-size:10.5pt; line-height:1.5; }
+.sig { display:flex; gap:4mm; margin-top:3mm; align-items:stretch; }
+.stamp { width:32mm; height:24mm; border:1.2px dashed #000; font-size:8.5pt; color:#555; display:flex; align-items:flex-end; justify-content:center; padding-bottom:1mm; flex:none; }
+.sig .lines { flex:1; display:flex; flex-direction:column; justify-content:space-around; }
+.sig .lines > div { display:flex; align-items:flex-end; gap:2mm; font-size:10pt; }
+.sig .lines i { flex:1; border-bottom:1px solid #000; height:6mm; } .sig .lines i.d { flex:none; width:28mm; }
+.cite { font-size:8pt; font-style:italic; color:#444; text-align:right; margin-top:auto; padding-top:1mm; }
+.box.split { break-inside:auto; } .box.split .row, .box.split p, .box.split .mc { break-inside:avoid; }
+.sol .sp.wk { min-height:auto !important; } .sol .sp.wk > .ans { position:static; }
+.guess { font-size:9.5pt; margin-top:1.5mm; padding:1.2mm 2mm; border:1px dashed #000; display:flex; align-items:flex-end; gap:1.5mm; flex-wrap:wrap; }
+.guess span { display:inline-block; width:16mm; border-bottom:1px solid #000; height:4mm; } .guess span.sh { width:12mm; }
+.sol .guess::after { content:attr(data-a); color:#c00; font-weight:bold; margin-left:2mm; }
+.lines { margin-top:2mm; } .lines div { height:8mm; border-bottom:1px solid #999; }
+.bl { border-bottom:1px solid #000; width:45mm; height:6mm; margin:1mm 0 1.5mm auto; font-size:10pt; } .bl span { visibility:hidden; color:#c00; } .sol .bl span { visibility:visible; }
+.pagebreak { break-after: page; }
+.solmark { display:none; } .sol .solmark { display:inline; color:#c00; }
+body { font-size:9.8pt; line-height:1.28; }
+.secthd{margin-bottom:1.5mm} .qgrid{gap:2.5mm;margin-bottom:2.5mm} .title{margin-bottom:2mm}
+
+.title .who { font-size:10.5pt; white-space:nowrap; display:flex; flex-direction:column; gap:2mm; align-items:flex-end; }
+.title .who b { font-weight:normal; }
+.title .who i { display:inline-block; border-bottom:1px solid #000; width:52mm; height:5mm; vertical-align:bottom; }
+.title .who .sc { display:inline-block; border:1.5px solid #000; width:26mm; height:9mm; text-align:right; padding:1mm 2mm; font-size:12pt; font-weight:bold; }
+.qgrid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:3mm; margin-bottom:3mm; }
+.qgrid .box { margin-bottom:0; display:flex; flex-direction:column; }
+.qgrid .box > .bd { flex:1; display:flex; flex-direction:column; }
+.mc { grid-template-columns:1fr; }
+.mc div { display:flex; gap:1mm; } .mc b { flex:none; }
+.fig img { max-width:100%; }
+.fig.gs img { filter:grayscale(1) contrast(1.1); }
+.sa { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+.sa > .stem { border-right:1.2px solid #000; padding:2mm 3mm; display:flex; flex-direction:column; }
+.sa > .parts { display:flex; flex-direction:column; }
+.sa .part { padding:2mm 3mm; border-bottom:1px dashed #bbb; display:flex; flex-direction:column; }
+.sa .part:last-child { border-bottom:none; }
+.sa .part .pq { display:flex; gap:2mm; } .sa .part .pq > b { min-width:4mm; }
+.sa .part .grid { width:100%; flex:1; min-height:20mm; }
+.sa .part .blank { flex:1; min-height:12mm; }
+.sa1 { border-top:1.2px solid #000; } .sa1 .part { padding:2mm 3mm; display:flex; flex-direction:column; } .sa1 .pq{display:flex;gap:2mm} .sa1 .pq>b{min-width:4mm}
+.sa1 .blank { flex:1; min-height:11mm; }
+.brk { break-before:page; }
+.secthd { font-weight:bold; text-transform:uppercase; letter-spacing:.4px; font-size:10.5pt; margin:0 0 2mm; display:flex; justify-content:space-between; }
+.secthd span { text-transform:none; letter-spacing:0; font-weight:normal; font-size:9.5pt; }
+
+.mc .ok{color:#c00;font-weight:bold;display:none} .sol .mc div.right .ok{display:inline}
+body{font-size:9pt;line-height:1.2} .title{padding:1.5mm 3mm} .title h1{font-size:13pt} .box>.hd{padding:.6mm 3mm} .box>.bd{padding:1.5mm 2.5mm} .q{margin:0 0 1mm}
+.sol .mc div.right span{color:#c00;font-weight:bold}
+.colstack{display:flex;flex-direction:column;gap:2.5mm} .colstack .box{flex:1}
+.sa .part .ans{margin-top:1mm}
+table.ct th,table.ct td{padding:.4mm .6mm} table.ct th{width:24%}
+</style><script src="a4view.js"></script><script src="paged.polyfill.min.js"></script></head><body class="sol">
+<div class="title"><div class="code">CFAT<br>1.5.2</div><h1>Seasonal indices and forecasting<div style="font-size:10pt;font-weight:normal;margin-top:1mm">5D–5E · CAS and bound reference allowed · <b style=color:#c00>SOLUTIONS</b></div></h1><div class="who"><div><b>Name</b> <i></i></div><div class="sc">/17</div></div></div>
+<div class="secthd">Section A · Multiple choice<span>Circle one answer. 6 marks</span></div>
+<div class="qgrid"><div class="colstack"><div class="box"><div class="hd">Question 1<span>1 mark</span></div><div class="bd"><p class="q">The seasonal index for sales in June is 0.73.</p><p class="q">Which statement is correct?</p><div class="mc"><div class=""><b>A.</b><span>On average, sales in June are 73% less than the monthly average. <i class="ok">✓</i></span></div><div class="right"><b>B.</b><span>On average, sales in June are 27% less than the monthly average. <i class="ok">✓</i></span></div><div class=""><b>C.</b><span>On average, sales in June are 27% more than the monthly average. <i class="ok">✓</i></span></div><div class=""><b>D.</b><span>On average, sales in June are 73% more than the monthly average. <i class="ok">✓</i></span></div></div><div class="cite">Edrolo U3&amp;4 4D Q1</div></div></div></div><div class="colstack"><div class="box"><div class="hd">Question 2<span>1 mark</span></div><div class="bd"><p class="q">Consider the following table.</p><table class="t ct" style="font-size:7.8pt;width:100%;table-layout:fixed"><tr><th class="l"></th><td>summer</td><td>autumn</td><td>winter</td><td>spring</td></tr><tr><th class="l">seasonal index</th><td>0.65</td><td>1.15</td><td></td><td>0.80</td></tr></table><p class="q">What is the seasonal index for winter?</p><div class="mc"><div class=""><b>A.</b><span>0.87 <i class="ok">✓</i></span></div><div class=""><b>B.</b><span>1.20 <i class="ok">✓</i></span></div><div class=""><b>C.</b><span>1.25 <i class="ok">✓</i></span></div><div class="right"><b>D.</b><span>1.40 <i class="ok">✓</i></span></div></div><div class="cite">Edrolo U3&amp;4 4D Q3</div></div></div></div></div>
+<div class="qgrid"><div class="colstack"><div class="box"><div class="hd">Question 3<span>1 mark</span></div><div class="bd"><p class="q">Consider the following table.</p><table class="t ct" style="font-size:7.8pt;width:100%;table-layout:fixed"><tr><th class="l"></th><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td><td>Sun</td></tr><tr><th class="l">seasonal index</th><td>0.87</td><td>0.94</td><td>0.91</td><td>0.85</td><td>0.96</td><td>1.26</td><td>1.21</td></tr><tr><th class="l">value</th><td>603</td><td>665</td><td>509</td><td>670</td><td>702</td><td>931</td><td>950</td></tr></table><p class="q">The deseasonalised value for Thursday is closest to</p><div class="mc"><div class=""><b>A.</b><span>570 <i class="ok">✓</i></span></div><div class=""><b>B.</b><span>583 <i class="ok">✓</i></span></div><div class=""><b>C.</b><span>771 <i class="ok">✓</i></span></div><div class="right"><b>D.</b><span>788 <i class="ok">✓</i></span></div></div><div class="cite">Edrolo U3&amp;4 4D Q5</div></div></div></div><div class="colstack"><div class="box"><div class="hd">Question 4<span>1 mark</span></div><div class="bd"><p class="q">The number of weddings held in the Botanical Gardens is seasonal, with the number of weddings in spring having a seasonal index of 1.32. If there were 58 weddings held in the Botanical Gardens this spring, the deseasonalised number of weddings is closest to</p><div class="mc"><div class=""><b>A.</b><span>39 <i class="ok">✓</i></span></div><div class=""><b>B.</b><span>43 <i class="ok">✓</i></span></div><div class="right"><b>C.</b><span>44 <i class="ok">✓</i></span></div><div class=""><b>D.</b><span>77 <i class="ok">✓</i></span></div></div><div class="cite">Edrolo U3&amp;4 4D Q6</div></div></div></div></div>
+<div class="qgrid"><div class="colstack"><div class="box"><div class="hd">Question 5<span>1 mark</span></div><div class="bd"><p class="q">The deseasonalised value for a particular season is 927. If the seasonal index is 0.75, the actual value is closest to</p><div class="mc"><div class="right"><b>A.</b><span>695 <i class="ok">✓</i></span></div><div class=""><b>B.</b><span>864 <i class="ok">✓</i></span></div><div class=""><b>C.</b><span>927 <i class="ok">✓</i></span></div><div class=""><b>D.</b><span>1236 <i class="ok">✓</i></span></div></div><div class="cite">Edrolo U3&amp;4 4D Q10</div></div></div></div><div class="colstack"><div class="box"><div class="hd">Question 6<span>1 mark</span></div><div class="bd"><p class="q">A regression equation has predicted the deseasonalised value in September to be 3750. If September has a long-term seasonal index of 1.09, the actual predicted value for September is closest to</p><div class="mc"><div class=""><b>A.</b><span>3413 <i class="ok">✓</i></span></div><div class=""><b>B.</b><span>3440 <i class="ok">✓</i></span></div><div class="right"><b>C.</b><span>4088 <i class="ok">✓</i></span></div><div class=""><b>D.</b><span>4121 <i class="ok">✓</i></span></div></div><div class="cite">Edrolo U3&amp;4 4E Q6</div></div></div></div></div>
+<div style="break-inside:avoid"><div class="secthd" style="margin-top:2mm">Section B · Short answer<span>Show your working. 11 marks</span></div><div class="box"><div class="hd">Question 7<span>2 marks</span></div><div class="sa"><div class="stem"><p class="q">The quarterly sales ($000’s) of a canine clothing shop are displayed in the following table.</p><table class="t ct" style="font-size:7.8pt;width:100%;table-layout:fixed"><tr><th class="l"></th><td>quarter 1</td><td>quarter 2</td><td>quarter 3</td><td>quarter 4</td></tr><tr><th class="l">sales ($000’s)</th><td>33.5</td><td>61.3</td><td>52.0</td><td>43.4</td></tr></table><div class="cite">Edrolo U3&amp;4 4D Q2</div></div><div class="parts"><div class="part" style="flex:1"><div class="pq"><b>a</b><span>Calculate the seasonal index for quarter 1, correct to two decimal places. <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">mean = (33.5 + 61.3 + 52.0 + 43.4) ÷ 4 = 47.55<br>SI = 33.5 ÷ 47.55 = 0.70</div></div></div><div class="part" style="flex:1"><div class="pq"><b>b</b><span>What does the rounded seasonal index for quarter 1 mean in terms of the amount of sales in quarter 1 compared to the average quarter? <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">On average, sales in quarter 1 are 70% of, or 30% less than, the average quarter.</div></div></div></div></div></div></div>
+<div class="box"><div class="hd">Question 8<span>4 marks</span></div><div class="sa"><div class="stem"><p class="q">The sales ($000’s) for a churro company are seasonal, with the sales for 2020, 2021, and 2022 shown in the following table. The season index for autumn is 1.06 and the seasonal index for winter is 1.32.</p><table class="t ct" style="font-size:7.8pt;width:100%;table-layout:fixed"><tr><th class="l">year</th><td>summer</td><td>autumn</td><td>winter</td><td>spring</td></tr><tr><th class="l">2020</th><td>2050</td><td>3650</td><td>4300</td><td>3125</td></tr><tr><th class="l">2021</th><td>1900</td><td>3075</td><td>4150</td><td>3300</td></tr><tr><th class="l">2022</th><td>1625</td><td>3300</td><td>4050</td><td>3250</td></tr></table><div class="cite">Edrolo U3&amp;4 4D Q15</div></div><div class="parts"><div class="part" style="flex:2"><div class="pq"><b>a</b><span>Calculate the average seasonal indices of sales for summer and spring. Give values correct to two decimal places. <span style="color:#555;font-size:8.5pt">(2 marks)</span></span></div><div class="blank" style="min-height:8.0mm"><div class="ans">summer: 0.59, spring: 1.03<br>(SI for each year = value ÷ that year’s mean, then average the three years)</div></div></div><div class="part" style="flex:1"><div class="pq"><b>b</b><span>What does the seasonal index for autumn tell us about the amount of sales in autumn compared to the average season? <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">On average, sales in autumn are 6% greater than the average season.</div></div></div><div class="part" style="flex:1"><div class="pq"><b>c</b><span>Fill in the gap in the following sentence, giving the value correct to the nearest percent.<br>To correct for seasonality, the amount of sales in winter should be decreased by ____%. <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">1 ÷ 1.32 = 0.758 → decreased by 24%</div></div></div></div></div></div>
+<div class="box"><div class="hd">Question 9<span>3 marks</span></div><div class="sa"><div class="stem"><p class="q">Leonard conducted research into the number of alien sightings from 1975 to 2015 in the northern and southern hemispheres. He then used this data to construct regression equations to predict the number of alien sightings in each hemisphere for any given year.</p><p class="q">Note: Leonard has used year = 0 to represent 1975.</p><p class="q">The least squares regression equations are:</p><p class="q">Southern hemisphere: alien sightings = 208 + 23.4 × year</p><p class="q">Northern hemisphere: alien sightings = 361 + 41.2 × year</p><div class="cite">Edrolo U3&amp;4 4E Q4</div></div><div class="parts"><div class="part" style="flex:1"><div class="pq"><b>a</b><span>Estimate the difference between the number of alien sightings in each hemisphere in the year 2030, correct to the nearest whole number. <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">year = 55: N = 361 + 41.2 × 55 = 2627, S = 208 + 23.4 × 55 = 1495<br>difference = 1132 alien sightings</div></div></div><div class="part" style="flex:1"><div class="pq"><b>b</b><span>Explain why this prediction may be of limited reliability, even if Leonard’s original data was correct. <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">The prediction is an example of extrapolation since it is outside the range of recorded data.</div></div></div><div class="part" style="flex:1"><div class="pq"><b>c</b><span>Interpret the slope of the regression line in terms of the change in the number of alien sightings in the northern hemisphere each year. <span style="color:#555;font-size:8.5pt">(1 mark)</span></span></div><div class="blank" style="min-height:5.5mm"><div class="ans">On average, the number of alien sightings in the northern hemisphere increases by 41.2 each year.</div></div></div></div></div></div>
+<div class="box"><div class="hd">Question 10<span>2 marks</span></div><div class="sa"><div class="stem"><p class="q">The following equation can be used to forecast the deseasonalised sales ($) of a small business.</p><p class="q">deseasonalised sales = 20 005 + 15 000 × quarter number</p><p class="q">quarter number = 1 in quarter 1 of 2014 and quarter number = 2 in quarter 2 of 2014.</p><p class="q">The seasonal index for the third quarter of each year is 0.65.</p><div class="cite">Edrolo U3&amp;4 4E Q7</div></div><div class="parts"><div class="part" style="flex:2"><div class="pq"><b></b><span>What is the actual value of sales in the third quarter of 2015? <span style="color:#555;font-size:8.5pt">(2 marks)</span></span></div><div class="blank" style="min-height:8.0mm"><div class="ans">quarter number = 7: deseasonalised sales = 20 005 + 15 000 × 7 = 125 005<br>actual = 125 005 × 0.65 = $81 253.25</div></div></div></div></div></div>
+</body></html>

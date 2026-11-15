@@ -8,6 +8,7 @@ Push: `git -c push.negotiate=true push origin HEAD`. G: drive is reached through
 
 
 ## 15 Nov 20:01 — Lesson l09 (3A) slides + worksheet (runner, task Ch3 #3)
+- **15 Nov 20:18 (Ch5 runner #2):** CFAT 1.5.1 (5A–5C) and CFAT 1.5.2 (5D–5E) built (`tools/cfat/ch5/`), Draft, HTML + PDF + solutions in `lessons/` and on G:. Planner l20/l22 cards updated; 19 Edrolo exercise Qs added to `tools/ledger_manual.csv`.
 - `tools/deck/l09/build.py` (+ figs.py, shoot.py, worksheet.py; sources in docstrings) → `lessons/3A slides.html/.pdf` (26 slides, CFAT 1.2.3 slide first) and `lessons/3A worksheet(.pdf)` + solutions (4 pages). Copied to G: `01 Lesson materials`. Draft.
 - Do Now 2026 NHT E1 Q11 replaced by 2026 E1 Q7 (see Decisions log). Ledger + planner card updated. 3A MaffsGuru video link still blank.
 

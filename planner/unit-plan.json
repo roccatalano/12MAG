@@ -6332,15 +6332,123 @@
         "cfats": [
          {
           "id": "CFAT 1.5.1",
-          "title": "Time series and smoothing",
+          "title": "Time series plots and smoothing",
           "covers": [
            "5A",
            "5B",
            "5C"
           ],
           "format": "About 20 min · individual · CAS and single bound reference allowed",
-          "status": "Planned",
-          "plan": "Start of the first seasonal indices lesson."
+          "status": "Draft",
+          "plan": "Start of the first seasonal indices lesson.",
+          "marks": 14,
+          "mcMarks": 6,
+          "saMarks": 8,
+          "file": "lessons/CFAT 1.5.1 (5A-5C).html",
+          "sources": [
+           "Edrolo GM U3&4 2023 exercise questions only (rule 8): 4A Q1, 4A Q5, 4B Q1, 4B Q6, 4C Q1, 4C Q9, 4A Q6, 4B Q2, 4C Q10"
+          ],
+          "questions": [
+           {
+            "q": 1,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Read a time series plot",
+            "sd": [],
+            "sub": "5A",
+            "sc": "",
+            "src": "Edrolo 4A Q1",
+            "fu": ""
+           },
+           {
+            "q": 2,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Identify structural change",
+            "sd": [],
+            "sub": "5A",
+            "sc": "",
+            "src": "Edrolo 4A Q5",
+            "fu": ""
+           },
+           {
+            "q": 3,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Three-mean smoothing",
+            "sd": [],
+            "sub": "5B",
+            "sc": "",
+            "src": "Edrolo 4B Q1",
+            "fu": ""
+           },
+           {
+            "q": 4,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Two-mean smoothing with centring",
+            "sd": [],
+            "sub": "5B",
+            "sc": "",
+            "src": "Edrolo 4B Q6",
+            "fu": ""
+           },
+           {
+            "q": 5,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Three-median smoothing from a graph",
+            "sd": [],
+            "sub": "5C",
+            "sc": "",
+            "src": "Edrolo 4C Q1",
+            "fu": ""
+           },
+           {
+            "q": 6,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Number of smoothed values for an n-median",
+            "sd": [],
+            "sub": "5C",
+            "sc": "",
+            "src": "Edrolo 4C Q9",
+            "fu": ""
+           },
+           {
+            "q": 7,
+            "marks": 2,
+            "type": "SA",
+            "skill": "Identify features of a time series",
+            "sd": [],
+            "sub": "5A",
+            "sc": "",
+            "src": "Edrolo 4A Q6",
+            "fu": ""
+           },
+           {
+            "q": 8,
+            "marks": 2,
+            "type": "SA",
+            "skill": "Three- and five-mean smoothing",
+            "sd": [],
+            "sub": "5B",
+            "sc": "",
+            "src": "Edrolo 4B Q2",
+            "fu": ""
+           },
+           {
+            "q": 9,
+            "marks": 4,
+            "type": "SA",
+            "skill": "n-median smoothing from a graph",
+            "sd": [],
+            "sub": "5C",
+            "sc": "",
+            "src": "Edrolo 4C Q10",
+            "fu": ""
+           }
+          ]
          }
         ],
         "homework": {
@@ -6367,7 +6475,26 @@
           }
          ]
         },
-        "cas": []
+        "cas": [],
+        "materials": [
+         {
+          "kind": "CFAT 1.5.1",
+          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/CFAT 1.5.1 (5A-5C).html",
+            "pdf": "lessons/CFAT 1.5.1 (5A-5C).pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/CFAT 1.5.1 (5A-5C) solutions.html",
+            "pdf": "lessons/CFAT 1.5.1 (5A-5C) solutions.pdf"
+           }
+          ]
+         }
+        ]
        },
        "part": 1
       },
@@ -6631,8 +6758,127 @@
            "5E"
           ],
           "format": "About 20 min · individual · CAS and single bound reference allowed",
-          "status": "Planned",
-          "plan": "Last 20 min of the 5E lesson: the lessons after it are all review or SAC 1 preparation."
+          "status": "Draft",
+          "plan": "Last 20 min of the 5E lesson: the lessons after it are all review or SAC 1 preparation.",
+          "marks": 17,
+          "mcMarks": 6,
+          "saMarks": 11,
+          "file": "lessons/CFAT 1.5.2 (5D-5E).html",
+          "sources": [
+           "Edrolo GM U3&4 2023 exercise questions only (rule 8): 4D Q1, 4D Q3, 4D Q5, 4D Q6, 4D Q10, 4E Q6, 4D Q2, 4D Q15, 4E Q4, 4E Q7"
+          ],
+          "questions": [
+           {
+            "q": 1,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Interpret a seasonal index",
+            "sd": [],
+            "sub": "5D",
+            "sc": "",
+            "src": "Edrolo 4D Q1",
+            "fu": ""
+           },
+           {
+            "q": 2,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Seasonal indices sum to the number of seasons",
+            "sd": [],
+            "sub": "5D",
+            "sc": "",
+            "src": "Edrolo 4D Q3",
+            "fu": ""
+           },
+           {
+            "q": 3,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Deseasonalise a value",
+            "sd": [],
+            "sub": "5D",
+            "sc": "",
+            "src": "Edrolo 4D Q5",
+            "fu": ""
+           },
+           {
+            "q": 4,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Deseasonalise a value",
+            "sd": [],
+            "sub": "5D",
+            "sc": "",
+            "src": "Edrolo 4D Q6",
+            "fu": ""
+           },
+           {
+            "q": 5,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Reseasonalise a value",
+            "sd": [],
+            "sub": "5D",
+            "sc": "",
+            "src": "Edrolo 4D Q10",
+            "fu": ""
+           },
+           {
+            "q": 6,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Reseasonalise a forecast",
+            "sd": [],
+            "sub": "5E",
+            "sc": "",
+            "src": "Edrolo 4E Q6",
+            "fu": ""
+           },
+           {
+            "q": 7,
+            "marks": 2,
+            "type": "SA",
+            "skill": "Calculate and interpret a seasonal index",
+            "sd": [],
+            "sub": "5D",
+            "sc": "",
+            "src": "Edrolo 4D Q2",
+            "fu": ""
+           },
+           {
+            "q": 8,
+            "marks": 4,
+            "type": "SA",
+            "skill": "Average seasonal indices; correcting for seasonality",
+            "sd": [],
+            "sub": "5D",
+            "sc": "",
+            "src": "Edrolo 4D Q15",
+            "fu": ""
+           },
+           {
+            "q": 9,
+            "marks": 3,
+            "type": "SA",
+            "skill": "Forecast with a trend line; extrapolation; slope",
+            "sd": [],
+            "sub": "5E",
+            "sc": "",
+            "src": "Edrolo 4E Q4",
+            "fu": ""
+           },
+           {
+            "q": 10,
+            "marks": 2,
+            "type": "SA",
+            "skill": "Forecast then reseasonalise",
+            "sd": [],
+            "sub": "5E",
+            "sc": "",
+            "src": "Edrolo 4E Q7",
+            "fu": ""
+           }
+          ]
          }
         ],
         "homework": {
@@ -6663,7 +6909,26 @@
           }
          ]
         },
-        "casYouTry": "Edrolo 4E WE1a (trend line on CAS)"
+        "casYouTry": "Edrolo 4E WE1a (trend line on CAS)",
+        "materials": [
+         {
+          "kind": "CFAT 1.5.2",
+          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/CFAT 1.5.2 (5D-5E).html",
+            "pdf": "lessons/CFAT 1.5.2 (5D-5E).pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/CFAT 1.5.2 (5D-5E) solutions.html",
+            "pdf": "lessons/CFAT 1.5.2 (5D-5E) solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
