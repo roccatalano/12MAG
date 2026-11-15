@@ -10984,7 +10984,33 @@
          }
         ],
         "cas": [],
-        "note": "Edrolo U1&2 7E WE1–WE2 are spare You trys for Example 9. Edrolo U1&2 7E Q12 (VCAA 2017 E2 N&DM Q1a,b) overlaps exit 2 (Q1b): not used."
+        "note": "Edrolo U1&2 7E WE1–WE2 are spare You trys for Example 9. Edrolo U1&2 7E Q12 (VCAA 2017 E2 N&DM Q1a,b) overlaps exit 2 (Q1b): not used.",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/13D-13E slides.html",
+          "pdf": "lessons/13D-13E slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "4 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/13D-13E worksheet.html",
+            "pdf": "lessons/13D-13E worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/13D-13E worksheet solutions.html",
+            "pdf": "lessons/13D-13E worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
