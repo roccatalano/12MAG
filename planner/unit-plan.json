@@ -2034,6 +2034,20 @@
           "pdf": "lessons/Ch1-coursework-check.pdf"
          },
          {
+          "kind": "Revision booklet",
+          "desc": "Insight GM1 (36 MC) + GM2 (12 short answer) 'Investigating data distributions', CFAT style, one page-section per subchapter 1A–1H so it can be set as gradual homework. Questions verbatim, cited.",
+          "status": "ready",
+          "file": "lessons/Ch1-revision-booklet.html",
+          "pdf": "lessons/Ch1-revision-booklet.pdf"
+         },
+         {
+          "kind": "Revision booklet solutions",
+          "desc": "Same booklet with answers and one-line working in red.",
+          "status": "ready",
+          "file": "lessons/Ch1-revision-booklet-solutions.html",
+          "pdf": "lessons/Ch1-revision-booklet-solutions.pdf"
+         },
+         {
           "kind": "Chapter test",
           "desc": "Formal chapter test. Each question maps to the success criteria on the back of the coursework check.",
           "status": "todo",

@@ -1,0 +1,76 @@
+\documentclass[tikz,border=2pt]{standalone}
+\usepackage{amsmath,amssymb,bm,enumitem,parskip,array,tikz,multicol,needspace,multirow}
+\usepackage{xcolor,amsmath,amssymb,bm,helvet}\renewcommand{\familydefault}{\sfdefault}
+\setlength{\columnsep}{8mm}
+
+\definecolor{bandgrey}{gray}{0.90}
+\newcounter{qnum}
+\newcommand{\topic}[2]{\bigskip\needspace{90mm}%
+  \noindent\colorbox{bandgrey}{\begin{minipage}{\dimexpr\linewidth-2\fboxsep}
+  \vspace{1mm}\textbf{\large #1}\\[1mm]{\small\itshape You should be able to: #2}
+  \vspace{1mm}\end{minipage}}\par\medskip}
+\newcommand{\parthead}[2]{\clearpage\noindent{\LARGE\bfseries #1}\par\smallskip
+  \noindent{\large #2}\par\rule{\linewidth}{0.6pt}\par}
+\newcommand{\sub}[1]{\par\needspace{75mm}\medskip\noindent{\large\bfseries #1}\par}
+
+% questions (Insight numbering kept: shared stems refer to it)
+\newcommand{\Q}[1]{\par\needspace{30mm}\medskip\refstepcounter{qnum}%
+  \noindent\textbf{Question \theqnum}\par\noindent #1\par}
+\newcommand{\qmarks}[1]{\textbf{}\hfill(#1 marks)\par\noindent}
+\newcommand{\pt}[1]{\par\needspace{25mm}\smallskip\noindent\hangindent=1.6em\hangafter=1\textbf{#1.}\ }
+\newcommand{\qmarkone}{\textbf{}\hfill(1 mark)\par\noindent}
+\newcommand{\mk}[1]{\hfill(#1)}
+\newcommand{\info}[1]{{\centering\itshape #1\par}\smallskip}
+
+% solutions
+\newcommand{\ans}[1]{\ifsolutions\textcolor{red}{#1}\fi}
+\newcommand{\src}[1]{\ifsolutions\par\nobreak{\color{red}\footnotesize Source: #1}\par\fi}
+\newcommand{\why}[1]{\ifsolutions\par{\color{red}\small #1}\par\fi}
+
+% multiple choice, five options (VCE format): \mcv{A}{B}{C}{D}{E}{correct 1-5}
+\newcommand{\mo}[3]{\item\ifsolutions\ifnum#2=#3\relax\textcolor{red}{#1\ \checkmark}\else #1\fi\else #1\fi}
+\newlist{mcopts}{enumerate}{1}
+\setlist[mcopts]{label=\textbf{\Alph*.},leftmargin=2.2em,itemsep=2pt,topsep=3pt,parsep=0pt}
+\newcommand{\mcv}[6]{\begin{mcopts}\mo{#1}{1}{#6}\mo{#2}{2}{#6}\mo{#3}{3}{#6}\mo{#4}{4}{#6}\mo{#5}{5}{#6}\end{mcopts}}
+
+% ruled working lines (student copy only)
+\newcommand{\workline}{\par\vspace{7.6mm}\noindent\hspace*{1.6em}{\color{gray!70}\rule{\dimexpr\linewidth-1.6em}{0.4pt}}}
+\newcommand{\lines}[1]{\ifsolutions\else\par\nobreak{\setlength{\parskip}{0pt}\foreach \i in {1,...,#1}{\workline}}\par\fi\medskip}
+
+% figures
+\newcommand{\stem}[1]{\begin{tabular}{r|l}\foreach \s/\l in {#1}{\s & \l\\}\end{tabular}}
+% \hist{x0}{w}{nbins}{ymax}{heights}{ylabel}{xlabel}{yticks}{xticks}
+\newcommand{\hist}[9]{\begin{tikzpicture}[x={5.4cm/((#3+0.3)*#2)},y={3.2cm/#4}]
+ \foreach \y in {#8}{\draw[gray!35,very thin] (#1,\y)--({#1+#3*#2},\y);}
+ \foreach \h [count=\i] in {#5}{\fill[gray!55,draw=black] ({#1+(\i-1)*#2},0) rectangle ({#1+\i*#2},\h);}
+ \draw[->] (#1,0)--(#1,{#4*1.06}); \draw[->] (#1,0)--({#1+(#3+0.3)*#2},0);
+ \foreach \y in {#8}{\draw (#1,\y)--++({-0.1*#2},0) node[left,font=\scriptsize]{\y};}
+ \foreach \x in {#9}{\draw (\x,0)--++(0,{-0.04*#4}) node[below,font=\scriptsize]{\x};}
+ \node[rotate=90,font=\scriptsize,xshift=0mm] at (#1,{#4/2}) [yshift=8mm] {#6};
+ \node[font=\scriptsize] at ({#1+#3*#2/2},{-0.25*#4}){#7};
+\end{tikzpicture}}
+% \smallhist{x0}{w}{nbins}{ymax}{heights}{yticks}{x/label ticks}
+\newcommand{\smallhist}[7]{\par\begin{tikzpicture}[x={3.4cm/(#3*#2)},y={1.5cm/#4}]
+ \foreach \h [count=\i] in {#5}{\fill[gray!55,draw=black] ({#1+(\i-1)*#2},0) rectangle ({#1+\i*#2},\h);}
+ \draw (#1,0)--({#1+#3*#2},0) (#1,0)--(#1,{#4*1.08});
+ \foreach \y in {#6}{\draw (#1,\y)--++({-0.03*#3*#2},0) node[left,font=\tiny]{\y};}
+ \foreach \x/\l in {#7}{\draw (\x,0)--++(0,{-0.04*#4}) node[below,font=\tiny]{\l};}
+\end{tikzpicture}}
+% boxplots: \BP{y}{min}{Q1}{M}{Q3}{max}{fill}; \BPo adds an outlier
+\newcommand{\BP}[7]{\draw (#2,#1)--(#3,#1) (#5,#1)--(#6,#1) (#2,#1-0.2)--(#2,#1+0.2) (#6,#1-0.2)--(#6,#1+0.2);
+ \draw[fill=#7] (#3,#1-0.35) rectangle (#5,#1+0.35); \draw (#4,#1-0.35)--(#4,#1+0.35);}
+\newcommand{\BPo}[8]{\BP{#1}{#2}{#3}{#4}{#5}{#6}{#7}\node at (#8,#1){$\times$};}
+\newcommand{\axis}[4]{\draw (#1,#4)--(#2,#4); \foreach \x in {#1,...,#2}{\draw (\x,#4)--(\x,#4-0.07);}
+ \pgfmathtruncatemacro\st{#1+#3}\foreach \x in {#1,\st,...,#2}{\draw (\x,#4)--(\x,#4-0.15) node[below,font=\scriptsize]{\x};}}
+\newcommand{\keyb}[4]{\node[font=\scriptsize,anchor=west] at (#1,#2+0.5){\underline{Key}};
+ \node[font=\scriptsize,anchor=west] (k1) at (#1,#2){#3}; \draw ([xshift=1mm,yshift=-1.5mm]k1.east) rectangle ++(3mm,3mm);
+ \node[font=\scriptsize,anchor=west] (k2) at (#1,#2-0.5){#4}; \draw[fill=gray!55] ([xshift=1mm,yshift=-1.5mm]k2.east) rectangle ++(3mm,3mm);}
+\newcommand{\sqgridb}[4]{\draw[gray!30,very thin] (#1,#2) grid[xstep=10,ystep=1] (#3,#4);}
+\newcommand{\BOXES}{\begin{tikzpicture}[x=1.7mm]
+ \BP{1.6}{15}{22}{26.5}{32}{39}{white}\BP{0.5}{12}{18}{22}{26}{37}{gray!55}
+ \axis{0}{40}{5}{-0.3}\node[font=\scriptsize] at (20,-1.25){score out of forty};
+ \node[font=\scriptsize,anchor=west] at (0,3.1){\underline{Key}};
+ \node[font=\scriptsize,anchor=west] (k1) at (0,2.6){First trial exam}; \draw[fill=gray!55] ([xshift=1mm,yshift=-1.5mm]k1.east) rectangle ++(3mm,3mm);
+ \node[font=\scriptsize,anchor=west] (k2) at (0,2.1){Final trial exam}; \draw ([xshift=1mm,yshift=-1.5mm]k2.east) rectangle ++(3mm,3mm);
+\end{tikzpicture}}
+

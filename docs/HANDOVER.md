@@ -25,6 +25,13 @@ Starting points:
 3. **Slide templates** — `tools/deck/tpl/tpl.py` (+ `tpl.css`, `tpl.js`); engine `tools/deck/engine.html` (made by `tools/deck/make_engine.py` from the old S4 build `s4/build_v1.py` + `s4/extra.js` boxplot drawer). All rules are in CLAUDE.md ("Slide templates"). Key functions: `title, today, keys, qslide (fx/F/V/FR formulas, plist + parts, afig + build, mc/dis), learn (kcard), cas (yt videos), checkin, coursework, videos, assemble`.
 4. **Command words** — highlighted yellow in the question + a tile top right ("FIND · the value, with working"). The Study Design has no command-word list; VCAA's separate Glossary of command terms does (vcaa.vic.edu.au; the page needs a browser approval; definitions not yet captured). Not yet done: tag every item in `vcaa_current_index.csv` with its command word.
 
+## Done 15 Nov: Chapter 1 revision booklet
+- `lessons/Ch1-revision-booklet.html/.pdf` + `-solutions` (also `01 Lesson materials\Ch1 revision booklet*.html/.pdf` on G:). Linked on the Ch 1 coursework check + test card.
+- Insight GM1 Q1–36 + GM2 Q1–12 "Investigating data distributions", CFAT style, one section per subchapter 1A–1H (gradual homework). Multi-part questions go in the latest subchapter they need; shared Insight stems repeated in each box.
+- Build: `tools/revision/ch1/build.py` (questions in `qdata.py`, figures pre-rendered TikZ SVGs in `figs.json`). Template for later chapters.
+- Notes: GM2 Q6a keeps Insight's answer (3); GM2 Q2a Insight median 35 vs stem plot 36 (noted in solutions).
+- Rocco to delete on G: `Ch1 revision booklet PRINT.pdf`, `... solutions PRINT.pdf`, `... LaTeX.zip`, `... build files.zip` (superseded).
+
 ## Open / later
 - **Lessons 1–3 (S1–S3)** still use the old layout → rebuild on the templates (also fixes 'Homework' → 'Coursework', S2 Do Now count, S3 extra exit, S2 '?%' → 71%).
 - **1H–1I (L5)** slides not made. Ch 1 coursework check + test (L6).
