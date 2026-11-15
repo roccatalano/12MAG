@@ -2109,14 +2109,18 @@
          },
          {
           "kind": "Chapter test",
-          "desc": "Mathspace Ch 1 topic assessment: not built yet.",
-          "status": "todo",
+          "desc": "Mathspace Ch 1 topic assessment (19 Qs, /37), verbatim; Q8 (comparing boxplots, Ch 2) left out.",
+          "status": "draft",
           "copies": [
            {
-            "label": "Student copy"
+            "label": "Student copy",
+            "file": "lessons/Ch1 test.html",
+            "pdf": "lessons/Ch1 test.pdf"
            },
            {
-            "label": "Solutions"
+            "label": "Solutions",
+            "file": "lessons/Ch1 test solutions.html",
+            "pdf": "lessons/Ch1 test solutions.pdf"
            }
           ]
          }

@@ -130,6 +130,12 @@ Chapter 3 revision booklet + solutions built (`tools/revision/ch3/`, 16 pages ea
 - Planner: both CFAT cards updated (questions, marks, Draft) + material entries with Student copy / Solutions. Ledger: old CFAT 1.2.1 rows set burnt = no (incl. VCAA 2017 E1 Q6 via Edrolo 2A Q12, now free); 17 new rows.
 - Open questions Q1–Q6 logged in QUEUE Decisions log (Q5 decided: videos stay draft until each lesson task checks them).
 
+## Done 15 Nov: Chapter 1 test (draft, Rocco to check)
+- `lessons/Ch1 test.html/.pdf` + `Ch1 test solutions.html/.pdf` (5 pages each), build `tools/test/ch1/build.py` (Ch 2 layout). Also on G: `01 Lesson materials`. Planner card updated (status draft); `planner/tests.json` re-run.
+- Source: Mathspace Ch 1 topic assessment + answer key, verbatim, /37 (19 Qs). Figures are crops of the Mathspace PDF.
+- Left out: Mathspace Q8 (1.09 comparing two boxplots = Cambridge Ch 2). Adapted: Q12 bar chart solution drawn for 12MAG (key shows none). Short-answer solutions add one line of working above the key's answer.
+- Ledger: 19 Mathspace Ch1 rows added to `tools/ledger_manual.csv` (burnt).
+
 ## Done 15 Nov (17:30, queue runner): Ch 2 task 1 — lesson cards l03–l08 prefilled (Draft)
 - `tools/prefill_ch2.py` (sources in its docstring) → `planner/unit-plan.json`. Do Now: replaced burnt/duplicate picks (2023 E1 Q4, 2024 E1 Q1, 2025 E1 Q4, 2025 E2 Q1b, 2025 NHT E2 Q3a), the 4B-tagged 2025 NHT E1 Q10 and the same-lesson 2023 E2 Q3b; l08 got 4. Secs now follow vcaa_current_index.
 - You trys mapped from Edrolo U3&4 2A–2D + 3C WE1 (r²); coursework = Cambridge 2A–2I Q ranges by skill + revision book. CAS steps written for scatterplot, correlation-r, r-and-r2 (from Cambridge CAS 1/2; marked Draft). Ch 2 MaffsGuru videos in videos.json (draft).

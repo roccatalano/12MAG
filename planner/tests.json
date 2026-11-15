@@ -1,4 +1,300 @@
 {
+ "1": {
+  "chapter": 1,
+  "total": 37,
+  "mc": 10,
+  "sa": 9,
+  "about": "Source (rule 9: chapter tests = Mathspace topic assessments), copied verbatim:   Mathspace, General Maths 3&4, Chapter 1 - Investigate data distributions, 'Chapter 1 - Topic assessment.pdf'",
+  "byLesson": [
+   {
+    "lesson": "1.01",
+    "marks": 1,
+    "qs": [
+     "1"
+    ]
+   },
+   {
+    "lesson": "1.03",
+    "marks": 1,
+    "qs": [
+     "2"
+    ]
+   },
+   {
+    "lesson": "1.04",
+    "marks": 1,
+    "qs": [
+     "3"
+    ]
+   },
+   {
+    "lesson": "1.05",
+    "marks": 1,
+    "qs": [
+     "4"
+    ]
+   },
+   {
+    "lesson": "1.06",
+    "marks": 2,
+    "qs": [
+     "5",
+     "15"
+    ]
+   },
+   {
+    "lesson": "1.07",
+    "marks": 3,
+    "qs": [
+     "6",
+     "12"
+    ]
+   },
+   {
+    "lesson": "1.08",
+    "marks": 7,
+    "qs": [
+     "7",
+     "19a"
+    ]
+   },
+   {
+    "lesson": "1.02",
+    "marks": 3,
+    "qs": [
+     "8",
+     "11"
+    ]
+   },
+   {
+    "lesson": "1.11",
+    "marks": 7,
+    "qs": [
+     "9",
+     "13",
+     "16a"
+    ]
+   },
+   {
+    "lesson": "1.10",
+    "marks": 11,
+    "qs": [
+     "10",
+     "14",
+     "17a",
+     "18a"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "q": "1",
+    "type": "MC",
+    "marks": 1,
+    "src": "Q1 · 1.01",
+    "text": "Which of the following is an example of numerical discrete data?",
+    "answer": "A"
+   },
+   {
+    "q": "2",
+    "type": "MC",
+    "marks": 1,
+    "src": "Q2 · 1.03",
+    "text": "The dot plot below shows the number of books read by students over a school term. What is the median number…",
+    "answer": "B"
+   },
+   {
+    "q": "3",
+    "type": "MC",
+    "marks": 1,
+    "src": "Q3 · 1.04",
+    "text": "The histogram below shows the distribution of times (in minutes) taken by students to complete a puzzle.…",
+    "answer": "B"
+   },
+   {
+    "q": "4",
+    "type": "MC",
+    "marks": 1,
+    "src": "Q4 · 1.05",
+    "text": "The masses of a group of animals range from 0.01 kg to 10 000 kg. Which type of scale is most appropriate for…",
+    "answer": "B"
+   },
+   {
+    "q": "5",
+    "type": "MC",
+    "marks": 1,
+    "src": "Q5 · 1.06",
+    "text": "The data set 3, 5, 7, 7, 8, 9, 11 has a mean of:",
+    "answer": "B"
+   },
+   {
+    "q": "6",
+    "type": "MC",
+    "marks": 1,
+    "src": "Q6 · 1.07",
+    "text": "For the data set 4, 6, 8, 10, 12, 14, 16, the interquartile range (IQR) is:",
+    "answer": "C"
+   },
+   {
+    "q": "7",
+    "type": "MC",
+    "marks": 1,
+    "src": "Q7 · 1.08",
+    "text": "A boxplot shows: minimum 10, Q 1 = 18, median 24, Q 3 = 30, maximum 40. What is the IQR?",
+    "answer": "A"
+   },
+   {
+    "q": "8",
+    "type": "MC",
+    "marks": 1,
+    "src": "Q9 · 1.02",
+    "text": "The bar chart below shows the number of students who chose each sport as their favourite. How many students…",
+    "answer": "B"
+   },
+   {
+    "q": "9",
+    "type": "MC",
+    "marks": 1,
+    "src": "Q10 · 1.11",
+    "text": "A student scores 72 on a test where the mean is 60 and the standard deviation is 8. The student's…",
+    "answer": "A"
+   },
+   {
+    "q": "10",
+    "type": "MC",
+    "marks": 1,
+    "src": "Q11 · 1.10",
+    "text": "Which of the following features is characteristic of a normal distribution?",
+    "answer": "C"
+   },
+   {
+    "q": "11",
+    "type": "SA",
+    "marks": 2,
+    "src": "Q12 · 1.02",
+    "text": "The table below shows the number of customers who visited a café on each day of the week. Day Monday Tuesday…"
+   },
+   {
+    "q": "12",
+    "type": "SA",
+    "marks": 2,
+    "src": "Q13 · 1.07",
+    "text": "The number of minutes late was recorded for 25 V/Line trains arriving at Southern Cross Station. The summary…"
+   },
+   {
+    "q": "13",
+    "type": "SA",
+    "marks": 2,
+    "src": "Q14 · 1.11",
+    "text": "Scores on a reading speed test have a mean of 240 words per minute and a standard deviation of 35 words per…"
+   },
+   {
+    "q": "14",
+    "type": "SA",
+    "marks": 1,
+    "src": "Q15 · 1.10",
+    "text": "The wingspans of adult wedge-tailed eagles are approximately normally distributed with a mean of 2.10 m and a…"
+   },
+   {
+    "q": "15",
+    "type": "SA",
+    "marks": 1,
+    "src": "Q16 · 1.06",
+    "text": "The mean of a set of 9 test scores is 14. A tenth score of 24 is added to the set. Calculate the mean of the…"
+   },
+   {
+    "q": "16a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Q17 · 1.11",
+    "text": "Calculate Liam's standardised score in General Mathematics."
+   },
+   {
+    "q": "16b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Q17 · 1.11",
+    "text": "Calculate Liam's standardised score in English."
+   },
+   {
+    "q": "16c",
+    "type": "SA",
+    "marks": 2,
+    "src": "Q17 · 1.11",
+    "text": "Relative to his cohort, in which subject did Liam perform better? Justify your answer."
+   },
+   {
+    "q": "17a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Q18 · 1.10",
+    "text": "Determine the percentage of packets with a mass between 242 g and 254 g."
+   },
+   {
+    "q": "17b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Q18 · 1.10",
+    "text": "In a batch of 2000 packets, how many packets would be expected to have a mass less than 246 g?"
+   },
+   {
+    "q": "17c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Q18 · 1.10",
+    "text": "Packets with a mass less than 238 g are rejected. How many of the 2000 packets would be expected to be…"
+   },
+   {
+    "q": "18a",
+    "type": "SA",
+    "marks": 3,
+    "src": "Q19 · 1.10",
+    "text": "Determine the mean and the standard deviation of the cycling times."
+   },
+   {
+    "q": "18b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Q19 · 1.10",
+    "text": "Calculate the standardised score of a commuter who takes 41 minutes to cycle to work."
+   },
+   {
+    "q": "18c",
+    "type": "SA",
+    "marks": 2,
+    "src": "Q19 · 1.10",
+    "text": "Sam says that a cycling time of 50 minutes would be very unusual for these commuters. Use the 68 − 95 − 99.7%…"
+   },
+   {
+    "q": "19a",
+    "type": "SA",
+    "marks": 2,
+    "src": "Q20 · 1.08",
+    "text": "Determine the median and the interquartile range (IQR) of the number of hours worked."
+   },
+   {
+    "q": "19b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Q20 · 1.08",
+    "text": "Show that the student who worked 28 hours is an outlier."
+   },
+   {
+    "q": "19c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Q20 · 1.08",
+    "text": "Describe the shape of the distribution."
+   },
+   {
+    "q": "19d",
+    "type": "SA",
+    "marks": 2,
+    "src": "Q20 · 1.08",
+    "text": "The mean number of hours worked is 11.13, rounded to two decimal places. Is the mean or the median the better…"
+   }
+  ]
+ },
  "2": {
   "chapter": 2,
   "total": 41,
