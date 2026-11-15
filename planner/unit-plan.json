@@ -2035,18 +2035,16 @@
          },
          {
           "kind": "Revision booklet",
-          "desc": "Insight GM1 (36 MC) + GM2 (12 short answer) 'Investigating data distributions', CFAT style, one section per subchapter 1A–1H so it can be set as gradual homework. Questions verbatim, cited.",
+          "desc": "Insight GM1 + GM2, one section per subchapter (1A–1H) for gradual homework.",
           "status": "ready",
           "copies": [
            {
             "label": "Student copy",
-            "note": "Blank, with working space.",
             "file": "lessons/Ch1-revision-booklet.html",
             "pdf": "lessons/Ch1-revision-booklet.pdf"
            },
            {
             "label": "Solutions",
-            "note": "Answers and one-line working in red.",
             "file": "lessons/Ch1-revision-booklet-solutions.html",
             "pdf": "lessons/Ch1-revision-booklet-solutions.pdf"
            }
