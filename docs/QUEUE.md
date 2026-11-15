@@ -148,7 +148,7 @@ _Notes for all AoS 2–4 runners (Rocco, 16 Nov):_
 
 ### Chapter 14: Flow, matching and scheduling (lessons gm12-u4-14a, gm12-u4-14b, gm12-u4-14c, gm12-u4-14d, gm12-u4-14e; check gm12-ch14-test)
 11. `done 16 Nov 10:47 — Cambridge split kept (14A, 14B, 14C, 14D, 14E: one lesson each); titles, LIs (Cambridge), SCs (Ch 14 skills checklist), SD dot points (NW-4.1–7.4), coursework by Cambridge exercise heading + Q ranges; shells cleared; tools/plan_ch14.py` **Plan Chapter 14**: lesson split, titles, learning intentions, success criteria, coursework (gm12-u4-14a, gm12-u4-14b, gm12-u4-14c, gm12-u4-14d, gm12-u4-14e; see notes above). Update the lesson ids/list below if you split or merge.
-12. `todo` **Prefill the lesson cards** (gm12-u4-14a, gm12-u4-14b, gm12-u4-14c, gm12-u4-14d, gm12-u4-14e) in `planner/unit-plan.json` (see notes above).
+12. `in progress 16 Nov 10:49` **Prefill the lesson cards** (gm12-u4-14a, gm12-u4-14b, gm12-u4-14c, gm12-u4-14d, gm12-u4-14e) in `planner/unit-plan.json` (see notes above).
 13. `todo` **CFATs for Chapter 14** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch14/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
 14. `todo` **CFAT follow-ups for Chapter 14** (Jacaranda exercises; see notes above).
 15. `todo` **Lesson gm12-u4-14a (14A)**: slides (`tools/deck/gm12-u4-14a/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
