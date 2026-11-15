@@ -10628,6 +10628,12 @@
           "file": "lessons/CFAT 4.13.1 (13A-13B).html",
           "sources": [
            "Edrolo GM U3&4 2023 exercise questions only (rule 8): 8A Q1, 8A Q5, 8A Q11, 8B Q1, 8A Q3, 8B Q2, 8B Q4"
+          ],
+          "followUp": [
+           "Identifying properties of a graph (Edrolo 8A Q1, Q3): Jacaranda U3&4 (2023) 9.2 Ex Q1–5; 9.3 Ex Q6",
+           "Identifying and constructing graphs (Edrolo 8A Q5): Jacaranda U3&4 (2023) 9.2 Ex Q7–11",
+           "Using Euler’s rule (Edrolo 8A Q11): Jacaranda U3&4 (2023) 9.3 Ex Q9, Q13, Q15, Q17",
+           "Adjacency matrix from a graph (Edrolo 8B Q1, Q2, Q4): Jacaranda U3&4 (2023) 9.2 Ex Q16–18"
           ]
          }
         ],
@@ -10959,6 +10965,11 @@
           "file": "lessons/CFAT 4.13.2 (13C-13E).html",
           "sources": [
            "Edrolo GM U3&4 2023 exercise questions only (rule 8): 8C Q1, 8C Q4, 8C Q8, 8F Q1, 8F Q6, 8C Q3, 8C Q6, 8F Q3, 8F Q8"
+          ],
+          "followUp": [
+           "Identifying types of walks (Edrolo 8C Q1, Q3, Q4, Q6, Q8): Jacaranda U3&4 (2023) 9.4 Ex Q1–6, Q8, Q13–17",
+           "Shortest path by inspection (Edrolo 8F Q1, Q3): Jacaranda U3&4 (2023) 9.5 Ex Q5, Q6",
+           "Dijkstra’s algorithm (Edrolo 8F Q6, Q8): Jacaranda U3&4 (2023) 9.5 Ex Q11, Q12, Q17"
           ]
          }
         ],
@@ -11005,6 +11016,10 @@
           "file": "lessons/CFAT 4.13.3 (13F).html",
           "sources": [
            "Edrolo GM U3&4 2023 exercise questions only (rule 8): 8D Q1, 8D Q5, 8D Q2, 8D Q3, 8D Q6, 8D Q7, 8D Q8"
+          ],
+          "followUp": [
+           "Spanning trees and their weight (Edrolo 8D Q1–3): Jacaranda U3&4 (2023) 9.5 Ex Q1, Q3, Q4",
+           "Minimum spanning tree / Prim’s (Edrolo 8D Q5–8): Jacaranda U3&4 (2023) 9.5 Ex Q9, Q10, Q20, Q21"
           ]
          }
         ],
