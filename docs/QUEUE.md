@@ -83,7 +83,7 @@ _Notes for all AoS 2–4 runners (Rocco, 16 Nov):_
 5. `done 16 Nov 09:15 — 7B-7D slides (43 slides) + worksheet/solutions (8 pages), Draft, on G: 01 Lesson materials; all card items used as listed` **Lesson gm12-u3-l32 (7B, 7D)**: slides (`tools/deck/gm12-u3-l32/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 6. `done 16 Nov 09:42 — 7C-7E slides (41 slides, CFAT 2.7.1 first, PDF 74 pages) + worksheet/solutions (8 pages), Draft, on G: 01 Lesson materials; all card items used as listed` **Lesson gm12-u3-l33 (7C, 7E)**: slides (`tools/deck/gm12-u3-l33/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 7. `done 16 Nov 10:07 — 7F slides (27 slides, PDF 47 pages) + worksheet/solutions (4 pages), Draft, on G: 01 Lesson materials; all card items used as listed` **Lesson gm12-u3-l34 (7F)**: slides (`tools/deck/gm12-u3-l34/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-8. `todo` **Chapter 7 revision booklet** + solutions (Insight GM1 + GM2, sections per subchapter). Add to the gm12-u3-l36 card.
+8. `in progress 16 Nov 10:09` **Chapter 7 revision booklet** + solutions (Insight GM1 + GM2, sections per subchapter). Add to the gm12-u3-l36 card.
 9. `todo` **Chapter 7 test** + solutions (model `tools/test/ch5/build.py`) from the Mathspace Ch 5 topic assessment (Depreciation and interest). Add to the gm12-u3-l36 card; run `python3 tools/test/details.py`. If it can't be built from what's there, mark `needs Rocco`.
 
 ### Chapter 8: Reducing balance loans, annuities and investments (lessons gm12-u3-l37, gm12-u3-l38, gm12-u3-l39, gm12-u3-l40, gm12-u3-l41, gm12-u3-l42, gm12-u3-l43, gm12-u3-l44, gm12-u3-l45; check gm12-u3-l46)
