@@ -59,9 +59,9 @@ For each lesson: slides → worksheet (student + solutions) → bound reference 
 - [ ] Ch 14 Flow, matching and scheduling (6)
 
 ## E. Self-study videos and CAS (Rocco, 15 Nov)
-- [ ] Watch and approve the Ch 1 videos in `planner/videos.json` (10 proposed: MaffsGuru 1A–1I + TI z-scores)
+- [x] Ch 1 videos checked (Rocco, 15 Nov)
 - [ ] Find videos for Ch 2–14 the same way (MaffsGuru course page lists one per subchapter)
-- [ ] CAS master list: write steps for skills still marked "Steps to write" (dot plot, parallel boxplots, Ch 2–5 skills) and add recursion/finance, matrices and networks skills
+- [ ] CAS guide (master list): write steps for skills still marked "Steps to write" (dot plot, parallel boxplots, Ch 2–5 skills) and add recursion/finance, matrices and networks skills
 - [ ] Make slides / worksheets / bound reference cards read their CAS steps and videos from the master files
 
 ## D. Planner and tools

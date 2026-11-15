@@ -1,5 +1,5 @@
 {
- "_about": "Self-study videos per Cambridge U3&4 subchapter (Rocco, 15 Nov: free YouTube, VCE-focused). status: proposed -> approved (Rocco watches first) -> students see it. Planner, slides (Videos that might help) and worksheets read from this file.",
+ "_about": "Self-study videos per Cambridge U3&4 subchapter (Rocco, 15 Nov: free YouTube, VCE-focused). status: approved = checked by Rocco (all Ch 1 videos approved 15 Nov). Planner, slides (Videos that might help) and worksheets read from this file.",
  "videos": [
   {
    "sub": "1A",
@@ -8,7 +8,7 @@
    "url": "https://www.youtube.com/watch?v=aegvEuf2bt4",
    "length": "14:18",
    "page": "https://www.maffsguru.com/videos/classifying-data/",
-   "status": "proposed"
+   "status": "approved"
   },
   {
    "sub": "1B",
@@ -17,7 +17,7 @@
    "url": "https://www.youtube.com/watch?v=T6bFzr-YBr0",
    "length": "20:06",
    "page": "https://www.maffsguru.com/videos/displaying-and-describing-the-distributions-of-categorical-variables/",
-   "status": "proposed"
+   "status": "approved"
   },
   {
    "sub": "1C",
@@ -26,7 +26,7 @@
    "url": "https://www.youtube.com/watch?v=Lhpn2f6ffEE",
    "length": "30:03",
    "page": "https://www.maffsguru.com/videos/displaying-and-describing-the-distributions-of-numerical-variables/",
-   "status": "proposed"
+   "status": "approved"
   },
   {
    "sub": "1D",
@@ -35,7 +35,7 @@
    "url": "https://www.youtube.com/watch?v=ifyyqhNbNdY",
    "length": "17:27",
    "page": "https://www.maffsguru.com/videos/dot-plots-and-stem-plots/",
-   "status": "proposed"
+   "status": "approved"
   },
   {
    "sub": "1E",
@@ -44,7 +44,7 @@
    "url": "https://www.youtube.com/watch?v=ffRtRGOnZsk",
    "length": "21:54",
    "page": "https://www.maffsguru.com/videos/using-a-log-scale-to-display-data/",
-   "status": "proposed"
+   "status": "approved"
   },
   {
    "sub": "1F",
@@ -53,7 +53,7 @@
    "url": "https://www.youtube.com/watch?v=kfZSWbyfeqk",
    "length": "42:36",
    "page": "https://www.maffsguru.com/videos/measures-of-centre-and-spread/",
-   "status": "proposed"
+   "status": "approved"
   },
   {
    "sub": "1G",
@@ -62,7 +62,7 @@
    "url": "https://www.youtube.com/watch?v=VKqQ0hrKXB0",
    "length": "24:19",
    "page": "https://www.maffsguru.com/videos/the-five-number-summary-and-the-box-plot/",
-   "status": "proposed"
+   "status": "approved"
   },
   {
    "sub": "1H",
@@ -71,7 +71,7 @@
    "url": "https://www.youtube.com/watch?v=JIw-TurKMfg",
    "length": "19:43",
    "page": "https://www.maffsguru.com/videos/the-normal-distribution-and-the-68-95-997-rule/",
-   "status": "proposed"
+   "status": "approved"
   },
   {
    "sub": "1I",
@@ -80,7 +80,7 @@
    "url": "https://www.youtube.com/watch?v=C3gQan_jMzU",
    "length": "17:39",
    "page": "https://www.maffsguru.com/videos/populations-and-samples-846791/",
-   "status": "proposed"
+   "status": "approved"
   },
   {
    "sub": "1H",
@@ -89,7 +89,7 @@
    "url": "https://www.youtube.com/watch?v=yrR9IALJD6g",
    "length": "5:16",
    "page": "",
-   "status": "proposed",
+   "status": "approved",
    "note": "covers z-scores, which the MaffsGuru 1H video does not"
   }
  ]
