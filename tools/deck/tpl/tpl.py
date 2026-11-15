@@ -87,8 +87,8 @@ def qslide(kind,pill,head,given,steps,answer,src,stat=None,mc=None,key=None,dist
     if cmd and cmd[0]!='Multiple choice':  # highlight the command word where it appears in the question (last occurrence = the actual question line)
         rx=re.compile(r'(?<![\w-])('+re.escape(cmd[0])+r')(?![\w-])(?![^<]*>)',re.I)
         ms=list(rx.finditer(given))
-        if ms:
-            m=ms[-1]; given=given[:m.start()]+f'<mark class="cw">{m.group(1)}</mark>'+given[m.end():]
+        for m in reversed(ms):  # every occurrence of the command word (Rocco, 15 Nov)
+            given=given[:m.start()]+f'<mark class="cw">{m.group(1)}</mark>'+given[m.end():]
     L='<div class="L"><div class="q">'+given
     if mc:
         d=f' data-dist="{",".join(map(str,dist))}"' if dist else ''

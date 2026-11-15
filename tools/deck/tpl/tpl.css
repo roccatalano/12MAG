@@ -159,7 +159,7 @@
 
 /* multi-part questions: parts fill the left card; the part being answered stays bright (15 Nov) */
 .T ol.parts li,.T .pa{transition:opacity .35s}
-.T ol.parts li.dim,.T .R ol.wk li.ans.big .pa.dim{opacity:.22}
+.T ol.parts li.dim,.T .R ol.wk li.ans.big .pa.shown.dim{opacity:.22}  /* answers not yet revealed stay hidden */
 .T.mp .L .q{display:flex;flex-direction:column}
 .T.mp .L .q>div:last-child{flex:1;display:flex;flex-direction:column}
 .T.mp .L .q>div>ol.parts{flex:1;justify-content:space-evenly;gap:14px}
