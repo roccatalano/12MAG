@@ -5680,8 +5680,8 @@
         "apk": [
          {
           "kind": "Skill",
-          "ref": "Cambridge U1&2 7B checklist #3",
-          "text": "Use a scatterplot to describe an association (direction, form, strength)"
+          "ref": "Cambridge U1&2 7D checklist #7",
+          "text": "Fit a linear model by eye to a scatterplot and find its equation (replaces 7B #3, already used in l05)"
          },
          {
           "kind": "Skill",
@@ -5691,7 +5691,7 @@
          {
           "kind": "Exam",
           "ref": "Edrolo U1&2 9B Q21",
-          "text": "adapted from VCAA 2019 Exam 1 Q9"
+          "text": "VCAA 2019 Exam 1 Q9 (original wording used)"
          }
         ],
         "doNow": [
@@ -5913,6 +5913,30 @@
             "label": "Solutions",
             "file": "lessons/CFAT 1.4.2 (4C-4D) solutions.html",
             "pdf": "lessons/CFAT 1.4.2 (4C-4D) solutions.pdf"
+           }
+          ]
+         },
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/5A slides.html",
+          "pdf": "lessons/5A slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "6 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/5A worksheet.html",
+            "pdf": "lessons/5A worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/5A worksheet solutions.html",
+            "pdf": "lessons/5A worksheet solutions.pdf"
            }
           ]
          }
