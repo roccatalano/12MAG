@@ -41,7 +41,7 @@ Everything made is **Draft** on the planner. Nothing is marked Ready by the runn
 
 ## Chapter 4: Data transformations (lessons gm12-u3-l12 … l15, check gm12-u3-ch4-test)
 1. `done 15 Nov 19:59 — l12–l15 cards prefilled: Do Now fixed (2 replaced), You trys mapped (Ex 4 written), CAS steps, coursework, videos (draft), 31 ledger rows` **Prefill the lesson cards** (l12–l15) in `planner/unit-plan.json`, same rules as Ch 3 task 1 (Do Now ×4 retrieval from `tools/vcaa_current_index.csv`, APK, Examples + mapped Edrolo You trys, exits, CAS skill ids, coursework, videos `draft`). Reserve every chosen exam item in `tools/ledger_manual.csv`. Check the ledger first: the Ch 3 runner reserves items at the same time.
-2. `in progress 15 Nov 20:00` **CFATs for Chapter 4** + solutions (CFAT 1.4.x, Edrolo U3&4 exercise questions only, HTML + PDF; copy `tools/cfat/ch2/build_html.py` to `tools/cfat/ch4/`). Each CFAT sits at the start of the lesson after the content it covers.
+2. `done 15 Nov 20:04 — CFAT 1.4.1 (4A-4B, /11, on l14) + CFAT 1.4.2 (4C-4D, /16, on l16), HTML+PDF + solutions, Draft; 16 ledger rows` **CFATs for Chapter 4** + solutions (CFAT 1.4.x, Edrolo U3&4 exercise questions only, HTML + PDF; copy `tools/cfat/ch2/build_html.py` to `tools/cfat/ch4/`). Each CFAT sits at the start of the lesson after the content it covers.
 3. `todo` **Lesson l12 (4A)**: slides (`tools/deck/l12/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 4. `todo` **Lesson l13 (4B)**: slides + worksheet.
 5. `todo` **Lesson l14 (4C)**: slides + worksheet.
@@ -124,6 +124,7 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 | Ch4 runner: G: not reachable | 2026-11-15 19:52 | 2026-11-15 19:53 | 1 | | stopped: the 12MAG Course Planner folder is not connected to this run (names-only listing); no task taken. next run: NOT fired — needs the folder attached |
 | Ch5 runner: G: not reachable | 2026-11-15 19:53 | 2026-11-15 19:55 | 2 | | stopped: 12MAG Course Planner folder not connected to this session (device_list_dir returned names only); nothing changed; next run: NOT fired — G: unreachable |
 | Ch4 #1 prefill l12–l15 | 19:54 | 19:59 | 5 | | done; Edrolo PDFs staged (100 MB each) and text-searched; 3 ledger clashes found and fixed | next run: fired |
+| Ch4 #2 CFATs 1.4.1–1.4.2 | 20:00 | 20:04 | ~4 | | done; Edrolo 3D/3E exercise Qs only (plot-answer Qs skipped); answers checked by regression; crop scale fixed for A4 renders | next run: fired |
 | Ch5 #1 prefill l16–l22 | 19:55 | 20:00 | ~5 | | done: cards, 4 written You trys, 2 CAS skills written (moving-means left for l17), 5 draft video rows, 49 ledger rows; rebased once (Ch4 took 2025 E1 Q12) | next run: NOT fired — fire_trigger refused by the permission check; hourly schedule (:32) picks up task 2 |
 | Ch5 #1 prefill l16–l22 | 19:55 | 20:00 | ~5 | | done: cards, 4 written You trys, 2 CAS skills written (moving-means left for l17), 5 draft video rows, 49 ledger rows; rebased once (Ch4 took 2025 E1 Q12) | next run: fired |
 | Ch3 #3 Lesson l09 (3A) | 2026-11-15 19:46 | 2026-11-15 20:01 | 15 | | done; 26 slides + 4-page worksheet; sourcing 9 PDFs (2 scanned) took most time | next run: fired

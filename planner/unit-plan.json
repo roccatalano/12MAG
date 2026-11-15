@@ -5213,7 +5213,125 @@
          ]
         },
         "note": "Spare You try: Edrolo 3E WE2c (prediction from 1/week). CAS You try: Cambridge CAS 3 data.",
-        "casYouTry": "Cambridge 4C CAS 3 data (reciprocal transformation)"
+        "casYouTry": "Cambridge 4C CAS 3 data (reciprocal transformation)",
+        "cfats": [
+         {
+          "id": "CFAT 1.4.1",
+          "title": "Squared and log transformations",
+          "covers": [
+           "4A",
+           "4B"
+          ],
+          "format": "About 20 min · individual · CAS and single bound reference allowed",
+          "status": "Draft",
+          "plan": "Start of the 4C lesson.",
+          "marks": 11,
+          "mcMarks": 4,
+          "saMarks": 7,
+          "file": "lessons/CFAT 1.4.1 (4A-4B).html",
+          "sources": [
+           "Edrolo GM U3&4 2023 exercise questions only (rule 8): 3D Q4, 3E Q1, 3D Q7, 3E Q6, 3D Q2, 3E Q7, 3E Q2"
+          ],
+          "questions": [
+           {
+            "q": 1,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Complete an x² table",
+            "sd": [],
+            "sub": "4A",
+            "sc": "",
+            "src": "Edrolo 3D Q4",
+            "fu": ""
+           },
+           {
+            "q": 2,
+            "marks": 1,
+            "type": "MC",
+            "skill": "LSRL after an x² transformation",
+            "sd": [],
+            "sub": "4A",
+            "sc": "",
+            "src": "Edrolo 3E Q1",
+            "fu": ""
+           },
+           {
+            "q": 3,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Complete a log y table",
+            "sd": [],
+            "sub": "4B",
+            "sc": "",
+            "src": "Edrolo 3D Q7",
+            "fu": ""
+           },
+           {
+            "q": 4,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Solve a log x model for x",
+            "sd": [],
+            "sub": "4B",
+            "sc": "",
+            "src": "Edrolo 3E Q6",
+            "fu": ""
+           },
+           {
+            "q": 5,
+            "marks": 2,
+            "type": "SA",
+            "skill": "Choose a square transformation",
+            "sd": [],
+            "sub": "4A",
+            "sc": "",
+            "src": "Edrolo 3D Q2",
+            "fu": ""
+           },
+           {
+            "q": 6,
+            "marks": 3,
+            "type": "SA",
+            "skill": "Predict with a y² model; reliability",
+            "sd": [],
+            "sub": "4A",
+            "sc": "",
+            "src": "Edrolo 3E Q7",
+            "fu": ""
+           },
+           {
+            "q": 7,
+            "marks": 2,
+            "type": "SA",
+            "skill": "LSRL after a log y transformation",
+            "sd": [],
+            "sub": "4B",
+            "sc": "",
+            "src": "Edrolo 3E Q2",
+            "fu": ""
+           }
+          ]
+         }
+        ],
+        "materials": [
+         {
+          "kind": "CFAT 1.4.1",
+          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/CFAT 1.4.1 (4A-4B).html",
+            "pdf": "lessons/CFAT 1.4.1 (4A-4B).pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/CFAT 1.4.1 (4A-4B) solutions.html",
+            "pdf": "lessons/CFAT 1.4.1 (4A-4B) solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
@@ -5548,6 +5666,125 @@
           "format": "About 20 min · individual · CAS and single bound reference allowed",
           "status": "Planned",
           "plan": "Start of the 5A lesson (features of time series plots, a lighter lesson)."
+         },
+         {
+          "id": "CFAT 1.4.2",
+          "title": "Reciprocal transformation; choosing and applying a transformation",
+          "covers": [
+           "4C",
+           "4D"
+          ],
+          "format": "About 20 min · individual · CAS and single bound reference allowed",
+          "status": "Draft",
+          "plan": "Start of the 5A lesson.",
+          "marks": 16,
+          "mcMarks": 6,
+          "saMarks": 10,
+          "file": "lessons/CFAT 1.4.2 (4C-4D).html",
+          "sources": [
+           "Edrolo GM U3&4 2023 exercise questions only (rule 8): 3D Q10, 3E Q5, 3D Q1, 3D Q3a, 3D Q3b, 3D Q3c, 3E Q3, 3E Q8, 3E Q4"
+          ],
+          "questions": [
+           {
+            "q": 1,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Complete a 1/x table",
+            "sd": [],
+            "sub": "4C",
+            "sc": "",
+            "src": "Edrolo 3D Q10",
+            "fu": ""
+           },
+           {
+            "q": 2,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Predict with a 1/x model",
+            "sd": [],
+            "sub": "4C",
+            "sc": "",
+            "src": "Edrolo 3E Q5",
+            "fu": ""
+           },
+           {
+            "q": 3,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Choose transformations (circle)",
+            "sd": [],
+            "sub": "4D",
+            "sc": "",
+            "src": "Edrolo 3D Q1",
+            "fu": ""
+           },
+           {
+            "q": 4,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Choose transformations",
+            "sd": [],
+            "sub": "4D",
+            "sc": "",
+            "src": "Edrolo 3D Q3a",
+            "fu": ""
+           },
+           {
+            "q": 5,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Choose transformations",
+            "sd": [],
+            "sub": "4D",
+            "sc": "",
+            "src": "Edrolo 3D Q3b",
+            "fu": ""
+           },
+           {
+            "q": 6,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Choose transformations",
+            "sd": [],
+            "sub": "4D",
+            "sc": "",
+            "src": "Edrolo 3D Q3c",
+            "fu": ""
+           },
+           {
+            "q": 7,
+            "marks": 2,
+            "type": "SA",
+            "skill": "LSRL after a 1/y transformation",
+            "sd": [],
+            "sub": "4C",
+            "sc": "",
+            "src": "Edrolo 3E Q3",
+            "fu": ""
+           },
+           {
+            "q": 8,
+            "marks": 3,
+            "type": "SA",
+            "skill": "Predict with a 1/y model; reliability",
+            "sd": [],
+            "sub": "4C",
+            "sc": "",
+            "src": "Edrolo 3E Q8",
+            "fu": ""
+           },
+           {
+            "q": 9,
+            "marks": 5,
+            "type": "SA",
+            "skill": "Compare transformations",
+            "sd": [],
+            "sub": "4D",
+            "sc": "",
+            "src": "Edrolo 3E Q4",
+            "fu": ""
+           }
+          ]
          }
         ],
         "homework": {
@@ -5583,7 +5820,26 @@
          ]
         },
         "note": "Edrolo 4A WE2 (seasonality + structural change, seat-belt law) pairs with Example 4; it also fits Example 5.",
-        "casYouTry": "Edrolo 4A WE1 (time series plot on CAS)"
+        "casYouTry": "Edrolo 4A WE1 (time series plot on CAS)",
+        "materials": [
+         {
+          "kind": "CFAT 1.4.2",
+          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/CFAT 1.4.2 (4C-4D).html",
+            "pdf": "lessons/CFAT 1.4.2 (4C-4D).pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/CFAT 1.4.2 (4C-4D) solutions.html",
+            "pdf": "lessons/CFAT 1.4.2 (4C-4D) solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
