@@ -157,6 +157,9 @@ main{max-width:1200px;margin:0 auto;padding:16px 20px 80px}
 @media(max-width:900px){.udpanel{grid-template-columns:1fr}}.udrow{display:flex;justify-content:space-between;gap:8px;font-size:13px;padding:5px 0;border-top:1px solid var(--line)}.udrow:first-child{border-top:0}.udrow .sub{color:var(--muted)}
 .udrow .ms{font-size:10.5px;font-weight:600;padding:1px 6px;border-radius:8px;background:#e4e4e4;color:#555}.udrow .mlink{font-size:11.5px;font-weight:600;color:#1d7266;text-decoration:none;border:1px solid #9fd8cd;border-radius:8px;padding:1px 7px;margin-left:2px}.udpanel .nb h4{margin:8px 0 2px;font-size:12px}
 .evcard.exam{background:#eef0fb;border-color:#9aa3d9;color:#2c3576}.evcard.exam .uc1,.evcard.exam .umeta{color:#4a54a0}
+.cpl.cp3{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:6px;margin-top:4px}.cp3 .cpc{border-color:#c9d6ee}.ccr{display:flex;justify-content:space-between;align-items:center;gap:6px;margin-top:2px}.ccr>span:last-child{white-space:nowrap;display:flex;gap:3px}.ccr a{white-space:nowrap}.cp3 .cpc{gap:2px}.ccr .sub{font-size:11px;color:var(--muted)}
+.nest.n-ld{border-color:var(--lesson-i);background:#f3f6fc}.nest.n-ld>summary{color:var(--lesson-i)}.n-ld .detail{border:0;padding:0;background:transparent;grid-template-columns:1fr}.n-ld .detail h2,.n-ld .detail>div>.meta,.n-ld [data-nest="mat"]{display:none}
+.lcard.t-check .nest.n-ld{border-color:var(--sac-i);background:#fdf3f3}.lcard.t-check .nest.n-ld>summary{color:var(--sac-i)}
 </style>
 </head>
 <body>
@@ -230,6 +233,17 @@ function lessons(){const out=[];let n=0;
       title:l.title||'Not planned yet',aos:`AoS ${a.n}`,aosTitle:a.title,aosN:a.n,ch:c.n,chTitle:c.title,revision:a.revision});
   })));return out}
 /* ---------- shared card + detail ---------- */
+/* Lesson card in an open chapter (Rocco, 16 Nov): resources nested like a CFAT card + a 'Lesson details' button */
+function lcard(l){const M=(l.materials||[]).filter(m=>!isFA(m)&&!/^CFAT/i.test(m.kind));
+  const ok=x=>x.file||x.pdf, mlab=m=>m.kind.replace(/^Guided /,'').replace(/^./,c=>c.toUpperCase());
+  const lab=t=>t.replace(/ copy$/i,'').replace(/\s*\((print (both|all))\)/i,' · $1').replace(/^.* \+ .* · print (both|all)$/i,'Print $1');
+  const box=m=>`<div class="cpc"><div class="ccl"><b>${esc(mlab(m))}</b>${m.status&&m.status!='draft'&&m.status!='ready'?'':''}</div>${m.copies?.length?m.copies.map(k=>`<div class="ccr"><span class="sub">${esc(lab(k.label))}</span><span>${ok(k)?links(k):'<span class="sub">To make</span>'}</span></div>`).join(''):`<div class="ccr"><span></span><span>${ok(m)?links(m):'<span class="sub">To make</span>'}</span></div>`}</div>`;
+  const st=M.length?(M.every(m=>/ready/i.test(m.status))?'ready':M.some(m=>/draft/i.test(m.status))?'draft':''):'';
+  return `<div class="card fa lcard t-${l.type} ${cfs(l).length?'has-cfat':''}" data-lc="${l.id}">
+    <div class="meta"><span>L${l.n}${l.section?' · '+esc(l.section):''}</span><span class="tags">${cfs(l).length?`<span class="tag cfat">${cfs(l).length>1?cfs(l).length+' CFATs':'CFAT'}</span>`:''}${st?`<span class="ms ${st}">${st=='ready'?'Ready':'Draft'}</span>`:''}<span class="tag">${TYPE[l.type]}</span></span></div>
+    <div class="ttl"><b>${esc(l.title)}</b></div>
+    ${M.length?`<div class="cpl cp3">${M.map(box).join('')}</div>`:''}
+    ${l.type=='lesson'||nests(l)?nest('ld-'+l.id,'Lesson details',detail(l),null,'n-ld'):''}</div>`}
 function card(l,extra){return `<div class="card t-${l.type} ${l.shell?'shell':''} ${cfs(l).length?'has-cfat':''} ${openId==l.id?'open':''}" data-id="${l.id}">
   <div class="meta"><span>${typeof l.n=='number'?'L'+l.n+(l.section?' · ':''):''}${l.section?esc(l.section):''}</span><span class="tags">${cfs(l).length?`<span class="tag cfat">${cfs(l).length>1?cfs(l).length+' CFATs':'CFAT'}</span>`:''}<span class="tag">${l.shell?'To plan':TYPE[l.type]}</span></span></div>
   <div class="ttl">${esc(l.title)}</div>${extra||''}</div>`}
@@ -300,7 +314,7 @@ let uopen=new Set(store.get('pl:uopen',[]));
 function chapterBody(C){
   return `<div class="aos"><b>Chapter ${C[0].ch} · ${esc(C[0].chTitle)}</b><span>${esc(C[0].aos)} · ${C.length} lessons</span></div>
     <div class="chgrid"><div class="wl"><span class="cn">Chapter ${C[0].ch}</span><b>${esc(C[0].chTitle)}</b>${C.length} lessons</div>
-    <div class="col"><div class="colh">Lessons</div>${C.map(l=>card(l)+(expandAll||l.id==openId?detail(l):'')).join('')}</div>
+    <div class="col"><div class="colh">Lessons</div>${C.map(lcard).join('')}</div>
     <div class="col"><div class="colh">Formative assessments</div>${formatives(C)}</div></div>`}
 function badges(C){const les=C.filter(l=>l.type=='lesson'),has=(l,re)=>(l.materials||[]).some(m=>re.test(m.kind)&&(m.file||m.pdf||(m.copies||[]).some(k=>k.file||k.pdf)));
   const cf=[...new Map(C.flatMap(l=>cfs(l)).map(c=>[c.id,c])).values()],cfm=cf.filter(c=>c.file).length;
