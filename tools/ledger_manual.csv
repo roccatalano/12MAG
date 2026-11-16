@@ -643,13 +643,13 @@ VCAA 2026 E2 Q7,,Do Now,yes,gm12-u3-l43,2026-11-16,used in 8G slides + worksheet
 VCAA 2016 E2 Q7b,Edrolo U3&4 6B Q22,exit,yes,gm12-u3-l43,2026-11-16,used in 8G slides + worksheet (AoS2 #19)
 Cambridge U1&2 skills checklist 1B #7,,APK,no,gm12-u3-l43,2026-11-16,NOT used: already burnt in l21; dropped from l43 (AoS2 #19)
 VCAA 2016 E2 Q6c,Edrolo U1&2 3C Q19,APK,yes,gm12-u3-l43,2026-11-16,used in 8G slides + worksheet (AoS2 #19)
-VCAA 2026 E1 Q23,,Do Now,yes,gm12-u3-l44,2026-11-16,reserved by AoS2 prefill
-VCAA 2026 E1 Q14,,Do Now,yes,gm12-u3-l44,2026-11-16,reserved by AoS2 prefill
-VCAA 2026 E2 Q11,,Do Now,yes,gm12-u3-l44,2026-11-16,reserved by AoS2 prefill
-VCAA 2026 NHT E2 Q1e,,Do Now,yes,gm12-u3-l44,2026-11-16,reserved by AoS2 prefill
-VCAA 2021 E1 Q24,Edrolo U3&4 6C Q13,exit,yes,gm12-u3-l44,2026-11-16,reserved by AoS2 prefill
-Cambridge U1&2 skills checklist 1B #6,,APK,yes,gm12-u3-l44,2026-11-16,reserved by AoS2 prefill
-VCAA 2020 E2 Q7a,Edrolo U1&2 3B Q15,APK,yes,gm12-u3-l44,2026-11-16,reserved by AoS2 prefill
+VCAA 2026 E1 Q23,,Do Now,no,gm12-u3-l44,2026-11-16,NOT used: interest-only = 8H content (not retrieval); replaced by VCAA 2025 E1 Q24 (AoS2 #20)
+VCAA 2026 E1 Q14,,Do Now,yes,gm12-u3-l44,2026-11-16,used in 8H slides + worksheet (AoS2 #20)
+VCAA 2026 E2 Q11,,Do Now,yes,gm12-u3-l44,2026-11-16,used in 8H slides + worksheet (AoS2 #20)
+VCAA 2026 NHT E2 Q1e,,Do Now,yes,gm12-u3-l44,2026-11-16,used in 8H slides + worksheet (AoS2 #20)
+VCAA 2021 E1 Q24,Edrolo U3&4 6C Q13,exit,yes,gm12-u3-l44,2026-11-16,used in 8H slides + worksheet (AoS2 #20)
+Cambridge U1&2 skills checklist 1B #6,,APK,no,gm12-u3-l44,2026-11-16,NOT used: already burnt in l20; dropped from l44 (AoS2 #20)
+VCAA 2020 E2 Q7a,Edrolo U1&2 3B Q15,APK,yes,gm12-u3-l44,2026-11-16,used in 8H slides + worksheet (AoS2 #20)
 VCAA 2026 NHT E1 Q24,,Do Now,yes,gm12-u3-l45,2026-11-16,reserved by AoS2 prefill
 VCAA 2026 E1 Q15,,Do Now,yes,gm12-u3-l45,2026-11-16,reserved by AoS2 prefill
 VCAA 2025 E2 Q7a,,Do Now,yes,gm12-u3-l45,2026-11-16,reserved by AoS2 prefill
@@ -806,3 +806,5 @@ Edrolo U3&4 7G WE6,,You try,no,gm12-u4-11c,2026-11-16,used: 11C slides + workshe
 Edrolo U3&4 7H WE1,,You try,no,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
 VCAA 2023 E1 Q32,,Do Now,yes,gm12-u4-11d,2026-11-16,used: 11D slides (replaces 2024 E1 Q32)
 Edrolo U3&4 6B WE3,,You try,no,gm12-u3-l43,2026-11-16,used in 8G slides + worksheet (AoS2 #19)
+VCAA 2025 E1 Q24,,Do Now,yes,gm12-u3-l44,2026-11-16,used in 8H slides + worksheet (AoS2 #20) (replaces 2026 E1 Q23)
+Edrolo U3&4 6C WE1a,,You try,no,gm12-u3-l44,2026-11-16,used in 8H slides + worksheet (AoS2 #20)

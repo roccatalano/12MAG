@@ -10113,21 +10113,16 @@
         ],
         "apk": [
          {
-          "kind": "Skill",
-          "ref": "Cambridge U1&2 1B checklist #6",
-          "text": "Increase or decrease a value by a percentage"
-         },
-         {
           "kind": "Exam",
-          "ref": "Edrolo U1&2 3B Q15",
-          "text": "VCAA 2020 Exam 2 Q7a (adapted by Edrolo)"
+          "ref": "VCAA 2020 Exam 2 Q7a",
+          "text": "Flat rate depreciation: decrease each year (original wording; Edrolo U1&2 3B Q15 adapts Q7a+b, Q7b already burnt)"
          }
         ],
         "doNow": [
          {
           "exam": "Exam 1",
-          "ref": "VCAA 2026 Exam 1 Q23",
-          "sec": "8G"
+          "ref": "VCAA 2025 Exam 1 Q24",
+          "sec": "8F"
          },
          {
           "exam": "Exam 1",
@@ -10154,7 +10149,33 @@
         "cas": [
          "finance-solver"
         ],
-        "note": "Edrolo 6C WE3a (interest-only payment on the finance solver) is a spare You try for Example 27."
+        "note": "Edrolo 6C WE3a (interest-only payment on the finance solver) is a spare You try for Example 27.",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/8H slides.html",
+          "pdf": "lessons/8H slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "2 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/8H worksheet.html",
+            "pdf": "lessons/8H worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/8H worksheet solutions.html",
+            "pdf": "lessons/8H worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
