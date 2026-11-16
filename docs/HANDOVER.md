@@ -45,6 +45,8 @@
 
 
 
+- **16 Nov 19:30 — AoS 3 finished**: all 22 AoS 3 queue tasks (Ch 10 + Ch 11) are done. The runner could not switch off its own scheduled task "12MAG AoS 3 runner" (permission denied): please turn it off; until then each run just finds no work and stops.
+
 ## 16 Nov 2026 (evening) — 2027 year plan dates in
 - `planner/years/2027.json` filled from the EKC School Planner 2027: terms, Step-up (19 Nov–2 Dec 2026, 6 lessons), blocked days, SAC dates (AoS 1 Parts 1–3 T2 W1–2; AoS 2 Wed 2 Jun; AoS 3 Wed 4 Aug; AoS 4 Thu 16 Sep, set so it has the same teaching time as AoS 2/3 — Wed 15 Sep is student-free: confirm).
 - Rocco: timetable days unknown until 2027, so the planner now has a weekly mode (`lessonRule`): full 5-day week = 3 lessons, any shorter week = 2. Anchors can be `afterSchool` (takes no lesson), `inClass` (takes one), `window` (teaching time per AoS is shown above the year plan).
