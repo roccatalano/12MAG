@@ -7287,7 +7287,15 @@
           }
         ],
         "source": "Study Design 2023–2027 + VCAA School-based Assessment Report (GM): Unit 3 SAC 24% (Application task 16%, MPS task 1 8%), Unit 4 SAC 16% (MPS tasks 2 and 3, 8% each); Exam 1 30%, Exam 2 30%."
-      }
+      },
+      "resources": [
+        {
+          "kind": "Chapter 1 slides (all lessons, S1–S5)",
+          "status": "ready",
+          "file": "lessons/Ch1 slides.html",
+          "pdf": "lessons/Ch1 slides.pdf"
+        }
+      ]
     },
     {
       "id": "aos2",

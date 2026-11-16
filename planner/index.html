@@ -355,7 +355,8 @@ function unitBody(a,all,SACD,SACP){const A=all.filter(l=>l.aosN==a.n),S=a.sac||{
   const chk=A.filter(l=>l.type=='check'),cm=re=>chk.flatMap(l=>(l.materials||[]).filter(m=>re.test(m.kind)).map(m=>({m,l})));
   const mrow=({m,l})=>`<div class="udrow"><span><b>${/^Chapter \d/.test(m.kind)?esc(m.kind):'Ch '+l.ch+' '+esc(m.kind.toLowerCase())}</b> <span class="sub">L${l.n}</span></span><span>${m.copies?.length?m.copies.map(k=>`<span class="sub">${esc(k.label)}</span> ${links(k)}`).join(' '):m.file||m.pdf?links(m):`<span class="ms">${m.status=='todo'?'To make':esc(m.status||'')}</span>`}</span></div>`;
   const gaps=[...new Set(A.filter(l=>l.type=='lesson').flatMap(l=>l.subchapters))].filter(s=>!cf.some(({c})=>(c.covers||[]).some(v=>{const m=String(v).match(/^(\d+)([A-Z])(?:\s*[-–]\s*\d*([A-Z]))?/);if(!m)return false;const n=s.match(/^(\d+)([A-Z])/);return n&&n[1]==m[1]&&n[2]>=m[2]&&n[2]<=(m[3]||m[2])})));
-  const form=nest('cf-'+a.n,'CFATs',cfr+(gaps.length?`<div class="sub" style="margin-top:6px">Not covered by a CFAT: ${esc(gaps.join(', '))}</div>`:''),cf.length,'n-cfat')
+  const res=(a.resources||[]).map(m=>`<div class="udrow"><b>${esc(m.kind)}</b><span>${m.file||m.pdf?links(m):`<span class="ms">To make</span>`}</span></div>`).join('');
+  const form=(res?nest('ur-'+a.n,'Unit resources',res,(a.resources||[]).length,'n-mat'):'')+nest('cf-'+a.n,'CFATs',cfr+(gaps.length?`<div class="sub" style="margin-top:6px">Not covered by a CFAT: ${esc(gaps.join(', '))}</div>`:''),cf.length,'n-cfat')
     +nest('ct-'+a.n,'Chapter tests',cm(/test/i).map(mrow).join(''),cm(/test/i).length,'n-test')
     +nest('rb-'+a.n,'Revision booklets',cm(/revision booklet/i).map(mrow).join(''),cm(/revision booklet/i).length)
     +nest('cc-'+a.n,'Coursework checks',cm(/coursework check/i).map(mrow).join(''),cm(/coursework check/i).length);
