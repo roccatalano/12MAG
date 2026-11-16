@@ -9798,11 +9798,6 @@
           "kind": "Skill",
           "ref": "Cambridge U1&2 3I checklist #26",
           "text": "Use a rule to analyse an investment"
-         },
-         {
-          "kind": "Exam",
-          "ref": "Edrolo U1&2 3E Q11",
-          "text": "VCAA 2017 Exam 2 Q6a (adapted by Edrolo)"
          }
         ],
         "doNow": [
@@ -9844,7 +9839,33 @@
         "cas": [
          "finance-solver"
         ],
-        "note": "Edrolo has no worked example that solves for I%, N or Pmt, so all four You trys are written (YT-8F-21…24)."
+        "note": "Edrolo has no worked example that solves for I%, N or Pmt, so all four You trys are written (YT-8F-21…24). APK exam item (Edrolo U1&2 3E Q11 = VCAA 2017 E2 Q6a) dropped: already burnt as the l34 exit; all other Edrolo U1&2 Ch 3 exam items are burnt too (Decisions log 16 Nov).",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/8F slides.html",
+          "pdf": "lessons/8F slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "5 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/8F worksheet.html",
+            "pdf": "lessons/8F worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/8F worksheet solutions.html",
+            "pdf": "lessons/8F worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
