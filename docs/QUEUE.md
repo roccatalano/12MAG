@@ -120,7 +120,7 @@ _Notes for all AoS 2–4 runners (Rocco, 16 Nov):_
 
 ### Chapter 11: Transition matrices and Leslie matrices (lessons gm12-u4-11a, gm12-u4-11b, gm12-u4-11c, gm12-u4-11d, gm12-u4-11e; check gm12-ch11-test)
 12. `done 16 Nov 10:45 — split kept 11A · 11B · 11C · 11D · 11E (5 lessons, 13 Examples); titles, Cambridge learning intentions, checklist success criteria (1–12), Study Design points, coursework by exercise section (+ Revision book); tools/plan_ch11.py` **Plan Chapter 11**: lesson split, titles, learning intentions, success criteria, coursework (gm12-u4-11a, gm12-u4-11b, gm12-u4-11c, gm12-u4-11d, gm12-u4-11e; see notes above). Update the lesson ids/list below if you split or merge.
-13. `todo` **Prefill the lesson cards** (gm12-u4-11a, gm12-u4-11b, gm12-u4-11c, gm12-u4-11d, gm12-u4-11e) in `planner/unit-plan.json` (see notes above).
+13. `in progress 16 Nov 11:08` **Prefill the lesson cards** (gm12-u4-11a, gm12-u4-11b, gm12-u4-11c, gm12-u4-11d, gm12-u4-11e) in `planner/unit-plan.json` (see notes above).
 14. `todo` **CFATs for Chapter 11** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch11/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
 15. `todo` **CFAT follow-ups for Chapter 11** (Jacaranda exercises; see notes above).
 16. `todo` **Lesson gm12-u4-11a (11A)**: slides (`tools/deck/gm12-u4-11a/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
