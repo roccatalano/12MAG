@@ -7294,6 +7294,18 @@
           "status": "ready",
           "file": "lessons/Ch1-slides.html",
           "pdf": "lessons/Ch1-slides.pdf"
+        },
+        {
+          "kind": "Chapter 1 workbook (all worksheets, S1–S5)",
+          "status": "ready",
+          "file": "lessons/Ch1-workbook.pdf",
+          "pdf": "lessons/Ch1-workbook.pdf"
+        },
+        {
+          "kind": "Chapter 1 workbook solutions",
+          "status": "ready",
+          "file": "lessons/Ch1-workbook-solutions.pdf",
+          "pdf": "lessons/Ch1-workbook-solutions.pdf"
         }
       ]
     },

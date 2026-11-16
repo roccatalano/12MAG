@@ -1,10 +1,17 @@
-"""Lesson 1 (1A-1B) guided worksheet, CFAT / revision-booklet style (tools/deck/ws2.py). Questions verbatim from tools/deck/s1/build.py (verbatim-checked 15 Nov).
+"""Lesson 1 (1A-1B) guided worksheet, CFAT / revision-booklet style (tools/deck/ws2.py). Questions verbatim from the approved deck tools/deck/z10/s1_build.py (lessons/S1-slides.html; re-checked 17 Nov; the old tools/deck/s1/build.py is deleted).
 Sources (not printed, Rocco 15 Nov: only exam questions show their source): APK 1 = Cambridge U1&2 Ch 2 skills checklist 2A #1; APK 2 = Edrolo U1&2 1A Q13; APK 3 = Edrolo U1&2 1A Q14;
 Examples 1-5 = Cambridge U3&4 Examples 1-5; You try 1 = Edrolo U3&4 1A WE1-3; You try 2-5 = Edrolo U3&4 1B WE1-4; exits = Edrolo U3&4 1A Q14, 1A Q16, 1B Q13.
 Run: python3 tools/deck/s1/worksheet.py"""
 import os, sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from ws2 import *
+
+def ftab(var, rows, total, blank=True, pcth='Percentage'):
+    """Frequency table with the deck's headers (var | Number | pcth); the deck's 'Frequency' over-header is left off to keep 5 pages. blank=True: cells red on the solutions copy only."""
+    f = a if blank else (lambda x: x)
+    tr = ''.join(f'<tr><td class="l">{r[0]}</td><td>{f(r[1])}</td><td>{f(r[2])}</td></tr>' for r in rows)
+    return (f'<table class="t{" fill" if blank else ""}"><tr><th>{var}</th><th>Number</th><th>{pcth}</th></tr>{tr}'
+            f'<tr><td class="l"><b>Total</b></td><td>{f(f"<b>{total[0]}</b>")}</td><td>{f(f"<b>{total[1]}</b>")}</td></tr></table>')
 
 P = [title('1A–1B', 'Types of data and categorical data')]
 P.append(lis(['To be able to classify data as categorical or numerical.', 'To be able to further classify categorical data as nominal or ordinal.',
@@ -15,8 +22,8 @@ P.append(lis(['To be able to classify data as categorical or numerical.', 'To be
 # ---------------------------------------------------------------- APK
 P.append(sect('Activating prior knowledge', 'Year 11'))
 P.append(box('Question 1', q('Classify the following data as nominal, ordinal, discrete or continuous:')
-  + parts([('a', 'The time between people arriving at the coffee shop.', 'continuous', 'L'), ('b', 'The number of people in the queue at the coffee shop.', 'discrete', 'L'),
-           ('c', 'Customer’s coffee preference (latte, cappuccino, black).', 'nominal', 'L'), ('d', 'Customer’s rating of the coffee (excellent, quite good, not that good).', 'ordinal', 'L')], cols=2).replace('style="grid-template-columns', 'style="row-gap:0;grid-template-columns', 1)))
+  + parts([('a', 'The time between people arriving at the coffee shop.', 'Continuous', 'L'), ('b', 'The number of people in the queue at the coffee shop.', 'Discrete', 'L'),
+           ('c', 'Customer’s coffee preference (latte, cappuccino, black).', 'Nominal', 'L'), ('d', 'Customer’s rating of the coffee (excellent, quite good, not that good).', 'Ordinal', 'L')], cols=2).replace('style="grid-template-columns', 'style="row-gap:0;grid-template-columns', 1)))
 TRAVEL = segbar(None, ['domestic', 'international'], 100, 20, 'percentage', 'age', bars=[('under 55', [65, 35]), ('55 and over', [45, 55])], W=230, H=140, mm=50)
 NIGHT = ('<table class="t"><tr><th></th><th colspan="2"><i>snores</i></th><th></th></tr><tr><th><i>frequency of nightmares</i></th><th>no</th><th>yes</th><th>total</th></tr>'
          '<tr><td class="l">low</td><td>80</td><td>58</td><td>138</td></tr><tr><td class="l">high</td><td>11</td><td>12</td><td>23</td></tr><tr><td class="l">total</td><td>91</td><td>70</td><td>161</td></tr></table>')
@@ -33,20 +40,20 @@ P.append(box('Question 3 · VCAA 2020 Exam 1 Q10', side(q('The data in the table
 # ---------------------------------------------------------------- 1A
 P.append(sect('1A Types of data', 'Example, then you try'))
 P.append(exyt('Example 1 · Types of data', q('Classify the following data as nominal, ordinal, discrete or continuous.')
-      + parts([('a', 'The number of chocolate chips in each of 10 cookies is counted.', 'discrete', 'L'), ('b', 'The time taken for 20 students to complete a puzzle is recorded in seconds.', 'continuous', 'L'),
-               ('c', 'Member of a football club were asked to rate how they felt about the current coach, 1 = Very satisfied, 2 = Satisfied, 3 = Indifferent, 4 = Dissatisfied, 5 = Very dissatisfied.', 'ordinal', 'L'),
-               ('d', 'Students are asked to each choose their preferred colour from the list 1 = Blue, 2 = Green, 3 = Red, 4 = Yellow.', 'nominal', 'L'),
-               ('e', 'Students weights were classified as ‘less than 60kg’, ‘60kg - 80kg’ or ‘more than 80kg’.', 'ordinal', 'L')]),
-  'You try 1', q('<b>1</b> Classify the following variables as either categorical or numerical.') + parts([('a.', '<i>type of pasta</i>', 'categorical', 'L'), ('b.', '<i>number of candles</i>', 'numerical', 'L')])
-      + QSEP + q('<b>2</b> Classify the following categorical variables as either nominal or ordinal.') + parts([('a.', '<i>type of shoe</i> (runners, boots, sandals, slides)', 'nominal', 'L'), ('b.', '<i>shirt size</i> (small, medium, large)', 'ordinal', 'L')])
-      + QSEP + q('<b>3</b> Classify the following numerical variables as either discrete or continuous.') + parts([('a.', '<i>length</i> (m)', 'continuous', 'L'), ('b.', '<i>number of tennis racquets</i>', 'discrete', 'L')])))
+      + parts([('a', 'The number of chocolate chips in each of 10 cookies is counted.', 'Discrete', 'L'), ('b', 'The time taken for 20 students to complete a puzzle is recorded in seconds.', 'Continuous', 'L'),
+               ('c', 'Member of a football club were asked to rate how they felt about the current coach, 1 = Very satisfied, 2 = Satisfied, 3 = Indifferent, 4 = Dissatisfied, 5 = Very dissatisfied.', 'Ordinal', 'L'),
+               ('d', 'Students are asked to each choose their preferred colour from the list 1 = Blue, 2 = Green, 3 = Red, 4 = Yellow.', 'Nominal', 'L'),
+               ('e', 'Students weights were classified as ‘less than 60kg’, ‘60kg - 80kg’ or ‘more than 80kg’.', 'Ordinal', 'L')]),
+  'You try 1', q('<b>1</b> Classify the following variables as either categorical or numerical.') + parts([('a.', '<i>type of pasta</i>', 'Categorical', 'L'), ('b.', '<i>number of candles</i>', 'Numerical', 'L')])
+      + QSEP + q('<b>2</b> Classify the following categorical variables as either nominal or ordinal.') + parts([('a.', '<i>type of shoe</i> (runners, boots, sandals, slides)', 'Nominal', 'L'), ('b.', '<i>shirt size</i> (small, medium, large)', 'Ordinal', 'L')])
+      + QSEP + q('<b>3</b> Classify the following numerical variables as either discrete or continuous.') + parts([('a.', '<i>length</i> (m)', 'Continuous', 'L'), ('b.', '<i>number of tennis racquets</i>', 'Discrete', 'L')])))
 
 # ---------------------------------------------------------------- 1B
 # (Examples keep the scaffold; You trys are blank space, answers in red on the solutions copy)
 P.append(sect('1B Displaying and describing categorical data', 'Example, then you try'))
 TH = 'average short tall tall short short average average tall short average short average average average tall tall short average tall tall average average tall'
 THT_A = ftab('teacher’s height', [('short', 6, '25.0'), ('average', 10, '41.7'), ('tall', 8, '33.3')], (24, '100.0'), blank=False, pcth='%')
-P.append(exyt('Example 2 · Frequency table for a categorical variable', q('A group of 11 preschool children were asked to choose between chocolate and vanilla ice-cream (C = chocolate, V = vanilla):')
+P.append(exyt('Example 2 · Constructing a frequency table for a categorical variable', q('A group of 11 preschool children were asked to choose between chocolate and vanilla ice-cream (C = chocolate, V = vanilla):')
       + '<div class="data">C V V C C V C C C V V</div>' + q('Construct a frequency table (including percentage frequencies) to display the data.')
       + ftab('Flavour', [('chocolate', 6, '54.5'), ('vanilla', 5, '45.5')], (11, '100.0')),
   'You try 2', q('The students in a prep class were asked the question, ‘Would you describe your teacher’s height as short, average or tall?’. Their responses were as follows:')
@@ -63,11 +70,10 @@ P.append(exyt('Example 3 · Constructing a bar chart from a frequency table', q(
 
 P.append(exyt('Example 4 · Constructing a percentage segmented bar chart', q('The climate type of 23 countries is classified as ‘cold’, ‘mild’ or ‘hot’.')
       + CLIM + q('Construct a percentage frequency segmented bar chart to display this information.')
-      + segbar([13.0, 60.9, 26.1], ['Cold', 'Mild', 'Hot'], 100, 10, 'Percentage', draw=False, W=220, H=170, mm=58)
-      + space(16, 'Cold: 0 to 13.0 · Mild: 13.0 to 13.0 + 60.9 = 73.9 · Hot: 73.9 to 100'),
+      + segbar([13.0, 60.9, 26.1], ['Cold', 'Mild', 'Hot'], 100, 10, 'Percentage', draw=False, W=220, H=150, mm=58),
   'You try 4', q(TQ) + THT_A
       + parts([('a.', 'Use the frequency table to construct a segmented bar chart.', segbar([6, 10, 8], ['short', 'average', 'tall'], 24, 4, 'frequency', W=200, H=130, mm=44), 34),
-               ('b.', 'Use the frequency table to construct a percentage segmented bar chart.', segbar([25, 41.7, 33.3], ['short', 'average', 'tall'], 100, 20, 'frequency (%)', W=200, H=130, mm=44), 34)])))
+               ('b.', 'Use the frequency table to construct a percentage segmented bar chart.', segbar([25, 41.7, 33.3], ['short', 'average', 'tall'], 100, 20, 'percentage (%)', W=200, H=130, mm=44), 34)])))
 
 P.append(exyt('Example 5 · Describing the distribution of a categorical variable', q('In an investigation of the variation of climate type across countries, the climate types of 23 countries were classified as ‘cold’, ‘mild’ or ‘hot’. The data are displayed in a frequency table to show the percentages.')
       + CLIM + q('Use the information in the frequency table to write a concise report on the distribution of climate types across these 23 countries.')
@@ -75,7 +81,7 @@ P.append(exyt('Example 5 · Describing the distribution of a categorical variabl
                 ('%', '60.9%'), ', were found to ', ('modal category', 'have a mild climate'), '. Of the remaining countries, ', ('%', '26.1%'), ' were found to have a ', ('category', 'hot'), ' climate, while ', ('%', '13.0%'), ' were found to have a ', ('category', 'cold'), ' climate.']),
   'You try 5', '<div class="row"><div style="flex:1.3">' + q('24 students in a prep class were asked the question, ‘Would you describe your teacher’s height as short, average or tall?’. Their responses are shown in the given percentage segmented bar chart.')
       + '</div><div style="flex:1">' + segbar([25, 41.7, 33.3], ['short', 'average', 'tall'], 100, 20, 'frequency (%)', 'teacher’s height', W=175, H=120, mm=40) + '</div></div>'
-      + parts([('a.', 'Find the modal category of the data set.', 'average', 'L'),
+      + parts([('a.', 'Find the modal category of the data set.', 'Average', 'L'),
                ('b.', 'Describe the distribution of the data set.', '24 prep students were surveyed on how tall they thought their teacher was. The most common response was average, accounting for 41.7% of responses, while 25% said their teacher was short, and 33.3% said their teacher was tall.', 30)])))
 
 # ---------------------------------------------------------------- exits
@@ -83,12 +89,12 @@ P.append(sect('Exit tasks', 'Show what you know'))
 DAY = list(range(1, 16)); TMP = [12.7, 11.8, 10.7, 9.0, 6.0, 7.0, 4.1, 4.8, 9.2, 6.7, 7.5, 8.0, 8.6, 9.8, 7.7]
 P.append(box('Exit task 1 · VCAA 2019 Exam 2 Q1a', q('The table shows the <i>day number</i> and the <i>minimum temperature</i>, in degrees Celsius, for 15 consecutive days in May 2017.')
   + table([['<i>day number</i>'] + DAY, ['<i>minimum temperature</i> (°C)'] + TMP], head=False, style='font-size:8pt')
-  + q('Which of the two variables in this data set is an ordinal variable?') + wline('<i>day number</i>') + guess('83%', mcq=False), '1 mark'))
+  + q('Which of the two variables in this data set is an ordinal variable?') + wline('<i>day number</i> is the ordinal variable.') + guess('83%', mcq=False), '1 mark'))
 HEP = [(1, 1.76, 15.34, 41.22), (2, 1.79, 16.96, 42.41), (3, 1.83, 13.87, 46.53), (4, 1.82, 14.23, 40.53), (5, 1.87, 13.78, 40.62), (6, 1.73, 14.50, 45.62), (7, 1.68, 15.08, 42.33), (8, 1.82, 13.13, 40.88),
        (9, 1.83, 14.22, 39.22), (10, 1.87, 13.62, 42.51), (11, 1.87, 12.01, 42.75), (12, 1.80, 12.88, 38.12), (13, 1.83, 12.68, 42.65), (14, 1.87, 12.45, 41.32), (15, 1.78, 11.31, 42.88)]
 P.append(box('Exit task 2 · VCAA 2021 Exam 2 Q1a', q('In the sport of heptathlon, athletes compete in seven events.<br>These events are the 100 m hurdles, high jump, shot-put, javelin, 200 m run, 800 m run and long jump.<br>Fifteen female athletes competed to qualify for the heptathlon at the Olympic Games.<br>Their results for three of the heptathlon events – high jump, shot-put and javelin – are shown in the table.')
   + table([['<i>athlete number</i>'] + [h[0] for h in HEP]] + [[n] + [f'{h[k]:.2f}' for h in HEP] for k, n in ((1, '<i>high jump</i> (metres)'), (2, '<i>shot-put</i> (metres)'), (3, '<i>javelin</i> (metres)'))], cls='t tiny')
-  + q('Write down the number of numerical variables in the table.') + wline('3 (<i>athlete number</i> is a label)') + guess('52%', mcq=False) + src('Table turned to fit the page.'), '1 mark'))
+  + q('Write down the number of numerical variables in the table.') + wline('3 numerical variables') + guess('52%', mcq=False) + src('Table turned to fit the page.'), '1 mark'))
 P.append(box('Exit task 3 · VCAA 2017 Exam 1 Q5 (adapted)', '<div class="row"><div style="flex:1">' + q('A study was conducted that investigated the <i>number of moths</i> caught in a sugar moth trap (less than 250, 250–500, more than 500). The results are summarised in the percentage segmented bar chart shown.')
   + q('There were 300 sugar traps.<br>The number of sugar traps that caught less than 250 moths is closest to') + mc(['30', '90', '250', '300', '500'], 'B', cols=5)
   + why('30% of 300 = 30 ÷ 100 × 300 = 90') + guess('76% · A (21%)') + '</div><div style="flex:none;width:62mm">'
@@ -96,5 +102,5 @@ P.append(box('Exit task 3 · VCAA 2017 Exam 1 Q5 (adapted)', '<div class="row"><
 
 P.append(close(['I can identify types of data.', 'I can construct a frequency table for categorical data.', 'I can construct a bar chart from a frequency table.',
   'I can construct a percentage segmented bar chart from a frequency table.', 'I can describe the distribution of a categorical variable.'],
-  [('1A', 'Q1–6'), ('1B', 'Q1–9')], ['1A', '1B']))
+  [('1A', 'Q1–6'), ('1B', 'Q1–9')], ['1A', '1B']).replace('>Revision booklet<', '>Practice booklet<'))  # deck coursework slide: 'Practice booklet · 1A and 1B sections'
 build('S1', '1A–1B', 'AoS 1 · Data analysis', P)
