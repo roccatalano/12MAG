@@ -49,6 +49,10 @@
 
 - **16 Nov 19:49 (AoS4 runner):** AoS 4 queue finished (all 21 tasks done). Could not turn off the "12MAG AoS 4 runner" scheduled task (permission check refused): Rocco, please switch it off; until then each hourly run just stops.
 
+
+## 16 Nov 2026 (night) — 5B lessons merged
+- Rocco: gm12-u3-l17 (moving means) + l18 (centring) merged into one 5B lesson (l18 removed; both decks and worksheets kept on the l17 card). 5E is now the last Term 1 lesson; Term 2 Week 1 = Ch 5 catch-up + check, then SAC revision before Part 1. AoS 1: 28 lessons, 1 spare.
+
 ## 16 Nov 2026 (evening) — 2027 year plan dates in
 - `planner/years/2027.json` filled from the EKC School Planner 2027: terms, Step-up (19 Nov–2 Dec 2026, 6 lessons), blocked days, SAC dates (AoS 1 Parts 1–3 T2 W1–2; AoS 2 Wed 2 Jun; AoS 3 Wed 4 Aug; AoS 4 Wed 8 Sep, T3 W9 (Rocco: earlier, to leave time for redemptions and exam-prep set-up)). Rocco: only the Essendon campus days count; the Term 1 parent–teacher day (Wed 24 Mar) is student-free.
 - Rocco, 16 Nov: Ch 3 and Ch 4 tests merged into one check lesson (on the Ch 4 card: both papers + both revision booklets). Then (Rocco) Ch 1 and Ch 2 tests merged too (on the Ch 2 card, with CFAT 1.1.3): tests are now Ch 1+2, Ch 3+4, Ch 5. AoS 1 has a revision lesson before each SAC part. Unit 4 (AoS 3–4) is Semester 2 only: anchor 'Semester 2 starts' Wed 16 Jun holds AoS 3 until then (3 Unit 3 buffers after the AoS 2 SAC).

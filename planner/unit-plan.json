@@ -6018,13 +6018,19 @@
        "subchapters": [
         "5B"
        ],
-       "title": "Smoothing with moving means",
+       "title": "Smoothing with moving means; centring",
        "card": {
         "learningObjectives": [
          {
           "sub": "5B",
           "items": [
            "To be able to smooth a time series plot using moving means."
+          ]
+         },
+         {
+          "sub": "5B",
+          "items": [
+           "To be able to know when and how to use centring when smoothing."
           ]
          }
         ],
@@ -6034,13 +6040,20 @@
           "items": [
            "I can smooth a time series using moving mean smoothing."
           ]
+         },
+         {
+          "sub": "5B",
+          "items": [
+           "I can smooth a time series using moving mean smoothing with centring."
+          ]
          }
         ],
         "studyDesign": [
          "numerical smoothing of time series data using moving means with consideration of the number of terms required (using centring when appropriate) to help identify trends in time series plot with large fluctuations"
         ],
         "keyVocab": [
-         "Moving mean smoothing: replacing each value by the mean of it and its neighbours"
+         "Moving mean smoothing: replacing each value by the mean of it and its neighbours",
+         "Centring: needed when smoothing over an even number of points"
         ],
         "weDo": [
          {
@@ -6055,6 +6068,27 @@
           "sub": "5B",
           "title": "Three- and five-moving mean smoothing of a time series",
           "youTry": "Edrolo 4B WE3",
+          "video": "Cambridge GO · 5B Resources"
+         },
+         {
+          "n": 9,
+          "sub": "5B",
+          "title": "Two-moving mean smoothing with centring",
+          "youTry": "Edrolo 4B WE2a–b",
+          "video": "Cambridge GO · 5B Resources"
+         },
+         {
+          "n": 10,
+          "sub": "5B",
+          "title": "Four- and six-moving mean smoothing with centring",
+          "youTry": "Edrolo 4B WE2c",
+          "video": "Cambridge GO · 5B Resources"
+         },
+         {
+          "n": 11,
+          "sub": "5B",
+          "title": "Smoothing of a time series using four-mean smoothing with centring",
+          "youTry": "Edrolo 4B WE2d",
           "video": "Cambridge GO · 5B Resources"
          }
         ],
@@ -6095,6 +6129,14 @@
          {
           "ref": "Edrolo U3&4 4B Q17",
           "src": "VCAA 2021 Exam 1 Q14"
+         },
+         {
+          "ref": "Edrolo U3&4 4B Q16",
+          "src": "VCAA 2017 Exam 1 Q15"
+         },
+         {
+          "ref": "Edrolo U3&4 4B Q18",
+          "src": "VCAA 2016 Exam 2 Q4b"
          }
         ],
         "cas": [
@@ -6126,14 +6168,14 @@
         },
         "materials": [
          {
-          "kind": "Guided slides",
+          "kind": "Guided slides · moving means",
           "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
           "status": "draft",
           "file": "lessons/5B moving means slides.html",
           "pdf": "lessons/5B moving means slides.pdf"
          },
          {
-          "kind": "Guided worksheet",
+          "kind": "Guided worksheet · moving means",
           "desc": "3 pages, questions in slide order.",
           "status": "draft",
           "copies": [
@@ -6148,145 +6190,16 @@
             "pdf": "lessons/5B moving means worksheet solutions.pdf"
            }
           ]
-         }
-        ]
-       },
-       "part": 1
-      },
-      {
-       "id": "gm12-u3-l18",
-       "kind": "lesson",
-       "subchapters": [
-        "5B"
-       ],
-       "title": "Centring moving means",
-       "card": {
-        "learningObjectives": [
-         {
-          "sub": "5B",
-          "items": [
-           "To be able to know when and how to use centring when smoothing."
-          ]
-         }
-        ],
-        "successCriteria": [
-         {
-          "sub": "5B",
-          "items": [
-           "I can smooth a time series using moving mean smoothing with centring."
-          ]
-         }
-        ],
-        "studyDesign": [
-         "numerical smoothing of time series data using moving means with consideration of the number of terms required (using centring when appropriate) to help identify trends in time series plot with large fluctuations"
-        ],
-        "keyVocab": [
-         "Moving mean smoothing: replacing each value by the mean of it and its neighbours",
-         "Centring: needed when smoothing over an even number of points"
-        ],
-        "weDo": [
-         {
-          "n": 9,
-          "sub": "5B",
-          "title": "Two-moving mean smoothing with centring",
-          "youTry": "Edrolo 4B WE2a–b",
-          "video": "Cambridge GO · 5B Resources"
          },
          {
-          "n": 10,
-          "sub": "5B",
-          "title": "Four- and six-moving mean smoothing with centring",
-          "youTry": "Edrolo 4B WE2c",
-          "video": "Cambridge GO · 5B Resources"
-         },
-         {
-          "n": 11,
-          "sub": "5B",
-          "title": "Smoothing of a time series using four-mean smoothing with centring",
-          "youTry": "Edrolo 4B WE2d",
-          "video": "Cambridge GO · 5B Resources"
-         }
-        ],
-        "apk": [
-         {
-          "kind": "Exam",
-          "ref": "Edrolo U1&2 1E Q12",
-          "text": "VCAA 2020 Exam 2 Q4aii (original wording and data used). Cambridge U1&2 2E checklist #10 dropped: already used in S3"
-         }
-        ],
-        "doNow": [
-         {
-          "exam": "Exam 1",
-          "ref": "VCAA 2026 NHT Exam 1 Q14",
-          "sec": "5B"
-         },
-         {
-          "exam": "Exam 1",
-          "ref": "VCAA 2024 NHT Exam 1 Q12",
-          "sec": "4D"
-         },
-         {
-          "exam": "Exam 2",
-          "ref": "VCAA 2025 Exam 2 Q4c",
-          "sec": "3B"
-         },
-         {
-          "exam": "Exam 2",
-          "ref": "VCAA 2024 Exam 2 Q4b",
-          "sec": "5A"
-         }
-        ],
-        "exit": [
-         {
-          "ref": "Edrolo U3&4 4B Q16",
-          "src": "VCAA 2017 Exam 1 Q15"
-         },
-         {
-          "ref": "Edrolo U3&4 4B Q18",
-          "src": "VCAA 2016 Exam 2 Q4b"
-         }
-        ],
-        "cas": [
-         "moving-means"
-        ],
-        "homework": {
-         "source": "prefill",
-         "sets": [
-          {
-           "title": "Cambridge · Exercise 5B",
-           "items": [
-            {
-             "skill": "Calculating the smoothed values of an even number of points",
-             "q": "Q6–8"
-            },
-            {
-             "skill": "Smoothing and plotting a time series plot (even number of points)",
-             "q": "Q9–10"
-            },
-            {
-             "skill": "Exam 1 style questions",
-             "q": "Q11–14"
-            }
-           ],
-           "note": ""
-          },
-          {
-           "title": "Revision book",
-           "items": [],
-           "note": "The 5B section"
-          }
-         ]
-        },
-        "materials": [
-         {
-          "kind": "Guided slides",
+          "kind": "Guided slides · centring",
           "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
           "status": "draft",
           "file": "lessons/5B centring slides.html",
           "pdf": "lessons/5B centring slides.pdf"
          },
          {
-          "kind": "Guided worksheet",
+          "kind": "Guided worksheet · centring",
           "desc": "3 pages, questions in slide order.",
           "status": "draft",
           "copies": [
@@ -6302,9 +6215,9 @@
            }
           ]
          }
-        ]
-       },
-       "part": 2
+        ],
+        "note": "Rocco, 16 Nov: merged with the centring lesson (was gm12-u3-l18) to get 5E into Term 1. Both slide decks and worksheets are kept; teach moving means then centring in one lesson. The planner keeps the moving-means Do Now and APK; the centring deck has its own (already logged in the ledger)."
+       }
       },
       {
        "id": "gm12-u3-l19",
