@@ -14997,6 +14997,23 @@
             "pdf": "lessons/Ch14-revision-booklet-solutions.pdf"
            }
           ]
+         },
+         {
+          "kind": "Chapter test",
+          "desc": "Mathspace Ch 9 topic assessment Q1, 2, 6–9, 11–20 (rest in Ch13 test), verbatim, /35.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/Ch14 test.html",
+            "pdf": "lessons/Ch14 test.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/Ch14 test solutions.html",
+            "pdf": "lessons/Ch14 test solutions.pdf"
+           }
+          ]
          }
         ]
        }

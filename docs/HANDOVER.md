@@ -1,6 +1,7 @@
 # 12MAG handover — 15 Nov 2026 (updated 15:55)
 
 **16 Nov 19:08 (AoS3 #22):** Chapter 11 test (Draft): `tools/test/ch11/build.py` → `lessons/Ch11 test` (+ solutions, 5 pages each, /25): Mathspace Ch 7 topic assessment Q9 (MC), Q17, Q18 + worksheet top-ups 7.10 Q5, Q12, 7.11 Q8, 7.12 Q5, Q6; on G: and the gm12-ch11-test card; 8 ledger rows. No Leslie item. `tools/test/details.py` chapter regex fixed (it broke in worktrees named ch11).
+**16 Nov 16:55 (AoS4 #21):** Chapter 14 test (Draft): `tools/test/ch14/build.py` → `lessons/Ch14 test(.html/.pdf)` + solutions (8 pages each, /35): Mathspace Ch 9 topic assessment Q1, 2, 6–9, 11–20 verbatim (Q3–5, Q10 are in the Ch13 test), figures cropped at 300 dpi; on G: and the gm12-ch14-test card; 16 ledger rows. `tools/test/details.py` fixed (chapter number from the test folder name). That was the last AoS 4 task.
 
 **16 Nov 16:22 (AoS2 #21):** Lesson l45 (8I) built (Draft): `tools/deck/gm12-u3-l45/` (build.py, worksheet.py, shoot.py, img/q16.png) → `lessons/8I slides` (20 slides: Do Now 2026 NHT E1 Q24, 2026 E1 Q15, 2025 E2 Q7a (93%), 2026 NHT E2 Q2a; APK Cambridge U1&2 1A #3 only (1F #14 burnt in l21); Examples 30–32 + You trys Edrolo 6E WE1a, YT-8I-31, YT-8I-32; CAS finance-solver (Edrolo 6E WE3a); exits VCAA 2016 E1 Q21 (50%), 2021 E2 Q6a–c (59/47/38%)) and `8I worksheet`/solutions (3 pages), on G: and the planner card. 8I has no self-study video URL yet. Next AoS 2 task: #22 Ch 8 revision booklet.
 

@@ -1143,6 +1143,283 @@
    }
   ]
  },
+ "14": {
+  "chapter": 14,
+  "total": 35,
+  "mc": 6,
+  "sa": 10,
+  "about": "Source (rule 9), copied verbatim: Mathspace General Maths 3&4 'Chapter 9 - Applications of graphs and networks' topic assessment + answer key, every question the Ch13 test does not use: Q1, 2, 6, 7, 8, 9 (MC) and Q11-20 (short response). (Q3, 4, 5, 10 = shortest path, in the Ch13 test.)",
+  "byLesson": [
+   {
+    "lesson": "9.01",
+    "marks": 2,
+    "qs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "lesson": "9.09",
+    "marks": 3,
+    "qs": [
+     "3",
+     "8"
+    ]
+   },
+   {
+    "lesson": "9.07",
+    "marks": 3,
+    "qs": [
+     "4",
+     "7"
+    ]
+   },
+   {
+    "lesson": "9.10",
+    "marks": 3,
+    "qs": [
+     "5",
+     "16"
+    ]
+   },
+   {
+    "lesson": "9.05",
+    "marks": 4,
+    "qs": [
+     "6",
+     "12a"
+    ]
+   },
+   {
+    "lesson": "9.02",
+    "marks": 7,
+    "qs": [
+     "9",
+     "14a"
+    ]
+   },
+   {
+    "lesson": "9.08",
+    "marks": 7,
+    "qs": [
+     "10",
+     "13a"
+    ]
+   },
+   {
+    "lesson": "9.06",
+    "marks": 6,
+    "qs": [
+     "11a",
+     "15"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "q": "1",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q1 · 9.01",
+    "text": "In a flow network, which of the following best describes a source node?",
+    "answer": "B"
+   },
+   {
+    "q": "2",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q2 · 9.01",
+    "text": "A flow network has the following edges and capacities: S → A = 12, S → B = 8, A → T = 10, B → T = 6. What is…",
+    "answer": "A"
+   },
+   {
+    "q": "3",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q6 · 9.09",
+    "text": "In a project network, an activity has an earliest start time (EST) of 8 and a latest start time (LST) of 11.…",
+    "answer": "C"
+   },
+   {
+    "q": "4",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q7 · 9.07",
+    "text": "A project network has the following activities and immediate predecessors. Which activity must be completed…",
+    "answer": "D"
+   },
+   {
+    "q": "5",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q8 · 9.10",
+    "text": "A project has a critical path duration of 20 days. Activity P is on the critical path and can be crashed by…",
+    "answer": "D"
+   },
+   {
+    "q": "6",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q9 · 9.05",
+    "text": "Which of the following correctly describes a bipartite graph?",
+    "answer": "A"
+   },
+   {
+    "q": "7",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q11 · 9.07",
+    "text": "A construction project has the following activities, durations, and predecessors. Activity Duration (days)…"
+   },
+   {
+    "q": "8",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q12 · 9.09",
+    "text": "A project network has been fully scanned. The EST and LST values are shown below. Vertex EST LST Start 0 0 V…"
+   },
+   {
+    "q": "9",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q13 · 9.02",
+    "text": "The flow network shows the capacities of pipes, in litres per second, from the source S to the sink T .…"
+   },
+   {
+    "q": "10",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q14 · 9.08",
+    "text": "In a project network, activities P and Q both end at vertex V , and activity R starts at vertex V . Activity…"
+   },
+   {
+    "q": "11a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q15 · 9.06",
+    "text": "Explain why an optimal allocation cannot yet be made from the spreadsheet output."
+   },
+   {
+    "q": "11b",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q15 · 9.06",
+    "text": "Complete the Hungarian algorithm to find the allocation of cleaners to offices that minimises the total…"
+   },
+   {
+    "q": "11c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q15 · 9.06",
+    "text": "State the minimum total cleaning time."
+   },
+   {
+    "q": "12a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q16 · 9.05",
+    "text": "Which job must Mo be given?"
+   },
+   {
+    "q": "12b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q16 · 9.05",
+    "text": "List the two possible complete allocations of volunteers to jobs."
+   },
+   {
+    "q": "12c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q16 · 9.05",
+    "text": "Nia later finds that she cannot do timing. State the allocation that must be used, and explain why."
+   },
+   {
+    "q": "13a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q17 · 9.08",
+    "text": "Determine the earliest start time of activity E ."
+   },
+   {
+    "q": "13b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q17 · 9.08",
+    "text": "Determine the minimum time needed to complete the project."
+   },
+   {
+    "q": "13c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q17 · 9.08",
+    "text": "State the critical path."
+   },
+   {
+    "q": "13d",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q17 · 9.08",
+    "text": "Determine the latest start time of activity D ."
+   },
+   {
+    "q": "13e",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q17 · 9.08",
+    "text": "Determine the float time of activity H ."
+   },
+   {
+    "q": "13f",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q17 · 9.08",
+    "text": "Activity B is delayed by 3 days. Decide whether this delays the project, and if so, by how long. Give a…"
+   },
+   {
+    "q": "14a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q18 · 9.02",
+    "text": "Determine the capacity of the cut that separates S and A from B , C and T ."
+   },
+   {
+    "q": "14b",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q18 · 9.02",
+    "text": "Determine the maximum flow from the reservoir to the town, and identify the minimum cut."
+   },
+   {
+    "q": "14c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q18 · 9.02",
+    "text": "The council increases the capacity of pipe C → T by 5 kilolitres per hour. Determine the new maximum flow,…"
+   },
+   {
+    "q": "14d",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q18 · 9.02",
+    "text": "An inspector wants to walk along every pipe exactly once, ignoring the direction of flow. Explain why the…"
+   },
+   {
+    "q": "15",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q19 · 9.06",
+    "text": "Three delivery drivers ( D 1 , D 2 , D 3 ) are to be assigned to three delivery zones ( Z 1 , Z 2 , Z 3 ).…"
+   },
+   {
+    "q": "16",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 9 (applications of graphs and networks) topic assessment Q20 · 9.10",
+    "text": "A project network has activities with the following details. Activity Duration (days) Predecessor Crash cost…"
+   }
+  ]
+ },
  "2": {
   "chapter": 2,
   "total": 41,
