@@ -3423,7 +3423,7 @@
        "id": "gm12-u3-ch2-test",
        "kind": "check",
        "subchapters": [],
-       "title": "Chapters 1 + 2 coursework check + test",
+       "title": "Chapters 1 + 2 catch-up + coursework check",
        "card": {
         "materials": [
          {
@@ -5572,7 +5572,7 @@
        "id": "gm12-u3-ch4-test",
        "kind": "check",
        "subchapters": [],
-       "title": "Chapters 3 + 4 coursework check + test",
+       "title": "Chapters 3 + 4 catch-up + coursework check",
        "card": {
         "materials": [
          {
@@ -7237,7 +7237,7 @@
        "id": "gm12-u3-ch5-test",
        "kind": "check",
        "subchapters": [],
-       "title": "Chapter 5 coursework check + test",
+       "title": "Chapter 5 catch-up + coursework check",
        "card": {
         "materials": [
          {
@@ -7247,7 +7247,7 @@
           "file": ""
          },
          {
-          "kind": "Chapter test",
+          "kind": "Chapter 5 test",
           "desc": "Mathspace time series topic assessment (Mathspace Ch 4; 20 Qs, /47), verbatim.",
           "status": "draft",
           "copies": [
@@ -8461,7 +8461,7 @@
        "id": "gm12-u3-l36",
        "kind": "check",
        "subchapters": [],
-       "title": "Chapter 7 coursework check + test",
+       "title": "Chapter 7 catch-up + coursework check",
        "card": {
         "materials": [
          {
@@ -8488,7 +8488,7 @@
           ]
          },
          {
-          "kind": "Chapter test",
+          "kind": "Chapter 7 test",
           "desc": "Mathspace depreciation and interest topic assessment (Mathspace Ch 5; 20 Qs, /39), verbatim.",
           "status": "draft",
           "copies": [
@@ -10357,7 +10357,7 @@
        "id": "gm12-u3-l46",
        "kind": "check",
        "subchapters": [],
-       "title": "Chapter 8 coursework check + test",
+       "title": "Chapter 8 catch-up + coursework check",
        "card": {
         "materials": [
          {
@@ -10384,7 +10384,7 @@
           ]
          },
          {
-          "kind": "Chapter test",
+          "kind": "Chapter 8 test",
           "desc": "Mathspace loans and investments topic assessment (Mathspace Ch 6; 20 Qs, /40), verbatim.",
           "status": "draft",
           "copies": [
@@ -11943,7 +11943,7 @@
        "id": "gm12-ch10-test",
        "kind": "check",
        "subchapters": [],
-       "title": "Chapter 10 coursework check + test",
+       "title": "Chapter 10 catch-up + coursework check",
        "card": {
         "cfats": [
          {
@@ -12034,6 +12034,12 @@
         ],
         "materials": [
          {
+          "kind": "Coursework check",
+          "desc": "Students tick the coursework they have; teacher signs off.",
+          "status": "todo",
+          "file": ""
+         },
+         {
           "kind": "CFAT 3.10.3",
           "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
           "status": "draft",
@@ -12051,7 +12057,7 @@
           ]
          },
          {
-          "kind": "Chapter test",
+          "kind": "Chapter 10 test",
           "desc": "Mathspace matrices topic assessment (Mathspace Ch 7), Ch 10 items only (17 Qs, /27), verbatim.",
           "status": "draft",
           "copies": [
@@ -12963,7 +12969,7 @@
        "id": "gm12-ch11-test",
        "kind": "check",
        "subchapters": [],
-       "title": "Chapter 11 coursework check + test",
+       "title": "Chapter 11 catch-up + coursework check",
        "card": {
         "cfats": [
          {
@@ -13083,7 +13089,13 @@
         ],
         "materials": [
          {
-          "kind": "Chapter test",
+          "kind": "Coursework check",
+          "desc": "Students tick the coursework they have; teacher signs off.",
+          "status": "todo",
+          "file": ""
+         },
+         {
+          "kind": "Chapter 11 test",
           "desc": "Mathspace matrices topic assessment (Mathspace Ch 7) transition items + 7.10–7.12 worksheet top-ups (8 Qs, /25), verbatim.",
           "status": "draft",
           "copies": [
@@ -14027,7 +14039,7 @@
        "id": "gm12-ch13-test",
        "kind": "check",
        "subchapters": [],
-       "title": "Chapter 13 coursework check + test",
+       "title": "Chapter 13 catch-up + coursework check",
        "card": {
         "cfats": [
          {
@@ -14053,6 +14065,12 @@
          }
         ],
         "materials": [
+         {
+          "kind": "Coursework check",
+          "desc": "Students tick the coursework they have; teacher signs off.",
+          "status": "todo",
+          "file": ""
+         },
          {
           "kind": "CFAT 4.13.3",
           "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
@@ -14088,7 +14106,7 @@
           ]
          },
          {
-          "kind": "Chapter test",
+          "kind": "Chapter 13 test",
           "desc": "Mathspace Ch 8 topic assessment (all 20) + Ch 9 Q3–5, Q10 (shortest path), verbatim, /45.",
           "status": "draft",
           "copies": [
@@ -15039,7 +15057,7 @@
        "id": "gm12-ch14-test",
        "kind": "check",
        "subchapters": [],
-       "title": "Chapter 14 coursework check + test",
+       "title": "Chapter 14 catch-up + coursework check",
        "card": {
         "cfats": [
          {
@@ -15065,6 +15083,12 @@
          }
         ],
         "materials": [
+         {
+          "kind": "Coursework check",
+          "desc": "Students tick the coursework they have; teacher signs off.",
+          "status": "todo",
+          "file": ""
+         },
          {
           "kind": "CFAT 4.14.3",
           "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
@@ -15100,7 +15124,7 @@
           ]
          },
          {
-          "kind": "Chapter test",
+          "kind": "Chapter 14 test",
           "desc": "Mathspace Ch 9 topic assessment Q1, 2, 6–9, 11–20 (rest in Ch13 test), verbatim, /35.",
           "status": "draft",
           "copies": [

@@ -181,7 +181,7 @@ main{max-width:1200px;margin:0 auto;padding:16px 20px 80px}
 const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const TYPE={lesson:'Lesson',check:'Chapter test',buffer:'Buffer',blocked:'No lesson',anchor:'Fixed date'};
+const TYPE={lesson:'Lesson',check:'Catch-up + check',buffer:'Buffer',blocked:'No lesson',anchor:'Fixed date'};
 let UP=null,YEARS=[],YD={},tab=store.get('pl:tab','course'),openId=null,expandAll=false;
 const cfs=l=>l.cfats||[];
 function list(arr,empty){return arr&&arr.length?`<ul>${arr.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:`<div class="empty">${empty||'None'}</div>`}
@@ -252,7 +252,7 @@ function deckOf(l){const m=(l.materials||[]).find(x=>x.kind=='Guided slides'&&x.
 const SHAPES_ON=false; // Rocco, 15 Nov: lesson shapes cleared; fill them in last (set true to bring back the slide-read outline)
 function shapePane(l){
   if(!SHAPES_ON)return `<div class="seqhead"><h3 style="margin-top:0">Lesson shape</h3></div><div class="seqempty">To be filled in last.</div>`;
-  if(l.type=='check')return `<div class="seqhead"><h3 style="margin-top:0">Coursework check + chapter test</h3></div><ol class="shape">
+  if(l.type=='check')return `<div class="seqhead"><h3 style="margin-top:0">Catch-up + coursework check (chapter test)</h3></div><ol class="shape">
     <li><span class="sphase ph-cfat">Check</span><span>Coursework checklist: CFATs, bound reference, guided notes, Cambridge coursework exercises</span></li>
     <li><span class="sphase ph-exit">Test</span><span>Chapter test: Mathspace topic assessment</span></li></ol>`;
   const f=deckOf(l);
@@ -297,16 +297,17 @@ function testDetails(t){const tb=(h,r)=>`<table class="cfx"><tr>${h.map(x=>`<th>
   return `<div class="cfsum"><span class="tag cfat">/${t.total}</span> <span class="sub">MC ${t.mc} · Short answer ${t.sa}</span></div><div class="sub" style="margin:4px 0">${esc(t.about)}</div>
   <h3>Marks by Mathspace lesson</h3>${tb(['Lesson','Marks','Qs'],t.byLesson.map(b=>`<tr><td><b>${esc(b.lesson)}</b></td><td class="n">${b.marks}</td><td>${esc(b.qs.join(', '))}</td></tr>`))}
   <h3>Question breakdown</h3>${tb(['Q','Mk','Question','Lesson'],t.questions.map(q=>`<tr><td><b>${esc(q.q)}</b> <span class="sub">${q.type}</span></td><td class="n">${q.marks}</td><td>${esc(q.text)}${q.answer?` <span class="sub">(${q.answer})</span>`:''}</td><td>${esc(q.src.split('·').pop().trim())}</td></tr>`))}`}
-const isFA=m=>/^(CFAT|Chapter test)/i.test(m.kind);
+const isFA=m=>/^(CFAT|Chapter( \d+)? test)/i.test(m.kind);
+const testCh=(m,l)=>{const x=String(m.kind).match(/Chapter (\d+) test/i);return x?+x[1]:l.ch};
 function links(x){return `${x.file?`<a class="mlink" href="${esc(x.file)}" target="_blank" rel="noopener">Open ↗</a>`:''}${x.pdf?` <a class="mlink pdf" href="${esc(x.pdf)}" download>PDF ⬇</a>`:''}`}
 function formatives(C){const seen=new Set(),out=[];
   C.forEach(l=>{(l.materials||[]).filter(isFA).forEach(m=>{if(!seen.has(m.kind)){seen.add(m.kind);out.push({m,l})}});
     cfs(l).forEach(c=>{if(!seen.has(c.id)){seen.add(c.id);out.push({m:{kind:c.id,status:/ready/i.test(c.status)?'ready':/draft/i.test(c.status)?'draft':'',file:c.file},l})}})});
-  out.sort((x,y)=>(/^Chapter test/i.test(x.m.kind)?1:0)-(/^Chapter test/i.test(y.m.kind)?1:0));
-  return out.length?out.map(({m,l})=>{const test=/^Chapter test/i.test(m.kind),c=cfs(l).find(x=>x.id==m.kind);
+  out.sort((x,y)=>(/test/i.test(x.m.kind)&&!/^CFAT/.test(x.m.kind)?1:0)-(/test/i.test(y.m.kind)&&!/^CFAT/.test(y.m.kind)?1:0));
+  return out.length?out.map(({m,l})=>{const test=/^Chapter( \d+)? test/i.test(m.kind),tc=test?testCh(m,l):0,c=cfs(l).find(x=>x.id==m.kind);
     return `<div class="card fa ${test?'t-check':'t-cfat'}"><div class="meta"><span></span><span class="ms ${m.status}">${m.status=='ready'?'Ready':m.status=='draft'?'Draft':'To make'}</span></div>
-    <div class="ttl"><b>${test?'Chapter '+l.ch+' test':esc(m.kind)}</b>${c&&c.title?' · '+esc(c.title):''}</div>
-    <div class="cpl${m.copies?.length?' cp2':''}">${m.copies?.length?m.copies.map(k=>`<div class="cpc"><b>${esc(k.label)}</b><div>${k.file||k.pdf?links(k):'<span class="sub">To make</span>'}</div></div>`).join(''):links(m)}</div>${c?nest('cfat-'+c.id,'CFAT details',cfatDetails(c),null,'n-cfat'):test?(TESTS[l.ch]?nest('test-'+l.ch,'Test details',testDetails(TESTS[l.ch]),'/'+TESTS[l.ch].total,'n-test'):'<div class="empty" style="margin-top:6px">Test not built yet</div>'):''}</div>`}).join(''):'<div class="empty">None yet</div>'}
+    <div class="ttl"><b>${test?'Chapter '+tc+' test':esc(m.kind)}${test?` <span class="sub">· L${l.n}</span>`:''}</b>${c&&c.title?' · '+esc(c.title):''}</div>
+    <div class="cpl${m.copies?.length?' cp2':''}">${m.copies?.length?m.copies.map(k=>`<div class="cpc"><b>${esc(k.label)}</b><div>${k.file||k.pdf?links(k):'<span class="sub">To make</span>'}</div></div>`).join(''):links(m)}</div>${c?nest('cfat-'+c.id,'CFAT details',cfatDetails(c),null,'n-cfat'):test?(TESTS[tc]?nest('test-'+tc,'Test details',testDetails(TESTS[tc]),'/'+TESTS[tc].total,'n-test'):'<div class="empty" style="margin-top:6px">Test not built yet</div>'):''}</div>`}).join(''):'<div class="empty">None yet</div>'}
 /* ---------- Course plan ---------- */
 /* Term rows of chapter cards (Rocco, 16 Nov: same look as the 10MA planner's Course plan). Terms come from the newest year plan;
    click a chapter to open its lessons + formative assessments underneath. */
@@ -449,7 +450,7 @@ function renderYear(y){
     <p>Lessons are placed in Course plan order into the free slots. Leftover slots show as buffer lessons.</p></div>`;return}
   const {weeks,warns,stats,win}=flow(Y),f=$('#aosFilter').value;aosFilter([]);
   let h=`<div class="unit">Year plan ${esc(y)} <span class="scope">· ${stats.map(s=>`${esc(s.name)}: ${s.used} lessons, ${s.buf} buffers`).join(' · ')}</span></div>
-   <div class="legend"><span class="t-lesson"><i></i>Lesson</span><span class="t-check"><i></i>Chapter test</span><span class="t-anchor"><i></i>Fixed date</span><span><i style="background:var(--other-i)"></i>Buffer</span><span><i style="background:#8a6ad8"></i>CFAT</span></div>
+   <div class="legend"><span class="t-lesson"><i></i>Lesson</span><span class="t-check"><i></i>Catch-up + coursework check (chapter test)</span><span class="t-anchor"><i></i>Fixed date</span><span><i style="background:var(--other-i)"></i>Buffer</span><span><i style="background:#8a6ad8"></i>CFAT</span></div>
    ${win.length?`<div class="scope" style="margin:4px 0 10px">Teaching time up to each SAC · ${win.map(esc).join(' · ')}</div>`:''}${warns.map(w=>`<div class="warn">${esc(w)}</div>`).join('')}`;
   let lastT='',lastA='';
   for(const w of weeks){const S=w.slots.filter(l=>!f||l.aos==f);if(!S.length)continue;
