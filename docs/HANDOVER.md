@@ -453,4 +453,4 @@ Chapter 3 revision booklet + solutions built (`tools/revision/ch3/`, 16 pages ea
 ## 17 Nov 2026 — slides rebuilt in the 10MA house style
 - New builder `tools/deck/z10/` (HOWTO.md, shell files, `s3_build.py`, `check.py`). S3 rebuilt from scratch → `lessons/S3-slides-v2.html` (36 slides); the old `lessons/S3-slides.html` is untouched.
 - Agreed with Rocco: one question template, parts a/b/c asked + answered in the working box, green ✓ Answer box, Watch out box for short-answer exam questions only, MC = answer then % bars (no distractor box), no command-word chips, median by (n+1)/2th position then counting, thin centred line between two middle values, TI + ClassPad steps together, house-prices mean-or-median slider, one-tick check-in, 10MA coursework slide.
-- Next: convert the other decks with this builder one lesson at a time (decide Do Now ×4 and Videos slide first), PDF version, update planner links when a v2 deck replaces an old one.
+- Next: convert the other decks with this builder one lesson at a time (no Do Now or Videos slides: Rocco puts those on Google Classroom), PDF version, update planner links when a v2 deck replaces an old one.

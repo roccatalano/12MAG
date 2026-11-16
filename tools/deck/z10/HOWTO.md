@@ -69,6 +69,7 @@ Each click re-applies every shown step's actions, so marks build up and stay; â†
 - Interactives must be mathematically right (test the extremes) and have a context (e.g. the house-prices mean-or-median slider: knock down / typical / renovated / mansion, fences drawn, three verdicts).
 - Check-in: one tick box per success criterion (click = green tick, for modelling).
 - Coursework: like 10MA: short table (Cambridge Exercise Qâ€¦, Practice booklet), margin rules, example A4 page on the right. No "minimum for a coursework tick" line.
+- **No Do Now slides and no 'Videos that might help' slide** (Rocco attaches those to Google Classroom).
 - Check every slide with `check.py` and by eye before handing over.
 
 ## Still open

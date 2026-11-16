@@ -46,7 +46,7 @@ Each lesson's resources follow its planner card (APK, Do Now, examples/you trys,
 CAS: ClassPad can't make dot plots: the dot plot skill is TI-Nspire only (`tiOnly` in cas-skills.json).
 
 ## New slide style: 10MA house style (Rocco, 17 Nov) — `tools/deck/z10/`
-Rocco prefers the 10MA deck style. **Read `tools/deck/z10/HOWTO.md` before building or rebuilding a deck.** Worked example: `tools/deck/z10/s3_build.py` → `lessons/S3-slides-v2.html`. Where HOWTO.md's house rules differ from the older rules below (layout, parts in the working box, green ✓ Answer box, no distractor boxes, no command-word chips, medians by counting to the (n+1)/2th position, CAS steps shown together, one-tick check-in, 10MA coursework slide), HOWTO.md wins. Not yet decided for the new style: Do Now ×4 and the Videos slide (the S3 example has neither): ask Rocco.
+Rocco prefers the 10MA deck style. **Read `tools/deck/z10/HOWTO.md` before building or rebuilding a deck.** Worked example: `tools/deck/z10/s3_build.py` → `lessons/S3-slides-v2.html`. Where HOWTO.md's house rules differ from the older rules below (layout, parts in the working box, green ✓ Answer box, no distractor boxes, no command-word chips, medians by counting to the (n+1)/2th position, CAS steps shown together, one-tick check-in, 10MA coursework slide), HOWTO.md wins. **No Do Now slides and no 'Videos that might help' slide in the new decks** (Rocco, 17 Nov: he attaches those to Google Classroom instead).
 
 ## Slide templates (Rocco, 14 Nov) — every deck is built from `tools/deck/tpl/tpl.py`
 Build a lesson with a `tools/deck/<S#>/build.py` that only fills content into the templates (see `tools/deck/s4/build.py`); the engine is `tools/deck/engine.html` (re-make with `make_engine.py`). Rules:
