@@ -50,6 +50,22 @@
 - **16 Nov 19:49 (AoS4 runner):** AoS 4 queue finished (all 21 tasks done). Could not turn off the "12MAG AoS 4 runner" scheduled task (permission check refused): Rocco, please switch it off; until then each hourly run just stops.
 
 
+
+## START HERE — handoff 16 Nov 2026, 8:30 pm (end of the "AoS 2–4 agents + 2027 calendar" chat)
+
+**State**
+- AoS 2–4 build queue is EMPTY: all lessons, CFATs (+ follow-ups), revision booklets and chapter tests built (Draft). Last four done by agents this evening: Ch 8 booklet + test, Ch 11 test (no Leslie/11E question: Mathspace's only one needs its diagram), Ch 14 test, CFAT 1.1.1–1.1.3 solutions (1.1.2 Q7b answer is ours: Edrolo has none).
+- All 7 "12MAG … runner" scheduled tasks are OFF. They switch themselves back on when Rocco's computer reconnects (suspension lifts): check with list_triggers at the start of a chat and turn off any that are on. Rocco hasn't yet answered whether to delete them.
+- **Course plan tab:** term rows of chapter cards (10MA style) + solid AoS "Unit details" cards (SAC + formative), lesson cards with nested resources + "Lesson details", check lessons = "catch-up + coursework check" with chapter tests in the Formative column, VCE exams row. Rocco (16 Nov, later): the Course plan should become date-free ("these are the planned lessons", with proposed lesson counts) and the year tab = "when we do them in 2027"; he said don't change the Course plan view yet.
+- **Year plan 2027 tab:** week-by-week calendar. No fixed weekdays yet (timetables for 3 teachers / 4 classes come early 2027): lessons per week by student days (5 = 3, 3–4 = 2, 1–2 = 1, `lessonRule.byDays`). Step-up 19 Nov–2 Dec 2026 = 6 lessons (Ch 1 in 5 + 2A–2B). Spare slots are named (SAC revision / SAC feedback + redemption / Exam revision); after-school SACs share the week's middle card (2/3 lesson, 1/3 SAC). SACs: AoS 1 Part 1 Wed 14 Apr + Part 2 Wed 21 Apr (after school), Part 3 in class; AoS 2 Wed 2 Jun; AoS 3 Wed 4 Aug; AoS 4 Wed 8 Sep. Semester 2 (Unit 4) from Wed 16 Jun. Essendon campus only. VCE exams 26 Oct–17 Nov (GM dates TBA by VCAA).
+- **Content changes for 2027 time:** tests merged (Ch 1+2, Ch 3+4, Ch 5); 5B lessons merged. AoS 1 fits with 1 spare (SAC revision before each part); AoS 2/3/4 have 2/3/3 spare.
+
+**Next (Rocco's order)**
+1. Bound reference entries for Ch 2–14 (52 lessons; none built; `tools/bref/`).
+2. Review everything (all Draft). Known items from the 16 Nov audit: VCAA 2020 E2 Q4aii used twice (S3 exit + l18/5B APK); sibling question parts reused across lessons (~8 pairs); 44 written You trys (16 in Ch 8); no exits for 2I, 4A, 11E; no APK for l08, 14E; no CFAT for 2I, 8D, 8F, 8G; Ch 13 card SD wording ≠ 2023 SD; RF-5.2 on no card; ledger naming inconsistent; S2–S5 decks still old style; 59/69 videos draft; Ch 1 CFAT follow-ups.
+3. Planner: teacher tabs inside 2027 once timetables arrive; make the Course plan date-free (Rocco's plan above); SAC tasks (AoS 1–4) to write; Unit 4 SAC marks to confirm; merged test lessons may be too long (/67 for Ch 3+4).
+4. Possible extra Term 1 lesson: does the Year 12 Study Camp (10–12 Feb) include a maths session?
+
 ## 16 Nov 2026 (night) — 5B lessons merged
 - Rocco: gm12-u3-l17 (moving means) + l18 (centring) merged into one 5B lesson (l18 removed; both decks and worksheets kept on the l17 card). 5E is now the last Term 1 lesson; Term 2 Week 1 = Ch 5 catch-up + check, then SAC revision before Part 1. AoS 1: 28 lessons, 1 spare.
 
