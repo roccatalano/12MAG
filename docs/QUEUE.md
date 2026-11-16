@@ -94,7 +94,7 @@ _Notes for all AoS 2–4 runners (Rocco, 16 Nov):_
 14. `done 16 Nov 11:55 — 8B slides (24 slides, PDF 41 pages) + worksheet/solutions (3 pages), Draft, on G: 01 Lesson materials; all card items used as listed; Cambridge Ex 8b answer-line typo noted` **Lesson gm12-u3-l38 (8B)**: slides (`tools/deck/gm12-u3-l38/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 15. `done 16 Nov 12:21 — 8C slides (26 slides, PDF 45 pages) + worksheet/solutions (6 pages), Draft, on G: 01 Lesson materials; all card items used as listed; tables filled row by row` **Lesson gm12-u3-l39 (8C)**: slides (`tools/deck/gm12-u3-l39/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 16. `todo` **Lesson gm12-u3-l40 (8D)**: slides (`tools/deck/gm12-u3-l40/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-17. `todo` **Lesson gm12-u3-l41 (8E)**: slides (`tools/deck/gm12-u3-l41/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+17. `in progress 16 Nov 12:28` **Lesson gm12-u3-l41 (8E)**: slides (`tools/deck/gm12-u3-l41/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 18. `todo` **Lesson gm12-u3-l42 (8F)**: slides (`tools/deck/gm12-u3-l42/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 19. `todo` **Lesson gm12-u3-l43 (8G)**: slides (`tools/deck/gm12-u3-l43/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 20. `todo` **Lesson gm12-u3-l44 (8H)**: slides (`tools/deck/gm12-u3-l44/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
@@ -124,7 +124,7 @@ _Notes for all AoS 2–4 runners (Rocco, 16 Nov):_
 14. `done 16 Nov 11:26 — CFAT 3.11.1 (11A-11B, 13 marks, start of 11C) + 3.11.2 (11C-11E, 14 marks, start of Ch 11 test), student + solutions, HTML+PDF, 2 pages each, Draft, on G:; Edrolo 7G-7I exercise Qs cropped verbatim; Edrolo 7I Q7-11 are 11D (culling/restocking) though the exercise index maps them to 11B; tools/cfat/ch11` **CFATs for Chapter 11** + solutions (copy `tools/cfat/ch5/` to `tools/cfat/ch11/`). Each CFAT sits at the start of the lesson after the content it covers. Add them to the planner.
 15. `done 16 Nov 11:31 — 'Follow-up if wrong' on all 14 Qs of CFAT 3.11.1–3.11.2 + followUp lists (Jacaranda 8.7 exercise Q1–22 by Edrolo skill; only one Jacaranda Leslie Q: 8.7 Q20); tools/cfat/ch11/followups.py` **CFAT follow-ups for Chapter 11** (Jacaranda exercises; see notes above).
 16. `done 16 Nov 12:05 — 11A slides (21, PDF 33 pages) + 4-page guided worksheet (student + solutions), HTML+PDF, Draft, on G:; all card items used; APK VCAA 2019 E2 Q2b and Q3a split over two slides (original wording); transition diagrams cropped verbatim` **Lesson gm12-u4-11a (11A)**: slides (`tools/deck/gm12-u4-11a/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-17. `todo` **Lesson gm12-u4-11b (11B)**: slides (`tools/deck/gm12-u4-11b/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+17. `in progress 16 Nov 12:28` **Lesson gm12-u4-11b (11B)**: slides (`tools/deck/gm12-u4-11b/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 18. `todo` **Lesson gm12-u4-11c (11C)**: slides (`tools/deck/gm12-u4-11c/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 19. `todo` **Lesson gm12-u4-11d (11D)**: slides (`tools/deck/gm12-u4-11d/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 20. `todo` **Lesson gm12-u4-11e (11E)**: slides (`tools/deck/gm12-u4-11e/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
@@ -153,7 +153,7 @@ _Notes for all AoS 2–4 runners (Rocco, 16 Nov):_
 14. `done 16 Nov 11:27 — followUp lists on CFAT 4.14.1–4.14.3 (Jacaranda U3&4 Topic 10: 10.2–10.5 exercise Qs by Edrolo skill; no Jacaranda exercise on directed-graph reachability or restricted crashing: nearest given); tools/cfat/ch14/followups.py` **CFAT follow-ups for Chapter 14** (Jacaranda exercises; see notes above).
 15. `done 16 Nov 12:02 — 14A slides (28, PDF 47 pages) + 7-page guided worksheet (student + solutions), HTML+PDF, Draft; source figures cropped verbatim, written You trys (YT-14A-4/5) drawn with net.py arrows (unique marker ids); on G: and the card; 9 ledger rows used` **Lesson gm12-u4-14a (14A)**: slides (`tools/deck/gm12-u4-14a/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 16. `todo` **Lesson gm12-u4-14b (14B)**: slides (`tools/deck/gm12-u4-14b/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-17. `todo` **Lesson gm12-u4-14c (14C)**: slides (`tools/deck/gm12-u4-14c/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
+17. `in progress 16 Nov 12:28` **Lesson gm12-u4-14c (14C)**: slides (`tools/deck/gm12-u4-14c/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 18. `todo` **Lesson gm12-u4-14d (14D)**: slides (`tools/deck/gm12-u4-14d/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 19. `todo` **Lesson gm12-u4-14e (14E)**: slides (`tools/deck/gm12-u4-14e/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 20. `todo` **Chapter 14 revision booklet** + solutions (Insight GM1 + GM2, sections per subchapter). Add to the gm12-ch14-test card.
