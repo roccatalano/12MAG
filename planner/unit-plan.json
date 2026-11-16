@@ -13890,6 +13890,12 @@
           "file": "lessons/CFAT 4.14.1 (14A-14B).html",
           "sources": [
            "Edrolo GM U3&4 2023 exercise questions only (rule 8): 8E Q1, 8E Q4, 8E Q7, 8G Q1, 8G Q4, 8E Q5 (parts a–b), 8E Q9, 8G Q2"
+          ],
+          "followUp": [
+           "Navigating directed graphs (Edrolo 8E Q1, Q4, Q7): Jacaranda U3&4 (2023) 10.4 Ex Q4, Q5",
+           "Capacity of a cut (Edrolo 8E Q5): Jacaranda U3&4 (2023) 10.4 Ex Q8a–b, Q11a–b",
+           "Maximum flow / minimum cut (Edrolo 8E Q9): Jacaranda U3&4 (2023) 10.4 Ex Q7, Q8c, Q9, Q11c, Q13",
+           "Matching problems as a bipartite graph (Edrolo 8G Q1, Q2, Q4): Jacaranda U3&4 (2023) 10.5 Ex Q1–5"
           ]
          }
         ],
@@ -14184,6 +14190,12 @@
           "file": "lessons/CFAT 4.14.2 (14C-14D).html",
           "sources": [
            "Edrolo GM U3&4 2023 exercise questions only (rule 8): 8H Q1, 8H Q3, 8I Q7, 8H Q2, 8H Q4 (part a), 8I Q3, 8I Q4, 8I Q8"
+          ],
+          "followUp": [
+           "Interpreting precedence tables (Edrolo 8H Q1, Q2): Jacaranda U3&4 (2023) 10.2 Ex Q5",
+           "Constructing activity networks (Edrolo 8H Q3, Q4): Jacaranda U3&4 (2023) 10.2 Ex Q3, Q4, Q9; 10.3 Ex Q9, Q10, Q12",
+           "Forward scanning: EST and minimum completion time (Edrolo 8I Q3, Q4): Jacaranda U3&4 (2023) 10.2 Ex Q1, Q2, Q8a–b",
+           "Critical path and float times (Edrolo 8I Q7, Q8): Jacaranda U3&4 (2023) 10.2 Ex Q7; 10.3 Ex Q1, Q5, Q6, Q8, Q16, Q17"
           ]
          }
         ],
@@ -14230,6 +14242,10 @@
           "file": "lessons/CFAT 4.14.3 (14E).html",
           "sources": [
            "Edrolo GM U3&4 2023 exercise questions only (rule 8): 8J Q1, 8J Q4, 8J Q3, 8J Q6, 8J Q7"
+          ],
+          "followUp": [
+           "Crashing an activity network (Edrolo 8J Q1, Q3, Q7): Jacaranda U3&4 (2023) 10.3 Ex Q15d, Q19e",
+           "Crashing with restrictions (Edrolo 8J Q4, Q6): Jacaranda U3&4 (2023) 10.3 Ex Q19f (nearest: no restricted-crashing exercise)"
           ]
          }
         ],

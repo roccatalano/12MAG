@@ -10,6 +10,9 @@
 
 **16 Nov 10:37 (AoS4 #10):** Chapter 13 test + solutions built (Draft): `tools/test/ch13/build.py` → `lessons/Ch13 test` + `solutions` (Mathspace Ch 8 graphs and networks topic assessment, all 20 Qs, + Mathspace Ch 9 Q3–5 and Q10 shortest path, verbatim, /45, 8 pages each; figures cropped from the PDFs). On G: 01 Lesson materials and the gm12-ch13-test card; 24 ledger rows. **Chapter 13 queue finished**; next AoS 4 task: plan Ch 14.
 
+## 16 Nov 11:27 — AoS4 #14
+CFAT 4.14.1–4.14.3 follow-ups (Jacaranda U3&4 10.2–10.5) on the planner; script tools/cfat/ch14/followups.py. Next AoS4: lesson 14A.
+
 ## 16 Nov 11:24 — AoS3 #13: Chapter 11 cards prefilled (runner)
 Examples 1–13 with Edrolo You trys (7G, 7H, 7I); Cambridge Ex 10–13 (Leslie) have written You trys YT-11E-10…13 (planner/written-youtrys.json). Do Now, APK, exits reserved in tools/ledger_manual.csv (35 rows). 11E has no exit task (no VCAA Leslie reprints in Edrolo). New CAS skill `matrix-recurrence` (Draft). Script: tools/prefill_ch11.py. NB the GitHub repo is now roccatalano/12MAG (old URL redirects).
 ## 16 Nov 11:14 — AoS4 #13: CFATs for Chapter 14
