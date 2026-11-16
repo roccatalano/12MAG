@@ -728,17 +728,17 @@ VCAA 2024 E2 Q10a,,Do Now,yes,gm12-u4-11b,2026-11-16,11B slides
 VCAA 2024 NHT E2 Q12a,,Do Now,yes,gm12-u4-11b,2026-11-16,11B slides
 VCAA 2019 E1 Matrices Q8,Edrolo U3&4 7I Q16,exit,yes,gm12-u4-11b,2026-11-16,11B slides + worksheet
 Cambridge U1&2 skills checklist 4G #17,,APK,yes,gm12-u4-11b,2026-11-16,11B slides + worksheet
-VCAA 2023 E1 Q27,,Do Now,yes,gm12-u4-11c,2026-11-16,reserved by AoS3 prefill
-VCAA 2024 E1 Q27,,Do Now,yes,gm12-u4-11c,2026-11-16,reserved by AoS3 prefill
-VCAA 2025 E2 Q13a,,Do Now,yes,gm12-u4-11c,2026-11-16,reserved by AoS3 prefill
-VCAA 2025 E2 Q5a,,Do Now,yes,gm12-u4-11c,2026-11-16,reserved by AoS3 prefill
-VCAA 2016 E2 Matrices Q3a,Edrolo U3&4 7G Q19,exit,yes,gm12-u4-11c,2026-11-16,reserved by AoS3 prefill
-VCAA 2017 E2 Matrices Q3,Edrolo U3&4 7G Q20,exit,yes,gm12-u4-11c,2026-11-16,reserved by AoS3 prefill
-VCAA 2018 E1 Matrices Q8,Edrolo U3&4 7H Q12,exit,yes,gm12-u4-11c,2026-11-16,reserved by AoS3 prefill
-VCAA 2020 E2 Matrices Q3d,Edrolo U3&4 7H Q14,exit,yes,gm12-u4-11c,2026-11-16,reserved by AoS3 prefill
-Cambridge U1&2 skills checklist 4H #18,,APK,yes,gm12-u4-11c,2026-11-16,reserved by AoS3 prefill
-Cambridge U1&2 skills checklist 4D #10,,APK,yes,gm12-u4-11c,2026-11-16,reserved by AoS3 prefill
-VCAA 2021 E2 Matrices Q3a,Edrolo U1&2 5G Q12,APK,yes,gm12-u4-11c,2026-11-16,reserved by AoS3 prefill
+VCAA 2023 E1 Q27,,Do Now,no,,2026-11-16,freed by AoS3 #18: asks for the long-term state (11C new content); replaced by 2024 E1 Q25
+VCAA 2024 E1 Q27,,Do Now,yes,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
+VCAA 2025 E2 Q13a,,Do Now,yes,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
+VCAA 2025 E2 Q5a,,Do Now,yes,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
+VCAA 2016 E2 Matrices Q3a,Edrolo U3&4 7G Q19,exit,yes,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
+VCAA 2017 E2 Matrices Q3,Edrolo U3&4 7G Q20,exit,yes,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
+VCAA 2018 E1 Matrices Q8,Edrolo U3&4 7H Q12,exit,yes,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
+VCAA 2020 E2 Matrices Q3d,Edrolo U3&4 7H Q14,exit,yes,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
+Cambridge U1&2 skills checklist 4H #18,,APK,yes,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
+Cambridge U1&2 skills checklist 4D #10,,APK,yes,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
+VCAA 2021 E2 Matrices Q3a,Edrolo U1&2 5G Q12,APK,yes,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
 VCAA 2024 E1 Q32,,Do Now,yes,gm12-u4-11d,2026-11-16,reserved by AoS3 prefill
 VCAA 2025 E1 Q15,,Do Now,yes,gm12-u4-11d,2026-11-16,reserved by AoS3 prefill
 VCAA 2024 E2 Q12a,,Do Now,yes,gm12-u4-11d,2026-11-16,reserved by AoS3 prefill
@@ -795,3 +795,12 @@ Cambridge U3&4 14B Hungarian algorithm (text pp. 676-678),,Example,no,gm12-u4-14
 Edrolo U3&4 8G WE1,,You try,no,gm12-u4-14b,2026-11-16,used in 14B slides + worksheet (AoS4 #16)
 Edrolo U3&4 8G WE2,,You try,no,gm12-u4-14b,2026-11-16,used in 14B slides + worksheet (AoS4 #16)
 Edrolo U3&4 8G WE3,,You try,no,gm12-u4-14b,2026-11-16,used in 14B slides + worksheet (AoS4 #16)
+VCAA 2024 E1 Q25,,Do Now,yes,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet (replaces 2023 E1 Q27)
+Cambridge U3&4 Example 4,,Example,no,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
+Cambridge U3&4 Example 5,,Example,no,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
+Cambridge U3&4 Example 6,,Example,no,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
+Cambridge U3&4 Example 7,,Example,no,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
+Edrolo U3&4 7G WE5,,You try,no,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
+Edrolo U3&4 7G WE7,,You try,no,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
+Edrolo U3&4 7G WE6,,You try,no,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
+Edrolo U3&4 7H WE1,,You try,no,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet

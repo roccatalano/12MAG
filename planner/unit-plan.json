@@ -12307,14 +12307,14 @@
          {
           "kind": "Exam",
           "ref": "Edrolo U1&2 5G Q12",
-          "text": "VCAA 2021 Exam 2 Matrices Q3a (30%)"
+          "text": "VCAA 2021 Exam 2 Matrices Q3a (28%)"
          }
         ],
         "doNow": [
          {
           "exam": "Exam 1",
-          "ref": "VCAA 2023 Exam 1 Q27",
-          "sec": "11B"
+          "ref": "VCAA 2024 Exam 1 Q25",
+          "sec": "10D"
          },
          {
           "exam": "Exam 1",
@@ -12444,6 +12444,32 @@
            "Interpreting and constructing state matrices (Edrolo 7G Q1, Edrolo 7G Q2): Jacaranda U3&4 (2023) 8.7 Q5b, Q7b, Q20a",
            "Constructing and interpreting transition diagrams (Edrolo 7I Q1, Edrolo 7I Q2): Jacaranda U3&4 (2023) 8.7 Q3a, Q4a, Q9c",
            "Interpreting and constructing transition matrices (Edrolo 7G Q4, Edrolo 7G Q5): Jacaranda U3&4 (2023) 8.7 Q3b, Q4b, Q6, Q7a, Q10a"
+          ]
+         }
+        ],
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: CFAT 3.11.1, Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/11C slides.html",
+          "pdf": "lessons/11C slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "7 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/11C worksheet.html",
+            "pdf": "lessons/11C worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/11C worksheet solutions.html",
+            "pdf": "lessons/11C worksheet solutions.pdf"
+           }
           ]
          }
         ]
