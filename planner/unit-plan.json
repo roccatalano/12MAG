@@ -12951,6 +12951,25 @@
            "Using Leslie matrices in applied scenarios (Edrolo 7G Q12, Edrolo 7G Q13): Jacaranda U3&4 (2023) 8.7 Q20 (only Leslie exercise Q)"
           ]
          }
+        ],
+        "materials": [
+         {
+          "kind": "Revision booklet",
+          "desc": "Insight GM1 + GM2 transition matrix questions (16 MC + 11 short answer), one section per subchapter (11A–11E).",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/Ch11-revision-booklet.html",
+            "pdf": "lessons/Ch11-revision-booklet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/Ch11-revision-booklet-solutions.html",
+            "pdf": "lessons/Ch11-revision-booklet-solutions.pdf"
+           }
+          ]
+         }
         ]
        }
       }

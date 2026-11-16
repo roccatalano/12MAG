@@ -32,6 +32,9 @@
 
 
 
+## 16 Nov 14:37 — AoS3 #21: Chapter 11 revision booklet (Draft)
+`lessons/Ch11-revision-booklet(.html/.pdf)` + solutions, built by `tools/revision/ch11/build.py` (crops in `crops/`, segmentation in `seg_g1.json`/`seg_g2.json`). Insight GM1 Transition matrices MC Q1–14 + GM1 matrices Q24, Q29 (held back from Ch 10) and GM2 Transition matrices SA Q1–11, one section per subchapter 11A–11E. Shared MC stems shown once, groups kept together (GM1 Q4 and Q9–10 sit in 11D with their 11D partners). Answers from Insight's notes. On G: as `Ch11 revision booklet(.pdf)` / `... solutions.pdf`; on the gm12-ch11-test card.
+
 ## 16 Nov 13:06 — AoS3 #18: Lesson 11C done (Draft)
 - `lessons/11C slides` (31 slides, CFAT 3.11.1 first) + `11C worksheet` / `solutions` (7 pages), HTML+PDF, copied to G: 01 Lesson materials. Build: `tools/deck/gm12-u4-11c/`.
 - Do Now 2023 E1 Q27 freed (asks for long-term state = new content) → 2024 E1 Q25. Exits in original VCAA wording with report %.
