@@ -650,14 +650,14 @@ VCAA 2026 NHT E2 Q1e,,Do Now,yes,gm12-u3-l44,2026-11-16,used in 8H slides + work
 VCAA 2021 E1 Q24,Edrolo U3&4 6C Q13,exit,yes,gm12-u3-l44,2026-11-16,used in 8H slides + worksheet (AoS2 #20)
 Cambridge U1&2 skills checklist 1B #6,,APK,no,gm12-u3-l44,2026-11-16,NOT used: already burnt in l20; dropped from l44 (AoS2 #20)
 VCAA 2020 E2 Q7a,Edrolo U1&2 3B Q15,APK,yes,gm12-u3-l44,2026-11-16,used in 8H slides + worksheet (AoS2 #20)
-VCAA 2026 NHT E1 Q24,,Do Now,yes,gm12-u3-l45,2026-11-16,reserved by AoS2 prefill
-VCAA 2026 E1 Q15,,Do Now,yes,gm12-u3-l45,2026-11-16,reserved by AoS2 prefill
-VCAA 2025 E2 Q7a,,Do Now,yes,gm12-u3-l45,2026-11-16,reserved by AoS2 prefill
-VCAA 2026 NHT E2 Q2a,,Do Now,yes,gm12-u3-l45,2026-11-16,reserved by AoS2 prefill
-VCAA 2016 E1 Q21,Edrolo U3&4 6E Q16,exit,yes,gm12-u3-l45,2026-11-16,reserved by AoS2 prefill
-VCAA 2021 E2 Q6,Edrolo U3&4 6E Q17,exit,yes,gm12-u3-l45,2026-11-16,reserved by AoS2 prefill
-Cambridge U1&2 skills checklist 1F #14,,APK,yes,gm12-u3-l45,2026-11-16,reserved by AoS2 prefill
-Cambridge U1&2 skills checklist 1A #3,,APK,yes,gm12-u3-l45,2026-11-16,reserved by AoS2 prefill
+VCAA 2026 NHT E1 Q24,,Do Now,yes,gm12-u3-l45,2026-11-16,used in 8I slides + worksheet (AoS2 #21)
+VCAA 2026 E1 Q15,,Do Now,yes,gm12-u3-l45,2026-11-16,used in 8I slides + worksheet (AoS2 #21)
+VCAA 2025 E2 Q7a,,Do Now,yes,gm12-u3-l45,2026-11-16,used in 8I slides + worksheet (AoS2 #21)
+VCAA 2026 NHT E2 Q2a,,Do Now,yes,gm12-u3-l45,2026-11-16,used in 8I slides + worksheet (AoS2 #21)
+VCAA 2016 E1 Q21,Edrolo U3&4 6E Q16,exit,yes,gm12-u3-l45,2026-11-16,used in 8I slides + worksheet (AoS2 #21)
+VCAA 2021 E2 Q6,Edrolo U3&4 6E Q17,exit,yes,gm12-u3-l45,2026-11-16,used in 8I slides + worksheet (AoS2 #21)
+Cambridge U1&2 skills checklist 1F #14,,APK,no,gm12-u3-l45,2026-11-16,"dropped: already burnt in l21 (AoS2 #21, Decisions log)"
+Cambridge U1&2 skills checklist 1A #3,,APK,yes,gm12-u3-l45,2026-11-16,used in 8I slides + worksheet (AoS2 #21)
 Edrolo U3&4 6F Q5,,CFAT,yes,CFAT 2.8.1,2026-11-16,Ch8 CFAT (exercise questions only)
 Edrolo U3&4 6F Q9,,CFAT,yes,CFAT 2.8.1,2026-11-16,Ch8 CFAT (exercise questions only)
 Edrolo U3&4 6A Q1b,,CFAT,yes,CFAT 2.8.1,2026-11-16,Ch8 CFAT (exercise questions only)
@@ -808,3 +808,5 @@ VCAA 2023 E1 Q32,,Do Now,yes,gm12-u4-11d,2026-11-16,used: 11D slides (replaces 2
 Edrolo U3&4 6B WE3,,You try,no,gm12-u3-l43,2026-11-16,used in 8G slides + worksheet (AoS2 #19)
 VCAA 2025 E1 Q24,,Do Now,yes,gm12-u3-l44,2026-11-16,used in 8H slides + worksheet (AoS2 #20) (replaces 2026 E1 Q23)
 Edrolo U3&4 6C WE1a,,You try,no,gm12-u3-l44,2026-11-16,used in 8H slides + worksheet (AoS2 #20)
+Edrolo U3&4 6E WE1a,,You try,no,gm12-u3-l45,2026-11-16,used in 8I slides + worksheet (AoS2 #21)
+Edrolo U3&4 6E WE3a,,CAS,no,gm12-u3-l45,2026-11-16,used in 8I slides (CAS) (AoS2 #21)
