@@ -17,6 +17,8 @@
 
 ## 16 Nov 11:55: AoS2 #14 done (Draft)
 - 8B lesson (gm12-u3-l38): `lessons/8B slides.html/.pdf` (24 slides) + `8B worksheet` / `solutions` (3 pages); on G: 01 Lesson materials; planner card materials + ledger rows updated. Build: `tools/deck/gm12-u3-l38/`.
+## 16 Nov 12:02 — AoS4 #15: lesson 14A (Flow problems) made (Draft)
+Slides `lessons/14A slides.html/.pdf` (28 slides) + guided worksheet (7 pages, student + solutions), on G: `01 Lesson materials` and the gm12-u4-14a card. Build: `tools/deck/gm12-u4-14a/`. Do Now/APK/exits as prefilled (9 ledger rows now 'used'). Note for later 14x lessons: directed graphs drawn with net.py need unique arrow-marker ids per svg (see `_u()` in gm12-u4-14a/figs.py), else arrowheads disappear.
 
 ## 16 Nov 11:31 — AoS3 #15: CFAT 3.11.x follow-ups
 Jacaranda 8.7 exercise questions on every CFAT 3.11.1/3.11.2 question (fu) + followUp lists (tools/cfat/ch11/followups.py). Next AoS 3: #16 lesson 11A.

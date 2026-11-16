@@ -13884,7 +13884,33 @@
          }
         ],
         "cas": [],
-        "note": "Edrolo 8E WE1 (route through a digraph and its weight) is the closest match for Example 1. No Edrolo worked example for Examples 4 and 5: You trys written (planner/written-youtrys.json)."
+        "note": "Edrolo 8E WE1 (route through a digraph and its weight) is the closest match for Example 1. No Edrolo worked example for Examples 4 and 5: You trys written (planner/written-youtrys.json).",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/14A slides.html",
+          "pdf": "lessons/14A slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "7 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/14A worksheet.html",
+            "pdf": "lessons/14A worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/14A worksheet solutions.html",
+            "pdf": "lessons/14A worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
