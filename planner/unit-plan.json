@@ -13017,6 +13017,23 @@
         ],
         "materials": [
          {
+          "kind": "Chapter test",
+          "desc": "Mathspace matrices topic assessment (Mathspace Ch 7) transition items + 7.10–7.12 worksheet top-ups (8 Qs, /25), verbatim.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/Ch11 test.html",
+            "pdf": "lessons/Ch11 test.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/Ch11 test solutions.html",
+            "pdf": "lessons/Ch11 test solutions.pdf"
+           }
+          ]
+         },
+         {
           "kind": "Revision booklet",
           "desc": "Insight GM1 + GM2 transition matrix questions (16 MC + 11 short answer), one section per subchapter (11A–11E).",
           "status": "draft",

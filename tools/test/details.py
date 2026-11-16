@@ -7,7 +7,7 @@ def short(h, n=110):
     t = txt(h); return t if len(t) <= n else t[:n].rsplit(' ', 1)[0] + '…'
 out = {}
 for f in sorted(glob.glob(os.path.join(R, 'tools/test/ch*/build.py'))):
-    ch = int(re.search(r'ch(\d+)', f).group(1))
+    ch = int(re.search(r'test/ch(\d+)/', f).group(1))
     sp = importlib.util.spec_from_file_location(f'test{ch}', f); m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m)
     doc = (m.__doc__ or '').strip().splitlines()
     qs, n = [], 0

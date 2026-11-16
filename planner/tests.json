@@ -553,6 +553,219 @@
    }
   ]
  },
+ "11": {
+  "chapter": 11,
+  "total": 25,
+  "mc": 1,
+  "sa": 7,
+  "about": "Source (rule 9), copied verbatim: Mathspace General Maths 3&4 'Chapter 7 - Matrices' topic assessment Q9, Q17, Q18 (the transition items the Ch10 test left), topped up (QUEUE notes) with Mathspace question worksheets 7.10 Q5, Q12; 7.11 Q8; 7.12 Q5, Q6 (8 Qs, /25). No Leslie (11E) item: the only Mathspace one (7.12 Q10) needs its life-cycle diagram.",
+  "byLesson": [
+   {
+    "lesson": "7.10",
+    "marks": 4,
+    "qs": [
+     "1",
+     "2",
+     "3a"
+    ]
+   },
+   {
+    "lesson": "7.11",
+    "marks": 10,
+    "qs": [
+     "4a",
+     "5a"
+    ]
+   },
+   {
+    "lesson": "7.12",
+    "marks": 11,
+    "qs": [
+     "6a",
+     "7a",
+     "8a"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "q": "1",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 7 (matrices) topic assessment Q9 · 7.10",
+    "text": "A transition matrix must have columns that:",
+    "answer": "A"
+   },
+   {
+    "q": "2",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace 7.10 Transition matrices question worksheet Q5 · 7.10",
+    "text": "The chance of the weather being rainy ( R ) or fine ( F ) tomorrow, given it was rainy or fine today, is…"
+   },
+   {
+    "q": "3a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace 7.10 Transition matrices question worksheet Q12 · 7.10",
+    "text": "Construct the transition matrix T (with the city agency as the first column or row) and the initial state…"
+   },
+   {
+    "q": "3b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace 7.10 Transition matrices question worksheet Q12 · 7.10",
+    "text": "Calculate the number of cars at each agency after 10 weeks, rounded to the nearest whole number."
+   },
+   {
+    "q": "4a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace 7.11 Long-term transitions question worksheet Q8 · 7.11",
+    "text": "Construct the transition matrix T to represent this situation. Use Shop D as the first row or column."
+   },
+   {
+    "q": "4b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace 7.11 Long-term transitions question worksheet Q8 · 7.11",
+    "text": "Identify the initial state matrix S 0 ."
+   },
+   {
+    "q": "4c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace 7.11 Long-term transitions question worksheet Q8 · 7.11",
+    "text": "Using the rule S n = T n S 0 , calculate the number of customers for each shop after 4 weeks. Round the…"
+   },
+   {
+    "q": "4d",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace 7.11 Long-term transitions question worksheet Q8 · 7.11",
+    "text": "Calculate the steady state matrix to determine the long-term number of customers for each shop. (Note: Leave…"
+   },
+   {
+    "q": "5a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 7 (matrices) topic assessment Q17 · 7.11",
+    "text": "What percentage of the bikes at Richmond one morning are at Docklands the next morning?"
+   },
+   {
+    "q": "5b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 7 (matrices) topic assessment Q17 · 7.11",
+    "text": "Calculate S 1 ."
+   },
+   {
+    "q": "5c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 7 (matrices) topic assessment Q17 · 7.11",
+    "text": "Determine the number of bikes at Docklands after 3 days, rounded to the nearest whole number."
+   },
+   {
+    "q": "5d",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 7 (matrices) topic assessment Q17 · 7.11",
+    "text": "Use technology to find the steady-state number of bikes at each station."
+   },
+   {
+    "q": "5e",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 7 (matrices) topic assessment Q17 · 7.11",
+    "text": "Explain why this steady state does not depend on the numbers of bikes at each station on Monday morning."
+   },
+   {
+    "q": "5f",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 7 (matrices) topic assessment Q17 · 7.11",
+    "text": "The operator plans to reduce the Docklands station to 280 docking bays. Decide whether this is enough in the…"
+   },
+   {
+    "q": "6a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace 7.12 Transition matrices with regular change question worksheet Q5 · 7.12",
+    "text": "Define the transition matrix T . Let the first row or column represent the Rose Garden."
+   },
+   {
+    "q": "6b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace 7.12 Transition matrices with regular change question worksheet Q5 · 7.12",
+    "text": "Define the initial state matrix S 0 ."
+   },
+   {
+    "q": "6c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace 7.12 Transition matrices with regular change question worksheet Q5 · 7.12",
+    "text": "Define the culling matrix B ."
+   },
+   {
+    "q": "7a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace 7.12 Transition matrices with regular change question worksheet Q6 · 7.12",
+    "text": "Calculate the number of voters for each party after one month ( S 1 )."
+   },
+   {
+    "q": "7b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace 7.12 Transition matrices with regular change question worksheet Q6 · 7.12",
+    "text": "Calculate the number of voters for each party after two months ( S 2 )."
+   },
+   {
+    "q": "8a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 7 (matrices) topic assessment Q18 · 7.12",
+    "text": "Write the matrix B ."
+   },
+   {
+    "q": "8b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 7 (matrices) topic assessment Q18 · 7.12",
+    "text": "Calculate S 1 ."
+   },
+   {
+    "q": "8c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 7 (matrices) topic assessment Q18 · 7.12",
+    "text": "Calculate S 2 , rounding each element to the nearest whole number."
+   },
+   {
+    "q": "8d",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 7 (matrices) topic assessment Q18 · 7.12",
+    "text": "Let M n be the total number of members after n months. Write a recurrence relation for M n , and state the…"
+   },
+   {
+    "q": "8e",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 7 (matrices) topic assessment Q18 · 7.12",
+    "text": "Find the total number of members after 12 months."
+   },
+   {
+    "q": "8f",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 7 (matrices) topic assessment Q18 · 7.12",
+    "text": "The centre claims that the cycling club will have more than 650 members after 4 months. Decide whether the…"
+   }
+  ]
+ },
  "13": {
   "chapter": 13,
   "total": 45,
