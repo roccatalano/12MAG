@@ -153,9 +153,10 @@ def ncurve(id_, m=None, s=None, xl='', dec=0, z=True, x=True, small=False):
 def sh(id_, a, b, lab='', col='b'): return f'ns:{id_}:{a}:{b}:{col}:{lab.replace(" ", "_")}'
 def mk(id_, zv, lab, col='r'): return f'nm:{id_}:{zv}:{col}:{lab.replace(" ", "_")}'
 
-S.append(f'<section class="slide title cover"><div class="code">S5</div><h1>The normal distribution and standardised scores</h1>'
-         f'<div class="unit">12MAG · Unit 3 · AOS 1 Data analysis · Lesson 5</div>'
-         f'<div class="pp">{CG} · 1H The normal distribution and the 68–95–99.7% rule (pp. 76–84) · 1I Populations and samples (Interactive Textbook)</div><span class="pg" style="display:none"></span></section>')
+S.append(f'<section class="slide title cover"><h1>The normal distribution and standardised scores</h1>'
+         f'<div class="unit">12MAG · Unit 3 · AOS 1 Data analysis</div>'
+         f'<div class="pp" style="font-size:22px;margin-top:14px">{CG}</div>'
+         f'<ul style="list-style:none;padding:0;margin:10px 0 0;font-size:22px;line-height:1.5;text-align:left"><li>1H The normal distribution and the 68–95–99.7% rule (pp. 76–84)</li><li>1I Populations and samples (Interactive Textbook)</li></ul><span class="pg" style="display:none"></span></section>')
 LI = ['To be able to introduce the normal model for bell-shaped distributions.',
       'To be able to use the 68–95–99.7% rule to estimate percentages and give meaning to the standard deviation.',
       'To be able to calculate standardised scores and use them to compare values across distributions.']
@@ -438,7 +439,7 @@ S.append(qslide('exit', '2 of 2', 'Show what you know', 'VCAA 2021 Exam 2 Q1c',
 
 S.append(f'<section class="slide z chk">{bar("Check-in", "How did you go?")}<p class="lead zlead">Read each one. If you can do it, tick it on your worksheet. <span class="hint">Click a box to tick it.</span></p>'
          f'<div class="zchk">{"".join(f"<div class=zci><span class=\"zcb ix\"></span>{x}</div>" for x in SC)}</div>{foot("Success criteria: planner card")}</section>')
-CWR = open(os.path.join(SH, 'cwr.html')).read(); CWL = open(os.path.join(SH, 'cwl.html')).read()
+CWR = open(os.path.join(SH, 'cwr.html')).read().replace('>Exercise 9A: Collecting representative data<',' textLength="344" lengthAdjust="spacingAndGlyphs">Exercise 1H: The normal distribution and the 68–95–99.7% rule<'); CWL = open(os.path.join(SH, 'cwl.html')).read()
 S.append(f'<section class="slide cwk">{bar("1H–1I", "Coursework · Exercises 1H, 1I")}<div class="cwgrid"><div class="cwl2">'
          '<table class="cw"><thead><tr><th>Do</th><th>Questions</th></tr></thead><tbody>'
          '<tr><th>Cambridge Exercise 1H</th><td>Q1–23</td></tr>'

@@ -43,14 +43,14 @@ def dotplot(id_, vals, lo, hi, xl=''):
 def hist(id_, start, w, v, ymax, ystep, xl='', yl='Frequency'):
     cfg = dict(start=start, w=w, v=v, ymax=ymax, ystep=ystep, xl=xl, yl=yl)
     return f"<svg class=\"zhg\" id=\"{id_}\" data-cfg='{json.dumps(cfg)}' viewBox=\"0 0 600 330\"></svg>"
-def stem(id_, rows, key, head=('Stem', 'Leaf')):
+def stem(id_, rows, key, head=('Stem', 'Leaf'), build=False):
     k = 0; tr = ''
     for s, leaves in rows:
         cells = ''
         for l in leaves.split():
             cells += f'<span class="lv" data-k="{k}">{l}</span>'; k += 1
         tr += f'<tr><td class="zst">{s}</td><td class="zlv">{cells}</td></tr>'
-    return f'<div class="zstem" id="{id_}"><table><tr><th>{head[0]}</th><th>{head[1]}</th></tr>{tr}</table><div class="zkey">{key}</div></div>'
+    return f'<div class="zstem" id="{id_}"><table><tr><th>{head[0]}</th><th>{head[1]}</th></tr>{tr}</table><div class="zkey' + (' zkh' if build else '') + f'">{key}</div></div>'
 def tiles(t, orig):
     srt = sorted(orig, key=float)
     return '<div class="tl" data-t="%s">%s</div>' % (t, ''.join(f'<span class="mtile" data-o="{o}" data-s="{s}">{o}</span>' for o, s in zip(orig, srt)))
@@ -206,9 +206,10 @@ KI_LOG = r'$\log_{10} x = b \iff 10^{b} = x$<div class="kn">undo a log: $x = 10^
 KI_LOGH = r'A value $v$ on a $\log_{10}$ scale stands for the number $10^{v}$.'
 
 # ---- title + lesson overview
-S.append(f'<section class="slide title cover"><div class="code">S2</div><h1>Displaying and describing numerical data</h1>'
-         f'<div class="unit">12MAG · Unit 3 · AOS 1 Data analysis · Lesson 2</div>'
-         f'<div class="pp">{CG} · 1C Displaying and describing numerical data (pp. 14–27) · 1D Dot plots and stem plots (pp. 28–33) · 1E Using a logarithmic (base 10) scale to display data (pp. 34–40)</div><span class="pg" style="display:none"></span></section>')
+S.append(f'<section class="slide title cover"><h1>Displaying and describing numerical data</h1>'
+         f'<div class="unit">12MAG · Unit 3 · AOS 1 Data analysis</div>'
+         f'<div class="pp" style="font-size:22px;margin-top:14px">{CG}</div>'
+         f'<ul style="list-style:none;padding:0;margin:10px 0 0;font-size:22px;line-height:1.5;text-align:left"><li>1C Displaying and describing numerical data (pp. 14–27)</li><li>1D Dot plots and stem plots (pp. 28–33)</li><li>1E Using a logarithmic (base 10) scale to display data (pp. 34–40)</li></ul><span class="pg" style="display:none"></span></section>')
 LI = ['To be able to construct frequency tables for discrete numerical data.', 'To be able to construct frequency tables for grouped numerical data (discrete and continuous).',
       'To be able to construct a histogram from a frequency table for numerical data.', 'To be able to construct a histogram from numerical data using a CAS calculator.',
       'To be able to describe the distribution of numerical data according to its key characteristics of shape, centre, spread and outliers.',
@@ -251,11 +252,12 @@ S.append(qslide('apk', '2 of 5', 'Year 11 skills: a stem plot', 'Cambridge U1&am
     ['Ages run from 17 to 66: the tens digits 1 to 6 are the stems.',
      ('Teens: leaves 7, 9, 9, 9', f'tc:pa:{dk(10, where(PA, lambda v: v < 20))} xl:pas:{pst(lambda v: v < 20)}'),
      ('Twenties: leaves 0 0 1 1 2 3 6 7 8 9', f'tc:pa:{dk(10, where(PA, lambda v: v < 30))} xl:pas:{pst(lambda v: v < 30)}'),
-     ('Thirties to sixties: 4 4 7 · 5 · 6 · 6', f'tc:pa:{dk(10, range(20))} xl:pas:{pst(lambda v: True)}')],
+     ('Thirties to sixties: 4 4 7 · 5 · 6 · 6', f'tc:pa:{dk(10, range(20))} xl:pas:{pst(lambda v: True)}'),
+     ('Write the key: 1 | 7 = 17, <i>age</i> (years)', f'tc:pa:{dk(10, range(20))} xl:pas:{pst(lambda v: True)} sk:pas')],
     'Ordered stem plot (left) with the key <b>1 | 7 = 17</b>.',
     CG12 + ', Chapter 2 skills checklist 2D #9. Working by teacher.',
-    fig=stem('pas', prow, 'Key: 1 | 7 = 17 &nbsp; <i>age</i> (years)').replace('class="zstem"', 'class="zstem zbuild"'), figw='.9fr',
-    ans_do=f'tc:pa:{dk(10, range(20))} xl:pas:{pst(lambda v: True)}'))
+    fig=stem('pas', prow, 'Key: 1 | 7 = 17 &nbsp; <i>age</i> (years)', build=True).replace('class="zstem"', 'class="zstem zbuild"'), figw='.9fr',
+    ans_do=f'tc:pa:{dk(10, range(20))} xl:pas:{pst(lambda v: True)} sk:pas', cls=''))
 
 # ---- APK 3: Cambridge U1&2 9D #6, #7 (logs)
 S.append(qslide('apk', '3 of 5', 'Year 11 skills: logs and powers of ten', 'Cambridge U1&amp;2 · 9D #6, #7',
@@ -316,7 +318,7 @@ def mstep(b, tid, extra=''):
     return f'tc:mk{tid}:{dk(9, ix)} ' + fills('mt' + tid, [k for r in range(b + 1) for k in rowk(r, 2)]) + extra
 S.append(nl_slide('Grouped frequency tables',
     'Many different values, or continuous data? Group them into <b>intervals</b>. <span class="hint">Click to count the 27 marks into the table.</span>',
-    '<div class="cols" style="grid-template-columns:1fr .75fr 1fr"><div class="col"><h2>Data: 27 marks</h2>' + dlist('mk1', MK, 9) +
+    '<div class="cols" style="grid-template-columns:1fr .75fr 1fr"><div class="col"><h2>Data: “the following set of 27 marks” (Cambridge 1C CAS 1)</h2>' + dlist('mk1', MK, 9) +
     '<ul class="zul s2rules"><li>every value in exactly one interval: no gaps, no overlaps</li><li>about 5 to 15 intervals</li><li>start on an exact value</li><li><b>2–5</b> (whole marks) = 2, 3, 4 or 5 · <b>30.0–34.9</b> = 30.0 up to 34.9</li></ul></div>'
     '<div class="col">' + ftab('mt1', ['<i>marks</i>', 'Frequency'], [(a, f) for a, f in zip(MI, MN)] + [('<b>Total</b>', '<b>27</b>')]) + '</div><div class="col">'
     + st('<b>1</b> Width 4, starting at 2: 2–5, 6–9, …, 22–25', do=fills('mt1', [r * 10 for r in range(6)]))
@@ -378,38 +380,40 @@ S.append(qslide('yt', 7, 'Constructing a grouped frequency table', 'Edrolo 1C WE
 # ---- NL: the histogram (same 27 marks)
 S.append(nl_slide('The histogram: table → graph',
     'A <b>histogram</b> shows a grouped frequency table. The bars <b>touch</b> because the scale is continuous. <span class="hint">Click to grow the bars.</span>',
-    '<div class="cols" style="grid-template-columns:.7fr 1.3fr .9fr"><div class="col">' + ftab('mt2', ['<i>marks</i>', 'Frequency'], [(a, f) for a, f in zip(MI, MN)] + [('<b>Total</b>', '<b>27</b>')]).replace('zft zfill', 'zft') +
+    '<div class="cols" style="grid-template-columns:.68fr 1.1fr 1.15fr"><div class="col">' + ftab('mt2', ['<i>marks</i>', 'Frequency'], [(a, f) for a, f in zip(MI, MN)] + [('<b>Total</b>', '<b>27</b>')]).replace('zft zfill', 'zft ztab') +
     '</div><div class="col">' + hist('mh2', 2, 4, MN, 12, 2, 'marks', 'frequency').replace('class="zhg"', 'class="zhg zbuild"') + '</div><div class="col">'
-    + st('<b>1</b> Axes: <i>marks</i> across, marked at the start of each interval (2, 6, 10, …); frequency up, to 12.')
-    + st('<b>2</b> One bar per interval, height = frequency: 1, 1, 6', do='xb:mh2:0,1,2')
-    + st('<b>3</b> then 11, 3, 5', do='xb:mh2:0,1,2,3,4,5')
-    + st('<b>Check:</b> the bar heights add to 27, the number of marks.', True, do='xb:mh2:0,1,2,3,4,5')
-    + '</div></div>', CG + ', 1C pp. 15–16 (27 marks: CAS 1, p. 16)'))
+    + st('<b>1</b> Axes: <i>marks</i> across (2, 6, 10, …); frequency up, to 12.')
+    + ''.join(st(f'<b>{i + 2}</b> {MI[i]}: frequency {MN[i]} → bar from {2 + 4 * i} to {6 + 4 * i}, height {MN[i]}', do=f'xb:mh2:{J2(range(i + 1))} tc:mt2:{dk(10, [i * 10, i * 10 + 1])}'.replace(dk(10,[i*10,i*10+1]), f'{i*10},{i*10+1}')) for i in range(6))
+    + st('<b>Check:</b> heights add to 27 ✓', True, do='xb:mh2:0,1,2,3,4,5')
+    + '</div></div>', CG + ', 1C pp. 15–16 (27 marks: CAS 1, p. 16)', 's2hg'))
 
 # ---- Example 8 (Cambridge)
 HV = [1, 6, 8, 5, 3]
 S.append(qslide('ex', 8, 'Constructing a histogram from a frequency table', 'Cambridge · Example 8',
     'Construct a histogram for the frequency table opposite.' + table_hl('t8', [('Average hours worked', HI), ('Frequency', [str(x) for x in HV])], 'ztab zinq'),
     KI_HIST,
-    ['Horizontal axis: <i>Average hours worked</i>, marked at the start of each interval (30, 35, …). Vertical axis: <i>Frequency</i>, up to at least 8.',
-     ('Bars for 30.0–34.9 and 35.0–39.9: heights 1, 6', 'xb:h8:0,1 tc:t8:100,101'),
-     ('Bars for 40.0–44.9 to 50.0–54.9: heights 8, 5, 3', 'xb:h8:0,1,2,3,4 tc:t8:100,101,102,103,104')],
+    ['Axes: <i>Average hours worked</i> across (30, 35, …); <i>Frequency</i> up, to at least 8.',
+     *[(f'{HI[i]}: frequency {HV[i]} → bar {30 + 5 * i} to {35 + 5 * i}, height {HV[i]}', f'xb:h8:{J2(range(i + 1))} tc:t8:{i},{100 + i}') for i in range(5)]],
     'The histogram (left): bars touch, both axes labelled.', CG + ', 1C Example 8 (p. 16)',
     fig=hist('h8', 30, 5, HV, 9, 1, 'Average hours worked', 'Frequency').replace('class="zhg"', 'class="zhg zbuild"'), figw='1.1fr',
-    ans_do='xb:h8:0,1,2,3,4 tc:t8:100,101,102,103,104'))
+    ans_do='xb:h8:0,1,2,3,4'))
 
-# ---- You try 8: Edrolo 1C WE5
-S.append(qslide('yt', 8, 'Constructing a histogram from a frequency table', 'Edrolo 1C WE5',
-    'The <i>height</i> (cm) of 20 plants in a Year 6 science experiment was recorded in the following grouped frequency table.'
-    + table_hl('ty8', [('<i>height</i> (cm)', PI), ('number', [str(x) for x in PN]), ('%', PP)], 'ztab zinq zsm2'),
-    KI_HIST, [], None, ED + ', 1C Worked example 5 (intervals written Cambridge style). Working by teacher.',
+# ---- You try 8: Edrolo 1C WE5 (a and b on two slides, as Example 13)
+YT8Q = ('The <i>height</i> (cm) of 20 plants in a Year 6 science experiment was recorded in the following grouped frequency table.'
+    + table_hl('ty8', [('<i>height</i> (cm)', PI), ('number', [str(x) for x in PN]), ('%', PP)], 'ztab zinq zsm2'))
+S.append(qslide('yt', '8 (a)', 'Constructing a histogram from a frequency table', 'Edrolo 1C WE5',
+    YT8Q, KI_HIST, [], None, ED + ', 1C Worked example 5 a (intervals written Cambridge style). Working by teacher.',
     parts=[('a.', 'Construct a histogram to display this data.',
-            [('Axes: <i>height</i> (cm) across, 30 to 90; frequency up, to 8.'), ('Bars 1, 5, 7, 3, 2, 2', 'xb:yh8:0,1,2,3,4,5')],
-            'Histogram (left).', 'xb:yh8:0,1,2,3,4,5'),
-           ('b.', 'What percentage of plants were shorter than 60 cm?',
-            [('The first three intervals: 5 + 25 + 35', 'xb:yh8:0,1,2,3,4,5 hq:yh8:0,1,2 tc:ty8:200,201,202')],
-            '<b>65%</b> of plants were shorter than 60 cm.', 'xb:yh8:0,1,2,3,4,5 hq:yh8:0,1,2 tc:ty8:200,201,202')],
+            [(f'{PI[i]}: {PN[i]} → bar {30 + 10 * i} to {40 + 10 * i}, height {PN[i]}', f'xb:yh8:{J2(range(i + 1))} tc:ty8:{i},{100 + i}') for i in range(6)],
+            'Histogram (left).', 'xb:yh8:0,1,2,3,4,5')],
     fig=hist('yh8', 30, 10, PN, 8, 1, 'height (cm)', 'frequency').replace('class="zhg"', 'class="zhg zbuild"'), figw='1.1fr', cls='tight'))
+S.append(qslide('yt', '8 (b)', 'Constructing a histogram from a frequency table', 'Edrolo 1C WE5',
+    YT8Q.replace("'ty8'", "'ty8b'").replace('id="ty8"', 'id="ty8b"'), KI_HIST, [], None, ED + ', 1C Worked example 5 b. Working by teacher.',
+    parts=[('b.', 'What percentage of plants were shorter than 60 cm?',
+            [('Shorter than 60 cm: the first three intervals.', 'hq:yh8b:0,1,2 tc:ty8b:0,1,2'),
+             ('Add their percentages: 5 + 25 + 35', 'hq:yh8b:0,1,2 tc:ty8b:0,1,2,200,201,202')],
+            '<b>65%</b> of plants were shorter than 60 cm.', 'hq:yh8b:0,1,2 tc:ty8b:0,1,2,200,201,202')],
+    fig=hist('yh8b', 30, 10, PN, 8, 1, 'height (cm)', 'frequency'), figw='1.1fr', cls='tight'))
 
 # ---- CAS: histogram (Cambridge 1C CAS 1, 27 marks)
 S.append(qslide('cas', '', 'Constructing a histogram from raw data', 'Cambridge · 1C CAS 1',
@@ -428,11 +432,12 @@ SHP = [('Symmetric', 'tails off evenly on either side of the peak', [1, 2, 4, 7,
        ('Positively skewed', 'long <b>upper</b> tail, to the right', [3, 9, 8, 6, 4, 3, 2, 1, 1]),
        ('Negatively skewed', 'long <b>lower</b> tail, to the left', [1, 1, 2, 3, 4, 6, 8, 9, 3]),
        ('With an outlier', 'a value well away from the rest', [0, 3, 7, 9, 6, 2, 0, 0, 1])]
+MM = ['mean ≈ median', '<b>mean &gt; median</b> (the tail pulls the mean up)', '<b>mean &lt; median</b>', 'the mean is pulled towards the outlier, and the median barely moves']
 S.append(nl_slide('Shape: which way is the tail?',
     'Look at the <b>tail</b>: it names the skew. <span class="hint">Click to reveal each shape.</span>',
-    '<div class="s2shp">' + ''.join(f'<div class="zpc">' + st(f'<div class="zpt">{a}</div>' + mini(f'shp{k}', v) + f'<div class="s2c">{b}</div>') + '</div>' for k, (a, b, v) in enumerate(SHP)) + '</div>'
+    '<div class="s2shp">' + ''.join(f'<div class="zpc">' + st(f'<div class="zpt">{a}</div>' + mini(f'shp{k}', v) + f'<div class="s2c">{b}</div><div style="font-size:24px;line-height:1.25;margin-top:10px;padding-top:8px;border-top:2px dotted #999">{MM[k]}</div>') + '</div>' for k, (a, b, v) in enumerate(SHP)) + '</div>'
     + st('Salaries and house prices are usually positively skewed. Age at death is negatively skewed.', True, cls='zctr'),
-    CG + ', 1C p. 21 (shapes drawn by the teacher)'))
+    CG + ', 1C p. 21 (shapes and mean/median notes by the teacher)'))
 
 # ---- NL: SOCS
 SOCSL = [('S', 'Shape', 'The distribution is symmetric / positively skewed / negatively skewed.'),
@@ -450,13 +455,14 @@ GV = [2, 2, 2, 2, 2, 2, 2, 4, 6, 10, 16, 34, 95, 233, 300, 207, 86, 4]
 S.append(qslide('ex', 9, 'Describing the features of a distribution from a histogram', 'Cambridge · Example 9',
     'The histogram shows the gestation period (completed weeks) for a sample for 1000 babies born in Australia one year. Describe this histogram in terms of shape, centre, spread and outliers.',
     KI_SOCS,
-    [('<b>S</b> The bars tail off to the left: a long lower tail.', 'hq:h9:0,1,2,3,4,5,6,7,8,9,10'),
-     ('<b>O</b> Values below 34 weeks look small next to the rest: possible outliers.', 'hq:h9:0,1,2,3,4,5,6,7,8'),
-     ('<b>C</b> The middle of the data is around 38–39 weeks.', 'hm:h9:13,14'),
-     ('<b>S</b> Values run from 25 to 42 weeks; most lie between 36 and 41.', 'hq:h9:11,12,13,14,15,16')],
-    'The distribution is <b>negatively skewed</b>. There are <b>possible outliers below 34 weeks</b>. It is centred at around <b>38–39 weeks</b>, the median. The range is <b>17 weeks</b> (25 to 42); most values lie between 36 and 41 weeks.',
+    ['<div class="zpart s2tpl" id="tp9"><span class="zok">✓ Answer</span> The distribution is <span class="s2b" data-b="0">negatively</span> skewed. There are <span class="s2b" data-b="1">possible outliers below 34 weeks</span>. It is centred at around <span class="s2b" data-b="2">38–39 weeks</span>, the median. The values range from <span class="s2b" data-b="3">25</span> to <span class="s2b" data-b="3">42</span> weeks; most lie between <span class="s2b" data-b="3">36</span> and <span class="s2b" data-b="3">41</span> weeks.</div>',
+     ('<b>S</b> The bars tail off to the left: a long lower tail.', 'bf:tp9:0 hq:h9:0,1,2,3,4,5,6,7,8,9,10'),
+     ('<b>O</b> Bars below 34 weeks are tiny next to the rest.', 'bf:tp9:0,1 hq:h9:0,1,2,3,4,5,6,7,8'),
+     ('<b>C</b> The middle (500th baby) falls in 38–39 weeks.', 'bf:tp9:0-2 hm:h9:13,14'),
+     ('<b>S</b> Lowest bar 25, highest 42; the tall bars 36 to 41.', 'bf:tp9:0-3 hq:h9:11,12,13,14,15,16')],
+    '', 
     CG + ', 1C Example 9 (pp. 23–24); Cambridge’s solution set out in SOCS order; histogram redrawn',
-    fig=hist('h9', 25, 1, GV, 300, 50, 'Gestation period (weeks)', 'Frequency'), figw='1.15fr', cls='tight'))
+    fig=hist('h9', 25, 1, GV, 300, 50, 'Gestation period (weeks)', 'Frequency'), figw='1.15fr', cls='tight', ans_do='bf:tp9:0-3 hq:h9:11,12,13,14,15,16 bok:tp9').replace('<span class="zok">✓ Answer</span> </div>', '</div>').replace('class="st zs final "', 'class="st zs final s2hid"'))
 
 # ---- NL: dot plots and stem plots
 DPV = [2, 3, 3, 4, 4, 4, 4, 5, 5, 6, 7]
@@ -465,8 +471,8 @@ S.append(nl_slide('Dot plots and stem plots',
     '<div class="cols" style="grid-template-columns:1fr 1fr"><div class="col"><h2>Dot plot</h2>'
     + f'<svg class="zdp zbuild" id="nld" data-v="{json.dumps(sorted(DPV))}" data-lo="1" data-hi="8" data-xl="board games owned" viewBox="0 0 640 262"></svg>'
     + st('A number line with one dot per value. Equal values <b>stack</b>. Best for small, discrete data sets.', do='xd:nld:0-10') + '</div>'
-    '<div class="col"><h2>Stem plot</h2>' + stem('nls', [('4', '3 5 5 5 7'), ('5', '1 3 6 8'), ('6', '7 9'), ('7', '1'), ('8', '0 1 3 9 9'), ('9', '1 4')], 'Key: 4 | 3 = 43').replace('class="zstem"', 'class="zstem zbuild zsm"')
-    + st('Stem = leading digits, leaf = last digit. Leaves in order, empty stems kept, <b>always a key</b>.', do='xl:nls:0-18') + '</div></div>',
+    '<div class="col"><h2>Stem plot</h2>' + stem('nls', [('4', '3 5 5 5 7'), ('5', '1 3 6 8'), ('6', '7 9'), ('7', '1'), ('8', '0 1 3 9 9'), ('9', '1 4')], 'Key: 4 | 3 = 43', build=True).replace('class="zstem"', 'class="zstem zbuild"')
+    + st('Stem = leading digits, leaf = last digit. Leaves in order, empty stems kept.', do='xl:nls:0-18') + st('<b>Always a key</b>: 4 | 3 = 43.', do='xl:nls:0-18 sk:nls') + '</div></div>',
     CG + ', 1D pp. 28–31 · ' + ED + ', 1C (example plots)'))
 
 # ---- Example 10 (Cambridge)
@@ -490,7 +496,7 @@ S.append(qslide('yt', 10, 'Constructing a dot plot', 'Edrolo 1C WE1',
     KI_DOT, [], None, ED + ', 1C Worked example 1. Working by teacher.',
     parts=[('a.', 'Construct a dot plot to display this data.',
             ['Number line 0 to 5, labelled <i>number of pets</i>.',
-             ('0: 2 dots · 1: 4 dots · 2: 3 dots · 3: 2 dots · 5: 1 dot', ALLP)], 'Dot plot (left): 12 dots.', ALLP),
+             ('Dots: 0→2 · 1→4 · 2→3 · 3→2 · 5→1', ALLP)], 'Dot plot (left).', ALLP),
            ('b.', 'What was the modal number of pets owned by families that Sophie surveyed?',
             [('The tallest stack: 4 families own 1 pet.', ALLP + f' xm:y10:{sk(PET, lambda v: v == 1)}')], '<b>1 pet</b>', ALLP + f' xm:y10:{sk(PET, lambda v: v == 1)}')],
     fig=f'<svg class="zdp zbuild" id="y10" data-v="{json.dumps(sorted(PET))}" data-lo="0" data-hi="6" data-xl="number of pets" viewBox="0 0 640 262"></svg>', figw='1.1fr'))
@@ -514,11 +520,12 @@ S.append(qslide('ex', 11, 'Constructing a stem plot', 'Cambridge · Example 11',
     ['Values run from 1 to 55: stems 0 to 5 (units, tens, …, fifties).',
      ('First values, in the order given: 26 → stem 2, leaf 6 · 3 → stem 0, leaf 3 …', f'xl:u11:{uk(range(8))} tc:ur:{dk(12, range(8))}'),
      ('Every value gets a leaf on its stem; stem 4 stays empty.', f'xl:u11:{uk(range(23))} tc:ur:{dk(12, range(23))}'),
-     ('Order the leaves on each stem; add the variable and a key.', f'xl:u11:{uk(range(23))} tc:ur:{dk(12, range(23))} xl:o11:0-22')],
+     ('Order the leaves on each stem, smallest first.', f'xl:u11:{uk(range(23))} tc:ur:{dk(12, range(23))} xl:o11:0-22'),
+     ('Write the key and variable: 1 | 2 = 12, <i>rate</i> (%)', f'xl:u11:{uk(range(23))} tc:ur:{dk(12, range(23))} xl:o11:0-22 sk:o11')],
     'The ordered stem plot (right), key 1 | 2 = 12%.', CG + ', 1D Example 11 (p. 30)',
-    fig='<div class="s2two"><div><div class="zsc">unordered</div>' + stem('u11', urow, '&nbsp;').replace('class="zstem"', 'class="zstem zbuild zsm"')
-        + '</div><div><div class="zsc">ordered</div>' + stem('o11', orow, 'Key: 1 | 2 = 12 &nbsp; <i>rate</i> (%)').replace('class="zstem"', 'class="zstem zbuild zsm"') + '</div></div>',
-    figw='1.15fr', ans_do=f'xl:u11:{uk(range(23))} tc:ur:{dk(12, range(23))} xl:o11:0-22'))
+    fig='<div class="s2two"><div><div class="zsc">unordered</div>' + stem('u11', urow, '&nbsp;').replace('class="zstem"', 'class="zstem zbuild" data-max="30"').replace('<div class="zkey">&nbsp;</div>', '<div class="zkey" style="visibility:hidden">&nbsp;</div>')
+        + '</div><div><div class="zsc">ordered</div>' + stem('o11', orow, 'Key: 1 | 2 = 12 &nbsp; <i>rate</i> (%)', build=True).replace('class="zstem"', 'class="zstem zbuild" data-max="30"') + '</div></div>',
+    figw='1.15fr', ans_do=f'xl:u11:{uk(range(23))} tc:ur:{dk(12, range(23))} xl:o11:0-22 sk:o11'))
 
 # ---- You try 11: Edrolo 1C WE2
 EX = [55, 68, 76, 90, 83, 89, 75, 66, 59, 84, 48, 62, 58, 95, 80, 77, 61, 92, 99, 63, 84, 65, 70, 81, 96]
@@ -529,12 +536,12 @@ S.append(qslide('yt', 11, 'Constructing a stem plot', 'Edrolo 1C WE2',
     'Ms Smyth’s maths class of 25 students sat their end-of-year exam. Their results (%) were recorded.' + dlist('ex', EX, 13),
     KI_STEM, [], None, ED + ', 1C Worked example 2. Working by teacher.',
     parts=[('a.', 'Construct a stem plot to display this data.',
-            ['Values from 48 to 99: stems 4 to 9 (tens), leaves = ones; key 4 | 8 = 48%.', ('Place each leaf, then order each stem.', EALL)],
-            'Ordered stem plot (left).', EALL),
+            ['Values from 48 to 99: stems 4 to 9 (tens), leaves = ones.', ('Place each leaf, then order each stem.', EALL), ('Write the key: 4 | 8 = 48%', EALL + ' sk:y11')],
+            'Ordered stem plot (left).', EALL + ' sk:y11'),
            ('b.', 'How many students scored above 70% on the exam?',
-            [('Stem 7 leaves above 0, and every leaf on stems 8 and 9: 3 + 6 + 5', EALL + f' lx:y11:{above}')],
-            '<b>14 students</b>', EALL + f' lx:y11:{above}')],
-    fig=stem('y11', erow, 'Key: 4 | 8 = 48%').replace('class="zstem"', 'class="zstem zbuild"'), figw='.95fr', cls='tight'))
+            [('Leaves 5, 6, 7 on stem 7, and stems 8 and 9: 3 + 6 + 5', EALL + f' sk:y11 lx:y11:{above}')],
+            '<b>14 students</b>', EALL + f' sk:y11 lx:y11:{above}')],
+    fig=stem('y11', erow, 'Key: 4 | 8 = 48%', build=True).replace('class="zstem"', 'class="zstem zbuild"'), figw='.95fr', cls='tight'))
 
 # ---- NL: logs are powers of ten
 S.append(nl_slide('Logs are just powers of 10',
@@ -637,7 +644,7 @@ S.append(qslide('exit', '3 of 3', 'Show what you know', 'VCAA 2019 Exam 1 Q3',
 # ---- check-in + coursework
 S.append(f'<section class="slide z chk">{bar("Check-in", "How did you go?")}<p class="lead zlead">Read each one. If you can do it, tick it on your worksheet. <span class="hint">Click a box to tick it.</span></p>'
          f'<div class="zchk">{"".join(f"<div class=zci><span class=\"zcb ix\"></span>{x}</div>" for x in SC)}</div>{foot("Success criteria: one per worked example")}</section>')
-CWR = open(os.path.join(SH, 'cwr.html')).read(); CWL = open(os.path.join(SH, 'cwl.html')).read()
+CWR = open(os.path.join(SH, 'cwr.html')).read().replace('>Exercise 9A: Collecting representative data<',' textLength="344" lengthAdjust="spacingAndGlyphs">Exercise 1C: Displaying and describing numerical data<'); CWL = open(os.path.join(SH, 'cwl.html')).read()
 S.append(f'<section class="slide cwk">{bar("1C–1E", "Coursework · Exercises 1C, 1D, 1E")}<div class="cwgrid"><div class="cwl2">'
          '<table class="cw"><thead><tr><th>Do</th><th>Questions</th></tr></thead><tbody>'
          '<tr><th>Cambridge Exercise 1C</th><td>Q1–12</td></tr>'
@@ -657,8 +664,8 @@ S2CSS = r'''<style>
 table.zft{border-collapse:collapse;font-size:21px;margin:auto}
 table.zft th,table.zft td{border:1.5px solid #000;padding:4px 14px;text-align:center}table.zft th{background:#eee}
 table.zft.zfill th{border-color:#d00000!important}
-.zstem.zsm table{font-size:22px!important}.s2two .zstem td.zlv{min-width:0}.s2two .lv{min-width:14px;margin-right:4px}.zstem.zsm .zkey{font-size:16px}
-.s2two{display:flex;gap:24px;align-items:flex-start;justify-content:center}
+.zstem.zsm table{font-size:22px!important}.s2two .zstem td.zlv{min-width:0}.s2two>div{flex:1;min-width:0}#u11,#o11{--zsf:27px!important}#o11 .zkey{white-space:nowrap}.s2two .lv{min-width:14px;margin-right:4px}.zstem.zsm .zkey{font-size:16px}
+.s2two{display:flex;gap:14px;align-items:flex-start;justify-content:center}
 .s2shp{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;flex:1;margin:12px 0}
 .s2shp .zpc .st{text-align:center;font-size:18px!important;color:#000;white-space:normal}.s2shp svg{width:100%;height:170px}
 .zhg.zmini text{display:none}.s2c{font-size:18px;margin-top:4px}
@@ -673,17 +680,50 @@ table.s2lt{font-size:26px;margin:22px auto}table.s2lt td.s2h{color:transparent;t
 .zmcq svg.zbd{max-height:410px!important}
 .slide.tight table.zft td,.slide.tight table.zft th{padding:2px 12px}
 .slide.tight .zb>div.zfig{padding:8px 14px}
+.s2tpl{border:2px dashed #999;padding:8px 12px;font-size:21px;line-height:1.55;margin-bottom:6px;transition:all .3s}
+.s2tpl .s2b{display:inline-block;min-width:70px;border-bottom:2px solid #333;text-align:center;color:transparent}
+.s2tpl .s2b.xon{color:#d00000;font-weight:bold}
+.s2tpl.xon{border:3px solid #1a7f1a;background:#eaf6ea}.s2tpl .zok{visibility:hidden}.s2tpl.xon .zok{visibility:visible}
+.st.s2hid{display:none!important;height:0!important;min-height:0!important;margin:0!important;padding:0!important;border:0!important;overflow:hidden}
+
+/* ==== STEM PLOT STANDARD (17 Nov): fixed cells, same font for stems+leaves, highlights never change size ==== */
+.zstem{display:flex;flex-direction:column;align-items:center}
+.zstem.zstem.zstem.zstem table,.zstem.zstem.zstem.zstem table{border-collapse:collapse;font-size:var(--zsf,44px)!important;font-variant-numeric:tabular-nums;line-height:1}
+.zstem th,.zstem.zstem.zstem.zstem th{font-size:.42em!important;font-weight:bold;padding:0 .5em .25em!important;border-bottom:3px solid #000;text-align:left}
+.zstem th:first-child{text-align:right}
+.zstem td,.zstem.zstem.zstem.zstem td{padding:.06em 0!important;height:1.3em;vertical-align:middle}
+.zstem td.zst,.zstem.zstem.zstem.zstem td.zst{font-weight:bold;text-align:right;padding:0 .35em 0 .2em!important;border-right:3px solid #000;width:auto}
+.zstem td.zlv,.zstem.zstem.zstem.zstem td.zlv{padding:0 .2em 0 .3em!important;min-width:0!important;white-space:nowrap;text-align:left}
+.zstem .lv,.zstem.zstem.zstem.zstem .lv{display:inline-block;box-sizing:border-box;width:.95em!important;min-width:0!important;height:1.2em;line-height:1.2em;margin:0 .07em 0 0!important;padding:0!important;text-align:center;vertical-align:middle;
+  border-radius:.14em;transform:none!important;font-size:1em!important;transition:background-color .3s,color .3s,opacity .3s;position:relative}
+.zstem .lv.mid,.zstem .lv.q{transform:none!important;color:#fff!important;opacity:1!important;text-decoration:none!important}.zstem .lv.mid{background:#d00000!important}.zstem .lv.q{background:#1f5fbf!important}
+.zstem .lv.ex{outline:.07em solid #d00000;outline-offset:-.07em}
+.zstem .lv.mid+.lv.mid::before,.zstem .lv.q+.lv.q::before{left:calc(-.035em - 1.5px)!important;width:3px!important;top:-.12em!important;bottom:-.12em!important;border-radius:0!important}
+.zstem .lv[data-c]::after{font-size:max(10px,.3em)!important;width:auto!important;min-width:1.25em;padding:0 .2em;box-sizing:border-box;height:1.2em!important;line-height:1.2em!important;border-radius:.6em!important;top:auto!important;bottom:calc(100% + 1px)!important;left:50%!important;right:auto!important;transform:translateX(-50%);z-index:2}
+.zstem .zkey,.zstem.zstem.zstem.zstem .zkey{font-size:max(20px,calc(var(--zsf,44px)*.55))!important;margin-top:.35em!important;color:#000;font-weight:bold;border:2px solid #000;border-radius:6px;padding:.1em .6em;background:#fff;transition:opacity .3s}
+.slide.apkb .zfig svg.zbx{flex:1 1 0!important;min-height:0!important;max-height:210px!important}
+.zstem.zcnt td{height:1.5em!important;vertical-align:bottom!important}.zstem.zcnt td.zst{padding-bottom:.08em!important}.zstem.zcnt .lv{margin-bottom:.06em!important}
+.slide.apks .zfig{flex-direction:row!important;align-items:center!important;gap:18px;padding-top:6px!important;justify-content:center!important}.slide.apks .zfig .zstem{flex:none}.slide.apks .zw .st.zs{font-size:19px!important;margin:3px 0!important;line-height:1.55}.slide.apks .zfig svg.zbx{flex:1 1 0!important;min-width:0;max-height:none!important;width:auto}
+.zstem .zkey.zkh{opacity:0}.zstem .zkey.zkh.on{opacity:1}
+.zstem .zkey.zkh.on{animation:zkp .6s}@keyframes zkp{0%{background:#fff3a8}100%{background:#fff}}
+.slide.z.s2hg .col .st.zs{flex-shrink:0!important;height:auto!important;font-size:20px!important;margin:0 0 4px!important;padding:3px 8px!important;line-height:1.3!important}
+.s2hg svg.zhg{width:100%!important;height:auto!important;max-height:none!important}
+.s2hg .col{justify-content:flex-start!important;gap:4px!important}
+.slide.z.s2hg .col .st.zs.final{margin-top:8px!important}
 </style>'''
 S2JS = r'''<script>
 window.addEventListener('load',()=>{
  const rng=s=>{const o=[];(s||'').split(',').forEach(p=>{if(p==='')return;if(p.includes('-')&&!p.startsWith('-')){const [a,b]=p.split('-').map(Number);for(let i=a;i<=b;i++)o.push(i)}else o.push(+p)});return o};
- function x2(sl){sl.querySelectorAll('.xon').forEach(e=>e.classList.remove('xon'));sl.querySelectorAll('.xm').forEach(e=>e.classList.remove('xm'));sl.querySelectorAll('table.s2lt tr.on').forEach(e=>e.classList.remove('on'));
+ function x2(sl){sl.querySelectorAll('.zkey.zkh.on').forEach(e=>e.classList.remove('on'));sl.querySelectorAll('.xon').forEach(e=>e.classList.remove('xon'));sl.querySelectorAll('.xm').forEach(e=>e.classList.remove('xm'));sl.querySelectorAll('table.s2lt tr.on').forEach(e=>e.classList.remove('on'));
   sl.querySelectorAll('.st[data-do].show').forEach(s=>s.dataset.do.split(' ').forEach(a=>{const [op,id,x]=a.split(':');const el=document.getElementById(id);if(!el)return;
    if(op==='xb')rng(x).forEach(i=>el.querySelector(`rect.b[data-i="${i}"]`)?.classList.add('xon'));
    if(op==='xd')rng(x).forEach(k=>el.querySelector(`.dot[data-k="${k}"]`)?.classList.add('xon'));
    if(op==='xm')rng(x).forEach(k=>el.querySelector(`.dot[data-k="${k}"]`)?.classList.add('xm'));
    if(op==='xl'){const L=[...el.querySelectorAll('.lv')];rng(x).forEach(k=>L[k]?.classList.add('xon'))}
    if(op==='xs')el.querySelectorAll('tr')[+x]?.classList.add('on');
+   if(op==='sk')el.querySelector('.zkey')?.classList.add('on');
+   if(op==='bf')rng(x).forEach(k=>el.querySelectorAll(`[data-b="${k}"]`).forEach(e=>e.classList.add('xon')));
+   if(op==='bok')el.classList.add('xon');
   }))}
  document.querySelectorAll('.slide.z').forEach(x2);
  new MutationObserver(ms=>{const seen=new Set();ms.forEach(m=>{const t=m.target;if(t.classList&&t.classList.contains('st')){const sl=t.closest('.slide.z');if(sl&&!seen.has(sl)){seen.add(sl);x2(sl)}}})}).observe(document.body,{subtree:true,attributes:true,attributeFilter:['class']});
@@ -702,6 +742,12 @@ window.addEventListener('load',()=>{
    O.innerHTML=`Weight = <b>${fmt(w)} kg</b><br>log₁₀(weight) = <b style="color:#d00000">${b.toFixed(2)}</b><br>Check: 10<sup>${b.toFixed(2)}</sup> = ${fmt(w)}<br><span style="font-size:17px">On the ordinary scale the mouse, cat and person all sit on top of each other at 0. On the log scale they spread out.</span>`};
   r.oninput=draw;sl.querySelectorAll('.zbtns button').forEach(x=>x.onclick=e=>{e.stopPropagation();r.value=Math.round(Math.log10(+x.dataset.w)*100);draw()});draw()});
 });
+// ---- stem plot standard: biggest font (same for stems and leaves) that fits the figure box; key scales with it
+function zstemfit(){document.querySelectorAll('.st[data-do]').forEach(t=>t.dataset.do.split(' ').forEach(a=>{const [op,id]=a.split(':');if(op==='ln'){const z=document.getElementById(id);if(z&&z.classList.contains('zstem'))z.classList.add('zcnt')}}));document.querySelectorAll('.slide.z').forEach(sl=>{const st=[...sl.querySelectorAll('.zstem')];if(!st.length)return;const was=sl.classList.contains('on');sl.classList.add('on');
+  st.forEach(z=>{const fg=z.closest('.zfig')||z.parentNode;let f=z.dataset.max?+z.dataset.max:48;const bx=fg.querySelector('svg.zbx');const row=getComputedStyle(fg).flexDirection==='row';const ok=()=>(!bx||(row?bx.getBoundingClientRect().width>=300:bx.getBoundingClientRect().height>=110))&&fg.scrollHeight<=fg.clientHeight+1&&z.scrollWidth<=fg.clientWidth-8&&z.offsetWidth<=fg.clientWidth-8;
+    z.style.setProperty('--zsf',f+'px');while(!ok()&&f>16){f-=1;z.style.setProperty('--zsf',f+'px')}});
+  if(!was)sl.classList.remove('on')})}
+document.fonts.ready.then(()=>setTimeout(zstemfit,900));
 </script>'''
 S[-1] = S[-1][:-len('</section>')] + S2CSS + S2JS + '</section>'
 

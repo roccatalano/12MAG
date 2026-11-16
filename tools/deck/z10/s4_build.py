@@ -43,14 +43,14 @@ def dotplot(id_, vals, lo, hi, xl=''):
 def hist(id_, start, w, v, ymax, ystep, xl='', yl='Frequency'):
     cfg = dict(start=start, w=w, v=v, ymax=ymax, ystep=ystep, xl=xl, yl=yl)
     return f"<svg class=\"zhg\" id=\"{id_}\" data-cfg='{json.dumps(cfg)}' viewBox=\"0 0 600 330\"></svg>"
-def stem(id_, rows, key, head=('Stem', 'Leaf')):
+def stem(id_, rows, key, head=('Stem', 'Leaf'), build=False):
     k = 0; tr = ''
     for s, leaves in rows:
         cells = ''
         for l in leaves.split():
             cells += f'<span class="lv" data-k="{k}">{l}</span>'; k += 1
         tr += f'<tr><td class="zst">{s}</td><td class="zlv">{cells}</td></tr>'
-    return f'<div class="zstem" id="{id_}"><table><tr><th>{head[0]}</th><th>{head[1]}</th></tr>{tr}</table><div class="zkey">{key}</div></div>'
+    return f'<div class="zstem" id="{id_}"><table><tr><th>{head[0]}</th><th>{head[1]}</th></tr>{tr}</table><div class="zkey' + (' zkh' if build else '') + f'">{key}</div></div>'
 def tiles(t, orig):
     srt = sorted(orig, key=float)
     return '<div class="tl" data-t="%s">%s</div>' % (t, ''.join(f'<span class="mtile" data-o="{o}" data-s="{s}">{o}</span>' for o, s in zip(orig, srt)))
@@ -212,9 +212,10 @@ KI_P = r'Each of the four sections holds about <b>25%</b> of the data.<div class
 KI_S = r'SOCS: <b>S</b>hape · <b>O</b>utliers · <b>C</b>entre (median) · <b>S</b>pread (IQR, range)'
 SOCS = lambda s, o, c, sp: (f'The distribution is {s}.<br>There {o}.<br>The distribution is centred at {c}, the median.<br>{sp}')
 
-S.append(f'<section class="slide title cover"><div class="code">S4</div><h1>The five-number summary and the boxplot</h1>'
-         f'<div class="unit">12MAG · Unit 3 · AOS 1 Data analysis · Lesson 4</div>'
-         f'<div class="pp">{CG} · 1G The five-number summary and the boxplot (pp. 61–69)</div><span class="pg" style="display:none"></span></section>')
+S.append(f'<section class="slide title cover"><h1>The five-number summary and the boxplot</h1>'
+         f'<div class="unit">12MAG · Unit 3 · AOS 1 Data analysis</div>'
+         f'<div class="pp" style="font-size:22px;margin-top:14px">{CG}</div>'
+         f'<ul style="list-style:none;padding:0;margin:10px 0 0;font-size:22px;line-height:1.5;text-align:left"><li>1G The five-number summary and the boxplot (pp. 61–69)</li></ul><span class="pg" style="display:none"></span></section>')
 LI = ['To be able to construct the boxplot for displaying the distribution of a numerical data.', 'To be able to define and identify outliers.',
       'To be able to construct both simple boxplots and boxplots with outliers.', 'To be able to determine the features of a distribution from a boxplot.',
       'To be able to use a CAS calculator to construct a boxplot.']
@@ -240,7 +241,7 @@ S.append(qslide('apk', '1 of 3', 'Year 11 skills: five-number summary and boxplo
            ('Scale 15 to 70. Box from 20 to 34, line at 24.5', 'lm:pa:9,10 lq:pa:4,5,14,15 bx:pab:axis,box,med'),
            ('Whiskers out to 17 and 66', 'lm:pa:9,10 lq:pa:4,5,14,15 bx:pab:wl,wu')],
     '<b>17, 20, 24.5, 34, 66</b>; boxplot drawn', CG1 + ', Chapter 2 skills checklist 2H #14 (data in a stem plot by the teacher). Working by teacher.',
-    fig=stem('pa', PARTY, 'Key: 1 | 7 = 17') + bplot('pab', 15, 70, 5, 10, (17, 20, 24.5, 34, 66), xl='age (years)', build=True), figw='.95fr', cls='tight apkb'))
+    fig=stem('pa', PARTY, 'Key: 1 | 7 = 17') + bplot('pab', 15, 70, 5, 10, (17, 20, 24.5, 34, 66), xl='age (years)', build=True), figw='1.45fr', cls='tight apkb apks'))
 S.append(qslide('apk', '2 of 3', 'Year 11 skills: outliers from the fences', 'Cambridge U1&amp;2 · 2H #15',
     APKQ + 'Calculate the values of the upper and lower fences, and use these to find any outliers in the ages of the people who attended the party (from above).',
     KI_F, [(r'$\text{IQR} = 34 - 20 = 14$', 'lq:pb:4,5,14,15'),
@@ -250,7 +251,7 @@ S.append(qslide('apk', '2 of 3', 'Year 11 skills: outliers from the fences', 'Ca
            ('Upper whisker stops at 45, the largest value that is not an outlier', 'lq:pb:4,5,14,15 lx:pb:18,19 bx:pbb:fl,fu,out,wu')],
     'LF $= -1$, UF $= 55$. The outliers are <b>56 and 66</b>.', CG1 + ', Chapter 2 skills checklist 2H #15. Working by teacher.',
     fig=stem('pb', PARTY, 'Key: 1 | 7 = 17') + bplot('pbb', -5, 70, 5, 10, (17, 20, 24.5, 34, 45), out=(56, 66), xl='age (years)', hide=('out', 'wu'),
-        fences=(('fl', -1, 'LF = −1'), ('fu', 55, 'UF = 55'))), figw='.95fr', cls='tight apkb'))
+        fences=(('fl', -1, 'LF = −1'), ('fu', 55, 'UF = 55'))), figw='1.75fr', cls='tight apkb apks'))
 OPTDIST['3 of 3'] = [None] * 5
 S.append(qslide('apk', '3 of 3', 'A real VCAA question you can already do', 'VCAA 2017 Exam 1 Q2 (adapted)',
     'The boxplot shows the distribution of the <i>reaction time</i> (milliseconds), of 256 firefighters.'
@@ -299,7 +300,7 @@ S.append(qslide('ex', 22, 'Constructing a boxplot from a five-number summary', '
      ('Box from $Q_1 = 66$ to $Q_3 = 75$; line at $M = 73$', 'lx:s22:0,22 lq:s22:5,17 lm:s22:11 bx:b22:axis,box,med'),
      ('Whiskers out to 52 and 77', 'lx:s22:0,22 lq:s22:5,17 lm:s22:11 bx:b22:axis,box,med,wl,wu')],
     'Boxplot drawn (52, 66, 73, 75, 77)', CG + ', 1G Example 22',
-    fig=stem('s22', life, 'Key: 5 | 2 = 52 years') + bplot('b22', 50, 80, 1, 5, (52, 66, 73, 75, 77), xl='Life expectancy (years)', build=True), figw='1fr', cls='tight apkb'))
+    fig=stem('s22', life, 'Key: 5 | 2 = 52 years') + bplot('b22', 50, 80, 1, 5, (52, 66, 73, 75, 77), xl='Life expectancy (years)', build=True), figw='1.75fr', cls='tight apkb apks'))
 w4 = [('0', '1 2 3 5 5 9'), ('1', '0 0 1 5 8 9'), ('2', '1 2 3 3 5'), ('3', '3 7 9')]
 S.append(qslide('yt', 22, 'Constructing a boxplot from a five-number summary', 'Edrolo 1E WE4',
     'The five-number summary for the following stem plot is: 1, 7, 16.5, 23, 39<br>Construct a boxplot using the data.', KI_5,
@@ -465,7 +466,7 @@ S.append(qslide('exit', '2 of 2', 'Show what you know', 'VCAA 2021 Exam 2 Q1e',
 # ---- check-in, coursework
 S.append(f'<section class="slide z chk">{bar("Check-in", "How did you go?")}<p class="lead zlead">Read each one. If you can do it, tick it on your worksheet. <span class="hint">Click a box to tick it.</span></p>'
          f'<div class="zchk">{"".join(f"<div class=zci><span class=\"zcb ix\"></span>{x}</div>" for x in SC)}</div>{foot("Success criteria: one per worked example")}</section>')
-CWR = open(os.path.join(SH, 'cwr.html')).read(); CWL = open(os.path.join(SH, 'cwl.html')).read()
+CWR = open(os.path.join(SH, 'cwr.html')).read().replace('>Exercise 9A: Collecting representative data<',' textLength="344" lengthAdjust="spacingAndGlyphs">Exercise 1G: The five-number summary and the boxplot<'); CWL = open(os.path.join(SH, 'cwl.html')).read()
 S.append(f'<section class="slide cwk">{bar("1G", "Coursework · Exercise 1G")}<div class="cwgrid"><div class="cwl2">'
          '<table class="cw"><thead><tr><th>Do</th><th>Questions</th></tr></thead><tbody>'
          '<tr><th>Cambridge Exercise 1G (part 1)</th><td>Q1–10</td></tr>'
@@ -739,6 +740,26 @@ table.z5b{font-size:18px;margin:6px 0}
 
 table.zfill th,table.zfill td{border:1.5px solid #d00000!important;min-width:56px;height:34px}
 
+/* ==== STEM PLOT STANDARD (17 Nov): fixed cells, same font for stems+leaves, highlights never change size ==== */
+.zstem{display:flex;flex-direction:column;align-items:center}
+.zstem.zstem.zstem.zstem table,.zstem.zstem.zstem.zstem table{border-collapse:collapse;font-size:var(--zsf,44px)!important;font-variant-numeric:tabular-nums;line-height:1}
+.zstem th,.zstem.zstem.zstem.zstem th{font-size:.42em!important;font-weight:bold;padding:0 .5em .25em!important;border-bottom:3px solid #000;text-align:left}
+.zstem th:first-child{text-align:right}
+.zstem td,.zstem.zstem.zstem.zstem td{padding:.06em 0!important;height:1.3em;vertical-align:middle}
+.zstem td.zst,.zstem.zstem.zstem.zstem td.zst{font-weight:bold;text-align:right;padding:0 .35em 0 .2em!important;border-right:3px solid #000;width:auto}
+.zstem td.zlv,.zstem.zstem.zstem.zstem td.zlv{padding:0 .2em 0 .3em!important;min-width:0!important;white-space:nowrap;text-align:left}
+.zstem .lv,.zstem.zstem.zstem.zstem .lv{display:inline-block;box-sizing:border-box;width:.95em!important;min-width:0!important;height:1.2em;line-height:1.2em;margin:0 .07em 0 0!important;padding:0!important;text-align:center;vertical-align:middle;
+  border-radius:.14em;transform:none!important;font-size:1em!important;transition:background-color .3s,color .3s,opacity .3s;position:relative}
+.zstem .lv.mid,.zstem .lv.q{transform:none!important;color:#fff!important;opacity:1!important;text-decoration:none!important}.zstem .lv.mid{background:#d00000!important}.zstem .lv.q{background:#1f5fbf!important}
+.zstem .lv.ex{outline:.07em solid #d00000;outline-offset:-.07em}
+.zstem .lv.mid+.lv.mid::before,.zstem .lv.q+.lv.q::before{left:calc(-.035em - 1.5px)!important;width:3px!important;top:-.12em!important;bottom:-.12em!important;border-radius:0!important}
+.zstem .lv[data-c]::after{font-size:max(10px,.3em)!important;width:auto!important;min-width:1.25em;padding:0 .2em;box-sizing:border-box;height:1.2em!important;line-height:1.2em!important;border-radius:.6em!important;top:auto!important;bottom:calc(100% + 1px)!important;left:50%!important;right:auto!important;transform:translateX(-50%);z-index:2}
+.zstem .zkey,.zstem.zstem.zstem.zstem .zkey{font-size:max(20px,calc(var(--zsf,44px)*.55))!important;margin-top:.35em!important;color:#000;font-weight:bold;border:2px solid #000;border-radius:6px;padding:.1em .6em;background:#fff;transition:opacity .3s}
+.slide.apkb .zfig svg.zbx{flex:1 1 0!important;min-height:0!important;max-height:210px!important}
+.zstem.zcnt td{height:1.5em!important;vertical-align:bottom!important}.zstem.zcnt td.zst{padding-bottom:.08em!important}.zstem.zcnt .lv{margin-bottom:.06em!important}
+.slide.apks .zfig{flex-direction:row!important;align-items:center!important;gap:18px;padding-top:6px!important;justify-content:center!important}.slide.apks .zfig .zstem{flex:none}.slide.apks .zw .st.zs{font-size:19px!important;margin:3px 0!important;line-height:1.55}.slide.apks .zfig svg.zbx{flex:1 1 0!important;min-width:0;max-height:none!important;width:auto}
+.zstem .zkey.zkh{opacity:0}.zstem .zkey.zkh.on{opacity:1}
+.zstem .zkey.zkh.on{animation:zkp .6s}@keyframes zkp{0%{background:#fff3a8}100%{background:#fff}}
 </style>'''
 
 JS = r'''<script>
@@ -764,7 +785,7 @@ document.querySelectorAll('svg.zdp').forEach(drawDot);document.querySelectorAll(
 function zApply(sl,anim){const tok=sl._zt=(sl._zt||0)+1;const T=f=>()=>{if(sl._zt===tok)f()};
   sl.querySelectorAll('svg.zdp').forEach(sv=>{sv.querySelectorAll('.dot').forEach(d=>{d.setAttribute('fill','#555');d.removeAttribute('stroke')});sv.querySelectorAll('.dn').forEach(t=>t.setAttribute('opacity',0));sv.querySelector('.mk').innerHTML=''});
   sl.querySelectorAll('svg.zhg').forEach(sv=>{sv.querySelectorAll('rect.b').forEach(r=>r.setAttribute('fill','#fff'));sv.querySelectorAll('.cu').forEach(t=>t.setAttribute('opacity',0))});
-  sl.querySelectorAll('.lv').forEach(l=>l.className='lv');
+  sl.querySelectorAll('.lv').forEach(l=>l.className='lv');sl.querySelectorAll('.zkey.zkh').forEach(k=>k.classList.remove('on'));
   [...sl.querySelectorAll('.st[data-do].show')].forEach(s=>{const last=s===anim;s.dataset.do.split(' ').forEach(a=>{const [op,id,x,y,c]=a.split(':');const el=document.getElementById(id);if(!el)return;
     const L=[...el.querySelectorAll('.lv')],ks=(x||'').split(',').map(Number);
     if(op==='dn'){const n=+x;for(let k=0;k<n;k++){const go=()=>{el.querySelector(`.dot[data-k="${k}"]`).setAttribute('fill','#1f5fbf');el.querySelector(`.dn[data-k="${k}"]`).setAttribute('opacity',1)};last?setTimeout(T(go),k*(1600/n)):go()}}
@@ -773,6 +794,7 @@ function zApply(sl,anim){const tok=sl._zt=(sl._zt||0)+1;const T=f=>()=>{if(sl._z
     if(op==='hc'){el.querySelectorAll('.cu').forEach((t,i)=>{const go=()=>t.setAttribute('opacity',1);last?setTimeout(T(go),i*260):go()})}
     if(op==='hm'||op==='hq')ks.forEach(i=>el.querySelector(`rect.b[data-i="${i}"]`).setAttribute('fill',op==='hm'?'#f6b3b3':'#b9cff3'));
     if(op==='lb')L.slice(+x,+y+1).forEach(l=>l.classList.add(c));
+    if(op==='sk')el.querySelector('.zkey').classList.add('on');
     if(op==='lq')ks.forEach(k=>L[k].classList.add('q'));
     if(op==='lm')ks.forEach(k=>L[k].classList.add('mid'));
     if(op==='lx')ks.forEach(k=>L[k].classList.add('ex'));
@@ -857,6 +879,12 @@ document.querySelectorAll('.ztime').forEach(t=>{let left=+t.dataset.s,h=null;con
 // CAS tabs
 document.querySelectorAll('.ztabs').forEach(tb=>tb.querySelectorAll('button').forEach(b=>b.onclick=e=>{e.stopPropagation();tb.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));
   tb.parentNode.querySelectorAll('.zcas').forEach(o=>o.hidden=o.dataset.c!==b.dataset.c)}));
+// ---- stem plot standard: biggest font (same for stems and leaves) that fits the figure box; key scales with it
+function zstemfit(){document.querySelectorAll('.st[data-do]').forEach(t=>t.dataset.do.split(' ').forEach(a=>{const [op,id]=a.split(':');if(op==='ln'){const z=document.getElementById(id);if(z&&z.classList.contains('zstem'))z.classList.add('zcnt')}}));document.querySelectorAll('.slide.z').forEach(sl=>{const st=[...sl.querySelectorAll('.zstem')];if(!st.length)return;const was=sl.classList.contains('on');sl.classList.add('on');
+  st.forEach(z=>{const fg=z.closest('.zfig')||z.parentNode;let f=z.dataset.max?+z.dataset.max:48;const bx=fg.querySelector('svg.zbx');const row=getComputedStyle(fg).flexDirection==='row';const ok=()=>(!bx||(row?bx.getBoundingClientRect().width>=300:bx.getBoundingClientRect().height>=110))&&fg.scrollHeight<=fg.clientHeight+1&&z.scrollWidth<=fg.clientWidth-8&&z.offsetWidth<=fg.clientWidth-8;
+    z.style.setProperty('--zsf',f+'px');while(!ok()&&f>16){f-=1;z.style.setProperty('--zsf',f+'px')}});
+  if(!was)sl.classList.remove('on')})}
+document.fonts.ready.then(()=>setTimeout(zstemfit,900));
 </script>'''
 
 import re

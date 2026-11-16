@@ -43,14 +43,14 @@ def dotplot(id_, vals, lo, hi, xl=''):
 def hist(id_, start, w, v, ymax, ystep, xl='', yl='Frequency'):
     cfg = dict(start=start, w=w, v=v, ymax=ymax, ystep=ystep, xl=xl, yl=yl)
     return f"<svg class=\"zhg\" id=\"{id_}\" data-cfg='{json.dumps(cfg)}' viewBox=\"0 0 600 330\"></svg>"
-def stem(id_, rows, key, head=('Stem', 'Leaf')):
+def stem(id_, rows, key, head=('Stem', 'Leaf'), build=False):
     k = 0; tr = ''
     for s, leaves in rows:
         cells = ''
         for l in leaves.split():
             cells += f'<span class="lv" data-k="{k}">{l}</span>'; k += 1
         tr += f'<tr><td class="zst">{s}</td><td class="zlv">{cells}</td></tr>'
-    return f'<div class="zstem" id="{id_}"><table><tr><th>{head[0]}</th><th>{head[1]}</th></tr>{tr}</table><div class="zkey">{key}</div></div>'
+    return f'<div class="zstem" id="{id_}"><table><tr><th>{head[0]}</th><th>{head[1]}</th></tr>{tr}</table><div class="zkey' + (' zkh' if build else '') + f'">{key}</div></div>'
 def tiles(t, orig):
     srt = sorted(orig, key=float)
     return '<div class="tl" data-t="%s">%s</div>' % (t, ''.join(f'<span class="mtile" data-o="{o}" data-s="{s}">{o}</span>' for o, s in zip(orig, srt)))
@@ -136,9 +136,10 @@ def five(id_, vals):
     return f'<table class="z5 zfill" id="{id_}"><tr>{hd}</tr><tr>' + ''.join(f'<td data-k="{k}">{v}</td>' for k, v in enumerate(vals)) + '</tr></table>'
 
 # ---------------- slides ----------------
-S.append(f'<section class="slide title cover"><div class="code">S3</div><h1>Measures of centre and spread</h1>'
-         f'<div class="unit">12MAG · Unit 3 · AOS 1 Data analysis · Lesson 3</div>'
-         f'<div class="pp">{CG} · 1F Using summary statistics to describe numerical distributions (pp. 44–54)</div><span class="pg" style="display:none"></span></section>')
+S.append(f'<section class="slide title cover"><h1>Measures of centre and spread</h1>'
+         f'<div class="unit">12MAG · Unit 3 · AOS 1 Data analysis</div>'
+         f'<div class="pp" style="font-size:22px;margin-top:14px">{CG}</div>'
+         f'<ul style="list-style:none;padding:0;margin:10px 0 0;font-size:22px;line-height:1.5;text-align:left"><li>1F Using summary statistics to describe numerical distributions (pp. 44–54)</li></ul><span class="pg" style="display:none"></span></section>')
 LI = ['To be able to understand the mean and the median as measures of centre.',
       'To be able to understand the range, interquartile range and standard deviation as measures of spread.',
       'To be able to know whether to use the median and interquartile range, or the mean and standard deviation, for a particular distribution.',
@@ -276,7 +277,7 @@ S.append(qslide('yt', 16, 'Finding the median value from a stem plot', 'Edrolo 1
     'Consider the stem plot.<br><b>a.</b> Calculate the median.', KI_MED,
     ['Count: $n = 33$ data points', r'Median position $= \dfrac{33 + 1}{2} = $ 17th', ('Count along to the 17th value', 'ln:y16:0:17 lm:y16:16')],
     r'$\boldsymbol{M = 485}$', ED + ', 1F Worked example 3a. Working by teacher.',
-    fig=stem('y16', ed, 'Key: 40 | 7 = 407'), figw='.85fr', cmd='<b>CALCULATE</b> · one value', ans_do='ln:y16:0:17 lm:y16:16'))
+    fig=stem('y16', ed, 'Key: 40 | 7 = 407'), figw='1.15fr', cmd='<b>CALCULATE</b> · one value', ans_do='ln:y16:0:17 lm:y16:16'))
 
 # NL quartiles
 def nl_q():
@@ -453,7 +454,7 @@ S.append(qslide('exit', '', 'Show what you know', 'VCAA 2020 Exam 2 Q4aii (adapt
 
 S.append(f'<section class="slide z chk">{bar("Check-in", "How did you go?")}<p class="lead zlead">Read each one. If you can do it, tick it on your worksheet. <span class="hint">Click a box to tick it.</span></p>'
          f'<div class="zchk">{"".join(f"<div class=zci><span class=\"zcb ix\"></span>{x}</div>" for x in SC)}</div>{foot("Success criteria: one per worked example")}</section>')
-CWR=open(os.path.join(SH,'cwr.html')).read();CWL=open(os.path.join(SH,'cwl.html')).read()
+CWR=open(os.path.join(SH,'cwr.html')).read().replace('>Exercise 9A: Collecting representative data<',' textLength="344" lengthAdjust="spacingAndGlyphs">Exercise 1F: Using summary statistics<');CWL=open(os.path.join(SH,'cwl.html')).read()
 S.append(f'<section class="slide cwk">{bar("1F", "Coursework · Exercise 1F")}<div class="cwgrid"><div class="cwl2">'
          '<table class="cw"><thead><tr><th>Do</th><th>Questions</th></tr></thead><tbody>'
          '<tr><th>Cambridge Exercise 1F</th><td>Q1–26</td></tr>'
@@ -669,6 +670,26 @@ table.z5b{font-size:18px;margin:6px 0}
 
 table.zfill th,table.zfill td{border:1.5px solid #d00000!important;min-width:56px;height:34px}
 
+/* ==== STEM PLOT STANDARD (17 Nov): fixed cells, same font for stems+leaves, highlights never change size ==== */
+.zstem{display:flex;flex-direction:column;align-items:center}
+.zstem.zstem.zstem.zstem table,.zstem.zstem.zstem.zstem table{border-collapse:collapse;font-size:var(--zsf,44px)!important;font-variant-numeric:tabular-nums;line-height:1}
+.zstem th,.zstem.zstem.zstem.zstem th{font-size:.42em!important;font-weight:bold;padding:0 .5em .25em!important;border-bottom:3px solid #000;text-align:left}
+.zstem th:first-child{text-align:right}
+.zstem td,.zstem.zstem.zstem.zstem td{padding:.06em 0!important;height:1.3em;vertical-align:middle}
+.zstem td.zst,.zstem.zstem.zstem.zstem td.zst{font-weight:bold;text-align:right;padding:0 .35em 0 .2em!important;border-right:3px solid #000;width:auto}
+.zstem td.zlv,.zstem.zstem.zstem.zstem td.zlv{padding:0 .2em 0 .3em!important;min-width:0!important;white-space:nowrap;text-align:left}
+.zstem .lv,.zstem.zstem.zstem.zstem .lv{display:inline-block;box-sizing:border-box;width:.95em!important;min-width:0!important;height:1.2em;line-height:1.2em;margin:0 .07em 0 0!important;padding:0!important;text-align:center;vertical-align:middle;
+  border-radius:.14em;transform:none!important;font-size:1em!important;transition:background-color .3s,color .3s,opacity .3s;position:relative}
+.zstem .lv.mid,.zstem .lv.q{transform:none!important;color:#fff!important;opacity:1!important;text-decoration:none!important}.zstem .lv.mid{background:#d00000!important}.zstem .lv.q{background:#1f5fbf!important}
+.zstem .lv.ex{outline:.07em solid #d00000;outline-offset:-.07em}
+.zstem .lv.mid+.lv.mid::before,.zstem .lv.q+.lv.q::before{left:calc(-.035em - 1.5px)!important;width:3px!important;top:-.12em!important;bottom:-.12em!important;border-radius:0!important}
+.zstem .lv[data-c]::after{font-size:max(10px,.3em)!important;width:auto!important;min-width:1.25em;padding:0 .2em;box-sizing:border-box;height:1.2em!important;line-height:1.2em!important;border-radius:.6em!important;top:auto!important;bottom:calc(100% + 1px)!important;left:50%!important;right:auto!important;transform:translateX(-50%);z-index:2}
+.zstem .zkey,.zstem.zstem.zstem.zstem .zkey{font-size:max(20px,calc(var(--zsf,44px)*.55))!important;margin-top:.35em!important;color:#000;font-weight:bold;border:2px solid #000;border-radius:6px;padding:.1em .6em;background:#fff;transition:opacity .3s}
+.slide.apkb .zfig svg.zbx{flex:1 1 0!important;min-height:0!important;max-height:210px!important}
+.zstem.zcnt td{height:1.5em!important;vertical-align:bottom!important}.zstem.zcnt td.zst{padding-bottom:.08em!important}.zstem.zcnt .lv{margin-bottom:.06em!important}
+.slide.apks .zfig{flex-direction:row!important;align-items:center!important;gap:18px;padding-top:6px!important;justify-content:center!important}.slide.apks .zfig .zstem{flex:none}.slide.apks .zw .st.zs{font-size:19px!important;margin:3px 0!important;line-height:1.55}.slide.apks .zfig svg.zbx{flex:1 1 0!important;min-width:0;max-height:none!important;width:auto}
+.zstem .zkey.zkh{opacity:0}.zstem .zkey.zkh.on{opacity:1}
+.zstem .zkey.zkh.on{animation:zkp .6s}@keyframes zkp{0%{background:#fff3a8}100%{background:#fff}}
 </style>'''
 
 JS = r'''<script>
@@ -694,7 +715,7 @@ document.querySelectorAll('svg.zdp').forEach(drawDot);document.querySelectorAll(
 function zApply(sl,anim){const tok=sl._zt=(sl._zt||0)+1;const T=f=>()=>{if(sl._zt===tok)f()};
   sl.querySelectorAll('svg.zdp').forEach(sv=>{sv.querySelectorAll('.dot').forEach(d=>{d.setAttribute('fill','#555');d.removeAttribute('stroke')});sv.querySelectorAll('.dn').forEach(t=>t.setAttribute('opacity',0));sv.querySelector('.mk').innerHTML=''});
   sl.querySelectorAll('svg.zhg').forEach(sv=>{sv.querySelectorAll('rect.b').forEach(r=>r.setAttribute('fill','#fff'));sv.querySelectorAll('.cu').forEach(t=>t.setAttribute('opacity',0))});
-  sl.querySelectorAll('.lv').forEach(l=>l.className='lv');
+  sl.querySelectorAll('.lv').forEach(l=>l.className='lv');sl.querySelectorAll('.zkey.zkh').forEach(k=>k.classList.remove('on'));
   [...sl.querySelectorAll('.st[data-do].show')].forEach(s=>{const last=s===anim;s.dataset.do.split(' ').forEach(a=>{const [op,id,x,y,c]=a.split(':');const el=document.getElementById(id);if(!el)return;
     const L=[...el.querySelectorAll('.lv')],ks=(x||'').split(',').map(Number);
     if(op==='dn'){const n=+x;for(let k=0;k<n;k++){const go=()=>{el.querySelector(`.dot[data-k="${k}"]`).setAttribute('fill','#1f5fbf');el.querySelector(`.dn[data-k="${k}"]`).setAttribute('opacity',1)};last?setTimeout(T(go),k*(1600/n)):go()}}
@@ -703,6 +724,7 @@ function zApply(sl,anim){const tok=sl._zt=(sl._zt||0)+1;const T=f=>()=>{if(sl._z
     if(op==='hc'){el.querySelectorAll('.cu').forEach((t,i)=>{const go=()=>t.setAttribute('opacity',1);last?setTimeout(T(go),i*260):go()})}
     if(op==='hm'||op==='hq')ks.forEach(i=>el.querySelector(`rect.b[data-i="${i}"]`).setAttribute('fill',op==='hm'?'#f6b3b3':'#b9cff3'));
     if(op==='lb')L.slice(+x,+y+1).forEach(l=>l.classList.add(c));
+    if(op==='sk')el.querySelector('.zkey').classList.add('on');
     if(op==='lq')ks.forEach(k=>L[k].classList.add('q'));
     if(op==='lm')ks.forEach(k=>L[k].classList.add('mid'));
     if(op==='lx')ks.forEach(k=>L[k].classList.add('ex'));
@@ -787,6 +809,12 @@ document.querySelectorAll('.ztime').forEach(t=>{let left=+t.dataset.s,h=null;con
 // CAS tabs
 document.querySelectorAll('.ztabs').forEach(tb=>tb.querySelectorAll('button').forEach(b=>b.onclick=e=>{e.stopPropagation();tb.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));
   tb.parentNode.querySelectorAll('.zcas').forEach(o=>o.hidden=o.dataset.c!==b.dataset.c)}));
+// ---- stem plot standard: biggest font (same for stems and leaves) that fits the figure box; key scales with it
+function zstemfit(){document.querySelectorAll('.st[data-do]').forEach(t=>t.dataset.do.split(' ').forEach(a=>{const [op,id]=a.split(':');if(op==='ln'){const z=document.getElementById(id);if(z&&z.classList.contains('zstem'))z.classList.add('zcnt')}}));document.querySelectorAll('.slide.z').forEach(sl=>{const st=[...sl.querySelectorAll('.zstem')];if(!st.length)return;const was=sl.classList.contains('on');sl.classList.add('on');
+  st.forEach(z=>{const fg=z.closest('.zfig')||z.parentNode;let f=z.dataset.max?+z.dataset.max:48;const bx=fg.querySelector('svg.zbx');const row=getComputedStyle(fg).flexDirection==='row';const ok=()=>(!bx||(row?bx.getBoundingClientRect().width>=300:bx.getBoundingClientRect().height>=110))&&fg.scrollHeight<=fg.clientHeight+1&&z.scrollWidth<=fg.clientWidth-8&&z.offsetWidth<=fg.clientWidth-8;
+    z.style.setProperty('--zsf',f+'px');while(!ok()&&f>16){f-=1;z.style.setProperty('--zsf',f+'px')}});
+  if(!was)sl.classList.remove('on')})}
+document.fonts.ready.then(()=>setTimeout(zstemfit,900));
 </script>'''
 
 import re

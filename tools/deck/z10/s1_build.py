@@ -187,9 +187,10 @@ def report(id_, toks):
     """toks: text or (key, filled text). Blanks show as dashed lines until tf fills them."""
     return f'<div class="zrep" id="{id_}">' + ''.join(t if isinstance(t, str) else f'<span class="zrb" data-f="{t[0]}">{t[1]}</span>' for t in toks) + '</div>'
 
-S.append(f'<section class="slide title cover"><div class="code">S1</div><h1>Types of data and categorical data</h1>'
-         f'<div class="unit">12MAG · Unit 3 · AOS 1 Data analysis · Lesson 1</div>'
-         f'<div class="pp">{CG} · 1A Types of data · 1B Displaying and describing the distributions of categorical variables</div><span class="pg" style="display:none"></span></section>')
+S.append(f'<section class="slide title cover"><h1>Types of data and categorical data</h1>'
+         f'<div class="unit">12MAG · Unit 3 · AOS 1 Data analysis</div>'
+         f'<div class="pp" style="font-size:22px;margin-top:14px">{CG}</div>'
+         f'<ul style="list-style:none;padding:0;margin:10px 0 0;font-size:22px;line-height:1.5;text-align:left"><li>1A Types of data</li><li>1B Displaying and describing the distributions of categorical variables</li></ul><span class="pg" style="display:none"></span></section>')
 LI = ['To be able to classify data as categorical or numerical.', 'To be able to further classify categorical data as nominal or ordinal.',
       'To be able to further classify numerical data as discrete or continuous.', 'To be able to construct frequency and percentage frequency tables for categorical data.',
       'To be able to construct bar charts and percentage bar charts from frequency tables.', 'To be able to interpret and describe frequency tables and bar charts.',
@@ -359,15 +360,30 @@ S.append(qslide('yt', 3, 'Constructing a bar chart', 'Edrolo 1B WE2',
     'The bar chart opposite.', ED + ', 1B Worked example 2 (p. 11). Working by teacher.',
     fig='<div class="zrowc">' + ftab('y3t', 'teacher’s height', THR, (24, '100.0'), '%', blank=False) + bchart('y3', ['short', 'average', 'tall'], [6, 10, 8], 10, 2, 'teacher’s height', 'frequency', h=320) + '</div>', figw='1.6fr', ans_do='ax:y3 bg:y3:0,1,2'))
 
-# NL: segmented bar chart
+# NL: segmented bar chart, modelled as a transformation (bars -> one stacked bar -> 100% bar)
+def morph_svg(id_):
+    """Three bars (Cold 3, Mild 14, Hot 6) that the JS (op mo:id:stage) slides into one stack, then rescales to 100%."""
+    W_, H_ = 600, 520; X0, Y0, Y1 = 92, 450, 40
+    t = '<g class="mof">' + ''.join(f'<line x1="{X0-7}" y1="{Y0-y/24*(Y0-Y1):.1f}" x2="{X0}" y2="{Y0-y/24*(Y0-Y1):.1f}" stroke="#000" stroke-width="2"/><text x="{X0-12}" y="{Y0-y/24*(Y0-Y1)+8:.1f}" font-size="22" text-anchor="end">{y}</text>' for y in range(0, 25, 4))
+    t += f'<text transform="translate(26 {(Y0+Y1)/2}) rotate(-90)" font-size="24" text-anchor="middle" font-style="italic">Frequency</text></g>'
+    t += '<g class="mop">' + ''.join(f'<line x1="{X0-7}" y1="{Y0-y/100*(Y0-Y1):.1f}" x2="{X0}" y2="{Y0-y/100*(Y0-Y1):.1f}" stroke="#000" stroke-width="2"/><text x="{X0-12}" y="{Y0-y/100*(Y0-Y1)+8:.1f}" font-size="22" text-anchor="end">{y}</text>' for y in range(0, 101, 20))
+    t += f'<text transform="translate(26 {(Y0+Y1)/2}) rotate(-90)" font-size="24" text-anchor="middle" font-style="italic">Percentage (%)</text></g>'
+    ax = f'<line x1="{X0}" y1="{Y0}" x2="{W_-150}" y2="{Y0}" stroke="#000" stroke-width="2.5"/><line x1="{X0}" y1="{Y0}" x2="{X0}" y2="{Y1-10}" stroke="#000" stroke-width="2.5"/>'
+    names = ['Cold', 'Mild', 'Hot']
+    cl = '<g class="mocat">' + ''.join(f'<text class="moc" data-i="{i}" x="0" y="{Y0+30}" font-size="22" text-anchor="middle">{n}</text>' for i, n in enumerate(names)) + '</g>'
+    cl += f'<text class="moxl" x="{(X0+W_-150)/2}" y="{Y0+62}" font-size="22" text-anchor="middle" font-style="italic">Climate type</text>'
+    r = ''.join(f'<rect class="mor" data-i="{i}" fill="{COL[i]}" stroke="#000" stroke-width="2.5"/>' for i in range(3))
+    lb = ''.join(f'<text class="mol" data-i="{i}" font-size="23" font-weight="bold" text-anchor="middle"></text>' for i in range(3))
+    lg = '<g class="molg">' + ''.join(f'<rect x="{W_-120}" y="{Y1+40+k*40}" width="26" height="26" fill="{COL[2-k]}" stroke="#000" stroke-width="2"/><text x="{W_-84}" y="{Y1+62+k*40}" font-size="23">{names[2-k]}</text>' for k in range(3)) + '</g>'
+    return f'<svg class="zmorph" id="{id_}" viewBox="0 0 {W_} {H_}" data-g="{X0},{Y0},{Y1},{W_-150}">{t}{ax}{cl}{r}{lb}{lg}</svg>'
 S.append(nl_slide('From a bar chart to a percentage segmented bar chart',
-    'Stack the categories in <b>one bar</b>. Use percentages so the bar is exactly 100% tall. <span class="hint">Click to stack.</span>',
-    '<div class="cols" style="grid-template-columns:1fr .7fr .7fr"><div class="col">' + ftab('sgt', 'Climate type', CLIMR, (23, '100.0'), blank=False)
-    + st('<b>1</b> Stack the frequencies: Cold 3, then Mild 14, then Hot 6. Total height 23.', do='ax:sg1 bg:sg1:0,1,2 lg:sg1', cls='stp')
-    + st('<b>2</b> Use percentages instead: segment ends at 13.0, 13.0 + 60.9 = 73.9, then 100.', do='ax:sg2 bg:sg2:0,1,2 lg:sg2', cls='stp')
-    + st('<b>3</b> The longest segment is the mode: Mild.', do='hr:sgt:1', cls='stp') + '</div><div class="col zc">'
-    + schart('sg1', [('', [3, 14, 6])], ['Cold', 'Mild', 'Hot'], 24, 4, 'Frequency', w=330) + '</div><div class="col zc">'
-    + schart('sg2', [('', [13.0, 60.9, 26.1])], ['Cold', 'Mild', 'Hot'], 100, 20, 'Percentage', w=330) + '</div></div>', CG + ', 1B pp. 8–9 (climate data, Example 3)'))
+    'Start with the bar chart. Stack the bars into <b>one bar</b>, then change to percentages so the bar is exactly 100% tall. <span class="hint">Click to transform.</span>',
+    '<div class="cols zmo2" style="grid-template-columns:.85fr 1.15fr"><div class="col">' + ftab('sgt', 'Climate type', CLIMR, (23, '100.0'), blank=False)
+    + st('<b>1</b> Stack into one bar: Cold at the bottom, then Mild, then Hot. Total 3 + 14 + 6 = 23.', do='mo:sgm:1', cls='stp')
+    + st('<b>2</b> Axis to percentage: 23 becomes 100%. Cold 13.0%, Mild 60.9%, Hot 26.1%.', do='mo:sgm:2', cls='stp')
+    + st('<b>3</b> Segments end at 13.0, 13.0 + 60.9 = 73.9 and 100. Add a legend.', do='mo:sgm:3', cls='stp')
+    + st('<b>4</b> The longest segment is the mode: Mild.', do='mo:sgm:3 hr:sgt:1', cls='stp') + '</div><div class="col zc">'
+    + morph_svg('sgm') + '</div></div>', CG + ', 1B pp. 8–9 (climate data, Example 3)'))
 # Example 4
 S.append(qslide('ex', 4, 'Constructing a percentage segmented bar chart', 'Cambridge · Example 4',
     'The climate type of 23 countries is classified as ‘cold’, ‘mild’ or ‘hot’.<br>Construct a percentage frequency segmented bar chart to display this information.',
@@ -376,14 +392,44 @@ S.append(qslide('ex', 4, 'Constructing a percentage segmented bar chart', 'Cambr
      ('Hot: from 73.9 to 100%; add the legend', 'hr:e4t:2 bg:e4:2 lg:e4')],
     'The percentage segmented bar chart opposite.', CG + ', 1B Example 4 (p. 9)',
     fig='<div class="zrowc">' + ftab('e4t', 'Climate type', CLIMR, (23, '100.0'), blank=False) + schart('e4', [('', [13.0, 60.9, 26.1])], ['Cold', 'Mild', 'Hot'], 100, 10, 'Percentage', w=330, h=340) + '</div>', figw='1.6fr'))
-# You try 4: Edrolo 1B WE3
-S.append(qslide('yt', 4, 'Constructing segmented bar charts', 'Edrolo 1B WE3',
-    '24 students in a prep class were asked the question, ‘Would you describe your teacher’s height as short, average or tall?’. Their responses are recorded in the frequency table shown.',
-    'Each segment ends at the <b>previous end + its value</b><div class="kn">add a legend</div>', [], None, ED + ', 1B Worked example 3 (pp. 12–13). Working by teacher.',
-    parts=[('a', 'Use the frequency table to construct a segmented bar chart.', [('Axes to 24; short ends at 6, average at 6 + 10 = 16, tall at 16 + 8 = 24.', 'ax:y4a bg:y4a:0,1,2 lg:y4a')], 'Chart <b>a</b> opposite.', 'ax:y4a bg:y4a:0,1,2 lg:y4a'),
-           ('b', 'Use the frequency table to construct a percentage segmented bar chart.', [('Axes to 100%; short ends at 25%, average at 25 + 41.7 = 66.7%, tall at 100%.', 'ax:y4b bg:y4b:0,1,2 lg:y4b')], 'Chart <b>b</b> opposite.', 'ax:y4b bg:y4b:0,1,2 lg:y4b')],
-    fig=ftab('y4t', 'teacher’s height', THR, (24, '100.0'), '%', blank=False) + '<b>a</b>' + schart('y4a', [('', [6, 10, 8])], ['short', 'average', 'tall'], 24, 4, 'frequency', w=330, h=300)
-        + '<b>b</b>' + schart('y4b', [('', [25, 41.7, 33.3])], ['short', 'average', 'tall'], 100, 20, 'frequency (%)', w=330, h=300), stack=True, cls='tight'))
+# You try 4: Edrolo 1B WE3, three columns: question + table | part a + chart a | part b + chart b
+def schart_big(id_, vals, names, scale, tick, yl, fmt):
+    """One segmented bar, large text. Segments data-i 0,1,2 (bottom->top), boundary labels appear with each segment."""
+    W_, H_, X0, Y0, Y1, bw = 440, 400, 84, 360, 22, 120
+    py = lambda y: Y0 - y / scale * (Y0 - Y1)
+    ax = ''.join(f'<line x1="{X0-7}" y1="{py(y):.1f}" x2="{X0}" y2="{py(y):.1f}" stroke="#000" stroke-width="2"/><text x="{X0-11}" y="{py(y)+7:.1f}" font-size="20" text-anchor="end">{y}</text>' for y in range(0, scale + 1, tick))
+    ax += f'<line x1="{X0}" y1="{Y0}" x2="{X0+bw+60}" y2="{Y0}" stroke="#000" stroke-width="2.5"/><line x1="{X0}" y1="{Y0}" x2="{X0}" y2="{Y1-8}" stroke="#000" stroke-width="2.5"/>'
+    ax += f'<text transform="translate(22 {(Y0+Y1)/2}) rotate(-90)" font-size="21" text-anchor="middle" font-style="italic">{yl}</text>'
+    segs = ''; base = 0; x = X0 + 30
+    for i, v in enumerate(vals):
+        top = base + v
+        segs += (f'<g class="cbr" data-i="{i}"><rect x="{x}" y="{py(top):.1f}" width="{bw}" height="{py(base)-py(top):.1f}" fill="{COL[i]}" stroke="#000" stroke-width="2.5"/>'
+                 f'<line x1="{x+bw}" y1="{py(top):.1f}" x2="{x+bw+14}" y2="{py(top):.1f}" stroke="#d00000" stroke-width="2"/>'
+                 f'<text x="{x+bw+18}" y="{py(top)+7:.1f}" font-size="20" font-weight="bold" fill="#d00000">{fmt[i]}</text></g>')
+        base = top
+    lx = X0 + bw + 130; lg = ''
+    for k in range(len(names)):
+        s_ = len(names) - 1 - k
+        lg += f'<rect x="{lx}" y="{Y1+20+k*36}" width="24" height="24" fill="{COL[s_]}" stroke="#000" stroke-width="2"/><text x="{lx+32}" y="{Y1+40+k*36}" font-size="21">{names[s_]}</text>'
+    return f'<svg class="zch zbig" id="{id_}" viewBox="0 0 {W_} {H_}"><g class="cax">{ax}</g>{segs}<g class="clg">{lg}</g></svg>'
+_n4 = ['short', 'average', 'tall']
+_y4a = [W('Axes: <i>frequency</i> 0 to 24.', 'ax:y4a'), W('short: 0 to 6', 'ax:y4a bg:y4a:0'), W('average: 6 to 6 + 10 = 16', 'ax:y4a bg:y4a:0,1'),
+        W('tall: 16 to 16 + 8 = 24', 'ax:y4a bg:y4a:0,1,2'), W('Add the legend.', 'ax:y4a bg:y4a:0,1,2 lg:y4a')]
+_y4b = [W('Axes: <i>percentage</i> 0 to 100.', 'ax:y4b'), W('short: 0 to 25%', 'ax:y4b bg:y4b:0'), W('average: 25 to 25 + 41.7 = 66.7%', 'ax:y4b bg:y4b:0,1'),
+        W('tall: 66.7 to 66.7 + 33.3 = 100%', 'ax:y4b bg:y4b:0,1,2'), W('Add the legend.', 'ax:y4b bg:y4b:0,1,2 lg:y4b')]
+S.append('<section class="slide z ex yt k-yt yt4">'
+    + '<div class="bar ytb"><span class="tag">You try 4</span><h1>Constructing segmented bar charts</h1><span class="sub zpill">Edrolo 1B WE3</span></div>'
+    + '<div class="zb" style="grid-template-columns:.9fr 1fr 1fr">'
+    + '<div class="zw y4q"><div class="q">24 students in a prep class were asked the question, ‘Would you describe your teacher’s height as short, average or tall?’. Their responses are recorded in the frequency table shown.</div>'
+    + ftab('y4t', 'teacher’s height', THR, (24, '100.0'), '%', blank=False)
+    + ki('Key idea', 'Each segment ends at the <b>previous end + its value</b><div class="kn">add a legend</div>') + '</div>'
+    + '<div class="zw y4p"><div class="zpq"><b>a</b> Use the frequency table to construct a segmented bar chart.</div>' + ''.join(_y4a)
+    + st('<span class="zok">✓ Answer</span> Segmented bar chart: short 0–6, average 6–16, tall 16–24, with a legend', True, do='ax:y4a bg:y4a:0,1,2 lg:y4a', cls='zpa')
+    + schart_big('y4a', [6, 10, 8], _n4, 24, 4, 'frequency', ['6', '16', '24']) + '</div>'
+    + '<div class="zw y4p"><div class="zpq"><b>b</b> Use the frequency table to construct a percentage segmented bar chart.</div>' + ''.join(_y4b)
+    + st('<span class="zok">✓ Answer</span> Percentage segmented bar chart: short 0–25%, average 25–66.7%, tall 66.7–100%, with a legend', True, do='ax:y4b bg:y4b:0,1,2 lg:y4b', cls='zpa')
+    + schart_big('y4b', [25, 41.7, 33.3], _n4, 100, 20, 'percentage (%)', ['25%', '66.7%', '100%']) + '</div>'
+    + '</div>' + foot(ED + ', 1B Worked example 3 (pp. 12–13). Working by teacher.') + '</section>')
 
 # NL: describing the distribution
 SREP = report('srep', ['The ', ('a0', '<i>study mode</i>'), ' of ', ('a1', '60'), ' students were classified as being ', ('a2', '‘on-campus’ or ‘online’'), '. The ', ('b0', 'majority'),
@@ -446,7 +492,7 @@ S.append(qslide('exit', '3 of 3', 'Show what you know', 'VCAA 2017 Exam 1 Q5 (ad
 
 S.append(f'<section class="slide z chk">{bar("Check-in", "How did you go?")}<p class="lead zlead">Read each one. If you can do it, tick it on your worksheet. <span class="hint">Click a box to tick it.</span></p>'
          f'<div class="zchk">{"".join(f"<div class=zci><span class=\"zcb ix\"></span>{x}</div>" for x in SC)}</div>{foot("Success criteria: one per worked example")}</section>')
-CWR = open(os.path.join(SH, 'cwr.html')).read(); CWL = open(os.path.join(SH, 'cwl.html')).read()
+CWR = open(os.path.join(SH, 'cwr.html')).read().replace('>Exercise 9A: Collecting representative data<','>Exercise 1A: Types of data<'); CWL = open(os.path.join(SH, 'cwl.html')).read()
 S.append(f'<section class="slide cwk">{bar("1A–1B", "Coursework · Exercises 1A and 1B")}<div class="cwgrid"><div class="cwl2">'
          '<table class="cw"><thead><tr><th>Do</th><th>Questions</th></tr></thead><tbody>'
          '<tr><th>Cambridge Exercise 1A</th><td>Q1–6</td></tr><tr><th>Cambridge Exercise 1B</th><td>Q1–9</td></tr>'
@@ -706,6 +752,20 @@ table.z5b{font-size:18px;margin:6px 0}
 
 table.zfill th,table.zfill td{border:1.5px solid #d00000!important;min-width:56px;height:34px}
 
+
+/* S1: bar chart -> percentage segmented bar morph; You try 4 three columns */
+.zmo2{flex:1;min-height:0}.zmo2 .col.zc{display:flex;align-items:center;justify-content:center}
+
+.zmo2 .st.stp{font-size:19px!important;margin-bottom:4px!important}.zmo2 .ztab{font-size:17px}
+svg.zmorph{width:100%;height:100%;max-height:520px}
+svg.zmorph .mof,svg.zmorph .mop,svg.zmorph .molg,svg.zmorph .mocat,svg.zmorph .moxl{transition:opacity .6s}
+.slide.yt4 .zb{flex:1;min-height:0}
+.slide.yt4 .zw{padding:10px 14px!important;overflow:hidden;border-right:1.5px solid #000}.slide.yt4 .zw:last-child{border-right:none}
+.slide.yt4 .y4q .q{font-size:19px;line-height:1.35;margin-bottom:8px}.slide.yt4 .y4q .ztab.zft{font-size:19px;margin:6px 0 10px}.slide.yt4 .y4q .ki{font-size:17px;width:auto!important;max-width:100%!important;box-sizing:border-box}
+.slide.yt4 .y4p .st.zs{font-size:18px;margin:2px 0!important;line-height:1.3}.slide.yt4 .zpq{font-size:18px;margin-bottom:4px}
+.slide.yt4 .y4p .st.zpa{font-size:16px;margin-top:4px!important}
+.slide.yt4 svg.zch.zbig{flex:1 1 0;min-height:0;width:100%;max-height:none!important;margin-top:4px}
+svg.zch.zbig g.cbr{transform:scaleY(0);transform-box:fill-box;transform-origin:bottom;transition:transform .6s}svg.zch.zbig g.cbr.on{transform:none}
 </style>'''
 
 JS = r'''<script>
@@ -824,6 +884,26 @@ document.querySelectorAll('.ztime').forEach(t=>{let left=+t.dataset.s,h=null;con
 // CAS tabs
 document.querySelectorAll('.ztabs').forEach(tb=>tb.querySelectorAll('button').forEach(b=>b.onclick=e=>{e.stopPropagation();tb.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));
   tb.parentNode.querySelectorAll('.zcas').forEach(o=>o.hidden=o.dataset.c!==b.dataset.c)}));
+
+// S1 morph: bars -> one stacked bar (total 23) -> 100% bar. Stage = highest mo:id:k among shown steps.
+(function(){const V=[3,14,6],T=23,P=V.map(v=>v/T*100),LP=['13.0%','60.9%','26.1%'];
+ function geom(sv,s){const [X0,Y0,Y1,XE]=sv.dataset.g.split(',').map(Number),H=Y0-Y1,bw=110;const g=[];
+  if(s===0){const sl=(XE-X0)/3;V.forEach((v,i)=>g.push({x:X0+sl*(i+.5)-bw/2,y:Y0-v/24*H,h:v/24*H}))}
+  else{const xc=X0+(XE-X0)/2-bw/2;let b=0;const u=s===1?V.map(v=>v/24*H):P.map(p=>p/100*H);u.forEach(h=>{g.push({x:xc,y:Y0-b-h,h});b+=h})}
+  return {g,bw}}
+ function draw(sv,G,s){sv.querySelectorAll('.mor').forEach((r,i)=>{const q=G.g[i];r.setAttribute('x',q.x);r.setAttribute('y',q.y);r.setAttribute('width',G.bw);r.setAttribute('height',Math.max(0,q.h))});
+  sv.querySelectorAll('.mol').forEach((t,i)=>{const q=G.g[i];t.setAttribute('x',q.x+G.bw/2);t.setAttribute('y',q.y+q.h/2+8);t.textContent=s>=2?LP[i]:V[i];if(s===0){t.setAttribute('y',q.y-10)}});
+  sv.querySelectorAll('.moc').forEach((t,i)=>{const q=G.g[i];t.setAttribute('x',q.x+G.bw/2)})}
+ function set(sv,s){const from=sv._s??0;sv._s=s;const A=geom(sv,from),B=geom(sv,s);
+  sv.querySelector('.mof').style.opacity=s>=2?0:1;sv.querySelector('.mop').style.opacity=s>=2?1:0;sv.querySelector('.molg').style.opacity=s>=3?1:0;
+  sv.querySelector('.mocat').style.opacity=s===0?1:0;sv.querySelector('.moxl').style.opacity=s===0?1:0;
+  if(sv._raf)cancelAnimationFrame(sv._raf);if(from===s){draw(sv,B,s);return}
+  const t0=performance.now(),D=1100,e=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+  const step=now=>{const k=e(Math.min(1,(now-t0)/D));const G={bw:B.bw,g:A.g.map((a,i)=>({x:a.x+(B.g[i].x-a.x)*k,y:a.y+(B.g[i].y-a.y)*k,h:a.h+(B.g[i].h-a.h)*k}))};
+   draw(sv,G,k<1?Math.min(from,s)+(k>.5&&s>from?s-from:0):s);if(k<1)sv._raf=requestAnimationFrame(step)};sv._raf=requestAnimationFrame(step)}
+ function upd(sl){sl.querySelectorAll('svg.zmorph').forEach(sv=>{let s=0;sl.querySelectorAll('.st.show[data-do]').forEach(st=>st.dataset.do.split(' ').forEach(a=>{const [op,id,x]=a.split(':');if(op==='mo'&&id===sv.id)s=Math.max(s,+x)}));if(s!==sv._s)set(sv,s)})}
+ document.querySelectorAll('svg.zmorph').forEach(sv=>{sv._s=0;set(sv,0)});
+ new MutationObserver(ms=>{const seen=new Set();ms.forEach(m=>{const t=m.target;if(t.classList&&t.classList.contains('st')){const sl=t.closest('.slide');if(sl&&!seen.has(sl)&&sl.querySelector('svg.zmorph')){seen.add(sl);upd(sl)}}})}).observe(document.body,{subtree:true,attributes:true,attributeFilter:['class']});})();
 </script>'''
 
 import re
