@@ -4,7 +4,7 @@ Tick items off here as they are done. Everything made so far is **Draft** on the
 
 ## A. Create — Chapter 1 (finish the chapter)
 - [x] S1 (1A–1B) worksheet rebuilt with solutions copy (15 Nov)
-- [ ] CFAT 1.1.1, 1.1.2, 1.1.3: solutions copies (planner shows "To make")
+- [x] CFAT 1.1.1, 1.1.2, 1.1.3: solutions copies (16 Nov)
 - [ ] CFAT follow-ups (Jacaranda exercises) for each CFAT
 - [ ] Chapter 1 test (Mathspace topic assessment) — the only Ch 1 material still "To make"
 - [ ] Rebuild S2–S3 slides on the new templates (S1 done) (also fixes: 'Homework' → 'Coursework', S2 Do Now has 3 not 4, S3 extra exit, '?%' tiles)

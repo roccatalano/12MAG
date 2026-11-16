@@ -1152,7 +1152,9 @@
             "pdf": "lessons/CFAT-1.1.1.pdf"
            },
            {
-            "label": "Solutions"
+            "label": "Solutions",
+            "file": "lessons/CFAT 1.1.1 (1A-1E) solutions.html",
+            "pdf": "lessons/CFAT 1.1.1 (1A-1E) solutions.pdf"
            }
           ]
          }
@@ -1995,7 +1997,9 @@
             "pdf": "lessons/CFAT-1.1.2.pdf"
            },
            {
-            "label": "Solutions"
+            "label": "Solutions",
+            "file": "lessons/CFAT 1.1.2 (1F-1G) solutions.html",
+            "pdf": "lessons/CFAT 1.1.2 (1F-1G) solutions.pdf"
            }
           ]
          }
@@ -2079,7 +2083,9 @@
             "pdf": "lessons/CFAT-1.1.3.pdf"
            },
            {
-            "label": "Solutions"
+            "label": "Solutions",
+            "file": "lessons/CFAT 1.1.3 (1F-1I) solutions.html",
+            "pdf": "lessons/CFAT 1.1.3 (1F-1I) solutions.pdf"
            }
           ]
          },
