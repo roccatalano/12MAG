@@ -7286,7 +7286,45 @@
      ]
     }
    ],
-   "revision": "Ch 6 (revision, practice only)"
+   "revision": "Ch 6 (revision, practice only)",
+   "sac": {
+    "name": "SAC 1 · Application task: Data analysis",
+    "weight": "16% of the study score (Unit 3 SAC: 40 of its marks)",
+    "outcomes": "Outcomes 1–3",
+    "format": "Application task, 4–6 hours over 1–2 weeks: a guided investigation of a given multivariate data set, in three parts.",
+    "parts": [
+     "Part 1 · after school (Wednesday)",
+     "Part 2 · after school (Wednesday)",
+     "Part 3 · in class"
+    ],
+    "gaps": [
+     "Confirm reading + working time for each part (total 4–6 hours).",
+     "No new AoS 2 content until Part 3 is done."
+    ],
+    "materials": [
+     {
+      "kind": "Practice task",
+      "status": "todo",
+      "file": ""
+     },
+     {
+      "kind": "Final task",
+      "status": "todo",
+      "file": ""
+     },
+     {
+      "kind": "Marking scheme",
+      "status": "todo",
+      "file": ""
+     },
+     {
+      "kind": "Redemption",
+      "status": "todo",
+      "file": ""
+     }
+    ],
+    "source": "Study Design 2023–2027 + VCAA School-based Assessment Report (GM): Unit 3 SAC 24% (Application task 16%, MPS task 1 8%), Unit 4 SAC 16% (MPS tasks 2 and 3, 8% each); Exam 1 30%, Exam 2 30%."
+   }
   },
   {
    "id": "aos2",
@@ -10506,7 +10544,43 @@
      ]
     }
    ],
-   "revision": "Ch 9 (revision)"
+   "revision": "Ch 9 (revision)",
+   "sac": {
+    "name": "SAC 2 · Modelling or problem-solving task 1: Recursion and financial modelling",
+    "weight": "8% of the study score (Unit 3 SAC: 20 of its marks)",
+    "outcomes": "Outcomes 1–3 (5–10–5)",
+    "format": "Modelling or problem-solving task, 2–3 hours over about a week.",
+    "parts": [
+     "After school (Wednesday)"
+    ],
+    "gaps": [
+     "Decide one sitting or two (keep the total within 3 hours).",
+     "Feedback / redemption: the 3 Unit 3 lessons before Semester 2."
+    ],
+    "materials": [
+     {
+      "kind": "Practice task",
+      "status": "todo",
+      "file": ""
+     },
+     {
+      "kind": "Final task",
+      "status": "todo",
+      "file": ""
+     },
+     {
+      "kind": "Marking scheme",
+      "status": "todo",
+      "file": ""
+     },
+     {
+      "kind": "Redemption",
+      "status": "todo",
+      "file": ""
+     }
+    ],
+    "source": "Study Design 2023–2027 + VCAA School-based Assessment Report (GM): Unit 3 SAC 24% (Application task 16%, MPS task 1 8%), Unit 4 SAC 16% (MPS tasks 2 and 3, 8% each); Exam 1 30%, Exam 2 30%."
+   }
   },
   {
    "id": "aos3",
@@ -13048,7 +13122,42 @@
      ]
     }
    ],
-   "revision": "Ch 12 (revision)"
+   "revision": "Ch 12 (revision)",
+   "sac": {
+    "name": "SAC 3 · Modelling or problem-solving task 2: Matrices",
+    "weight": "8% of the study score (Unit 4 SAC)",
+    "outcomes": "Outcomes 1–3",
+    "format": "Modelling or problem-solving task, 2–3 hours over about a week.",
+    "parts": [
+     "After school (Wednesday)"
+    ],
+    "gaps": [
+     "Task to be written (VCAA: How to develop a modelling or problem-solving task for Matrices)."
+    ],
+    "materials": [
+     {
+      "kind": "Practice task",
+      "status": "todo",
+      "file": ""
+     },
+     {
+      "kind": "Final task",
+      "status": "todo",
+      "file": ""
+     },
+     {
+      "kind": "Marking scheme",
+      "status": "todo",
+      "file": ""
+     },
+     {
+      "kind": "Redemption",
+      "status": "todo",
+      "file": ""
+     }
+    ],
+    "source": "Study Design 2023–2027 + VCAA School-based Assessment Report (GM): Unit 3 SAC 24% (Application task 16%, MPS task 1 8%), Unit 4 SAC 16% (MPS tasks 2 and 3, 8% each); Exam 1 30%, Exam 2 30%."
+   }
   },
   {
    "id": "aos4",
@@ -15013,7 +15122,51 @@
      ]
     }
    ],
-   "revision": "Ch 15 (revision)"
+   "revision": "Ch 15 (revision)",
+   "sac": {
+    "name": "SAC 4 · Modelling or problem-solving task 3: Networks and decision mathematics",
+    "weight": "8% of the study score (Unit 4 SAC)",
+    "outcomes": "Outcomes 1–3",
+    "format": "Modelling or problem-solving task, 2–3 hours over about a week.",
+    "parts": [
+     "After school (Wednesday)"
+    ],
+    "gaps": [
+     "Task to be written (VCAA: How to develop a modelling or problem-solving task for Networks).",
+     "Redemptions + exam prep set-up in the lessons after it."
+    ],
+    "materials": [
+     {
+      "kind": "Practice task",
+      "status": "todo",
+      "file": ""
+     },
+     {
+      "kind": "Final task",
+      "status": "todo",
+      "file": ""
+     },
+     {
+      "kind": "Marking scheme",
+      "status": "todo",
+      "file": ""
+     },
+     {
+      "kind": "Redemption",
+      "status": "todo",
+      "file": ""
+     }
+    ],
+    "source": "Study Design 2023–2027 + VCAA School-based Assessment Report (GM): Unit 3 SAC 24% (Application task 16%, MPS task 1 8%), Unit 4 SAC 16% (MPS tasks 2 and 3, 8% each); Exam 1 30%, Exam 2 30%."
+   }
   }
- ]
+ ],
+ "exams": {
+  "title": "End-of-year examinations",
+  "items": [
+   "Examination 1: multiple choice, 30% of the study score",
+   "Examination 2: extended answer, 30% of the study score"
+  ],
+  "source": "VCAA General Mathematics examination specifications 2023–2027"
+ }
 }

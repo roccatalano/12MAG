@@ -146,14 +146,34 @@
    "window": true
   },
   {
+   "date": "2027-10-04",
+   "label": "Unit 3/4 practice exams (Mon 4 – Wed 6 Oct)",
+   "exam": true
+  },
+  {
    "date": "2027-10-14",
-   "label": "Last Year 12 class (VCAA exams start Tue 26 Oct)"
+   "label": "Last Year 12 class"
+  },
+  {
+   "date": "2027-10-26",
+   "label": "VCE written exams begin (General Maths Exam 1 and Exam 2: dates TBA by VCAA)",
+   "exam": true
+  },
+  {
+   "date": "2027-11-17",
+   "label": "VCE written exams end",
+   "exam": true
+  },
+  {
+   "date": "2027-12-09",
+   "label": "Final results released",
+   "exam": true
   }
  ],
  "_help": {
   "teachingDays": "weekdays the class has 12MAG, e.g. [\"Mon\",\"Wed\",\"Thu\"]. Leave empty to use lessonRule (lessons per week, no fixed days).",
   "terms": "[{\"name\":\"Term 1\",\"start\":\"2027-01-28\",\"end\":\"2027-03-25\"}, ...] (start = first day students are in). Optional \"lessons\" caps a term's total (step-up).",
   "blocked": "public holidays, student-free days, school events that cancel Year 12 classes",
-  "anchors": "fixed events. aos = later-AoS lessons wait until after it, earlier-AoS lessons after it are flagged. afterSchool = takes no lesson. inClass = takes one lesson that week. window = counts the teaching time for that AoS."
+  "anchors": "fixed events. aos = later-AoS lessons wait until after it, earlier-AoS lessons after it are flagged. afterSchool = takes no lesson. inClass = takes one lesson that week. window = counts the teaching time for that AoS. exam = shown in the VCE exams row of the Course plan."
  }
 }
