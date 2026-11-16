@@ -1,5 +1,7 @@
 # 12MAG handover — 15 Nov 2026 (updated 15:55)
 
+**17 Nov (slides standard):** Chapter 1 decks S1–S5 are DONE in the new slide standard (`tools/deck/z10/HOWTO.md`, approved by Rocco) and replace the old decks: `lessons/S1-slides.html` … `S5-slides.html` + PDFs (built by `tools/deck/z10/s#_build.py` on the new library `tools/deck/z10/lib/`). Chapter file `lessons/Ch1-slides.html` (+ `.pdf`, S1–S5 tabs, lazy-loaded) by `tools/deck/z10/chapter.py`; linked from the AoS 1 resources in `planner/unit-plan.json` (replaces the old merged `Ch1 slides`). See "17 Nov — slide standard" at the end.
+
 **16 Nov 19:30 (CFAT 1.1.x solutions):** Solutions copies for CFAT 1.1.1–1.1.3 built (Draft): `tools/cfat/ch1/solutions.py` reads the unchanged student copies (`lessons/CFAT-1.1.x.html`) and injects red answers (MC: red ✓ + one-line why in the source line; boxplot and normal-curve answers drawn in red by `figs.py`) → `lessons/CFAT 1.1.x (..) solutions.html/.pdf` (2 pages each, same as the student copies), on G: and the planner cards. Answers from Edrolo U3&4 worked solutions, checked by hand; 1.1.2 Q7b (shape of July/May) has no Edrolo answer, so it is our own. CFAT follow-ups for Ch 1 not done.
 **16 Nov 19:08 (AoS3 #22):** Chapter 11 test (Draft): `tools/test/ch11/build.py` → `lessons/Ch11 test` (+ solutions, 5 pages each, /25): Mathspace Ch 7 topic assessment Q9 (MC), Q17, Q18 + worksheet top-ups 7.10 Q5, Q12, 7.11 Q8, 7.12 Q5, Q6; on G: and the gm12-ch11-test card; 8 ledger rows. No Leslie item. `tools/test/details.py` chapter regex fixed (it broke in worktrees named ch11).
 **16 Nov 16:55 (AoS4 #21):** Chapter 14 test (Draft): `tools/test/ch14/build.py` → `lessons/Ch14 test(.html/.pdf)` + solutions (8 pages each, /35): Mathspace Ch 9 topic assessment Q1, 2, 6–9, 11–20 verbatim (Q3–5, Q10 are in the Ch13 test), figures cropped at 300 dpi; on G: and the gm12-ch14-test card; 16 ledger rows. That was the last AoS 4 task.
@@ -454,3 +456,18 @@ Chapter 3 revision booklet + solutions built (`tools/revision/ch3/`, 16 pages ea
 - New builder `tools/deck/z10/` (HOWTO.md, shell files, `s3_build.py`, `check.py`). S3 rebuilt from scratch → `lessons/S3-slides-v2.html` (36 slides); the old `lessons/S3-slides.html` is untouched.
 - Agreed with Rocco: one question template, parts a/b/c asked + answered in the working box, green ✓ Answer box, Watch out box for short-answer exam questions only, MC = answer then % bars (no distractor box), no command-word chips, median by (n+1)/2th position then counting, thin centred line between two middle values, TI + ClassPad steps together, house-prices mean-or-median slider, one-tick check-in, 10MA coursework slide.
 - Next: convert the other decks with this builder one lesson at a time (no Do Now or Videos slides: Rocco puts those on Google Classroom), PDF version, update planner links when a v2 deck replaces an old one.
+
+## 17 Nov 2026 — slide standard + Chapter 1 decks replaced (branch slides-v2-ch1)
+- **The slide standard is `tools/deck/z10/HOWTO.md`** (the only one; CLAUDE.md points to it). Library `tools/deck/z10/lib/` (`deck.py`, `core.css/js`, modules `num`, `cat`, `boxplot`, `normal`), starter `template_build.py`, `check.py`, `pdf.py`, `chapter.py`.
+- Chapter 1 decks done: `s1_build.py` … `s5_build.py` → `lessons/S1-slides.html` … `S5-slides.html` (28, 39, 36, 26, 31 slides) + `S#-slides.pdf` (new `z10/pdf.py`: question slides 2 pages). The v2 files were renamed over the old decks; planner links unchanged.
+  Refactor check: all five decks rebuilt on the library and compared with the approved v2 decks via `check.py` screenshots (every slide fully revealed): no differences (pixel diff), same check.py issue lists.
+- `lessons/Ch1-slides.html/.pdf`: `python3 tools/deck/z10/chapter.py 1 S1 S2 S3 S4 S5`.
+- Deleted (git history keeps them): old builders `tools/deck/s1..s5/build.py` + `shoot.py`, `tools/deck/ch1/merge.py`, the old merged `lessons/Ch1 slides.html/.pdf`. Worksheets (`tools/deck/s#/worksheet.py`) untouched; their docstrings still mention the old build.py (git history).
+- `tools/deck/s4/build_v1.py` (used by `make_engine.py` to remake `tools/deck/engine.html` for the old `tpl.py` decks) read the OLD `lessons/S3-slides.html` as its template, so `make_engine.py` will no longer work as is; `engine.html` itself is unchanged. Only matters if the old template engine is ever remade.
+- G: not updated from here: copy the new `S#-slides.html/.pdf` to `01 Lesson materials` as `1A-1B slides`, `1C-1E slides`, `1F slides`, `1G slides`, `1H-1I slides` (+ `Ch1 slides`).
+- **Still to check against the source PDFs** (from the agents that built the decks):
+  - S1: VCAA 2019 Exam 2 Q1a examiner report (% correct); chart images not checked against the books.
+  - S2: Example 9 histogram heights sum to 1009 (check Cambridge p. 23); APK card mismatch for Cambridge U1&2 2C #6 and 9D #6.
+  - S4: Example 24 outlier position 81 vs 86; APK 3 option %s; no You trys yet for Examples 24, 26 and 27.
+  - S5: Example 28c is missing the word "how"; Example 30 lead-in sentence; exit % 58/78 vs 60/80 (check against the examiner reports).
+- Next: convert the other decks to the standard (copy `template_build.py`), one lesson at a time.

@@ -1,0 +1,16 @@
+/* numerical build-ups (S2): xb histogram bars, xd dots, xl stem leaves, xm mode dots, xs table rows, sk key; SOCS template fill bf/bok */
+.zhg.zbuild rect.b{opacity:0;transition:opacity .35s}.zhg.zbuild rect.b.xon{opacity:1}
+.zdp.zbuild .dot{opacity:0;transition:opacity .3s}.zdp.zbuild .dot.xon{opacity:1}
+.zstem.zbuild .lv{visibility:hidden}.zstem.zbuild .lv.xon{visibility:visible}
+.zdp .dot.xm,.zbd .dot.xm{fill:#d00000!important}
+.ztab.zdl2{font-size:20px;margin:8px 0}.ztab.zdl2 td{padding:2px 9px}.ztab.zsm3{font-size:16px}.ztab.zsm3 td{padding:1px 6px}
+table.zft{border-collapse:collapse;font-size:21px;margin:auto}
+table.zft th,table.zft td{border:1.5px solid #000;padding:4px 14px;text-align:center}table.zft th{background:#eee}
+table.zft.zfill th{border-color:#d00000!important}
+.slide.tight table.zft td,.slide.tight table.zft th{padding:2px 12px}
+.slide.tight .zb>div.zfig{padding:8px 14px}
+.s2tpl{border:2px dashed #999;padding:8px 12px;font-size:21px;line-height:1.55;margin-bottom:6px;transition:all .3s}
+.s2tpl .s2b{display:inline-block;min-width:70px;border-bottom:2px solid #333;text-align:center;color:transparent}
+.s2tpl .s2b.xon{color:#d00000;font-weight:bold}
+.s2tpl.xon{border:3px solid #1a7f1a;background:#eaf6ea}.s2tpl .zok{visibility:hidden}.s2tpl.xon .zok{visibility:visible}
+.st.s2hid{display:none!important;height:0!important;min-height:0!important;margin:0!important;padding:0!important;border:0!important;overflow:hidden}

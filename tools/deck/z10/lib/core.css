@@ -1,0 +1,228 @@
+
+/* ---- S3 additions (namespaced .z) ---- */
+.slide.z .bar.ytb{background:#d9d9d9}
+.slide.z .zb{flex:1;display:grid;border:1.5px solid #000;min-height:0}
+.slide.z .zb>div{padding:12px 18px;min-width:0;overflow:hidden}
+.slide.z .zb>div+div{border-left:1.5px solid #000}
+.slide.z .zfig{display:flex;align-items:center;justify-content:center}
+.slide.z .zfig svg{width:100%;max-height:420px}
+.slide.z .zw{display:flex;flex-direction:column}
+.slide.z .st.zs{white-space:normal;font-size:23px;line-height:1.35;margin:0 0 9px!important}
+.slide.z .st.zs .katex{font-size:1.08em}
+.slide.z .top>.q{font-size:22px;line-height:1.38}
+.slide.z .zlead{font-size:21px;margin:12px 4px 2px}
+.slide.z .zul{margin:4px 0 0;padding-left:22px}.slide.z .zul li{margin-bottom:12px}
+.slide.z .zul.ck{list-style:none;padding-left:0}
+.slide.z .zseq{margin:4px 0 0;padding-left:26px}.slide.z .zseq li{margin-bottom:8px}
+.slide.z .zkd{border-bottom:1.5px dashed #888;padding:7px 0;display:flex;gap:14px;align-items:center;flex:1}
+.slide.z .zkd .zkn{width:190px;flex:none;font-weight:bold}
+.slide.z .zn{font-size:16px;color:#555}
+.zstem table{border-collapse:collapse;font-size:32px}
+.zstem th{font-size:16px;padding:2px 14px;border-bottom:3px solid #000}
+.zstem td.zst{border-right:3px solid #000;text-align:right;padding:2px 16px;font-weight:bold}
+.zstem td.zlv{padding:2px 12px;min-width:250px;white-space:nowrap}
+.slide.apk .zstem table{font-size:24px}.slide.apk .lv{margin-right:2px;min-width:18px}.zstem .zkey{font-size:16px;margin-top:8px;color:#333}
+.lv{display:inline-block;min-width:24px;text-align:center;margin-right:6px;border-radius:5px;padding:0 3px;transition:all .3s;position:relative}
+.lv.x{opacity:.2;text-decoration:line-through}
+.lv.mid{background:#d00000;color:#fff;opacity:1;text-decoration:none;transform:scale(1.15)}
+.lv.q{background:#1f5fbf;color:#fff;opacity:1;text-decoration:none;transform:scale(1.15)}
+.lv.lo{background:#dbe7fb}.lv.hi{background:#fde9cf}
+.lv.ex{outline:3px solid #d00000}
+.slide.z .zrow{display:flex;gap:22px;align-items:flex-start;margin-top:6px}
+.slide.apk .qtxt{font-size:20px;padding:0;margin:0 0 10px}.zsk{font-size:15px;color:#555}
+.slide.apk .skill{padding:0 0 6px}
+.slide.apk .st.zs{font-size:20px}
+.ztab{border-collapse:collapse;margin:8px 0;font-size:19px}
+.ztab th,.ztab td{border:1.5px solid #000;padding:3px 10px;text-align:center}
+.ztab th{background:#eee}
+.ztab.zsm{font-size:16px}.ztab.zsm th{text-align:left}
+table.z5{border-collapse:collapse;color:#d00000;font-size:22px;margin-top:6px}
+table.z5 th,table.z5 td{border:1.5px solid currentColor;padding:3px 16px;text-align:center}
+.slide.z .z3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;flex:1}
+.slide.z .z3>div{padding:0 14px}.slide.z .z3>div+div{border-left:1.5px solid #000}
+.slide.z .lab{font-weight:bold;margin-right:10px;font-size:24px}
+.slide.z .qq{font-size:24px;margin-bottom:6px}
+.zpair{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:24px;flex:1;align-items:center;margin:14px 0}
+.zpc{border:3px solid #000;padding:12px;display:flex;flex-direction:column;gap:10px}
+.zpt{font-weight:bold;font-size:26px;text-align:center}
+.zbox{border:2px solid #000;padding:8px 12px;font-size:24px;font-weight:bold;box-shadow:4px 4px 0 #bbb}
+.zbox i.zsub{display:block;font-style:normal;font-size:16px;font-weight:normal;color:#444}
+.zpm .st{text-align:center;font-size:19px;color:#000;margin-bottom:26px!important;white-space:normal}
+.zarr{font-size:28px;font-weight:bold;color:#d00000}
+.zctr{text-align:center;font-size:22px!important}
+.ztime{font-size:150px;font-weight:bold;text-align:center;font-variant-numeric:tabular-nums;margin:20px 0}
+.ztime.low{color:#d00000}
+.zbtns,.ztabs{display:flex;gap:10px;justify-content:center}
+.zbtns button,.ztabs button{font:inherit;font-size:20px;border:2px solid #000;background:#fff;padding:6px 16px;cursor:pointer;box-shadow:3px 3px 0 #bbb}
+.ztabs{justify-content:flex-start;margin-bottom:10px}
+.ztabs button.on{background:#000;color:#fff}
+.zcas{font-size:20px;line-height:1.4;padding-left:26px}.zcas li{margin-bottom:8px}
+.zsl{display:flex;gap:14px;align-items:center;font-size:18px;margin-top:8px}.zsl input{flex:1;height:30px}
+.slide.sdx .zlead{font-size:18px}.zmmo,.zsdo{font-size:22px;line-height:1.6}
+.zrule{margin-top:auto;border:2px solid #000;background:#fff7d6;padding:10px 12px;font-size:17px;line-height:1.35}
+.zchk{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1.5px solid #000;margin-top:12px;flex:1}
+.zci{display:flex;gap:16px;align-items:center;padding:10px 18px;font-size:22px;border-bottom:1.5px dashed #888}
+.zcb{width:40px;height:40px;border:2px solid #000;flex:none;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:bold;cursor:pointer}
+.zcb.s1{background:#e3f5e3;color:#1a7f1a}.zcb.s1::after{content:'✓'}
+.zcb.s2{background:#fff3cd;color:#a06b00}.zcb.s2::after{content:'~'}
+.zcb.s3{background:#fde2e2;color:#d00000}.zcb.s3::after{content:'✗'}
+.zcw{width:100%;border-collapse:collapse;font-size:21px}
+.zcw th{background:#eee;text-align:left;padding:6px 10px;border:1.5px solid #000}
+.zcw td{border:1.5px solid #000;padding:7px 10px}.zcw td:last-child{width:110px;text-align:center;font-weight:bold}
+.slide.z .note{font-size:19px;margin-top:16px}
+.zdp .dot,.zhg rect.b{transition:fill .3s,stroke .3s}
+/* ---- round 2 ---- */
+.slide.z .zside{display:flex;flex-direction:column;gap:8px;align-items:flex-end;flex:none}
+.zstat{font-size:17px;font-weight:600;color:#555;border:2px solid #000;border-radius:999px;padding:4px 14px;background:#fff;white-space:nowrap}
+.zstat b{font-size:22px;color:#000;transition:color .3s}
+.zstat.done{background:#e3f5e3;border-color:#1a7f1a}.zstat.done b{color:#1a7f1a}
+.zcmd{font-size:16px;border:2px solid #000;padding:3px 12px;background:#fff7d6}
+.zmk{font-size:16px;color:#666}
+.zdl{display:inline-block;font-size:13px;font-weight:bold;text-transform:uppercase;letter-spacing:.5px;background:#6b3fc9;color:#fff;padding:1px 8px;margin-right:6px;vertical-align:2px}
+.slide.z .st.zdis,.slide.z .st.ztrap{color:#3d2380;background:#f1ebfd;border:2px solid #6b3fc9;padding:6px 10px;font-size:19px!important;line-height:1.35}
+.slide.z .st.ztrap{margin-top:auto!important}
+.zsc{font-size:16px;color:#555}
+.zmc{display:grid;grid-template-columns:1fr 1fr;gap:6px 10px;margin-top:10px;width:100%}
+.zmc>div{position:relative;border:2px solid #000;padding:6px 60px 6px 10px;font-size:22px;background:#fff;transition:background .3s}
+.zmc>div>*{position:relative;z-index:1}
+.zmc .pb{position:absolute!important;left:0;top:0;bottom:0;width:0;background:rgba(80,90,110,.16);transition:width .9s ease;z-index:0}
+.zmc .pc{position:absolute!important;right:10px;top:50%;transform:translateY(-50%);font-weight:bold;color:#555;opacity:0;transition:opacity .4s}
+.zmc.pct .pc{opacity:1}
+.zmc>div.right{background:#e3f5e3;border-color:#1a7f1a;font-weight:bold}.zmc>div.right .pb{background:rgba(26,127,26,.25)}
+.zmc>div.dis{background:#f1ebfd;border-color:#6b3fc9}.zmc>div.dis .pb{background:rgba(107,63,201,.25)}
+.zfig.zcol{flex-direction:column;justify-content:center}
+.ztab td.hl{background:#fff2a8;font-weight:bold;outline:2px solid #d00000}
+.ztab tr.dim{opacity:.25;transition:opacity .4s}
+.ztab.zbig{font-size:26px}.ztab.zv{border-collapse:collapse}
+.ztab.zora{font-size:17px}.ztab.zsm2{font-size:15px}
+.zsumw{width:100%}
+.ztiles{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.zt{position:relative;font-size:28px;border:2px solid #000;min-width:62px;text-align:center;padding:6px 8px;transition:all .3s}
+.zt.on{background:#fde2e2;border-color:#d00000}
+.zt[data-c]::after{content:attr(data-c);position:absolute;top:-11px;right:-9px;background:#1f5fbf;color:#fff;font-size:13px;font-weight:bold;border-radius:50%;width:22px;height:22px;line-height:22px;text-align:center}
+.zrun{margin:22px auto 0;text-align:center;font-size:18px;color:#555}
+.zrun b{display:block;font-size:56px;color:#d00000;font-variant-numeric:tabular-nums}
+.zrun i{display:block;font-style:normal;font-size:22px;color:#000;margin-top:6px}
+.zab{margin-bottom:10px}
+/* n even: a line between the two middle values */
+.mtile,.lv{position:relative}
+.mtile.mid+.mtile.mid::before,.lv.mid+.lv.mid::before{content:'';position:absolute;left:-7px;top:-12px;bottom:-12px;width:4px;background:#d00000;border-radius:2px}
+.mtile.q+.mtile.q::before,.lv.q+.lv.q::before{content:'';position:absolute;left:-7px;top:-12px;bottom:-12px;width:4px;background:#1f5fbf;border-radius:2px}
+.mtile.x.mid+.mtile.x.mid::before{opacity:1}
+/* less dead space, less bunching */
+.slide.z .st.zs{font-size:26px;line-height:1.45;margin:0 0 15px!important}
+.slide.z .zb>div{padding:16px 22px}
+.slide.z .top>.q{font-size:23px}
+.zstem table{font-size:38px}.zstem th{font-size:18px}.zstem .zkey{font-size:19px}
+.slide.z .zfig svg{max-height:470px}
+.zcfu{display:inline-flex;gap:10px;margin-left:auto;margin-right:18px;align-items:center}
+.zcfu span{display:flex;align-items:center;gap:5px;font-size:13px;color:#777;font-weight:600}
+.zcfu img{width:26px;height:26px;opacity:.85}
+.slide.z .foot{align-items:center}
+.zhso{font-size:20px;line-height:1.55}
+.zhso .ol{color:#d00000;font-weight:bold}
+.zbtns button{font-size:17px}
+.slide.cwk .zcw{font-size:25px}.slide.cwk .zcw td{padding:12px 12px}
+.slide.cas .zcas{font-size:22px}
+
+.slide.apk .zstem table{font-size:24px!important}.slide.apk .st.zs{font-size:22px}
+.slide.z.eng .stp{font-size:24px;margin-bottom:14px}
+.slide.z.eng .tl .mtile{font-size:28px;min-width:48px}
+
+.st.zmeasure{opacity:1}
+.zmcq{justify-content:flex-start!important;align-items:stretch!important}.zmcq .zq{font-size:20px;line-height:1.35;margin-bottom:8px}.zmcq svg{max-height:260px!important}
+.zside.zrow2{flex-direction:row;justify-content:flex-start;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+.slide.z .zw>*,.slide.z .zab>*{flex:none}
+.slide.z .zw .st.zs{overflow:visible}
+/* ---- round 3: one template ---- */
+.zpill{font-size:15px!important;border:1.5px solid #000;padding:2px 10px;background:#fff;white-space:nowrap}
+.zpart{font-weight:bold;font-size:20px;color:#000;border-bottom:1.5px dashed #888;margin:4px 0 8px;padding-bottom:2px}
+.zok{display:inline-block;font-size:15px;font-weight:bold;background:#1a7f1a;color:#fff;padding:1px 8px;margin-right:6px;vertical-align:3px}
+.slide.z .st.final{border-top:2px solid #d00000;padding-top:8px}
+.zdl.zw2{background:#c46a00}
+.ztab.zinq{margin:8px 0;font-size:18px}
+.ztr{display:flex;align-items:center;gap:10px;margin-bottom:14px}.ztr .tl{margin:0}
+.slide.z .zfig.zcol{align-items:center}
+table.zfill td{color:transparent;transition:color .3s}table.zfill td.on{color:#d00000;font-weight:bold}
+table.z5b{font-size:18px;margin:6px 0}
+.zbox.pa{background:#fde2e2;border-color:#d00000}.zbox.pb2{background:#dbe7fb;border-color:#1f5fbf}
+.zchk2{display:grid;border:1.5px solid #000;margin-top:10px;flex:1;grid-auto-rows:1fr}
+.zch{display:grid;grid-template-columns:1fr 90px 90px 90px;align-items:center;border-bottom:1.5px dashed #888;padding:0 14px;font-size:20px}
+.zch.h{font-weight:bold;background:#eee;font-size:16px;text-transform:uppercase}
+.zch.h span:not(:first-child){text-align:center}
+.zct{font:inherit;font-size:22px;font-weight:bold;width:64px;height:40px;justify-self:center;border:2px solid #000;background:#fff;cursor:pointer}
+.zct.g{color:#1a7f1a}.zct.m{color:#a06b00}.zct.n{color:#d00000}
+.zmc>div.right::after{content:'✓ correct';position:absolute;right:62px;top:50%;transform:translateY(-50%);font-size:14px;color:#1a7f1a;z-index:1}
+.zmc>div.dis::after{content:'distractor';position:absolute;right:62px;top:50%;transform:translateY(-50%);font-size:14px;color:#6b3fc9;z-index:1}
+.lv.lo::after,.lv.hi::after{content:'';position:absolute;left:0;right:0;bottom:-3px;height:3px;background:currentColor;opacity:.0}
+
+.slide.z .st.zs{font-size:24px}
+.zb.stack{grid-template-columns:1fr!important;grid-template-rows:auto minmax(0,1fr)}
+.zb.stack>div+div{border-left:none!important;border-top:1.5px solid #000}
+.zfig.zrowf{display:flex!important;flex-direction:row!important;gap:40px;justify-content:center;flex-wrap:wrap}
+.zw.c2{display:block!important;column-count:2;column-gap:34px;column-rule:1.5px dashed #bbb}
+.zw.c2 .zpart.brk{break-before:column}
+.zw.c2 .st.final{column-span:all;margin-top:8px!important}
+.zw.c2>*{break-inside:avoid}
+.slide.exam .zw .ki{width:auto;margin:0 0 12px;font-size:15px}
+.slide.exam .zw .ki .kn{font-size:13px}
+.zstem table{font-size:34px}
+
+.zpq{font-size:21px;line-height:1.35;color:#000;margin:0 0 10px;white-space:normal;flex:none}
+.zpq b{display:inline-block;min-width:26px;font-size:22px}
+.zpq.sep{border-top:2px dotted #888;padding-top:12px;margin-top:6px}
+.zw.c2 .zpq.brk{break-before:column;border-top:none;padding-top:0;margin-top:0}
+.slide.z .st.final.zpa{border-top:none;padding-top:0;margin-bottom:10px!important}
+.zw.c2 .st.final.zpa{column-span:none}
+
+/* tiles: one row, thin centred median line */
+.slide .tl{flex-wrap:nowrap!important;gap:8px!important}
+.slide .tl .mtile{flex:1 1 0!important;min-width:0!important;max-width:58px;font-size:24px!important;padding:5px 0!important}
+.slide.nl .tl .mtile{font-size:22px!important}
+.mtile.mid+.mtile.mid::before,.mtile.q+.mtile.q::before{left:-5px!important;width:2px!important;top:-10px!important;bottom:-10px!important;border-radius:0!important}
+.lv{margin-right:6px}
+.lv.mid+.lv.mid::before,.lv.q+.lv.q::before{left:-4px!important;width:2px!important;top:-6px!important;bottom:-6px!important;border-radius:0!important}
+.mtile.mid,.mtile.q,.lv.mid,.lv.q{transform:none!important}
+
+.mtile[data-c]::after,.lv[data-c]::after{content:attr(data-c);position:absolute;top:-13px;right:-8px;background:#1f5fbf;color:#fff;font-size:12px;font-weight:bold;border-radius:50%;width:20px;height:20px;line-height:20px;text-align:center;font-family:Arial,sans-serif;text-decoration:none;opacity:1}
+.lv[data-c]::after{top:-10px;right:-7px;width:17px;height:17px;line-height:17px;font-size:10px}
+.slide .tl{margin-top:16px!important}
+
+.zcas2{display:flex;flex-direction:column;gap:12px;width:100%;align-self:stretch}
+.zch3{font-weight:bold;font-size:15px;text-transform:uppercase;background:#eee;border:1.5px solid #000;padding:2px 10px}
+.slide .zcas2 .zcas{font-size:17px!important;line-height:1.3;margin:6px 0 0;padding-left:24px}.zcas2 .zcas li{margin-bottom:3px}
+
+.ztr{flex:1;min-width:0}.ztr .tl{flex:1}
+.zfig .tl{width:100%;align-self:stretch}
+.zfig.zrowf{flex-wrap:nowrap!important}
+.zstem .lv{margin-right:10px}.zstem .lv.mid+.lv.mid::before,.zstem .lv.q+.lv.q::before{left:-6px!important}
+.slide.tight .st.zs{font-size:20px!important;margin-bottom:6px!important}.slide.tight .zpq{margin-bottom:4px;font-size:19px}.slide.tight .zpq.sep{padding-top:6px}
+
+.zcmd{display:none!important}
+.slide.z .st.final{border:2px solid #1a7f1a!important;background:#e9f7e9;padding:6px 12px!important;margin-top:6px!important;white-space:normal}
+.slide.z .st.final.zpa{border:2px solid #1a7f1a!important;padding:4px 10px!important}
+.zok{background:#1a7f1a;font-size:15px}
+.slide.z .st.zdis{margin-top:10px!important}
+
+table.zfill th,table.zfill td{border:1.5px solid #d00000!important;min-width:56px;height:34px}
+
+/* ==== STEM PLOT STANDARD (17 Nov): fixed cells, same font for stems+leaves, highlights never change size ==== */
+.zstem{display:flex;flex-direction:column;align-items:center}
+.zstem.zstem.zstem.zstem table,.zstem.zstem.zstem.zstem table{border-collapse:collapse;font-size:var(--zsf,44px)!important;font-variant-numeric:tabular-nums;line-height:1}
+.zstem th,.zstem.zstem.zstem.zstem th{font-size:.42em!important;font-weight:bold;padding:0 .5em .25em!important;border-bottom:3px solid #000;text-align:left}
+.zstem th:first-child{text-align:right}
+.zstem td,.zstem.zstem.zstem.zstem td{padding:.06em 0!important;height:1.3em;vertical-align:middle}
+.zstem td.zst,.zstem.zstem.zstem.zstem td.zst{font-weight:bold;text-align:right;padding:0 .35em 0 .2em!important;border-right:3px solid #000;width:auto}
+.zstem td.zlv,.zstem.zstem.zstem.zstem td.zlv{padding:0 .2em 0 .3em!important;min-width:0!important;white-space:nowrap;text-align:left}
+.zstem .lv,.zstem.zstem.zstem.zstem .lv{display:inline-block;box-sizing:border-box;width:.95em!important;min-width:0!important;height:1.2em;line-height:1.2em;margin:0 .07em 0 0!important;padding:0!important;text-align:center;vertical-align:middle;
+  border-radius:.14em;transform:none!important;font-size:1em!important;transition:background-color .3s,color .3s,opacity .3s;position:relative}
+.zstem .lv.mid,.zstem .lv.q{transform:none!important;color:#fff!important;opacity:1!important;text-decoration:none!important}.zstem .lv.mid{background:#d00000!important}.zstem .lv.q{background:#1f5fbf!important}
+.zstem .lv.ex{outline:.07em solid #d00000;outline-offset:-.07em}
+.zstem .lv.mid+.lv.mid::before,.zstem .lv.q+.lv.q::before{left:calc(-.035em - 1.5px)!important;width:3px!important;top:-.12em!important;bottom:-.12em!important;border-radius:0!important}
+.zstem .lv[data-c]::after{font-size:max(10px,.3em)!important;width:auto!important;min-width:1.25em;padding:0 .2em;box-sizing:border-box;height:1.2em!important;line-height:1.2em!important;border-radius:.6em!important;top:auto!important;bottom:calc(100% + 1px)!important;left:50%!important;right:auto!important;transform:translateX(-50%);z-index:2}
+.zstem .zkey,.zstem.zstem.zstem.zstem .zkey{font-size:max(20px,calc(var(--zsf,44px)*.55))!important;margin-top:.35em!important;color:#000;font-weight:bold;border:2px solid #000;border-radius:6px;padding:.1em .6em;background:#fff;transition:opacity .3s}
+.slide.apkb .zfig svg.zbx{flex:1 1 0!important;min-height:0!important;max-height:210px!important}
+.zstem.zcnt td{height:1.5em!important;vertical-align:bottom!important}.zstem.zcnt td.zst{padding-bottom:.08em!important}.zstem.zcnt .lv{margin-bottom:.06em!important}
+.slide.apks .zfig{flex-direction:row!important;align-items:center!important;gap:18px;padding-top:6px!important;justify-content:center!important}.slide.apks .zfig .zstem{flex:none}.slide.apks .zw .st.zs{font-size:19px!important;margin:3px 0!important;line-height:1.55}.slide.apks .zfig svg.zbx{flex:1 1 0!important;min-width:0;max-height:none!important;width:auto}
+.zstem .zkey.zkh{opacity:0}.zstem .zkey.zkh.on{opacity:1}
+.zstem .zkey.zkh.on{animation:zkp .6s}@keyframes zkp{0%{background:#fff3a8}100%{background:#fff}}

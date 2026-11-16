@@ -8,7 +8,7 @@ Owner: Rocco (teacher). He is new to Claude Code and git: explain in plain words
 The standalone **Year 12 General Maths (12MAG) course planner** (GitHub Pages: roccatalano.github.io/12MAG/ (capital MAG: the repo was renamed, the lowercase address now gives "Site not found")). Moved here 14 Nov 2026 from `roccatalano/teaching-dashboard-2027` (which still shows 12MAG on Rocco's personal dashboard for now — don't change that repo unless asked).
 - `PLANNER.md` — the planner spec. **Built 14 Nov:** `planner/index.html` (Course plan tab + one Year plan tab per year; same card/nested-section design as Rocco's dashboard, whose CSS and section code it copies; label the four groups AoS 1–4, never 'Unit'), data in `planner/unit-plan.json` (the single source of truth for content: edit it directly) and `planner/years/<year>.json` (+ `years/index.json` listing the years). 2027 is a blank tab until Rocco sends the term-dates file. The site root redirects to `planner/`.
 - `lessons/` — finished 12MAG materials (html + pdf), same files as `teaching-dashboard-2027/lessons/gm12/`.
-- `tools/` — current plan builder (`build_plan.py`, writes the dashboard JSON in the OTHER repo; to be replaced by planner data files), source indexes (`y12_edrolo_exam_practice.csv`, `y11_edrolo_exam_practice.csv`, `y11_cambridge_skills_checklist.csv`, `cambridge_go_videos.csv`, `sd.json`, `vcaa_donow_aos1.json`), and slide-deck build code (`deck/s3/` = current template).
+- `tools/` — current plan builder (`build_plan.py`, writes the dashboard JSON in the OTHER repo; to be replaced by planner data files), source indexes (`y12_edrolo_exam_practice.csv`, `y11_edrolo_exam_practice.csv`, `y11_cambridge_skills_checklist.csv`, `cambridge_go_videos.csv`, `sd.json`, `vcaa_donow_aos1.json`), and slide-deck build code (`deck/z10/` = the slide standard).
 - `docs/CLEANUP.md` — history of the 14 Nov G: drive reorganisation.
 - Long-term idea (Rocco): a school-wide system where each teacher's dashboard picks the subjects they teach. Keep subject data self-contained and portable.
 
@@ -28,13 +28,13 @@ These replace all older 12MAG rules (old Planning\CLAUDE.md, project docs).
 6. **Learn notes:** own words, condensed, cite Cambridge. **Examples** = Cambridge Examples. **You try** = mapped Edrolo worked example only (U3&4 first, then U1&2 if relevant: Rocco, 15 Nov). **Only if neither book has a match**, write one (Rocco, 15 Nov): very close to the Cambridge Example's wording, new context and numbers, labelled as written for 12MAG; store it in `planner/written-youtrys.json`. This is the only exception to rule 1.
 7. **Exit tasks:** the VCAA reprint exam questions at the back of Edrolo U3&4 subchapters (past-design VCAA).
 8. **CFATs:** Edrolo U3&4 exercise questions ONLY, never the VCAA reprints. Format: HTML + PDF in the CFAT 1.1.x layout, 2 pages, student + solutions copies (Rocco, 15 Nov: not Word; ignore the old 12mag-cfat-word skill). Model: `tools/cfat/ch2/build_html.py`. **CFAT follow-ups:** Jacaranda textbook exercises.
-9. **Chapter tests:** Mathspace topic assessments. **SACs:** custom built. **Revision booklets (per chapter):** Insight GM1/GM2. **Coursework** (Rocco, 14 Nov: call it coursework, not homework, so students know it counts towards their S): students' own Cambridge textbook exercises. Existing decks S1–S3 still say 'Homework'; fix later.
+9. **Chapter tests:** Mathspace topic assessments. **SACs:** custom built. **Revision booklets (per chapter):** Insight GM1/GM2. **Coursework** (Rocco, 14 Nov: call it coursework, not homework, so students know it counts towards their S): students' own Cambridge textbook exercises.
 10. **Burnt items:** one use per question across everything (Do Now, APK, exit, CFAT, booklet, test). Match VCAA reprints by their ORIGINAL VCAA source (e.g. an Edrolo exit = VCAA 2019 E1 Q3). Check `tools/ledger.csv` (rows with burnt = yes). After making or using items, add them: re-run `tools/build_ledger.py "<HANDOFF.md path>"` (it re-reads lessons/*.html) or add rows to `tools/ledger_manual.csv`. Example/You try/homework rows are logged but not burnt.
 11. **% correct** only from examiner reports (past-design reports sit with the past papers); if a report is missing, say which one and ask Rocco.
 12. **Check every slide visually** (all steps shown + mid-reveal) before handing over. Finished resources go in `lessons/` here and flat into `01 Lesson materials` on G:.
 
 ## Describing numerical data: SOCS (Rocco, 15 Nov)
-Every "describe" answer (and later "compare") uses **SOCS, like a sock**, in this order, one template line per letter (`socs()` in `tools/deck/tpl/tpl.py`):
+Every "describe" answer (and later "compare") uses **SOCS, like a sock**, in this order, one template line per letter (slides: `socs_tpl()` in `tools/deck/z10/lib/num.py`; old decks: `socs()` in `tools/deck/tpl/tpl.py`):
 - **S**hape: The distribution is symmetric / positively skewed / negatively skewed.
 - **O**utliers: There are no outliers / is an outlier at … / are outliers at … (present or not: goes with the shape).
 - **C**entre: The distribution is centred at <value>, the median / mean / mode (median is unaffected by outliers).
@@ -45,29 +45,12 @@ Textbook solutions are set out in SOCS order (say so in the source line). Worksh
 Each lesson's resources follow its planner card (APK, Do Now, examples/you trys, exits, CAS, coursework). If a source item can't be used, ask, don't silently drop it.
 CAS: ClassPad can't make dot plots: the dot plot skill is TI-Nspire only (`tiOnly` in cas-skills.json).
 
-## New slide style: 10MA house style (Rocco, 17 Nov) — `tools/deck/z10/`
-Rocco prefers the 10MA deck style. **Read `tools/deck/z10/HOWTO.md` before building or rebuilding a deck.** Worked example: `tools/deck/z10/s3_build.py` → `lessons/S3-slides-v2.html`. Where HOWTO.md's house rules differ from the older rules below (layout, parts in the working box, green ✓ Answer box, no distractor boxes, no command-word chips, medians by counting to the (n+1)/2th position, CAS steps shown together, one-tick check-in, 10MA coursework slide), HOWTO.md wins. **No Do Now slides and no 'Videos that might help' slide in the new decks** (Rocco, 17 Nov: he attaches those to Google Classroom instead).
-
-## Slide templates (Rocco, 14 Nov) — every deck is built from `tools/deck/tpl/tpl.py`
-Build a lesson with a `tools/deck/<S#>/build.py` that only fills content into the templates (see `tools/deck/s4/build.py`); the engine is `tools/deck/engine.html` (re-make with `make_engine.py`). Rules:
-- **Order:** title (formal topic) → Today's lesson (3 white cards: learning intentions · success criteria with tick boxes · lesson sequence) → Key definitions (with small pictures) and Key formulas (fences carry "x < LF → outlier") → Do Now ×4 → APK → Learn / WE / You try / CAS → exits → check-in (one tick-box card) → coursework (one card per subchapter) → **Videos that might help** (always last; blank cards to fill).
-- **Question slides:** question on the left (verbatim; command word highlighted yellow), blue line, working on the right as numbered cards revealed one per click, ending in a **green answer card** (a concluding statement). Header tiles top right: command word tile ("FIND · …"), VCAA % tile, video button.
-- **Model formulas:** formula → substitute (values flip in) → result, using the Key formulas names. Data sets: use CAS one-variable stats, don't order by hand. Outliers: IQR → fences → "56 > 55 = UF → outlier" statements; draw the fences on the boxplot.
-- **Annotate the question** at the step that needs it (e.g. the 20.5th line on a dot plot, highlighted cells, marked leaves). Axes appear only when their step comes.
-- **Multi-part questions (a, b, c…):** parts listed down the page on the left (`plist`); ONE big green answer card that reveals one part per click (`parts=`). Never run parts together in a line.
-- If the figure is the answer (a boxplot to construct), it is built inside the green answer card.
-- **MC:** answer card → next click "What's the distractor?" → next click the option + why. No distractor card unless there is a real one.
-- **Exam question pills name the VCAA source** (e.g. 'APK · VCAA 2021 Exam 1 Q1', 'Exit task 1 of 3 · VCAA 2019 Exam 2 Q1a'), never Edrolo; the Edrolo/textbook reference stays in the source line at the bottom. Highlight EVERY occurrence of the command word (not inside quotations).
-- **Answer templates (Rocco, 15 Nov):** when the answer is a table, chart or report, show it first as a dark template card (`('TMPL', html)` in qslide steps; blanks `B(cls,val)` filled by `data-fill`, bars/segments by `data-grow="#id|i"`), fill it step by step while annotating the question (`data-hi="#id|rows|hc/hv/hy/hb/hg"`, only the thing being counted), then one more click turns it green. Several answer cards per slide are fine: step, step, answer (`('ANS', html)`), step, step, answer. Steps carry `data-pk` to fade the parts of the question not being worked on (`data-pks` on whole question blocks); the last click restores everything in full (static PDF state).
-- **Questions take normal spacing** (`G(text, figure, question)`), not the stretched figure zone, unless filling the card makes sense (multi-part lists: parts fill the card).
-- **Learn slides for displays follow the data → frequency table → graph flow** (tally chips into the table, then grow the bars; bars → stacked → % for segmented bar charts; report templates filled part by part with the three highlight colours).
-- **Coursework slide mirrors the planner's coursework card** (Cambridge exercises with skills + Q numbers, and the chapter revision booklet sections).
-- **Charts are built, not shown:** axes and labels appear on their own step (chart `ax=True` + `data-ax="#id"`), then bars/segments grow one per step (`data-grow`, several with `;`).
-- **Flowcharts/trees reveal top-down, one branch at a time** (parent → first branch → its children → next branch → its children); use `data-s` groups and trailing empty frags to fix the order.
-- **Coursework items are tick boxes** (same look as the success criteria).
-- **Learn:** rule card + the related key formula/definition cards on top, picture, one tip. **CAS slides are static** (Rocco, 15 Nov): TI and ClassPad step cards, small embedded YouTube cards stretched to the width of the step cards, then the read-off card, all shown at once.
-
-- **Slide PDF** (Rocco, 15 Nov): `python3 tools/deck/pdf.py lessons/S#-slides.html lessons/S#-slides.pdf`. Question slides (Do Now, APK, WE, You try, exit) → 2 pages (question only, then the final frame); everything else → the final frame only. Copy to G: as `<subs> slides.pdf`.
+## Slides: THE standard is `tools/deck/z10/HOWTO.md` (Rocco, 17 Nov)
+**Read `tools/deck/z10/HOWTO.md` before building, converting or rebuilding any deck. It is the only slide standard;** every older slide rule (the old "Slide templates" section, `tools/deck/tpl/`, `tools/deck/<s#>/build.py`, `tools/deck/pdf.py`, distractor boxes, command-word chips, Do Now / Videos slides) is superseded.
+- Library: `tools/deck/z10/lib/` (deck.py + core/module CSS/JS). New lesson: copy `tools/deck/z10/template_build.py` to `s<n>_build.py` → `lessons/S<n>-slides.html`.
+- Check: `tools/deck/z10/check.py`. PDF: `tools/deck/z10/pdf.py`. Chapter file (tabs, lazy-loaded): `tools/deck/z10/chapter.py` → `lessons/Ch<n>-slides.html/.pdf`.
+- Chapter 1 (S1–S5) is done in this standard. Copy to G: as `<subs> slides.html/.pdf`.
+- Other lessons' decks (`tools/deck/l*/`, `gm12-*`) are still on the old `tpl.py` templates: convert them to this standard when they are next worked on.
 
 ## Guided worksheets (Rocco, 15 Nov)
 - Build with `tools/deck/<s#>/worksheet.py` on **`tools/deck/ws2.py`** (CFAT / revision-booklet style; model: `tools/deck/s1/worksheet.py`) → student + solutions copies (html + PDF). G: names `<subs> worksheet(.pdf)`, `<subs> worksheet solutions(.pdf)`. (`wslib.py` = the old ruled-line style used by S2–S5; move them to ws2.)
