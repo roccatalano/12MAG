@@ -172,6 +172,8 @@ main{max-width:1200px;margin:0 auto;padding:16px 20px 80px}
 .sbuf{border-style:dashed;background:transparent;color:var(--muted)}.sbuf .st{font-weight:500}
 .ssac{background:#fbeaea;border:1px dashed #d98c8c;color:#7a1f1f}.sfix{background:#fdf3e6;border:1px dashed #e0a96d;color:#7a4510}.snone{grid-column:1/-1;min-height:0;color:var(--muted);font-style:italic;border-style:dashed;background:transparent}
 .cdetail{margin:6px 0 10px 160px}@media(max-width:800px){.cweek{grid-template-columns:1fr}.cdetail{margin-left:0}.cslots{grid-template-columns:1fr 1fr}}
+.ssplit{display:grid;grid-template-columns:2fr 1fr;gap:6px;padding:0;border:0;background:transparent;min-height:86px}.ssplit>.sin{min-height:0;height:100%}
+.sbuf.srev{border:1px dashed #d98c8c;background:#fdf5f5;color:#7a1f1f}.sbuf.sred{border:1px dashed #c9a46a;background:#fdf8ef;color:#7a5410}.sbuf.sexr{border:1px dashed #9aa3d9;background:#f2f3fc;color:#2c3576}.sbuf .sub{color:inherit;opacity:.8;font-size:12px}
 </style>
 </head>
 <body>
@@ -467,13 +469,23 @@ function renderYear(y){
   // Week-by-week calendar (Rocco, 16 Nov): each week = its lesson slots as big cards; days off, after-school SACs and fixed dates as chips.
   const weeklyY=!(Y.teachingDays&&Y.teachingDays.length);
   const merge=cs=>{const out=[];cs.forEach(c=>{const p=out[out.length-1];if(p&&p.title==c.title&&p.type==c.type){p.to=c.section}else out.push({...c,to:''})});return out};
-  const scard=l=>{
-    if(l.type=='buffer')return `<div class="slot sbuf"><div class="sm">${weeklyY?'':esc(l.section)}</div><div class="st">Spare</div><div class="sub">SAC prep, revision or catch-up</div></div>`;
+  const scard=l=>{const c=scard0(l);return l.split?`<div class="slot ssplit">${c.replace('class="slot ','class="slot sin ')}<div class="slot ssac sin"><div class="sm">After school</div><div class="st">${esc(l.split.title.replace(/ \(after school\)/i,''))}</div></div></div>`:c};
+  const scard0=l=>{
+    if(l.type=='buffer')return `<div class="slot sbuf ${/^SAC rev/.test(l.label[0])?'srev':/^Exam/.test(l.label[0])?'sexr':'sred'}"><div class="sm">${weeklyY?'':esc(l.section)}</div><div class="st">${esc(l.label[0])}</div><div class="sub">${esc(l.label[1])}</div></div>`;
     if(l.slot)return `<div class="slot ${l.sac?'ssac':'sfix'}"><div class="sm">${weeklyY?'In class':esc(l.when)}</div><div class="st">${esc(l.title)}</div></div>`;
     return `<div class="slot slesson a${l.aosN} ${l.type=='check'?'scheck':''} ${openId==l.id?'open':''}" data-id="${l.id}"><div class="sm"><span>L${l.n} · ${esc(l.section)}</span>${weeklyY?'':`<span>${esc(l.when)}</span>`}</div>
       <div class="st">${esc(l.title)}</div><div class="stags"><span class="tag">Ch ${l.ch}</span>${cfs(l).length?`<span class="tag cfat">${cfs(l).length>1?cfs(l).length+' CFATs':'CFAT'}</span>`:''}${l.type=='check'?'<span class="tag chk">Catch-up + check</span>':''}</div></div>`};
+  // Rocco, 16 Nov: buffers are named for what they're for; an after-school SAC shares the week's middle lesson card (2/3 lesson, 1/3 SAC)
+  const SACS=(Y.anchors||[]).filter(a=>/SAC/.test(a.label)).sort((a,b)=>a.date.localeCompare(b.date));let lastA=0,lastSac=null;
+  weeks.forEach(w=>w.slots.forEach(x=>{if(x.aos&&x.type!='anchor')lastA=x.aosN;if(x.type=='anchor'&&/SAC/.test(x.title||''))lastSac=x;
+    if(x.type!='buffer')return;const nx=SACS.find(a=>a.afterSchool?a.date>=x.date:a.date>x.date),done=SACS.filter(a=>!(a.afterSchool?a.date>=x.date:a.date>x.date));
+    if(!nx)x.label=['Exam revision','Redemptions, SAC feedback and exam prep'];
+    else if(nx.aos==lastA)x.label=['SAC revision',nx.label.replace(/ \(.*\)$/,'')];
+    else x.label=['SAC feedback + redemption',done.length?done[done.length-1].label.replace(/ \(.*\)$/,''):''];}));
+  weeks.forEach(w=>{const sl=w.slots.filter(x=>x.type=='buffer'||x.slot||(x.aos&&x.type!='anchor'));
+    w.slots.filter(x=>x.type=='anchor'&&!x.slot&&/SAC/.test(x.title)).forEach(a=>{const t=sl[Math.min(1,sl.length-1)];if(t){t.split=a;a.inCard=1}})});
   let lastT='';
-  for(const w of weeks){const S=w.slots.filter(x=>x.type=='buffer'||x.slot||x.aos),chips=w.slots.filter(x=>x.type=='blocked'||(x.type=='anchor'&&!x.slot));
+  for(const w of weeks){const S=w.slots.filter(x=>x.type=='buffer'||x.slot||x.aos),chips=w.slots.filter(x=>x.type=='blocked'||(x.type=='anchor'&&!x.slot&&!x.inCard));
     const S2=S.filter(x=>!f||x.aos==f||x.type=='buffer'||x.slot);if(f&&!S2.some(x=>x.aos==f))continue;
     if(w.term!=lastT){lastT=w.term;const st=stats.find(s=>s.name==w.term);h+=`<div class="aos"><b>${esc(w.term)}</b><span>${st?`${st.used} lessons · ${st.buf} spare`:''}</span></div>`}
     h+=`<div class="cweek"><div class="cwl"><b>${esc(w.label)}</b><span class="wdates">${fmt(D(w.first))} – ${fmt(D(w.last))}</span><span class="sub">${S.length} lesson${S.length==1?'':'s'}</span>
