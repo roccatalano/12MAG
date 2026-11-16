@@ -12,6 +12,10 @@
 
 **16 Nov 10:37 (AoS4 #10):** Chapter 13 test + solutions built (Draft): `tools/test/ch13/build.py` → `lessons/Ch13 test` + `solutions` (Mathspace Ch 8 graphs and networks topic assessment, all 20 Qs, + Mathspace Ch 9 Q3–5 and Q10 shortest path, verbatim, /45, 8 pages each; figures cropped from the PDFs). On G: 01 Lesson materials and the gm12-ch13-test card; 24 ledger rows. **Chapter 13 queue finished**; next AoS 4 task: plan Ch 14.
 
+
+## 16 Nov 11:31 — AoS3 #15: CFAT 3.11.x follow-ups
+Jacaranda 8.7 exercise questions on every CFAT 3.11.1/3.11.2 question (fu) + followUp lists (tools/cfat/ch11/followups.py). Next AoS 3: #16 lesson 11A.
+
 ## 16 Nov 11:27 — AoS4 #14
 CFAT 4.14.1–4.14.3 follow-ups (Jacaranda U3&4 10.2–10.5) on the planner; script tools/cfat/ch14/followups.py. Next AoS4: lesson 14A.
 ## 16 Nov 11:26 — AoS3 #14: CFATs for Chapter 11 (Draft)

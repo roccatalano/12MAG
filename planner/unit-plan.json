@@ -12254,7 +12254,7 @@
             "sub": "11A",
             "sc": "",
             "src": "Edrolo 7G Q1",
-            "fu": ""
+            "fu": "Jacaranda 8.7 Q5b, Q7b, Q20a"
            },
            {
             "q": 2,
@@ -12265,7 +12265,7 @@
             "sub": "11B",
             "sc": "",
             "src": "Edrolo 7I Q1",
-            "fu": ""
+            "fu": "Jacaranda 8.7 Q3a, Q4a, Q9c"
            },
            {
             "q": 3,
@@ -12276,7 +12276,7 @@
             "sub": "11A",
             "sc": "",
             "src": "Edrolo 7G Q4",
-            "fu": ""
+            "fu": "Jacaranda 8.7 Q3b, Q4b, Q6, Q7a, Q10a"
            },
            {
             "q": 4,
@@ -12287,7 +12287,7 @@
             "sub": "11A",
             "sc": "",
             "src": "Edrolo 7G Q2",
-            "fu": ""
+            "fu": "Jacaranda 8.7 Q5b, Q7b, Q20a"
            },
            {
             "q": 5,
@@ -12298,7 +12298,7 @@
             "sub": "11A",
             "sc": "",
             "src": "Edrolo 7G Q5",
-            "fu": ""
+            "fu": "Jacaranda 8.7 Q3b, Q4b, Q6, Q7a, Q10a"
            },
            {
             "q": 6,
@@ -12309,8 +12309,13 @@
             "sub": "11B",
             "sc": "",
             "src": "Edrolo 7I Q2",
-            "fu": ""
+            "fu": "Jacaranda 8.7 Q3a, Q4a, Q9c"
            }
+          ],
+          "followUp": [
+           "Interpreting and constructing state matrices (Edrolo 7G Q1, Edrolo 7G Q2): Jacaranda U3&4 (2023) 8.7 Q5b, Q7b, Q20a",
+           "Constructing and interpreting transition diagrams (Edrolo 7I Q1, Edrolo 7I Q2): Jacaranda U3&4 (2023) 8.7 Q3a, Q4a, Q9c",
+           "Interpreting and constructing transition matrices (Edrolo 7G Q4, Edrolo 7G Q5): Jacaranda U3&4 (2023) 8.7 Q3b, Q4b, Q6, Q7a, Q10a"
           ]
          }
         ]
@@ -12604,7 +12609,7 @@
             "sub": "11C",
             "sc": "",
             "src": "Edrolo 7H Q1",
-            "fu": ""
+            "fu": "Jacaranda 8.7 Q7c–d, Q10b iii, Q18b, Q19"
            },
            {
             "q": 2,
@@ -12615,7 +12620,7 @@
             "sub": "11C",
             "sc": "",
             "src": "Edrolo 7H Q5",
-            "fu": ""
+            "fu": "Jacaranda 8.7 Q9b, Q18c, Q22"
            },
            {
             "q": 3,
@@ -12626,7 +12631,7 @@
             "sub": "11D",
             "sc": "",
             "src": "Edrolo 7I Q7",
-            "fu": ""
+            "fu": "Jacaranda 8.7 Q11–17, Q21"
            },
            {
             "q": 4,
@@ -12637,7 +12642,7 @@
             "sub": "11C",
             "sc": "",
             "src": "Edrolo 7G Q10",
-            "fu": ""
+            "fu": "Jacaranda 8.7 Q5b–c, Q8, Q10b i–ii, Q18a"
            },
            {
             "q": 5,
@@ -12648,7 +12653,7 @@
             "sub": "11C",
             "sc": "",
             "src": "Edrolo 7H Q4",
-            "fu": ""
+            "fu": "Jacaranda 8.7 Q7c–d, Q10b iii, Q18b, Q19"
            },
            {
             "q": 6,
@@ -12659,7 +12664,7 @@
             "sub": "11D",
             "sc": "",
             "src": "Edrolo 7I Q8",
-            "fu": ""
+            "fu": "Jacaranda 8.7 Q11–17, Q21"
            },
            {
             "q": 7,
@@ -12670,7 +12675,7 @@
             "sub": "11E",
             "sc": "",
             "src": "Edrolo 7G Q12",
-            "fu": ""
+            "fu": "Jacaranda 8.7 Q20 (only Leslie exercise Q)"
            },
            {
             "q": 8,
@@ -12681,8 +12686,15 @@
             "sub": "11E",
             "sc": "",
             "src": "Edrolo 7G Q13",
-            "fu": ""
+            "fu": "Jacaranda 8.7 Q20 (only Leslie exercise Q)"
            }
+          ],
+          "followUp": [
+           "Calculating the equilibrium state matrix (Edrolo 7H Q1, Edrolo 7H Q4): Jacaranda U3&4 (2023) 8.7 Q7c–d, Q10b iii, Q18b, Q19",
+           "Interpreting the equilibrium state matrix (Edrolo 7H Q5): Jacaranda U3&4 (2023) 8.7 Q9b, Q18c, Q22",
+           "Using transition matrices to model culling and restocking (Edrolo 7I Q7, Edrolo 7I Q8): Jacaranda U3&4 (2023) 8.7 Q11–17, Q21",
+           "Calculating state matrices (Edrolo 7G Q10): Jacaranda U3&4 (2023) 8.7 Q5b–c, Q8, Q10b i–ii, Q18a",
+           "Using Leslie matrices in applied scenarios (Edrolo 7G Q12, Edrolo 7G Q13): Jacaranda U3&4 (2023) 8.7 Q20 (only Leslie exercise Q)"
           ]
          }
         ]
