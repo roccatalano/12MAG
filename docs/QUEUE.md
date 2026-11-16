@@ -373,3 +373,4 @@ If there is no answer after 10 minutes, the runner decides with its best judgeme
 | AoS2 #23 Ch8 test | 2026-11-16 | | | | done; sub-agent run, text extracted from the Mathspace PDF, answers from the key; next: AoS 2 queue finished |
 | AoS2 runner (duplicate) | 2026-11-16 19:12 | 19:40 | ~28 | | claimed #22 at 19:13 but a parallel AoS2 run had both #22 and #23 done (pushed 19:14); my duplicate Ch8 booklet discarded, nothing changed. AoS 2 queue empty; runner already disabled. next run: NOT fired — AoS 2 finished |
 | AoS3 — | 16 Nov 19:27 | 19:31 | 4 | – | No todo left: AoS 3 finished. Turning off "12MAG AoS 3 runner" was denied (permission); Rocco notified. No 'B' copy exists. | next run: NOT fired — nothing to do |
+| AoS4 runner: queue finished | 2026-11-16 19:48 | 19:50 | 2 | | no todo left in AoS 4; G: reachable; disabling the scheduled task was refused by the permission check (Rocco to turn it off); next run: NOT fired — nothing left |
