@@ -471,7 +471,7 @@ function renderYear(y){
   // Week-by-week calendar (Rocco, 16 Nov): each week = its lesson slots as big cards; days off, after-school SACs and fixed dates as chips.
   const weeklyY=!(Y.teachingDays&&Y.teachingDays.length);
   const merge=cs=>{const out=[];cs.forEach(c=>{const p=out.find(o=>o.title==c.title&&o.type==c.type);if(p){p.to=c.section}else out.push({...c,to:''})});return out};
-  const scard=l=>{const c=scard0(l);return l.split?`<div class="slot ssplit">${c.replace('class="slot ','class="slot sin ')}<div class="slot ssac sin"><div class="sm">After school</div><div class="st">${esc(l.split.title.replace(/ \(after school\)/i,''))}</div></div></div>`:c};
+  const scard=l=>{const c=scard0(l);return l.split?`<div class="slot ssplit">${c.replace('class="slot ','class="slot sin ')}<div class="slot ssac sin"><div class="sm">After school</div><div class="st">${esc(l.split.title.replace(/ \(after school[^)]*\)/i,''))}</div></div></div>`:c};
   const scard0=l=>{
     if(l.type=='buffer')return `<div class="slot sbuf ${/^SAC rev/.test(l.label[0])?'srev':/^Exam/.test(l.label[0])?'sexr':'sred'}"><div class="sm">${weeklyY?'':esc(l.section)}</div><div class="st">${esc(l.label[0])}</div><div class="sub">${esc(l.label[1])}</div></div>`;
     if(l.slot)return `<div class="slot ${l.sac?'ssac':'sfix'}"><div class="sm">${weeklyY?'In class':esc(l.when)}</div><div class="st">${esc(l.title)}</div></div>`;
@@ -481,9 +481,9 @@ function renderYear(y){
   const SACS=(Y.anchors||[]).filter(a=>/SAC/.test(a.label)).sort((a,b)=>a.date.localeCompare(b.date));let lastA=0,lastSac=null;
   weeks.forEach(w=>w.slots.forEach(x=>{if(x.aos&&x.type!='anchor')lastA=x.aosN;if(x.type=='anchor'&&/SAC/.test(x.title||''))lastSac=x;
     if(x.type!='buffer')return;const nx=SACS.find(a=>a.afterSchool?a.date>=x.date:a.date>x.date),done=SACS.filter(a=>!(a.afterSchool?a.date>=x.date:a.date>x.date));
-    if(!nx)x.label=['Exam revision','Redemptions, SAC feedback and exam prep'];
+    if(!nx)x.label=['Exam revision',''];
     else if(nx.aos==lastA)x.label=['SAC revision',nx.label.replace(/ \(.*\)$/,'')];
-    else x.label=['SAC feedback + redemption',done.length?done[done.length-1].label.replace(/ \(.*\)$/,''):''];}));
+    else x.label=['Exam revision',''];}));
   weeks.forEach(w=>{const sl=w.slots.filter(x=>x.type=='buffer'||x.slot||(x.aos&&x.type!='anchor'));
     w.slots.filter(x=>x.type=='anchor'&&!x.slot&&/SAC/.test(x.title)).forEach(a=>{const t=sl[Math.min(1,sl.length-1)];if(t){t.split=a;a.inCard=1}})});
   // a week with no lessons gets one wide card named after what fills it (e.g. 'Unit 3 trial exam week')
