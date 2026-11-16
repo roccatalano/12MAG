@@ -6,8 +6,12 @@ sys.path.insert(0,os.path.join(H,'..','tpl'))
 from tpl import *
 CAM='Cambridge General Mathematics Units 3&amp;4'; EDR='Edrolo General Mathematics Units 3&amp;4'
 BUILD=['axis','box','med','wl','wu','out']
+def FNS(mn,q1,m,q3,mx,fs=17,inl=False):
+    """five-number summary: 2 rows × 5 columns (Rocco, round 1: use for every five-number summary)"""
+    return (f'<table class="t" style="font-size:{fs}px;margin:{'0 0 0 10px;display:inline-table;vertical-align:middle' if inl else '4px 0'};white-space:nowrap"><tr><th>min</th><th>Q<sub>1</sub></th><th>M</th><th>Q<sub>3</sub></th><th>max</th></tr>'
+            f'<tr><td>{mn}</td><td>{q1}</td><td>{m}</td><td>{q3}</td><td>{mx}</td></tr></table>')
 def casstep(mn,q1,m,q3,mx,note='One-variable statistics'):
-    return ('CAS',f'{note} → <span class="c5">min <b>{mn}</b> · Q<sub>1</sub> <b>{q1}</b> · M <b>{m}</b> · Q<sub>3</sub> <b>{q3}</b> · max <b>{mx}</b></span>')
+    return ('CAS',note+' →'+FNS(mn,q1,m,q3,mx,15,True))
 def ostep(lines,attrs=''): return ('Outliers?','<br>'.join(lines),attrs)
 GT='&gt;'; LT='&lt;'
 S=[]
@@ -38,18 +42,18 @@ PARTY_V=[19,21,22,56,34,19,27,28,34,17,66,37,20,20,21,45,26,19,23,29]
 PSRC='Data: Cambridge General Mathematics Units 1&amp;2 · Chapter 2 skills checklist, 2H #14–15 (party ages)'
 S.append(qslide('apk','APK · Year 11 · Cambridge U1&amp;2 2H #14','Five-number summary and boxplot',
   PARTY+'Complete the five-number summary for the ages of the people who attended the party (from above) and use it to construct a boxplot (without outliers).',
-  [('CAS','enter the 20 ages in a list. Don’t order them by hand: it is slow and error-prone.'),casstep(17,20,24.5,34,66),
-   ('Scale','the ages run from 17 to 66, so an axis from 15 to 70 covers them.')],
-  'Five-number summary: <b>17, 20, 24.5, 34, 66</b>','Cambridge General Mathematics Units 1&amp;2 · Chapter 2 skills checklist, 2H #14 (teacher solution)',
+  [('CAS','ages in a list → one-variable statistics'),
+   ('Scale','17 to 66 → axis 15 to 70.')],
+  'Five-number summary:'+FNS(17,20,24.5,34,66),'Cambridge General Mathematics Units 1&amp;2 · Chapter 2 skills checklist, 2H #14 (teacher solution)',
   cmd=('Complete',None,'fill in all five values'),
   afig=box('a1b',{"min":15,"max":70,"step":5,"lw":17,"q1":20,"m":24.5,"q3":34,"uw":66,"xl":"age (years)","hide":BUILD,"W":800,"fs":20,"top":16}),
-  build=[('Axis from 15 to 70','data-bx="#a1b|axis"'),('Box from Q<sub>1</sub> = 20 to Q<sub>3</sub> = 34, median at 24.5','data-bx="#a1b|box,med"'),('Whiskers to 17 and 66','data-bx="#a1b|wl,wu"')]))
+  build=[('Axis','data-bx="#a1b|axis"'),('Box 20 to 34, median 24.5','data-bx="#a1b|box,med"'),('Whiskers to 17 and 66','data-bx="#a1b|wl,wu"')]))
 S.append(qslide('apk','APK · Year 11 · Cambridge U1&amp;2 2H #15','Outliers from the fences',
   PARTY+'Calculate the values of the upper and lower fences, and use these to find any outliers in the ages of the people who attended the party (from above).',
   [fx('Interquartile range',None,F(V('Q<sub>3</sub>','34'),' − ',V('Q<sub>1</sub>','20')),'14'),
    fx('Lower fence',None,F(V('Q<sub>1</sub>','20'),' − 1.5 × ',V('IQR','14')),'−1'),
    fx('Upper fence',None,F(V('Q<sub>3</sub>','34'),' + 1.5 × ',V('IQR','14')),'55'),
-   ostep([f'56 {GT} 55 = UF → <b>outlier</b> · 66 {GT} 55 = UF → <b>outlier</b>',f'smallest age 17 {GT} −1 = LF → no low outliers'])],
+   ostep([f'<i>x</i> {GT} UF → outlier: 56 {GT} 55 ✓ · 66 {GT} 55 ✓',f'<i>x</i> {LT} LF → outlier: 17 {LT} −1 ✗ → no low outliers'])],
   'The fences are −1 and 55. The outliers are <b>56 and 66</b>.','Cambridge General Mathematics Units 1&amp;2 · Chapter 2 skills checklist, 2H #15 (teacher solution)',
   cmd=('Calculate',None,'working for each fence'),
   afig=box('a2b',{"min":-5,"max":70,"step":5,"lw":17,"q1":20,"m":24.5,"q3":34,"uw":45,"out":[56,66],"xl":"age (years)","hide":BUILD,"W":800,"fs":19,"top":62,
@@ -82,13 +86,13 @@ _h,_q1,_q3=tquart('lt',20,'Q₁ = 20','Q₃ = 34')
 S.append(islide('Learn · 1G','The five-number summary by hand (what the CAS does)',
   tiles('lt',PARTY_V,fs=22)+isteps([('Order the 20 ages: min = 17, max = 66',tsort('lt')),('Cross off pairs: M = (23 + 26) ÷ 2 = 24.5',tmed('lt',label='M = 24.5')),
    ('Split into two halves of 10',_h),('Q<sub>1</sub> = median of the lower half = 20',_q1),('Q<sub>3</sub> = median of the upper half = 34',_q3),
-   ('Five-number summary: <b>17, 20, 24.5, 34, 66</b> (matches the CAS)','')]),PSRC+' · Cambridge General Mathematics Units 3&amp;4, 1F–1G'))
+   ('Five-number summary (matches the CAS)'+FNS(17,20,24.5,34,66,20),'')]),PSRC+' · Cambridge General Mathematics Units 3&amp;4, 1F–1G'))
 # ================= WE22
 life=[('5',[2]),('5',[5,6]),('6',[4]),('6',[6,6,7,9]),('7',[1,2,2,3,3,4,4,4,4]),('7',[5,5,6,6,7,7])]
-FIVE='<table class="t" style="font-size:17px;white-space:nowrap"><tr><td class="l">minimum</td><td>52</td></tr><tr><td class="l">first quartile (Q<sub>1</sub>)</td><td>66</td></tr><tr><td class="l">median (M)</td><td>73</td></tr><tr><td class="l">third quartile (Q<sub>3</sub>)</td><td>75</td></tr><tr><td class="l">maximum</td><td>77</td></tr></table>'
+FIVE='<table class="t" style="font-size:15px;width:100%;table-layout:fixed"><tr><th>minimum</th><th>first quartile (Q<sub>1</sub>)</th><th>median (M)</th><th>third quartile (Q<sub>3</sub>)</th><th>maximum</th></tr><tr><td>52</td><td>66</td><td>73</td><td>75</td><td>77</td></tr></table>'
 S.append(qslide('we','Worked example 22 · 1G','Constructing a boxplot from a five-number summary',
   ('The stem plot shows the distribution of life expectancies (in years) in 23 countries. The five-number summary for these data is:',
-   f'<div class="row" style="gap:30px;justify-content:center">{stem("w22s",life,"Key: 5|2 = 52 years",20)}{FIVE}</div>','Use the five-number summary to construct a boxplot.'),
+   f'<div style="display:flex;flex-direction:column;align-items:center;gap:8px">{FIVE}{stem("w22s",life,"Key: 5|2 = 52 years",20)}</div>','Use the five-number summary to construct a boxplot.'),
   [('Read','the five numbers from the table (they match the stem plot).','data-mark="#w22s|0,22|ext #w22s|5,17|q1m #w22s|11|mid"'),
    ('Scale','values run from 52 to 77, so an axis from 50 to 80 covers them.')],
   'The boxplot:',f'{CAM} · Example 22',video='Cambridge GO · Example 22 (1G Resources)',cmd=('Construct',None,'scaled axis, box, median, whiskers'),
@@ -119,14 +123,13 @@ S.append(learn('Learn · 1G','Outliers: the 1.5 × IQR fences',
   frags='<span class="frag" data-bx="#l2b|iqr"></span><span class="frag" data-bx="#l2b|fl,fu"></span><span class="frag" data-bx="#l2b|out" data-dotmark="#l2d|0"></span><span class="frag" data-bx="#l2b|wl,wu"></span>',
   cards=[kcard('Lower fence',FLF,RLF),kcard('Upper fence',FUF,RUF)]))
 # ================= Learn (interactive): party ages fence slider
-S.append(islide('Learn · 1G','Outliers: what if the oldest guest were younger? <span class="i-hint">DRAG THE ORANGE DOT</span>',
-  fence_slider('lfs',PARTY_V,max=75,min=10,lo=35,hi=75,tick=1,lab=5,xl='age (years)')+isteps([
-   ('Make it 50: 50 &lt; 55 = UF → not an outlier (Q<sub>1</sub>, Q<sub>3</sub> and the fences do not move)',fset('lfs',50)),
-   ('Back to 66: 66 &gt; 55 = UF → outlier',fset('lfs',66))]),PSRC))
+S.append(islide('Learn · 1G','Outliers and fences: party ages <span class="i-hint">DRAG THE SLIDER</span>',
+  fence_slider('lfs',PARTY_V,max=80,min=10,lo=30,hi=80,tick=1,lab=10,xl='age (years)',name='Oldest',lt='Younger',rt='Older',mm=True)+isteps([
+   ('50: not an outlier',fset('lfs',50)),('66: outlier',fset('lfs',66))]),PSRC))
 # ================= Learn (interactive): box slider, 19 marks
-S.append(islide('Learn · 1G','Boxplot: whisker or outlier? <span class="i-hint">DRAG THE HANDLE</span>',
-  box_slider('lbs',marks19,max=55,k=3,lo=0,hi=23,tick=1,lab=5,xl='marks')+isteps([
-   ('Make it 10: 10 &gt; 5 = LF → not an outlier; the whisker runs to 10',fset('lbs',10)),('Back to 3: 3 &lt; 5 = LF → outlier dot; the whisker stops at 21',fset('lbs',3))]),
+S.append(islide('Learn · 1G','Boxplot: whisker or outlier? <span class="i-hint">DRAG THE SLIDER</span>',
+  box_slider('lbs',marks19,max=55,k=3,lo=0,hi=23,tick=1,lab=5,xl='marks',name='Lowest mark',lt='Lower',rt='Higher')+isteps([
+   ('10: not an outlier; the whisker runs to 10',fset('lbs',10)),('3: outlier dot; the whisker stops at 21',fset('lbs',3))]),
   'Cambridge General Mathematics Units 3&amp;4, 1G pp. 63–64 · Data: CAS 4 (p. 64)'))
 # ================= CAS
 S.append(cas('CAS · 1G','Boxplot with outliers on CAS',
@@ -284,7 +287,7 @@ def _card(o):
             r=_card(v)
             if r: return r
 CW=_card(json.load(open(os.path.join(ROOT,'planner','unit-plan.json'))))['homework']['sets']
-S.append(coursework([(st['title'].replace('Revision book','Chapter 1 revision booklet'),st.get('note') or '',['<span style="display:flex;justify-content:space-between;gap:12px"><span>'+it['skill']+'</span><b>'+it['q']+'</b></span>' for it in st['items']]) for st in CW]))
+S.append(coursework([(st['title'].replace('Revision book','Chapter 1 practice booklet'),(st.get('note') or '').replace('revision booklet','practice booklet').replace('Revision booklet','Practice booklet'),['<span style="display:flex;justify-content:space-between;gap:12px"><span>'+it['skill']+'</span><b>'+it['q']+'</b></span>' for it in st['items']]) for st in CW]))
 yid=lambda u:u.split('v=')[1].split('&')[0]
 VJ=json.load(open(os.path.join(ROOT,'planner','videos.json'))); VJ=VJ if isinstance(VJ,list) else VJ.get('videos',[])
 S.append(videos([yt(f'{v["sub"]} · {v["title"]} ({v["channel"].split(" (")[0]})',yid(v['url'])) for v in VJ if v['sub']=='1G']))

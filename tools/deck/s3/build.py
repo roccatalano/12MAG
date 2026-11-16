@@ -31,6 +31,11 @@ FPOS=F('position = ',FR(['<i>n</i> + 1'],['2'])); FMED=F('M = ',FR(['first middl
 FRNG=F('range = largest − smallest'); FIQR=F('IQR = Q<sub>3</sub> − Q<sub>1</sub>'); FMEAN=F('<i>x̄</i> = ',FR(['Σ<i>x</i>'],['<i>n</i>']))
 FSD=F('<i>s</i> = √',FR(['Σ(<i>x</i> − <i>x̄</i>)²'],['<i>n</i> − 1']))
 S=[]
+def FIVE(*v):
+    """five-number summary as a 2-row × 5-column table (Rocco, 16 Nov: use this style for every five-number summary)"""
+    h=['min','Q<sub>1</sub>','M','Q<sub>3</sub>','max']
+    return ('<table class="t" style="font-size:22px;margin-top:8px;text-align:center"><tr>'+''.join(f'<th style="text-align:center">{x}</th>' for x in h)+'</tr><tr>'
+            +''.join(f'<td style="min-width:64px"><b>{x}</b></td>' for x in v)+'</tr></table>')
 # ================= opening
 S.append(title(3,'Measures of centre and spread','Cambridge General Mathematics Units 3&amp;4 · 1F Using summary statistics to describe numerical distributions: median, quartiles, IQR, mean and standard deviation','S3',
   flow=('CFAT','APK','Learn','Worked examples','You try','Exit tasks')))
@@ -59,10 +64,11 @@ S.append(qslide('apk','APK · Year 11 · Cambridge U1&amp;2 2E #10, 2F #11','Wha
   [fx('Mean','<i>x̄</i>',F(FR([V('Σ<i>x</i>','583')],[V('<i>n</i>','20')])),'29.15','data-pk="0"'),
    ('Median','n = 20: average the 10th and 11th, (23 + 26) ÷ 2 = 24.5','data-pk="0" data-mark="#apks|9,10|mid"'),
    ('Which?','outliers (56, 66) and a skewed shape pull the mean up: use the median.','data-pk="0"'),
+   ('ANS','<b>a</b> &nbsp;<i>x̄</i> = 29.15, M = 24.5. The <b>median</b> is preferred (skewed, outliers 56 and 66).','data-pk="0"'),
    ('Quartiles','Q<sub>1</sub> = (20 + 20) ÷ 2 = 20 · Q<sub>3</sub> = (34 + 34) ÷ 2 = 34','data-pk="1" data-mark="#apks|4,5,14,15|q1m"'),
-   fx('Interquartile range','IQR',F(V('Q<sub>3</sub>','34'),' − ',V('Q<sub>1</sub>','20')),'14','data-pk="1"')],
-  '','Cambridge General Mathematics Units 1&amp;2 · Chapter 2 skills checklist, 2E #10, 2F #11 (teacher solutions)',cmd=('Determine',None,'values, then a choice'),
-  parts=[('a','<i>x̄</i> = 29.15, M = 24.5. The <b>median</b> is preferred (skewed, outliers 56 and 66).'),('b','Q<sub>1</sub> = 20, Q<sub>3</sub> = 34, <b>IQR = 14</b>')]))
+   fx('Interquartile range','IQR',F(V('Q<sub>3</sub>','34'),' − ',V('Q<sub>1</sub>','20')),'14','data-pk="1"'),
+   ('ANS','<b>b</b> &nbsp;Q<sub>1</sub> = 20, Q<sub>3</sub> = 34, <b>IQR = 14</b>','data-pk="1"')],
+  '','Cambridge General Mathematics Units 1&amp;2 · Chapter 2 skills checklist, 2E #10, 2F #11 (teacher solutions)',cmd=('Determine',None,'values, then a choice')))
 EGGS=[172,192,159,125,197,135,140,140,138,166,136,131]
 S.append(qslide('apk','APK · VCAA 2017 Exam 2 Q1ai','A real VCAA question you can already do',
   'The number of eggs counted in a sample of 12 clusters of moth eggs is recorded in the following table.'
@@ -76,28 +82,40 @@ S.append(learn('Learn · 1F','Two questions about any distribution',
   '<div class="row" style="gap:30px;justify-content:center;font-size:26px"><div class="key frag" style="flex:1;text-align:center"><b>median</b> goes with <b>IQR</b><br><small>resistant: outliers barely move them</small></div><div class="key frag" style="flex:1;text-align:center"><b>mean</b> goes with <b>standard deviation</b><br><small>use when symmetric, no outliers</small></div></div>',
   '<b>They come in pairs:</b> median with IQR · mean with standard deviation. In a SOCS answer, C and S use the same pair.',
   'Cambridge General Mathematics Units 3&amp;4, 1F pp. 44, 50–52',cards=[kcard('Median position',FPOS),kcard('Mean',FMEAN)]))
-S.append(TPL._frame('learn','Learn · 1F','The median: the middle value',
-  '<div class="xp" id="medx" style="height:236px"></div><span class="frag" data-act="m-order"></span><span class="frag" data-act="m-count"></span><span class="frag" data-act="m-even"></span><span class="frag" data-act="m-evenmid"></span>'
-  '<div class="key frag" style="margin-top:18px;padding:16px 28px"><h4>The median</h4><p style="font-size:24px">The median is the middle value in an ordered data set.<br>For <i>n</i> data values the median is located at the (<i>n</i> + 1) ÷ 2 th position. When:</p><ul class="bul" style="font-size:23px;margin-top:2px"><li><i>n</i> is odd, the median will be the middle data value</li><li><i>n</i> is even, the median will be the average of the two middle data values.</li></ul></div>',
-  'Key box: Cambridge General Mathematics Units 3&amp;4, 1F p. 44 · Animation data: teacher example',cfu='disc'))
+# The median (Rocco, 16 Nov: like the 10MA 'Finding the median step by step' slide, with the (n + 1)/2 position step)
+MO=[19,3,26,12,34,1,24,15,30,21,27]; ME=[9,3,12,5,10,2,14,6,11,4]
+def _mcol(h,t,steps,k0):
+    return f'<div style="flex:1;min-width:0"><p style="font-size:21px;margin:0 0 6px"><b>{h}</b></p>{t}<div style="margin-top:34px">{isteps(steps,k0)}</div></div>'
+S.append(islide('Learn · 1F','The median: the middle value',
+  '<p style="font-size:22px;margin:0 0 12px">The median is the middle value in an ordered data set. For <i>n</i> data values it is at the '+F(FR(['<i>n</i> + 1'],['2']))+'th position.</p>'
+  '<div class="row" style="gap:36px;align-items:flex-start">'
+  +_mcol('Odd number of values',tiles('mo',MO,fs=20),[('Write the data in order. Count them: <i>n</i> = 11',tsort('mo')),
+      ('Position: (11 + 1) ÷ 2 = <b>6th</b> value',''),('Cross off the smallest and the largest, again and again: one value is left. <b>M = 21</b>',tmed('mo',label='M = 21'))],1)
+  +_mcol('Even number of values',tiles('me',ME,fs=20),[('Write the data in order. Count them: <i>n</i> = 10',tsort('me')),
+      ('Position: (10 + 1) ÷ 2 = <b>5.5th</b>: halfway between the 5th and 6th values',''),
+      ('Cross off pairs: two values are left, 6 and 9. The median sits on the line between them: <b>M = (6 + 9) ÷ 2 = 7.5</b>',tmed('me',label='M = 7.5',line=True))],4)
+  +'</div>',
+  'Rule: Cambridge General Mathematics Units 3&amp;4, 1F p. 44 · Data and steps: teacher example (as in the 10MA deck)'))
 # ================= WE14 / YT
 A14=[2,9,1,8,3,5,3,8,1]; B14=[10,1,3,4,8,6,10,1,2,9]
 S.append(qslide('we','Worked example 14 · 1F','Finding the median value in a data set',
   'Order each of the following data sets, locate the median, and then write down its value.'+plist([('a','<div style="width:540px">'+tiles('w14a',A14,fs=24)+'</div>'),('b','<div style="width:540px">'+tiles('w14b',B14,fs=24)+'</div>')]),
   [('Order','n = 9 (odd)','data-pk="0" '+tsort('w14a')),fx('Median position',None,F(FR([V('<i>n</i>','9'),' + 1'],['2'])),'5th value','data-pk="0"'),
    ('Cross off','four pairs from the ends: the 5th value is left','data-pk="0" '+tmed('w14a',label='M = 3')),
+   ('ANS','<b>a</b> &nbsp;M = <b>3</b>','data-pk="0"'),
    ('Order','n = 10 (even)','data-pk="1" '+tsort('w14b')),fx('Median position',None,F(FR([V('<i>n</i>','10'),' + 1'],['2'])),'5.5th: average the 5th and 6th','data-pk="1"'),
-   ('Cross off','four pairs from the ends: 4 and 6 are left','data-pk="1" '+tmed('w14b',label='M = 5'))],
-  '',f'{CAM} · Example 14',video=vid(14),cmd=('locate',None,'order first, then count in'),
-  parts=[('a','M = <b>3</b>'),('b','M = (4 + 6) ÷ 2 = <b>5</b>')]))
+   ('Cross off','four pairs from the ends: 4 and 6 are left; the median sits on the line between them','data-pk="1" '+tmed('w14b',label='M = 5',line=True)),
+   fx('Median, n even','M',F(FR([V('5th','4'),' + ',V('6th','6')],['2'])),'5','data-pk="1"'),
+   ('ANS','<b>b</b> &nbsp;M = <b>5</b>','data-pk="1"')],
+  '',f'{CAM} · Example 14',video=vid(14),cmd=('locate',None,'order first, then count in')))
 D1E=[3,5,1,10,8,9,6,3,8,6]; YQ=tquart('y14',10,'Q₁ = 3','Q₃ = 8')
 S.append(qslide('yt','You try · Edrolo 1E WE1','Finding the median value in a data set',
   'Construct a five-number summary for the following data.<div style="margin:12px 0">'+tiles('y14',D1E,fs=26)+'</div>',
   [('Order','n = 10; min = 1, max = 10',tsort('y14')),
-   ('Median','(10 + 1) ÷ 2 = 5.5th position: (6 + 6) ÷ 2 = 6',tmed('y14',label='M = 6')),
+   ('Median','(10 + 1) ÷ 2 = 5.5th position: (6 + 6) ÷ 2 = 6',tmed('y14',label='M = 6',line=True)),
    ('Halves','n is even: five values in each half',YQ[0]),
    ('Q₁','median of the lower half = 3',YQ[1]),('Q₃','median of the upper half = 8',YQ[2])],
-  'Five-number summary: <b>1, 3, 6, 8, 10</b>',f'{EDR} · 1E Worked example 1',cmd=('Construct',None,'min, Q₁, M, Q₃, max')))
+  'Five-number summary:'+FIVE(1,3,6,8,10),f'{EDR} · 1E Worked example 1',cmd=('Construct',None,'min, Q₁, M, Q₃, max')))
 CRIC=[18,18,19,19,22,22,22,22,23,23,24,25,29]
 S.append(qslide('we','Worked example 15 · 1F','Finding the median value from a dot plot',
   G('The dot plot opposite displays the age distribution (in years) of the 13 members of a local cricket team.','<div style="width:600px">'+dot('w15d',{"min":17,"max":30,"vals":CRIC,"xl":"Age (years)","W":760,"h":230,"r":12})+'</div>',
@@ -124,7 +142,7 @@ S.append(qslide('yt','You try · Edrolo 1F WE3a','Finding the median value from 
   'The median is <b>485</b>.',f'{EDR} · 1F Worked example 3a',cmd=('Calculate',None,'one value')))
 # ================= Learn: quartiles
 S.append(TPL._frame('learn','Learn · 1F','Quartiles cut the ordered data into quarters',
-  '<div class="xp" id="qx" style="height:400px"></div><span class="frag" data-act="q-0-m"></span><span class="frag" data-act="q-0-q"></span><span class="frag" data-act="q-0-band"></span><span class="frag" data-act="q-1-show"></span><span class="frag" data-act="q-1-m"></span><span class="frag" data-act="q-1-q"></span><span class="frag" data-act="q-1-band"></span>'
+  '<script>/* Rocco, 16 Nov: the middle-50% cut lines. n odd: through Q1 (5) and Q3 (14) tiles (6 values inside, 5 outside);\nn even: between 5|7 and 14|16 (6 inside, 6 outside) */\nfunction qCut(){const box=document.getElementById(\'qx\');if(!box||!box._g)return;const {W,G}=box._g;\n  box.querySelectorAll(\'.band\').forEach((b,ri)=>{const cs=[...box.querySelectorAll(`.chip3[data-r="${ri}"]`)];if(!cs.length)return;\n    const x=k=>parseFloat(cs[k].style.left);let L,R;\n    if(ri===0){L=x(2)+W/2;R=x(8)+W/2}else{L=x(3)-G/2;R=x(9)-G/2}\n    b.style.left=L+\'px\';b.style.width=(R-L)+\'px\';b.style.zIndex=3;b.style.pointerEvents=\'none\';b.style.borderRadius=\'0\';\n    b.style.background=\'rgba(47,111,223,.10)\';b.style.borderTop=b.style.borderBottom=\'none\';b.style.borderLeft=b.style.borderRight=\'3px dashed var(--we)\';\n    b.style.top=(parseFloat(cs[0].style.top)-14)+\'px\';b.style.height=\'80px\'})}\nwindow.addEventListener(\'load\',qCut);window.addEventListener(\'resize\',()=>setTimeout(qCut,50));</script><div class="xp" id="qx" style="height:400px"></div><span class="frag" data-act="q-0-m"></span><span class="frag" data-act="q-0-q"></span><span class="frag" data-act="q-0-band"></span><span class="frag" data-act="q-1-show"></span><span class="frag" data-act="q-1-m"></span><span class="frag" data-act="q-1-q"></span><span class="frag" data-act="q-1-band"></span>'
   '<div class="row" style="gap:20px;margin-top:12px">'+kcard('Range',FRNG).replace('class="kf"','class="kf frag"')+kcard('Interquartile range',FIQR,'Q<sub>1</sub> = median of lower half · Q<sub>3</sub> = median of upper half (n odd: leave the median out)').replace('class="kf"','class="kf frag"')+'</div>',
   'Cambridge General Mathematics Units 3&amp;4, 1F pp. 46–47 · Animation data: teacher example',cfu='disc'))
 S.append(qslide('we','Worked example 17 · 1F','Finding the range from a stem plot',
@@ -164,49 +182,44 @@ S.append(islide('Learn · 1F','Quartiles are medians of the halves: n even vs n 
   '<p style="font-size:20px;margin:0 0 4px"><b>Example 18</b> · 18 cat weights (kg)</p>'+tiles('tcat',[f'{x:.1f}' for x in [1.9, 2.1, 2.3, 2.5, 2.8, 3.0, 3.0, 3.4, 3.9, 3.9, 4.0, 4.4, 4.5, 4.8, 5.0, 5.3, 6.3, 6.4]],fs=19)
   +'<p style="font-size:20px;margin:10px 0 4px"><b>Example 19</b> · 23 life expectancies (years)</p>'+tiles('tlife',[52, 55, 56, 64, 66, 66, 67, 69, 71, 72, 72, 73, 73, 74, 74, 74, 74, 75, 75, 76, 76, 77, 77],fs=19)
   +'<div class="row2" style="margin-top:8px">'+isteps([('n = 18: cross off pairs, M = (3.9 + 3.9) ÷ 2 = 3.9',tmed('tcat',label='M = 3.9')),('Split: 9 in each half',CQ[0]),('Q₁ = 2.8',CQ[1]),('Q₃ = 4.8 · IQR = 2.0',CQ[2])])
-  +isteps([('n = 23: cross off pairs, M = 73 (12th)',tmed('tlife',label='M = 73')),('Split: leave the median out, 11 each side',LQ[0]),('Q₁ = 66',LQ[1]),('Q₃ = 75 · IQR = 9',LQ[2])],5)+'</div>',
+  +isteps([('n = 23: cross off pairs, M = 73 (12th)',tmed('tlife',label='M = 73')),('Split: leave the median out, 11 each side',LQ[0]),('Q₁ = 66',LQ[1]),('Q₃ = 75 · IQR = 9',LQ[2])],5)+'</div>'
+  +'<div class="tip" style="font-size:21px;margin-top:10px"><b>Tip:</b> for small data sets it is usually a lot easier to get Q<sub>1</sub> and Q<sub>3</sub> from CAS (One-Variable Statistics) than by hand. Use the halves to check.</div>',
   f'{CAM} · Examples 18 and 19 (data from the stem plots, already ordered)'))
 S.append(qslide('we','Worked example 20 · 1F','Finding the median and quartiles from a histogram',
   G('The histogram shows the average number of hours per week a group of 23 people spent on the internet. Find possible values for the median and quartiles of this distribution.',
     '<div style="width:560px">'+hist('w20h',{"start":10,"w":10,"v":[1,0,0,2,4,5,3,6,2],"ymax":7,"ystep":1,"xl":"internet hours per week","yl":"Frequency","h":340,"W":600,"fs":16})+'</div>'),
-  [('Running totals','add the frequencies from left to right: 1, 3, 7, 12, …','data-cum="#w20h"'),
+  [fx('Median position',None,F(FR([V('<i>n</i>','23'),' + 1'],['2'])),'12th value'),
+   ('Running totals','add the frequencies from left to right: 1, 3, 7, 12, …','data-cum="#w20h"'),
    ('Median','12th value from the bottom: the 60–70 interval','data-hlbar="#w20h|5|#d2475b"'),
-   ('Q₁','6th value from the bottom: the 50–60 interval','data-hlbar="#w20h|4|#7b4fd6"'),
+   ('Q₁','11 values below the median: (11 + 1) ÷ 2 = 6th value from the bottom: the 50–60 interval','data-hlbar="#w20h|4|#7b4fd6"'),
    ('Q₃','6th value from the top (2 + 6): the 80–90 interval','data-hlbar="#w20h|7|#7b4fd6"')],
   'Median: 60–70 hours · Q<sub>1</sub>: 50–60 hours · Q<sub>3</sub>: 80–90 hours.',f'{CAM} · Example 20',video=vid(20),cmd=('Find',None,'an interval for each')))
 S.append(qslide('yt','You try · Edrolo 1F WE1a','Finding the median and quartiles from a histogram',
   G('Consider the histogram.','<div style="width:560px">'+hist('y20h',{"start":1,"w":1,"v":[3,15,12,13,9,5,2],"ymax":16,"ystep":4,"yl":"frequency","h":340,"W":580,"fs":16})+'</div>','<b>a.</b> Estimate the median.'),
-  [('Count','3 + 15 + 12 + 13 + 9 + 5 + 2 = 59 data points; median at (59 + 1) ÷ 2 = 30th'),
+  [('Count','3 + 15 + 12 + 13 + 9 + 5 + 2 = 59 data points'),fx('Median position',None,F(FR([V('<i>n</i>','59'),' + 1'],['2'])),'30th value'),
    ('Running totals','3, 18, 30, …: the 30th data point is in the 3–&lt;4 interval','data-cum="#y20h"'),
    ('Estimate','the middle of the interval: (3 + 4) ÷ 2 = 3.5','data-hlbar="#y20h|2|#d98a1f"')],
   'The median is approximately <b>3.5</b>.',f'{EDR} · 1F Worked example 1a',cmd=('Estimate',None,'one value')))
 # ================= Learn: mean
-S.append(TPL._frame('learn','Learn · 1F','The mean is the balance point',
-  '<div class="row" style="gap:20px">'+kcard('Mean',FMEAN,'Σ = ‘sum of’, <i>x</i> = a data value, <i>n</i> = number of values')+'</div>'
-  '<div class="xp" id="balx" style="margin-top:12px"></div><p id="balread" style="font-size:22px;margin-top:8px"></p><span class="frag" data-act="b-8"></span>'
-  '<div class="tip frag" style="font-size:22px"><b>Resistant:</b> the mean is affected by changing the largest data value but the median is not. <span class="muted">Drag the orange dot to try it.</span></div>',
-  'Cambridge General Mathematics Units 3&amp;4, 1F pp. 50–51 (data 2 3 3 4 and 2 3 3 8)',cfu='disc'))
 RT='38 36 35 43 46 64 48 25'
 S.append(qslide('we','Worked example 21 · 1F','Calculating the mean from the formula',
   'The following is a set of reaction times (in milliseconds):<div style="margin:12px 0">'+data(RT)+'</div>Write down the values of the following, correct to one decimal place.'
   +plist([('a','<i>n</i>'),('b','Σ<i>x</i>'),('c','<i>x̄</i>')]),
-  [('Count','<i>n</i> = the number of data values','data-pk="0"'),('Add','38 + 36 + 35 + 43 + 46 + 64 + 48 + 25','data-pk="1"'),
-   fx('Mean','<i>x̄</i>',F(FR([V('Σ<i>x</i>','335')],[V('<i>n</i>','8')])),'41.875 → 41.9','data-pk="2"')],
-  '',f'{CAM} · Example 21',video=vid(21),cmd=('Write down',None,'three values'),
-  parts=[('a','<i>n</i> = <b>8</b>'),('b','Σ<i>x</i> = <b>335</b>'),('c','<i>x̄</i> = <b>41.9</b>')]))
+  [('Count','<i>n</i> = the number of data values','data-pk="0"'),('ANS','<b>a</b> &nbsp;<i>n</i> = <b>8</b>','data-pk="0"'),
+   ('Add','38 + 36 + 35 + 43 + 46 + 64 + 48 + 25','data-pk="1"'),('ANS','<b>b</b> &nbsp;Σ<i>x</i> = <b>335</b>','data-pk="1"'),
+   fx('Mean','<i>x̄</i>',F(FR([V('Σ<i>x</i>','335')],[V('<i>n</i>','8')])),'41.875 → 41.9','data-pk="2"'),('ANS','<b>c</b> &nbsp;<i>x̄</i> = <b>41.9</b>','data-pk="2"')],
+  '',f'{CAM} · Example 21',video=vid(21),cmd=('Write down',None,'three values')))
 S.append(qslide('yt','You try · Edrolo 1G WE1','Calculating the mean from the formula',
   'The amount of money spent, in dollars, of 10 customers at a supermarket is shown. Calculate the mean amount of money spent.<div style="margin:12px 0">'+data('11.60 55.50 7.95 42.15 17.10 2.00 82.55 26.85 5.40 21.90',22)+'</div>',
-  [('Add','Σ<i>x</i> = 11.60 + 55.50 + 7.95 + … + 21.90 = 273'),('Count','<i>n</i> = 10'),fx('Mean','<i>x̄</i>',F(FR([V('Σ<i>x</i>','273')],[V('<i>n</i>','10')])),'27.3')],
-  'The mean amount spent is <b>$27.30</b>.',f'{EDR} · 1G Worked example 1',cmd=('Calculate',None,'one value in dollars')))
+  [('Add','11.60 + 55.50 + 7.95 + … + 21.90'),('ANS','Σ<i>x</i> = <b>273</b>'),('Count','the number of customers'),('ANS','<i>n</i> = <b>10</b>'),
+   fx('Mean','<i>x̄</i>',F(FR([V('Σ<i>x</i>','273')],[V('<i>n</i>','10')])),'27.3'),('ANS','The mean amount spent is <b>$27.30</b>.')],
+  '',f'{EDR} · 1G Worked example 1',cmd=('Calculate',None,'one value in dollars')))
 S.append(learn('Learn · 1F','Mean or median?',
   '<h4>Choosing between the mean and the median</h4><p style="font-size:21px">The mean and the median are both measures of the centre of a distribution. If the distribution is:</p><ul class="bul" style="font-size:21px"><li>symmetric and there are no outliers, either the mean or the median can be used to indicate the centre of the distribution</li><li>clearly skewed and/or there are outliers, it is more appropriate to use the median to indicate the centre of the distribution.</li></ul>',
   '<div class="row" style="gap:24px"><div class="key frag" style="flex:1"><h4>Symmetric, no outliers</h4>'+hist('mm1',{"start":0,"w":1,"v":[1,2,4,7,9,7,4,2,1],"ymax":10,"ystep":5,"nox":True,"noy":True,"h":170,"W":520,"vline":4.5})+'<p style="font-size:20px">mean ≈ median: <b>either</b> can be used</p></div>'
   '<div class="key frag" style="flex:1"><h4>Clearly skewed and/or outliers</h4>'+hist('mm2',{"start":0,"w":1,"v":[9,8,5,3,2,1,0,0,1],"ymax":10,"ystep":5,"nox":True,"noy":True,"h":170,"W":520,"vline":2.6})+'<p style="font-size:20px">the tail drags the mean: use the <b>median</b></p></div></div>',
   '<b>SOCS:</b> the C line names the measure you chose (‘centred at …, the median’), and the S line uses its partner (IQR with the median).',
   'Key box: Cambridge General Mathematics Units 3&amp;4, 1F p. 52 · Sketches: teacher illustration (dashed line = mean)'))
-S.append(islide('Learn · 1F','Skew drags the mean towards the tail <span class="i-hint">DRAG</span>',
-  shape_slider('shp')+isteps([('Positive skew: the tail pulls the mean above the median',shset('shp',0.8)),('Negative skew: the mean falls below the median',shset('shp',-0.7)),('Symmetric: mean ≈ median',shset('shp',0))]),
-  'Rule: Cambridge General Mathematics Units 3&amp;4, 1F p. 52 · Model distribution: teacher illustration (no data)'))
 S.append(TPL._frame('learn','Learn · 1F','Standard deviation: spread around the mean',
   '<div class="row" style="gap:24px;align-items:center">'+kcard('Standard deviation',FSD)+'<p style="flex:1;font-size:22px;line-height:1.4">Roughly, the typical distance of the data values from the mean. On CAS it is <b>s<sub>x</sub></b>. Same mean, different spread:</p></div>'
   '<div class="xp" id="sdx" style="margin-top:12px"></div><span class="frag" data-act="sd-a"></span><span class="frag" data-act="sd-ad"></span><span class="frag" data-act="sd-b"></span><span class="frag" data-act="sd-bd"></span><span class="frag" data-act="sd-s"></span>',
@@ -247,7 +260,7 @@ S.append(checkin(SC))
 S.append(coursework([('Cambridge · Exercise 1F (part 1)','',['Median from data · Q1–2','Median from a dot plot · Q3','Median and range from a stem plot · Q4','Median and quartiles from a dot plot · Q5',
     'Median and quartiles from a stem plot · Q6–9','Median and quartiles from a histogram · Q10–11']),
   ('Cambridge · Exercise 1F (part 2)','',['Mean, median and mode from data · Q12–17','The concept of standard deviation · Q18–20','Mean and standard deviation on CAS · Q21–22','Exam 1 style questions · Q23–26']),
-  ('Revision book','The 1F section',[])]))
+  ('Practice booklet','The 1F section',[])]))
 V=[x for x in json.load(open(os.path.join(ROOT,'planner','videos.json')))['videos'] if x['sub']=='1F']
 S.append(videos([yt(f'1F · {v["title"]} ({v["channel"].split(" (")[0]})',yid(v['url'])) for v in V]))
 n=assemble(S,'12MAG · S3 · Measures of centre and spread',os.path.join(ROOT,'lessons','S3-slides.html'))

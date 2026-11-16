@@ -142,7 +142,7 @@ SORT=[('<em class="v">type of pasta</em>','Categorical/Nominal'),('<em class="v"
   ('<em class="v">length</em> (m)','Numerical/Continuous'),('<em class="v">number of tennis racquets</em>','Numerical/Discrete'),
   ('The time between people arriving at the coffee shop.','Numerical/Continuous'),('The number of people in the queue at the coffee shop.','Numerical/Discrete'),
   ('Customer’s coffee preference (latte, cappuccino, black).','Categorical/Nominal'),('Customer’s rating of the coffee (excellent, quite good, not that good).','Categorical/Ordinal')]
-S.append(islide('Learn · 1A · card sort','Sort it: categorical or numerical, then which kind? <span class="i-hint">CLICK A CARD, THEN A BUCKET (OR DRAG)</span>',
+S.append(islide('Learn · 1A · card sort','Sort it: categorical or numerical, then which kind? <span class="i-hint">CLICK A BUTTON ON EACH CARD: STEP 1, THEN STEP 2</span>',
   card_sort('s1sort',SORT),f'{EDR} · 1A Worked examples 1, 2 and 3 (pp. 2–4) · Cambridge General Mathematics Units 1&amp;2 · Chapter 2 skills checklist, 2A #1',frags=sort_steps('s1sort')))
 # ================= CAS: setting up the statistics app (planner/cas-skills.json: stats-list)
 CS=[x for x in json.load(open(os.path.join(ROOT,'planner','cas-skills.json')))['skills'] if x['id']=='stats-list'][0]
@@ -335,7 +335,7 @@ def _card(o):
             r=_card(v)
             if r: return r
 CW=_card(json.load(open(os.path.join(ROOT,'planner','unit-plan.json'))))['homework']['sets']
-S.append(coursework([(st['title'].replace('Revision book','Chapter 1 revision booklet'),st.get('note') or '',['<span style="display:flex;justify-content:space-between;gap:12px"><span>'+it['skill']+'</span><b>'+it['q']+'</b></span>' for it in st['items']]) for st in CW]))
+S.append(coursework([(st['title'].replace('Revision book','Chapter 1 practice booklet'),st.get('note') or '',['<span style="display:flex;justify-content:space-between;gap:12px"><span>'+it['skill']+'</span><b>'+it['q']+'</b></span>' for it in st['items']]) for st in CW]))
 V=json.load(open(os.path.join(ROOT,'planner','videos.json'))); V=V if isinstance(V,list) else V.get('videos',[])
 S.append(videos([yt(f'{v["sub"]} · {v["title"]} ({v["channel"].split(" (")[0]})',yid(v['url'])) for v in V if v['sub'] in ('1A','1B')]))
 n=assemble(S,'12MAG · S1 · Types of data and categorical data',os.path.join(ROOT,'lessons','S1-slides.html'))

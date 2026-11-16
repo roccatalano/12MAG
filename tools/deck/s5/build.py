@@ -37,7 +37,7 @@ SC=['I can apply the 68-95-99.7% rule.','I can calculate standardised scores.','
     'I can use standard scores to determine percentages.','I can convert standardised scores into actual scores.','I can solve for the values of the mean and standard deviation.',
     'I can explain the difference between a population and a sample.']
 S.append(today(LI,SC,[('CFAT 1.1.2','· 20 minutes','#00838F'),('APK','· Year 11 normal distribution','var(--apk)'),
-  ('The 68–95–99.7% rule','· slider → WE 28',None),('Standardised scores','· slider → WE 29, 30 · CAS',None),('From z to percentages','→ WE 31',None),
+  ('The 68–95–99.7% rule','· Galton board → WE 28',None),('Standardised scores','· two tests → WE 29, 30 · CAS',None),('From z to percentages','→ WE 31',None),
   ('Actual scores; finding x̄ and s','→ WE 32, 33, 34',None),('Populations and samples','· 1I',None),('Exit tasks','· two VCAA questions','var(--exit)'),('Check-in and coursework','','var(--muted)')]))
 S.append(cfat('CFAT 1.1.2','median, IQR, boxplots, SOCS','1F–1G',14,'CFAT 1.1.2 (lessons/CFAT-1.1.2) · Edrolo U3&amp;4 exercise questions'))
 # ---------- key definitions and formulas
@@ -79,20 +79,18 @@ S.append(qslide('apk','APK · VCAA 2020 Exam 2 Q2b.i (adapted)','A real VCAA que
 # ================= Learn 1: the normal distribution and the rule
 S.append(learn('Learn · 1H','The normal distribution and the 68–95–99.7% rule',
   '<h4>Normal distribution</h4><p>A bell-shaped, symmetric model. The mean sits in the middle, and the standard deviation sets the width: approximately 68%, 95% and 99.7% of values lie within one, two and three standard deviations of the mean.</p>',
-  norm('l1',{"m":0,"s":1,"rows":['z'],"hide":['z','pct'],"W":1300,"h":330,"fs":19}),
+  norm('l1',{"m":0,"s":1,"rows":['z'],"hide":['z','pct'],"W":1300,"h":330,"fs":19,"br":True}),
   '<b>Use the symmetry:</b> 68% in the middle leaves 32% for the two tails, so 16% in each tail. 95% leaves 2.5% in each tail; 99.7% leaves 0.15%.',
   'Cambridge General Mathematics Units 3&amp;4, 1H pp. 76–78 · Curve: teacher illustration',
   frags=('<span class="frag" data-nshow="#l1|z"></span>'
          f'<span class="frag" {sh("l1",-1,1,"68%")}></span><span class="frag" {sh("l1",-2,2,"95%")}></span><span class="frag" {sh("l1",-3,3,"99.7%")}></span>'
          f'<span class="frag" data-nclear="#l1" data-nshow="#l1|pct"></span>'),
   cards=[kcard('68–95–99.7% rule','within 1, 2, 3 SDs of the mean: 68%, 95%, 99.7%'),kcard('Tail percentages','16% · 2.5% · 0.15% in each tail')]))
-# ================= Interactive: 68–95–99.7% rule on the Example 28 pizza curve
-S.append(islide('Learn · 1H · interactive','The rule on a real curve: pizza delivery times <span class="i-hint">DRAG THE HANDLE</span>',
-  z_slider('zs28',25,5,x0=25,xl='delivery time (minutes)')+isteps([
-   ('<i>x</i> = 30 min is one SD above the mean: 84% below, 16% above',fset('zs28',30)),
-   ('<i>x</i> = 35 min is two SDs above: 97.5% below, 2.5% above',fset('zs28',35)),
-   ('<i>x</i> = 10 min is three SDs below: 0.15% below',fset('zs28',10))]),
-  'Values: Cambridge General Mathematics Units 3&amp;4, 1H Example 28 (mean 25 minutes, SD 5 minutes)'))
+# ================= Learn: plinko (Galton board): why a bell shape (own words)
+S.append(islide('Learn · 1H · interactive','Why is the normal distribution bell shaped? <span class="i-hint">DROP THE BALLS</span>',
+  plinko('pk',note='Each ball bounces left or right at every peg. Most end up near the middle (the average); fewer and fewer land further out. Many real data sets (heights, test marks, delivery times) build up the same way: most values are near the mean, extreme values are rare.'),
+  'Cambridge General Mathematics Units 3&amp;4, 1H p. 76 (the normal distribution; explained in own words) · Galton board: teacher illustration',
+  frags=ifr(pdrop('pk',50))+ifr(pdrop('pk',150))))
 # ================= WE28
 S.append(qslide('we','Worked example 28 · 1H','Applying the 68–95–99.7% rule',
   ('The distribution of delivery times for pizzas made by House of Pizza is approximately normal, with a mean of 25 minutes and a standard deviation of 5 minutes.',
@@ -126,13 +124,12 @@ S.append(learn('Learn · 1H','Standardised scores (z-scores)',
   'Cambridge General Mathematics Units 3&amp;4, 1H p. 80 (IQ illustration) · Curve: teacher illustration',
   frags='<span class="frag" data-nshow="#l2|z"></span><span class="frag" data-nmark="#l2|1|115:_z_=_1"></span><span class="frag" data-nmark="#l2|-2|70:_z_=_−2|#1f4fb0"></span>',
   cards=[kcard('Standardised score',FZ)]))
-# ================= Interactive: z-scores on the Example 29 heights
-S.append(islide('Learn · 1H · interactive','Standardised scores: how many SDs from the mean? <span class="i-hint">DRAG THE HANDLE</span>',
-  z_slider('zs29',160,8,x0=160,xl='height (cm)')+isteps([
-   ('<i>x</i> = 168 cm: one SD above, <i>z</i> = 1',fset('zs29',168)),
-   ('<i>x</i> = 144 cm: two SDs below, <i>z</i> = −2',fset('zs29',144)),
-   ('<i>x</i> = 172 cm: <i>z</i> = 1.5 (Example 29a, next)',fset('zs29',172))]),
-  'Values: Cambridge General Mathematics Units 3&amp;4, 1H Example 29 (mean 160 cm, SD 8 cm)'))
+# ================= Interactive: two tests (Cambridge Example 30 data)
+S.append(islide('Learn · 1H · interactive','Which test went relatively better? Compare z-scores <span class="i-hint">SLIDE EACH SCORE</span>',
+  ztwo('zt',('Psychology',65,10,75),('Statistics',60,5,70))+isteps([
+   ('Psychology 75 → <i>z</i> = 1 · Statistics 70 → <i>z</i> = 2: relatively better in Statistics',ztset('zt',75,70)),
+   ('Both 55 → <i>z</i> = −1 in each: equally well (Example 30)',ztset('zt',55,55))]),
+  'Values: Cambridge General Mathematics Units 3&amp;4, 1H Example 30 (Psychology mean 65, SD 10, mark 75; Statistics mean 60, SD 5, mark 70)'))
 # ================= WE29
 S.append(qslide('we','Worked example 29 · 1H','Calculating standard scores',
   ('The heights of a group of young women have a mean of <i>x̄</i> = 160 cm and a standard deviation of <i>s</i> = 8 cm. Determine the standard or z-scores of a woman who is:',
@@ -171,7 +168,7 @@ S.append(qslide('yt','You try · Edrolo 1I WE3','Using standardised (z) scores t
    '',
    plist([('a.','A student taking both Chemistry and Physics scored 77 in her final exam for both subjects. Did she do equally well in both exams in relation to her peers? Use standardised scores and the 68–95–99.7% rule to justify your answer.'),
           ('b.','Another student scores 66 on his Chemistry exam. Use standardised scores and the 68–95–99.7% rule to compare this student’s score relative to the class.')])),
-  [],'',f'{EDR} · 1I Worked example 3',cmd=('Use',None,'z-scores and the rule'),made=norm('y30',{"rows":['z'],"hide":['pct'],"W":780,"h":200,"fs":15,"T":40}),
+  [],'',f'{EDR} · 1I Worked example 3',cmd=('Use',None,'z-scores and the rule'),made=norm('y30',{"rows":['z'],"hide":['pct'],"W":780,"h":200,"fs":15,"T":60}),
   parts=[('a.','Chemistry: '+fx('z',Z,zf('77','71','3'),'2',ra=sh('y30',2,3.6,'2.5%')+' data-nmark="#y30|2|Chem"')[1]+' · Physics: '+fx('z',Z,zf('77','95','6'),'−3',ra=sh('y30',-3.6,-3,'0.15%',OR,False)+' data-nmark="#y30|-3|Phys|#1f4fb0"')[1]
           +'<br>In Chemistry, the student’s standardised score was <i>z</i> = 2 placing her in the top 2.5% of students. In Physics, the student’s standardised score was <i>z</i> = −3 placing her in the bottom 0.15% of students. Therefore, she did not do equally well in both exams when compared to her peers.'),
          ('b.',fx('z',Z,zf('66','71','3'),'−1.67',ra=sh('y30',-3.6,-1,'16%')+' data-nmark="#y30|-1.67|66"')[1]+'<br>In Chemistry, the student’s standardised score was <i>z</i> = −1.67 placing him in the bottom 16% of students.')]))
@@ -189,9 +186,11 @@ S.append(qslide('we','Worked example 31 · 1H','Using standard scores to determi
    norm('w31',{"m":42,"s":3,"rows":['x','z'],"hide":['pct'],"xl":"weight (grams)","W":820,"h":320}),
    plist([('a','If a bird selected at random from this population has a standardised weight of <i>z</i> = −1, what percentage of birds in this population weigh more than this bird?'),
           ('b','Approximately what percentage of birds would weigh between 39 and 48 grams?')])),
-  [('Percentages','label each section of the curve.','data-nshow="#w31|pct"')],'',f'{CAM} · Example 31',video='Cambridge GO · Example 31 (1H Resources)',cmd=('Find',None,'a percentage'),
+  [('Percentages','label each section of the curve.','data-nshow="#w31|pct"'),
+   fx('Standardised score','<i>z</i>₁',zf('39','42','3'),'−1',ra='data-nmark="#w31|-1|z₁_=_−1"'),
+   fx('Standardised score','<i>z</i>₂',zf('48','42','3'),'2',ra='data-nmark="#w31|2|z₂_=_2|#1f4fb0"')],'',f'{CAM} · Example 31',video='Cambridge GO · Example 31 (1H Resources)',cmd=('Find',None,'a percentage'),
   parts=[('a','16% of the distribution is below <i>z</i> = −1, so the percentage above <i>z</i> = −1 is <b>84%</b>.',sh('w31',-1,3.6,'84%')+' data-nmark="#w31|-1|z_=_−1"'),
-         ('b',fx('z',Z,zf('39','42','3'),'−1')[1]+' · '+fx('z',Z,zf('48','42','3'),'2')[1]+'<br>The percentage between <i>z</i> = −1 and <i>z</i> = 2 is 34 + 34 + 13.5 = <b>81.5%</b>.',sh('w31',-1,2,'81.5%'))]))
+         ('b','<i>z</i>₁ = −1 and <i>z</i>₂ = 2. The percentage between <i>z</i>₁ = −1 and <i>z</i>₂ = 2 is 34 + 34 + 13.5 = <b>81.5%</b>.',sh('w31',-1,2,'81.5%'))]))
 # ================= YT Edrolo 1H WE2
 S.append(qslide('yt','You try · Edrolo 1H WE2','Calculating values in normal distributions',
   (HAIR,norm('y31',{"m":20,"s":4,"rows":['x','z'],"hide":['pct'],"W":820,"h":300}),
@@ -292,7 +291,7 @@ def _card(o):
             r=_card(v)
             if r: return r
 CW=_card(json.load(open(os.path.join(ROOT,'planner','unit-plan.json'))))['homework']['sets']
-S.append(coursework([(st['title'].replace('Revision book','Chapter 1 revision booklet'),st.get('note') or '',['<span style="display:flex;justify-content:space-between;gap:12px"><span>'+it['skill']+'</span><b>'+it['q']+'</b></span>' for it in st['items']]) for st in CW]))
+S.append(coursework([(st['title'].replace('Revision book','Chapter 1 practice booklet'),st.get('note') or '',['<span style="display:flex;justify-content:space-between;gap:12px"><span>'+it['skill']+'</span><b>'+it['q']+'</b></span>' for it in st['items']]) for st in CW]))
 V=json.load(open(os.path.join(ROOT,'planner','videos.json'))); V=V if isinstance(V,list) else V.get('videos',[])
 S.append(videos([yt(f'{v["sub"]} · {v["title"]} ({v["channel"].split(" (")[0]})',yid(v['url'])) for v in V if v['sub'] in ('1H','1I') and v.get('url')]))
 n=assemble(S,'12MAG · S5 · The normal distribution and standardised scores',f'{ROOT}/lessons/S5-slides.html')

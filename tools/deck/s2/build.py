@@ -116,21 +116,23 @@ S.append(qslide('apk','APK · VCAA 2016 Exam 2 Q1d (adapted)','A real VCAA quest
     '<div style="width:100%">'+dot('a4d',{"min":0,"max":19,"vals":GL,"xl":"average goals scored","W":900,"h":400,"r":6,"fs":17})+'</div>',
     'Use the grid to construct a histogram that displays the distribution of the average number of goals scored per season at the soccer club. Use interval widths of two with the first interval starting at 0. <span class="muted">(2 marks)</span>'),
   [('Axes','<em>average goals scored</em> across, 0 to 18 in twos; frequency up, to 22.','data-ax="#a4h"'),
-   ('0–&lt;2','16 dots at 0 and 5 more below 2: 21',f'data-hi="#a4d|{dix(GL,lambda v:v<2)}|hy" data-grow="#a4h|{gi[0]}"'),
-   ('2–&lt;4','3',f'data-hi="#a4d|{dix(GL,lambda v:2<=v<4)}|hy" data-grow="#a4h|{gi[1]}"'),
-   ('6–&lt;8','3 (nothing from 4 to 6)',f'data-hi="#a4d|{dix(GL,lambda v:6<=v<8)}|hy" data-grow="#a4h|{gi[3]}"'),
-   ('12–&lt;14, 16–&lt;18','1 · 2 · check: 21 + 3 + 3 + 1 + 2 = 30',f'data-hi="#a4d|{dix(GL,lambda v:v>=12)}|hy" data-grow="#a4h|{gi[6]};#a4h|{gi[8]}"'),
+   ('0–1.9','16 dots at 0 and 5 more below 2: 21',f'data-hi="#a4d|{dix(GL,lambda v:v<2)}|hy" data-grow="#a4h|{gi[0]}"'),
+   ('2–3.9','3',f'data-hi="#a4d|{dix(GL,lambda v:2<=v<4)}|hy" data-grow="#a4h|{gi[1]}"'),
+   ('6–7.9','3 (nothing from 4 to 6)',f'data-hi="#a4d|{dix(GL,lambda v:6<=v<8)}|hy" data-grow="#a4h|{gi[3]}"'),
+   ('12–13.9, 16–17.9','1 · 2 · check: 21 + 3 + 3 + 1 + 2 = 30',f'data-hi="#a4d|{dix(GL,lambda v:v>=12)}|hy" data-grow="#a4h|{gi[6]};#a4h|{gi[8]}"'),
    ('TMPL','<div style="width:440px">'+hist('a4h',{"start":0,"w":2,"v":GB,"xmin":0,"xmax":18,"ymax":22,"ystep":2,"tick":2,"xl":"average goals scored","yl":"frequency","h":320,"W":600,"fs":15},'data-stepped="1" data-axhide').replace('class="chart"','class="chart noax"')+'</div>','','data-stat="52"')],
   '','Edrolo General Mathematics Units 1&amp;2 · 1C Q17 · Adapted from VCAA 2016 Exam 2 Data analysis Q1d (examiner report: many drew interval widths of one)',stat=('mark',52),cmd=('Construct',2,'intervals of width 2, from 0')))
 # ================= APK 2: Cambridge U1&2 2D #9 (party ages)
 PA=[19,21,22,56,34,19,27,28,34,17,66,37,20,20,21,45,26,19,23,29]
 prow=[(s,sorted(v%10 for v in PA if v//10==s)) for s in range(1,7)]
-ph,pix=stemB('a2s',prow,'Key: 1 | 7 = 17',24,var='<em>age</em> (years)')
+ph,pix=stemB('a2s',prow,'',24,cap=False)
+ph='<div><div class="stemcap" id="a2k"><em>age</em> (years) &nbsp; <span class="hid0" data-i="0" style="padding:1px 6px;border-radius:5px">Key: 1 | 7 = 17</span></div>'+ph[5:]
 S.append(qslide('apk','APK · Year 11 · Cambridge U1&amp;2 2D #9','And a stem plot',
   G('Construct a stem plot of the ages of a group of people at a party:',dl('a2d',PA,10,24)),
-  [('Stems','ages run from 17 to 66: stems 1 to 6, and a key.')]+
-  [(f'Stem {s}',' '.join(map(str,lv)) or '(none)',f'data-hi="#a2d|{idx(PA,lambda v,s=s:v//10==s)}|hy" data-show="#a2s|{J2(pix[k])}"') for k,(s,lv) in enumerate(prow) if s in (1,2,3)]+
-  [('Stems 4–6','45 · 56 · 66',f'data-hi="#a2d|{idx(PA,lambda v:v>=40)}|hy" data-show="#a2s|{J2(pix[3]+pix[4]+pix[5])}"'),
+  [('Stems','ages run from 17 to 66: tens digits 1 to 6 are the stems.'),
+   ('Key','an accurate key, using a real value: <b>1 | 7 = 17</b>','data-show="#a2k|0" data-hi="#a2k|0|hy"')]+
+  [(f'Stem {s}',' '.join(map(str,lv)) or '(none)',f'data-hi="#a2d|{idx(PA,lambda v,s=s:v//10==s)}|hy" data-show="#a2s|{J2(pix[k])}"') for k,(s,lv) in enumerate(prow) if s in (1,2)]+
+  [('Stems 3–6','4 4 7 · 5 · 6 · 6',f'data-hi="#a2d|{idx(PA,lambda v:v>=30)}|hy" data-show="#a2s|{J2(pix[2]+pix[3]+pix[4]+pix[5])}"'),
    ('TMPL',ph)],
   '',f'{CAM12} · Chapter 2 skills checklist, 2D #9 (teacher solution)',cmd=('Construct',None,'ordered leaves and a key')))
 # ================= APK: Edrolo U1&2 1C Q15 (adapted from VCAA 2017 E2 Q2b) — mode from a stem plot
@@ -148,14 +150,20 @@ S.append(qslide('apk','APK · Year 11 · Cambridge U1&amp;2 9D #6, #7','Logs and
   [],'',f'{CAM12} · Chapter 9 skills checklist, 9D #6 and #7 (teacher solutions)',cmd=('Find',None,'two decimal places'),
   parts=[('a','log<sub>10</sub>(592) = 2.772… → <b>2.77</b>'),('b','478 000 = 4.78 × 10<sup>5</sup> → order of magnitude <b>5</b>')]))
 
-# ================= Learn 1C: frequency tables for numerical data
-S.append(learn('Learn · 1C','Frequency tables for numerical data',
-  '<h4>Two cases</h4><p><b>Few values (discrete):</b> one row for every value from the minimum to the maximum, as for categorical data.<br><b>Many values, or continuous:</b> group the data into intervals: a <b>grouped frequency table</b>.</p>',
-  '<div class="row" style="gap:26px;align-items:stretch"><div class="key frag" style="flex:1"><h4>Choosing the intervals</h4><ul class="bul" style="font-size:21px;line-height:1.55;margin-left:26px">'
-  '<li>every data value is in an interval</li><li>intervals don’t overlap, and there are no gaps</li><li>about 5 to 15 intervals</li><li>easy widths: 10, 100, 1000 …</li><li>start each interval on an exact value: 0–49, 50–99, 100–149</li></ul></div>'
-  '<div class="key frag" style="flex:.8"><h4>Reading an interval</h4><p style="font-size:24px;margin-top:8px"><b>30–&lt;40</b><br>at least 30 but less than 40</p><p style="font-size:24px;margin-top:10px"><b>30.0–34.9</b><br>30.0 up to 34.9</p></div></div>',
-  'Percentages may add to 99.9% or 100.1%: that’s rounding, and it’s fine.','Cambridge General Mathematics Units 3&amp;4, 1C pp. 14–15',
-  cards=[kcard('Percentage frequency','<span style="white-space:nowrap;font-size:.9em">'+FPCT+'</span>')]))
+# ================= Learn 1C: frequency tables for numerical data (data -> grouped frequency table, as S1 'From raw data to a frequency table')
+MK=[16,11,4,25,15,7,14,13,14,12,15,13,16,14,15,12,18,22,17,18,23,15,13,17,18,22,23]
+MI=['2–5','6–9','10–13','14–17','18–21','22–25']; MN=[1,1,6,11,3,5]
+def card(n,t,b,a,extra=''): return f'<div class="sc"><div class="n">{n}</div><div class="frag" {a}><div class="st">{t}</div><div class="sb">{b}</div></div>{extra}</div>'
+fch,ftt=tally_set('lfd','lft',MK,[2,6,10,14,18,22,26],labels=MI,head=('<em>marks</em>','Frequency'),fs=21)
+body=('<div class="row" style="gap:26px;align-items:stretch"><div class="key" style="flex:1"><h4>Data: 27 marks</h4>'+fch+'<div style="display:flex;justify-content:center;margin-top:12px">'+ftt+'</div></div>'
+  '<div style="flex:1;display:flex;flex-direction:column;gap:12px"><div class="key"><h4>Two cases</h4><p style="font-size:19px"><b>Few values (discrete):</b> one row per value, as for categorical data.<br><b>Many values, or continuous:</b> group into intervals: a <b>grouped frequency table</b>.</p></div>'
+  '<div class="key"><h4>Choosing the intervals</h4><ul class="bul" style="font-size:18px;line-height:1.4;margin-left:26px">'
+  '<li>every data value is in an interval</li><li>intervals don’t overlap, and there are no gaps</li><li>about 5 to 15 intervals</li><li>easy widths: 10, 100, 1000 …</li><li>start each interval on an exact value: 0–49, 50–99, 100–149</li><li><b>2–5</b> (whole marks) = 2, 3, 4 or 5 · <b>30.0–34.9</b> = 30.0 up to 34.9</li></ul></div>'
+  '</div></div>'
+  '<div class="stepsH">'+card(1,'Intervals','width 4, starting at an exact value, 2: 2–5, 6–9, … 22–25','')+
+  card(2,'Count','one interval at a time: light its values, count them into the table',ftally('lfd','lft',0),''.join(f'<span class="frag" {ftally("lfd","lft",k)}></span>' for k in range(1,6)))+
+  card(3,'Total','1 + 1 + 6 + 11 + 3 + 5 = 27',ftot('lft'))+'</div>')
+S.append(TPL._frame('learn','Learn · 1C','Frequency tables for numerical data',body,'Cambridge General Mathematics Units 3&amp;4, 1C pp. 14–15 (27 marks: CAS 1, p. 16)',cfu='disc'))
 # ================= WE6: Cambridge Example 6
 BED=[2,3,4,3,3,4,3,4,4,1,3,2,1,2,2,2,4,5,3,4,4,5,3,4]
 bc={v:BED.count(v) for v in range(1,6)}
@@ -186,29 +194,26 @@ S.append(qslide('we','Worked example 7 · 1C','Constructing a grouped frequency 
   '',f'{CAM} · Example 7 (p. 15)',video='Cambridge GO · Example 7 (1C Resources)',cmd=('Construct',None,'five intervals, number and %')))
 # ================= You try: Edrolo 1C WE4
 PL=[32.0,40.2,40.5,45.1,47.0,49.1,50.1,53.7,54.2,55.3,56.9,57.2,58.2,67.2,68.9,69.0,72.3,77.6,82.1,88.5]
-PI=['30−&lt;40','40−&lt;50','50−&lt;60','60−&lt;70','70−&lt;80','80−&lt;90']; PN=[1,5,7,3,2,2]; PP=['5','25','35','15','10','10']
+PI=['30.0–39.9','40.0–49.9','50.0–59.9','60.0–69.9','70.0–79.9','80.0–89.9']; PN=[1,5,7,3,2,2]; PP=['5','25','35','15','10','10']
 pk=lambda v:int((v-30)//10)
 S.append(qslide('yt','You try · Edrolo 1C WE4','Constructing a grouped frequency table',
   G('The <em class="v">height</em> (cm) of 20 plants in a Year 6 science experiment were recorded.',dl('y7d',[f'{v:.1f}' for v in PL],7,22),'Construct a grouped frequency table with intervals of 10.'),
-  [('How many intervals?','min 32.0 → start at 30 · max 88.5 → end at 90 · six intervals','data-fill="g0"')]+
-  [('Count 30–&lt;40 to 50–&lt;60','1 · 5 · 7',f'data-hi="#y7d|{idx(PL,lambda v:pk(v)<=2)}|hy" data-fill="g1"'),
-   ('Count 60–&lt;70 to 80–&lt;90','3 · 2 · 2 · total 20',f'data-hi="#y7d|{idx(PL,lambda v:pk(v)>=3)}|hb" data-fill="g3"'),
+  [('How many intervals?','min 32.0 → start at 30.0 · max 88.5 → last interval 80.0–89.9 · six intervals','data-fill="g0"')]+
+  [('Count 30.0–39.9 to 50.0–59.9','1 · 5 · 7',f'data-hi="#y7d|{idx(PL,lambda v:pk(v)<=2)}|hy" data-fill="g1"'),
+   ('Count 60.0–69.9 to 80.0–89.9','3 · 2 · 2 · total 20',f'data-hi="#y7d|{idx(PL,lambda v:pk(v)>=3)}|hb" data-fill="g3"'),
    ('Percentages','1/20 × 100 = 5 · then 25, 35, 15, 10, 10','data-hi="#y7d||" data-fill="g4"'),
    ('TMPL',fttab('<em>height</em> (cm)',[(B('g0',PI[k]),B('g1' if k<=2 else 'g3',PN[k]),B('g4',PP[k])) for k in range(6)],(B('g3',20),B('g4',100)),pcth='%',numh='number',fs=15).replace('Frequency','frequency').replace('Total','total'))],
-  '',f'{EDR} · 1C Worked example 4 (pp. 23–24)',cmd=('Construct',None,'intervals of 10, number and %')))
+  '',f'{EDR} · 1C Worked example 4 (pp. 23–24; intervals written Cambridge style)',cmd=('Construct',None,'intervals of 10, number and %')))
 
 # ================= Learn 1C: the histogram (data -> grouped frequency table -> histogram), CAS 1 marks
-MK=[16,11,4,25,15,7,14,13,14,12,15,13,16,14,15,12,18,22,17,18,23,15,13,17,18,22,23]
-MI=['2–&lt;6','6–&lt;10','10–&lt;14','14–&lt;18','18–&lt;22','22–&lt;26']; MN=[1,1,6,11,3,5]
 mk=lambda v:(v-2)//4
 MCOL=['hy','hb','hg','hc','hy','hb']
-def card(n,t,b,a,extra=''): return f'<div class="sc"><div class="n">{n}</div><div class="frag" {a}><div class="st">{t}</div><div class="sb">{b}</div></div>{extra}</div>'
-mch,mtt=tally_set('lhd','lht',MK,[2,6,10,14,18,22,26],head=('<em>marks</em>','Frequency'),fs=19)
+mch,mtt=tally_set('lhd','lht',MK,[2,6,10,14,18,22,26],labels=MI,head=('<em>marks</em>','Frequency'),fs=19)
 body=('<div class="row" style="gap:26px;align-items:stretch"><div class="key" style="flex:.9"><h4>Data: 27 marks</h4>'+mch+'<div style="display:flex;justify-content:center;margin-top:12px">'+mtt+'</div></div>'
   '<div class="key" style="flex:1.1"><h4>Grouped frequency table → histogram</h4>'+
-  hist('lhh',{"start":2,"w":4,"v":MN,"xmin":2,"xmax":26,"ymax":12,"ystep":2,"tick":4,"xl":"marks","yl":"frequency","h":380,"W":620},'data-stepped="1" data-axhide').replace('class="chart"','class="chart noax"')+
+  hist('lhh',{"start":2,"w":4,"v":MN,"xmin":2,"xmax":26,"ymax":12,"ystep":2,"tick":4,"xl":"marks","yl":"frequency","h":300,"W":620},'data-stepped="1" data-axhide').replace('class="chart"','class="chart noax"')+
   '<ul class="bul" style="font-size:19px;margin:6px 0 0 24px"><li>bars <b>touch</b>: the scale is continuous</li><li>each bar is one interval; its height is the frequency</li></ul></div></div>'
-  '<div class="stepsH">'+card(1,'Intervals and axes','width 4, starting at 2: 2–&lt;6, 6–&lt;10, … · marks across (2 to 26), frequency up (to 12)','data-ax="#lhh"')+
+  '<div class="stepsH">'+card(1,'Intervals and axes','width 4, starting at 2: 2–5, 6–9, … · marks across (2 to 26), frequency up (to 12)','data-ax="#lhh"')+
   card(2,'Count, then draw','one interval at a time: light its values, count them, grow its bar',ftally('lhd','lht',0,'lhh'),''.join(f'<span class="frag" {ftally("lhd","lht",k,"lhh")}></span>' for k in range(1,6)))+
   card(3,'Total','1 + 1 + 6 + 11 + 3 + 5 = 27',ftot('lht'))+'</div>')
 S.append(TPL._frame('learn','Learn · 1C','The histogram: data → grouped frequency table → graph',body,'Cambridge General Mathematics Units 3&amp;4, 1C pp. 15–16 (27 marks, CAS 1, p. 16)',cfu='disc'))
@@ -226,18 +231,18 @@ S.append(qslide('yt','You try · Edrolo 1C WE5','Constructing a histogram from a
   'The <em class="v">height</em> (cm) of 20 plants in a Year 6 science experiment was recorded in the following grouped frequency table.'+f'<div style="margin:10px 0;display:flex;justify-content:center">{PT}</div>'+
   plist([('a.','Construct a histogram to display this data.'),('b.','What percentage of plants were shorter than 60 cm?')]),
   [('Axes','<em>height</em> (cm) across, 30 to 90; frequency up, to 8.','data-pk="0" data-ax="#y8h"'),
-   ('Bars 30–&lt;60','heights 1, 5, 7','data-pk="0" data-hi="#y8t|0,1,2|hy" data-grow="#y8h|0;#y8h|1;#y8h|2"'),
-   ('Bars 60–&lt;90','heights 3, 2, 2','data-pk="0" data-hi="#y8t|3,4,5|hy" data-grow="#y8h|3;#y8h|4;#y8h|5"'),
+   ('Bars 30.0–59.9','heights 1, 5, 7','data-pk="0" data-hi="#y8t|0,1,2|hy" data-grow="#y8h|0;#y8h|1;#y8h|2"'),
+   ('Bars 60.0–89.9','heights 3, 2, 2','data-pk="0" data-hi="#y8t|3,4,5|hy" data-grow="#y8h|3;#y8h|4;#y8h|5"'),
    ('TMPL','<b>a.</b><div style="width:460px">'+hist('y8h',{"start":30,"w":10,"v":PN,"ymax":8,"ystep":1,"tick":10,"xl":"height (cm)","yl":"frequency","h":250,"W":620,"fs":17},'data-stepped="1" data-axhide').replace('class="chart"','class="chart noax"')+'</div>'),
    ('Shorter than 60','the first three intervals: 5 + 25 + 35','data-pk="1" data-hi="#y8t|0,1,2|hg"'),('ANS','<b>b.</b> &nbsp;<b>65%</b> of plants were shorter than 60 cm.')],
-  '',f'{EDR} · 1C Worked example 5 (pp. 25–26)',cmd=('Construct',None,'labelled axes, bars that touch')))
+  '',f'{EDR} · 1C Worked example 5 (pp. 25–26; intervals written Cambridge style)',cmd=('Construct',None,'labelled axes, bars that touch')))
 # ================= CAS: histogram (planner/cas-skills.json: histogram)
 C=CS['histogram']
 S.append(cas('CAS · 1C','Constructing a histogram from raw data',
   '<p>Display the following set of 27 marks in the form of a histogram.</p>'+dl('cmd',MK,9,22)+
   '<p style="margin-top:14px">Enter the data into a list named <b>marks</b>, then change the column (bin) width to <b>4</b> and the starting point to <b>2</b>.</p>'
   '<div style="width:420px;margin:8px auto 0">'+hist('cmh',{"start":2,"w":4,"v":MN,"xmin":2,"xmax":26,"ymax":12,"ystep":2,"tick":4,"xl":"marks","yl":"frequency","h":250,"W":560,"fs":16})+'</div>',
-  C['ti'],C['classpad'],'Hover over (TI) or trace (ClassPad) each column: 2–&lt;6 has 1, 6–&lt;10 has 1, 10–&lt;14 has 6, 14–&lt;18 has 11, 18–&lt;22 has 3, 22–&lt;26 has 5.',
+  C['ti'],C['classpad'],'Hover over (TI) or trace (ClassPad) each column: 2–5 has 1, 6–9 has 1, 10–13 has 6, 14–17 has 11, 18–21 has 3, 22–25 has 5.',
   'Cambridge General Mathematics Units 3&amp;4, 1C pp. 16–20 (CAS 1) · Steps: CAS guide (planner)',
   videos=[yt(v['title'],yid(v['url'])) for v in C['videos']['ti'][:1]+C['videos']['classpad'][:1]]))
 
@@ -246,9 +251,9 @@ def mh(v,col='#4f84e6',vline=None,h=150,W=280):
     c={"start":0,"w":1,"v":v,"ymax":10,"ystep":5,"nox":True,"noy":True,"h":h,"W":W,"L":12,"col":col}
     if vline is not None: c['vline']=vline
     return hist('',c)
-SH=[('Symmetric','tails off evenly on either side of the peak',[1,2,4,7,9,7,4,2,1]),('Positively skewed','long <b>upper</b> tail, to the right',[3,9,8,6,4,3,2,1,1]),
-    ('Negatively skewed','long <b>lower</b> tail, to the left',[1,1,2,3,4,6,8,9,3]),('Bimodal','two peaks: often two groups mixed',[1,4,8,5,2,5,8,4,1])]
-pic='<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">'+''.join(f'<div class="key frag" style="text-align:center"><h4>{a}</h4>{mh(v)}<p style="font-size:19px;margin-top:4px">{b}</p></div>' for a,b,v in SH)+'</div>'
+SH=[('Symmetric','tails off evenly on either side of the peak',[1,2,4,7,9,7,4,2,1],'<i>x̄</i> ≈ median'),('Positively skewed','long <b>upper</b> tail, to the right',[3,9,8,6,4,3,2,1,1],'<i>x̄</i> &gt; median'),
+    ('Negatively skewed','long <b>lower</b> tail, to the left',[1,1,2,3,4,6,8,9,3],'<i>x̄</i> &lt; median'),('Bimodal','two peaks: often two groups mixed',[1,4,8,5,2,5,8,4,1],'')]
+pic='<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">'+''.join(f'<div class="key frag" style="text-align:center"><h4>{a}</h4>{mh(v)}<p style="font-size:19px;margin-top:4px">{b}</p>'+(f'<div style="margin-top:8px;font-size:26px;font-weight:800;background:#fff6c7;border:2px solid #e2c54a;border-radius:10px;padding:4px 8px">{m}</div>' if m else '')+'</div>' for a,b,v,m in SH)+'</div>'
 S.append(learn('Learn · 1C','Shape: what to look for',
   '<h4>Shape</h4><p>Is the histogram single-peaked? Does it tail off <b>evenly</b> (symmetric) or mostly in <b>one direction</b> (skewed)?</p>',pic,
   'The tail names the skew. Salaries and house prices: positively skewed. Age at death: negatively skewed.','Cambridge General Mathematics Units 3&amp;4, 1C p. 21 (shapes: teacher illustrations)'))
@@ -257,6 +262,11 @@ S.append(islide('Learn · 1C','Shape: drag to skew it <span class="i-hint">DRAG<
   shape_slider('shs')+isteps([('Symmetric: tails off evenly; mean ≈ median',shset('shs',0)),('Positively skewed: long upper tail; the mean is pulled up past the median',shset('shs',0.8)),
   ('Negatively skewed: long lower tail; the mean is pulled down below the median',shset('shs',-0.7))]),
   'Cambridge General Mathematics Units 3&amp;4, 1C p. 21 (interactive histogram: teacher illustration)'))
+SOCK=('<svg viewBox="0 0 120 130" width="66" height="72" aria-label="a sock"><g stroke="#1d2a44" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">'
+  '<path d="M38 6 H82 V70 L100 84 Q114 96 104 112 Q96 124 78 118 L28 96 Q14 88 22 72 L38 52 Z" fill="#4f84e6"/>'
+  '<path d="M38 6 H82 V22 H38 Z" fill="#f2f5fb"/><path d="M38 14 H82" fill="none"/>'
+  '<path d="M80 108 Q88 96 103 101" fill="none"/><path d="M28 96 Q22 84 30 76" fill="none"/></g>'
+  '<g fill="#fff"><circle cx="58" cy="40" r="4"/><circle cx="66" cy="58" r="4"/><circle cx="50" cy="66" r="4"/></g></svg>')
 # ================= Learn 1C: SOCS (Rocco's paradigm for describing numerical data)
 SC4=[('S','Shape','#2f6fdf','symmetric · positively skewed · negatively skewed',mh([1,2,4,7,9,7,4,2,1],h=95)),
      ('O','Outliers','#c0632b','present or not present: they go with the shape',mh([1,0,0,0,3,7,9,6,2],h=95)),
@@ -265,7 +275,7 @@ SC4=[('S','Shape','#2f6fdf','symmetric · positively skewed · negatively skewed
 pic=('<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">'+''.join(f'<div class="key frag" style="text-align:center;border-color:{c}"><h4 style="color:{c}"><span style="background:{c};color:#fff;border-radius:6px;padding:0 8px;margin-right:6px">{l}</span>{n}</h4>{h}<p style="font-size:18px;margin-top:4px">{t}</p></div>' for l,n,c,t,h in SC4)+'</div>'
      '<div class="frag" style="margin-top:12px">'+socs('ls')+'</div>')
 S.append(learn('Learn · 1C','Describing a distribution: SOCS',
-  '<h4>SOCS, like a sock</h4><p>Describe numerical data in this order, one sentence each: <b>S</b>hape · <b>O</b>utliers · <b>C</b>entre · <b>S</b>pread.</p>',pic,
+  '<div style="display:flex;gap:18px;align-items:center"><div style="flex:1"><h4>SOCS</h4><p>Describe numerical data in this order, one sentence each: <b>S</b>hape · <b>O</b>utliers · <b>C</b>entre · <b>S</b>pread.</p></div>'+SOCK+'</div>',pic,
   'Skewed, or outliers? Give the <b>median</b> for the centre and the <b>IQR</b> for the spread: outliers don’t affect them. From a histogram, centre and spread are only estimates.',
   'Cambridge General Mathematics Units 3&amp;4, 1C pp. 21–23 (SOCS order: class convention; charts: teacher illustrations)'))
 # ================= WE9: Cambridge Example 9 (report template)
@@ -388,6 +398,15 @@ S.append(cas('CAS · 1E','Finding a log, and undoing it',
   '<div class="key" style="margin-top:14px;font-size:21px"><h4>On the screen</h4>log(45) → 1.65321…<br>10^2.7125 → 515.822…</div>',
   C['ti'],C['classpad'],'a 1.7 &nbsp;·&nbsp; b 516','Cambridge General Mathematics Units 3&amp;4, 1E Example 12 (p. 37) · Steps: CAS guide (planner)',
   videos=[yt(v['title'],yid(v['url'])) for v in C['videos']['ti']+C['videos']['classpad']]))
+# ================= Learn: rounding to decimal places vs significant figures (values from Example 12 and 13c)
+RK=('<div class="key"><h4>Decimal places (d.p.)</h4><p style="font-size:19px">Count digits <b>after the decimal point</b>.<br>10<sup>2.7125</sup> = 515.82… → <b>516</b> (nearest whole number = 0 d.p.)</p></div>'
+    '<div class="key" style="margin-top:10px"><h4>Significant figures (s.f.)</h4><p style="font-size:19px">Count from the <b>first non-zero digit</b>.<br>log 3.3 = 0.5185… → <b>0.52</b> (2 s.f.: the 0 doesn’t count)</p></div>'
+    '<div class="key" style="margin-top:10px"><h4>Both</h4><p style="font-size:19px">Look at the next digit: <b>5 or more, round up</b>; less than 5, keep.</p></div>')
+S.append(islide('Learn · 1E','Rounding: decimal places vs significant figures <span class="i-hint">CLICK</span>',
+  '<div class="row" style="gap:24px;align-items:flex-start"><div style="flex:1.4">'+rounder('rd1','1.6532125','dp',2)+
+  isteps([('log 45 to 2 decimal places: 1.65',rset('rd1','dp',2)),('log 45 to 2 significant figures (Example 12a): 1.7',rset('rd1','sf',2)),
+          ('3 significant figures: 1.65, the same as 2 d.p. here',rset('rd1','sf',3))])+'</div><div style="flex:1">'+RK+'</div></div>',
+  'Cambridge General Mathematics Units 3&amp;4, 1E Examples 12 and 13 (pp. 36–38) · explanation: teacher’s own words'))
 # ================= You try: Edrolo 1D WE1
 S.append(qslide('yt','You try · Edrolo 1D WE1','Using a CAS calculator to find logs',
   'Use log<sub>10</sub> for the following calculations.'+plist([('a.','Calculate the log of 23, correct to two decimal places.'),('b.','If the log of a number is 5, what is the number?')]),
@@ -457,7 +476,7 @@ def _card(o):
             r=_card(v)
             if r: return r
 CW=_card(json.load(open(os.path.join(ROOT,'planner','unit-plan.json'))))['homework']['sets']
-S.append(coursework([(st['title'].replace('Revision book','Chapter 1 revision booklet'),st.get('note') or '',['<span style="display:flex;justify-content:space-between;gap:12px"><span>'+it['skill']+'</span><b>'+it['q']+'</b></span>' for it in st['items']]) for st in CW]))
+S.append(coursework([(st['title'].replace('Revision book','Chapter 1 practice booklet').replace('revision','practice').replace('Revision','Practice'),(st.get('note') or '').replace('revision','practice').replace('Revision','Practice'),['<span style="display:flex;justify-content:space-between;gap:12px"><span>'+it['skill']+'</span><b>'+it['q']+'</b></span>' for it in st['items']]) for st in CW]))
 V=json.load(open(os.path.join(ROOT,'planner','videos.json'))); V=V if isinstance(V,list) else V.get('videos',[])
 S.append(videos([yt(f'{v["sub"]} · {v["title"]} ({v["channel"].split(" (")[0]})',yid(v['url'])) for v in V if v['sub'] in ('1C','1D','1E')]))
 n=assemble(S,'12MAG · S2 · Displaying and describing numerical data',os.path.join(ROOT,'lessons','S2-slides.html'))
