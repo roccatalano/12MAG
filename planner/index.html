@@ -298,43 +298,63 @@ const DOW=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 const iso=d=>d.toISOString().slice(0,10);
 const D=s=>new Date(s+'T00:00:00Z');
 const fmt=d=>d.toLocaleDateString('en-AU',{day:'numeric',month:'short',timeZone:'UTC'});
+/* Anchors: {date,label,aos?,unit?,afterSchool?,inClass?,window?}. aos (or unit) = later-AoS lessons wait until after it and
+   earlier-AoS lessons after it are flagged. afterSchool = takes no lesson. inClass = takes one lesson slot that week.
+   Weekly mode (no teachingDays): a full 5-day week gets lessonRule.fullWeek lessons, a shorter week lessonRule.shortWeek.
+   A term with "lessons" caps its total (e.g. step-up). */
+const lim=a=>a.aos!=null?a.aos:(a.unit!=null?2*(a.unit-3)+2:null);
 function flow(Y){
-  const L=lessons(),days=new Set(Y.teachingDays.map(d=>DOW.indexOf(d.slice(0,3))));
+  const L=lessons(),weekly=!(Y.teachingDays&&Y.teachingDays.length),days=new Set((Y.teachingDays||[]).map(d=>DOW.indexOf(d.slice(0,3))));
+  const R=Y.lessonRule||{fullWeek:Y.lessonsPerWeek||3,shortWeek:2};
   const blocked=new Map((Y.blocked||[]).map(b=>[b.date,b.reason||'No lesson']));
   const anchors=(Y.anchors||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));
-  const weeks=[],warns=[],stats=[];let i=0,b=0;
-  for(const t of Y.terms){let wk=null,wn=0,used=0,buf=0;
-    for(let d=D(t.start);iso(d)<=t.end;d.setUTCDate(d.getUTCDate()+1)){
-      const s=iso(d),mon=new Date(d);mon.setUTCDate(d.getUTCDate()-((d.getUTCDay()+6)%7));
-      if(!wk||wk.mon!=iso(mon)){wn++;wk={mon:iso(mon),label:`Week ${wn}`,term:t.name,first:s,last:s,slots:[]};weeks.push(wk)}
-      wk.last=s;
-      anchors.filter(a=>a.date===s).forEach(a=>wk.slots.push({id:'an'+s,type:'anchor',section:fmt(d),title:a.label,n:'',when:fmt(d)}));
-      if(!days.has(d.getUTCDay()))continue;
-      if(blocked.has(s)){wk.slots.push({id:'bl'+s,type:'blocked',section:fmt(d),title:blocked.get(s),n:''});continue}
-      if(anchors.some(a=>a.date===s))continue;
-      const l=L[i],hold=l&&anchors.some(a=>a.unit&&a.date>s&&l.aosN>2*(a.unit-3)+2);
-      if(l&&!hold){const late=anchors.find(a=>a.unit&&a.date<s&&l.aosN<=2*(a.unit-3)+2);
-        if(late&&!warns.some(w=>w.includes(late.label)))warns.push(`AoS ${l.aosN} content runs past "${late.label}" (${fmt(D(late.date))}), from ${l.section}.`);
-        wk.slots.push({...l,when:fmt(d)});i++;used++}
-      else{b++;buf++;wk.slots.push({id:'bf'+s,type:'buffer',section:fmt(d),title:'Buffer: SAC, revision or catch-up',n:''})}
+  const before=(a,s)=>a.afterSchool?a.date>=s:a.date>s;   // slot on day s is before the anchor
+  const weeks=[],warns=[],stats=[],win=[];let i=0;
+  const place=(wk,s,d)=>{const l=L[i],hold=l&&anchors.some(a=>lim(a)!=null&&before(a,s)&&l.aosN>lim(a));
+    if(l&&!hold){const late=anchors.find(a=>lim(a)!=null&&!before(a,s)&&l.aosN<=lim(a));
+      if(late&&!warns.some(w=>w.includes(late.label)))warns.push(`AoS ${l.aosN} content runs past "${late.label}" (${fmt(D(late.date))}), from ${l.section}.`);
+      wk.slots.push({...l,when:fmt(d),date:s});i++;return 'used'}
+    wk.slots.push({id:'bf'+s,type:'buffer',section:fmt(d),title:'Buffer: SAC, revision or catch-up',n:'',date:s});return 'buf'};
+  for(const t of Y.terms){let wn=0,used=0,buf=0,left=t.lessons??1e9;
+    const dates=[];for(let d=D(t.start);iso(d)<=t.end;d.setUTCDate(d.getUTCDate()+1))dates.push(new Date(d));
+    const byWeek=[];dates.forEach(d=>{const mon=new Date(d);mon.setUTCDate(d.getUTCDate()-((d.getUTCDay()+6)%7));
+      const k=iso(mon);if(!byWeek.length||byWeek[byWeek.length-1].k!=k)byWeek.push({k,days:[]});byWeek[byWeek.length-1].days.push(d)});
+    for(const W of byWeek){wn++;const wk={mon:W.k,label:t.weekLabel?`${t.weekLabel} ${wn}`:`Week ${wn}`,term:t.name,first:iso(W.days[0]),last:iso(W.days[W.days.length-1]),slots:[]};weeks.push(wk);
+      const school=W.days.filter(d=>d.getUTCDay()>=1&&d.getUTCDay()<=5),open=school.filter(d=>!blocked.has(iso(d)));
+      let slotDays;
+      if(weekly){const n=Math.min(left,open.length,open.length>=5?R.fullWeek:R.shortWeek);left-=n;
+        slotDays=n<=0?[]:n==1?[open[0]]:[...new Set(Array.from({length:n},(_,k)=>Math.round(k*(open.length-1)/(n-1))))].map(k=>open[k]);}
+      else slotDays=open.filter(d=>days.has(d.getUTCDay()));
+      const slotSet=new Set(slotDays.map(iso)),taken=new Map();
+      anchors.filter(a=>a.inClass&&a.date>=wk.first&&a.date<=wk.last).forEach(a=>{const c=slotDays.map(iso).filter(x=>!taken.has(x));
+        const pick=c.find(x=>x>=a.date)||c[c.length-1];if(pick)taken.set(pick,a)});
+      for(const d of W.days){const s=iso(d);
+        anchors.filter(a=>a.date===s&&!a.inClass).forEach(a=>wk.slots.push({id:'an'+s+a.label,type:'anchor',section:fmt(d),title:a.label,n:'',when:fmt(d)}));
+        if(blocked.has(s)&&d.getUTCDay()>=1&&d.getUTCDay()<=5&&(weekly||days.has(d.getUTCDay()))){wk.slots.push({id:'bl'+s,type:'blocked',section:fmt(d),title:blocked.get(s),n:''});continue}
+        if(!slotSet.has(s))continue;
+        if(taken.has(s)){const a=taken.get(s);wk.slots.push({id:'an'+s,type:'anchor',section:fmt(d),title:a.label,n:'',when:fmt(d),date:s});continue}
+        place(wk,s,d)=='used'?used++:buf++}
     }stats.push({name:t.name,used,buf})}
+  /* teaching time per AoS: slots after the previous window anchor up to (and before) this one */
+  anchors.filter(a=>a.window).forEach(a=>{const pa=anchors.filter(x=>lim(x)!=null&&lim(x)<lim(a)),prev=pa.length?pa[pa.length-1].date:'0000';let les=0,bf=0;weeks.forEach(w=>w.slots.forEach(x=>{if(!x.date||x.type=='anchor')return;
+      if(x.date>prev&&before(a,x.date)){x.type=='buffer'?bf++:les++}}));win.push(`${a.label.split(':')[0]}: ${les+bf} lessons (${les} planned, ${bf} spare)`)});
   if(i<L.length)warns.push(`${L.length-i} lessons don't fit in the year (from L${L[i].n} ${L[i].section}). Add dates, or merge lessons in the Course plan.`);
-  return {weeks,warns,stats}}
+  return {weeks,warns,stats,win}}
 function renderYear(y){
   const Y=YD[y];
   if(!Y){$('#main').innerHTML=`<div class="placeholder">Could not read years/${esc(y)}.json</div>`;return}
-  const missing=!(Y.terms&&Y.terms.length&&Y.teachingDays&&Y.teachingDays.length);
-  $('#subinfo').textContent=missing?'Dates not added yet':`${Y.terms.length} terms · ${Y.teachingDays.join(', ')}`;
+  const missing=!(Y.terms&&Y.terms.length);
+  $('#subinfo').textContent=missing?'Dates not added yet':`${Y.terms.length} terms · `+((Y.teachingDays||[]).length?Y.teachingDays.join(', '):`${(Y.lessonRule||{}).fullWeek||3} lessons a full week, ${(Y.lessonRule||{}).shortWeek||2} a short week`);
   if(missing){$('#ctl').style.display='none';
     $('#main').innerHTML=`<div class="unit">Year plan ${esc(y)}</div><div class="placeholder"><h2>${esc(Y.status||'Dates not added yet')}</h2>
     Once <code>planner/years/${esc(y)}.json</code> has these, this tab fills itself in from the Course plan:
     <br><ul><li><b>Terms</b>: start and end date of each term</li><li><b>Teaching days</b>: the ${Y.lessonsPerWeek||3} weekdays the class has 12MAG</li>
     <li><b>Blocked dates</b>: public holidays, pupil-free days, school events</li><li><b>Fixed dates</b> (optional): SACs, trial exams</li></ul>
     <p>Lessons are placed in Course plan order into the free slots. Leftover slots show as buffer lessons.</p></div>`;return}
-  const {weeks,warns,stats}=flow(Y),f=$('#aosFilter').value;aosFilter([]);
+  const {weeks,warns,stats,win}=flow(Y),f=$('#aosFilter').value;aosFilter([]);
   let h=`<div class="unit">Year plan ${esc(y)} <span class="scope">· ${stats.map(s=>`${esc(s.name)}: ${s.used} lessons, ${s.buf} buffers`).join(' · ')}</span></div>
    <div class="legend"><span class="t-lesson"><i></i>Lesson</span><span class="t-check"><i></i>Chapter test</span><span class="t-anchor"><i></i>Fixed date</span><span><i style="background:var(--other-i)"></i>Buffer</span><span><i style="background:#8a6ad8"></i>CFAT</span></div>
-   ${warns.map(w=>`<div class="warn">${esc(w)}</div>`).join('')}`;
+   ${win.length?`<div class="scope" style="margin:4px 0 10px">Teaching time up to each SAC · ${win.map(esc).join(' · ')}</div>`:''}${warns.map(w=>`<div class="warn">${esc(w)}</div>`).join('')}`;
   let lastT='',lastA='';
   for(const w of weeks){const S=w.slots.filter(l=>!f||l.aos==f);if(!S.length)continue;
     if(w.term!=lastT){lastT=w.term;h+=`<div class="aos"><b>${esc(w.term)}</b><span></span></div>`}
