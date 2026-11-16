@@ -684,15 +684,15 @@ VCAA 2016 E1 Networks Q2,Edrolo U3&4 8E Q14,exit,yes,gm12-u4-14a,2026-11-16,used
 VCAA 2017 E1 Networks Q8,Edrolo U3&4 8E Q16,exit,yes,gm12-u4-14a,2026-11-16,used in 14A slides + worksheet (AoS4 #15)
 Cambridge U1&2 skills checklist 8A 1,,APK,yes,gm12-u4-14a,2026-11-16,used in 14A slides + worksheet (AoS4 #15)
 "VCAA 2016 E2 Networks Q1a,bi",Edrolo U1&2 7A Q14,APK,yes,gm12-u4-14a,2026-11-16,used in 14A slides + worksheet (AoS4 #15)
-VCAA 2025 E1 Q36,,Do Now,yes,gm12-u4-14b,2026-11-16,reserved by AoS4 prefill
-VCAA 2025 E1 Q20,,Do Now,yes,gm12-u4-14b,2026-11-16,reserved by AoS4 prefill
-VCAA 2024 E2 Q14a,,Do Now,yes,gm12-u4-14b,2026-11-16,reserved by AoS4 prefill
-VCAA 2025 E2 Q4a,,Do Now,yes,gm12-u4-14b,2026-11-16,reserved by AoS4 prefill
-VCAA 2016 E1 Networks Q1,Edrolo U3&4 8G Q10,exit,yes,gm12-u4-14b,2026-11-16,reserved by AoS4 prefill
-VCAA 2020 E2 Networks Q2,Edrolo U3&4 8G Q11,exit,yes,gm12-u4-14b,2026-11-16,reserved by AoS4 prefill
-VCAA 2018 E1 Networks Q8,Edrolo U3&4 8G Q13,exit,yes,gm12-u4-14b,2026-11-16,reserved by AoS4 prefill
-Cambridge U1&2 skills checklist 8B 5,,APK,yes,gm12-u4-14b,2026-11-16,reserved by AoS4 prefill
-VCAA 2017 E1 Networks Q3,Edrolo U1&2 7B Q16,APK,yes,gm12-u4-14b,2026-11-16,reserved by AoS4 prefill
+VCAA 2025 E1 Q36,,Do Now,yes,gm12-u4-14b,2026-11-16,used in 14B slides + worksheet (AoS4 #16)
+VCAA 2025 E1 Q20,,Do Now,yes,gm12-u4-14b,2026-11-16,used in 14B slides + worksheet (AoS4 #16)
+VCAA 2024 E2 Q14a,,Do Now,yes,gm12-u4-14b,2026-11-16,used in 14B slides + worksheet (AoS4 #16)
+VCAA 2025 E2 Q4a,,Do Now,yes,gm12-u4-14b,2026-11-16,used in 14B slides + worksheet (AoS4 #16)
+VCAA 2016 E1 Networks Q1,Edrolo U3&4 8G Q10,exit,yes,gm12-u4-14b,2026-11-16,used in 14B slides + worksheet (AoS4 #16)
+VCAA 2020 E2 Networks Q2,Edrolo U3&4 8G Q11,exit,yes,gm12-u4-14b,2026-11-16,used in 14B slides + worksheet (AoS4 #16)
+VCAA 2018 E1 Networks Q8,Edrolo U3&4 8G Q13,exit,yes,gm12-u4-14b,2026-11-16,used in 14B slides + worksheet (AoS4 #16)
+Cambridge U1&2 skills checklist 8B 5,,APK,yes,gm12-u4-14b,2026-11-16,used in 14B slides + worksheet (AoS4 #16)
+VCAA 2017 E1 Networks Q3,Edrolo U1&2 7B Q16,APK,yes,gm12-u4-14b,2026-11-16,used in 14B slides + worksheet (AoS4 #16)
 VCAA 2025 E1 Q39,,Do Now,yes,gm12-u4-14c,2026-11-16,reserved by AoS4 prefill
 VCAA 2024 E1 Q28,,Do Now,yes,gm12-u4-14c,2026-11-16,reserved by AoS4 prefill
 VCAA 2024 NHT E2 Q14a,,Do Now,yes,gm12-u4-14c,2026-11-16,reserved by AoS4 prefill
@@ -790,3 +790,8 @@ Cambridge U3&4 Example 16,,Example,no,gm12-u3-l40,2026-11-16,8D slides + workshe
 Cambridge U3&4 Example 17,,Example,no,gm12-u3-l40,2026-11-16,8D slides + worksheet
 Edrolo U3&4 6D WE2,,You try,no,gm12-u3-l40,2026-11-16,8D slides + worksheet (a-b, c)
 YT-8D-17,,You try,no,gm12-u3-l40,2026-11-16,written; rewritten to plot interest + principal reduction like Ex 17
+Cambridge U3&4 Example 6 (14B),,Example,no,gm12-u4-14b,2026-11-16,used in 14B slides + worksheet (AoS4 #16)
+Cambridge U3&4 14B Hungarian algorithm (text pp. 676-678),,Example,no,gm12-u4-14b,2026-11-16,used in 14B slides + worksheet (AoS4 #16)
+Edrolo U3&4 8G WE1,,You try,no,gm12-u4-14b,2026-11-16,used in 14B slides + worksheet (AoS4 #16)
+Edrolo U3&4 8G WE2,,You try,no,gm12-u4-14b,2026-11-16,used in 14B slides + worksheet (AoS4 #16)
+Edrolo U3&4 8G WE3,,You try,no,gm12-u4-14b,2026-11-16,used in 14B slides + worksheet (AoS4 #16)

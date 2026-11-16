@@ -14127,7 +14127,33 @@
          }
         ],
         "cas": [],
-        "note": "Spare exit (not reserved): Edrolo 8G Q12 (VCAA 2017 E2 N&DM Q2a)."
+        "note": "Spare exit (not reserved): Edrolo 8G Q12 (VCAA 2017 E2 N&DM Q2a).",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/14B slides.html",
+          "pdf": "lessons/14B slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "5 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/14B worksheet.html",
+            "pdf": "lessons/14B worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/14B worksheet solutions.html",
+            "pdf": "lessons/14B worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
