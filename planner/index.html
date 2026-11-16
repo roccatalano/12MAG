@@ -187,6 +187,7 @@ main{max-width:1200px;margin:0 auto;padding:16px 20px 80px}
   <div class="ctl" id="ctl">
     <select id="aosFilter"><option value="">All areas of study</option></select>
     <button id="expand">Expand all</button>
+    <button id="fresh" title="Load the newest version from GitHub (skips the copy your browser saved)">↻ Get latest</button>
   </div>
 </div>
 </div>
@@ -504,6 +505,7 @@ function render(){
   if(tab!='course'&&YEARS.includes(tab))renderYear(tab);else{tab='course';renderCourse()}
 }
 $('#aosFilter').onchange=()=>render();
+$('#fresh').onclick=()=>{location.replace(location.pathname+'?v='+Date.now()+location.hash)};
 $('#expand').onclick=()=>{expandAll=!expandAll;$('#expand').textContent=expandAll?'Collapse all':'Expand all';render()};
 (async()=>{try{
   UP=await (await fetch('unit-plan.json',{cache:'no-store'})).json();
