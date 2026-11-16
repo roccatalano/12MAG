@@ -139,6 +139,18 @@ main{max-width:1200px;margin:0 auto;padding:16px 20px 80px}
 .cpl.cp2{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:4px}.cpc{border:1px solid #d6d0e8;border-radius:8px;background:#fff;padding:5px 7px;display:flex;flex-direction:column;gap:4px}.cpc a{margin-left:0!important;margin-right:3px}.cpl{display:flex;flex-direction:column;gap:3px;font-size:12px}.cpl a{color:#1d7266;text-decoration:none;border:1px solid #9fd3c9;border-radius:6px;padding:0 6px;margin-left:3px;font-weight:600}
 @media(max-width:760px){.chgrid{grid-template-columns:1fr}}
 .nest.n-test{border-color:#d9a3a3;background:#fdf5f5}.nest.n-test>summary{color:var(--sac-i)}.n-test .cfx th{color:var(--sac-i);border-color:#e8c4c4}.n-test .cfx td{border-color:#f1dede}
+/* Course plan: term rows of chapter cards (look copied from the 10MA planner, Rocco 16 Nov) */
+.ctl2{display:flex;gap:8px;margin:14px 0 4px}.ctl2 button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);border-radius:8px;padding:5px 12px;cursor:pointer}
+.trow{margin:14px 0 18px}.trh{font-weight:700;font-size:15px;border-bottom:2px solid var(--ink);padding:4px 0;margin-bottom:10px;display:flex;justify-content:space-between}.trh span{font-weight:400;color:var(--muted);font-size:13px}.trh span.over{color:#a32d2d;font-weight:600}
+.ucards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.ucard{background:#fff;border:1px solid #ddd;border-left:6px solid var(--ac);border-radius:8px;padding:10px 12px;cursor:pointer;transition:box-shadow .15s}.ucard:hover{box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.ucard.open{background:var(--acb);box-shadow:inset 0 0 0 2px var(--ac)}
+.a1{--ac:#1f4fa0;--acb:#eef3fb}.a2{--ac:#b5532a;--acb:#fbf0ea}.a3{--ac:#2e8b3e;--acb:#eef7ef}.a4{--ac:#2e7f8b;--acb:#ecf6f7}
+.uc1{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);font-weight:700}.uname{font-weight:700;font-size:15px;margin:3px 0}.umeta{font-size:12px;color:var(--muted)}
+.ubad{display:flex;gap:5px;flex-wrap:wrap;margin-top:7px}.ubad span{font-size:11px;padding:1px 7px;border-radius:9px;background:#eee;color:#888}.ubad span.y{background:#dff1e2;color:#1a6b2a}.ubad span.p{background:#fdf1d8;color:#8a5a00}
+.uspan{font-size:12px;color:#b5532a;font-weight:600;margin-top:4px}
+.uopen{margin-top:12px;border:1px solid #ddd;border-radius:10px;padding:6px 12px 12px;background:#fcfcfa}.uopen .aos{margin-top:8px}
+.evcard{background:#fdf3e6;border:1px dashed #e0a96d;border-radius:8px;padding:10px 12px;color:#7a4510}.evcard .uc1,.evcard .umeta{color:#a0662a}.evcard.sac{background:#fbeaea;border-color:#d98c8c;color:#7a1f1f}.evcard.sac .uc1,.evcard.sac .umeta{color:#a34a4a}
 </style>
 </head>
 <body>
@@ -276,22 +288,58 @@ function formatives(C){const seen=new Set(),out=[];
     <div class="ttl"><b>${test?'Chapter '+l.ch+' test':esc(m.kind)}</b>${c&&c.title?' · '+esc(c.title):''}</div>
     <div class="cpl${m.copies?.length?' cp2':''}">${m.copies?.length?m.copies.map(k=>`<div class="cpc"><b>${esc(k.label)}</b><div>${k.file||k.pdf?links(k):'<span class="sub">To make</span>'}</div></div>`).join(''):links(m)}</div>${c?nest('cfat-'+c.id,'CFAT details',cfatDetails(c),null,'n-cfat'):test?(TESTS[l.ch]?nest('test-'+l.ch,'Test details',testDetails(TESTS[l.ch]),'/'+TESTS[l.ch].total,'n-test'):'<div class="empty" style="margin-top:6px">Test not built yet</div>'):''}</div>`}).join(''):'<div class="empty">None yet</div>'}
 /* ---------- Course plan ---------- */
+/* Term rows of chapter cards (Rocco, 16 Nov: same look as the 10MA planner's Course plan). Terms come from the newest year plan;
+   click a chapter to open its lessons + formative assessments underneath. */
+let uopen=new Set(store.get('pl:uopen',[]));
+function chapterBody(C){
+  return `<div class="aos"><b>Chapter ${C[0].ch} · ${esc(C[0].chTitle)}</b><span>${esc(C[0].aos)} · ${C.length} lessons</span></div>
+    <div class="chgrid"><div class="wl"><span class="cn">Chapter ${C[0].ch}</span><b>${esc(C[0].chTitle)}</b>${C.length} lessons</div>
+    <div class="col"><div class="colh">Lessons</div>${C.map(l=>card(l)+(expandAll||l.id==openId?detail(l):'')).join('')}</div>
+    <div class="col"><div class="colh">Formative assessments</div>${formatives(C)}</div></div>`}
+function badges(C){const les=C.filter(l=>l.type=='lesson'),has=(l,re)=>(l.materials||[]).some(m=>re.test(m.kind)&&(m.file||m.pdf||(m.copies||[]).some(k=>k.file||k.pdf)));
+  const cf=[...new Map(C.flatMap(l=>cfs(l)).map(c=>[c.id,c])).values()],cfm=cf.filter(c=>c.file).length;
+  const chk=C.filter(l=>l.type=='check'),test=chk.some(l=>has(l,/test/i)),book=chk.some(l=>has(l,/revision booklet/i));
+  const b=(lab,n,t)=>`<span class="${t&&n>=t?'y':n?'p':''}">${lab}${t!=null?` ${n}/${t}`:''}</span>`;
+  return `<div class="ubad">${b('Slides',les.filter(l=>has(l,/slides/i)).length,les.length)}${b('Worksheets',les.filter(l=>has(l,/worksheet/i)).length,les.length)}${b('Bound ref',les.filter(l=>has(l,/bound reference/i)).length,les.length)}${b('CFATs',cfm,cf.length)}<span class="${test?'y':''}">Test</span><span class="${book?'y':''}">Booklet</span></div>`}
 function renderCourse(){
-  const all=lessons(),L=aosFilter(all);
-  $('#subinfo').textContent=`${all.length} lessons · ${UP.aos.reduce((s,a)=>s+a.chapters.length,0)} chapters · no dates (year plans add them)`;
-  let h=`<div class="unit">Course plan <span class="scope">· VCE General Mathematics Units 3&amp;4 · Cambridge teaching sequence · 3 lessons per week</span></div>
-   <div class="legend"><span class="t-lesson"><i></i>Lesson</span><span class="t-check"><i></i>Coursework check + chapter test</span><span><i style="background:#8a6ad8"></i>CFAT</span><span><i style="background:var(--line)"></i>Not planned yet</span></div>`;
-  let lastA='';
-  for(const ch of [...new Set(L.map(l=>l.ch))]){
-    const C=L.filter(l=>l.ch==ch);
-    if(C[0].aos!=lastA){ if(lastA)h+=`<div class="revrow">${esc(L.find(l=>l.aos==lastA).revision)}: practice only, not in the lesson sequence.</div>`;
-      lastA=C[0].aos;h+=`<div class="aos"><b>${esc(lastA)}</b><span>${esc(C[0].aosTitle)}</span></div>`}
-    h+=`<div class="chgrid"><div class="wl"><span class="cn">Chapter ${ch}</span><b>${esc(C[0].chTitle)}</b>${C.length} lessons</div>
-      <div class="col"><div class="colh">Lessons</div>${C.map(l=>card(l)+(expandAll||l.id==openId?detail(l):'')).join('')}</div>
-      <div class="col"><div class="colh">Formative assessments</div>${formatives(C)}</div></div>`;
-  }
-  if(lastA)h+=`<div class="revrow">${esc(L.find(l=>l.aos==lastA).revision)}: practice only, not in the lesson sequence.</div>`;
-  $('#main').innerHTML=h; wire(renderCourse);
+  const all=lessons(),L=aosFilter(all),y=YEARS[YEARS.length-1],Y=y&&YD[y];
+  $('#subinfo').textContent=`${all.length} lessons · ${UP.aos.reduce((s,a)=>s+a.chapters.length,0)} chapters · terms from Year plan ${y||'(none yet)'}`;
+  let h=`<div class="unit">Course plan <span class="scope">· VCE General Mathematics Units 3&amp;4 · Cambridge teaching sequence · click a chapter for its lessons</span></div>
+   <div class="legend">${UP.aos.map(a=>`<span class="a${a.n}"><i style="background:var(--ac)"></i>AoS ${a.n} ${esc(a.title)}</span>`).join('')}<span><i style="background:#8a6ad8"></i>CFAT</span></div>
+   <div class="ctl2"><button id="uall">Open all chapters</button><button id="unone">Close all chapters</button></div>`;
+  // where each lesson falls: run the newest year plan; without one, one row per AoS
+  let rows=[];const at={};
+  if(Y&&Y.terms&&Y.terms.length){const F=flow(Y);
+    rows=Y.terms.map((t,k)=>({lab:t.name,cap:F.stats[k].used+F.stats[k].buf,used:F.stats[k].used,G:[]}));
+    F.weeks.forEach(w=>w.slots.forEach(x=>{const r=rows.find(r=>r.lab==w.term);if(x.aos&&x.id)at[x.id]={r,date:x.date};
+      if(x.type=='anchor'&&!/^Last/.test(x.title)&&!r.G.some(g=>g.ev&&g.ev.title==x.title))r.G.push({ev:x,date:x.date||w.first,sac:/SAC/.test(x.title)})}));
+    (Y.anchors||[]).filter(a=>!a.inClass).forEach(a=>{const r=rows.find(r=>{const t=Y.terms.find(t=>t.name==r.lab);return a.date>=t.start&&a.date<=t.end});
+      if(r&&!r.G.some(g=>g.ev&&g.ev.title==a.label))r.G.push({ev:{title:a.label,when:fmt(D(a.date))},date:a.date,sac:/SAC/.test(a.label)})});
+  }else rows=UP.aos.map(a=>({lab:`AoS ${a.n} · ${a.title}`,G:[]}));
+  const chs=[...new Set(L.map(l=>l.ch))];
+  chs.forEach(ch=>{const C=L.filter(l=>l.ch==ch),parts=[];
+    C.forEach(l=>{const p=at[l.id],r=p?p.r:rows.find(r=>r.lab.startsWith(l.aos))||rows[rows.length-1];let q=parts.find(q=>q.r===r);
+      if(!q){q={r,lo:l.n,hi:l.n,date:p?p.date:'',out:0};parts.push(q)}q.hi=l.n;if(Y&&!p)q.out++});
+    parts.forEach((q,j)=>q.r.G.push({C,ch,date:q.date||'9999',part:{lo:q.lo,hi:q.hi,n:parts.length,prev:j?parts[j-1].r.lab:'',next:j<parts.length-1?parts[j+1].r.lab:'',out:q.out}}))});
+  rows.forEach(r=>r.G.sort((a,b)=>a.date.localeCompare(b.date)||(a.ev?1:-1)));
+  const key=(g,r)=>'ch'+g.ch+'@'+r.lab;
+  const ucard=(g,r)=>{const C=g.C,op=uopen.has(key(g,r)),chk=C.filter(l=>l.type=='check').map(l=>l.title.replace(/ coursework check \+ test/,' test')).join(', ');
+    return `<div class="ucard a${C[0].aosN} ${op?'open':''}" data-uk="${esc(key(g,r))}"><div class="uc1"><span>Ch ${g.ch} · ${esc(C[0].aos)}</span><span>${op?'▾':'▸'}</span></div>
+      <div class="uname">${esc(C[0].chTitle)}</div><div class="umeta">${C.length} lessons · L${C[0].n}–L${C[C.length-1].n}${chk?' · '+esc(chk):' · test with the next chapter'}</div>
+      ${g.part.n>1?`<div class="uspan">${g.part.prev?'← continued from '+esc(g.part.prev)+' · ':''}${g.part.lo==g.part.hi?"L"+g.part.lo:"L"+g.part.lo+"–L"+g.part.hi} here${g.part.next?' · continues in '+esc(g.part.next)+' →':''}</div>`:''}
+      ${g.part.out?`<div class="uspan" style="color:#a32d2d">${g.part.out} lesson${g.part.out>1?'s':''} don't fit in the year</div>`:''}${badges(C)}</div>`};
+  const evcard=g=>`<div class="evcard ${g.sac?'sac':''}"><div class="uc1"><span>${esc(g.ev.when||'')}</span><span>${g.sac?'SAC':'Fixed date'}</span></div><div class="uname">${esc(g.ev.title)}</div></div>`;
+  h+=rows.filter(r=>r.G.some(g=>!g.ev)||!$('#aosFilter').value).map(r=>`<div class="trow"><div class="trh">${esc(r.lab)}${r.cap!=null?`<span>${r.used} of ${r.cap} lessons${r.cap>r.used?` · ${r.cap-r.used} spare (revision, SACs, catch-up)`:''}</span>`:''}</div>
+    <div class="ucards">${r.G.map(g=>g.ev?evcard(g):ucard(g,r)).join('')||'<div class="empty">Nothing planned yet</div>'}</div>
+    ${r.G.filter(g=>!g.ev&&uopen.has(key(g,r))).map(g=>`<div class="uopen">${chapterBody(g.C)}</div>`).join('')}</div>`).join('');
+  const revs=UP.aos.filter(a=>a.revision).map(a=>`AoS ${a.n}: ${esc(a.revision)}`).join(' · ');
+  if(revs)h+=`<div class="revrow">Revision chapters (practice only, not in the lesson sequence) · ${revs}</div>`;
+  $('#main').innerHTML=h;
+  const sv=()=>{store.set('pl:uopen',[...uopen]);renderCourse()};
+  $('#main').querySelectorAll('.ucard').forEach(c=>c.onclick=()=>{uopen.has(c.dataset.uk)?uopen.delete(c.dataset.uk):uopen.add(c.dataset.uk);sv()});
+  $('#uall').onclick=()=>{rows.forEach(r=>r.G.forEach(g=>{if(!g.ev)uopen.add(key(g,r))}));sv()};
+  $('#unone').onclick=()=>{uopen.clear();sv()};
+  wire(renderCourse);
 }
 /* ---------- Year plan ---------- */
 const DOW=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];

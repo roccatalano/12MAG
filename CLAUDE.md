@@ -96,4 +96,5 @@ Claude can create/overwrite files on G: but cannot move, rename or delete them.
 ## Planner decisions (Rocco, 14 Nov)
 - Keep the Cambridge suggested teaching sequence as the lesson order. No drag-and-drop or auto-built slides: too complicated.
 - The planner must look and work like the teacher dashboard's nested-card system.
+- **Course plan tab (Rocco, 16 Nov): same look as the 10MA planner's Lesson planning → Course plan** (roccatalano/10MA, read-only: never push there): term rows (from the newest year plan) of chapter cards coloured by AoS, with lesson ranges, 'continues in' notes, material badges (Slides/Worksheets/Bound ref/CFATs/Test/Booklet) and dashed SAC/fixed-date cards; click a chapter to open its lessons + formative assessments underneath.
 - **Keep card text minimal** (Rocco, 15 Nov): a material's description is one line max; side-by-side copies (e.g. Student copy / Solutions) get a label and buttons only, no subtext. A material with nested copies shows no Open/PDF buttons next to its title (they're in the copies).
