@@ -232,8 +232,8 @@
    "pairs": "Cambridge U3&4 Example 17",
    "sub": "8D",
    "label": "Written for 12MAG (Claude, modelled on Cambridge Example 17)",
-   "text": "Consider the following amortisation table for a reducing balance loan. Payment 0: balance $800.00. Payment 1: payment $205.00, interest $8.00, principal reduction $197.00, balance $603.00. Payment 2: payment $205.00, interest $6.03, principal reduction $198.97, balance $404.03. Payment 3: payment $205.00, interest $4.04, principal reduction $200.96, balance $203.07. Payment 4: payment $205.10, interest $2.03, principal reduction $203.07, balance $0.00. Plot the balance of the loan against the payment number.",
-   "answer": "Points (0, 800), (1, 603.00), (2, 404.03), (3, 203.07), (4, 0) on axes payment number (horizontal) and balance (vertical): the points fall almost in a straight line to 0."
+   "text": "Consider the following amortisation table for a reducing balance loan. Payment 0: balance $800.00. Payment 1: payment $205.00, interest $8.00, principal reduction $197.00, balance $603.00. Payment 2: payment $205.00, interest $6.03, principal reduction $198.97, balance $404.03. Payment 3: payment $205.00, interest $4.04, principal reduction $200.96, balance $203.07. Payment 4: payment $205.10, interest $2.03, principal reduction $203.07, balance $0.00. Plot a graph of the interest and principal reduction on the same graph.",
+   "answer": "Interest points (1, 8.00), (2, 6.03), (3, 4.04), (4, 2.03) and principal reduction points (1, 197.00), (2, 198.97), (3, 200.96), (4, 203.07) on one graph (payment number across, amount ($) up): interest falls, principal reduction rises."
   },
   {
    "id": "YT-8F-21",
