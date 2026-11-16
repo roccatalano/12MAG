@@ -131,7 +131,7 @@ def close(SC, cols, rev):
     """Skills checklist, then coursework (stacked). cols: [(subchapter, questions)], e.g. [('1A', 'Q1–6')]; rev: revision booklet sections, one cell each, e.g. ['1A', '1B']."""
     ck = box('Skills checklist', '<div class="scg" style="grid-template-columns:1fr 1fr">' + ''.join(f'<div class="sc"><div class="tick"></div><div><b>{i}.</b> {s}</div></div>' for i, s in enumerate(SC, 1)) + '</div>', 'Tick when you can')
     cell = lambda h, t: f'<div><div class="hwh">{h}</div><div>{t}</div><div class="tick"></div><div class="due">Due <i></i></div></div>'
-    cw = box('Coursework', f'<div class="hwg" style="grid-template-columns:repeat({len(cols)+len(rev)},1fr)">' + ''.join(cell(h, t) for h, t in cols) + ''.join(cell('Revision booklet', f'{r} section') for r in rev) + '</div>'
+    cw = box('Coursework', f'<div class="hwg" style="grid-template-columns:repeat({len(cols)+len(rev)},1fr)">' + ''.join(cell(h, t) for h, t in cols) + ''.join(cell('Practice booklet', f'{r} section') for r in rev) + '</div>'
              '<div class="sig"><div class="stamp">Teacher stamp</div><div class="ln"><div><span>Student signature</span><i></i><span>Date</span><i class="d"></i></div><div><span>Parent signature</span><i></i><span>Date</span><i class="d"></i></div></div></div>', 'Tick when done')
     return ck + cw
 

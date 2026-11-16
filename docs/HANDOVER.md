@@ -471,3 +471,8 @@ Chapter 3 revision booklet + solutions built (`tools/revision/ch3/`, 16 pages ea
   - S4: Example 24 outlier position 81 vs 86; APK 3 option %s; no You trys yet for Examples 24, 26 and 27.
   - S5: Example 28c is missing the word "how"; Example 30 lead-in sentence; exit % 58/78 vs 60/80 (check against the examiner reports).
 - Next: convert the other decks to the standard (copy `template_build.py`), one lesson at a time.
+
+## 17 Nov (later): Chapter 1 worksheets checked + Chapter 1 workbook
+- All five Ch 1 worksheets (S1–S5) audited against the new decks and the worksheet standard and rebuilt: S1 5 pp, S2–S5 6 pp each (student = solutions). Fixes: question order/numbering matches the decks; missing questions added (S3 two VCAA 2024 Exam 1 MCs + two CAS examples; S4 Cambridge CAS 4); an invented lead-in removed (S5 Example 30); answers match the decks' ✓ Answers (all recomputed); 'Practice booklet' label (ws2.py default).
+- New `tools/deck/chapter_workbook.py` → `lessons/Ch1-workbook.pdf` + `Ch1-workbook-solutions.pdf` (32 pp: cover + contents, lessons start on odd pages). On the planner under AoS 1 Unit resources.
+- Still to check against the books: S5 Example 28c "Approximately many…" (missing "how"?); S2 Examples 7/9 small wording quirks ("a sample for 1000 babies"); S1 tables kept compact (no 'Frequency' super-heading, Exit 2 table turned) to stay at 5 pages.
