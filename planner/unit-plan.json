@@ -2064,403 +2064,6 @@
          ]
         }
        }
-      },
-      {
-       "id": "gm12-u3-ch1-test",
-       "kind": "check",
-       "subchapters": [],
-       "title": "Chapter 1 coursework check + test",
-       "card": {
-        "materials": [
-         {
-          "kind": "CFAT 1.1.3",
-          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
-          "status": "draft",
-          "copies": [
-           {
-            "label": "Student copy",
-            "file": "lessons/CFAT-1.1.3.html",
-            "pdf": "lessons/CFAT-1.1.3.pdf"
-           },
-           {
-            "label": "Solutions",
-            "file": "lessons/CFAT 1.1.3 (1F-1I) solutions.html",
-            "pdf": "lessons/CFAT 1.1.3 (1F-1I) solutions.pdf"
-           }
-          ]
-         },
-         {
-          "kind": "Coursework check",
-          "desc": "Double-sided A4. Front: students tick the coursework they have (guided notes, bound reference entries, CFATs, homework); teacher signs off. Back: chapter success criteria, ticked by the teacher when marking the test (Test Q column = which question tests it).",
-          "status": "draft",
-          "file": "lessons/Ch1-coursework-check.html",
-          "pdf": "lessons/Ch1-coursework-check.pdf"
-         },
-         {
-          "kind": "Revision booklet",
-          "desc": "Insight GM1 + GM2, one section per subchapter (1A–1H) for gradual homework.",
-          "status": "draft",
-          "copies": [
-           {
-            "label": "Student copy",
-            "file": "lessons/Ch1-revision-booklet.html",
-            "pdf": "lessons/Ch1-revision-booklet.pdf"
-           },
-           {
-            "label": "Solutions",
-            "file": "lessons/Ch1-revision-booklet-solutions.html",
-            "pdf": "lessons/Ch1-revision-booklet-solutions.pdf"
-           }
-          ]
-         },
-         {
-          "kind": "Chapter test",
-          "desc": "Mathspace Ch 1 topic assessment (19 Qs, /37), verbatim; Q8 (comparing boxplots, Ch 2) left out.",
-          "status": "draft",
-          "copies": [
-           {
-            "label": "Student copy",
-            "file": "lessons/Ch1 test.html",
-            "pdf": "lessons/Ch1 test.pdf"
-           },
-           {
-            "label": "Solutions",
-            "file": "lessons/Ch1 test solutions.html",
-            "pdf": "lessons/Ch1 test solutions.pdf"
-           }
-          ]
-         }
-        ],
-        "cfats": [
-         {
-          "id": "CFAT 1.1.3",
-          "title": "Mean and SD, the normal distribution, z-scores",
-          "covers": [
-           "1F (mean, SD)",
-           "1H",
-           "1I"
-          ],
-          "format": "About 20 min · individual · CAS and single bound reference allowed",
-          "file": "lessons/gm12/CFAT-1.1.3.html",
-          "status": "Draft",
-          "marks": 15,
-          "plan": "Step-up lesson 6 (if there is one), with holiday homework prep; otherwise summer holiday work. Gone over in the Chapter 1 coursework check + test lesson.",
-          "sources": [
-           "Edrolo GM U3&4 2023 exercise questions (CFAT-only): 1G Q4 · 1H Q8, Q11, Q13 · 1I Q1, Q4, Q9, Q12, Q15"
-          ],
-          "questions": [
-           {
-            "q": 1,
-            "marks": 1,
-            "type": "MC",
-            "skill": "Find the mean and sample SD of raw data (CAS)",
-            "sd": [
-             "DA-1.5",
-             "DA-K5"
-            ],
-            "sub": "1F",
-            "sc": "I can calculate the mean and standard deviation using the CAS calculator.",
-            "src": "Edrolo 1G Q4",
-            "fu": ""
-           },
-           {
-            "q": 2,
-            "marks": 1,
-            "type": "MC",
-            "skill": "Interpret a negative z-score",
-            "sd": [
-             "DA-1.6",
-             "DA-K6"
-            ],
-            "sub": "1H",
-            "sc": "I can calculate standardised scores.",
-            "src": "Edrolo 1I Q1",
-            "fu": ""
-           },
-           {
-            "q": 3,
-            "marks": 1,
-            "type": "MC",
-            "skill": "Know that z = 0 is the mean",
-            "sd": [
-             "DA-1.6",
-             "DA-K6"
-            ],
-            "sub": "1H",
-            "sc": "I can convert standardised scores into actual scores.",
-            "src": "Edrolo 1I Q4",
-            "fu": ""
-           },
-           {
-            "q": 4,
-            "marks": 1,
-            "type": "MC",
-            "skill": "Use the 68–95–99.7% rule across two intervals",
-            "sd": [
-             "DA-1.6",
-             "DA-K6",
-             "DA-S5"
-            ],
-            "sub": "1H",
-            "sc": "I can apply the 68-95-99.7% rule.",
-            "src": "Edrolo 1H Q11",
-            "fu": ""
-           },
-           {
-            "q": 5,
-            "marks": 1,
-            "type": "MC",
-            "skill": "Convert a z-score to an actual score",
-            "sd": [
-             "DA-1.6",
-             "DA-K6",
-             "DA-S5"
-            ],
-            "sub": "1H",
-            "sc": "I can convert standardised scores into actual scores.",
-            "src": "Edrolo 1I Q12",
-            "fu": ""
-           },
-           {
-            "q": 6,
-            "marks": 1,
-            "type": "MC",
-            "skill": "Calculate a z-score with a negative value",
-            "sd": [
-             "DA-1.6",
-             "DA-K6",
-             "DA-S5"
-            ],
-            "sub": "1H",
-            "sc": "I can calculate standardised scores.",
-            "src": "Edrolo 1I Q15",
-            "fu": ""
-           },
-           {
-            "q": "7a",
-            "marks": 1,
-            "type": "SA",
-            "skill": "68–95–99.7% rule: percentage above one SD below the mean",
-            "sd": [
-             "DA-1.6",
-             "DA-S5"
-            ],
-            "sub": "1H",
-            "sc": "I can apply the 68-95-99.7% rule.",
-            "src": "Edrolo 1H Q13",
-            "fu": ""
-           },
-           {
-            "q": "7b",
-            "marks": 1,
-            "type": "SA",
-            "skill": "68–95–99.7% rule: turn a percentage into a count",
-            "sd": [
-             "DA-1.6",
-             "DA-S5"
-            ],
-            "sub": "1H",
-            "sc": "I can apply the 68-95-99.7% rule.",
-            "src": "Edrolo 1H Q13",
-            "fu": ""
-           },
-           {
-            "q": "8a",
-            "marks": 1,
-            "type": "SA",
-            "skill": "Label the normal curve: values and percentages",
-            "sd": [
-             "DA-1.6",
-             "DA-K6"
-            ],
-            "sub": "1H",
-            "sc": "I can apply the 68-95-99.7% rule.",
-            "src": "Edrolo 1H Q8",
-            "fu": ""
-           },
-           {
-            "q": "8b",
-            "marks": 1,
-            "type": "SA",
-            "skill": "Percentage between the mean and one SD below",
-            "sd": [
-             "DA-1.6",
-             "DA-S5"
-            ],
-            "sub": "1H",
-            "sc": "I can apply the 68-95-99.7% rule.",
-            "src": "Edrolo 1H Q8",
-            "fu": ""
-           },
-           {
-            "q": "8c",
-            "marks": 1,
-            "type": "SA",
-            "skill": "Percentage between two and three SDs below",
-            "sd": [
-             "DA-1.6",
-             "DA-S5"
-            ],
-            "sub": "1H",
-            "sc": "I can apply the 68-95-99.7% rule.",
-            "src": "Edrolo 1H Q8",
-            "fu": ""
-           },
-           {
-            "q": "8d",
-            "marks": 1,
-            "type": "SA",
-            "skill": "Turn a tail percentage into a count",
-            "sd": [
-             "DA-1.6",
-             "DA-S5"
-            ],
-            "sub": "1H",
-            "sc": "I can use standard scores to determine percentages.",
-            "src": "Edrolo 1H Q8",
-            "fu": ""
-           },
-           {
-            "q": "8e",
-            "marks": 1,
-            "type": "SA",
-            "skill": "Find the value that cuts off the bottom 2.5%",
-            "sd": [
-             "DA-1.6",
-             "DA-S5"
-            ],
-            "sub": "1H",
-            "sc": "I can convert standardised scores into actual scores.",
-            "src": "Edrolo 1H Q8",
-            "fu": ""
-           },
-           {
-            "q": "9a",
-            "marks": 1,
-            "type": "SA",
-            "skill": "Calculate z-scores for three distributions",
-            "sd": [
-             "DA-1.6",
-             "DA-K6",
-             "DA-S5"
-            ],
-            "sub": "1H",
-            "sc": "I can calculate standardised scores.",
-            "src": "Edrolo 1I Q9",
-            "fu": ""
-           },
-           {
-            "q": "9b",
-            "marks": 1,
-            "type": "SA",
-            "skill": "Use z-scores to compare performance (lower time is better)",
-            "sd": [
-             "DA-1.6",
-             "DA-S5"
-            ],
-            "sub": "1H",
-            "sc": "I can use standardised scores to make comparisons.",
-            "src": "Edrolo 1I Q9",
-            "fu": ""
-           }
-          ],
-          "mcMarks": 6,
-          "saMarks": 9,
-          "bySub": [
-           {
-            "sub": "1F",
-            "marks": 1,
-            "sc": [
-             "I can calculate the mean and standard deviation using the CAS calculator."
-            ]
-           },
-           {
-            "sub": "1H",
-            "marks": 14,
-            "sc": [
-             "I can calculate standardised scores.",
-             "I can convert standardised scores into actual scores.",
-             "I can apply the 68-95-99.7% rule.",
-             "I can use standard scores to determine percentages.",
-             "I can use standardised scores to make comparisons."
-            ]
-           }
-          ],
-          "bySd": [
-           {
-            "code": "DA-1.5",
-            "text": "summary of the distributions of numerical variables; the five-number summary and boxplots (including the use of the lower fence (Q1 – 1.5 × IQR) and upper fence (Q3 + 1.5 × IQR) to identify and display possible outliers); the sample mean and standard deviation and their use in comparing data distributions in terms of centre and spread",
-            "marks": 1,
-            "qs": [
-             "1"
-            ]
-           },
-           {
-            "code": "DA-1.6",
-            "text": "the normal model for bell-shaped distributions and the use of the 68–95–99.7% rule to estimate percentages and to give meaning to the standard deviation; standardised values (z-scores) and their use in comparing data values across distributions.",
-            "marks": 14,
-            "qs": [
-             "2",
-             "3",
-             "4",
-             "5",
-             "6",
-             "7a",
-             "7b",
-             "8a",
-             "8b",
-             "8c",
-             "8d",
-             "8e",
-             "9a",
-             "9b"
-            ]
-           },
-           {
-            "code": "DA-K5",
-            "text": "mean x̄ and sample standard deviation",
-            "marks": 1,
-            "qs": [
-             "1"
-            ]
-           },
-           {
-            "code": "DA-K6",
-            "text": "the normal model and the 68–95–99.7% rule, and standardised values (z-scores)",
-            "marks": 7,
-            "qs": [
-             "2",
-             "3",
-             "4",
-             "5",
-             "6",
-             "8a",
-             "9a"
-            ]
-           },
-           {
-            "code": "DA-S5",
-            "text": "solve problems using -scores and the 68–95–99.7% rule",
-            "marks": 11,
-            "qs": [
-             "4",
-             "5",
-             "6",
-             "7a",
-             "7b",
-             "8b",
-             "8c",
-             "8d",
-             "8e",
-             "9a",
-             "9b"
-            ]
-           }
-          ],
-          "note": "Set as summer holiday work in 2026–27"
-         }
-        ]
-       }
       }
      ]
     },
@@ -3820,17 +3423,51 @@
        "id": "gm12-u3-ch2-test",
        "kind": "check",
        "subchapters": [],
-       "title": "Chapter 2 coursework check + test",
+       "title": "Chapters 1 + 2 coursework check + test",
        "card": {
         "materials": [
          {
           "kind": "Coursework check",
-          "desc": "Double-sided A4. Front: students tick the coursework they have (guided notes, bound reference entries, CFATs, homework); teacher signs off. Back: chapter success criteria, ticked by the teacher when marking the test (Test Q column = which question tests it).",
+          "desc": "Covers Chapters 1 and 2. Double-sided A4. Front: students tick the coursework they have (guided notes, bound reference entries, CFATs, homework); teacher signs off. Back: chapter success criteria, ticked by the teacher when marking the test (Test Q column = which question tests it).",
           "status": "todo",
           "file": ""
          },
          {
-          "kind": "Chapter test",
+          "kind": "CFAT 1.1.3",
+          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/CFAT-1.1.3.html",
+            "pdf": "lessons/CFAT-1.1.3.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/CFAT 1.1.3 (1F-1I) solutions.html",
+            "pdf": "lessons/CFAT 1.1.3 (1F-1I) solutions.pdf"
+           }
+          ]
+         },
+         {
+          "kind": "Chapter 1 test",
+          "desc": "Mathspace Ch 1 topic assessment (19 Qs, /37), verbatim; Q8 (comparing boxplots, Ch 2) left out.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/Ch1 test.html",
+            "pdf": "lessons/Ch1 test.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/Ch1 test solutions.html",
+            "pdf": "lessons/Ch1 test solutions.pdf"
+           }
+          ]
+         },
+         {
+          "kind": "Chapter 2 test",
           "desc": "Mathspace Ch 2 topic assessment (20 Qs, /41), verbatim.",
           "status": "draft",
           "copies": [
@@ -3847,7 +3484,24 @@
           ]
          },
          {
-          "kind": "Revision booklet",
+          "kind": "Chapter 1 revision booklet",
+          "desc": "Insight GM1 + GM2, one section per subchapter (1A–1H) for gradual homework.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/Ch1-revision-booklet.html",
+            "pdf": "lessons/Ch1-revision-booklet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/Ch1-revision-booklet-solutions.html",
+            "pdf": "lessons/Ch1-revision-booklet-solutions.pdf"
+           }
+          ]
+         },
+         {
+          "kind": "Chapter 2 revision booklet",
           "desc": "Insight GM1 + GM2 association questions, one section per subchapter (2A–2I) for gradual coursework.",
           "status": "draft",
           "copies": [
@@ -3863,7 +3517,337 @@
            }
           ]
          }
-        ]
+        ],
+        "cfats": [
+         {
+          "id": "CFAT 1.1.3",
+          "title": "Mean and SD, the normal distribution, z-scores",
+          "covers": [
+           "1F (mean, SD)",
+           "1H",
+           "1I"
+          ],
+          "format": "About 20 min · individual · CAS and single bound reference allowed",
+          "file": "lessons/gm12/CFAT-1.1.3.html",
+          "status": "Draft",
+          "marks": 15,
+          "plan": "Step-up lesson 6 (if there is one), with holiday homework prep; otherwise summer holiday work. Gone over in the Chapters 1 + 2 coursework check + test lesson.",
+          "sources": [
+           "Edrolo GM U3&4 2023 exercise questions (CFAT-only): 1G Q4 · 1H Q8, Q11, Q13 · 1I Q1, Q4, Q9, Q12, Q15"
+          ],
+          "questions": [
+           {
+            "q": 1,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Find the mean and sample SD of raw data (CAS)",
+            "sd": [
+             "DA-1.5",
+             "DA-K5"
+            ],
+            "sub": "1F",
+            "sc": "I can calculate the mean and standard deviation using the CAS calculator.",
+            "src": "Edrolo 1G Q4",
+            "fu": ""
+           },
+           {
+            "q": 2,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Interpret a negative z-score",
+            "sd": [
+             "DA-1.6",
+             "DA-K6"
+            ],
+            "sub": "1H",
+            "sc": "I can calculate standardised scores.",
+            "src": "Edrolo 1I Q1",
+            "fu": ""
+           },
+           {
+            "q": 3,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Know that z = 0 is the mean",
+            "sd": [
+             "DA-1.6",
+             "DA-K6"
+            ],
+            "sub": "1H",
+            "sc": "I can convert standardised scores into actual scores.",
+            "src": "Edrolo 1I Q4",
+            "fu": ""
+           },
+           {
+            "q": 4,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Use the 68–95–99.7% rule across two intervals",
+            "sd": [
+             "DA-1.6",
+             "DA-K6",
+             "DA-S5"
+            ],
+            "sub": "1H",
+            "sc": "I can apply the 68-95-99.7% rule.",
+            "src": "Edrolo 1H Q11",
+            "fu": ""
+           },
+           {
+            "q": 5,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Convert a z-score to an actual score",
+            "sd": [
+             "DA-1.6",
+             "DA-K6",
+             "DA-S5"
+            ],
+            "sub": "1H",
+            "sc": "I can convert standardised scores into actual scores.",
+            "src": "Edrolo 1I Q12",
+            "fu": ""
+           },
+           {
+            "q": 6,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Calculate a z-score with a negative value",
+            "sd": [
+             "DA-1.6",
+             "DA-K6",
+             "DA-S5"
+            ],
+            "sub": "1H",
+            "sc": "I can calculate standardised scores.",
+            "src": "Edrolo 1I Q15",
+            "fu": ""
+           },
+           {
+            "q": "7a",
+            "marks": 1,
+            "type": "SA",
+            "skill": "68–95–99.7% rule: percentage above one SD below the mean",
+            "sd": [
+             "DA-1.6",
+             "DA-S5"
+            ],
+            "sub": "1H",
+            "sc": "I can apply the 68-95-99.7% rule.",
+            "src": "Edrolo 1H Q13",
+            "fu": ""
+           },
+           {
+            "q": "7b",
+            "marks": 1,
+            "type": "SA",
+            "skill": "68–95–99.7% rule: turn a percentage into a count",
+            "sd": [
+             "DA-1.6",
+             "DA-S5"
+            ],
+            "sub": "1H",
+            "sc": "I can apply the 68-95-99.7% rule.",
+            "src": "Edrolo 1H Q13",
+            "fu": ""
+           },
+           {
+            "q": "8a",
+            "marks": 1,
+            "type": "SA",
+            "skill": "Label the normal curve: values and percentages",
+            "sd": [
+             "DA-1.6",
+             "DA-K6"
+            ],
+            "sub": "1H",
+            "sc": "I can apply the 68-95-99.7% rule.",
+            "src": "Edrolo 1H Q8",
+            "fu": ""
+           },
+           {
+            "q": "8b",
+            "marks": 1,
+            "type": "SA",
+            "skill": "Percentage between the mean and one SD below",
+            "sd": [
+             "DA-1.6",
+             "DA-S5"
+            ],
+            "sub": "1H",
+            "sc": "I can apply the 68-95-99.7% rule.",
+            "src": "Edrolo 1H Q8",
+            "fu": ""
+           },
+           {
+            "q": "8c",
+            "marks": 1,
+            "type": "SA",
+            "skill": "Percentage between two and three SDs below",
+            "sd": [
+             "DA-1.6",
+             "DA-S5"
+            ],
+            "sub": "1H",
+            "sc": "I can apply the 68-95-99.7% rule.",
+            "src": "Edrolo 1H Q8",
+            "fu": ""
+           },
+           {
+            "q": "8d",
+            "marks": 1,
+            "type": "SA",
+            "skill": "Turn a tail percentage into a count",
+            "sd": [
+             "DA-1.6",
+             "DA-S5"
+            ],
+            "sub": "1H",
+            "sc": "I can use standard scores to determine percentages.",
+            "src": "Edrolo 1H Q8",
+            "fu": ""
+           },
+           {
+            "q": "8e",
+            "marks": 1,
+            "type": "SA",
+            "skill": "Find the value that cuts off the bottom 2.5%",
+            "sd": [
+             "DA-1.6",
+             "DA-S5"
+            ],
+            "sub": "1H",
+            "sc": "I can convert standardised scores into actual scores.",
+            "src": "Edrolo 1H Q8",
+            "fu": ""
+           },
+           {
+            "q": "9a",
+            "marks": 1,
+            "type": "SA",
+            "skill": "Calculate z-scores for three distributions",
+            "sd": [
+             "DA-1.6",
+             "DA-K6",
+             "DA-S5"
+            ],
+            "sub": "1H",
+            "sc": "I can calculate standardised scores.",
+            "src": "Edrolo 1I Q9",
+            "fu": ""
+           },
+           {
+            "q": "9b",
+            "marks": 1,
+            "type": "SA",
+            "skill": "Use z-scores to compare performance (lower time is better)",
+            "sd": [
+             "DA-1.6",
+             "DA-S5"
+            ],
+            "sub": "1H",
+            "sc": "I can use standardised scores to make comparisons.",
+            "src": "Edrolo 1I Q9",
+            "fu": ""
+           }
+          ],
+          "mcMarks": 6,
+          "saMarks": 9,
+          "bySub": [
+           {
+            "sub": "1F",
+            "marks": 1,
+            "sc": [
+             "I can calculate the mean and standard deviation using the CAS calculator."
+            ]
+           },
+           {
+            "sub": "1H",
+            "marks": 14,
+            "sc": [
+             "I can calculate standardised scores.",
+             "I can convert standardised scores into actual scores.",
+             "I can apply the 68-95-99.7% rule.",
+             "I can use standard scores to determine percentages.",
+             "I can use standardised scores to make comparisons."
+            ]
+           }
+          ],
+          "bySd": [
+           {
+            "code": "DA-1.5",
+            "text": "summary of the distributions of numerical variables; the five-number summary and boxplots (including the use of the lower fence (Q1 – 1.5 × IQR) and upper fence (Q3 + 1.5 × IQR) to identify and display possible outliers); the sample mean and standard deviation and their use in comparing data distributions in terms of centre and spread",
+            "marks": 1,
+            "qs": [
+             "1"
+            ]
+           },
+           {
+            "code": "DA-1.6",
+            "text": "the normal model for bell-shaped distributions and the use of the 68–95–99.7% rule to estimate percentages and to give meaning to the standard deviation; standardised values (z-scores) and their use in comparing data values across distributions.",
+            "marks": 14,
+            "qs": [
+             "2",
+             "3",
+             "4",
+             "5",
+             "6",
+             "7a",
+             "7b",
+             "8a",
+             "8b",
+             "8c",
+             "8d",
+             "8e",
+             "9a",
+             "9b"
+            ]
+           },
+           {
+            "code": "DA-K5",
+            "text": "mean x̄ and sample standard deviation",
+            "marks": 1,
+            "qs": [
+             "1"
+            ]
+           },
+           {
+            "code": "DA-K6",
+            "text": "the normal model and the 68–95–99.7% rule, and standardised values (z-scores)",
+            "marks": 7,
+            "qs": [
+             "2",
+             "3",
+             "4",
+             "5",
+             "6",
+             "8a",
+             "9a"
+            ]
+           },
+           {
+            "code": "DA-S5",
+            "text": "solve problems using -scores and the 68–95–99.7% rule",
+            "marks": 11,
+            "qs": [
+             "4",
+             "5",
+             "6",
+             "7a",
+             "7b",
+             "8b",
+             "8c",
+             "8d",
+             "8e",
+             "9a",
+             "9b"
+            ]
+           }
+          ],
+          "note": "Set as summer holiday work in 2026–27"
+         }
+        ],
+        "note": "Rocco, 16 Nov: Ch 1 and Ch 2 tests merged into one lesson so AoS 1 has a revision lesson before each SAC part. Check the two papers together fit the lesson; trim or set one as homework if not."
        }
       }
      ]

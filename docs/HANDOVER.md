@@ -49,9 +49,9 @@
 
 ## 16 Nov 2026 (evening) — 2027 year plan dates in
 - `planner/years/2027.json` filled from the EKC School Planner 2027: terms, Step-up (19 Nov–2 Dec 2026, 6 lessons), blocked days, SAC dates (AoS 1 Parts 1–3 T2 W1–2; AoS 2 Wed 2 Jun; AoS 3 Wed 4 Aug; AoS 4 Wed 8 Sep, T3 W9 (Rocco: earlier, to leave time for redemptions and exam-prep set-up)). Rocco: only the Essendon campus days count; the Term 1 parent–teacher day (Wed 24 Mar) is student-free.
-- Rocco, 16 Nov: Ch 3 and Ch 4 tests merged into one check lesson (on the Ch 4 card: both papers + both revision booklets). AoS 1 now fits exactly: Ch 5 test is the lesson before SAC Part 1, no spare.
+- Rocco, 16 Nov: Ch 3 and Ch 4 tests merged into one check lesson (on the Ch 4 card: both papers + both revision booklets). Then (Rocco) Ch 1 and Ch 2 tests merged too (on the Ch 2 card, with CFAT 1.1.3): tests are now Ch 1+2, Ch 3+4, Ch 5. AoS 1 has a revision lesson before each SAC part. Unit 4 (AoS 3–4) is Semester 2 only: anchor 'Semester 2 starts' Wed 16 Jun holds AoS 3 until then (3 Unit 3 buffers after the AoS 2 SAC).
 - Rocco: timetable days unknown until 2027, so the planner now has a weekly mode (`lessonRule`): full 5-day week = 3 lessons, any shorter week = 2. Anchors can be `afterSchool` (takes no lesson), `inClass` (takes one), `window` (teaching time per AoS is shown above the year plan).
-- Result: AoS 1 29 lessons (0 spare); AoS 2 17 (2 spare); AoS 3 19 (7 spare); AoS 4 14 (3 spare); 8 lessons after the AoS 4 SAC (redemptions, exam prep).
+- Result: AoS 1 29 lessons (1 spare + 3 between SAC parts); AoS 2 17 (2 spare); 3 Unit 3 buffers before Semester 2; AoS 3 16 (4 spare); AoS 4 14 (3 spare); 8 lessons after the AoS 4 SAC (redemptions, exam prep).
 
 ## 16 Nov 14:58 — AoS4 #19: 14E Crashing lesson (Draft)
 - `lessons/14E slides` (20 slides: CFAT 4.14.2 → Do Now ×4 → Learn → Ex 12 → Edrolo 8J WE1 → Learn (cost) → Ex 13 → Edrolo 8J WE2 → exits VCAA 2017 E2 Q4c, 2020 E1 Q10, 2021 E2 Q4c) + `14E worksheet` (4 pages, student + solutions). Build: `tools/deck/gm12-u4-14e/`. On G: and the planner card.

@@ -132,6 +132,11 @@
    "window": true
   },
   {
+   "date": "2027-06-16",
+   "label": "Semester 2 starts: Unit 4 (AoS 3–4) from here",
+   "unit": 3
+  },
+  {
    "date": "2027-08-04",
    "label": "AoS 3 SAC: Matrices (after school)",
    "aos": 3,

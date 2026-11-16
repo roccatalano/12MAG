@@ -337,8 +337,8 @@ function flow(Y){
         place(wk,s,d)=='used'?used++:buf++;anc()}
     }stats.push({name:t.name,used,buf})}
   /* teaching time per AoS: slots after the previous window anchor up to (and before) this one */
-  anchors.filter(a=>a.window).forEach(a=>{const pa=anchors.filter(x=>lim(x)!=null&&lim(x)<lim(a)),prev=pa.length?pa[pa.length-1].date:'0000';let les=0,bf=0;weeks.forEach(w=>w.slots.forEach(x=>{if(!x.date||x.type=='anchor')return;
-      if(x.date>prev&&before(a,x.date)){x.type=='buffer'?bf++:les++}}));win.push(`${a.label.split(':')[0]}: ${les+bf} lessons (${les} planned, ${bf} spare)`)});
+  anchors.filter(a=>a.window).forEach(a=>{const pa=anchors.filter(x=>lim(x)!=null&&lim(x)<lim(a)),pv=pa[pa.length-1],prev=pv?pv.date:'0000',after=x=>pv&&!pv.afterSchool?x>=prev:x>prev;let les=0,bf=0;weeks.forEach(w=>w.slots.forEach(x=>{if(!x.date||x.type=='anchor')return;
+      if(after(x.date)&&before(a,x.date)){x.type=='buffer'?bf++:les++}}));win.push(`${a.label.split(':')[0]}: ${les+bf} lessons (${les} planned, ${bf} spare)`)});
   if(i<L.length)warns.push(`${L.length-i} lessons don't fit in the year (from L${L[i].n} ${L[i].section}). Add dates, or merge lessons in the Course plan.`);
   return {weeks,warns,stats,win}}
 function renderYear(y){
