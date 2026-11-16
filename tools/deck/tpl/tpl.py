@@ -284,63 +284,74 @@ def tiles(rid,vals,fs=26):
     return f'<div class="i-tiles" id="{rid}" style="--n:{len(vals)};font-size:{fs}px">{sp}</div>'
 def tsort(rid): return f'data-tsort="#{rid}"'
 def tcross(rid,a='',b=''): return f'data-tcross="#{rid}|{a}|{b}"'
-def tmid(rid,a='',b='',label='',cls='mid'): return f'data-tmid="{_q(f"#{rid}|{a}|{b}|{cls}|{label}")}"'
-def tmed(rid,a='',b='',label='',cls='mid'):
-    """one click: cross off smallest + largest pairs inward over positions a..b (blank = all), then light the middle 1 or 2 tiles + label"""
-    return tcross(rid,a,b)+' '+tmid(rid,a,b,label,cls)
+def tmid(rid,a='',b='',label='',cls='mid',line=False): return f'data-tmid="{_q(f"#{rid}|{a}|{b}|{cls}|{label}|{1 if line else 0}")}"'
+def tmed(rid,a='',b='',label='',cls='mid',line=False):
+    """one click: cross off smallest + largest pairs inward over positions a..b (blank = all), then light the middle 1 or 2 tiles + label.
+    line=True (even count): a solid line between the two middle tiles, where the median sits. It stays when the data is split into halves."""
+    return tcross(rid,a,b)+' '+tmid(rid,a,b,label,cls,line)
 def thalves(rid): return f'data-thalves="#{rid}"'
-def tquart(rid,n,q1='',q3=''):
+def tquart(rid,n,q1='',q3='',line=False):
     """three clicks for quartiles = medians of the halves (n odd: the median is left out):
-    [split into halves, Q1 (cross + middle of the lower half), Q3 (upper half)]"""
+    [split into halves (median tile, label and crossed-off marks stay), Q1 (cross + middle of the lower half), Q3 (upper half)].
+    line=True: a line between the two middle tiles when a half has an even count"""
     h=n//2
-    return [thalves(rid),tmed(rid,0,h-1,q1,'q'),tmed(rid,n-h,n-1,q3,'q')]
+    return [thalves(rid),tmed(rid,0,h-1,q1,'q',line),tmed(rid,n-h,n-1,q3,'q',line)]
 
 # ---------- 2. sliders (teacher drags; data-fset moves it on a click, so the PDF can show a chosen value) ----------
 def _sl(kind,rid,cfg): return f'<div class="i-slider ia{" i-log" if kind=="log" else ""}" id="{rid}" data-kind="{kind}" data-cfg=\'{J(cfg)}\'></div>'
-def fence_slider(rid,data,max,min=0,k=None,step=1,lo=None,hi=None,tick=None,lab=None,xl='',dec=2,W=1000,box=False):
-    """dot plot of data with Q1, Q3, LF, UF and red outlier zones; data[k] (default: the largest) is dragged between lo and hi.
-    Read-out: Q1, Q3, IQR, LF, UF and 'x > UF → x is an outlier' (red) or 'not an outlier' (green).
-    box=True: the same as a box plot (whiskers move to the last non-outlier, outliers become dots) = box_slider."""
+def fence_slider(rid,data,max,min=0,k=None,step=1,lo=None,hi=None,tick=None,lab=None,xl='',dec=2,W=1000,box=False,
+                 name='',lt='',rt='',pre='',post='',mm=False,vals=None):
+    """10MA house-prices layout: value list + dot plot (fence zone, dashed LF/UF) + a visible range control under it, and a live summary
+    on the right: Q1, Q3, IQR, LF = Q1 − 1.5 × IQR, UF = Q3 + 1.5 × IQR, the rules 'x < LF → outlier' / 'x > UF → outlier' (the one that
+    fires lights red) and 'Outlier: …'. data[k] (default: the largest) moves between lo and hi (default min..max).
+    name / lt / rt: control label and end labels (e.g. lt='Knocked down', rt='Mansion'); pre / post: units on values ('$', 'k');
+    mm=True: median (solid) and mean (dashed) lines; vals=False hides the value list.
+    box=True (= box_slider, 10MA walking times): dots on top (moving value ringed), box plot below whose whisker stops at the last
+    non-outlier and outliers become red dots; summary = five-figure summary + IQR + fences + rules."""
     if k is None: k=data.index(_bi.max(data))
-    cfg=dict(data=list(data),k=k,min=min,max=max,step=step,xl=xl,dec=dec,W=W,mode='box' if box else 'fences')
-    for a,v in (('lo',lo),('hi',hi),('tick',tick),('lab',lab)):
-        if v is not None: cfg[a]=v
+    cfg=dict(data=list(data),k=k,min=min,max=max,step=step,xl=xl,dec=dec,W=W,mode='box' if box else 'fences',name=name,lt=lt,rt=rt,pre=pre,post=post,mm=mm)
+    for a_,v in (('lo',lo),('hi',hi),('tick',tick),('lab',lab),('vals',vals)):
+        if v is not None: cfg[a_]=v
     return _sl('box' if box else 'fences',rid,cfg)
 def box_slider(rid,data,max,**kw): return fence_slider(rid,data,max,box=True,**kw)
-def z_slider(rid,m,s,x0=None,step=None,xl='',dec=2,W=1000):
-    """normal curve, mean m, SD s: drag x (snaps every s/2 by default); shades below x, shows z = (x − x̄)/s and,
-    at whole-number z, the % below/above from the 68–95–99.7% rule"""
-    cfg=dict(m=m,s=s,xl=xl,dec=dec,W=W)
+def z_slider(rid,m,s,x0=None,step=None,xl='',dec=2,W=1000,name='',lt='',rt=''):
+    """normal curve, mean m, SD s: drag x (range control under the curve; snaps every s/2 by default); shades below x,
+    shows z = (x − x̄)/s and, at whole-number z, the % below/above from the 68–95–99.7% rule"""
+    cfg=dict(m=m,s=s,xl=xl,dec=dec,W=W,name=name,lt=lt,rt=rt)
     if x0 is not None: cfg['x0']=x0
     if step: cfg['step']=step
     return _sl('z',rid,cfg)
 def log_slider(rid,lo=0,hi=6,x0=1000,xl='x',W=1000):
-    """two aligned scales: log10(x) (even) and x (1, 10, 100, …): drag to see x ⟷ log10(x)"""
+    """two aligned scales: log10(x) (even) and x (1, 10, 100, …): drag (or use the control) to see x ⟷ log10(x)"""
     return _sl('log',rid,dict(lo=lo,hi=hi,x0=x0,xl=xl,W=W))
 def shape_slider(rid,v0=0,W=1000):
-    """drag to skew a histogram (−1 … 1): shape name, tail arrow, mean (red dashed) vs median (green)"""
+    """control 'Tail to the left ── Tail to the right' (−1 … 1) skews a histogram: shape name, tail arrow, mean (red dashed) vs median (green)"""
     return _sl('shape',rid,dict(v0=v0,W=W))
 def fset(rid,v): return f'data-fset="#{rid}|{v}"'
 def shset(rid,v): return f'data-shset="#{rid}|{v}"'
 
 # ---------- 3. card sort: click a card then a bucket (or drag it); reveal steps move every card to the right bucket ----------
 CAT_C,NUM_C='#c0632b','#2f6fdf'
-def card_sort(rid,items,buckets=(('Categorical',('Nominal','Ordinal'),CAT_C),('Numerical',('Discrete','Continuous'),NUM_C))):
-    """items: [(text, 'Categorical/Nominal'), ...] (answer path; one level 'Categorical' for a one-step sort).
-    buckets: [(name, (sub-bucket names) or (), colour)]. Sub-buckets open on data-slevel / the step-2 reveal.
-    Steps: sort_steps(rid) (or sort_steps(rid,1) for one level)."""
-    cs=''.join(f'<div class="i-cs" data-a="{_q(a)}">{t}</div>' for t,a in items)
-    bk=''
-    for name,subs,*c in buckets:
-        col=f' style="--c:{c[0]}"' if c else ''
-        sb=''.join(f'<div class="i-bk sub" data-b="{_q(name+"/"+x)}"><h4>{x}</h4><div class="i-tray"></div></div>' for x in subs)
-        bk+=f'<div class="i-bk" data-b="{_q(name)}"{col}><h4>{name}</h4><div class="i-tray"></div>'+(f'<div class="i-subs">{sb}</div>' if subs else '')+'</div>'
-    return f'<div class="i-sort ia" id="{rid}"><div class="i-pool">{cs}</div><div class="i-bks">{bk}</div><div class="i-score"></div></div>'
-def sort_steps(rid,levels=2):
-    """invisible steps: reveal level 1 → (open sub-buckets → reveal level 2). Cards the class placed wrongly keep a red ✗."""
-    a=[f'data-sreveal="#{rid}|1"']
-    if levels>1: a+=[f'data-slevel="#{rid}|2"',f'data-sreveal="#{rid}|2"']
-    return ifr(*a)
+def card_sort(rid,items,buckets=(('Categorical',('Nominal','Ordinal'),CAT_C),('Numerical',('Discrete','Continuous'),NUM_C)),cols=4,fs=18):
+    """10MA 'Sort it': a grid of cards, each with Step 1 buttons (the buckets). A right answer turns green and opens Step 2 with that
+    group's sub-buckets only; a wrong one shakes red (try again). Score n / N + Reset.
+    items: [(text, 'Categorical/Nominal'), ...] (one level: 'Categorical'). buckets: [(name, (sub-bucket names) or (), colour)].
+    Steps: sort_steps(rid) (all Step 1 answers, then all Step 2) · sort_steps(rid,1) · sort_steps(rid,per_card=True) (one card per click)."""
+    def btn(x,c=''): return f'<button data-v="{_q(x)}"'+(f' data-c="{c}" style="border-color:{c}"' if c else '')+f'>{x}</button>'
+    r1='<div class="i-r1"><span class="i-sl">Step 1</span>'+''.join(btn(n,(c or [''])[0]) for n,_,*c in buckets)+'</div>'
+    two=any(sb for _,sb,*_ in buckets)
+    r2=('<div class="i-r2"><span class="i-sl">Step 2</span>'+''.join(f'<span class="i-o" data-g="{_q(n)}">'+''.join(btn(x) for x in sb)+'</span>' for n,sb,*_ in buckets)+'</div>') if two else ''
+    cards=''.join(f'<div class="i-card" data-a="{_q(a)}"><div class="i-ct">{t}</div>{r1}{r2}</div>' for t,a in items)
+    return (f'<div class="i-sort ia" id="{rid}"><div class="i-cards" style="--cols:{cols};font-size:{fs}px">{cards}</div>'
+            f'<div class="i-score">Score: <b>0</b> / <span class="i-of">{len(items)}</span> <button class="i-reset">Reset</button></div></div>')
+def sreveal(rid,level=1,cards=''):
+    """step attr: show the right Step-<level> answer on the cards listed (positions from 0, '0,3'; blank = all).
+    Answers the class already got right stay; wrong guesses keep their red mark."""
+    return f'data-sreveal="#{rid}|{level}|{cards}"'
+def sort_steps(rid,levels=2,per_card=False,n=None):
+    """invisible steps: Step 1 answers for every card → Step 2 answers. per_card=True (needs n = number of cards): one card per click (both levels)."""
+    if per_card: return ifr(*[sreveal(rid,levels,str(k)) for k in range(n)])
+    return ifr(*[sreveal(rid,l) for l in range(1,levels+1)])
 
 # ---------- 4. stem plot built leaf by leaf (leaves fly from the data list) · tally into a frequency table ----------
 def stem_fly(rid,vals,unit=1,key='',fs=26,split=False,data=True):
@@ -374,3 +385,33 @@ def ftally(cid,tid,i,hist=None):
     """hist: id of a hist(...) chart drawn with extra='data-stepped="1"' (bars start at 0)"""
     return f'data-ftally="#{cid}|#{tid}|{i}"'+(f' data-fgrow="#{hist}|{i}"' if hist else '')
 def ftot(tid): return f'data-ftot="#{tid}"'
+
+# ---------- 5. two tests: which result is relatively better? (two normal curves, one control each) ----------
+def ztwo(rid,A,B,dec=1,W=640):
+    """A, B = (name, mean, SD, starting score[, step]). Each panel: normal curve shaded below the score, control, z = (x − x̄)/s.
+    The verdict compares the z-scores ('relatively better on …'). Step attr: ztset(rid, xA, xB) (None keeps a value)."""
+    def t(T): d=dict(n=T[0],m=T[1],s=T[2],x=T[3] if len(T)>3 else T[1]); d.update(dict(st=T[4]) if len(T)>4 else {}); return d
+    return f'<div class="i-ztwo ia" id="{rid}" data-cfg=\'{J(dict(A=t(A),B=t(B),dec=dec,W=W))}\'></div>'
+def ztset(rid,xa=None,xb=None): return f'data-ztset="#{rid}|{"" if xa is None else xa}|{"" if xb is None else xb}"'
+
+# ---------- 6. plinko / Galton board ----------
+def plinko(rid,rows=10,note='',W=900,rh=26,binH=250):
+    """balls fall through rows of pegs (left or right at each, 50/50) and pile up in bins: a bell shape. Buttons: Drop 1 · Drop 50 · Reset.
+    note: premise text (default: most land near the middle, fewer further out). Step attr: pdrop(rid, n) drops n balls live
+    (replays / the PDF add the expected binomial pile at once, so the final frame is a filled bell); pdrop(rid,n,now=True) fills at once."""
+    return f'<div class="i-plk ia" id="{rid}" data-cfg=\'{J(dict(rows=rows,note=note,W=W,rh=rh,binH=binH))}\'></div>'
+def pdrop(rid,n=50,now=False): return f'data-plk="#{rid}|{n}|{"now" if now else ""}"'
+
+# ---------- 7. rounding: decimal places vs significant figures ----------
+def rounder(rid,value,mode='dp',n=2):
+    """value: the number (give a string to keep trailing digits, e.g. '0.0047386'). Buttons: Decimal places | Significant figures,
+    count control (dp 0–4, sf 1–4). Kept digits blue, the deciding digit yellow ('5 or more: round up'), rounded result in green.
+    Step attr: rset(rid, 'dp'|'sf', n)."""
+    return f'<div class="i-round ia" id="{rid}" data-cfg=\'{J(dict(v=str(value),mode=mode,n=n))}\'></div>'
+def rset(rid,mode,n): return f'data-rset="#{rid}|{mode}|{n}"'
+
+# ---------- 8. normal curve brackets (norm(...) chart in tpl.js; ia.js adds them) ----------
+# norm(rid, {..., "br": True}) draws three hooked brackets under the axis: 68% (z = ±1), 95% (±2), 99.7% (±3); they stay to the end.
+# "br": [1, 2] for some only; "brhide": True hides them until a step nbr(rid, '1,2,3') (also persistent).
+# The 34% / 13.5% / 2.35% / 0.15% labels are lifted clear of the curve for every norm chart.
+def nbr(rid,ks='1,2,3'): return f'data-nbr="#{rid}|{ks}"'
