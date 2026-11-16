@@ -99,7 +99,7 @@ _Notes for all AoS 2–4 runners (Rocco, 16 Nov):_
 19. `done 16 Nov 15:06 — 8G slides (18 slides, PDF 28 pages) + worksheet/solutions (3 pages), Draft, on G: 01 Lesson materials; APK skill Cambridge U1&2 1B #7 dropped (already burnt in l21, see Decisions log)` **Lesson gm12-u3-l43 (8G)**: slides (`tools/deck/gm12-u3-l43/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 20. `done 16 Nov 15:18 — 8H slides (19 slides, PDF 32 pages) + worksheet/solutions (2 pages), Draft, on G: 01 Lesson materials; Do Now 2026 E1 Q23 (8H content) → 2025 E1 Q24; APK 1B #6 dropped (burnt), VCAA 2020 E2 Q7a original only (Q7b burnt)` **Lesson gm12-u3-l44 (8H)**: slides (`tools/deck/gm12-u3-l44/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
 21. `done 16 Nov 16:22 — 8I slides (20 slides, PDF 34 pages) + worksheet/solutions (3 pages), Draft, on G: 01 Lesson materials; APK 1F #14 dropped (burnt in l21, see Decisions log)` **Lesson gm12-u3-l45 (8I)**: slides (`tools/deck/gm12-u3-l45/build.py` on tpl.py) + guided worksheet (ws2.py, student + solutions).
-22. `todo` **Chapter 8 revision booklet** + solutions (Insight GM1 + GM2, sections per subchapter). Add to the gm12-u3-l46 card.
+22. `in progress 16 Nov 19:13` **Chapter 8 revision booklet** + solutions (Insight GM1 + GM2, sections per subchapter). Add to the gm12-u3-l46 card.
 23. `todo` **Chapter 8 test** + solutions (model `tools/test/ch5/build.py`) from the Mathspace Ch 6 topic assessment (Loans and investments). Add to the gm12-u3-l46 card; run `python3 tools/test/details.py`. If it can't be built from what's there, mark `needs Rocco`.
 
 
