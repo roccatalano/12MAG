@@ -195,7 +195,7 @@ S.append(learn('Learn · 1C','Frequency tables for numerical data',
   '<li>every data value is in an interval</li><li>intervals don’t overlap, and there are no gaps</li><li>about 5 to 15 intervals</li><li>easy widths: 10, 100, 1000 …</li><li>start each interval on an exact value: 0–49, 50–99, 100–149</li></ul></div>'
   '<div class="key frag" style="flex:.8"><h4>Reading an interval</h4><p style="font-size:24px;margin-top:8px"><b>30–&lt;40</b><br>at least 30 but less than 40</p><p style="font-size:24px;margin-top:10px"><b>30.0–34.9</b><br>30.0 up to 34.9</p></div></div>',
   'Percentages may add to 99.9% or 100.1%: that’s rounding, and it’s fine.','Cambridge General Mathematics Units 3&amp;4, 1C pp. 14–15',
-  cards=[kcard('Percentage frequency',FPCT)]))
+  cards=[kcard('Percentage frequency','<span style="white-space:nowrap;font-size:.9em">'+FPCT+'</span>')]))
 # ================= WE6: Cambridge Example 6
 BED=[2,3,4,3,3,4,3,4,4,1,3,2,1,2,2,2,4,5,3,4,4,5,3,4]
 bc={v:BED.count(v) for v in range(1,6)}

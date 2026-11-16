@@ -1,6 +1,9 @@
 """Lesson 5 (1H–1I) slides, built from the slide templates (tools/deck/tpl/tpl.py). Output: lessons/S5-slides.html
-Run: python3 tools/deck/s5/build.py"""
-import os, sys
+Run: python3 tools/deck/s5/build.py
+Planner card: gm12-u3-s5 (coursework + CAS steps read from planner/unit-plan.json and planner/cas-skills.json; videos from planner/videos.json).
+1I populations and samples: no Example or worked example exists in Cambridge U3&4 (1I is Interactive Textbook only) or Edrolo U3&4
+(checked 16 Nov), so 1I is a Learn slide only (own words) — no question written."""
+import os, sys, json
 H=os.path.dirname(os.path.abspath(__file__)); ROOT=os.path.abspath(os.path.join(H,'..','..','..'))
 sys.path.insert(0,os.path.join(H,'..','tpl'))
 from tpl import *
@@ -15,6 +18,14 @@ def shs(rid,regs,clear=True):
     sp=' '.join(f'#{rid}|{a},{b}|{col}|{lab}' for a,b,lab,col in regs)
     return (f'data-nclear="#{rid}" ' if clear else '')+f'data-nshade="{sp}"'
 def sh(rid,a,b,lab='',col=SH,clear=True): return (f'data-nclear="#{rid}" ' if clear else '')+f'data-nshade="#{rid}|{a},{b}|{col}|{lab}"'
+import tpl as TPL
+def G(pre,fig,post=''):
+    # question text, figure, question line: stacked with normal spacing (no stretched gap), as in S1
+    return f'<div>{pre}</div>'+(f'<div style="margin:14px 0;display:flex;justify-content:center">{fig}</div>' if fig else '')+(f'<div>{post}</div>' if post else '')
+def qslide(*a,**k):
+    a=list(a)
+    if isinstance(a[3],tuple) and 'data-chart="norm"' not in a[3][1] and 'data-chart="hist"' not in a[3][1]: a[3]=G(*a[3])  # curves/histograms keep the figure zone
+    return TPL.qslide(*a,**k)
 S=[]
 # ================= opening
 S.append(title(5,'The normal distribution and standardised scores','Cambridge General Mathematics Units 3&amp;4 · 1H The normal distribution and the 68–95–99.7% rule · 1I Populations and samples','S5',
@@ -30,7 +41,7 @@ S.append(today(LI,SC,[('CFAT 1.1.2','· 20 minutes','#00838F'),('Do Now','· fou
   ('Actual scores; finding x̄ and s','→ WE 32, 33, 34',None),('Populations and samples','· 1I',None),('Exit tasks','· two VCAA questions','var(--exit)'),('Check-in and coursework','','var(--muted)')]))
 S.append(cfat('CFAT 1.1.2','median, IQR, boxplots, SOCS','1F–1G',14,'CFAT 1.1.2 (lessons/CFAT-1.1.2) · Edrolo U3&amp;4 exercise questions'))
 # ---------- key definitions and formulas
-kn=lambda rid,c:norm(rid,dict({"W":420,"h":150,"T":18,"fs":13,"rows":[]},**c))
+kn=lambda rid,c:norm(rid,dict({"W":420,"h":110,"T":14,"fs":12,"rows":[]},**c))
 FZ=F(Z,' = ',FR([X,' − ',XB],[SD])); FX=F(X,' = ',XB,' + ',Z,' × ',SD)
 S.append(keys([
   ('Normal distribution','a symmetric, bell-shaped model: mean = median, at the centre',kn('k1',{})),
@@ -103,7 +114,7 @@ S.append(qslide('apk','APK · Year 11 · Cambridge U1&amp;2 2G #13','The 68–95
   'Approximately <b>99.7%</b> of cats weigh between 2 kg and 5 kg.','Cambridge General Mathematics Units 1&amp;2 · Chapter 2 skills checklist, 2G #13 (teacher solution)',
   cmd=('Find',None,'a percentage from the rule')))
 # ================= APK 2: Edrolo U1&2 1G Q14 (adapted from VCAA 2020 E2 Q2bi)
-S.append(qslide('apk','APK · Edrolo U1&amp;2 1G Q14','A real VCAA question you can already do',
+S.append(qslide('apk','APK · VCAA 2020 Exam 2 Q2b.i (adapted)','A real VCAA question you can already do',
   ('A sample of 250 bonobos has been drawn at random from a population of bonobos whose <em class="v">neck size</em> is normally distributed with a mean of 38 cm and a standard deviation of 2.3 cm.',
    norm('a2',{"m":38,"s":2.3,"rows":['x'],"hide":['x'],"dec":1,"xl":"neck size (cm)","W":820,"h":300}),
    'How many of these 250 bonobos are expected to have a <em class="v">neck size</em> that is more than three standard deviations above or below the mean? Round to the nearest whole number. <span class="muted">(1 mark)</span>'),
@@ -138,11 +149,11 @@ S.append(qslide('we','Worked example 28 · 1H','Applying the 68–95–99.7% rul
 # ================= YT Edrolo 1H WE1
 HAIR='An entire girl’s basketball club decided to shave their heads to raise money for cancer. They also donated their hair to be made into wigs for those undergoing treatment. The <em class="v">length of hair donated</em> was approximately normally distributed with a mean of 20 cm and a standard deviation of 4 cm.'
 S.append(qslide('yt','You try · Edrolo 1H WE1','Applying the 68–95–99.7% rule',
-  (HAIR,'',
+  '<style>.T .y13 ol.parts{gap:6px;justify-content:flex-start} .T .y13 ol.parts li{font-size:18px!important;line-height:1.25!important}</style><div class="y13" style="font-size:.9em">'+HAIR+
    plist([('a.','What percentage of hair lengths donated were between 16 cm and 32 cm?'),
           ('b.','Donated hair lengths greater than 24 cm are highly sought after as they can be customised for a diverse range of hairstyles. What percentage of the girl’s basketball club donated hair greater than 24 cm?'),
           ('c.','If there are 30 girls at the basketball club, how many of them are expected to have donated hair lengths longer than 24 cm, rounded to the nearest person?'),
-          ('d.','How many girls are expected to have donated hair lengths that were either less than 16 cm or greater than 28 cm, rounded to the nearest person?')])),
+          ('d.','How many girls are expected to have donated hair lengths that were either less than 16 cm or greater than 28 cm, rounded to the nearest person?')])+'</div>',
   [('Label','8, 12, 16, 20, 24, 28, 32 cm and the section percentages.','data-nshow="#y1|x,pct"')],'',
   f'{EDR} · 1H Worked example 1',cmd=('Find',None,'add the sections'),made=norm('y1',{"m":20,"s":4,"rows":['x'],"hide":['x','pct'],"W":820,"h":250,"fs":17,"T":60}),
   parts=[('a.','34 + 34 + 13.5 + 2.35 = <b>83.85%</b>',sh('y1',-1,3,'83.85%')),
@@ -167,12 +178,12 @@ S.append(qslide('we','Worked example 29 · 1H','Calculating standard scores',
          ('b',fx('z',Z,zf('150','160','8'),'−1.25',ra='data-nmark="#w29|-1.25|150|#1f4fb0"')[1]),
          ('c',fx('z',Z,zf('160','160','8'),'0',ra='data-nmark="#w29|0|160|#137a59"')[1]+'&nbsp;: at the mean')]))
 # ================= CAS
+CS=[x for x in json.load(open(os.path.join(ROOT,'planner','cas-skills.json')))['skills'] if x['id']=='z-score'][0]
+yid=lambda u:u.split('v=')[1].split('&')[0]
 S.append(cas('CAS · 1H','Standardised scores on CAS',
-  'Calculate the standardised score of a woman who is 172 cm tall, when the heights have a mean of 160 cm and a standard deviation of 8 cm (Example 29a).<div class="data" style="font-size:24px"><i>z</i> = (172 − 160) ÷ 8</div>Brackets matter: without them the CAS divides 160 by 8 first.',
-  ['New document → <b>Calculator</b>.','Type <b>(172−160)/8</b> with the brackets.','Press <b>enter</b>.','Many values: in <b>Lists &amp; Spreadsheet</b>, use a column formula <b>=(a[]−160)/8</b>.'],
-  ['Open the <b>Main</b> app.','Type <b>(172−160)÷8</b> with the brackets.','Press <b>EXE</b>.','Many values: in <b>Statistics</b>, put the list in list1 and type <b>(list1−160)÷8</b> into list2’s Cal row.'],
-  '<i>z</i> = 1.5','Cambridge General Mathematics Units 3&amp;4, 1H p. 80 (Example 29a)',
-  videos=[yt('Calculating and understanding z-scores with TI-nspire','yrR9IALJD6g'),yt('ClassPad Help 007 – Simple calculations in Main','Zb9V3RwXVLA')]))
+  'Calculate the standardised score of a woman who is 172 cm tall, when the heights have a mean of 160 cm and a standard deviation of 8 cm (Example 29a).<div class="data" style="font-size:24px"><i>z</i> = (172 − 160) ÷ 8</div>'+CS['tip'],
+  CS['ti'],CS['classpad'],'<i>z</i> = 1.5','Cambridge General Mathematics Units 3&amp;4, 1H p. 80 (Example 29a) · Steps: CAS guide (planner)',
+  videos=[yt(v['title'],yid(v['url'])) for v in CS['videos']['ti']+CS['videos']['classpad']]))
 # ================= YT Edrolo 1I WE1
 S.append(qslide('yt','You try · Edrolo 1I WE1','Calculating standardised (z) scores',
   ('The weights of puppies within a litter are approximately normally distributed with a mean of 4 kg and a standard deviation of 0.3 kg.',
@@ -192,10 +203,10 @@ S.append(qslide('we','Worked example 30 · 1H','Using standardised scores to mak
 # ================= YT Edrolo 1I WE3
 S.append(qslide('yt','You try · Edrolo 1I WE3','Using standardised (z) scores to interpret data',
   ('The results for a Chemistry exam were approximately normally distributed, with a mean of 71 and a standard deviation of 3. The results for a Physics exam were also approximately normally distributed, with a mean of 95 and a standard deviation of 6.',
-   norm('y30',{"rows":['z'],"hide":['pct'],"W":780,"h":230,"fs":16,"T":44}),
+   '',
    plist([('a.','A student taking both Chemistry and Physics scored 77 in her final exam for both subjects. Did she do equally well in both exams in relation to her peers? Use standardised scores and the 68–95–99.7% rule to justify your answer.'),
           ('b.','Another student scores 66 on his Chemistry exam. Use standardised scores and the 68–95–99.7% rule to compare this student’s score relative to the class.')])),
-  [],'',f'{EDR} · 1I Worked example 3',cmd=('Use',None,'z-scores and the rule'),
+  [],'',f'{EDR} · 1I Worked example 3',cmd=('Use',None,'z-scores and the rule'),made=norm('y30',{"rows":['z'],"hide":['pct'],"W":780,"h":200,"fs":15,"T":40}),
   parts=[('a.','Chemistry: '+fx('z',Z,zf('77','71','3'),'2',ra=sh('y30',2,3.6,'2.5%')+' data-nmark="#y30|2|Chem"')[1]+' · Physics: '+fx('z',Z,zf('77','95','6'),'−3',ra=sh('y30',-3.6,-3,'0.15%',OR,False)+' data-nmark="#y30|-3|Phys|#1f4fb0"')[1]
           +'<br>In Chemistry, the student’s standardised score was <i>z</i> = 2 placing her in the top 2.5% of students. In Physics, the student’s standardised score was <i>z</i> = −3 placing her in the bottom 0.15% of students. Therefore, she did not do equally well in both exams when compared to her peers.'),
          ('b.',fx('z',Z,zf('66','71','3'),'−1.67',ra=sh('y30',-3.6,-1,'16%')+' data-nmark="#y30|-1.67|66"')[1]+'<br>In Chemistry, the student’s standardised score was <i>z</i> = −1.67 placing him in the bottom 16% of students.')]))
@@ -286,7 +297,7 @@ S.append(learn('Learn · 1I','Populations and samples',
   'Cambridge General Mathematics Units 3&amp;4, 1I Populations and samples (Interactive Textbook only; summarised in own words) · Picture: teacher illustration',
   cards=[kcard('Population','every member of the group being studied'),kcard('Sample','a subset of the population')]))
 # ================= Exit 1: Edrolo 1H Q12 (VCAA 2019 E2 Q2b)
-S.append(qslide('ex','Exit task 1 of 2 · Edrolo 1H Q12 · VCAA 2019 Exam 2 Q2b','Show what you know',
+S.append(qslide('ex','Exit task 1 of 2 · VCAA 2019 Exam 2 Q2b','Show what you know',
   ('The <em class="v">temperature difference</em> between the <em class="v">minimum daily temperature</em> and the <em class="v">maximum daily temperature</em> in November 2017 at a location is approximately normally distributed with a mean of 9.4 °C and a standard deviation of 3.2 °C.',
    norm('e1',{"m":9.4,"s":3.2,"rows":['x'],"hide":['x'],"dec":1,"xl":"temperature difference (°C)","W":820,"h":300}),
    'Determine the number of days in November 2017 for which this <em class="v">temperature difference</em> is expected to be greater than 9.4 °C. <span class="muted">(1 mark)</span>'),
@@ -298,17 +309,26 @@ S.append(qslide('ex','Exit task 1 of 2 · Edrolo 1H Q12 · VCAA 2019 Exam 2 Q2b'
   stat=('mark',58),cmd=('Determine',1,'a number of days')))
 # ================= Exit 2: Edrolo 1I Q13 (VCAA 2021 E2 Q1c)
 SP='<table class="t" style="font-size:18px"><tr><th>statistic</th><th><em class="v">shot-put</em> (metres)</th></tr><tr><td>mean</td><td>13.74</td></tr><tr><td>standard deviation</td><td>1.43</td></tr></table>'
-S.append(qslide('ex','Exit task 2 of 2 · Edrolo 1I Q13 · VCAA 2021 Exam 2 Q1c','Show what you know',
+S.append(qslide('ex','Exit task 2 of 2 · VCAA 2021 Exam 2 Q1c','Show what you know',
   ('In the sport of heptathlon, athletes compete in seven events.<br>These events are the 100 m hurdles, high jump, shot-put, javelin, 200 m run, 800 m run and long jump.<br>In shot-put, athletes throw a heavy spherical ball (a shot) as far as they can.<br>Fifteen female athletes competed to qualify for the heptathlon at the Olympic Games.<br>For shot-put, athlete number six, Jamilia, threw the shot 14.50 m.<br>The table shows the mean and standard deviation of the shot-put results for the 15 athletes.',
    SP,'Calculate Jamilia’s standardised score (<i>z</i>).<br>Round your answer to one decimal place. <span class="muted">(1 mark)</span>'),
   [('Write down',f'{X} = 14.50, {XB} = 13.74, {SD} = 1.43'),fx('Standardised score',Z,zf('14.50','13.74','1.43'),'0.531…'),('Round','to one decimal place: 0.5.')],
   'Jamilia’s standardised score is <b><i>z</i> = 0.5</b>.',f'{EDR} · 1I Q13 · VCAA 2021 Exam 2 Data analysis Q1c (examiner report)',stat=('mark',78),cmd=('Calculate',1,'working, then round')))
 # ================= close
 S.append(checkin(SC))
-S.append(coursework([('1H The normal distribution and the 68–95–99.7% rule','Cambridge Exercise 1H: Questions 1–23',
-  ['Q1–5 the 68–95–99.7% rule · Q6–7 standardised scores · Q8 comparisons · Q9–10 percentages from z-scores · Q11 actual scores · Q12–15 finding the mean and SD · Q16–18 applications · Q19–23 Exam 1 style',
-   'Revision book: the 1H section']),
-  ('1I Populations and samples','Cambridge Exercise 1I (Interactive Textbook)',['1I is online only: open it in Cambridge GO'])]))
-S.append(videos())
+def _card(o):
+    if isinstance(o,dict):
+        if o.get('id')=='gm12-u3-s5': return o['card']
+        for v in o.values():
+            r=_card(v)
+            if r: return r
+    if isinstance(o,list):
+        for v in o:
+            r=_card(v)
+            if r: return r
+CW=_card(json.load(open(os.path.join(ROOT,'planner','unit-plan.json'))))['homework']['sets']
+S.append(coursework([(st['title'].replace('Revision book','Chapter 1 revision booklet'),st.get('note') or '',['<span style="display:flex;justify-content:space-between;gap:12px"><span>'+it['skill']+'</span><b>'+it['q']+'</b></span>' for it in st['items']]) for st in CW]))
+V=json.load(open(os.path.join(ROOT,'planner','videos.json'))); V=V if isinstance(V,list) else V.get('videos',[])
+S.append(videos([yt(f'{v["sub"]} · {v["title"]} ({v["channel"].split(" (")[0]})',yid(v['url'])) for v in V if v['sub'] in ('1H','1I') and v.get('url')]))
 n=assemble(S,'12MAG · S5 · The normal distribution and standardised scores',f'{ROOT}/lessons/S5-slides.html')
 print('slides',n)

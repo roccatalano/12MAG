@@ -42,9 +42,9 @@ u{text-decoration:none;color:#c00;visibility:hidden} .sol u{visibility:visible}
 table.fill td{height:6mm}
 .mc .ok{display:none} .sol .mc .right .ok{display:inline;color:#c00;font-weight:bold}
 .sol .mc .right span{color:#c00}
-.why{display:none;color:#c00;font-size:9pt;margin-top:1mm} .sol .why{display:block}
+.why{display:block;visibility:hidden;color:#c00;font-size:9pt;margin-top:1mm} .sol .why{visibility:visible}
+.sa .blank .ans{display:block;visibility:hidden;margin-top:1mm} .sol .sa .blank .ans{visibility:visible}
 .sa .part .ans{margin-top:1mm}
-.sol .blank{min-height:2mm!important}
 .fill{font-size:9pt;width:100%} .fill th,.fill td{padding:.4mm 1mm!important;min-width:0!important}
 .qgrid table.t{font-size:8.5pt} .qgrid table.t th,.qgrid table.t td{padding:.4mm 1.2mm}
 .secthd{break-after:avoid} .box{break-inside:avoid}
@@ -79,10 +79,10 @@ def sa_box(q, num, sol):
     parts = ''
     for lab, txt, ans, sp, mk in q['parts']:
         labh = f'<b>{lab}</b>' if lab else ''
-        a = f'<div class="ans">{ans}</div>' if ans else ''
+        a = f'<div class="ans">{ans}</div>' if ans else ''  # sits inside the blank: same space in both copies
         parts += (f'<div class="part" style="flex:{max(sp,4)}"><div class="pq">{labh}<span>{subfigs(txt, sol)}</span>'
                   f'<span style="margin-left:auto;white-space:nowrap;font-size:8.5pt;color:#444">{mk} mark{"s" if mk > 1 else ""}</span></div>'
-                  f'{a}<div class="blank" style="min-height:{sp*1.5:.0f}mm"></div></div>')
+                  f'<div class="blank" style="min-height:{sp*1.5:.0f}mm">{a}</div></div>')
     why = f'<div class="why">{q["why"]}</div>' if q.get('why') else ''
     m = q['marks']
     return (f'<div class="box"><div class="hd">Question {num}<span>{m} mark{"s" if m > 1 else ""}</span></div><div class="sa">'

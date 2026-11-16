@@ -1,5 +1,5 @@
 """Solutions copies for CFAT 1.1.1-1.1.3 (Chapter 1). The questions are NOT rebuilt: the student copies
-(lessons/CFAT-1.1.x.html, made 14 Nov, left as they are per Rocco) are read and the answers injected in red.
+(lessons/CFAT 1.1.x (..).html = copies of the 14 Nov CFAT-1.1.x.html files, left as they are per Rocco) are read and the answers injected in red.
 Answers: Edrolo GM U3&4 2023 worked solutions (Answers, pdf pp. 655-700), each checked by hand.
 1.1.2 Q7b (shapes for July and May) has no Edrolo answer (Edrolo 1E Q18 has only the fence part): own answer.
 Run: python3 solutions.py  -> lessons/CFAT 1.1.x (..) solutions.html/.pdf
@@ -48,7 +48,7 @@ CSS = ('<style>.sol .mc div.right > span{color:#c00;font-weight:bold} .why{displ
        ' .sol .blank .ans{font-size:9.2pt;line-height:1.25}</style>')
 def build(code):
     name, mc, sa, fig = C[code]
-    s = open(os.path.join(L, f'CFAT-{code}.html')).read()
+    s = open(os.path.join(L, f'{name}.html')).read()
     if fig:
         i = [0]
         def rep(m):

@@ -97,11 +97,11 @@ S.append(qslide('apk','APK · Year 11 · Cambridge U1&amp;2 2H #15','Outliers fr
    ostep([f'56 {GT} 55 = UF → <b>outlier</b> · 66 {GT} 55 = UF → <b>outlier</b>',f'smallest age 17 {GT} −1 = LF → no low outliers'])],
   'The fences are −1 and 55. The outliers are <b>56 and 66</b>.','Cambridge General Mathematics Units 1&amp;2 · Chapter 2 skills checklist, 2H #15 (teacher solution)',
   cmd=('Calculate',None,'working for each fence'),
-  afig=box('a2b',{"min":-5,"max":70,"step":5,"lw":17,"q1":20,"m":24.5,"q3":34,"uw":45,"out":[56,66],"xl":"age (years)","hide":BUILD,"W":800,"fs":19,"top":40,
+  afig=box('a2b',{"min":-5,"max":70,"step":5,"lw":17,"q1":20,"m":24.5,"q3":34,"uw":45,"out":[56,66],"xl":"age (years)","hide":BUILD,"W":800,"fs":19,"top":62,
        "fences":[{"p":"fl","x":-1,"t":"LF = −1"},{"p":"fu","x":55,"t":"UF = 55","left":True}]}),
   build=[('Box (Q<sub>1</sub> = 20 and Q<sub>3</sub> = 34 from the CAS), median and fences','data-bx="#a2b|axis,box,med,fl,fu"'),('56 and 66 as dots; upper whisker stops at 45','data-bx="#a2b|out,wl,wu"')]))
 # ================= APK 3: Edrolo U1&2 1F Q16 (adapted from VCAA 2017 E1 Q2)
-S.append(qslide('apk','APK · Edrolo U1&amp;2 1F Q16','A real VCAA question you can already do',
+S.append(qslide('apk','APK · VCAA 2017 Exam 1 Q2 (adapted)','A real VCAA question you can already do',
   ('The boxplot shows the distribution of the <em class="v">reaction time</em> (milliseconds), of 256 firefighters.',
    box('a3b',{"min":0,"max":260,"step":10,"lab":50,"lw":122,"q1":130,"m":140,"q3":152,"uw":179,"out":[70,90,255],"caps":True,"xl":"reaction time (milliseconds)","W":820,"fs":19,"top":56,"bh":46,
      "marks":[{"p":"mn","x":70,"t":"min = 70","col":"#8a4d00"},{"p":"mx","x":255,"t":"max = 255","col":"#8a4d00","anchor":"end"},{"p":"bx","x":140,"t":"130 · 140 · 152","col":"#6a3fc7"}]}),
@@ -142,8 +142,9 @@ S.append(qslide('yt','You try · Edrolo 1E WE4','Constructing a boxplot from a f
    fx('Upper fence',None,F(V('Q<sub>3</sub>','23'),' + 1.5 × ',V('IQR','16')),'47'),
    ostep([f'smallest 1 {GT} −17 = LF · largest 39 {LT} 47 = UF → <b>no outliers</b>'],'data-mark="#y4s|0,19|ext"')],
   'The boxplot (no outliers):',f'{EDR} · 1E Worked example 4',cmd=('Construct',None,'scaled axis, box, median, whiskers'),
-  afig=box('y4b',{"min":0,"max":40,"step":1,"lab":5,"lw":1,"q1":7,"m":16.5,"q3":23,"uw":39,"hide":BUILD,"W":800,"fs":20,"top":16}),
-  build=[('Axis from 0 to 40','data-bx="#y4b|axis"'),('Box from 7 to 23, median at 16.5','data-bx="#y4b|box,med"'),('Whiskers to 1 and 39','data-bx="#y4b|wl,wu"')]))
+  afig=box('y4b',{"min":-20,"max":50,"step":1,"lab":10,"lw":1,"q1":7,"m":16.5,"q3":23,"uw":39,"hide":BUILD,"W":800,"fs":20,"top":62,
+     "fences":[{"p":"fl","x":-17,"t":"LF = −17"},{"p":"fu","x":47,"t":"UF = 47","left":True}]}),
+  build=[('Axis and fences (−17, 47)','data-bx="#y4b|axis,fl,fu"'),('Box from 7 to 23, median at 16.5','data-bx="#y4b|box,med"'),('Whiskers to 1 and 39','data-bx="#y4b|wl,wu"')]))
 # ================= Learn 2: outliers and fences
 marks19=[28,21,21,3,22,31,35,26,27,33,43,31,30,34,48,36,35,23,24]
 S.append(learn('Learn · 1G','Outliers: the 1.5 × IQR fences',
@@ -173,7 +174,7 @@ S.append(qslide('yt','You try · Edrolo 1E WE5','Constructing a boxplot with out
    fx('Upper fence',None,F(V('Q<sub>3</sub>','6'),' + 1.5 × ',V('IQR','2')),'9'),
    ostep([f'12 {GT} 9 = UF → <b>outlier</b> · 2 {GT} 1 = LF → not an outlier'])],
   'The boxplot, with 12 as an outlier:',f'{EDR} · 1E Worked example 5',cmd=('Construct',None,'boxplot with any outliers'),
-  afig=box('y5b',{"min":0,"max":13,"step":1,"lw":2,"q1":4,"m":5,"q3":6,"uw":8,"out":[12],"hide":BUILD,"xl":"list","W":800,"fs":19,"top":40,
+  afig=box('y5b',{"min":0,"max":13,"step":1,"lw":2,"q1":4,"m":5,"q3":6,"uw":8,"out":[12],"hide":BUILD,"xl":"list","W":800,"fs":19,"top":62,
      "fences":[{"p":"fl","x":1,"t":"LF = 1"},{"p":"fu","x":9,"t":"UF = 9"}]}),
   build=[('Axis, box (4 to 6), median (5) and fences (1, 9)','data-bx="#y5b|axis,box,med,fl,fu"'),('12 as a dot; whiskers to 2 and 8','data-bx="#y5b|out,wl,wu"')]))
 # ================= WE23
@@ -220,7 +221,7 @@ S.append(learn('Learn · 1G','Reading shape from a boxplot',
   '<div class="key frag"><h4>Positively skewed</h4>'+sh('h2',{"lw":1,"q1":3,"m":4.5,"q3":8,"uw":19})+'<p>Median to the <b>left</b>; long right whisker (tail to the right).</p></div>'
   '<div class="key frag"><h4>Negatively skewed</h4>'+sh('h3',{"lw":1,"q1":12,"m":15.5,"q3":17,"uw":19})+'<p>Median to the <b>right</b>; long left whisker (tail to the left).</p></div>'
   '<div class="key frag"><h4>With outliers</h4>'+sh('h4',{"lw":8,"q1":10,"m":11,"q3":12,"uw":14,"out":[2,19]})+'<p>Dots separated from the box and whiskers by a gap.</p></div></div>',
-  '<b>Describe in this order:</b> shape (and outliers) · centre (the median) · spread (IQR and range) · outliers by value.',
+  '<b>Describe with SOCS, like a sock:</b> Shape · Outliers · Centre (the median) · Spread (IQR and range).',
   'Cambridge General Mathematics Units 3&amp;4, 1G pp. 68–69 · Sketches: teacher illustration',
   cards=[kcard('Range',FRNG)]))
 # ================= WE25
@@ -228,43 +229,52 @@ S.append(qslide('we','Worked example 25 · 1G','Describing a distribution withou
   ('Describe the distribution represented by the boxplot in terms of shape, centre and spread. Give appropriate values.',
    box('w25b',{"min":0,"max":50,"step":1,"lab":5,"lw":0,"q1":5,"m":10,"q3":21,"uw":45,"W":900,"fs":19,"top":60,"col":"#fde7a6",
        "marks":[{"p":"mm","x":10,"t":"M = 10","col":"#d2475b","lv":1},{"p":"mq1","x":5,"t":"Q₁ = 5","anchor":"end","dx":-6},{"p":"mq3","x":21,"t":"Q₃ = 21"},{"p":"mx","x":45,"t":"max = 45","col":"#8a4d00"}]}),''),
-  [('Shape','median to the left of the box, long right whisker: positively skewed, no outliers.'),
-   ('Centre','the median: M = 10.','data-bx="#w25b|mm"'),
+  [('TMPL',socs('w25a','positively skewed','are no outliers',('10','median'),('IQR','16, and the range is 45'))),
+   ('Shape','median to the left of the box, long right whisker: positively skewed.','data-fill="w25a1"'),
+   ('Outliers','no dots beyond the whiskers.','data-fill="w25a2"'),
+   ('Centre','the median: M = 10.','data-bx="#w25b|mm" data-fill="w25a3"'),
    fx('Interquartile range',None,F(V('Q<sub>3</sub>','21'),' − ',V('Q<sub>1</sub>','5')),'16','data-bx="#w25b|mq1,mq3"'),
-   fx('Range',None,F(V('max','45'),' − ',V('min','0')),'45','data-bx="#w25b|mx"')],
-  'The distribution is positively skewed with no outliers. The distribution is centred at 10, the median value. The spread of the distribution, as measured by the IQR, is 16 and, as measured by the range, 45.',
-  f'{CAM} · Example 25',video='Cambridge GO · Example 25 (1G Resources)',cmd=('Describe',None,'shape, centre, spread with values')))
+   fx('Range',None,F(V('max','45'),' − ',V('min','0')),'45','data-bx="#w25b|mx" data-fill="w25a4"')],
+  '',
+  f'{CAM} · Example 25 (solution set out in SOCS order)',video='Cambridge GO · Example 25 (1G Resources)',cmd=('Describe',None,'shape, centre, spread with values')))
 # ================= YT Edrolo 1F WE5
 S.append(qslide('yt','You try · Edrolo 1F WE5','Describing a distribution without outliers',
   ('Consider the boxplot.',box('y25b',{"min":12,"max":20,"step":0.5,"lab":2,"lw":12,"q1":15,"m":18,"q3":19,"uw":20,"caps":True,"W":900,"fs":20,"top":50,"col":"#ddd3f3",
        "marks":[{"p":"mm","x":18,"t":"M = 18","col":"#d2475b"}]}),'Describe the distribution in terms of shape, centre, spread and outliers.'),
-  [('Shape','median towards the right of the box, tail trails off to the left: negatively skewed.'),('Centre','median = 18.','data-bx="#y25b|mm"'),
-   fx('Range',None,F(V('max','20'),' − ',V('min','12')),'8'),('Outliers','no dots: no outliers.')],
-  'The boxplot is negatively skewed with no outliers, a median of 18 and a range of 8.',f'{EDR} · 1F Worked example 5',cmd=('Describe',None,'shape, centre, spread, outliers')))
+  [('TMPL',socs('y25a','negatively skewed','are no outliers',('18','median'),('range','8'))),
+   ('Shape','median towards the right of the box, tail trails off to the left: negatively skewed.','data-fill="y25a1"'),('Outliers','no dots: no outliers.','data-fill="y25a2"'),
+   ('Centre','median = 18.','data-bx="#y25b|mm" data-fill="y25a3"'),
+   fx('Range',None,F(V('max','20'),' − ',V('min','12')),'8','data-fill="y25a4"')],
+  '',f'{EDR} · 1F Worked example 5 (solution set out in SOCS order)',cmd=('Describe',None,'shape, centre, spread, outliers')))
 # ================= WE26
 S.append(qslide('we','Worked example 26 · 1G','Describing a distribution with outliers',
   ('Describe the distributions represented by the boxplot in terms of shape and outliers, centre and spread. Give appropriate values.',
    box('w26b',{"min":0,"max":50,"step":1,"lab":5,"lw":34,"q1":38.75,"m":41,"q3":44.25,"uw":47,"out":[10,15,20,25],"W":900,"fs":19,"top":70,"col":"#e9c6ea",
        "marks":[{"p":"mm","x":41,"t":"M = 41","col":"#d2475b","lv":1}]}),''),
-  [('Shape','the box and whiskers are symmetric, but there are outliers.'),('Outliers','four dots: 10, 15, 20 and 25.','data-bxo="#w26b|#d98a1f"'),
-   ('Centre','median = 41.','data-bx="#w26b|mm"'),('IQR','the box is 5.5 wide: IQR = 5.5.'),
-   fx('Range',None,F(V('max','47'),' − ',V('min','10')),'37')],
-  'The distribution is symmetric but with outliers. The distribution is centred at 41, the median value. The spread of the distribution, as measured by the IQR, is 5.5 and, as measured by the range, 37. There are four outliers: 10, 15, 20 and 25.',
-  f'{CAM} · Example 26 (no matching Edrolo worked example, so no You try)',video='Cambridge GO · Example 26 (1G Resources)',cmd=('Describe',None,'shape, outliers, centre, spread')))
+  [('TMPL',socs('w26a','symmetric','are outliers at 10, 15, 20 and 25',('41','median'),('IQR','5.5, and the range is 37'))),
+   ('Shape','the box and whiskers are symmetric.','data-fill="w26a1"'),('Outliers','four dots: 10, 15, 20 and 25.','data-bxo="#w26b|#d98a1f" data-fill="w26a2"'),
+   ('Centre','median = 41.','data-bx="#w26b|mm" data-fill="w26a3"'),
+   fx('Interquartile range',None,F(V('Q<sub>3</sub>','44.25'),' − ',V('Q<sub>1</sub>','38.75')),'5.5'),
+   fx('Range',None,F(V('max','47'),' − ',V('min','10')),'37','data-fill="w26a4"')],
+  '',
+  f'{CAM} · Example 26 (solution set out in SOCS order; no matching Edrolo worked example, so no You try)',video='Cambridge GO · Example 26 (1G Resources)',cmd=('Describe',None,'shape, outliers, centre, spread')))
 # ================= WE27
 S.append(qslide('we','Worked example 27 · 1G','Using a boxplot to answer statistical questions',
   ('The boxplot shows the gestation period (completed weeks) for a sample for 1000 babies born in Australia one year. Describe the distribution of gestation period in terms of shape, centre, spread and outliers.',
    box('w27b',{"min":25,"max":43,"step":1,"lw":35,"q1":38,"m":39,"q3":40,"uw":42,"out":list(range(25,35)),"xl":"Gestation period (weeks)","W":900,"fs":16,"top":40,"col":"#bcd6f2",
        "marks":[{"p":"mm","x":39,"t":"M = 39","col":"#d2475b"}]}),''),
-  [('Shape','long tail of dots to the left: negatively skewed with several outliers.'),('Centre','median = 39 weeks.','data-bx="#w27b|mm"'),
-   fx('Range',None,F(V('max','42'),' − ',V('min','25')),'17'),fx('Interquartile range',None,F(V('Q<sub>3</sub>','40'),' − ',V('Q<sub>1</sub>','38')),'2'),
-   ('Outliers','25, 26, …, 34 weeks.','data-bxo="#w27b|#d98a1f"')],
-  'The distribution of gestational period is negatively skewed with several outliers. The distribution is centred at 39 weeks, the median value. The range of the distribution is 17 weeks, but the interquartile range is only 2 weeks. Any gestational period less than 35 weeks or less is considered unusual, with outliers at 25, 26, 27, 28, 29, 30, 31, 32, 33 and 34 weeks.',
-  f'{CAM} · Example 27 (no matching Edrolo worked example, so no You try)',video='Cambridge GO · Example 27 (1G Resources)',cmd=('Describe',None,'shape, centre, spread, outliers')))
+  [('TMPL',socs('w27a','negatively skewed','are outliers at 25, 26, 27, 28, 29, 30, 31, 32, 33 and 34 weeks',('39 weeks','median'),('IQR','only 2 weeks, but the range is 17 weeks'),fs=17)),
+   ('Shape','long tail of dots to the left: negatively skewed.','data-fill="w27a1"'),
+   ('Outliers','any gestational period of less than 35 weeks is unusual: dots at 25, 26, …, 34 weeks.','data-bxo="#w27b|#d98a1f" data-fill="w27a2"'),
+   ('Centre','median = 39 weeks.','data-bx="#w27b|mm" data-fill="w27a3"'),
+   fx('Interquartile range',None,F(V('Q<sub>3</sub>','40'),' − ',V('Q<sub>1</sub>','38')),'2'),
+   fx('Range',None,F(V('max','42'),' − ',V('min','25')),'17','data-fill="w27a4"')],
+  '',
+  f'{CAM} · Example 27 (solution set out in SOCS order; no matching Edrolo worked example, so no You try)',video='Cambridge GO · Example 27 (1G Resources)',cmd=('Describe',None,'shape, centre, spread, outliers')))
 # ================= Exit 1: Edrolo 1E Q19 (VCAA 2020 E2 Q2c)
 neck={31:1,32:1,33:3,34:11,35:19,36:32,37:34,38:48,39:39,40:18,41:28,42:12,43:3,44:1}
 nv=[k for k,f in neck.items() for _ in range(f)]
-S.append(qslide('ex','Exit task 1 of 2 · Edrolo 1E Q19 · VCAA 2020 Exam 2 Q2c','Show what you know',
+S.append(qslide('ex','Exit task 1 of 2 · VCAA 2020 Exam 2 Q2c','Show what you know',
   ('The <em class="v">neck size</em>, in centimetres, of 250 men was recorded and displayed in the following dot plot.',
    dot('e1d',{"min":30,"max":45,"vals":nv,"xl":"neck size (cm)","W":900,"h":560,"r":4.2,"fs":20}),
    'The five-number summary for this sample of neck sizes, in centimetres, is given in the following table.<table class="t" style="font-size:16px;margin:4px 0;width:100%"><tr><th>minimum</th><th>first quartile (Q<sub>1</sub>)</th><th>median</th><th>third quartile (Q<sub>3</sub>)</th><th>maximum</th></tr><tr><td>31</td><td>36</td><td>38</td><td>39</td><td>44</td></tr></table>Use the five-number summary to construct a boxplot, showing any outliers if appropriate. <span class="muted">(2 marks)</span>'),
@@ -273,7 +283,7 @@ S.append(qslide('ex','Exit task 1 of 2 · Edrolo 1E Q19 · VCAA 2020 Exam 2 Q2c'
    fx('Upper fence',None,F(V('Q<sub>3</sub>','39'),' + 1.5 × ',V('IQR','3')),'43.5'),
    ostep([f'31 {LT} 31.5 = LF → <b>outlier</b> · 44 {GT} 43.5 = UF → <b>outlier</b>','whiskers stop at the last values inside the fences: 32 and 43'],'data-dotmark="#e1d|0,249"')],
   'The boxplot:',f'{EDR} · 1E Q19 · VCAA 2020 Exam 2 Data analysis Q2c (examiner report)',stat=('avg',55),cmd=('Construct',2,'boxplot with any outliers'),
-  afig=box('e1b',{"min":30,"max":45,"step":1,"lw":32,"q1":36,"m":38,"q3":39,"uw":43,"out":[31,44],"hide":BUILD,"W":800,"fs":19,"top":40,"bh":40,"xl":"neck size (cm)",
+  afig=box('e1b',{"min":30,"max":45,"step":1,"lw":32,"q1":36,"m":38,"q3":39,"uw":43,"out":[31,44],"hide":BUILD,"W":800,"fs":19,"top":62,"bh":40,"xl":"neck size (cm)",
      "fences":[{"p":"fl","x":31.5,"t":"LF 31.5","left":True},{"p":"fu","x":43.5,"t":"UF 43.5"}]}),
   build=[('Axis, box (36 to 39), median (38) and fences','data-bx="#e1b|axis,box,med,fl,fu"'),('31 and 44 as dots; whiskers to 32 and 43','data-bx="#e1b|out,wl,wu"')]))
 # ================= Exit 2: Edrolo 1E Q20 (VCAA 2021 E2 Q1e)
@@ -281,7 +291,7 @@ hep=[(1,'1.76','15.34','41.22'),(2,'1.79','16.96','42.41'),(3,'1.83','13.87','46
 hr={}
 for i,(v,k) in enumerate(sorted((float(b),a) for a,b,c,d in hep)): hr[k]=i
 ht='<table class="t tight" id="e2t" style="font-size:12px;line-height:1.05"><tr><th>athlete number</th><th>high jump (metres)</th><th>shot-put (metres)</th><th>javelin (metres)</th></tr>'+''.join(f'<tr><td>{a}</td><td><span data-i="{hr[a]}" style="padding:0 3px;border-radius:4px;border:1.5px solid transparent">{b}</span></td><td>{c}</td><td>{d}</td></tr>' for a,b,c,d in hep)+'</table>'
-S.append(qslide('ex','Exit task 2 of 2 · Edrolo 1E Q20 · VCAA 2021 Exam 2 Q1e','Show what you know',
+S.append(qslide('ex','Exit task 2 of 2 · VCAA 2021 Exam 2 Q1e','Show what you know',
   ('<span style="font-size:15px;line-height:1.3;display:block">In the sport of heptathlon, athletes compete in seven events. These events are the 100 m hurdles, high jump, shot-put, javelin, 200 m run, 800 m run and long jump. Fifteen female athletes competed to qualify for the heptathlon at the Olympic Games. Their results for three of the heptathlon events – high jump, shot-put and javelin – are shown in the table. The following boxplot was constructed to show the distribution of high jump heights for all 15 athletes in the qualifying competition.</span>',
    f'<div class="row" style="gap:12px;align-items:center">{ht}<div style="flex:1">'+box('e2b',{"min":1.68,"max":1.88,"step":0.01,"lab":0.04,"dec":2,"lw":1.68,"q1":1.78,"m":1.82,"q3":1.87,"uw":1.87,"caps":True,"xl":"high jump","W":600,"fs":22,"top":40,"bh":44,
        "marks":[{"p":"q3","x":1.87,"t":"Q₃ = max = 1.87","col":"#d2475b","anchor":"end"}]})+'</div></div>',
@@ -291,9 +301,21 @@ S.append(qslide('ex','Exit task 2 of 2 · Edrolo 1E Q20 · VCAA 2021 Exam 2 Q1e'
   f'{EDR} · 1E Q20 · VCAA 2021 Exam 2 Data analysis Q1e (examiner report)',stat=('avg',50),cmd=('Explain',1,'a reason, using values')))
 # ================= close
 S.append(checkin(SC))
-S.append(coursework([('1G The five-number summary and the boxplot','Cambridge Exercise 1G: Questions 1–20',
-  ['Q1–2 five-number summary from a dot or stem plot · Q3–6 boxplot from a five-number summary · Q7 boxplot on CAS · Q8–10 reading values · Q11–13 percentages · Q14–15 describing · Q16 statistical questions · Q17–20 Exam 1 style',
-   'Revision book: the 1G section'])]))
-S.append(videos())
+import json
+def _card(o):
+    if isinstance(o,dict):
+        if o.get('id')=='gm12-u3-s4': return o['card']
+        for v in o.values():
+            r=_card(v)
+            if r: return r
+    if isinstance(o,list):
+        for v in o:
+            r=_card(v)
+            if r: return r
+CW=_card(json.load(open(os.path.join(ROOT,'planner','unit-plan.json'))))['homework']['sets']
+S.append(coursework([(st['title'].replace('Revision book','Chapter 1 revision booklet'),st.get('note') or '',['<span style="display:flex;justify-content:space-between;gap:12px"><span>'+it['skill']+'</span><b>'+it['q']+'</b></span>' for it in st['items']]) for st in CW]))
+yid=lambda u:u.split('v=')[1].split('&')[0]
+VJ=json.load(open(os.path.join(ROOT,'planner','videos.json'))); VJ=VJ if isinstance(VJ,list) else VJ.get('videos',[])
+S.append(videos([yt(f'{v["sub"]} · {v["title"]} ({v["channel"].split(" (")[0]})',yid(v['url'])) for v in VJ if v['sub']=='1G']))
 n=assemble(S,'12MAG · S4 · The five-number summary and the boxplot',f'{ROOT}/lessons/S4-slides.html')
 print('slides',n)

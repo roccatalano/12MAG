@@ -1,7 +1,7 @@
 import asyncio, sys, os
 from playwright.async_api import async_playwright
 HTML='file:///home/claude/12mag/lessons/S2-slides.html'
-OUT='/home/claude/w/shots'; os.makedirs(OUT,exist_ok=True)
+OUT='/home/claude/w/s2shots'; os.makedirs(OUT,exist_ok=True)
 which=[int(x) for x in sys.argv[1].split(',')] if len(sys.argv)>1 and sys.argv[1] else None
 mid=sys.argv[2] if len(sys.argv)>2 else ''   # e.g. "10:2" = slide 10 after 2 steps
 async def main():
