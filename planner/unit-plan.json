@@ -9180,7 +9180,33 @@
          }
         ],
         "cas": [],
-        "note": "Edrolo 6C WE2 (interest-only table) and 6E WE2 (perpetuity table) are spare table You trys."
+        "note": "Edrolo 6C WE2 (interest-only table) and 6E WE2 (perpetuity table) are spare table You trys.",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/8C slides.html",
+          "pdf": "lessons/8C slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "6 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/8C worksheet.html",
+            "pdf": "lessons/8C worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/8C worksheet solutions.html",
+            "pdf": "lessons/8C worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {

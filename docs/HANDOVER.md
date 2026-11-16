@@ -1,5 +1,7 @@
 # 12MAG handover — 15 Nov 2026 (updated 15:55)
 
+**16 Nov 12:21 (AoS2 #15):** Lesson l39 (8C) built (Draft): `tools/deck/gm12-u3-l39/` → `lessons/8C slides` (26 slides: Do Now 2026 NHT E1 Q22, 2026 E1 Q4, 2026 E2 Q10a, Q3b; APK Cambridge U1&2 3E #11 + VCAA 2021 E2 Q7a; Examples 10–14 + You trys (Edrolo 6A WE1, YT-8C-11, 6B WE2, YT-8C-13, 6F WE2); exits VCAA 2016 E1 Q22, 2017 E1 Q23) and `8C worksheet`/solutions (6 pages), on G: and the planner card; 8 ledger rows marked used. Next AoS 2 task: l40 (8D).
+
 **16 Nov 12:05 (AoS3 #16):** Lesson 11A built (Draft): `tools/deck/gm12-u4-11a/` (build.py, worksheet.py, shoot.py, fig/ crops) → `lessons/11A slides` (21 slides: Do Now 2025 E1 Q25, 2023 E1 Q15, 2025 E2 Q11b, 2024 E2 Q2cii; APK Cambridge U1&2 4G #16 + VCAA 2019 E2 Q2b, Q3a; Examples 1–2 + You trys Edrolo 7I WE2a, 7G WE4 (transition matrices filled column by column); CAS matrix-entry; exit VCAA 2017 E2 Q2a,b) and `11A worksheet`/solutions (4 pages), on G: and the planner card; 7 ledger rows marked used. Next AoS 3 task: 11B.
 
 **16 Nov 11:30 (AoS2 #13):** Lesson l37 (8A) built (Draft): `tools/deck/gm12-u3-l37/` (build.py, worksheet.py, shoot.py) → `lessons/8A slides` (27 slides: Do Now 2026 E1 Q17, Q2, 2026 E2 Q8a, Q1a; APK Cambridge U1&2 3H #22 + VCAA 2017 E2 Q5c; Examples 1–5 + You trys (YT-8A-1/2/5 written, Edrolo 6F WE1a/b); CAS recursion-sequence; exits VCAA 2018 E1 Q17, Q18, 2021 E1 Q22) and `8A worksheet`/solutions (4 pages), on G: and the planner card; 8 ledger rows marked used. Next AoS 2 task: l38 (8B).
