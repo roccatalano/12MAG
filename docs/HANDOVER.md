@@ -1,5 +1,7 @@
 # 12MAG handover — 15 Nov 2026 (updated 15:55)
 
+**16 Nov 14:16 (AoS3 #20):** Lesson 11E (Leslie matrices) slides (24) + 5-page guided worksheet, Draft, in lessons/ and on G:. New reusable helper `tools/deck/leslie.py` draws life cycle diagrams. No exit task (no VCAA Leslie reprints in Edrolo).
+
 **16 Nov 14:05 (AoS4 #18):** Lesson 14D built (Draft): `tools/deck/gm12-u4-14d/` (build.py, worksheet.py, crop.py, figs.py with wtab(), shoot.py) → `lessons/14D slides` (24 slides: Do Now 2023 E1 Q38, 2025 E1 Q13, 2023 E2 Q14a, 2023 E2 Q9c (Q9d was invalidated); APK VCAA 2021 E2 Q2a (shortest path); Examples 10–11 + You trys Edrolo 8I WE1–4; exits VCAA 2020 E1 Q6, 2018 E2 Q3a–d, 2021 E1 Q6) and `14D worksheet`/solutions (5 pages), on G: and the planner card; 8 ledger rows used. Next AoS 4 task: 14E.
 
 **16 Nov 13:43 (AoS3 #19):** Lesson 11D built (Draft): `tools/deck/gm12-u4-11d/` (build.py, worksheet.py, shoot.py, fig/ crops) → `lessons/11D slides` (16 slides: Do Now 2023 E1 Q32 (replaces 2024 E1 Q32, which is 11D content), 2025 E1 Q15, 2024 E2 Q12a, 2023 E2 Q10a; APK Cambridge U1&2 4H #19; Example 8 + You try Edrolo 7I WE3; CAS T × ans + B; exit VCAA 2017 E1 Q7) and `11D worksheet`/solutions (3 pages), on G: and the planner card; ledger updated. Next AoS 3 task: 11E.
@@ -28,7 +30,6 @@
 
 
 
-- **16 Nov 14:16 (AoS3 #20):** Lesson 11E (Leslie matrices) slides (24) + 5-page guided worksheet, Draft, in lessons/ and on G:. New reusable helper `tools/deck/leslie.py` draws life cycle diagrams. No exit task (no VCAA Leslie reprints in Edrolo).
 
 ## 16 Nov 13:06 — AoS3 #18: Lesson 11C done (Draft)
 - `lessons/11C slides` (31 slides, CFAT 3.11.1 first) + `11C worksheet` / `solutions` (7 pages), HTML+PDF, copied to G: 01 Lesson materials. Build: `tools/deck/gm12-u4-11c/`.
