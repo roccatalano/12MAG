@@ -141,11 +141,23 @@
    "inClass": true
   },
   {
+   "date": "2027-04-29",
+   "label": "AoS 1 SAC redemption (after school)",
+   "afterSchool": true,
+   "redemption": 1
+  },
+  {
    "date": "2027-06-02",
    "label": "AoS 2 SAC: Recursion and financial modelling (after school)",
    "aos": 2,
    "afterSchool": true,
    "window": true
+  },
+  {
+   "date": "2027-06-09",
+   "label": "AoS 2 SAC redemption (after school)",
+   "afterSchool": true,
+   "redemption": 2
   },
   {
    "date": "2027-06-16",
@@ -160,11 +172,23 @@
    "window": true
   },
   {
+   "date": "2027-08-11",
+   "label": "AoS 3 SAC redemption (after school)",
+   "afterSchool": true,
+   "redemption": 3
+  },
+  {
    "date": "2027-09-08",
    "label": "AoS 4 SAC: Networks (after school)",
    "aos": 4,
    "afterSchool": true,
    "window": true
+  },
+  {
+   "date": "2027-09-16",
+   "label": "AoS 4 SAC redemption (after school; Wed 15 Sep is student-free)",
+   "afterSchool": true,
+   "redemption": 4
   },
   {
    "date": "2027-10-04",
@@ -195,6 +219,6 @@
   "teachingDays": "weekdays the class has 12MAG, e.g. [\"Mon\",\"Wed\",\"Thu\"]. Leave empty to use lessonRule (lessons per week, no fixed days).",
   "terms": "[{\"name\":\"Term 1\",\"start\":\"2027-01-28\",\"end\":\"2027-03-25\"}, ...] (start = first day students are in). Optional \"lessons\" caps a term's total (step-up).",
   "blocked": "public holidays, student-free days, school events that cancel Year 12 classes",
-  "anchors": "fixed events. aos = later-AoS lessons wait until after it, earlier-AoS lessons after it are flagged. afterSchool = takes no lesson. inClass = takes one lesson that week. window = counts the teaching time for that AoS. exam = shown in the VCE exams row of the Course plan."
+  "anchors": "fixed events. aos = later-AoS lessons wait until after it, earlier-AoS lessons after it are flagged. afterSchool = takes no lesson. inClass = takes one lesson that week. window = counts the teaching time for that AoS. exam = shown in the VCE exams row of the Course plan. redemption = SAC redemption task (1 week after the SAC, after school)."
  }
 }
