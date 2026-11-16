@@ -13873,7 +13873,45 @@
          }
         ],
         "cas": [],
-        "note": "Edrolo 8H WE1 (reading a precedence table) is a spare You try. Both exits are Edrolo-adapted VCAA items (pill: adapted)."
+        "note": "Edrolo 8H WE1 (reading a precedence table) is a spare You try. Both exits are Edrolo-adapted VCAA items (pill: adapted).",
+        "cfats": [
+         {
+          "id": "CFAT 4.14.1",
+          "title": "Flow problems and matching problems",
+          "covers": [
+           "14A-14B"
+          ],
+          "format": "About 20 min · individual · CAS and single bound reference allowed",
+          "status": "Draft",
+          "plan": "Start of the 14C lesson.",
+          "marks": 13,
+          "mcMarks": 5,
+          "saMarks": 8,
+          "file": "lessons/CFAT 4.14.1 (14A-14B).html",
+          "sources": [
+           "Edrolo GM U3&4 2023 exercise questions only (rule 8): 8E Q1, 8E Q4, 8E Q7, 8G Q1, 8G Q4, 8E Q5 (parts a–b), 8E Q9, 8G Q2"
+          ]
+         }
+        ],
+        "materials": [
+         {
+          "kind": "CFAT 4.14.1",
+          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/CFAT 4.14.1 (14A-14B).html",
+            "pdf": "lessons/CFAT 4.14.1 (14A-14B).pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/CFAT 4.14.1 (14A-14B) solutions.html",
+            "pdf": "lessons/CFAT 4.14.1 (14A-14B) solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
@@ -14129,7 +14167,45 @@
          }
         ],
         "cas": [],
-        "note": "No APK: crashing has no Units 1&2 prerequisite (the Do Now retrieves 14D critical path). Spare exit (not reserved): Edrolo 8J Q12 (VCAA 2019 E2 N&DM Q3e)."
+        "note": "No APK: crashing has no Units 1&2 prerequisite (the Do Now retrieves 14D critical path). Spare exit (not reserved): Edrolo 8J Q12 (VCAA 2019 E2 N&DM Q3e).",
+        "cfats": [
+         {
+          "id": "CFAT 4.14.2",
+          "title": "Activity networks, precedence tables and critical path analysis",
+          "covers": [
+           "14C-14D"
+          ],
+          "format": "About 20 min · individual · CAS and single bound reference allowed",
+          "status": "Draft",
+          "plan": "Start of the 14E lesson.",
+          "marks": 12,
+          "mcMarks": 3,
+          "saMarks": 9,
+          "file": "lessons/CFAT 4.14.2 (14C-14D).html",
+          "sources": [
+           "Edrolo GM U3&4 2023 exercise questions only (rule 8): 8H Q1, 8H Q3, 8I Q7, 8H Q2, 8H Q4 (part a), 8I Q3, 8I Q4, 8I Q8"
+          ]
+         }
+        ],
+        "materials": [
+         {
+          "kind": "CFAT 4.14.2",
+          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/CFAT 4.14.2 (14C-14D).html",
+            "pdf": "lessons/CFAT 4.14.2 (14C-14D).pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/CFAT 4.14.2 (14C-14D) solutions.html",
+            "pdf": "lessons/CFAT 4.14.2 (14C-14D) solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
@@ -14137,7 +14213,46 @@
        "kind": "check",
        "subchapters": [],
        "title": "Chapter 14 coursework check + test",
-       "card": {}
+       "card": {
+        "cfats": [
+         {
+          "id": "CFAT 4.14.3",
+          "title": "Crashing an activity network",
+          "covers": [
+           "14E"
+          ],
+          "format": "About 20 min · individual · CAS and single bound reference allowed",
+          "status": "Draft",
+          "plan": "Start of the Ch 14 test lesson.",
+          "marks": 10,
+          "mcMarks": 2,
+          "saMarks": 8,
+          "file": "lessons/CFAT 4.14.3 (14E).html",
+          "sources": [
+           "Edrolo GM U3&4 2023 exercise questions only (rule 8): 8J Q1, 8J Q4, 8J Q3, 8J Q6, 8J Q7"
+          ]
+         }
+        ],
+        "materials": [
+         {
+          "kind": "CFAT 4.14.3",
+          "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/CFAT 4.14.3 (14E).html",
+            "pdf": "lessons/CFAT 4.14.3 (14E).pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/CFAT 4.14.3 (14E) solutions.html",
+            "pdf": "lessons/CFAT 4.14.3 (14E) solutions.pdf"
+           }
+          ]
+         }
+        ]
+       }
       }
      ]
     }

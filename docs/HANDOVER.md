@@ -12,6 +12,8 @@
 
 ## 16 Nov 11:24 — AoS3 #13: Chapter 11 cards prefilled (runner)
 Examples 1–13 with Edrolo You trys (7G, 7H, 7I); Cambridge Ex 10–13 (Leslie) have written You trys YT-11E-10…13 (planner/written-youtrys.json). Do Now, APK, exits reserved in tools/ledger_manual.csv (35 rows). 11E has no exit task (no VCAA Leslie reprints in Edrolo). New CAS skill `matrix-recurrence` (Draft). Script: tools/prefill_ch11.py. NB the GitHub repo is now roccatalano/12MAG (old URL redirects).
+## 16 Nov 11:14 — AoS4 #13: CFATs for Chapter 14
+- CFAT 4.14.1 (14A-14B, 13 marks, start of 14C), 4.14.2 (14C-14D, 12 marks, start of 14E), 4.14.3 (14E, 10 marks, start of Ch 14 test): Edrolo U3&4 8E, 8G-8J exercise questions only, graphs/tables cropped (tools/cfat/ch14/crop.py), student + solutions HTML+PDF, Draft; on the planner cards (tools/cfat/ch14/planner.py), ledger_manual (21 rows), G: 01 Lesson materials.
 
 ## 16 Nov 10:48 — AoS2 #11 CFATs for Chapter 8 (Draft)
 CFAT 2.8.1 (8A-8B-8C, start of l40) and CFAT 2.8.2 (8E-8H-8I, start of l46), student + solutions, HTML + PDF, built by tools/cfat/ch8/. Edrolo U3&4 6A–6F exercise questions only. 8D, 8F, 8G have no Edrolo exercise questions, so they are not in a CFAT. Follow-ups (Jacaranda) are task 12.
