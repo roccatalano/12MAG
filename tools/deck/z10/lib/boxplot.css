@@ -1,0 +1,10 @@
+/* boxplot engine (S4): bx/bx1 parts appear, bxo outliers, bdx dot-plot extremes */
+svg.zbx{width:100%;overflow:visible}svg.zbx [data-p]{transition:opacity .35s}
+svg.zbx .bo.on{fill:#f39c12}
+.slide.z .zfig svg.zbx{max-height:230px}
+.slide.z.stack .zfig svg.zbx,.slide.z .zb.stack .zfig svg.zbx{max-height:250px}
+.slide.exam .st.final svg.zbx{max-height:105px!important}.slide.exam.tight .st.zs{font-size:17px!important;margin-bottom:4px!important}.slide.exam .zw .ki{margin-bottom:6px}
+.slide.z .zfig .zstem+svg.zbx{margin-top:4px}
+svg.zbd circle{transition:fill .3s}svg.zbd circle.on{fill:#d00000}
+.zbig{display:flex;justify-content:center;margin:14px 0 6px}.zbig svg.zbx{max-height:290px}
+.slide.z .st.final svg.zbx{max-height:170px;display:block;margin-top:4px;background:#fff}

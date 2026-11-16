@@ -7292,8 +7292,8 @@
         {
           "kind": "Chapter 1 slides (all lessons, S1–S5)",
           "status": "ready",
-          "file": "lessons/Ch1 slides.html",
-          "pdf": "lessons/Ch1 slides.pdf"
+          "file": "lessons/Ch1-slides.html",
+          "pdf": "lessons/Ch1-slides.pdf"
         }
       ]
     },

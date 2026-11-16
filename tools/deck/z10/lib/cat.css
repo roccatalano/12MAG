@@ -1,0 +1,27 @@
+/* categorical charts (S1): ax/bg/lg axis-bar-legend builds, tf table/report fills, hv/hr chip and row highlights */
+svg.zch .cax,svg.zch .clg{opacity:0;transition:opacity .4s}svg.zch .cax.on,svg.zch .clg.on,svg.zch.full .cax,svg.zch.full .clg{opacity:1}
+svg.zch .cbr{transform:scaleY(0);transform-box:fill-box;transform-origin:bottom;transition:transform .6s}svg.zch .cbr.on,svg.zch.full .cbr{transform:none}
+.slide.z .zfig svg.zch{max-height:330px}
+.zft td.l{text-align:left}.zft.zbl td{min-width:70px}.zft [data-f]{color:transparent;transition:color .3s}.zft [data-f].on{color:#d00000;font-weight:bold}
+.zft.zbl td:not(.l){border-bottom:2px dashed #888}.zft tr.hl td{background:#fff2a8}
+.zchips{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;font-size:18px;margin:6px 0}
+.zc{border:1.5px solid #000;padding:1px 7px;transition:background .3s}.zc.hb{background:#b9cff3}.zc.hy{background:#fff2a8}.zc.hg{background:#c8ebc8}
+.zrep{font-size:19px;line-height:1.75;border:2px solid #000;padding:8px 12px;margin-top:10px;background:#fff}
+.zrb.on{min-width:0!important}.zrb{display:inline-block;min-width:70px;border-bottom:2px dashed #888;color:transparent;transition:color .3s;line-height:1.3}.zrb.on{color:#d00000;font-weight:bold;border-bottom-color:transparent}
+.zrowf svg.zch{width:270px!important;max-height:195px!important}.zrowf .ztab.zft{font-size:16px}.zrowf{align-items:center}
+.zrowc .ztab.zft{font-size:14px;flex:none}.zrowc .ztab.zft td,.zrowc .ztab.zft th{padding:2px 6px}.zrowc svg.zch{flex:1;min-width:58%}
+.slide.z .zfig .zrep{font-size:17px}
+.zc2{display:grid;grid-template-columns:1fr 1fr;gap:28px}.zc2>div+div{border-left:1.5px dashed #bbb;padding-left:20px}
+.zrowc{display:flex;gap:14px;justify-content:center;align-items:center;width:100%}.zrowc svg{flex:1;min-width:0}
+.zmcq svg.zch{min-height:150px!important}
+.slide.z .st.stp{overflow:visible;line-height:1.5;margin-bottom:6px!important;font-size:21px}
+.slide.c2w .zw{display:block!important;column-count:2;column-fill:auto;column-gap:30px;column-rule:1.5px dashed #bbb}.slide.c2w .zw>*{break-inside:avoid}.slide.c2w .zpq{break-after:avoid}.slide.c2w .zpq.sep{border-top:none;padding-top:0}.slide.c2w .zpq:has(.cbk){break-before:column}
+.zcas2.zsm .zcas{font-size:14px!important}.zcas2.zsm{gap:4px}
+.top>.q .ztab.zft{font-size:16px;margin:4px 0}.top>.q .zchips{justify-content:flex-start}
+/* bar chart -> stacked bar -> 100% bar (morph_svg, op mo:id:stage) */
+.zmo2{flex:1;min-height:0}.zmo2 .col.zc{display:flex;align-items:center;justify-content:center}
+.zmo2 .st.stp{font-size:19px!important;margin-bottom:4px!important}.zmo2 .ztab{font-size:17px}
+svg.zmorph{width:100%;height:100%;max-height:520px}
+svg.zmorph .mof,svg.zmorph .mop,svg.zmorph .molg,svg.zmorph .mocat,svg.zmorph .moxl{transition:opacity .6s}
+/* big single segmented bar (schart_big): segments grow one per click */
+svg.zch.zbig g.cbr{transform:scaleY(0);transform-box:fill-box;transform-origin:bottom;transition:transform .6s}svg.zch.zbig g.cbr.on{transform:none}
