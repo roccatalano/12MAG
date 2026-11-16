@@ -8816,6 +8816,32 @@
         ],
         "cas": [
          "recursion-sequence"
+        ],
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/8A slides.html",
+          "pdf": "lessons/8A slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "4 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/8A worksheet.html",
+            "pdf": "lessons/8A worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/8A worksheet solutions.html",
+            "pdf": "lessons/8A worksheet solutions.pdf"
+           }
+          ]
+         }
         ]
        }
       },
