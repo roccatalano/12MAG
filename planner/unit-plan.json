@@ -9956,11 +9956,6 @@
         ],
         "apk": [
          {
-          "kind": "Skill",
-          "ref": "Cambridge U1&2 1B checklist #7",
-          "text": "Find percentage increase or decrease"
-         },
-         {
           "kind": "Exam",
           "ref": "Edrolo U1&2 3C Q19",
           "text": "VCAA 2016 Exam 2 Q6c (adapted by Edrolo)"
@@ -9997,7 +9992,33 @@
         "cas": [
          "finance-solver"
         ],
-        "note": "Edrolo 6D WE3b (annuity rate drops after 6 months) is a spare You try for the annuity part of Example 26 / Exercise 8G Q7–9."
+        "note": "Edrolo 6D WE3b (annuity rate drops after 6 months) is a spare You try for the annuity part of Example 26 / Exercise 8G Q7–9.",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/8G slides.html",
+          "pdf": "lessons/8G slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "3 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/8G worksheet.html",
+            "pdf": "lessons/8G worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/8G worksheet solutions.html",
+            "pdf": "lessons/8G worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {

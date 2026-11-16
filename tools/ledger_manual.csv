@@ -636,13 +636,13 @@ VCAA 2017 E2 Q7b,Edrolo U3&4 6F Q19,exit,yes,gm12-u3-l42,2026-11-16,used in 8F s
 VCAA 2021 E2 Q9,Edrolo U3&4 6D Q20,exit,yes,gm12-u3-l42,2026-11-16,used in 8F slides + worksheet (AoS2 #18)
 Cambridge U1&2 skills checklist 3I #26,,APK,yes,gm12-u3-l42,2026-11-16,used in 8F slides + worksheet (AoS2 #18)
 VCAA 2017 E2 Q6a,Edrolo U1&2 3E Q11,APK,no,gm12-u3-l42,2026-11-16,NOT used: already burnt as l34 exit (VCAA 2017 E2 Q6); dropped from l42 (AoS2 #18)
-VCAA 2025 E1 Q22,,Do Now,yes,gm12-u3-l43,2026-11-16,reserved by AoS2 prefill
-VCAA 2026 E1 Q13,,Do Now,yes,gm12-u3-l43,2026-11-16,reserved by AoS2 prefill
-VCAA 2026 NHT E2 Q8ai,,Do Now,yes,gm12-u3-l43,2026-11-16,reserved by AoS2 prefill
-VCAA 2026 E2 Q7,,Do Now,yes,gm12-u3-l43,2026-11-16,reserved by AoS2 prefill
-VCAA 2016 E2 Q7b,Edrolo U3&4 6B Q22,exit,yes,gm12-u3-l43,2026-11-16,reserved by AoS2 prefill
-Cambridge U1&2 skills checklist 1B #7,,APK,yes,gm12-u3-l43,2026-11-16,reserved by AoS2 prefill
-VCAA 2016 E2 Q6c,Edrolo U1&2 3C Q19,APK,yes,gm12-u3-l43,2026-11-16,reserved by AoS2 prefill
+VCAA 2025 E1 Q22,,Do Now,yes,gm12-u3-l43,2026-11-16,used in 8G slides + worksheet (AoS2 #19)
+VCAA 2026 E1 Q13,,Do Now,yes,gm12-u3-l43,2026-11-16,used in 8G slides + worksheet (AoS2 #19)
+VCAA 2026 NHT E2 Q8ai,,Do Now,yes,gm12-u3-l43,2026-11-16,used in 8G slides + worksheet (AoS2 #19)
+VCAA 2026 E2 Q7,,Do Now,yes,gm12-u3-l43,2026-11-16,used in 8G slides + worksheet (AoS2 #19)
+VCAA 2016 E2 Q7b,Edrolo U3&4 6B Q22,exit,yes,gm12-u3-l43,2026-11-16,used in 8G slides + worksheet (AoS2 #19)
+Cambridge U1&2 skills checklist 1B #7,,APK,no,gm12-u3-l43,2026-11-16,NOT used: already burnt in l21; dropped from l43 (AoS2 #19)
+VCAA 2016 E2 Q6c,Edrolo U1&2 3C Q19,APK,yes,gm12-u3-l43,2026-11-16,used in 8G slides + worksheet (AoS2 #19)
 VCAA 2026 E1 Q23,,Do Now,yes,gm12-u3-l44,2026-11-16,reserved by AoS2 prefill
 VCAA 2026 E1 Q14,,Do Now,yes,gm12-u3-l44,2026-11-16,reserved by AoS2 prefill
 VCAA 2026 E2 Q11,,Do Now,yes,gm12-u3-l44,2026-11-16,reserved by AoS2 prefill
@@ -805,3 +805,4 @@ Edrolo U3&4 7G WE7,,You try,no,gm12-u4-11c,2026-11-16,used: 11C slides + workshe
 Edrolo U3&4 7G WE6,,You try,no,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
 Edrolo U3&4 7H WE1,,You try,no,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
 VCAA 2023 E1 Q32,,Do Now,yes,gm12-u4-11d,2026-11-16,used: 11D slides (replaces 2024 E1 Q32)
+Edrolo U3&4 6B WE3,,You try,no,gm12-u3-l43,2026-11-16,used in 8G slides + worksheet (AoS2 #19)
