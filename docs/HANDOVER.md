@@ -444,3 +444,8 @@ Chapter 3 revision booklet + solutions built (`tools/revision/ch3/`, 16 pages ea
 - Screenshots: `python3 tools/deck/s4/shoot.py "<slide list>" "<slide:steps,…>"` (writes to /home/claude/w/shots; adjust paths in a new session). Needs playwright + /usr/bin/google-chrome.
 - Sources staged from G: `02 Sources\Textbooks\...` (Cambridge U3&4 1G = pdf pp. 73–88; Edrolo U3&4 1E = pdf pp. 54–68, 1F WE5 = p. 78; Edrolo U1&2 1F Q16 = p. 63).
 - 2024 E1/E2 and 2025 NHT papers are scans (OCR). 2023 NHT is old design.
+
+## 16 Nov 2026 (late) — Ch 1 interactives, Do Now off the decks, merged Ch 1 deck
+- Rocco: Do Now slides removed from the lesson decks (S2–S5; S1 had none) and from 'Today's lesson'. Do Now lists stay on the planner cards (a printed Do Now sheet like 10MA's `planner/donow.html` is an option).
+- New interactive helpers from the 10MA deck: `tools/deck/tpl/ia.js` + `ia.css`, helpers in `tpl.py`, guide `tools/deck/tpl/IA.md`, demo `tools/deck/demo/build.py`. 10MA-style controls (double click / → = next slide, double ← = previous cleared, double Backspace = clear). Used in S1 (card sort), S2 (tally→histogram, shape slider, stem plots leaf by leaf, log slider), S3 (data tiles, quartile halves, skew slider), S4 (tiles five-number summary, fence + boxplot sliders), S5 (z sliders).
+- Merged deck: `python3 tools/deck/ch1/merge.py --pdf` → `lessons/Ch1 slides.html/.pdf` (165 slides, 254 PDF pages). Edit list for Rocco: `lessons/Ch1 slides edit list.docx` (one row per slide). Next: apply Rocco's edits from that file, rebuild the lesson decks, re-run merge.py.

@@ -3,7 +3,7 @@ Run: python3 tools/deck/s3/build.py
 
 Sources (all question text verbatim, copied from the previous S3 deck which copied it from the sources):
 - CFAT 1.1.1 (1A-1E) at the start.
-- Do Now: VCAA 2025 NHT E1 Q4 · 2024 NHT E1 Q4 · 2026 E2 Q2b · 2024 NHT E2 Q2a (planner card).
+- Do Now: removed from the deck (Rocco, 16 Nov); the planner card list is unchanged.
 - APK: Cambridge U1&2 Ch 2 skills checklist 2E #10, 2F #11 · Edrolo U1&2 1D Q18 = VCAA 2017 E2 Q1ai (87%).
 - Examples 14-21 (Cambridge U3&4 1F) · You trys: Edrolo U3&4 1E WE1, 1F WE2a, 1F WE3a, 1E WE2a, 1E WE2b, (none for Ex 19), 1F WE1a, 1G WE1; CAS You try 1G WE2.
 - Exit: Edrolo U3&4 1G Q11 = adapted from VCAA 2020 E2 Q4aii (Edrolo: 77%), checked verbatim against the Edrolo PDF (printed p. 86).
@@ -33,14 +33,14 @@ FSD=F('<i>s</i> = √',FR(['Σ(<i>x</i> − <i>x̄</i>)²'],['<i>n</i> − 1']))
 S=[]
 # ================= opening
 S.append(title(3,'Measures of centre and spread','Cambridge General Mathematics Units 3&amp;4 · 1F Using summary statistics to describe numerical distributions: median, quartiles, IQR, mean and standard deviation','S3',
-  flow=('CFAT','Do Now','APK','Learn','Worked examples','You try','Exit tasks')))
+  flow=('CFAT','APK','Learn','Worked examples','You try','Exit tasks')))
 LI=['To be able to understand the mean and the median as measures of centre.',
     'To be able to understand the range, interquartile range and standard deviation as measures of spread.',
     'To be able to know whether to use the median and interquartile range, or the mean and standard deviation, for a particular distribution.',
     'To be able to use a CAS calculator to calculate these summary statistics.']
 SC=['I can find the median value in a data set.','I can find the median value from a dot plot.','I can find the median value from a stem plot.','I can find the range from a stem plot.',
     'I can find the IQR from a stem plot when n is even.','I can find the IQR from a stem plot when n is odd.','I can calculate the mean using the formula.','I can calculate the mean and standard deviation using the CAS calculator.']
-S.append(today(LI,SC,[('CFAT 1.1.1','· 20 minutes, 1A–1E','#00838F'),('Do Now','· four current VCAA questions','#00838F'),('APK','· Year 11 skills, one VCAA question','var(--apk)'),
+S.append(today(LI,SC,[('CFAT 1.1.1','· 20 minutes, 1A–1E','#00838F'),('APK','· Year 11 skills, one VCAA question','var(--apk)'),
   ('The median','→ WE 14, 15, 16',None),('Range, quartiles and IQR','→ WE 17, 18, 19, 20',None),('The mean','→ WE 21',None),('Mean or median? Standard deviation','· CAS',None),
   ('Exit task','· one VCAA question','var(--exit)'),('Check-in and coursework','','var(--muted)')]))
 S.append(keys([
@@ -50,49 +50,6 @@ S.append(keys([
   [('Median position',FPOS),('Median, n even',FMED),('Range',FRNG),('Interquartile range',FIQR),('Mean',FMEAN),('Standard deviation',FSD,'use CAS: s<sub>x</sub>, not σ<sub>x</sub>')],
   'Cambridge General Mathematics Units 3&amp;4, 1F pp. 44–52'))
 S.append(cfat('CFAT 1.1.1','types of data, displays, log scales','1A–1E',13,'CFAT 1.1.1 (1A-1E): student copy and solutions on the planner'))
-# ================= Do Now
-S.append(qslide('dn','Do Now 1 of 4 · VCAA 2025 NHT Exam 1 Q4','Review of 1C',
-  G('The <em class="v">systolic blood pressure</em> of 50 people was recorded. The results are summarised in the histogram below.',
-    hist('dn1h',{"start":95,"w":5,"v":[4,6,8,10,8,5,4,2,1,1,1],"ymax":12,"ystep":2,"tick":5,"xl":"systolic blood pressure","yl":"frequency","h":330,"W":640,"fs":17}),
-    'For this group of people, the distribution of their <em class="v">systolic blood pressure</em> is best described as'),
-  [('Peak','most values sit at the low end, 100–120.','data-hlbar="#dn1h|3|#d98a1f"'),('Tail','the tail stretches out to the right, towards 150.')],
-  'The distribution is <b>positively skewed</b>.','VCAA 2025 NHT General Mathematics Exam 1 Q4 (NHT report: answers only)',
-  stat=('nht',),mc=['symmetric.','bell-shaped.','positively skewed.','negatively skewed.'],key='C'))
-S.append(qslide('dn','Do Now 2 of 4 · VCAA 2024 NHT Exam 1 Q4','Review of 1E',
-  G('The histogram below shows the distribution of the <em class="v">GDP per capita</em>, in dollars per year, for a sample of 22 countries in 2021 plotted on a logarithmic (base 10) scale.',
-    hist('dn2h',{"start":3.6,"w":0.2,"v":[3,4,4,3,0,3,4,1],"xmax":5.4,"ymax":6,"ystep":1,"tick":0.2,"dec":1,"xl":"log10 (GDP per capita)","yl":"frequency","h":300,"W":600,"fs":16,"col":"#3a3f4b"},'data-lab=\'[[2,"A"],[3,"B"],[5,"C"],[6,"D"],[7,"E"]]\''),
-    'Australia is one of these 22 countries, and its <em class="v">GDP per capita</em> value is $56 281.<br>Which one of the columns marked A, B, C, D or E would contain Australia’s value?'),
-  [('Convert','log<sub>10</sub>(56 281) = 4.750…'),('Locate','4.75 is between 4.6 and 4.8.','data-hlbar="#dn2h|5|#d98a1f"')],
-  'Australia’s value is in column <b>C</b>.','VCAA 2024 NHT General Mathematics Exam 1 Q4 · Data: &lt;data.worldbank.org&gt; (NHT report: answers only)',
-  stat=('nht',),mc=['A','B','C','D','E'],key='C'))
-HAP=[('0.00–0.99',0),('1.00–1.99',1),('2.00–2.99',1),('3.00–3.99',14),('4.00–4.99',30),('5.00–5.99',38),('6.00–6.99',45),('7.00–7.99',12),('8.00–8.99',0),('9.00–10.00',0)]
-HT='<table class="t" style="font-size:15px;margin:6px 0" id="dn3t"><tr><th>Score range</th><th>Frequency</th></tr>'+''.join(f'<tr><td><span data-i="{i}">{a}</span></td><td><span data-i="{i}">{b}</span></td></tr>' for i,(a,b) in enumerate(HAP))+'</table>'
-S.append(qslide('dn','Do Now 3 of 4 · VCAA 2026 Exam 2 Q2b','Review of 1C',
-  '<div class="row" style="gap:18px;align-items:flex-start"><div style="flex:1;font-size:19px">The <em class="v">happiness index</em> scores for 141 countries, based on 2024 data, are summarised in the table below.<br>All <em class="v">happiness index</em> scores range from 0 to 10 and contain two decimal places.<p class="muted" style="font-size:12px">Data: Adapted from World Population Review &lt;worldpopulationreview.com/country-rankings/happiest-countries-in-the-world&gt;</p></div><div>'+HT+'</div></div>'
-  '<div style="font-size:19px"><b>b.</b> A histogram is used to show the distribution of <em class="v">happiness index</em> scores for all 141 countries. The incomplete histogram below has been constructed from the data in the table. Complete the histogram below by adding the missing bars. <span class="muted">(1 mark)</span></div>',
-  [('2.00–2.99','a bar 1 high','data-hi="#dn3t|2|hy" data-showbar="#dn3h|2"'),('4.00–4.99, 5.00–5.99','bars 30 and 38 high','data-hi="#dn3t|4,5|hy" data-showbar="#dn3h|4,5"'),
-   ('7.00–7.99','a bar 12 high','data-hi="#dn3t|7|hy" data-showbar="#dn3h|7"'),
-   ('TMPL',hist('dn3h',{"start":0,"w":1,"v":[0,1,1,14,30,38,45,12,0,0],"ymax":50,"ystep":10,"dec":2,"xl":"happiness index","yl":"frequency","h":300,"W":600,"fs":14,"col":"#b8bcc4"},'data-miss="2,4,5,7"'))],
-  '','VCAA 2026 General Mathematics Exam 2 Q2b (teacher solution; examiner report not yet released)',stat=('new',),cmd=('Complete',1,'the four missing bars')))
-def t3row(lab,a,b,c0):
-    return (f'<tr><th class="l" rowspan="2">{lab}</th>'+''.join(f'<td style="padding:2px 9px"><span data-i="{c0+k}">{x}</span></td>' for k,x in enumerate(a))+'</tr><tr>'
-            +''.join(f'<td style="padding:2px 9px"><span data-i="{c0+6+k}">{x}</span></td>' for k,x in enumerate(b))+'</tr>')
-LLT=['on','before','before','after','after','after']+['after']*6; HHT=['on','before','before','before','after','after','after','on','on','after','after','after']
-T3=f'<table class="t" id="dn4t" style="font-size:19px">{t3row("LLT",LLT[:6],LLT[6:],0)}{t3row("HHT",HHT[:6],HHT[6:],12)}</table>'
-ix=lambda L,w,o:','.join(str(o+i) for i,v in enumerate(L) if v==w)
-T4=('<table class="t" style="font-size:20px"><tr><th rowspan="2" class="l">Occurrence</th><th colspan="2">Frequency</th></tr><tr><th>LLT</th><th>HHT</th></tr>'
-    f'<tr><td class="l">before</td><td>{B("l1",2)}</td><td>{B("h1",3)}</td></tr><tr><td class="l">on</td><td>{B("l2",1)}</td><td>{B("h2",3)}</td></tr>'
-    f'<tr><td class="l">after</td><td>{B("l3",9)}</td><td>{B("h3",6)}</td></tr><tr class="tot"><td class="l">Total</td><td>12</td><td>12</td></tr></table>')
-S.append(qslide('dn','Do Now 4 of 4 · VCAA 2024 NHT Exam 2 Q2a','Review of 1B',
-  G('In the year 2021 there were 12 days where a new moon appeared in Sydney Harbour.<br>For these 12 days the occurrence of the highest high tides (HHT) and lowest low tides (LLT) occurred before, on or after the appearance of the new moon.<br>These records are displayed in the table below.',
-    '<div><p style="font-size:16px;font-weight:700;margin:0 0 4px">Table 3</p>'+T3+'<p class="muted" style="font-size:13px;margin-top:4px">Data: http://www.bom.gov.au/australia/tides/</p></div>',
-    '<b>a.</b> Use the data from Table 3 to complete the following frequency table. <span class="muted">(2 marks)</span>'),
-  [('LLT before','2',f'data-hi="#dn4t|{ix(LLT,"before",0)}|hy" data-fill="l1"'),('LLT on','1',f'data-hi="#dn4t|{ix(LLT,"on",0)}|hb" data-fill="l2"'),
-   ('LLT after','9 · check 2 + 1 + 9 = 12',f'data-hi="#dn4t|{ix(LLT,"after",0)}|hg" data-fill="l3"'),
-   ('HHT before','3',f'data-hi="#dn4t|{ix(HHT,"before",12)}|hy" data-fill="h1"'),('HHT on','3',f'data-hi="#dn4t|{ix(HHT,"on",12)}|hb" data-fill="h2"'),
-   ('HHT after','6 · check 3 + 3 + 6 = 12',f'data-hi="#dn4t|{ix(HHT,"after",12)}|hg" data-fill="h3"'),
-   ('TMPL','<p style="font-size:16px;font-weight:700;margin:0 0 4px">Table 4</p>'+T4)],
-  '','VCAA 2024 NHT General Mathematics Exam 2 Q2a (NHT report: answers only)',stat=('nht',),cmd=('complete',2,'every cell; columns total 12')))
 # ================= APK
 PARTY=[('1',[7,9,9,9]),('2',[0,0,1,1,2,3,6,7,8,9]),('3',[4,4,7]),('4',[5]),('5',[6]),('6',[6])]
 S.append(qslide('apk','APK · Year 11 · Cambridge U1&amp;2 2E #10, 2F #11','What do you remember?',
@@ -126,17 +83,20 @@ S.append(TPL._frame('learn','Learn · 1F','The median: the middle value',
 # ================= WE14 / YT
 A14=[2,9,1,8,3,5,3,8,1]; B14=[10,1,3,4,8,6,10,1,2,9]
 S.append(qslide('we','Worked example 14 · 1F','Finding the median value in a data set',
-  'Order each of the following data sets, locate the median, and then write down its value.'+plist([('a',data('2 9 1 8 3 5 3 8 1')),('b',data('10 1 3 4 8 6 10 1 2 9'))]),
-  [('Order','n = 9 (odd): '+seq('w14a',sorted(A14),20),'data-pk="0"'),fx('Median position',None,F(FR([V('<i>n</i>','9'),' + 1'],['2'])),'5th value','data-pk="0"',ra='data-count="#w14a"'),
-   ('Order','n = 10 (even): '+seq('w14b',sorted(B14),20),'data-pk="1"'),fx('Median position',None,F(FR([V('<i>n</i>','10'),' + 1'],['2'])),'5.5th: average the 5th and 6th','data-pk="1"',ra='data-count="#w14b"')],
+  'Order each of the following data sets, locate the median, and then write down its value.'+plist([('a','<div style="width:540px">'+tiles('w14a',A14,fs=24)+'</div>'),('b','<div style="width:540px">'+tiles('w14b',B14,fs=24)+'</div>')]),
+  [('Order','n = 9 (odd)','data-pk="0" '+tsort('w14a')),fx('Median position',None,F(FR([V('<i>n</i>','9'),' + 1'],['2'])),'5th value','data-pk="0"'),
+   ('Cross off','four pairs from the ends: the 5th value is left','data-pk="0" '+tmed('w14a',label='M = 3')),
+   ('Order','n = 10 (even)','data-pk="1" '+tsort('w14b')),fx('Median position',None,F(FR([V('<i>n</i>','10'),' + 1'],['2'])),'5.5th: average the 5th and 6th','data-pk="1"'),
+   ('Cross off','four pairs from the ends: 4 and 6 are left','data-pk="1" '+tmed('w14b',label='M = 5'))],
   '',f'{CAM} · Example 14',video=vid(14),cmd=('locate',None,'order first, then count in'),
   parts=[('a','M = <b>3</b>'),('b','M = (4 + 6) ÷ 2 = <b>5</b>')]))
-D1E=[3,5,1,10,8,9,6,3,8,6]
+D1E=[3,5,1,10,8,9,6,3,8,6]; YQ=tquart('y14',10,'Q₁ = 3','Q₃ = 8')
 S.append(qslide('yt','You try · Edrolo 1E WE1','Finding the median value in a data set',
-  'Construct a five-number summary for the following data.<div style="margin:12px 0">'+data('3 5 1 10 8 9 6 3 8 6')+'</div>',
-  [('Order','n = 10: '+seq('y14',sorted(D1E),20,gaps=(5,))),('Min, max','1 and 10','data-mark="#y14|0,9|ext"'),
-   ('Median','(10 + 1) ÷ 2 = 5.5th position: (6 + 6) ÷ 2 = 6','data-count="#y14"'),
-   ('Quartiles','Q<sub>1</sub> = median of the lower half = 3 · Q<sub>3</sub> = median of the upper half = 8','data-count="#y14|0|4|q1m #y14|5|9|q1m"')],
+  'Construct a five-number summary for the following data.<div style="margin:12px 0">'+tiles('y14',D1E,fs=26)+'</div>',
+  [('Order','n = 10; min = 1, max = 10',tsort('y14')),
+   ('Median','(10 + 1) ÷ 2 = 5.5th position: (6 + 6) ÷ 2 = 6',tmed('y14',label='M = 6')),
+   ('Halves','n is even: five values in each half',YQ[0]),
+   ('Q₁','median of the lower half = 3',YQ[1]),('Q₃','median of the upper half = 8',YQ[2])],
   'Five-number summary: <b>1, 3, 6, 8, 10</b>',f'{EDR} · 1E Worked example 1',cmd=('Construct',None,'min, Q₁, M, Q₃, max')))
 CRIC=[18,18,19,19,22,22,22,22,23,23,24,25,29]
 S.append(qslide('we','Worked example 15 · 1F','Finding the median value from a dot plot',
@@ -199,6 +159,13 @@ S.append(qslide('we','Worked example 19 · 1F','Finding the IQR from an ordered 
    ('Q₁','midpoint of the bottom 11 = 66','data-count="#w19s|0|10|q1m"'),('Q₃','midpoint of the top 11 = 75','data-count="#w19s|12|22|q1m"'),
    fx('Interquartile range','IQR',F(V('Q<sub>3</sub>','75'),' − ',V('Q<sub>1</sub>','66')),'9')],
   'The IQR is <b>9 years</b>.',f'{CAM} · Example 19 (no matching Edrolo worked example, so no You try)',video=vid(19),cmd=('Find',None,'Q₁, Q₃, then IQR')))
+CQ=tquart('tcat',18,'Q₁ = 2.8','Q₃ = 4.8'); LQ=tquart('tlife',23,'Q₁ = 66','Q₃ = 75')
+S.append(islide('Learn · 1F','Quartiles are medians of the halves: n even vs n odd',
+  '<p style="font-size:20px;margin:0 0 4px"><b>Example 18</b> · 18 cat weights (kg)</p>'+tiles('tcat',[f'{x:.1f}' for x in [1.9, 2.1, 2.3, 2.5, 2.8, 3.0, 3.0, 3.4, 3.9, 3.9, 4.0, 4.4, 4.5, 4.8, 5.0, 5.3, 6.3, 6.4]],fs=19)
+  +'<p style="font-size:20px;margin:10px 0 4px"><b>Example 19</b> · 23 life expectancies (years)</p>'+tiles('tlife',[52, 55, 56, 64, 66, 66, 67, 69, 71, 72, 72, 73, 73, 74, 74, 74, 74, 75, 75, 76, 76, 77, 77],fs=19)
+  +'<div class="row2" style="margin-top:8px">'+isteps([('n = 18: cross off pairs, M = (3.9 + 3.9) ÷ 2 = 3.9',tmed('tcat',label='M = 3.9')),('Split: 9 in each half',CQ[0]),('Q₁ = 2.8',CQ[1]),('Q₃ = 4.8 · IQR = 2.0',CQ[2])])
+  +isteps([('n = 23: cross off pairs, M = 73 (12th)',tmed('tlife',label='M = 73')),('Split: leave the median out, 11 each side',LQ[0]),('Q₁ = 66',LQ[1]),('Q₃ = 75 · IQR = 9',LQ[2])],5)+'</div>',
+  f'{CAM} · Examples 18 and 19 (data from the stem plots, already ordered)'))
 S.append(qslide('we','Worked example 20 · 1F','Finding the median and quartiles from a histogram',
   G('The histogram shows the average number of hours per week a group of 23 people spent on the internet. Find possible values for the median and quartiles of this distribution.',
     '<div style="width:560px">'+hist('w20h',{"start":10,"w":10,"v":[1,0,0,2,4,5,3,6,2],"ymax":7,"ystep":1,"xl":"internet hours per week","yl":"Frequency","h":340,"W":600,"fs":16})+'</div>'),
@@ -237,6 +204,9 @@ S.append(learn('Learn · 1F','Mean or median?',
   '<div class="key frag" style="flex:1"><h4>Clearly skewed and/or outliers</h4>'+hist('mm2',{"start":0,"w":1,"v":[9,8,5,3,2,1,0,0,1],"ymax":10,"ystep":5,"nox":True,"noy":True,"h":170,"W":520,"vline":2.6})+'<p style="font-size:20px">the tail drags the mean: use the <b>median</b></p></div></div>',
   '<b>SOCS:</b> the C line names the measure you chose (‘centred at …, the median’), and the S line uses its partner (IQR with the median).',
   'Key box: Cambridge General Mathematics Units 3&amp;4, 1F p. 52 · Sketches: teacher illustration (dashed line = mean)'))
+S.append(islide('Learn · 1F','Skew drags the mean towards the tail <span class="i-hint">DRAG</span>',
+  shape_slider('shp')+isteps([('Positive skew: the tail pulls the mean above the median',shset('shp',0.8)),('Negative skew: the mean falls below the median',shset('shp',-0.7)),('Symmetric: mean ≈ median',shset('shp',0))]),
+  'Rule: Cambridge General Mathematics Units 3&amp;4, 1F p. 52 · Model distribution: teacher illustration (no data)'))
 S.append(TPL._frame('learn','Learn · 1F','Standard deviation: spread around the mean',
   '<div class="row" style="gap:24px;align-items:center">'+kcard('Standard deviation',FSD)+'<p style="flex:1;font-size:22px;line-height:1.4">Roughly, the typical distance of the data values from the mean. On CAS it is <b>s<sub>x</sub></b>. Same mean, different spread:</p></div>'
   '<div class="xp" id="sdx" style="margin-top:12px"></div><span class="frag" data-act="sd-a"></span><span class="frag" data-act="sd-ad"></span><span class="frag" data-act="sd-b"></span><span class="frag" data-act="sd-bd"></span><span class="frag" data-act="sd-s"></span>',

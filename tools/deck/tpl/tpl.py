@@ -212,17 +212,31 @@ def videos(items=(),blank=8):
     cards=''.join(items)+''.join('<div class="ytc blank"><div class="ytf"></div><div class="ytt">Video to add</div></div>' for _ in range(max(0,blank-len(items))))
     return _frame('','Videos','Videos that might help',f'<div class="ytgrid">{cards}</div>','',cfu='')
 
+# Controls (Rocco, 16 Nov, as in the 10MA deck): click/tap = next step only (double click/tap = next slide) · → single = step,
+# double → = next slide · ← single = back a step, double ← = previous slide, cleared · Backspace single = back a step, double = clear this slide.
+# Clicks on interactive widgets (class "ia": sliders, card sort) never advance. Replayed steps (show(n,true), back()) run with IA.fast = 1 (no delays).
+CONTROLS=[
+ ("if(atEnd){steps(s).forEach(st=>doStep(s,st));step=steps(s).length}",
+  "if(atEnd){IA.fast=1;steps(s).forEach(st=>doStep(s,st));IA.fast=0;step=steps(s).length}"),
+ ("for(let k=0;k<n;k++){doStep(s,all[k]);step++}","IA.fast=1;for(let k=0;k<n;k++){doStep(s,all[k]);step++}IA.fast=0"),
+ ("addEventListener('keydown',e=>{if(e.repeat)return;if(['ArrowRight','PageDown',' ','Enter','ArrowDown'].includes(e.key)){e.preventDefault();press(1)}if(['ArrowLeft','PageUp','ArrowUp','Backspace'].includes(e.key)){e.preventDefault();press(-1)}",
+  "let lastBs={t:0,slide:0};function bksp(){const now=performance.now();if(now-lastBs.t<DBL){lastBs.t=0;show(lastBs.slide);return}lastBs={t:now,slide:i};back()}\n"
+  "addEventListener('keydown',e=>{if(e.repeat)return;if(e.target.closest&&e.target.closest('input,textarea,select'))return;if(['ArrowRight','PageDown',' ','Enter','ArrowDown'].includes(e.key)){e.preventDefault();press(1)}if(['ArrowLeft','PageUp','ArrowUp'].includes(e.key)){e.preventDefault();press(-1)}if(e.key==='Backspace'){e.preventDefault();bksp()}"),
+ ("stage.addEventListener('click',e=>{const vb=","stage.addEventListener('click',e=>{if(e.target.closest('.ia'))return;const vb="),
+ ("stage.addEventListener('contextmenu',e=>{e.preventDefault();","stage.addEventListener('contextmenu',e=>{e.preventDefault();if(e.target.closest('.ia'))return;"),
+]
 def assemble(S,doc_title,out,base=f'{ROOT}/tools/deck/engine.html'):
     """Wrap slides in the slide engine (tools/deck/engine.html: CSS, charts, reveal engine) plus the template CSS/JS."""
     h=open(base,encoding='utf-8').read()
     head,tail=h.split('<!--SLIDES-->')
     head=re.sub(r'<title>.*?</title>',f'<title>{doc_title}</title>',head)
     i=head.find('</style>')  # after the title swap, so the insert point is not shifted
-    css=open(f'{HERE}/tpl.css',encoding='utf-8').read()
+    css=open(f'{HERE}/tpl.css',encoding='utf-8').read()+open(f'{HERE}/ia.css',encoding='utf-8').read()
     head=head[:i]+css+head[i:]
-    for x,y in [('s4apply(s,f);','s4apply(s,f);tplapply(s,f);'),('s4reset(s);','s4reset(s);tplreset(s);')]:
+    for x,y in [('s4apply(s,f);','s4apply(s,f);tplapply(s,f);iaapply(s,f);'),('s4reset(s);','s4reset(s);tplreset(s);iareset(s);')]+CONTROLS:
         assert tail.count(x)==1,x; tail=tail.replace(x,y)
-    tail=tail.replace('/* ---------- reveal engine ---------- */',open(f'{HERE}/tpl.js',encoding='utf-8').read()+'\n/* ---------- reveal engine ---------- */',1)
+    js=open(f'{HERE}/tpl.js',encoding='utf-8').read()+'\n'+open(f'{HERE}/ia.js',encoding='utf-8').read()
+    tail=tail.replace('/* ---------- reveal engine ---------- */',js+'\n/* ---------- reveal engine ---------- */',1)
     open(out,'w',encoding='utf-8').write(head+'\n'.join(S)+tail); return len(S)
 
 # ---------- SOCS: describing numerical data (Rocco, 15 Nov: "like a sock") ----------
@@ -241,3 +255,122 @@ def socs(pre,shape='',outliers='',centre=('',''),spread=('',''),most='',fs=19,va
       ['The ',_blank(pre+'4',spread[0],'range / IQR'),' is ',_blank(pre+'4',spread[1],'value'),'.']+([' Most values lie between ',_blank(pre+'4',most,'a and b'),'.'] if most else [])]
     rows=''.join(f'<div class="socsr"><span class="socsl" style="background:{c}">{l}</span><span class="socsn" style="color:{c}">{n}</span><span class="socst">{"".join(s)}</span></div>' for (l,n,c),s in zip(SOCS_LINES,sent))
     return f'<div class="socs report" style="font-size:{fs}px">{rows}</div>'
+
+# ======================================================================================================
+# Interactive features (16 Nov; ideas from the 10MA deck, 12MAG look). JS: tpl/ia.js · CSS: tpl/ia.css (injected by assemble).
+# Each widget is driven by data attributes on reveal steps, so click-reveal, back() and the PDF final frame all work.
+# Put the attributes on a qslide step (3rd item), on an istep(...), or on an invisible frag: ifr(attrs).
+# Several specs of the SAME attribute on one step: join them with ';' (e.g. data-tsort="#a;#b").
+# Labels may hold html but no '|' or ';'.
+# ======================================================================================================
+import html as _html, builtins as _bi
+def _q(s): return _html.escape(str(s),quote=True)
+def _g(v): return f'{v:g}' if isinstance(v,(int,float)) else str(v)
+def ifr(*attrs):
+    """invisible reveal steps, one per attribute string (e.g. ifr(tsort('t1'), tmed('t1',label='M = 6')))"""
+    return ''.join(f'<span class="frag" {a}></span>' for a in attrs)
+def isteps(items,start=1):
+    """numbered step cards revealed one per click: [(html, attrs), ...]; attrs drive the widget(s) on the slide"""
+    return '<ol class="i-steps">'+''.join(f'<li class="frag" {a}><span class="wn">{k}</span>{t}</li>' for k,(t,a) in enumerate(items,start))+'</ol>'
+def islide(pill,head,body,src,frags='',kind='learn',cfu='disc'):
+    """a free-layout slide for the interactive widgets (same header/title/source zones as every template).
+    kind: learn | we | yt | apk | ex | dn (pill colour)."""
+    return _frame(kind+' islide',pill,head,f'<div class="ibody">{body}</div>{frags}',src,cfu=cfu)
+
+# ---------- 1. data tiles: sort → cross off pairs → middle = median · quartiles = medians of halves ----------
+def tiles(rid,vals,fs=26):
+    """vals in the order given (unordered). Positions a, b below count in the ORDERED list, from 0. Decimals fine."""
+    sp=''.join(f'<span class="i-t" data-v="{float(v)}">{_g(v)}</span>' for v in vals)
+    return f'<div class="i-tiles" id="{rid}" style="--n:{len(vals)};font-size:{fs}px">{sp}</div>'
+def tsort(rid): return f'data-tsort="#{rid}"'
+def tcross(rid,a='',b=''): return f'data-tcross="#{rid}|{a}|{b}"'
+def tmid(rid,a='',b='',label='',cls='mid'): return f'data-tmid="{_q(f"#{rid}|{a}|{b}|{cls}|{label}")}"'
+def tmed(rid,a='',b='',label='',cls='mid'):
+    """one click: cross off smallest + largest pairs inward over positions a..b (blank = all), then light the middle 1 or 2 tiles + label"""
+    return tcross(rid,a,b)+' '+tmid(rid,a,b,label,cls)
+def thalves(rid): return f'data-thalves="#{rid}"'
+def tquart(rid,n,q1='',q3=''):
+    """three clicks for quartiles = medians of the halves (n odd: the median is left out):
+    [split into halves, Q1 (cross + middle of the lower half), Q3 (upper half)]"""
+    h=n//2
+    return [thalves(rid),tmed(rid,0,h-1,q1,'q'),tmed(rid,n-h,n-1,q3,'q')]
+
+# ---------- 2. sliders (teacher drags; data-fset moves it on a click, so the PDF can show a chosen value) ----------
+def _sl(kind,rid,cfg): return f'<div class="i-slider ia{" i-log" if kind=="log" else ""}" id="{rid}" data-kind="{kind}" data-cfg=\'{J(cfg)}\'></div>'
+def fence_slider(rid,data,max,min=0,k=None,step=1,lo=None,hi=None,tick=None,lab=None,xl='',dec=2,W=1000,box=False):
+    """dot plot of data with Q1, Q3, LF, UF and red outlier zones; data[k] (default: the largest) is dragged between lo and hi.
+    Read-out: Q1, Q3, IQR, LF, UF and 'x > UF → x is an outlier' (red) or 'not an outlier' (green).
+    box=True: the same as a box plot (whiskers move to the last non-outlier, outliers become dots) = box_slider."""
+    if k is None: k=data.index(_bi.max(data))
+    cfg=dict(data=list(data),k=k,min=min,max=max,step=step,xl=xl,dec=dec,W=W,mode='box' if box else 'fences')
+    for a,v in (('lo',lo),('hi',hi),('tick',tick),('lab',lab)):
+        if v is not None: cfg[a]=v
+    return _sl('box' if box else 'fences',rid,cfg)
+def box_slider(rid,data,max,**kw): return fence_slider(rid,data,max,box=True,**kw)
+def z_slider(rid,m,s,x0=None,step=None,xl='',dec=2,W=1000):
+    """normal curve, mean m, SD s: drag x (snaps every s/2 by default); shades below x, shows z = (x − x̄)/s and,
+    at whole-number z, the % below/above from the 68–95–99.7% rule"""
+    cfg=dict(m=m,s=s,xl=xl,dec=dec,W=W)
+    if x0 is not None: cfg['x0']=x0
+    if step: cfg['step']=step
+    return _sl('z',rid,cfg)
+def log_slider(rid,lo=0,hi=6,x0=1000,xl='x',W=1000):
+    """two aligned scales: log10(x) (even) and x (1, 10, 100, …): drag to see x ⟷ log10(x)"""
+    return _sl('log',rid,dict(lo=lo,hi=hi,x0=x0,xl=xl,W=W))
+def shape_slider(rid,v0=0,W=1000):
+    """drag to skew a histogram (−1 … 1): shape name, tail arrow, mean (red dashed) vs median (green)"""
+    return _sl('shape',rid,dict(v0=v0,W=W))
+def fset(rid,v): return f'data-fset="#{rid}|{v}"'
+def shset(rid,v): return f'data-shset="#{rid}|{v}"'
+
+# ---------- 3. card sort: click a card then a bucket (or drag it); reveal steps move every card to the right bucket ----------
+CAT_C,NUM_C='#c0632b','#2f6fdf'
+def card_sort(rid,items,buckets=(('Categorical',('Nominal','Ordinal'),CAT_C),('Numerical',('Discrete','Continuous'),NUM_C))):
+    """items: [(text, 'Categorical/Nominal'), ...] (answer path; one level 'Categorical' for a one-step sort).
+    buckets: [(name, (sub-bucket names) or (), colour)]. Sub-buckets open on data-slevel / the step-2 reveal.
+    Steps: sort_steps(rid) (or sort_steps(rid,1) for one level)."""
+    cs=''.join(f'<div class="i-cs" data-a="{_q(a)}">{t}</div>' for t,a in items)
+    bk=''
+    for name,subs,*c in buckets:
+        col=f' style="--c:{c[0]}"' if c else ''
+        sb=''.join(f'<div class="i-bk sub" data-b="{_q(name+"/"+x)}"><h4>{x}</h4><div class="i-tray"></div></div>' for x in subs)
+        bk+=f'<div class="i-bk" data-b="{_q(name)}"{col}><h4>{name}</h4><div class="i-tray"></div>'+(f'<div class="i-subs">{sb}</div>' if subs else '')+'</div>'
+    return f'<div class="i-sort ia" id="{rid}"><div class="i-pool">{cs}</div><div class="i-bks">{bk}</div><div class="i-score"></div></div>'
+def sort_steps(rid,levels=2):
+    """invisible steps: reveal level 1 → (open sub-buckets → reveal level 2). Cards the class placed wrongly keep a red ✗."""
+    a=[f'data-sreveal="#{rid}|1"']
+    if levels>1: a+=[f'data-slevel="#{rid}|2"',f'data-sreveal="#{rid}|2"']
+    return ifr(*a)
+
+# ---------- 4. stem plot built leaf by leaf (leaves fly from the data list) · tally into a frequency table ----------
+def stem_fly(rid,vals,unit=1,key='',fs=26,split=False,data=True):
+    """vals in the order given; unit = the leaf unit (1: 47 → 4 | 7; 0.1: 4.7 → 4 | 7). split=True: split stems (leaves 0–4, 5–9).
+    Rows include empty stems. Steps: leaf(rid,'0-5') · leaf(rid) (all) · lsort(rid) (order each row)."""
+    q=[int(round(float(v)/unit)) for v in vals]; st=[x//10 for x in q]; lf=[x%10 for x in q]
+    keys=[]
+    for s_ in range(min(st),max(st)+1): keys+=[(s_,0),(s_,1)] if split else [(s_,0)]
+    row=lambda k:(st[k],(1 if lf[k]>=5 else 0) if split else 0)
+    tr=''
+    for kk in keys:
+        sp=''.join(f'<span class="i-lf" data-k="{k}" data-l="{lf[k]}">{lf[k]}</span>' for k in range(len(vals)) if row(k)==kk)
+        tr+=f'<tr><td class="st">{kk[0]}</td><td class="lv"><div class="i-lvw">{sp}</div></td></tr>'
+    chips=''.join(f'<span class="i-sch" data-k="{k}">{_g(v)}</span>' for k,v in enumerate(vals))
+    return (f'<div class="i-stem" id="{rid}">'+(f'<div class="i-sdata">{chips}</div>' if data else '')+
+            f'<div><div class="stemcap">{key}</div><table class="stem3" style="font-size:{fs}px">{tr}</table></div></div>')
+def leaf(rid,ks='all'):
+    """ks: 'all' · '0-5' · '0,3,7' (positions in the data list)"""
+    return f'data-leaf="#{rid}|{ks}"'
+def lsort(rid): return f'data-lsort="#{rid}"'
+def tally_set(cid,tid,vals,edges,labels=None,head=('Interval','Frequency'),total=True,fs=22):
+    """returns (data chips html, frequency table html). edges [a0, a1, …]: class i is a_i ≤ x < a_(i+1).
+    Steps: ftally(cid,tid,i[,hist]) per class (lights its values, counts them into row i, grows bar i of a stepped hist) · ftot(tid)."""
+    nb=len(edges)-1; b=[next((i for i in range(nb) if edges[i]<=float(v)<edges[i+1]),-1) for v in vals]
+    labels=labels or [f'{_g(edges[i])}–&lt;{_g(edges[i+1])}' for i in range(nb)]
+    chips=f'<div class="i-dchips" id="{cid}">'+''.join(f'<span class="i-dch" data-b="{x}">{_g(v)}</span>' for v,x in zip(vals,b))+'</div>'
+    rows=''.join(f'<tr><td>{labels[i]}</td><td class="i-fq" data-i="{i}" data-n="{b.count(i)}"></td></tr>' for i in range(nb))
+    if total: rows+=f'<tr><th>Total</th><td class="i-ftot"></td></tr>'
+    return chips,f'<table class="i-ftab" id="{tid}" style="font-size:{fs}px"><tr><th>{head[0]}</th><th>{head[1]}</th></tr>{rows}</table>'
+def ftally(cid,tid,i,hist=None):
+    """hist: id of a hist(...) chart drawn with extra='data-stepped="1"' (bars start at 0)"""
+    return f'data-ftally="#{cid}|#{tid}|{i}"'+(f' data-fgrow="#{hist}|{i}"' if hist else '')
+def ftot(tid): return f'data-ftot="#{tid}"'

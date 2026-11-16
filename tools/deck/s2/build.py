@@ -2,8 +2,9 @@
 Run: python3 tools/deck/s2/build.py
 
 Sources (all checked against the PDFs on G: 15 Nov 2026):
-- Do Now: VCAA 2024 NHT Exam 1 Q2 (NHT report: answer B only) · VCAA 2024 Exam 1 Q1 (report: B 78%, A 18, C 3, D 1)
-          VCAA 2023 Exam 2 Q1a (report: 50% scored 1) · VCAA 2023 Exam 2 Q2ai (report: 95% scored 1)
+- Do Now: removed from the deck (16 Nov); the planner card keeps its Do Now list.
+- Interactives (tpl.py IA helpers, 16 Nov): tally_set on the histogram Learn slide (27 marks), shape_slider + log_slider slides,
+  stem_fly on Example 11 and Edrolo 1C WE2.
 - APK (the planner card's list): Cambridge Units 1&2 Chapter 2 skills checklist 2C #6 + 2D #7 (AFL games), 2D #9 (party ages); Chapter 9 checklist 9D #6, #7 (logs);
   Edrolo Units 1&2 1C Q17 (adapted from VCAA 2016 Exam 2 Q1d: report 52% scored 2/2) and 1C Q15 (adapted from VCAA 2017 Exam 2 Q2b: report 87%). Edrolo's adapted text is used verbatim
   (the originals need the decimal rainfall dot plot / a back-to-back stem plot); goal values read off Edrolo's dot plot (p. 26).
@@ -81,7 +82,7 @@ LI=['To be able to construct frequency tables for discrete numerical data.','To 
 SC=['I can construct a frequency table for discrete numerical data.','I can construct a grouped frequency table.','I can construct a histogram from a grouped frequency table.',
     'I can describe the features of a distribution from a histogram.','I can construct a dot plot.','I can construct a stem plot.',
     'I can use a CAS calculator to find logs.','I can interpret a histogram with a log scale.']
-TD=today(LI,SC,[('Do Now','· four VCAA questions on 1A–1B','#00838F'),('APK','· Year 11 skills and two VCAA questions','var(--apk)'),
+TD=today(LI,SC,[('APK','· Year 11 skills and two VCAA questions','var(--apk)'),
   ('Frequency tables','→ WE 6, 7',None),('Histograms','→ WE 8 · CAS',None),('Describing: SOCS','→ WE 9',None),
   ('Dot plots and stem plots','→ WE 10, 11',None),('Logs and log scales','→ WE 12 · CAS · WE 13',None),('Exit tasks','· three VCAA questions','var(--exit)'),('Check-in and coursework','','var(--muted)')])
 S.append(TD.replace('<div class="col3">','<style>.li9 .card3:first-child li{font-size:17px!important;padding-top:4px!important;padding-bottom:4px!important;line-height:1.3}</style><div class="col3 li9">',1))
@@ -96,47 +97,6 @@ S.append(keys([
   ('Log scale','an axis in powers of 10, for data ranging over several orders of magnitude')],
   [('Percentage frequency',FPCT),('Log of a number',FLOG,'log<sub>10</sub>(100) = 2, since 10<sup>2</sup> = 100'),('Number from its log',FNUM,'log = 3.4 → number = 10<sup>3.4</sup>')],
   'Cambridge General Mathematics Units 3&amp;4, 1C pp. 14–16, 1D pp. 28–29, 1E pp. 34–36 · Charts: teacher illustrations'))
-
-# ================= Do Now 1: VCAA 2024 NHT E1 Q2 (1A)
-S.append(qslide('dn','Do Now 1 of 4 · VCAA 2024 NHT Exam 1 Q2','Review of 1A',
-  'The variables <em class="v">exercise type</em> (aerobic, boxing, circuit) and <em class="v">recovery time</em> (short, medium, long) are',
-  [('Exercise type','aerobic, boxing, circuit only name a group: nominal.'),('Recovery time','short, medium, long have a natural order: ordinal.')],
-  '<em class="v">exercise type</em> is <b>nominal</b> and <em class="v">recovery time</em> is <b>ordinal</b>.',
-  'VCAA 2024 NHT General Mathematics Exam 1 Q2 (NHT report: answers only)',stat=('nht',),
-  mc=['a nominal variable and a numerical variable respectively.','a nominal variable and an ordinal variable respectively.','an ordinal variable and a nominal variable respectively.','both ordinal variables.','both nominal variables.'],key='B'))
-# ================= Do Now 2: VCAA 2024 E1 Q1 (1B)
-S.append(qslide('dn','Do Now 2 of 4 · VCAA 2024 Exam 1 Q1','Review of 1B',
-  ('A group of students were asked to name their favourite colour.<br>The results are displayed in the percentage segmented bar chart below.',
-   '<div style="width:380px">'+seg('d2s',{"bars":[{"v":[35,21,18,14,12]}],"names":["pink","green","blue","yellow","red"],"legendTop":["red","yellow","blue","green","pink"],"yl":"percentage (%)","ticks":10,"h":330})+'</div>',
-   'The percentage of students who named blue as their favourite colour is closest to'),
-  [('Read','the blue segment runs from 56% up to 74%.'),('Subtract','74 − 56 = 18')],
-  '<b>18%</b> of students named blue.','VCAA 2024 General Mathematics Exam 1 Q1 (examiner report)',stat=('mc',78),
-  mc=['14%','18%','26%','74%'],key='B',dist=[18,78,3,1],
-  dis=('A','18% chose this: 14% is the size of the yellow segment (74% to 88%), the one above blue.')))
-# ================= Do Now 3: VCAA 2023 E2 Q1a (1A)
-OY=[(1,'12.9','13.0','5.1','large'),(2,'11.4','11.7','4.8','medium'),(3,'17.4','17.4','6.5','large'),(4,'6.8','7.2','2.9','small'),(5,'9.6','10.1','3.7','medium'),
-    (6,'15.5','15.6','5.7','large'),(7,'9.7','9.9','4.0','small'),(8,'7.0','7.5','2.7','small'),(9,'12.6','12.7','5.5','medium'),(10,'12.5','12.7','5.0','medium'),
-    (11,'10.1','10.5','3.9','medium'),(12,'10.6','10.8','4.1','medium'),(13,'13.0','13.1','5.3','large'),(14,'8.1','8.5','3.5','small'),(15,'14.1','14.2','5.3','large')]
-def oyt(rows): return table(['ID','Weight<br>(g)','Volume<br>(cm<sup>3</sup>)','Image size<br>(megapixels)','Size'],[list(r) for r in rows],fs=13,extra='line-height:1').replace('<td','<td style="padding:1px 6px"').replace('<th>','<th style="padding:2px 5px">')
-S.append(qslide('dn','Do Now 3 of 4 · VCAA 2023 Exam 2 Q1a','Review of 1A',
-  ('<span style="font-size:17px;line-height:1.3;display:block">Data was collected to investigate the use of electronic images to automate the sizing of oysters for sale.<br>The variables in this study were:'
-   '<br>• <em class="v">ID</em>: identity number of the oyster<br>• <em class="v">weight</em>: weight of the oyster in grams (g)<br>• <em class="v">volume</em>: volume of the oyster in cubic centimetres (cm<sup>3</sup>)'
-   '<br>• <em class="v">image size</em>: oyster size determined from its electronic image (in megapixels)<br>• <em class="v">size</em>: oyster size when offered for sale: small, medium or large'
-   '<br>The data collected for a sample of 15 oysters is displayed in Table 1.</span>',
-   f'<div class="row" style="gap:10px;justify-content:center">{oyt(OY[:8])}{oyt(OY[8:])}</div>',
-   'Write down the number of categorical variables in Table 1. <span class="muted">(1 mark)</span>'),
-  [('ID','identity numbers are labels, not quantities: categorical.'),('Size','small, medium or large: categorical.'),('Others','weight, volume and image size are measured: numerical.')],
-  'There are <b>2</b> categorical variables (<em class="v">ID</em> and <em class="v">size</em>).','VCAA 2023 General Mathematics Exam 2 Q1a (examiner report: a number of students didn’t answer; no need to name the variables)',
-  stat=('mark',50),cmd=('Write',1,'just the number')))
-# ================= Do Now 4: VCAA 2023 E2 Q2ai (1B)
-OZ='small small large medium medium medium large small medium medium small medium small small medium medium medium medium small large'.split()
-S.append(qslide('dn','Do Now 4 of 4 · VCAA 2023 Exam 2 Q2ai','Review of 1B',
-  G('The following data shows the sizes of a sample of 20 oysters rated as small, medium or large.',dl('d4d',OZ,5,20),
-    'Use the data above to complete the following frequency table. <span class="muted">(1 mark)</span>'),
-  [('Count small','7',f'data-hi="#d4d|{idx(OZ,lambda v:v=="small")}|hy" data-fill="o1"'),('Count medium','10',f'data-hi="#d4d|{idx(OZ,lambda v:v=="medium")}|hb" data-fill="o2"'),
-   ('Count large','3',f'data-hi="#d4d|{idx(OZ,lambda v:v=="large")}|hg" data-fill="o3"'),('Total','7 + 10 + 3 = 20 · check: 7/20 × 100 = 35%','data-hi="#d4d||" data-fill="o4"'),
-   ('TMPL','<div style="font-size:15px;font-weight:700;margin-bottom:4px">Table 2</div>'+fttab('Size',[('small',B('o1',7),'35'),('medium',B('o2',10),'50'),('large',B('o3',3),'15')],(B('o4',20),'100'),pcth='Percentage (%)',fs=18),'','data-stat="95"')],
-  '','VCAA 2023 General Mathematics Exam 2 Q2ai (examiner report: some students left out the total or wrote tally marks: not accepted)',stat=('mark',95),cmd=('Complete',1,'numbers and the total')))
 
 # ================= APK 1: Cambridge U1&2 2C #6 + 2D #7 (AFL games)
 AFL=[266,259,238,227,210,160,160,159,155,145,133,99,91,80,80,75,73,58,42,36,32,25,32,25,25,21,17,13,10,9,9,4,2]
@@ -242,19 +202,15 @@ MK=[16,11,4,25,15,7,14,13,14,12,15,13,16,14,15,12,18,22,17,18,23,15,13,17,18,22,
 MI=['2–&lt;6','6–&lt;10','10–&lt;14','14–&lt;18','18–&lt;22','22–&lt;26']; MN=[1,1,6,11,3,5]
 mk=lambda v:(v-2)//4
 MCOL=['hy','hb','hg','hc','hy','hb']
-mtab=('<table class="t" style="font-size:19px"><tr><th><em>marks</em></th><th>Frequency</th></tr>'+''.join(f'<tr><td class="l">{B("m0",MI[k])}</td><td>{B(f"m{k+1}",MN[k])}</td></tr>' for k in range(6))+f'<tr><td class="l"><b>Total</b></td><td><b>{B("m7",27)}</b></td></tr></table>')
 def card(n,t,b,a,extra=''): return f'<div class="sc"><div class="n">{n}</div><div class="frag" {a}><div class="st">{t}</div><div class="sb">{b}</div></div>{extra}</div>'
-cnt=''.join(f'<span class="frag" data-hi="#lhd|{idx(MK,lambda v,k=k:mk(v)==k)}|{MCOL[k]}" data-fill="m{k+1}"></span>' for k in range(1,6))
-bars=''.join(f'<span class="frag" data-hi="#lhh|{k}|hy" data-grow="#lhh|{k}"></span>' for k in range(1,6))
-body=('<div class="row" style="gap:26px;align-items:stretch"><div class="key" style="flex:.9"><h4>Data: 27 marks</h4>'+dl('lhd',MK,9,22)+'<div style="display:flex;justify-content:center;margin-top:12px">'+mtab+'</div></div>'
+mch,mtt=tally_set('lhd','lht',MK,[2,6,10,14,18,22,26],head=('<em>marks</em>','Frequency'),fs=19)
+body=('<div class="row" style="gap:26px;align-items:stretch"><div class="key" style="flex:.9"><h4>Data: 27 marks</h4>'+mch+'<div style="display:flex;justify-content:center;margin-top:12px">'+mtt+'</div></div>'
   '<div class="key" style="flex:1.1"><h4>Grouped frequency table → histogram</h4>'+
   hist('lhh',{"start":2,"w":4,"v":MN,"xmin":2,"xmax":26,"ymax":12,"ystep":2,"tick":4,"xl":"marks","yl":"frequency","h":380,"W":620},'data-stepped="1" data-axhide').replace('class="chart"','class="chart noax"')+
   '<ul class="bul" style="font-size:19px;margin:6px 0 0 24px"><li>bars <b>touch</b>: the scale is continuous</li><li>each bar is one interval; its height is the frequency</li></ul></div></div>'
-  '<div class="stepsH">'+card(1,'Intervals','width 4, starting at 2: 2–&lt;6, 6–&lt;10, …','data-fill="m0"')+
-  card(2,'Count','one interval at a time',f'data-hi="#lhd|{idx(MK,lambda v:mk(v)==0)}|hy" data-fill="m1"',cnt)+
-  card(3,'Total','1 + 1 + 6 + 11 + 3 + 5 = 27','data-hi="#lhd||" data-fill="m7"')+
-  card(4,'Axes','marks across (2 to 26), frequency up (to 12)','data-ax="#lhh"')+
-  card(5,'Bars','one bar per interval, height = frequency','data-hi="#lhh|0|hy" data-grow="#lhh|0"',bars+'<span class="frag" data-hi="#lhh||"></span>')+'</div>')
+  '<div class="stepsH">'+card(1,'Intervals and axes','width 4, starting at 2: 2–&lt;6, 6–&lt;10, … · marks across (2 to 26), frequency up (to 12)','data-ax="#lhh"')+
+  card(2,'Count, then draw','one interval at a time: light its values, count them, grow its bar',ftally('lhd','lht',0,'lhh'),''.join(f'<span class="frag" {ftally("lhd","lht",k,"lhh")}></span>' for k in range(1,6)))+
+  card(3,'Total','1 + 1 + 6 + 11 + 3 + 5 = 27',ftot('lht'))+'</div>')
 S.append(TPL._frame('learn','Learn · 1C','The histogram: data → grouped frequency table → graph',body,'Cambridge General Mathematics Units 3&amp;4, 1C pp. 15–16 (27 marks, CAS 1, p. 16)',cfu='disc'))
 # ================= WE8: Cambridge Example 8
 HV=[1,6,8,5,3]
@@ -296,6 +252,11 @@ pic='<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">'+''
 S.append(learn('Learn · 1C','Shape: what to look for',
   '<h4>Shape</h4><p>Is the histogram single-peaked? Does it tail off <b>evenly</b> (symmetric) or mostly in <b>one direction</b> (skewed)?</p>',pic,
   'The tail names the skew. Salaries and house prices: positively skewed. Age at death: negatively skewed.','Cambridge General Mathematics Units 3&amp;4, 1C p. 21 (shapes: teacher illustrations)'))
+# ================= Learn 1C: shape slider (interactive)
+S.append(islide('Learn · 1C','Shape: drag to skew it <span class="i-hint">DRAG</span>',
+  shape_slider('shs')+isteps([('Symmetric: tails off evenly; mean ≈ median',shset('shs',0)),('Positively skewed: long upper tail; the mean is pulled up past the median',shset('shs',0.8)),
+  ('Negatively skewed: long lower tail; the mean is pulled down below the median',shset('shs',-0.7))]),
+  'Cambridge General Mathematics Units 3&amp;4, 1C p. 21 (interactive histogram: teacher illustration)'))
 # ================= Learn 1C: SOCS (Rocco's paradigm for describing numerical data)
 SC4=[('S','Shape','#2f6fdf','symmetric · positively skewed · negatively skewed',mh([1,2,4,7,9,7,4,2,1],h=95)),
      ('O','Outliers','#c0632b','present or not present: they go with the shape',mh([1,0,0,0,3,7,9,6,2],h=95)),
@@ -364,13 +325,12 @@ urow=[(s,[v%10 for v in UR if v//10==s]) for s in range(6)]
 orow=[(s,sorted(l)) for s,l in urow]
 uh,uix=stemB('w11u',urow,'',22,cap=False); oh,oix=stemB('w11o',orow,'Key: 1|2 = 12',22,var='<em>rate</em> (%)')
 S.append(qslide('we','Worked example 11 · 1D','Constructing a stem plot',
-  G('University participation rates (%) in 23 countries are given below.',dl('w11d',UR,12,26),'Display the data in the form of a stem plot.'),
+  G('University participation rates (%) in 23 countries are given below.',stem_fly('w11s',UR,key='Key: 1|2 = 12 &nbsp; <em>rate</em> (%)',fs=24),'Display the data in the form of a stem plot.'),
   [('Stems','values in the units, tens, twenties, … fifties: stems 0 to 5.'),
-   ('Stems 0 and 1','first come first: 26 → stem 2, leaf 6 …',f'data-hi="#w11d|{idx(UR,lambda v:v<20)}|hy" data-show="#w11u|{J2(uix[0]+uix[1])}"'),
-   ('Stem 2','6 0 5 6 6 7 1 2',f'data-hi="#w11d|{idx(UR,lambda v:v//10==2)}|hb" data-show="#w11u|{J2(uix[2])}"'),
-   ('Stems 3 to 5','6 7 0 · (none) · 5',f'data-hi="#w11d|{idx(UR,lambda v:v>=30)}|hg" data-show="#w11u|{J2(uix[3]+uix[4]+uix[5])}"'),
-   ('Order','leaves on each stem in ascending order; add the variable name and a key: 1|2 = 12',f'data-hi="#w11d||" data-show="#w11o|{J2(sum(oix,[]))}"'),
-   ('TMPL','<div class="row" style="gap:26px;align-items:flex-start"><div><div style="font-size:16px;font-weight:700">Unordered</div>'+uh+'</div><div><div style="font-size:16px;font-weight:700">Ordered</div>'+oh+'</div></div>')],
+   ('First values','first come first: 26 → stem 2, leaf 6 · 3 → stem 0, leaf 3 …',leaf('w11s','0-7')),
+   ('The rest','every value gets a leaf on its stem; stem 4 stays empty',leaf('w11s','8-22')),
+   ('Order','leaves on each stem in ascending order; add the variable name and a key: 1|2 = 12',lsort('w11s')),
+   ('ANS','Ordered stem plot (left): stems 0 to 5, key 1|2 = 12.')],
   '',f'{CAM} · Example 11 (p. 30)',video='Cambridge GO · Example 11 (1D Resources)',cmd=('Display',None,'stems, ordered leaves, key')))
 # ================= You try: Edrolo 1C WE2 (stem plot)
 EX=[55,68,76,90,83,89,75,66,59,84,48,62,58,95,80,77,61,92,99,63,84,65,70,81,96]
@@ -378,13 +338,13 @@ erow=[(s,sorted(v%10 for v in EX if v//10==s)) for s in range(4,10)]
 eh,eix=stemB('y11s',erow,'Key: 4 | 8 = 48%',22)
 above=[i for s,(st,lv) in enumerate(erow) for i,l in zip(eix[s],lv) if st*10+l>70]
 S.append(qslide('yt','You try · Edrolo 1C WE2','Constructing a stem plot',
-  G('Ms Smyth’s maths class of 25 students sat their end-of-year exam. Their results (%) were recorded.',dl('y11d',EX,13,24),
+  G('Ms Smyth’s maths class of 25 students sat their end-of-year exam. Their results (%) were recorded.',stem_fly('y11s',EX,key='Key: 4 | 8 = 48%',fs=22),
     plist([('a.','Construct a stem plot to display this data.'),('b.','How many students scored above 70% on the exam?')])),
   [('Stems','two-digit values from 48 to 99: stems 4 to 9 (tens), leaves = ones; add a key.','data-pk="0"'),
-   ('Stems 4 to 6','8 · 5 8 9 · 1 2 3 5 6 8',f'data-pk="0" data-hi="#y11d|{idx(EX,lambda v:v<70)}|hy" data-show="#y11s|{J2(eix[0]+eix[1]+eix[2])}"'),
-   ('Stems 7 to 9','0 5 6 7 · 0 1 3 4 4 9 · 0 2 5 6 9',f'data-pk="0" data-hi="#y11d|{idx(EX,lambda v:v>=70)}|hb" data-show="#y11s|{J2(eix[3]+eix[4]+eix[5])}"'),
-   ('TMPL','<b>a.</b>'+eh),
-   ('Above 70','leaves greater than 0 on stem 7, and every leaf on stems 8 and 9: 3 + 6 + 5',f'data-pk="1" data-hi="#y11s|{J2(above)}|hg"'),('ANS','<b>b.</b> &nbsp;<b>14 students</b>')],
+   ('Leaves','each value flies to its stem, in the order given',f'data-pk="0" {leaf("y11s")}'),
+   ('Order','leaves on each stem in ascending order',f'data-pk="0" {lsort("y11s")}'),
+   ('ANS','<b>a.</b> &nbsp;Ordered stem plot (left) with key 4 | 8 = 48%.'),
+   ('Above 70','leaves greater than 0 on stem 7, and every leaf on stems 8 and 9: 3 + 6 + 5','data-pk="1"'),('ANS','<b>b.</b> &nbsp;<b>14 students</b>')],
   '',f'{EDR} · 1C Worked example 2 (pp. 21–22)',cmd=('Construct',None,'stems, ordered leaves, key')))
 
 # ================= Learn 1E: logs are powers of 10
@@ -410,6 +370,11 @@ S.append(learn('Learn · 1E','Why use a log scale?',
   '<h4>Data over several orders of magnitude</h4><p>0.01, 0.1, 1, 10, 100, 1000, 10 000, 100 000, 1 000 000 plotted on an ordinary scale, then as their logs.</p>',
   f'<div class="key frag"><h4>Ordinary scale: eight numbers bunch up at 0, one million sits alone</h4>{L1}</div><div class="key frag" style="margin-top:14px"><h4>Log scale: evenly spread</h4>{L2}</div>',
   'A positively skewed histogram often becomes roughly symmetric on a log scale.','Cambridge General Mathematics Units 3&amp;4, 1E pp. 35–36'))
+# ================= Learn 1E: log slider (interactive); values from Examples 12 and 13
+S.append(islide('Learn · 1E','Number ⟷ log: drag along the scale <span class="i-hint">DRAG</span>',
+  log_slider('lgs',-1,6,x0=10,xl='number')+isteps([('45 → log 45 = 1.65… (Example 12)',fset('lgs',45)),('10 000 → log = 4 (Example 13a)',fset('lgs',10000)),
+  ('log = 3.4 → 10<sup>3.4</sup> = 2512 (Example 13d, the elephant)',fset('lgs',2512))]),
+  'Cambridge General Mathematics Units 3&amp;4, 1E pp. 35–38 (values from Examples 12 and 13)'))
 # ================= WE12: Cambridge Example 12
 S.append(qslide('we','Worked example 12 · 1E','Using a CAS calculator to find logs',
   plist([('a','Find the log of 45, correct to two significant figures.'),('b','Find the number with log equal to 2.7125, correct to the nearest whole number.')]),

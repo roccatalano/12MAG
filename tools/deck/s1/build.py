@@ -52,7 +52,7 @@ LI=['To be able to classify data as categorical or numerical.','To be able to fu
     'To be able to answer statistical questions about a categorical variable.']
 SC=['I can identify types of data.','I can construct a frequency table for categorical data.','I can construct a bar chart from a frequency table.',
     'I can construct a percentage segmented bar chart from a frequency table.','I can describe the distribution of a categorical variable.']
-S.append(today(LI,SC,[('APK','· Year 11 types of data, two VCAA questions','var(--apk)'),('Types of data','→ WE 1 · CAS set-up',None),('Frequency tables','→ WE 2',None),
+S.append(today(LI,SC,[('APK','· Year 11 types of data, two VCAA questions','var(--apk)'),('Types of data','→ WE 1 · card sort · CAS set-up',None),('Frequency tables','→ WE 2',None),
   ('Bar charts','→ WE 3',None),('Segmented bar charts','→ WE 4',None),('Describing the distribution','→ WE 5',None),('Exit tasks','· three VCAA questions','var(--exit)'),('Check-in and coursework','','var(--muted)')]))
 FPCT=F('percentage frequency = ',FR(['number of times a value occurs'],['total number of values']),' × 100%')
 FCNT=F('number = ',FR(['percentage'],['100']),' × total')
@@ -136,6 +136,14 @@ YT1=('<div style="flex:1;display:flex;flex-direction:column;justify-content:spac
 S.append(qslide('yt','You try · Edrolo 1A WE1, WE2, WE3','Types of data',YT1,[],'',f'{EDR} · 1A Worked examples 1, 2 and 3 (pp. 2–4)',cmd=('Classify',None,'one type for each'),
   parts=[('1a','<b>Categorical</b>: grouped into pasta types.'),('1b','<b>Numerical</b>: candles are counted.'),('2a','<b>Nominal</b>: shoe types have no natural order.'),
          ('2b','<b>Ordinal</b>: small → medium → large.'),('3a','<b>Continuous</b>: length is measured and can be any value.'),('3b','<b>Discrete</b>: racquets are counted.')]))
+# ================= Interactive: card sort (two levels) of the APK and You try items, verbatim
+SORT=[('<em class="v">type of pasta</em>','Categorical/Nominal'),('<em class="v">number of candles</em>','Numerical/Discrete'),
+  ('<em class="v">type of shoe</em> (runners, boots, sandals, slides)','Categorical/Nominal'),('<em class="v">shirt size</em> (small, medium, large)','Categorical/Ordinal'),
+  ('<em class="v">length</em> (m)','Numerical/Continuous'),('<em class="v">number of tennis racquets</em>','Numerical/Discrete'),
+  ('The time between people arriving at the coffee shop.','Numerical/Continuous'),('The number of people in the queue at the coffee shop.','Numerical/Discrete'),
+  ('Customer’s coffee preference (latte, cappuccino, black).','Categorical/Nominal'),('Customer’s rating of the coffee (excellent, quite good, not that good).','Categorical/Ordinal')]
+S.append(islide('Learn · 1A · card sort','Sort it: categorical or numerical, then which kind? <span class="i-hint">CLICK A CARD, THEN A BUCKET (OR DRAG)</span>',
+  card_sort('s1sort',SORT),f'{EDR} · 1A Worked examples 1, 2 and 3 (pp. 2–4) · Cambridge General Mathematics Units 1&amp;2 · Chapter 2 skills checklist, 2A #1',frags=sort_steps('s1sort')))
 # ================= CAS: setting up the statistics app (planner/cas-skills.json: stats-list)
 CS=[x for x in json.load(open(os.path.join(ROOT,'planner','cas-skills.json')))['skills'] if x['id']=='stats-list'][0]
 yid=lambda u:u.split('v=')[1].split('&')[0]

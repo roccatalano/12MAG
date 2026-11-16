@@ -29,15 +29,15 @@ def qslide(*a,**k):
 S=[]
 # ================= opening
 S.append(title(5,'The normal distribution and standardised scores','Cambridge General Mathematics Units 3&amp;4 · 1H The normal distribution and the 68–95–99.7% rule · 1I Populations and samples','S5',
-  flow=('CFAT','Do Now','APK','Learn','Worked examples','You try','Exit tasks')))
+  flow=('CFAT','APK','Learn','Worked examples','You try','Exit tasks')))
 LI=['To be able to introduce the normal model for bell-shaped distributions.',
     'To be able to use the 68–95–99.7% rule to estimate percentages and give meaning to the standard deviation.',
     'To be able to calculate standardised scores and use them to compare values across distributions.']
 SC=['I can apply the 68-95-99.7% rule.','I can calculate standardised scores.','I can use standardised scores to make comparisons.',
     'I can use standard scores to determine percentages.','I can convert standardised scores into actual scores.','I can solve for the values of the mean and standard deviation.',
     'I can explain the difference between a population and a sample.']
-S.append(today(LI,SC,[('CFAT 1.1.2','· 20 minutes','#00838F'),('Do Now','· four current VCAA questions','#00838F'),('APK','· Year 11 normal distribution','var(--apk)'),
-  ('The 68–95–99.7% rule','→ WE 28',None),('Standardised scores','→ WE 29, 30 · CAS',None),('From z to percentages','→ WE 31',None),
+S.append(today(LI,SC,[('CFAT 1.1.2','· 20 minutes','#00838F'),('APK','· Year 11 normal distribution','var(--apk)'),
+  ('The 68–95–99.7% rule','· slider → WE 28',None),('Standardised scores','· slider → WE 29, 30 · CAS',None),('From z to percentages','→ WE 31',None),
   ('Actual scores; finding x̄ and s','→ WE 32, 33, 34',None),('Populations and samples','· 1I',None),('Exit tasks','· two VCAA questions','var(--exit)'),('Check-in and coursework','','var(--muted)')]))
 S.append(cfat('CFAT 1.1.2','median, IQR, boxplots, SOCS','1F–1G',14,'CFAT 1.1.2 (lessons/CFAT-1.1.2) · Edrolo U3&amp;4 exercise questions'))
 # ---------- key definitions and formulas
@@ -55,55 +55,6 @@ S.append(keys([
    ('Standardised score',FZ),('Actual score',FX),
    ('Tail percentages','above +1 SD: 16% · above +2 SD: 2.5% · above +3 SD: 0.15%','the same below −1, −2, −3 SD')],
   'Cambridge General Mathematics Units 3&amp;4, 1H pp. 76–83 · Curves: teacher illustrations'))
-# ================= Do Now 1: VCAA 2025 E1 Q1
-S.append(qslide('dn','Do Now 1 of 4 · VCAA 2025 Exam 1 Q1','Review of 1F',
-  ('At a fruit shop, customers can buy avocados in bags.<br>The bag size ranges from one to six avocados per bag.<br>The histogram below shows the number of customers who bought each bag size on a particular day.',
-   hist('d1',{"start":0.5,"w":1,"v":[4,11,3,9,5,7],"xmin":0.5,"xmax":6.5,"nox":1,"clab":["1","2","3","4","5","6"],"ymax":12,"ystep":2,"xl":"bag size (number of avocados)","yl":"number of customers","h":330,"W":640,"fs":17,"L":84,"col":"#a9a9a9"}),
-   'The median bag size bought by customers on the day was'),
-  [('Count','running totals across the columns: 4, 15, 18, 27, 32, 39 → n = 39 customers.','data-cum="#d1"'),
-   fx('Median position',None,F(FR([V('<i>n</i>','39'),' + 1'],['2'])),'20th'),
-   ('Find','the 20th customer: 18 are in bag sizes 1–3, and 27 in bag sizes 1–4, so the 20th bought a bag of 4.','data-hlbar="#d1|3|#d98a1f"')],
-  'The median bag size is <b>4</b> avocados.','VCAA 2025 General Mathematics Exam 1 Q1 (examiner report)',
-  stat=('mc',75),mc=['2','3','3.5','4'],key='D',dist=[4,5,17,75],
-  dis=('C','3.5 is the middle of the bag sizes 1 to 6, not the middle customer. The median counts the 39 customers.')))
-# ================= Do Now 2: VCAA 2024 E1 Q4
-S.append(qslide('dn','Do Now 2 of 4 · VCAA 2024 Exam 1 Q4','Review of 1E',
-  ('The histogram below displays the population density, in people per km<sup>2</sup>, of the 27 countries in the European Union in 2021. The histogram has a logarithmic (base 10) scale.',
-   hist('d2',{"start":1.0,"w":0.2,"v":[0,2,2,2,6,9,3,1,1,0,0,1,0],"xmax":3.6,"tick":0.2,"dec":1,"ymax":10,"ystep":2,"xl":"log10 (population density)","yl":"frequency","h":320,"W":700,"fs":15,"col":"#333"}),
-   'There is one outlier at the upper end of the histogram.<br>This value could be'),
-  [('Outlier','the column on its own is from 3.2 to 3.4 on the log<sub>10</sub> scale.','data-hlbar="#d2|11|#d98a1f"'),
-   ('Convert','log<sub>10</sub>(330) = 2.52 · log<sub>10</sub>(1330) = 3.12 · log<sub>10</sub>(<b>2030</b>) = <b>3.31</b> · log<sub>10</sub>(2730) = 3.44'),
-   ('Check','only 3.31 is from 3.2 up to 3.4.')],
-  'The outlier could be <b>2030</b> people per km<sup>2</sup>.','VCAA 2024 General Mathematics Exam 1 Q4 (examiner report) · Data: Adapted from &lt;https://ec.europa.eu/eurostat&gt;',
-  stat=('mc',68),mc=['330','1330','2030','2730'],key='C',dist=[11,14,68,6],
-  dis=('B','log<sub>10</sub>(1330) = 3.12 is in the empty 3.0–3.2 column, not the outlier’s column.')))
-# ================= Do Now 3 / 4: VCAA 2025 E2 Q1ci, Q1cii
-apt=['350 000','490 000','500 000','620 000','720 000','830 000','875 000','995 000','1 100 000','1 520 000']
-hou=['800 000','840 000','920 000','920 000','1 010 000','1 263 000','1 398 000','1 460 000','1 540 000','1 540 000']
-def t1(rid):
-    tb=lambda rows,o:'<table class="t tight" style="font-size:12px;line-height:1.05"><tr><th>Price ($)</th><th>Type</th></tr>'+''.join(f'<tr><td style="text-align:right"><span data-i="{o+k}" style="padding:0 4px;border-radius:5px;border:1.5px solid transparent">{p}</span></td><td>{t}</td></tr>' for k,(p,t) in enumerate(rows))+'</table>'
-    return f'<div class="tbl1" id="{rid}" style="justify-content:center;display:flex;gap:18px">{tb([(p,"apartment") for p in apt],0)}{tb([(p,"house") for p in hou],10)}</div>'
-def t2(v,hl=False):
-    st=' style="background:#fff3b0;font-weight:700"' if hl else ''
-    return ('<div style="margin-top:8px"><b>Table 2</b><table class="t" style="font-size:16px;margin-top:4px"><tr><th>Type of home</th><th>Standard deviation of sale price ($)</th></tr>'
-            f'<tr><td>house</td><td>300 911</td></tr><tr><td>apartment</td><td{st}>{v}</td></tr></table></div>')
-INTRO='Table 1, below, shows the prices in dollars, <em class="v">price</em>, for a sample of 20 homes sold in an inner Melbourne suburb during 2017.<br>The type of home sold is either an apartment or a house.'
-DSRC='Data: Adapted from &lt;www.kaggle.com/datasets/anthonypino/melbourne-housing-market&gt;'
-S.append(qslide('dn','Do Now 3 of 4 · VCAA 2025 Exam 2 Q1c.i','Review of 1F',
-  (INTRO,t1('d3'),f'<b>c.</b> i. Complete the table below by finding the standard deviation, to the nearest whole number, for the sale price of apartments in the sample. <span class="muted">(1 mark)</span>{t2("&nbsp;")}'),
-  [('CAS','enter the 10 apartment prices in a list. Don’t calculate the SD by hand.','data-mark="#d3|0,1,2,3,4,5,6,7,8,9|mid"'),
-   ('CAS','One-variable statistics → <i>s<sub>x</sub></i> = 346 466.29'),
-   ('Round','to the nearest whole number: 346 466.')],
-  'The standard deviation for apartments is <b>$346 466</b>.',f'VCAA 2025 General Mathematics Exam 2 Q1ci (examiner report) · {DSRC}',
-  stat=('mark',69),cmd=('Complete',1,'fill in the value, from CAS')))
-S.append(qslide('dn','Do Now 4 of 4 · VCAA 2025 Exam 2 Q1c.ii','Review of 1F',
-  (INTRO+'<br>Table 2 gives the standard deviation of the sale prices for each type of home (apartment value from part c.i).',t2('346 466'),
-   'ii. Using the information in Table 2, comment on the relative spread in the distribution of the sale prices of houses compared with apartments in this sample. <span class="muted">(1 mark)</span>'),
-  [('Compare','300 911 (houses) &lt; 346 466 (apartments).'),
-   ('Meaning','a smaller standard deviation means the values sit closer to the mean: less spread.'),
-   ('Use Table 2','the question says to use Table 2, so use the SD only, not the range or IQR.')],
-  'House sale prices have a lower spread than apartment sale prices, as shown by the lower standard deviation.',f'VCAA 2025 General Mathematics Exam 2 Q1cii (examiner report) · {DSRC}',
-  stat=('mark',47),cmd=('Comment',1,'a comparison, using the given statistic')))
 # ================= APK 1: Cambridge U1&2 2G #13
 S.append(qslide('apk','APK · Year 11 · Cambridge U1&amp;2 2G #13','The 68–95–99.7% rule',
   ('Suppose the distribution of weights for a type of cat is approximately symmetric and bell shaped with a mean of 3.5 kg and a standard deviation of 0.5 kg.',
@@ -135,6 +86,13 @@ S.append(learn('Learn · 1H','The normal distribution and the 68–95–99.7% ru
          f'<span class="frag" {sh("l1",-1,1,"68%")}></span><span class="frag" {sh("l1",-2,2,"95%")}></span><span class="frag" {sh("l1",-3,3,"99.7%")}></span>'
          f'<span class="frag" data-nclear="#l1" data-nshow="#l1|pct"></span>'),
   cards=[kcard('68–95–99.7% rule','within 1, 2, 3 SDs of the mean: 68%, 95%, 99.7%'),kcard('Tail percentages','16% · 2.5% · 0.15% in each tail')]))
+# ================= Interactive: 68–95–99.7% rule on the Example 28 pizza curve
+S.append(islide('Learn · 1H · interactive','The rule on a real curve: pizza delivery times <span class="i-hint">DRAG THE HANDLE</span>',
+  z_slider('zs28',25,5,x0=25,xl='delivery time (minutes)')+isteps([
+   ('<i>x</i> = 30 min is one SD above the mean: 84% below, 16% above',fset('zs28',30)),
+   ('<i>x</i> = 35 min is two SDs above: 97.5% below, 2.5% above',fset('zs28',35)),
+   ('<i>x</i> = 10 min is three SDs below: 0.15% below',fset('zs28',10))]),
+  'Values: Cambridge General Mathematics Units 3&amp;4, 1H Example 28 (mean 25 minutes, SD 5 minutes)'))
 # ================= WE28
 S.append(qslide('we','Worked example 28 · 1H','Applying the 68–95–99.7% rule',
   ('The distribution of delivery times for pizzas made by House of Pizza is approximately normal, with a mean of 25 minutes and a standard deviation of 5 minutes.',
@@ -168,6 +126,13 @@ S.append(learn('Learn · 1H','Standardised scores (z-scores)',
   'Cambridge General Mathematics Units 3&amp;4, 1H p. 80 (IQ illustration) · Curve: teacher illustration',
   frags='<span class="frag" data-nshow="#l2|z"></span><span class="frag" data-nmark="#l2|1|115:_z_=_1"></span><span class="frag" data-nmark="#l2|-2|70:_z_=_−2|#1f4fb0"></span>',
   cards=[kcard('Standardised score',FZ)]))
+# ================= Interactive: z-scores on the Example 29 heights
+S.append(islide('Learn · 1H · interactive','Standardised scores: how many SDs from the mean? <span class="i-hint">DRAG THE HANDLE</span>',
+  z_slider('zs29',160,8,x0=160,xl='height (cm)')+isteps([
+   ('<i>x</i> = 168 cm: one SD above, <i>z</i> = 1',fset('zs29',168)),
+   ('<i>x</i> = 144 cm: two SDs below, <i>z</i> = −2',fset('zs29',144)),
+   ('<i>x</i> = 172 cm: <i>z</i> = 1.5 (Example 29a, next)',fset('zs29',172))]),
+  'Values: Cambridge General Mathematics Units 3&amp;4, 1H Example 29 (mean 160 cm, SD 8 cm)'))
 # ================= WE29
 S.append(qslide('we','Worked example 29 · 1H','Calculating standard scores',
   ('The heights of a group of young women have a mean of <i>x̄</i> = 160 cm and a standard deviation of <i>s</i> = 8 cm. Determine the standard or z-scores of a woman who is:',

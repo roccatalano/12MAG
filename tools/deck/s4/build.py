@@ -19,7 +19,7 @@ LI=['To be able to construct the boxplot for displaying the distribution of a nu
 SC=['I can construct a boxplot from a five-number summary.','I can construct a boxplot with outliers from data using the CAS calculator.',
     'I can read values from a boxplot.','I can estimate percentages from a boxplot.','I can use boxplots to describe a distribution without outliers.',
     'I can use boxplots to describe a distribution with outliers.','I can use boxplots to answer statistical questions.']
-S.append(today(LI,SC,[('Do Now','· four current VCAA questions','#00838F'),('APK','· Year 11 boxplots','var(--apk)'),('Five-number summary and the boxplot','→ WE 22',None),
+S.append(today(LI,SC,[('APK','· Year 11 boxplots','var(--apk)'),('Five-number summary and the boxplot','→ WE 22',None),
   ('Outliers and fences','· CAS',None),('Reading a boxplot','→ WE 23, 24',None),('Shape from a boxplot','→ WE 25, 26, 27',None),('Exit tasks','· two VCAA questions','var(--exit)'),('Check-in and coursework','','var(--muted)')]))
 mini=lambda rid,c:box(rid,dict({"min":0,"max":20,"step":1,"lab":100,"W":380,"fs":17,"top":44,"bh":26,"nolab":1},**c))
 FPOS=F('position = ',FR(['<i>n</i> + 1'],['2'])); FMED=F('M = ',FR(['first middle + second middle'],['2']))
@@ -32,55 +32,10 @@ S.append(keys([
   ('Whiskers','run from the box to the smallest and largest values that are not outliers',mini('k4',{"lw":5,"q1":7,"m":9,"q3":11,"uw":13,"out":[18],"marks":[{"p":"w","x":13,"t":"last non-outlier","col":"#1f4fb0","show":1}]}))],
   [('Median position',FPOS),('Median, n even',FMED),('Interquartile range',FIQR),('Range',FRNG),('Lower fence',FLF,RLF),('Upper fence',FUF,RUF)],
   'Cambridge General Mathematics Units 3&amp;4, 1F pp. 44–47 and 1G pp. 61–64 · Boxplots: teacher illustrations'))
-# ================= Do Now 1: VCAA 2023 E1 Q1
-runners=[134]*3+[135]*8+[136]*11+[137]*6+[138]*4+[139]*2+[140]*2+[141,142,143,146]
-S.append(qslide('dn','Do Now 1 of 4 · VCAA 2023 Exam 1 Q1','Review of 1F',
-  ('The dot plot below shows the times, in seconds, of 40 runners in the qualifying heats of their 800 m club championship.',
-   dot('d1',{"min":134,"max":146,"vals":runners,"xl":"time (seconds)","W":900,"h":380,"r":12}),'The median time, in seconds, of these runners is'),
-  [('Count','n = 40 runners (40 dots).'),
-   fx('Median position',None,F(FR([V('<i>n</i>','40'),' + 1'],['2'])),'20.5th',ra='data-dsplit="#d1|19|20.5th"'),
-   ('Find','the 20th and 21st dots, counting from the left: both are in the 136 column.','data-dotmark="#d1|19,20"'),
-   fx('Median, n even',None,F(FR([V('20th','136'),' + ',V('21st','136')],['2'])),'136')],
-  'The median time is <b>136 seconds</b>.','VCAA 2023 General Mathematics Exam 1 Q1 (examiner report)',
-  stat=('mc',90),mc=['135.5','136','136.5','137','137.5'],key='B',dist=[1,90,6,2,1],
-  dis=('C','136.5 averages 136 and 137, as if the middle sat between two columns. The 20th and 21st dots are both in the 136 column.')))
-# ================= Do Now 2: VCAA 2023 E1 Q6
-S.append(qslide('dn','Do Now 2 of 4 · VCAA 2023 Exam 1 Q6','Review of 1E',
-  ('The histogram below displays the distribution of prices, in dollars, of the cars for sale in a used-car yard.<br>The histogram has a logarithm (base 10) scale.',
-   hist('d2',{"start":3.0,"w":0.5,"v":[2,6,5,4,2,1,0],"xmax":6.5,"ymax":7,"ystep":1,"tick":0.5,"dec":1,"xl":"log10 (price)","yl":"frequency","h":330,"W":620,"fs":17,"col":"#a9a9a9"},'data-hidelab=\'["6.5","1","3","5","7"]\''),
-   'Six of the cars in the yard have the following prices: $2450 · $3175 · $4999 · $8925 · $10 250 · $105 600<br>How many of the six car prices listed above are in the modal class interval?'),
-  [('Modal class','the tallest column: log<sub>10</sub>(price) from 3.5 to 4.0.','data-hlbar="#d2|1|#d98a1f"'),
-   ('Convert','log<sub>10</sub>(2450) = 3.39 · log<sub>10</sub>(3175) = <b>3.50</b> · log<sub>10</sub>(4999) = <b>3.70</b> · log<sub>10</sub>(8925) = <b>3.95</b> · log<sub>10</sub>(10 250) = 4.01 · log<sub>10</sub>(105 600) = 5.02'),
-   ('Count','3.50, 3.70 and 3.95 are from 3.5 up to 4.0: three prices.')],
-  'Three of the six prices ($3175, $4999, $8925) are in the modal class.','VCAA 2023 General Mathematics Exam 1 Q6 (examiner report)',
-  stat=('mc',54),mc=['1','2','3','4','6'],key='C',dist=[9,11,54,13,13],
-  dis=('D','$10 250 looks close, but log<sub>10</sub>(10 250) = 4.01 is just past 4.0, so it is in the next column.')))
-# ================= Do Now 3 / 4: VCAA 2025 E2 Q1a, Q1b
-apt=['350 000','490 000','500 000','620 000','720 000','830 000','875 000','995 000','1 100 000','1 520 000']
-hou=['800 000','840 000','920 000','920 000','1 010 000','1 263 000','1 398 000','1 460 000','1 540 000','1 540 000']
-RK={}
-for i,v in enumerate(sorted([(int(p.replace(' ','')),k) for k,p in enumerate(apt+hou)])): RK[v[1]]=i
-def t1(rid):
-    tb=lambda rows,o:'<table class="t" style="font-size:15px"><tr><th>Price ($)</th><th>Type</th></tr>'+''.join(f'<tr><td style="text-align:right"><span data-i="{RK[o+k]}" style="padding:0 4px;border-radius:5px;border:1.5px solid transparent">{p}</span></td><td><span class="ty">{t}</span></td></tr>' for k,(p,t) in enumerate(rows))+'</table>'
-    return f'<div class="tbl1" id="{rid}" style="justify-content:center">{tb([(p,"apartment") for p in apt],0)}{tb([(p,"house") for p in hou],10)}</div>'
-INTRO='Table 1, below, shows the prices in dollars, <em class="v">price</em>, for a sample of 20 homes sold in an inner Melbourne suburb during 2017.<br>The type of home sold is either an apartment or a house.'
-DSRC='Data: Adapted from &lt;www.kaggle.com/datasets/anthonypino/melbourne-housing-market&gt;'
-S.append(qslide('dn','Do Now 3 of 4 · VCAA 2025 Exam 2 Q1a','Review of 1F',
-  (INTRO,t1('d3'),'<b>a.</b> Find the median, in dollars, of the variable <em class="v">price</em>. <span class="muted">(1 mark)</span>'),
-  [('Count','n = 20 homes.'),
-   fx('Median position',None,F(FR([V('<i>n</i>','20'),' + 1'],['2'])),'10.5th'),
-   ('Find','the 10th and 11th prices in order: both are 920 000.','data-mark="#d3|9,10|mid"'),
-   fx('Median, n even',None,F(FR([V('10th','920 000'),' + ',V('11th','920 000')],['2'])),'920 000')],
-  'The median price is <b>$920 000</b>.',f'VCAA 2025 General Mathematics Exam 2 Q1a (examiner report) · {DSRC}',
-  stat=('mark',84),cmd=('Find',1,'the value, with working')))
-S.append(qslide('dn','Do Now 4 of 4 · VCAA 2025 Exam 2 Q1b','Review of 1A',
-  (INTRO,t1('d4'),'<b>b.</b> State whether the variable <em class="v">type</em> is numerical, nominal or ordinal. <span class="muted">(1 mark)</span>'),
-  [('Values','<em class="v">type</em> takes the values apartment and house: names, not numbers, so it is categorical.'),
-   ('Order?','apartment and house have no natural order, so the categories are nominal.')],
-  'The variable <em class="v">type</em> is <b>nominal</b>.',f'VCAA 2025 General Mathematics Exam 2 Q1b (examiner report) · {DSRC}',
-  stat=('mark',77),cmd=('State',1,'just the answer')))
 # ================= APK 1 / 2: party ages (Cambridge U1&2 2H #14, #15)
 PARTY='The ages of a group of people at a party:<div class="data" style="font-size:21px">19 21 22 56 34 19 27 28 34 17<br>66 37 20 20 21 45 26 19 23 29</div>'
+PARTY_V=[19,21,22,56,34,19,27,28,34,17,66,37,20,20,21,45,26,19,23,29]
+PSRC='Data: Cambridge General Mathematics Units 1&amp;2 · Chapter 2 skills checklist, 2H #14–15 (party ages)'
 S.append(qslide('apk','APK · Year 11 · Cambridge U1&amp;2 2H #14','Five-number summary and boxplot',
   PARTY+'Complete the five-number summary for the ages of the people who attended the party (from above) and use it to construct a boxplot (without outliers).',
   [('CAS','enter the 20 ages in a list. Don’t order them by hand: it is slow and error-prone.'),casstep(17,20,24.5,34,66),
@@ -122,6 +77,12 @@ S.append(learn('Learn · 1G','The five-number summary and the boxplot',
   'Cambridge General Mathematics Units 3&amp;4, 1G pp. 61–62 · Boxplot: teacher illustration',
   frags='<span class="frag" data-bx="#l1b|axis,k0,k1,k2,k3,k4"></span><span class="frag" data-bx="#l1b|box"></span><span class="frag" data-bx="#l1b|med"></span><span class="frag" data-bx="#l1b|wl,wu"></span><span class="frag" data-bx="#l1b|p1,p2,p3,p4"></span>',
   cards=[kcard('Five-number summary','minimum, Q<sub>1</sub>, M, Q<sub>3</sub>, maximum')]))
+# ================= Learn (interactive): five-number summary by hand, party ages
+_h,_q1,_q3=tquart('lt',20,'Q₁ = 20','Q₃ = 34')
+S.append(islide('Learn · 1G','The five-number summary by hand (what the CAS does)',
+  tiles('lt',PARTY_V,fs=22)+isteps([('Order the 20 ages: min = 17, max = 66',tsort('lt')),('Cross off pairs: M = (23 + 26) ÷ 2 = 24.5',tmed('lt',label='M = 24.5')),
+   ('Split into two halves of 10',_h),('Q<sub>1</sub> = median of the lower half = 20',_q1),('Q<sub>3</sub> = median of the upper half = 34',_q3),
+   ('Five-number summary: <b>17, 20, 24.5, 34, 66</b> (matches the CAS)','')]),PSRC+' · Cambridge General Mathematics Units 3&amp;4, 1F–1G'))
 # ================= WE22
 life=[('5',[2]),('5',[5,6]),('6',[4]),('6',[6,6,7,9]),('7',[1,2,2,3,3,4,4,4,4]),('7',[5,5,6,6,7,7])]
 FIVE='<table class="t" style="font-size:17px;white-space:nowrap"><tr><td class="l">minimum</td><td>52</td></tr><tr><td class="l">first quartile (Q<sub>1</sub>)</td><td>66</td></tr><tr><td class="l">median (M)</td><td>73</td></tr><tr><td class="l">third quartile (Q<sub>3</sub>)</td><td>75</td></tr><tr><td class="l">maximum</td><td>77</td></tr></table>'
@@ -157,6 +118,16 @@ S.append(learn('Learn · 1G','Outliers: the 1.5 × IQR fences',
   'Cambridge General Mathematics Units 3&amp;4, 1G pp. 63–64 · Data: CAS 4 (p. 64)',
   frags='<span class="frag" data-bx="#l2b|iqr"></span><span class="frag" data-bx="#l2b|fl,fu"></span><span class="frag" data-bx="#l2b|out" data-dotmark="#l2d|0"></span><span class="frag" data-bx="#l2b|wl,wu"></span>',
   cards=[kcard('Lower fence',FLF,RLF),kcard('Upper fence',FUF,RUF)]))
+# ================= Learn (interactive): party ages fence slider
+S.append(islide('Learn · 1G','Outliers: what if the oldest guest were younger? <span class="i-hint">DRAG THE ORANGE DOT</span>',
+  fence_slider('lfs',PARTY_V,max=75,min=10,lo=35,hi=75,tick=1,lab=5,xl='age (years)')+isteps([
+   ('Make it 50: 50 &lt; 55 = UF → not an outlier (Q<sub>1</sub>, Q<sub>3</sub> and the fences do not move)',fset('lfs',50)),
+   ('Back to 66: 66 &gt; 55 = UF → outlier',fset('lfs',66))]),PSRC))
+# ================= Learn (interactive): box slider, 19 marks
+S.append(islide('Learn · 1G','Boxplot: whisker or outlier? <span class="i-hint">DRAG THE HANDLE</span>',
+  box_slider('lbs',marks19,max=55,k=3,lo=0,hi=23,tick=1,lab=5,xl='marks')+isteps([
+   ('Make it 10: 10 &gt; 5 = LF → not an outlier; the whisker runs to 10',fset('lbs',10)),('Back to 3: 3 &lt; 5 = LF → outlier dot; the whisker stops at 21',fset('lbs',3))]),
+  'Cambridge General Mathematics Units 3&amp;4, 1G pp. 63–64 · Data: CAS 4 (p. 64)'))
 # ================= CAS
 S.append(cas('CAS · 1G','Boxplot with outliers on CAS',
   'Display the following set of 19 marks in the form of a boxplot with outliers.<div class="data" style="font-size:22px">28 21 21 3 22 31 35 26 27 33<br>43 31 30 34 48 36 35 23 24</div>',
