@@ -175,6 +175,12 @@ main{max-width:1200px;margin:0 auto;padding:16px 20px 80px}
 .ssplit{display:grid;grid-template-columns:2fr 1fr;gap:6px;padding:0;border:0;background:transparent;min-height:86px}.ssplit>.sin{min-height:0;height:100%}
 .sbuf.srev{border:1px dashed #d98c8c;background:#fdf5f5;color:#7a1f1f}.sbuf.sred{border:1px dashed #c9a46a;background:#fdf8ef;color:#7a5410}.sbuf.sexr{border:1px dashed #9aa3d9;background:#f2f3fc;color:#2c3576}.sbuf .sub{color:inherit;opacity:.8;font-size:12px}
 .swide{grid-column:1/-1;background:#e7eafb;border:2px solid #9aa3d9;color:#2c3576;align-items:center;justify-content:center;text-align:center}.swide .st{font-size:20px}
+.ybar{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 12px}.ybar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);border-radius:8px;padding:5px 12px;cursor:pointer}.ybar button.on{background:var(--ink);color:#fff}.ybar i{font-style:normal;font-size:11px;opacity:.7}
+.ttw{display:grid;grid-template-columns:110px minmax(0,1fr);gap:8px;padding:6px 0;border-bottom:1px solid var(--line)}.ttd{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.tday{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:5px;display:flex;flex-direction:column;gap:3px;min-height:60px}.tday.out{background:transparent;border:0}.tday.off{background:#efece4}
+.tdh{font-size:11px;font-weight:600;color:var(--muted);display:flex;flex-direction:column;gap:2px}.tdh .why{font-weight:500;font-size:10.5px;background:#efece4;border-radius:5px;padding:1px 4px;color:#6b6656}.tdh .why.sac{background:#fbe3e3;color:#7a1f1f}
+.tses{display:flex;gap:3px;align-items:flex-start;font-size:11px;border-top:1px dashed var(--line);padding-top:2px;min-height:18px}.tses .p{color:var(--muted);width:10px}
+.tchip{border-left:4px solid var(--ac,#999);background:var(--acb,#f3f3f3);border-radius:4px;padding:1px 4px;line-height:1.25}.tchip.tsac{border-left-color:#a32d2d;background:#fbe3e3;color:#7a1f1f}.tchip.tsp{border-left-color:#9aa3d9;background:#eef0fb;color:#2c3576}
 </style>
 </head>
 <body>
@@ -198,7 +204,7 @@ const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e)
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const TYPE={lesson:'Lesson',check:'Catch-up + check',buffer:'Buffer',blocked:'No lesson',anchor:'Fixed date'};
-let UP=null,YEARS=[],YD={},tab=store.get('pl:tab','course'),openId=null,expandAll=false;
+let UP=null,YEARS=[],YD={},TTD={},clsPick=store.get('pl:cls',''),tab=store.get('pl:tab','course'),openId=null,expandAll=false;
 const cfs=l=>l.cfats||[];
 function list(arr,empty){return arr&&arr.length?`<ul>${arr.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:`<div class="empty">${empty||'None'}</div>`}
 function typeset(){if(window.renderMathInElement)renderMathInElement($('#main'),{delimiters:[{left:'$',right:'$',display:false}],throwOnError:false})}
@@ -465,7 +471,7 @@ function renderYear(y){
     <li><b>Blocked dates</b>: public holidays, pupil-free days, school events</li><li><b>Fixed dates</b> (optional): SACs, trial exams</li></ul>
     <p>Lessons are placed in Course plan order into the free slots. Leftover slots show as buffer lessons.</p></div>`;return}
   const {weeks,warns,stats,win}=flow(Y),f=$('#aosFilter').value;aosFilter([]);
-  let h=`<div class="unit">Year plan ${esc(y)} <span class="scope">· ${stats.map(s=>`${esc(s.name)}: ${s.used} lessons, ${s.buf} buffers`).join(' · ')}</span></div>
+  let h=`<div class="unit">${esc(y)} overview <span class="scope">· ${stats.map(s=>`${esc(s.name)}: ${s.used} lessons, ${s.buf} buffers`).join(' · ')}</span></div>
    <div class="legend"><span class="t-lesson"><i></i>Lesson</span><span class="t-check"><i></i>Catch-up + coursework check (chapter test)</span><span class="t-anchor"><i></i>Fixed date</span><span><i style="background:var(--other-i)"></i>Buffer</span><span><i style="background:#8a6ad8"></i>CFAT</span></div>
    ${win.length?`<div class="scope" style="margin:4px 0 10px">Teaching time up to each SAC · ${win.map(esc).join(' · ')}</div>`:''}${warns.map(w=>`<div class="warn">${esc(w)}</div>`).join('')}`;
   // Week-by-week calendar (Rocco, 16 Nov): each week = its lesson slots as big cards; days off, after-school SACs and fixed dates as chips.
@@ -501,12 +507,52 @@ function renderYear(y){
   $('#main').innerHTML=h; wire(()=>renderYear(y));
   $('#main').querySelectorAll('.slot[data-id]').forEach(el=>el.onclick=()=>{openId=openId==el.dataset.id?null:el.dataset.id;renderYear(y)});
 }
+/* ---------- <year> classes: each teacher's real sessions (like the 10MA planner's 2027 tab) ---------- */
+function renderClasses(y){const Y=YD[y],T=TTD[y];
+  if(!Y||!T){$('#main').innerHTML=`<div class="placeholder">No timetable file for ${esc(y)} yet (years/${esc(y)}-timetable.json).</div>`;return}
+  $('#subinfo').textContent=`${T.classes.length} classes · ${[...new Set(T.classes.map(c=>c.teacher))].length} teachers · ${T.sessions.default} sessions a day (${T.sessions.wednesday} on Wednesdays)`;
+  const teachers=[...new Set(T.classes.map(c=>c.teacher))];if(clsPick&&!teachers.includes(clsPick))clsPick='';
+  const nS=s=>D(s).getUTCDay()==3?T.sessions.wednesday:T.sessions.default,blocked=new Map((Y.blocked||[]).map(b=>[b.date,b.reason]));
+  const anchors=(Y.anchors||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)),L=lessons();
+  const slotsOf=(c,d)=>((T.slots||{})[c]||{})[d]||[];
+  // flow the course into each class's real sessions, in date order (blocked days skipped, in-class SACs take a session)
+  const M={},tot={};
+  for(const c of T.classes){let i=0,n=0;const dates=Object.keys((T.slots||{})[c.id]||{}).sort();
+    for(const d of dates){if(blocked.has(d)||!Y.terms.some(t=>d>=t.start&&d<=t.end))continue;for(const p of slotsOf(c.id,d)){if(p>nS(d))continue;n++;
+      const ic=anchors.find(a=>a.inClass&&a.date<=d&&!M[c.id+'|ic|'+a.date]&&d<=Y.terms.find(t=>a.date>=t.start&&a.date<=t.end)?.end);
+      if(ic&&d>=ic.date){M[c.id+'|ic|'+ic.date]=1;M[`${c.id}|${d}|${p}`]={sac:ic.label};continue}
+      const l=L[i];const hold=l&&anchors.some(a=>a.aos!=null&&(a.afterSchool?a.date>=d:a.date>d)&&l.aosN>a.aos)||l&&anchors.some(a=>a.unit!=null&&a.date>d&&l.aosN>2*(a.unit-3)+2);
+      if(l&&!hold){M[`${c.id}|${d}|${p}`]={l};i++}else M[`${c.id}|${d}|${p}`]={spare:1}}}
+    tot[c.id]={n,placed:i}}
+  const mine=T.classes.filter(c=>c.teacher==clsPick);
+  let h=`<div class="unit">${esc(y)} classes <span class="scope">· each teacher's actual sessions, with the course plan laid onto them in order</span></div>
+   <div class="ybar"><button class="cyc" data-d="-1">◀</button><button class="clsb ${clsPick?'':'on'}" data-c="">All classes</button>${teachers.map(t=>`<button class="clsb ${t==clsPick?'on':''}" data-c="${esc(t)}">${esc(t)}${T.classes.filter(c=>c.teacher==t).length>1?` <i>${T.classes.filter(c=>c.teacher==t).length} classes</i>`:''}</button>`).join('')}<button class="cyc" data-d="1">▶</button></div>`;
+  const anyS=Object.keys(T.slots||{}).some(k=>Object.keys(T.slots[k]).length);
+  if(!anyS)h+=`<div class="warn" style="background:#eef3fd;border-color:#9fb6e6;color:#1d4596">Timetables aren't in yet. Once Rocco uploads them, Claude fills in each class's sessions here and the course plan lays itself onto them (until then the ${esc(y)} overview tab uses 3 lessons a full week).</div>`;
+  else h+=`<p class="sub">${T.classes.map(c=>`<b>${esc(c.teacher)}${T.classes.filter(x=>x.teacher==c.teacher).length>1?' · '+esc(c.label):''}</b> ${tot[c.id].n} sessions, ${tot[c.id].placed} of ${L.length} lessons`).join(' · ')}</p>`;
+  for(const t of Y.terms){h+=`<div class="aos"><b>${esc(t.name)}</b><span>${fmt(D(t.start))} – ${fmt(D(t.end))}</span></div>`;
+    const mon0=D(t.start);mon0.setUTCDate(mon0.getUTCDate()-((mon0.getUTCDay()+6)%7));let w=0;
+    for(let m=new Date(mon0);iso(m)<=t.end;m.setUTCDate(m.getUTCDate()+7)){w++;
+      h+=`<div class="ttw"><div class="cwl"><b>${t.weekLabel?esc(t.weekLabel)+' '+w:'Week '+w}</b><span class="wdates">${fmt(m)}</span></div><div class="ttd">`;
+      for(let k=0;k<5;k++){const d=new Date(m);d.setUTCDate(m.getUTCDate()+k);const s=iso(d);
+        if(s<t.start||s>t.end){h+='<div class="tday out"></div>';continue}
+        const why=blocked.get(s),an=anchors.filter(a=>a.date==s&&!a.inClass);
+        h+=`<div class="tday ${why?'off':''}"><div class="tdh">${DOW[d.getUTCDay()]} ${d.getUTCDate()}${why?`<span class="why">${esc(why)}</span>`:''}${an.map(a=>`<span class="why ${/SAC/.test(a.label)?'sac':''}">${esc(a.label)}</span>`).join('')}</div>`;
+        if(!why)for(let p=1;p<=nS(s);p++){const here=(clsPick?mine:T.classes).filter(c=>slotsOf(c.id,s).includes(p));
+          h+=`<div class="tses"><span class="p">${p}</span>${here.map(c=>{const x=M[`${c.id}|${s}|${p}`]||{},who=clsPick?(mine.length>1?esc(c.label.replace('12MAG ','')):''):esc(c.teacher.replace(/^(Mrs|Mr|Ms|Dr) /,''))+(T.classes.filter(q=>q.teacher==c.teacher).length>1?' '+esc(c.label.replace('12MAG class ','')):'');
+            return `<span class="tchip ${x.l?'a'+x.l.aosN:''} ${x.sac?'tsac':''} ${x.spare?'tsp':''}" ${x.l?`data-id="${x.l.id}"`:''}>${who?`<b>${who}</b> `:''}${x.l?`L${x.l.n} ${esc(x.l.section)}`:x.sac?esc(x.sac):'Revision'}</span>`}).join('')}</div>`}
+        h+='</div>'}
+      h+='</div></div>'}}
+  $('#main').innerHTML=h;
+  $('#main').querySelectorAll('.clsb').forEach(b=>b.onclick=()=>{clsPick=b.dataset.c;store.set('pl:cls',clsPick);renderClasses(y)});
+  $('#main').querySelectorAll('.cyc').forEach(b=>b.onclick=()=>{const ids=['',...teachers];clsPick=ids[(ids.indexOf(clsPick)+(+b.dataset.d)+ids.length)%ids.length];store.set('pl:cls',clsPick);renderClasses(y)});
+}
 /* ---------- tabs ---------- */
 function render(){
-  $('#tabs').innerHTML=[['course','Course plan'],...YEARS.map(y=>[y,'Year plan '+y])].map(([k,n])=>`<button data-t="${k}" class="${tab==k?'on':''}">${n}</button>`).join('');
+  $('#tabs').innerHTML=[['course','Course plan'],...YEARS.flatMap(y=>[[y,y+' overview'],['cls:'+y,y+' classes']])].map(([k,n])=>`<button data-t="${k}" class="${tab==k?'on':''}">${n}</button>`).join('');
   $('#tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{tab=b.dataset.t;store.set('pl:tab',tab);openId=null;render()});
   $('#ctl').style.display='flex';
-  if(tab!='course'&&YEARS.includes(tab))renderYear(tab);else{tab='course';renderCourse()}
+  if(tab!='course'&&YEARS.includes(tab))renderYear(tab);else if(/^cls:/.test(tab)&&YEARS.includes(tab.slice(4)))renderClasses(tab.slice(4));else{tab='course';renderCourse()}
 }
 $('#aosFilter').onchange=()=>render();
 $('#fresh').onclick=()=>{location.replace(location.pathname+'?v='+Date.now()+location.hash)};
@@ -517,7 +563,8 @@ $('#expand').onclick=()=>{expandAll=!expandAll;$('#expand').textContent=expandAl
   try{TESTS=await (await fetch('tests.json',{cache:'no-store'})).json()}catch(e){}
   try{VIDS=(await (await fetch('videos.json',{cache:'no-store'})).json()).videos}catch(e){}
   YEARS=await (await fetch('years/index.json',{cache:'no-store'})).json();
-  for(const y of YEARS){try{YD[y]=await (await fetch(`years/${y}.json`,{cache:'no-store'})).json()}catch(e){YD[y]=null}}
+  for(const y of YEARS){try{YD[y]=await (await fetch(`years/${y}.json`,{cache:'no-store'})).json()}catch(e){YD[y]=null}
+    try{TTD[y]=await (await fetch(`years/${y}-timetable.json`,{cache:'no-store'})).json()}catch(e){TTD[y]=null}}
   render();
 }catch(e){$('#main').innerHTML='<div class="placeholder">Could not load the planner data. Open this page from the website, not as a local file.</div>'}})();
 </script>

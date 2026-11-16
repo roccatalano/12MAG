@@ -1,0 +1,12 @@
+{
+ "year": 2027,
+ "note": "Each teacher's 12MAG classes and the sessions they're timetabled (Rocco, 16 Nov: timetables come early 2027; Claude fills slots from them). slots: {classId: {\"YYYY-MM-DD\": [session numbers]}}. EKC days: 4 sessions (3 on Wednesdays), 79 min.",
+ "sessions": {"default": 4, "wednesday": 3},
+ "classes": [
+  {"id": "hamilton", "teacher": "Mrs Hamilton", "label": "12MAG"},
+  {"id": "duker-1", "teacher": "Mr Duker", "label": "12MAG class 1"},
+  {"id": "duker-2", "teacher": "Mr Duker", "label": "12MAG class 2"},
+  {"id": "catalano", "teacher": "Mr Catalano", "label": "12MAG"}
+ ],
+ "slots": {}
+}
