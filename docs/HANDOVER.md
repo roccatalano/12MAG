@@ -28,6 +28,8 @@
 
 
 
+- **16 Nov 14:16 (AoS3 #20):** Lesson 11E (Leslie matrices) slides (24) + 5-page guided worksheet, Draft, in lessons/ and on G:. New reusable helper `tools/deck/leslie.py` draws life cycle diagrams. No exit task (no VCAA Leslie reprints in Edrolo).
+
 ## 16 Nov 13:06 — AoS3 #18: Lesson 11C done (Draft)
 - `lessons/11C slides` (31 slides, CFAT 3.11.1 first) + `11C worksheet` / `solutions` (7 pages), HTML+PDF, copied to G: 01 Lesson materials. Build: `tools/deck/gm12-u4-11c/`.
 - Do Now 2023 E1 Q27 freed (asks for long-term state = new content) → 2024 E1 Q25. Exits in original VCAA wording with report %.

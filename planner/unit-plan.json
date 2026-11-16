@@ -12780,7 +12780,33 @@
          "matrix-recurrence"
         ],
         "casYouTry": "Cambridge Ex 11 on CAS (L^n·s for n = 5, 10, 50)",
-        "note": "No exit tasks: Edrolo has no VCAA Leslie-matrix questions (new to the 2023 Study Design). Current-design Leslie items (e.g. VCAA 2024 E2 Q11, 2026 E1 Q31-32) are kept for Do Now / revision."
+        "note": "No exit tasks: Edrolo has no VCAA Leslie-matrix questions (new to the 2023 Study Design). Current-design Leslie items (e.g. VCAA 2024 E2 Q11, 2026 E1 Q31-32) are kept for Do Now / revision.",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, CAS (no exit task).",
+          "status": "draft",
+          "file": "lessons/11E slides.html",
+          "pdf": "lessons/11E slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "5 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/11E worksheet.html",
+            "pdf": "lessons/11E worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/11E worksheet solutions.html",
+            "pdf": "lessons/11E worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
