@@ -1,5 +1,7 @@
 # 12MAG handover — 15 Nov 2026 (updated 15:55)
 
+**16 Nov 11:16 (AoS2 #12):** CFAT follow-ups for Ch 8: Jacaranda U3&4 (2023) 7.2–7.6 exercises on every CFAT 2.8.1/2.8.2 question (`fu`) + `followUp` lists in unit-plan.json. Jacaranda has no 'find the loan rate' question, so 2.8.1 Q6 points to the nearest Finance Solver practice (7.3 Q13–14).
+
 **16 Nov 10:55 (AoS4 #12):** Chapter 14 cards prefilled (`tools/prefill_ch14.py`): gm12-u4-14a … 14e Do Now, APK, Examples + You trys, exits; 2 written You trys (YT-14A-4, YT-14A-5: Cambridge Ex 4–5 have no Edrolo match); 14E has no APK (no U1&2 prerequisite); 40 ledger rows. Next AoS 4 task: #13 CFATs for Ch 14.
 
 **16 Nov 10:47 (AoS4 #11):** Chapter 14 planned: `tools/plan_ch14.py` fills gm12-u4-14a … 14e (titles, LIs, SCs, Study Design, coursework by Cambridge exercise heading). Split unchanged (5 lessons). Next AoS 4 task: #12 prefill Ch 14 cards.

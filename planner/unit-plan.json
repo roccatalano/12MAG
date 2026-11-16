@@ -9298,7 +9298,7 @@
             "sub": "8A",
             "sc": "",
             "src": "Edrolo 6F Q5",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 7.6 Ex Q1, Q3, Q4"
            },
            {
             "q": 2,
@@ -9309,7 +9309,7 @@
             "sub": "8A",
             "sc": "",
             "src": "Edrolo 6F Q9",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 7.6 Ex Q5–8"
            },
            {
             "q": 3,
@@ -9320,7 +9320,7 @@
             "sub": "8C",
             "sc": "",
             "src": "Edrolo 6A Q1b",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 7.2 Ex Q6c, Q6f, Q8"
            },
            {
             "q": 4,
@@ -9331,7 +9331,7 @@
             "sub": "8C",
             "sc": "",
             "src": "Edrolo 6B Q6b",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 7.2 Ex Q6d, Q7"
            },
            {
             "q": 5,
@@ -9342,7 +9342,7 @@
             "sub": "8C",
             "sc": "",
             "src": "Edrolo 6B Q6c",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 7.2 Ex Q6a, Q6b"
            },
            {
             "q": 6,
@@ -9353,7 +9353,7 @@
             "sub": "8C",
             "sc": "",
             "src": "Edrolo 6B Q11",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 7.3 Ex Q13, Q14 (no Jacaranda question asks for a loan rate; nearest Finance Solver practice)"
            },
            {
             "q": 7,
@@ -9364,7 +9364,7 @@
             "sub": "8A",
             "sc": "",
             "src": "Edrolo 6F Q4",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 7.2 Ex Q5, 7.6 Ex Q2"
            },
            {
             "q": 8,
@@ -9375,7 +9375,7 @@
             "sub": "8B",
             "sc": "",
             "src": "Edrolo 6B Q2",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 7.2 Ex Q4, Q9, Q10"
            },
            {
             "q": 9,
@@ -9386,8 +9386,19 @@
             "sub": "8C",
             "sc": "",
             "src": "Edrolo 6B Q10",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 7.2 Ex Q7, Q8"
            }
+          ],
+          "followUp": [
+           "Principal addition in an annuity table: Jacaranda U3&4 (2023) 7.6 Ex Q1, Q3, Q4",
+           "Annuity investment value with a financial solver: Jacaranda U3&4 (2023) 7.6 Ex Q5–8",
+           "Balance from an amortisation table: Jacaranda U3&4 (2023) 7.2 Ex Q6c, Q6f, Q8",
+           "Principal reduction from an amortisation table: Jacaranda U3&4 (2023) 7.2 Ex Q6d, Q7",
+           "Interest rate from an amortisation table: Jacaranda U3&4 (2023) 7.2 Ex Q6a, Q6b",
+           "Loan interest rate with a financial solver: Jacaranda U3&4 (2023) 7.3 Ex Q13, Q14 (no Jacaranda question asks for a loan rate; nearest Finance Solver practice)",
+           "Annuity recurrence relation: rate, balance, time: Jacaranda U3&4 (2023) 7.2 Ex Q5, 7.6 Ex Q2",
+           "Reading a reducing balance loan recurrence relation: Jacaranda U3&4 (2023) 7.2 Ex Q4, Q9, Q10",
+           "Completing an amortisation table: Jacaranda U3&4 (2023) 7.2 Ex Q7, Q8"
           ]
          }
         ],
@@ -10194,7 +10205,7 @@
             "sub": "8E",
             "sc": "",
             "src": "Edrolo 6A Q4",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 7.3 Ex Q7, Q10, Q11"
            },
            {
             "q": 2,
@@ -10205,7 +10216,7 @@
             "sub": "8H",
             "sc": "",
             "src": "Edrolo 6C Q7",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 7.4 Ex Q7, Q8, Q18"
            },
            {
             "q": 3,
@@ -10216,7 +10227,7 @@
             "sub": "8I",
             "sc": "",
             "src": "Edrolo 6E Q7",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 7.5 Ex Q7b, Q8b, Q15b, Q18"
            },
            {
             "q": 4,
@@ -10227,7 +10238,7 @@
             "sub": "8E",
             "sc": "",
             "src": "Edrolo 6A Q5",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 7.3 Ex Q1, Q3, Q5"
            },
            {
             "q": 5,
@@ -10238,7 +10249,7 @@
             "sub": "8H",
             "sc": "",
             "src": "Edrolo 6C Q3",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 7.4 Ex Q7, Q8"
            },
            {
             "q": 6,
@@ -10249,7 +10260,7 @@
             "sub": "8H",
             "sc": "",
             "src": "Edrolo 6C Q4",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 7.4 Ex Q18, Q19"
            },
            {
             "q": 7,
@@ -10260,7 +10271,7 @@
             "sub": "8I",
             "sc": "",
             "src": "Edrolo 6E Q3",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 7.5 Ex Q7a, Q8a, Q15a"
            },
            {
             "q": 8,
@@ -10271,8 +10282,18 @@
             "sub": "8I",
             "sc": "",
             "src": "Edrolo 6E Q4",
-            "fu": ""
+            "fu": "Jacaranda U3&4 (2023) 7.5 Ex Q12, Q13, Q17"
            }
+          ],
+          "followUp": [
+           "Financial solver N: Jacaranda U3&4 (2023) 7.3 Ex Q7, Q10, Q11",
+           "Interest-only loan rate: Jacaranda U3&4 (2023) 7.4 Ex Q7, Q8, Q18",
+           "Perpetuity interest rate: Jacaranda U3&4 (2023) 7.5 Ex Q7b, Q8b, Q15b, Q18",
+           "Financial solver inputs and signs: Jacaranda U3&4 (2023) 7.3 Ex Q1, Q3, Q5",
+           "Interest-only repayment: Jacaranda U3&4 (2023) 7.4 Ex Q7, Q8",
+           "Interest-only loan principal and recurrence relation: Jacaranda U3&4 (2023) 7.4 Ex Q18, Q19",
+           "Reading a perpetuity recurrence relation: Jacaranda U3&4 (2023) 7.5 Ex Q7a, Q8a, Q15a",
+           "Perpetuity payments without a solver: Jacaranda U3&4 (2023) 7.5 Ex Q12, Q13, Q17"
           ]
          }
         ]
