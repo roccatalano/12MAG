@@ -12200,7 +12200,94 @@
          "matrix-recurrence"
         ],
         "casYouTry": "Edrolo 7G WE7 (S10 = T¹⁰S0 on CAS)",
-        "note": "Edrolo 7H WE2 (interpreting the equilibrium state matrix) is a spare You try for Example 7. Spare exit (not reserved): Edrolo 7H Q13 (VCAA 2018 E2 Matrices Q3e, 39%)."
+        "note": "Edrolo 7H WE2 (interpreting the equilibrium state matrix) is a spare You try for Example 7. Spare exit (not reserved): Edrolo 7H Q13 (VCAA 2018 E2 Matrices Q3e, 39%).",
+        "cfats": [
+         {
+          "id": "CFAT 3.11.1",
+          "title": "Transition matrices and transition diagrams",
+          "covers": [
+           "11A-11B"
+          ],
+          "format": "About 20 min · individual · CAS and single bound reference allowed",
+          "status": "Draft",
+          "plan": "Start of the 11C lesson.",
+          "marks": 13,
+          "mcMarks": 3,
+          "saMarks": 10,
+          "file": "lessons/CFAT 3.11.1 (11A-11B).html",
+          "sources": [
+           "Edrolo GM U3&4 2023 exercise questions only (rule 8): 7G Q1, 7I Q1, 7G Q4, 7G Q2, 7G Q5, 7I Q2"
+          ],
+          "questions": [
+           {
+            "q": 1,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Interpreting and constructing state matrices",
+            "sd": [],
+            "sub": "11A",
+            "sc": "",
+            "src": "Edrolo 7G Q1",
+            "fu": ""
+           },
+           {
+            "q": 2,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Constructing and interpreting transition diagrams",
+            "sd": [],
+            "sub": "11B",
+            "sc": "",
+            "src": "Edrolo 7I Q1",
+            "fu": ""
+           },
+           {
+            "q": 3,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Interpreting and constructing transition matrices",
+            "sd": [],
+            "sub": "11A",
+            "sc": "",
+            "src": "Edrolo 7G Q4",
+            "fu": ""
+           },
+           {
+            "q": 4,
+            "marks": 3,
+            "type": "SA",
+            "skill": "Interpreting and constructing state matrices",
+            "sd": [],
+            "sub": "11A",
+            "sc": "",
+            "src": "Edrolo 7G Q2",
+            "fu": ""
+           },
+           {
+            "q": 5,
+            "marks": 4,
+            "type": "SA",
+            "skill": "Interpreting and constructing transition matrices",
+            "sd": [],
+            "sub": "11A",
+            "sc": "",
+            "src": "Edrolo 7G Q5",
+            "fu": ""
+           },
+           {
+            "q": 6,
+            "marks": 3,
+            "type": "SA",
+            "skill": "Constructing and interpreting transition diagrams",
+            "sd": [],
+            "sub": "11B",
+            "sc": "",
+            "src": "Edrolo 7I Q2",
+            "fu": ""
+           }
+          ]
+         }
+        ]
        }
       },
       {
@@ -12463,7 +12550,117 @@
        "kind": "check",
        "subchapters": [],
        "title": "Chapter 11 coursework check + test",
-       "card": {}
+       "card": {
+        "cfats": [
+         {
+          "id": "CFAT 3.11.2",
+          "title": "State matrices, steady state, culling/restocking and Leslie matrices",
+          "covers": [
+           "11C-11E"
+          ],
+          "format": "About 20 min · individual · CAS and single bound reference allowed",
+          "status": "Draft",
+          "plan": "Start of the Chapter 11 test lesson.",
+          "marks": 14,
+          "mcMarks": 3,
+          "saMarks": 11,
+          "file": "lessons/CFAT 3.11.2 (11C-11E).html",
+          "sources": [
+           "Edrolo GM U3&4 2023 exercise questions only (rule 8): 7H Q1, 7H Q5, 7I Q7, 7G Q10, 7H Q4, 7I Q8, 7G Q12, 7G Q13"
+          ],
+          "questions": [
+           {
+            "q": 1,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Calculating the equilibrium state matrix",
+            "sd": [],
+            "sub": "11C",
+            "sc": "",
+            "src": "Edrolo 7H Q1",
+            "fu": ""
+           },
+           {
+            "q": 2,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Interpreting the equilibrium state matrix",
+            "sd": [],
+            "sub": "11C",
+            "sc": "",
+            "src": "Edrolo 7H Q5",
+            "fu": ""
+           },
+           {
+            "q": 3,
+            "marks": 1,
+            "type": "MC",
+            "skill": "Using transition matrices to model culling and restocking",
+            "sd": [],
+            "sub": "11D",
+            "sc": "",
+            "src": "Edrolo 7I Q7",
+            "fu": ""
+           },
+           {
+            "q": 4,
+            "marks": 2,
+            "type": "SA",
+            "skill": "Calculating state matrices",
+            "sd": [],
+            "sub": "11C",
+            "sc": "",
+            "src": "Edrolo 7G Q10",
+            "fu": ""
+           },
+           {
+            "q": 5,
+            "marks": 1,
+            "type": "SA",
+            "skill": "Calculating the equilibrium state matrix",
+            "sd": [],
+            "sub": "11C",
+            "sc": "",
+            "src": "Edrolo 7H Q4",
+            "fu": ""
+           },
+           {
+            "q": 6,
+            "marks": 3,
+            "type": "SA",
+            "skill": "Using transition matrices to model culling and restocking",
+            "sd": [],
+            "sub": "11D",
+            "sc": "",
+            "src": "Edrolo 7I Q8",
+            "fu": ""
+           },
+           {
+            "q": 7,
+            "marks": 2,
+            "type": "SA",
+            "skill": "Using Leslie matrices in applied scenarios",
+            "sd": [],
+            "sub": "11E",
+            "sc": "",
+            "src": "Edrolo 7G Q12",
+            "fu": ""
+           },
+           {
+            "q": 8,
+            "marks": 3,
+            "type": "SA",
+            "skill": "Using Leslie matrices in applied scenarios",
+            "sd": [],
+            "sub": "11E",
+            "sc": "",
+            "src": "Edrolo 7G Q13",
+            "fu": ""
+           }
+          ]
+         }
+        ]
+       }
       }
      ]
     }
