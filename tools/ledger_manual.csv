@@ -700,14 +700,14 @@ VCAA 2025 E2 Q8b,,Do Now,yes,gm12-u4-14c,2026-11-16,used in 14C slides + workshe
 VCAA 2017 E2 Networks Q4a,Edrolo U3&4 8H Q14,exit,yes,gm12-u4-14c,2026-11-16,used in 14C slides + worksheet (AoS4 #17)
 VCAA 2020 E2 Networks Q5a,Edrolo U3&4 8H Q15,exit,yes,gm12-u4-14c,2026-11-16,used in 14C slides + worksheet (AoS4 #17)
 VCAA 2018 E1 Networks Q4,Edrolo U1&2 7D Q12,APK,yes,gm12-u4-14c,2026-11-16,used in 14C slides + worksheet (AoS4 #17)
-VCAA 2023 E1 Q38,,Do Now,yes,gm12-u4-14d,2026-11-16,reserved by AoS4 prefill
-VCAA 2025 E1 Q13,,Do Now,yes,gm12-u4-14d,2026-11-16,reserved by AoS4 prefill
-VCAA 2023 E2 Q14a,,Do Now,yes,gm12-u4-14d,2026-11-16,reserved by AoS4 prefill
-VCAA 2023 E2 Q9d,,Do Now,yes,gm12-u4-14d,2026-11-16,reserved by AoS4 prefill
-VCAA 2020 E1 Networks Q6,Edrolo U3&4 8I Q15,exit,yes,gm12-u4-14d,2026-11-16,reserved by AoS4 prefill
-"VCAA 2018 E2 Networks Q3a,d",Edrolo U3&4 8I Q16,exit,yes,gm12-u4-14d,2026-11-16,reserved by AoS4 prefill
-VCAA 2021 E1 Networks Q6,Edrolo U3&4 8I Q17,exit,yes,gm12-u4-14d,2026-11-16,reserved by AoS4 prefill
-VCAA 2021 E2 Networks Q2a,Edrolo U1&2 7E Q13,APK,yes,gm12-u4-14d,2026-11-16,reserved by AoS4 prefill
+VCAA 2023 E1 Q38,,Do Now,yes,gm12-u4-14d,2026-11-16,used in 14D slides + worksheet (AoS4 #18)
+VCAA 2025 E1 Q13,,Do Now,yes,gm12-u4-14d,2026-11-16,used in 14D slides + worksheet (AoS4 #18)
+VCAA 2023 E2 Q14a,,Do Now,yes,gm12-u4-14d,2026-11-16,used in 14D slides + worksheet (AoS4 #18)
+VCAA 2023 E2 Q9c,,Do Now,yes,gm12-u4-14d,2026-11-16,used in 14D slides + worksheet (AoS4 #18)
+VCAA 2020 E1 Networks Q6,Edrolo U3&4 8I Q15,exit,yes,gm12-u4-14d,2026-11-16,used in 14D slides + worksheet (AoS4 #18)
+"VCAA 2018 E2 Networks Q3a,b,c,d",Edrolo U3&4 8I Q16,exit,yes,gm12-u4-14d,2026-11-16,used in 14D slides + worksheet (AoS4 #18)
+VCAA 2021 E1 Networks Q6,Edrolo U3&4 8I Q17,exit,yes,gm12-u4-14d,2026-11-16,used in 14D slides + worksheet (AoS4 #18)
+VCAA 2021 E2 Networks Q2a,Edrolo U1&2 7E Q13,APK,yes,gm12-u4-14d,2026-11-16,used in 14D slides + worksheet (AoS4 #18)
 VCAA 2024 NHT E1 Q40,,Do Now,yes,gm12-u4-14e,2026-11-16,reserved by AoS4 prefill
 VCAA 2023 E1 Q31,,Do Now,yes,gm12-u4-14e,2026-11-16,reserved by AoS4 prefill
 VCAA 2024 E2 Q15a,,Do Now,yes,gm12-u4-14e,2026-11-16,reserved by AoS4 prefill

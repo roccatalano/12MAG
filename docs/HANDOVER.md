@@ -1,5 +1,7 @@
 # 12MAG handover — 15 Nov 2026 (updated 15:55)
 
+**16 Nov 14:05 (AoS4 #18):** Lesson 14D built (Draft): `tools/deck/gm12-u4-14d/` (build.py, worksheet.py, crop.py, figs.py with wtab(), shoot.py) → `lessons/14D slides` (24 slides: Do Now 2023 E1 Q38, 2025 E1 Q13, 2023 E2 Q14a, 2023 E2 Q9c (Q9d was invalidated); APK VCAA 2021 E2 Q2a (shortest path); Examples 10–11 + You trys Edrolo 8I WE1–4; exits VCAA 2020 E1 Q6, 2018 E2 Q3a–d, 2021 E1 Q6) and `14D worksheet`/solutions (5 pages), on G: and the planner card; 8 ledger rows used. Next AoS 4 task: 14E.
+
 **16 Nov 13:43 (AoS3 #19):** Lesson 11D built (Draft): `tools/deck/gm12-u4-11d/` (build.py, worksheet.py, shoot.py, fig/ crops) → `lessons/11D slides` (16 slides: Do Now 2023 E1 Q32 (replaces 2024 E1 Q32, which is 11D content), 2025 E1 Q15, 2024 E2 Q12a, 2023 E2 Q10a; APK Cambridge U1&2 4H #19; Example 8 + You try Edrolo 7I WE3; CAS T × ans + B; exit VCAA 2017 E1 Q7) and `11D worksheet`/solutions (3 pages), on G: and the planner card; ledger updated. Next AoS 3 task: 11E.
 
 **16 Nov 13:14 (AoS4 #17):** Lesson 14C built (Draft): `tools/deck/gm12-u4-14c/` (build.py, worksheet.py, figs.py with ptab() precedence tables, crop.py, shoot.py) → `lessons/14C slides` (22 slides: CFAT 4.14.1; Do Now 2025 E1 Q39, 2024 E1 Q28, 2024 NHT E2 Q14a, 2025 E2 Q8b; APK VCAA 2018 E1 Q4 (paths); Examples 7–9 + You trys Edrolo 8H WE2, WE4, WE3; exits VCAA 2017 E2 Q4a, 2020 E2 Q5a) and `14C worksheet`/solutions (4 pages), on G: and the planner card; 7 ledger rows used. Next AoS 4 task: 14D.

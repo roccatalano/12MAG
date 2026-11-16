@@ -14554,7 +14554,7 @@
          },
          {
           "exam": "Exam 2",
-          "ref": "VCAA 2023 Exam 2 Q9d",
+          "ref": "VCAA 2023 Exam 2 Q9c",
           "sec": "10F"
          }
         ],
@@ -14565,7 +14565,7 @@
          },
          {
           "ref": "Edrolo U3&4 8I Q16",
-          "src": "VCAA 2018 Exam 2 Networks and decision mathematics Q3a,d"
+          "src": "VCAA 2018 Exam 2 Networks and decision mathematics Q3a–d"
          },
          {
           "ref": "Edrolo U3&4 8I Q17",
@@ -14573,7 +14573,33 @@
          }
         ],
         "cas": [],
-        "note": "APK primes shortest path (the critical path is the longest path). Spare exit (not reserved): Edrolo 8I Q18 (VCAA 2021 E2 N&DM Q4a,b)."
+        "note": "APK primes shortest path (the critical path is the longest path). Spare exit (not reserved): Edrolo 8I Q18 (VCAA 2021 E2 N&DM Q4a,b). Do Now 2023 E2 Q9d swapped for Q9c (the 2023 E2 report says Q9d was invalidated).",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/14D slides.html",
+          "pdf": "lessons/14D slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "5 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/14D worksheet.html",
+            "pdf": "lessons/14D worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/14D worksheet solutions.html",
+            "pdf": "lessons/14D worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {
