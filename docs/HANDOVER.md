@@ -25,6 +25,8 @@
 ## 16 Nov 13:06 — AoS3 #18: Lesson 11C done (Draft)
 - `lessons/11C slides` (31 slides, CFAT 3.11.1 first) + `11C worksheet` / `solutions` (7 pages), HTML+PDF, copied to G: 01 Lesson materials. Build: `tools/deck/gm12-u4-11c/`.
 - Do Now 2023 E1 Q27 freed (asks for long-term state = new content) → 2024 E1 Q25. Exits in original VCAA wording with report %.
+## 16 Nov 13:10 — AoS2 #17: lesson l41 (8E) built (Draft)
+8E slides (22) + guided worksheet/solutions (3 pages) in lessons/ and on G: 01 Lesson materials; planner card materials added; ledger rows for l41 marked used. Exit % from 2021 reports (E1 Q19 44%, E2 Q8b 27%). Do Now 2026 items: no % (report not out).
 
 ## 16 Nov 12:42 — AoS3 #17: Lesson 11B (Draft)
 11B slides (16) + 3-page guided worksheet (student + solutions), HTML+PDF, on G: and the planner card. Do Now: VCAA 2024 E1 Q31, Q2, 2024 E2 Q10a, 2024 NHT E2 Q12a; APK Cambridge U1&2 4G #17; Example 3 / Edrolo 7G WE3; exit VCAA 2019 E1 Q8 (15%). No CAS (none on the card). Next: 11C.

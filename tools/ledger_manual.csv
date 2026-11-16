@@ -619,14 +619,14 @@ VCAA 2020 E1 Q25,Edrolo U3&4 6E Q15,exit,yes,gm12-u3-l40,2026-11-16,used: 8D sli
 VCAA 2021 E1 Q23,Edrolo U3&4 6B Q20,exit,yes,gm12-u3-l40,2026-11-16,used: 8D slides + worksheet
 Cambridge U1&2 skills checklist 3C #8,,APK,yes,gm12-u3-l40,2026-11-16,used: 8D slides + worksheet
 VCAA 2020 E2 Q9a,Edrolo U1&2 3D Q15,APK,yes,gm12-u3-l40,2026-11-16,used: 8D slides + worksheet
-VCAA 2026 E1 Q22,,Do Now,yes,gm12-u3-l41,2026-11-16,reserved by AoS2 prefill
-VCAA 2026 E1 Q9,,Do Now,yes,gm12-u3-l41,2026-11-16,reserved by AoS2 prefill
-VCAA 2026 NHT E2 Q6a,,Do Now,yes,gm12-u3-l41,2026-11-16,reserved by AoS2 prefill
-VCAA 2026 E2 Q5a,,Do Now,yes,gm12-u3-l41,2026-11-16,reserved by AoS2 prefill
-VCAA 2021 E1 Q19,Edrolo U3&4 6D Q19,exit,yes,gm12-u3-l41,2026-11-16,reserved by AoS2 prefill
-VCAA 2021 E2 Q8b,Edrolo U3&4 6B Q21,exit,yes,gm12-u3-l41,2026-11-16,reserved by AoS2 prefill
-Cambridge U1&2 skills checklist 3I #25,,APK,yes,gm12-u3-l41,2026-11-16,reserved by AoS2 prefill
-VCAA 2020 E1 Q21,Edrolo U1&2 3B Q16,APK,yes,gm12-u3-l41,2026-11-16,reserved by AoS2 prefill
+VCAA 2026 E1 Q22,,Do Now,yes,gm12-u3-l41,2026-11-16,used in 8E slides + worksheet (AoS2 #17)
+VCAA 2026 E1 Q9,,Do Now,yes,gm12-u3-l41,2026-11-16,used in 8E slides + worksheet (AoS2 #17)
+VCAA 2026 NHT E2 Q6a,,Do Now,yes,gm12-u3-l41,2026-11-16,used in 8E slides + worksheet (AoS2 #17)
+VCAA 2026 E2 Q5a,,Do Now,yes,gm12-u3-l41,2026-11-16,used in 8E slides + worksheet (AoS2 #17)
+VCAA 2021 E1 Q19,Edrolo U3&4 6D Q19,exit,yes,gm12-u3-l41,2026-11-16,used in 8E slides + worksheet (AoS2 #17)
+VCAA 2021 E2 Q8b,Edrolo U3&4 6B Q21,exit,yes,gm12-u3-l41,2026-11-16,used in 8E slides + worksheet (AoS2 #17)
+Cambridge U1&2 skills checklist 3I #25,,APK,yes,gm12-u3-l41,2026-11-16,used in 8E slides + worksheet (AoS2 #17)
+VCAA 2020 E1 Q21,Edrolo U1&2 3B Q16,APK,yes,gm12-u3-l41,2026-11-16,used in 8E slides + worksheet (AoS2 #17)
 VCAA 2025 NHT E1 Q19,,Do Now,yes,gm12-u3-l42,2026-11-16,reserved by AoS2 prefill
 VCAA 2026 E1 Q12,,Do Now,yes,gm12-u3-l42,2026-11-16,reserved by AoS2 prefill
 VCAA 2026 NHT E2 Q7,,Do Now,yes,gm12-u3-l42,2026-11-16,reserved by AoS2 prefill
