@@ -708,13 +708,13 @@ VCAA 2020 E1 Networks Q6,Edrolo U3&4 8I Q15,exit,yes,gm12-u4-14d,2026-11-16,used
 "VCAA 2018 E2 Networks Q3a,b,c,d",Edrolo U3&4 8I Q16,exit,yes,gm12-u4-14d,2026-11-16,used in 14D slides + worksheet (AoS4 #18)
 VCAA 2021 E1 Networks Q6,Edrolo U3&4 8I Q17,exit,yes,gm12-u4-14d,2026-11-16,used in 14D slides + worksheet (AoS4 #18)
 VCAA 2021 E2 Networks Q2a,Edrolo U1&2 7E Q13,APK,yes,gm12-u4-14d,2026-11-16,used in 14D slides + worksheet (AoS4 #18)
-VCAA 2024 NHT E1 Q40,,Do Now,yes,gm12-u4-14e,2026-11-16,reserved by AoS4 prefill
-VCAA 2023 E1 Q31,,Do Now,yes,gm12-u4-14e,2026-11-16,reserved by AoS4 prefill
-VCAA 2024 E2 Q15a,,Do Now,yes,gm12-u4-14e,2026-11-16,reserved by AoS4 prefill
-VCAA 2024 E2 Q6a,,Do Now,yes,gm12-u4-14e,2026-11-16,reserved by AoS4 prefill
-"VCAA 2017 E2 Networks Q4ci,ii",Edrolo U3&4 8J Q9,exit,yes,gm12-u4-14e,2026-11-16,reserved by AoS4 prefill
-VCAA 2020 E1 Networks Q10,Edrolo U3&4 8J Q10,exit,yes,gm12-u4-14e,2026-11-16,reserved by AoS4 prefill
-VCAA 2021 E2 Networks Q4c,Edrolo U3&4 8J Q11,exit,yes,gm12-u4-14e,2026-11-16,reserved by AoS4 prefill
+VCAA 2024 NHT E1 Q40,,Do Now,yes,gm12-u4-14e,2026-11-16,used in 14E slides + worksheet (AoS4 #19)
+VCAA 2023 E1 Q31,,Do Now,yes,gm12-u4-14e,2026-11-16,used in 14E slides + worksheet (AoS4 #19)
+VCAA 2024 E2 Q15a,,Do Now,yes,gm12-u4-14e,2026-11-16,used in 14E slides + worksheet (AoS4 #19)
+VCAA 2024 E2 Q6a,,Do Now,yes,gm12-u4-14e,2026-11-16,used in 14E slides + worksheet (AoS4 #19)
+"VCAA 2017 E2 Networks Q4ci,ii",Edrolo U3&4 8J Q9,exit,yes,gm12-u4-14e,2026-11-16,used in 14E slides + worksheet (AoS4 #19)
+VCAA 2020 E1 Networks Q10,Edrolo U3&4 8J Q10,exit,yes,gm12-u4-14e,2026-11-16,used in 14E slides + worksheet (AoS4 #19)
+VCAA 2021 E2 Networks Q4c,Edrolo U3&4 8J Q11,exit,yes,gm12-u4-14e,2026-11-16,used in 14E slides + worksheet (AoS4 #19)
 VCAA 2025 E1 Q25,,Do Now,yes,gm12-u4-11a,2026-11-16,11A slides + worksheet
 VCAA 2023 E1 Q15,,Do Now,yes,gm12-u4-11a,2026-11-16,11A slides + worksheet
 VCAA 2025 E2 Q11b,,Do Now,yes,gm12-u4-11a,2026-11-16,11A slides + worksheet

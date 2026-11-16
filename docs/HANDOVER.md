@@ -32,6 +32,9 @@
 
 
 
+## 16 Nov 14:58 — AoS4 #19: 14E Crashing lesson (Draft)
+- `lessons/14E slides` (20 slides: CFAT 4.14.2 → Do Now ×4 → Learn → Ex 12 → Edrolo 8J WE1 → Learn (cost) → Ex 13 → Edrolo 8J WE2 → exits VCAA 2017 E2 Q4c, 2020 E1 Q10, 2021 E2 Q4c) + `14E worksheet` (4 pages, student + solutions). Build: `tools/deck/gm12-u4-14e/`. On G: and the planner card.
+
 ## 16 Nov 14:37 — AoS3 #21: Chapter 11 revision booklet (Draft)
 `lessons/Ch11-revision-booklet(.html/.pdf)` + solutions, built by `tools/revision/ch11/build.py` (crops in `crops/`, segmentation in `seg_g1.json`/`seg_g2.json`). Insight GM1 Transition matrices MC Q1–14 + GM1 matrices Q24, Q29 (held back from Ch 10) and GM2 Transition matrices SA Q1–11, one section per subchapter 11A–11E. Shared MC stems shown once, groups kept together (GM1 Q4 and Q9–10 sit in 11D with their 11D partners). Answers from Insight's notes. On G: as `Ch11 revision booklet(.pdf)` / `... solutions.pdf`; on the gm12-ch11-test card.
 
