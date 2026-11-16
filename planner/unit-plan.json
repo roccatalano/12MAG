@@ -12143,7 +12143,33 @@
          }
         ],
         "cas": [],
-        "note": "Edrolo 7I WE1 (interpreting a transition diagram) and 7I WE2b (matrix → diagram) are spare You trys for Example 3."
+        "note": "Edrolo 7I WE1 (interpreting a transition diagram) and 7I WE2b (matrix → diagram) are spare You trys for Example 3.",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/11B slides.html",
+          "pdf": "lessons/11B slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "3 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/11B worksheet.html",
+            "pdf": "lessons/11B worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/11B worksheet solutions.html",
+            "pdf": "lessons/11B worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {

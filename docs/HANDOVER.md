@@ -17,6 +17,9 @@
 **16 Nov 10:37 (AoS4 #10):** Chapter 13 test + solutions built (Draft): `tools/test/ch13/build.py` → `lessons/Ch13 test` + `solutions` (Mathspace Ch 8 graphs and networks topic assessment, all 20 Qs, + Mathspace Ch 9 Q3–5 and Q10 shortest path, verbatim, /45, 8 pages each; figures cropped from the PDFs). On G: 01 Lesson materials and the gm12-ch13-test card; 24 ledger rows. **Chapter 13 queue finished**; next AoS 4 task: plan Ch 14.
 
 
+## 16 Nov 12:42 — AoS3 #17: Lesson 11B (Draft)
+11B slides (16) + 3-page guided worksheet (student + solutions), HTML+PDF, on G: and the planner card. Do Now: VCAA 2024 E1 Q31, Q2, 2024 E2 Q10a, 2024 NHT E2 Q12a; APK Cambridge U1&2 4G #17; Example 3 / Edrolo 7G WE3; exit VCAA 2019 E1 Q8 (15%). No CAS (none on the card). Next: 11C.
+
 ## 16 Nov 11:55: AoS2 #14 done (Draft)
 - 8B lesson (gm12-u3-l38): `lessons/8B slides.html/.pdf` (24 slides) + `8B worksheet` / `solutions` (3 pages); on G: 01 Lesson materials; planner card materials + ledger rows updated. Build: `tools/deck/gm12-u3-l38/`.
 ## 16 Nov 12:02 — AoS4 #15: lesson 14A (Flow problems) made (Draft)
