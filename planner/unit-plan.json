@@ -10378,18 +10378,35 @@
          },
          {
           "kind": "Chapter test",
-          "desc": "Mathspace Ch 2 topic assessment (20 Qs, /41), verbatim.",
+          "desc": "Mathspace loans and investments topic assessment (Mathspace Ch 6; 20 Qs, /40), verbatim.",
           "status": "draft",
           "copies": [
            {
             "label": "Student copy",
-            "file": "lessons/Ch2 test.html",
-            "pdf": "lessons/Ch2 test.pdf"
+            "file": "lessons/Ch8 test.html",
+            "pdf": "lessons/Ch8 test.pdf"
            },
            {
             "label": "Solutions",
-            "file": "lessons/Ch2 test solutions.html",
-            "pdf": "lessons/Ch2 test solutions.pdf"
+            "file": "lessons/Ch8 test solutions.html",
+            "pdf": "lessons/Ch8 test solutions.pdf"
+           }
+          ]
+         },
+         {
+          "kind": "Revision booklet",
+          "desc": "Insight GM1 + GM2 loans/annuities and finance solver questions (33 MC + 11 short answer, /68), one section per subchapter 8A–8I.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/Ch8-revision-booklet.html",
+            "pdf": "lessons/Ch8-revision-booklet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/Ch8-revision-booklet-solutions.html",
+            "pdf": "lessons/Ch8-revision-booklet-solutions.pdf"
            }
           ]
          }

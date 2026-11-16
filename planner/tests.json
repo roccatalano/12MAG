@@ -2802,5 +2802,303 @@
     "text": "A loan of $7200 charges simple interest. The total interest paid after 4 years is $1296. Determine the annual…"
    }
   ]
+ },
+ "8": {
+  "chapter": 8,
+  "total": 40,
+  "mc": 9,
+  "sa": 11,
+  "about": "Source (rule 9), copied verbatim: Mathspace General Maths 3&4, 'Chapter 6 - Loans and investments' (Mathspace's numbering), 'Chapter 6 - Topic assessment.pdf' + 'Chapter 6 - Topic assessment answer key.pdf' (02 Sources\\Textbooks\\Mathspace\\Chapter 6 - Loans and investments). All 20 items, marks as printed (/40). No figures.",
+  "byLesson": [
+   {
+    "lesson": "6.01",
+    "marks": 4,
+    "qs": [
+     "1",
+     "2",
+     "10"
+    ]
+   },
+   {
+    "lesson": "6.02",
+    "marks": 4,
+    "qs": [
+     "3",
+     "7",
+     "11"
+    ]
+   },
+   {
+    "lesson": "6.03",
+    "marks": 7,
+    "qs": [
+     "4",
+     "18a"
+    ]
+   },
+   {
+    "lesson": "6.04",
+    "marks": 4,
+    "qs": [
+     "5",
+     "6",
+     "12"
+    ]
+   },
+   {
+    "lesson": "6.07",
+    "marks": 3,
+    "qs": [
+     "8",
+     "19"
+    ]
+   },
+   {
+    "lesson": "6.05",
+    "marks": 4,
+    "qs": [
+     "9",
+     "15"
+    ]
+   },
+   {
+    "lesson": "6.08",
+    "marks": 2,
+    "qs": [
+     "13",
+     "14"
+    ]
+   },
+   {
+    "lesson": "6.06",
+    "marks": 12,
+    "qs": [
+     "16a",
+     "17a",
+     "20"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "q": "1",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q1 · 6.01",
+    "text": "A reducing balance loan of $20 000 charges interest at 6% per annum, compounded monthly. The monthly interest…",
+    "answer": "C"
+   },
+   {
+    "q": "2",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q2 · 6.01",
+    "text": "A loan of $15 000 is taken out at 8.4% per annum, compounded monthly. The monthly repayment is $350. The…",
+    "answer": "C"
+   },
+   {
+    "q": "3",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q3 · 6.02",
+    "text": "A home loan of $480 000 is taken at 5.4% per annum, compounded monthly, with monthly repayments of $2900.…",
+    "answer": "B"
+   },
+   {
+    "q": "4",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q4 · 6.03",
+    "text": "Two loans of $30 000 are offered. Loan P charges 7.2% per annum compounded monthly with monthly repayments of…",
+    "answer": "B"
+   },
+   {
+    "q": "5",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q5 · 6.04",
+    "text": "An annuity of $200 000 earns 5% per annum compounded annually. Annual withdrawals of $15 000 are made. The…",
+    "answer": "D"
+   },
+   {
+    "q": "6",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q6 · 6.04",
+    "text": "An annuity of $200 000 earns 5% per annum compounded annually. Annual withdrawals of $15 000 are made. The…",
+    "answer": "B"
+   },
+   {
+    "q": "7",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q7 · 6.02",
+    "text": "A reducing balance loan has a principal of $50 000, an interest rate of 9% per annum compounded monthly, and…",
+    "answer": "B"
+   },
+   {
+    "q": "8",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q8 · 6.07",
+    "text": "An investor deposits $800 per month into an account earning 4.8% per annum compounded monthly, starting with…",
+    "answer": "B"
+   },
+   {
+    "q": "9",
+    "type": "MC",
+    "marks": 1,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q9 · 6.05",
+    "text": "Two annuities each start with $150 000. Annuity X earns 5% per annum compounded annually with annual…",
+    "answer": "D"
+   },
+   {
+    "q": "10",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q10 · 6.01",
+    "text": "A reducing balance loan of $12 000 charges interest at 9% per annum, compounded monthly. The monthly…"
+   },
+   {
+    "q": "11",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q11 · 6.02",
+    "text": "A loan of $35 000 is taken at 6.6% per annum compounded monthly. Monthly repayments of $700 are made. Use a…"
+   },
+   {
+    "q": "12",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q12 · 6.04",
+    "text": "An annuity of $180 000 earns 4.5% per annum compounded annually. Annual withdrawals of $13 500 are made at…"
+   },
+   {
+    "q": "13",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q13 · 6.08",
+    "text": "A charity establishes a perpetuity to fund an annual scholarship of $8000. The fund earns 3.2% per annum.…"
+   },
+   {
+    "q": "14",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q14 · 6.08",
+    "text": "A fund of $750 000 earns 4.2% per annum compounded monthly. Determine the maximum monthly payment that can be…"
+   },
+   {
+    "q": "15",
+    "type": "SA",
+    "marks": 3,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q15 · 6.05",
+    "text": "Two annuities each start with $280 000. Annuity A earns 5.4% per annum compounded annually with annual…"
+   },
+   {
+    "q": "16a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q16 · 6.06",
+    "text": "State the number of full withdrawals of $3000 that Graham will receive."
+   },
+   {
+    "q": "16b",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q16 · 6.06",
+    "text": "Graham's final withdrawal is smaller than $3000. Determine the value of the final withdrawal, to the nearest…"
+   },
+   {
+    "q": "16c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q16 · 6.06",
+    "text": "Graham would like the annuity to last exactly 20 years instead. Determine the monthly withdrawal he could…"
+   },
+   {
+    "q": "17a",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q17 · 6.06",
+    "text": "Calculate the effective annual interest rate for Option A, rounded to two decimal places."
+   },
+   {
+    "q": "17b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q17 · 6.06",
+    "text": "Determine the monthly payment Leila would receive under Option A, to the nearest cent."
+   },
+   {
+    "q": "17c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q17 · 6.06",
+    "text": "Determine the annual payment Leila would receive under Option B, to the nearest cent."
+   },
+   {
+    "q": "17d",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q17 · 6.06",
+    "text": "Under Option A, determine the balance of the annuity after 10 years, to the nearest dollar."
+   },
+   {
+    "q": "17e",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q17 · 6.06",
+    "text": "Leila wants the option with the higher effective annual interest rate. Recommend an option for Leila, and…"
+   },
+   {
+    "q": "18a",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q18 · 6.03",
+    "text": "Find the values of a and b ."
+   },
+   {
+    "q": "18b",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q18 · 6.03",
+    "text": "Use a finance solver to determine the total number of monthly repayments needed to repay the loan."
+   },
+   {
+    "q": "18c",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q18 · 6.03",
+    "text": "Determine the balance of the loan after 5 years, to the nearest cent."
+   },
+   {
+    "q": "18d",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q18 · 6.03",
+    "text": "After 5 years, Ryan and Jess refinance the balance with a loan charging 5.64% per annum, compounding monthly.…"
+   },
+   {
+    "q": "18e",
+    "type": "SA",
+    "marks": 1,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q18 · 6.03",
+    "text": "Refinancing costs a one-off fee of $4000. Decide whether refinancing was worthwhile for Ryan and Jess. Give a…"
+   },
+   {
+    "q": "19",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q19 · 6.07",
+    "text": "Priya wants to save $20 000 for a car in 2 years. Her savings account earns 3.6% per annum compounded…"
+   },
+   {
+    "q": "20",
+    "type": "SA",
+    "marks": 2,
+    "src": "Mathspace Ch 6 (loans and investments) topic assessment Q20 · 6.06",
+    "text": "A retiree invests $350 000 in an annuity earning 5.2% per annum compounded monthly. The retiree wants the…"
+   }
+  ]
  }
 }

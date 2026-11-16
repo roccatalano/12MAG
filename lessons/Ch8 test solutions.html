@@ -1,0 +1,135 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Ch8 test solutions</title><style>@page { size: A4; margin: 11mm 12mm 12mm 12mm; }
+* { box-sizing: border-box; }
+body { font-family: Arial, "Liberation Sans", Helvetica, sans-serif; font-size: 10.3pt; line-height: 1.32; color:#000; margin:0; }
+.title { display:flex; align-items:center; gap:4mm; border:2px solid #000; padding:2mm 4mm; margin-bottom:3mm; }
+.title .code { font-size:15pt; line-height:1.1; text-align:center; font-weight:bold; border-right:2px solid #000; padding-right:4mm; }
+.title h1 { font-size:16pt; margin:0; flex:1; }
+.title .pg { font-size:10pt; text-align:right; white-space:nowrap; }
+.box { border:1.2px solid #000; margin-bottom:3mm; break-inside: avoid; }
+.box > .hd { font-weight:bold; font-size:10.5pt; text-transform:uppercase; letter-spacing:.4px; border-bottom:1.2px solid #000; padding:1mm 3mm; background:#eee; display:flex; justify-content:space-between; white-space:nowrap; }
+.box > .hd span { text-transform:none; font-weight:normal; letter-spacing:0; }
+.box > .bd { padding:2mm 3mm; }
+ul { margin:0; padding-left:5mm; } li { margin:0.6mm 0; }
+.ki { column-count:2; column-gap:6mm; } .ki li { margin:1mm 0; break-inside:avoid; }
+.pair { display:grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); border:1.2px solid #000; margin-bottom:3mm; break-inside: avoid; }
+.pair > div:nth-child(odd) { border-right:1.2px solid #000; } .pair .hd { display:flex; align-items:center; }
+.pair .hd { font-weight:bold; border-bottom:1.2px solid #000; padding:1mm 3mm; background:#eee; font-size:10pt; }
+.pair .bd { padding:2mm 3mm; display:flex; flex-direction:column; }
+.q { margin:0 0 1.5mm; }
+.ytp { display:flex; gap:2mm; border-bottom:1px dashed #bbb; padding-top:1mm; flex-direction:column; }
+.ytp:last-child { border-bottom:none; }
+.ytp .pq { display:flex; gap:2mm; } .ytp .pq > b { min-width:4mm; }
+.sp { position:relative; } .sp > .ans { position:absolute; left:6mm; right:0; top:0; font-size:8.6pt; line-height:1.25; }
+.ans { display:none; color:#c00; font-size:10pt; }
+.sol .ans { display:block; } .mc + .ans { margin-top:-1mm; }
+.sol .ans.in { display:inline; }
+.kf { border-collapse:collapse; width:100%; }
+.kf td { border-bottom:1px solid #999; padding:1.4mm 2mm; vertical-align:middle; }
+.kf tr:last-child td { border-bottom:none; }
+.kf td:first-child { font-weight:bold; width:36mm; border-right:1px solid #999; }
+table.t { border-collapse:collapse; font-size:10pt; margin:1mm 0; }
+table.t th, table.t td { border:1px solid #000; padding:.6mm 2.5mm; text-align:center; }
+table.t th { background:#eee; } table.t .l { text-align:left; } table.t tr.tot td { font-weight:bold; }
+table.fill td { height:6.5mm; min-width:16mm; } table.fill td:first-child { min-width:22mm; text-align:left; }
+.raw { font-size:10pt; border-collapse:collapse; margin:1mm 0; } .raw td { padding:0 2mm 0 0; }
+.mc { display:grid; gap:.3mm 4mm; margin:1mm 0; } .mc b { display:inline-block; width:5mm; }
+.grid { background-image:linear-gradient(#bbb .2mm,transparent .2mm),linear-gradient(90deg,#bbb .2mm,transparent .2mm); background-size:5mm 5mm; border-right:.2mm solid #bbb; border-bottom:.2mm solid #bbb; margin:1mm auto 0; }
+.sol .grid { display:none; }
+.sol .stu { display:none; }
+.chart { display:none; text-align:center; } .sol .chart { display:block; }
+.chart.always { display:block; }
+.fig { text-align:center; }
+.row { display:flex; gap:3mm; align-items:flex-start; } .row > * { min-width:0; }
+.tpl { line-height:2.3; font-size:10.5pt; }
+.tpl .s { display:inline-block; border-bottom:1px solid #000; min-width:22mm; text-align:center; position:relative; line-height:1.2; }
+.tpl .s i { position:absolute; left:0; right:0; top:100%; font-size:7pt; font-style:normal; color:#555; text-align:center; line-height:1.2; }
+.tpl .s u { text-decoration:none; color:#c00; font-size:9.5pt; visibility:hidden; white-space:nowrap; } .sol .tpl .s u { visibility:visible; }
+.scg { display:grid; grid-template-columns:1fr 1fr; }
+.sc { display:grid; grid-template-columns:6mm 1fr; gap:1mm 2mm; padding:2mm; border-bottom:1px solid #000; }
+.scg .sc:nth-child(odd) { border-right:1px solid #000; }
+.scg .sc:nth-last-child(-n+1) { border-bottom:none; }
+.tick { width:5mm; height:5mm; border:1.2px solid #000; margin-top:.5mm; }
+.hwg { display:grid; grid-template-columns:repeat(3,1fr); border:1px solid #000; }
+.hwg > div { border-right:1px solid #000; padding:2mm; text-align:center; display:flex; flex-direction:column; align-items:center; gap:1mm; }
+.hwg > div:last-child { border-right:none; }
+.hwh { font-weight:bold; text-transform:uppercase; font-size:9.5pt; }
+.hwq { font-size:10.5pt; line-height:1.5; }
+.sig { display:flex; gap:4mm; margin-top:3mm; align-items:stretch; }
+.stamp { width:32mm; height:24mm; border:1.2px dashed #000; font-size:8.5pt; color:#555; display:flex; align-items:flex-end; justify-content:center; padding-bottom:1mm; flex:none; }
+.sig .lines { flex:1; display:flex; flex-direction:column; justify-content:space-around; }
+.sig .lines > div { display:flex; align-items:flex-end; gap:2mm; font-size:10pt; }
+.sig .lines i { flex:1; border-bottom:1px solid #000; height:6mm; } .sig .lines i.d { flex:none; width:28mm; }
+.cite { font-size:8pt; font-style:italic; color:#444; text-align:right; margin-top:auto; padding-top:1mm; }
+.box.split { break-inside:auto; } .box.split .row, .box.split p, .box.split .mc { break-inside:avoid; }
+.sol .sp.wk { min-height:auto !important; } .sol .sp.wk > .ans { position:static; }
+.guess { font-size:9.5pt; margin-top:1.5mm; padding:1.2mm 2mm; border:1px dashed #000; display:flex; align-items:flex-end; gap:1.5mm; flex-wrap:wrap; }
+.guess span { display:inline-block; width:16mm; border-bottom:1px solid #000; height:4mm; } .guess span.sh { width:12mm; }
+.sol .guess::after { content:attr(data-a); color:#c00; font-weight:bold; margin-left:2mm; }
+.lines { margin-top:2mm; } .lines div { height:8mm; border-bottom:1px solid #999; }
+.bl { border-bottom:1px solid #000; width:45mm; height:6mm; margin:1mm 0 1.5mm auto; font-size:10pt; } .bl span { visibility:hidden; color:#c00; } .sol .bl span { visibility:visible; }
+.pagebreak { break-after: page; }
+.solmark { display:none; } .sol .solmark { display:inline; color:#c00; }
+body { font-size:9.8pt; line-height:1.28; }
+.secthd{margin-bottom:1.5mm} .qgrid{gap:2.5mm;margin-bottom:2.5mm} .title{margin-bottom:2mm}
+
+.title .who { font-size:10.5pt; white-space:nowrap; display:flex; flex-direction:column; gap:2mm; align-items:flex-end; }
+.title .who b { font-weight:normal; }
+.title .who i { display:inline-block; border-bottom:1px solid #000; width:52mm; height:5mm; vertical-align:bottom; }
+.title .who .sc { display:inline-block; border:1.5px solid #000; width:26mm; height:9mm; text-align:right; padding:1mm 2mm; font-size:12pt; font-weight:bold; }
+.qgrid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:3mm; margin-bottom:3mm; }
+.qgrid .box { margin-bottom:0; display:flex; flex-direction:column; }
+.qgrid .box > .bd { flex:1; display:flex; flex-direction:column; }
+.mc { grid-template-columns:1fr; }
+.mc div { display:flex; gap:1mm; } .mc b { flex:none; }
+.fig img { max-width:100%; }
+.fig.gs img { filter:grayscale(1) contrast(1.1); }
+.sa { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+.sa > .stem { border-right:1.2px solid #000; padding:2mm 3mm; display:flex; flex-direction:column; }
+.sa > .parts { display:flex; flex-direction:column; }
+.sa .part { padding:2mm 3mm; border-bottom:1px dashed #bbb; display:flex; flex-direction:column; }
+.sa .part:last-child { border-bottom:none; }
+.sa .part .pq { display:flex; gap:2mm; } .sa .part .pq > b { min-width:4mm; }
+.sa .part .grid { width:100%; flex:1; min-height:20mm; }
+.sa .part .blank { flex:1; min-height:12mm; }
+.sa1 { border-top:1.2px solid #000; } .sa1 .part { padding:2mm 3mm; display:flex; flex-direction:column; } .sa1 .pq{display:flex;gap:2mm} .sa1 .pq>b{min-width:4mm}
+.sa1 .blank { flex:1; min-height:11mm; }
+.brk { break-before:page; }
+.secthd { font-weight:bold; text-transform:uppercase; letter-spacing:.4px; font-size:10.5pt; margin:0 0 2mm; display:flex; justify-content:space-between; }
+.secthd span { text-transform:none; letter-spacing:0; font-weight:normal; font-size:9.5pt; }
+
+body{font-size:9.6pt;line-height:1.25}
+.qgrid{display:grid;grid-template-columns:1fr 1fr;gap:3mm} .qgrid .box{margin-bottom:0}
+.mcl div{margin:.6mm 0} .mcl b{display:inline-block;width:5mm}
+.mc2{display:grid;grid-template-columns:1fr 1fr;gap:.5mm 3mm}
+.ans{color:#c00;display:none;white-space:pre-wrap} .sol .ans{display:block}
+.ok{color:#c00;font-weight:bold;display:none} .sol .ok{display:inline}
+.part{border-top:1px dashed #000;padding:1mm 0 0;margin-top:1mm} .part .pq b{margin-right:2mm}
+.sp{min-height:var(--h)} .mk{color:#555;font-size:8.5pt}
+table.t{border-collapse:collapse;margin:1mm 0} table.t td,table.t th{border:1px solid #000;padding:.5mm 2mm;text-align:center}
+.cite{font-size:7.5pt;color:#555;margin-top:1mm}
+.stem3 td{border:none!important;padding:0 2mm!important;font-family:monospace;font-size:10pt} .stem3 td.s{border-left:1px solid #000!important;border-right:1px solid #000!important}
+.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;font-size:.9em;line-height:1.05}.fr span:first-child{border-bottom:1px solid #000;padding:0 1px}
+.mc2 b{display:inline-block;width:5mm}
+.blk{display:inline-block;min-width:9mm;height:4mm;text-align:center;line-height:4mm;border:1px solid #000;vertical-align:middle}
+.secthd{font-weight:bold;border-bottom:2px solid #000;margin:2mm 0;display:flex;justify-content:space-between}
+</style><script src="a4view.js"></script><script src="paged.polyfill.min.js"></script></head><body class="sol">
+<div class="title"><div class="code">Ch 8<br>test</div><h1>Reducing balance loans, annuities and investments<div style="font-size:10pt;font-weight:normal;margin-top:1mm">8A–8I · CAS and bound reference allowed · <b style=color:#c00>SOLUTIONS</b></div></h1><div class="who"><div><b>Name</b> <i></i></div><div class="sc">/40</div></div></div>
+<div class="secthd">Section A · Multiple choice<span>Circle one answer. 9 marks</span></div>
+<div class="qgrid" style="margin-bottom:3mm"><div class="box"><div class="hd">Question 1<span>1 mark</span></div><div class="bd"><p class="q">A reducing balance loan of $20 000 charges interest at 6% per annum, compounded monthly. The monthly interest charged in the first month is closest to:</p><div class="mc2"><div><b>A</b>$120.00 </div><div><b>B</b>$83.33 </div><div><b>C</b>$100.00 <span class=ok>✓</span></div><div><b>D</b>$1200.00 </div></div><div class="cite">Mathspace Ch 6 (loans and investments) topic assessment Q1 · 6.01</div></div></div><div class="box"><div class="hd">Question 2<span>1 mark</span></div><div class="bd"><p class="q">A loan of $15 000 is taken out at 8.4% per annum, compounded monthly. The monthly repayment is $350. The balance after the first repayment is:</p><div class="mc2"><div><b>A</b>$14 752.55 </div><div><b>B</b>$14 650.00 </div><div><b>C</b>$14 755.00 <span class=ok>✓</span></div><div><b>D</b>$15 910.00 </div></div><div class="cite">Mathspace Ch 6 (loans and investments) topic assessment Q2 · 6.01</div></div></div></div>
+<div class="qgrid" style="margin-bottom:3mm"><div class="box"><div class="hd">Question 3<span>1 mark</span></div><div class="bd"><p class="q">A home loan of $480 000 is taken at 5.4% per annum, compounded monthly, with monthly repayments of $2900. Using a financial solver, the number of months to repay the loan is closest to:</p><div class="mc2"><div><b>A</b>264 </div><div><b>B</b>300 <span class=ok>✓</span></div><div><b>C</b>240 </div><div><b>D</b>288 </div></div><div class="cite">Mathspace Ch 6 (loans and investments) topic assessment Q3 · 6.02</div></div></div><div class="box"><div class="hd">Question 4<span>1 mark</span></div><div class="bd"><p class="q">Two loans of $30 000 are offered. Loan P charges 7.2% per annum compounded monthly with monthly repayments of $600. Loan Q charges 6.6% per annum compounded fortnightly with fortnightly repayments of $280. Which statement is correct?</p><div class="mcl"><div><b>A</b>Loan P has a shorter loan term. </div><div><b>B</b>Loan Q has a lower total repayment amount. <span class=ok>✓</span></div><div><b>C</b>Both loans have the same total repayment amount. </div><div><b>D</b>Loan P has a lower total repayment amount. </div></div><div class="cite">Mathspace Ch 6 (loans and investments) topic assessment Q4 · 6.03</div></div></div></div>
+<div class="qgrid" style="margin-bottom:3mm"><div class="box"><div class="hd">Question 5<span>1 mark</span></div><div class="bd"><p class="q">An annuity of $200 000 earns 5% per annum compounded annually. Annual withdrawals of $15 000 are made. The balance after the first withdrawal is:</p><div class="mc2"><div><b>A</b>$196 000 </div><div><b>B</b>$185 000 </div><div><b>C</b>$194 250 </div><div><b>D</b>$195 000 <span class=ok>✓</span></div></div><div class="cite">Mathspace Ch 6 (loans and investments) topic assessment Q5 · 6.04</div></div></div><div class="box"><div class="hd">Question 6<span>1 mark</span></div><div class="bd"><p class="q">An annuity of $200 000 earns 5% per annum compounded annually. Annual withdrawals of $15 000 are made. The balance after the first withdrawal is $195 000. The interest earned in the second year is:</p><div class="mc2"><div><b>A</b>$10 000 </div><div><b>B</b>$9750 <span class=ok>✓</span></div><div><b>C</b>$10 250 </div><div><b>D</b>$9500 </div></div><div class="cite">Mathspace Ch 6 (loans and investments) topic assessment Q6 · 6.04</div></div></div></div>
+<div class="qgrid" style="margin-bottom:3mm"><div class="box"><div class="hd">Question 7<span>1 mark</span></div><div class="bd"><p class="q">A reducing balance loan has a principal of $50 000, an interest rate of 9% per annum compounded monthly, and monthly repayments of $1000. From the borrower's perspective, the correct sign convention in a financial solver for <i>PV</i> and <i>PMT</i> is:</p><div class="mcl"><div><b>A</b><i>PV</i> is negative, <i>PMT</i> is positive. </div><div><b>B</b><i>PV</i> is positive, <i>PMT</i> is negative. <span class=ok>✓</span></div><div><b>C</b>Both <i>PV</i> and <i>PMT</i> are positive. </div><div><b>D</b>Both <i>PV</i> and <i>PMT</i> are negative. </div></div><div class="cite">Mathspace Ch 6 (loans and investments) topic assessment Q7 · 6.02</div></div></div><div class="box"><div class="hd">Question 8<span>1 mark</span></div><div class="bd"><p class="q">An investor deposits $800 per month into an account earning 4.8% per annum compounded monthly, starting with no initial balance. After 5 years, the balance is closest to:</p><div class="mc2"><div><b>A</b>$53 891 </div><div><b>B</b>$54 128 <span class=ok>✓</span></div><div><b>C</b>$48 000 </div><div><b>D</b>$55 000 </div></div><div class="cite">Mathspace Ch 6 (loans and investments) topic assessment Q8 · 6.07</div></div></div></div>
+<div class="qgrid" style="margin-bottom:3mm"><div class="box"><div class="hd">Question 9<span>1 mark</span></div><div class="bd"><p class="q">Two annuities each start with $150 000. Annuity X earns 5% per annum compounded annually with annual withdrawals of $12 000. Annuity Y earns 5% per annum compounded monthly with monthly withdrawals of $1000. Which annuity lasts longer?</p><div class="mcl"><div><b>A</b>Annuity Y lasts longer. </div><div><b>B</b>Both annuities last the same length of time. </div><div><b>C</b>Neither annuity will ever be depleted. </div><div><b>D</b>Annuity X lasts longer. <span class=ok>✓</span></div></div><div class="cite">Mathspace Ch 6 (loans and investments) topic assessment Q9 · 6.05</div></div></div></div>
+<div class="secthd">Section B · Short answer<span>Show your working. 31 marks</span></div>
+<div class="box"><div class="hd">Question 10<span>2 marks</span></div><div class="bd"><p class="q">A reducing balance loan of $12 000 charges interest at 9% per annum, compounded monthly. The monthly repayment is $380.<br>Using the recurrence relation <i>V</i><sub><i>n</i>+1</sub> = 1.0075 × <i>V</i><sub><i>n</i></sub> − 380, calculate the balance of the loan after the first two repayments.</p><div class="part"><div class="sp" style="--h:16mm"><div class="ans">After first repayment: $11 710.00. After second repayment: $11 417.83.</div></div></div><div class="cite">Mathspace Ch 6 (loans and investments) topic assessment Q10 · 6.01</div></div></div>
+<div class="box"><div class="hd">Question 11<span>2 marks</span></div><div class="bd"><p class="q">A loan of $35 000 is taken at 6.6% per annum compounded monthly. Monthly repayments of $700 are made. Use a financial solver to determine how many full months it takes to repay the loan.</p><div class="part"><div class="sp" style="--h:16mm"><div class="ans">59 months (the loan is fully repaid in month 59, with a smaller final repayment).</div></div></div><div class="cite">Mathspace Ch 6 (loans and investments) topic assessment Q11 · 6.02</div></div></div>
+<div class="box"><div class="hd">Question 12<span>2 marks</span></div><div class="bd"><p class="q">An annuity of $180 000 earns 4.5% per annum compounded annually. Annual withdrawals of $13 500 are made at the end of each year.<br>Using the recurrence relation <i>A</i><sub><i>n</i>+1</sub> = 1.045 × <i>A</i><sub><i>n</i></sub> − 13 500, calculate the balance of the annuity after the first two withdrawals.</p><div class="part"><div class="sp" style="--h:16mm"><div class="ans">After first withdrawal: $174 600. After second withdrawal: $168 957.</div></div></div><div class="cite">Mathspace Ch 6 (loans and investments) topic assessment Q12 · 6.04</div></div></div>
+<div class="box"><div class="hd">Question 13<span>1 mark</span></div><div class="bd"><p class="q">A charity establishes a perpetuity to fund an annual scholarship of $8000. The fund earns 3.2% per annum. Determine the amount that must be invested to establish this perpetuity.</p><div class="part"><div class="sp" style="--h:14mm"><div class="ans">$250 000</div></div></div><div class="cite">Mathspace Ch 6 (loans and investments) topic assessment Q13 · 6.08</div></div></div>
+<div class="box"><div class="hd">Question 14<span>1 mark</span></div><div class="bd"><p class="q">A fund of $750 000 earns 4.2% per annum compounded monthly. Determine the maximum monthly payment that can be made from this fund as a perpetuity.</p><div class="part"><div class="sp" style="--h:14mm"><div class="ans">$2625</div></div></div><div class="cite">Mathspace Ch 6 (loans and investments) topic assessment Q14 · 6.08</div></div></div>
+<div class="box"><div class="hd">Question 15<span>3 marks</span></div><div class="bd"><p class="q">Two annuities each start with $280 000. Annuity A earns 5.4% per annum compounded annually with annual withdrawals of $22 000. Annuity B earns 5.4% per annum compounded monthly with monthly withdrawals of $1833.33. Withdrawals continue until each annuity is exhausted, with a smaller final withdrawal. Use a financial solver to determine when the final withdrawal from each annuity is made, and hence which annuity lasts longer and by how many months.</p><div class="part"><div class="sp" style="--h:22mm"><div class="ans">Annuity A: final withdrawal at the end of year 23 (month 276). Annuity B: final withdrawal at month 259. Annuity A lasts 17 months longer.</div></div></div><div class="cite">Mathspace Ch 6 (loans and investments) topic assessment Q15 · 6.05</div></div></div>
+<div class="box"><div class="hd">Question 16<span>4 marks</span></div><div class="bd"><p class="q">Graham, a retiree from Geelong, invests $420 000 in an annuity that earns interest at 4.8% per annum, compounding monthly. He receives a withdrawal of $3000 at the end of each month. Graham used a finance solver to find how long the annuity will last. The solver screen is shown below.<table class="t"><tr><th>Variable</th><th>Value</th></tr><tr><td>N</td><td>205.655</td></tr><tr><td>I%</td><td>4.8</td></tr><tr><td>PV</td><td>−420 000</td></tr><tr><td>PMT</td><td>3000</td></tr><tr><td>FV</td><td>0</td></tr><tr><td>P/Y</td><td>12</td></tr><tr><td>C/Y</td><td>12</td></tr></table></p><div class="part"><div class="pq"><b>a</b>State the number of full withdrawals of $3000 that Graham will receive. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:12mm"><div class="ans">205</div></div></div><div class="part"><div class="pq"><b>b</b>Graham's final withdrawal is smaller than $3000. Determine the value of the final withdrawal, to the nearest cent. <span class="mk">(2 marks)</span></div><div class="sp" style="--h:22mm"><div class="ans">$1967.42</div></div></div><div class="part"><div class="pq"><b>c</b>Graham would like the annuity to last exactly 20 years instead. Determine the monthly withdrawal he could receive, to the nearest cent. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:14mm"><div class="ans">$2725.62</div></div></div><div class="cite">Mathspace Ch 6 (loans and investments) topic assessment Q16 · 6.06</div></div></div>
+<div class="box"><div class="hd">Question 17<span>6 marks</span></div><div class="bd"><p class="q">Leila is retiring and will invest $600 000 in an annuity that is to last exactly 25 years, after which the balance will be zero. She is offered two options.<br>Option A: 5.4% per annum, compounding monthly, with a payment to Leila at the end of each month.<br>Option B: 5.5% per annum, compounding annually, with a payment to Leila at the end of each year.</p><div class="part"><div class="pq"><b>a</b>Calculate the effective annual interest rate for Option A, rounded to two decimal places. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:12mm"><div class="ans">5.54%</div></div></div><div class="part"><div class="pq"><b>b</b>Determine the monthly payment Leila would receive under Option A, to the nearest cent. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:12mm"><div class="ans">$3648.78</div></div></div><div class="part"><div class="pq"><b>c</b>Determine the annual payment Leila would receive under Option B, to the nearest cent. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:12mm"><div class="ans">$44 729.61</div></div></div><div class="part"><div class="pq"><b>d</b>Under Option A, determine the balance of the annuity after 10 years, to the nearest dollar. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:12mm"><div class="ans">$449 475</div></div></div><div class="part"><div class="pq"><b>e</b>Leila wants the option with the higher effective annual interest rate. Recommend an option for Leila, and justify your recommendation. <span class="mk">(2 marks)</span></div><div class="sp" style="--h:20mm"><div class="ans">Option A. Its effective annual rate of 5.54% is higher than the effective annual rate of Option B, which is 5.50% because it compounds annually.</div></div></div><div class="cite">Mathspace Ch 6 (loans and investments) topic assessment Q17 · 6.06</div></div></div>
+<div class="box"><div class="hd">Question 18<span>6 marks</span></div><div class="bd"><p class="q">Ryan and Jess borrow $520 000 to buy a house in Bendigo. Interest is charged at 6.12% per annum, compounding monthly, and they make repayments of $3400 at the end of each month. Part of the amortisation table for the loan is shown below, with two values, <i>a</i> and <i>b</i>, missing.<table class="t"><tr><th>Repayment number</th><th>Repayment ($)</th><th>Interest ($)</th><th>Principal reduction ($)</th><th>Balance ($)</th></tr><tr><td>0</td><td>0.00</td><td>0.00</td><td>0.00</td><td>520 000.00</td></tr><tr><td>1</td><td>3400.00</td><td>2652.00</td><td>748.00</td><td>519 252.00</td></tr><tr><td>2</td><td>3400.00</td><td><i>a</i></td><td>751.81</td><td><i>b</i></td></tr><tr><td>3</td><td>3400.00</td><td>2644.35</td><td>755.65</td><td>517 744.54</td></tr></table></p><div class="part"><div class="pq"><b>a</b>Find the values of <i>a</i> and <i>b</i>. <span class="mk">(2 marks)</span></div><div class="sp" style="--h:18mm"><div class="ans"><i>a</i> = 2648.19, <i>b</i> = 518 500.19</div></div></div><div class="part"><div class="pq"><b>b</b>Use a finance solver to determine the total number of monthly repayments needed to repay the loan. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:12mm"><div class="ans">298 repayments (the final repayment is smaller)</div></div></div><div class="part"><div class="pq"><b>c</b>Determine the balance of the loan after 5 years, to the nearest cent. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:12mm"><div class="ans">$467 650.75</div></div></div><div class="part"><div class="pq"><b>d</b>After 5 years, Ryan and Jess refinance the balance with a loan charging 5.64% per annum, compounding monthly. They keep making repayments of $3400 per month. Determine how many fewer repayments they make than they would have made with the original loan. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:14mm"><div class="ans">16</div></div></div><div class="part"><div class="pq"><b>e</b>Refinancing costs a one-off fee of $4000. Decide whether refinancing was worthwhile for Ryan and Jess. Give a reason. <span class="mk">(1 mark)</span></div><div class="sp" style="--h:16mm"><div class="ans">Yes. Their total repayments fall by about $54 062, far more than the $4000 fee.</div></div></div><div class="cite">Mathspace Ch 6 (loans and investments) topic assessment Q18 · 6.03</div></div></div>
+<div class="box"><div class="hd">Question 19<span>2 marks</span></div><div class="bd"><p class="q">Priya wants to save $20 000 for a car in 2 years. Her savings account earns 3.6% per annum compounded monthly. Use a financial solver to determine how much Priya must deposit each month, rounded to the nearest cent.</p><div class="part"><div class="sp" style="--h:18mm"><div class="ans">$804.94</div></div></div><div class="cite">Mathspace Ch 6 (loans and investments) topic assessment Q19 · 6.07</div></div></div>
+<div class="box"><div class="hd">Question 20<span>2 marks</span></div><div class="bd"><p class="q">A retiree invests $350 000 in an annuity earning 5.2% per annum compounded monthly. The retiree wants the annuity to last exactly 20 years. Use a financial solver to determine the maximum monthly withdrawal, rounded to the nearest cent.</p><div class="part"><div class="sp" style="--h:18mm"><div class="ans">$2348.69</div></div></div><div class="cite">Mathspace Ch 6 (loans and investments) topic assessment Q20 · 6.06</div></div></div>
+</body></html>
