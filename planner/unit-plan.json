@@ -12581,7 +12581,7 @@
         "doNow": [
          {
           "exam": "Exam 1",
-          "ref": "VCAA 2024 Exam 1 Q32",
+          "ref": "VCAA 2023 Exam 1 Q32",
           "sec": "11C"
          },
          {
@@ -12609,7 +12609,34 @@
         "cas": [
          "matrix-recurrence"
         ],
-        "casYouTry": "Cambridge Ex 8 on CAS (store S0, then repeat t·s+b with ans)"
+        "casYouTry": "Cambridge Ex 8 on CAS (store S0, then repeat t·s+b with ans)",
+        "note": "AoS3 #19 (16 Nov): Do Now 1 changed from VCAA 2024 E1 Q32 (uses Sn+1 = TSn + A = today's new content) to VCAA 2023 E1 Q32 (11C).",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked example, you try, CAS, exit task.",
+          "status": "draft",
+          "file": "lessons/11D slides.html",
+          "pdf": "lessons/11D slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "3 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/11D worksheet.html",
+            "pdf": "lessons/11D worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/11D worksheet solutions.html",
+            "pdf": "lessons/11D worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {

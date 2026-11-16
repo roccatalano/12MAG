@@ -739,12 +739,12 @@ VCAA 2020 E2 Matrices Q3d,Edrolo U3&4 7H Q14,exit,yes,gm12-u4-11c,2026-11-16,use
 Cambridge U1&2 skills checklist 4H #18,,APK,yes,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
 Cambridge U1&2 skills checklist 4D #10,,APK,yes,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
 VCAA 2021 E2 Matrices Q3a,Edrolo U1&2 5G Q12,APK,yes,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
-VCAA 2024 E1 Q32,,Do Now,yes,gm12-u4-11d,2026-11-16,reserved by AoS3 prefill
-VCAA 2025 E1 Q15,,Do Now,yes,gm12-u4-11d,2026-11-16,reserved by AoS3 prefill
-VCAA 2024 E2 Q12a,,Do Now,yes,gm12-u4-11d,2026-11-16,reserved by AoS3 prefill
-VCAA 2023 E2 Q10a,,Do Now,yes,gm12-u4-11d,2026-11-16,reserved by AoS3 prefill
-VCAA 2017 E1 Matrices Q7,Edrolo U3&4 7I Q15,exit,yes,gm12-u4-11d,2026-11-16,reserved by AoS3 prefill
-Cambridge U1&2 skills checklist 4H #19,,APK,yes,gm12-u4-11d,2026-11-16,reserved by AoS3 prefill
+VCAA 2024 E1 Q32,,Do Now,no,,2026-11-16,freed by AoS3 #19: uses Sn+1 = TSn + A (11D new content); replaced by 2023 E1 Q32
+VCAA 2025 E1 Q15,,Do Now,yes,gm12-u4-11d,2026-11-16,used: 11D slides
+VCAA 2024 E2 Q12a,,Do Now,yes,gm12-u4-11d,2026-11-16,used: 11D slides
+VCAA 2023 E2 Q10a,,Do Now,yes,gm12-u4-11d,2026-11-16,used: 11D slides
+VCAA 2017 E1 Matrices Q7,Edrolo U3&4 7I Q15,exit,yes,gm12-u4-11d,2026-11-16,used: 11D slides + worksheet
+Cambridge U1&2 skills checklist 4H #19,,APK,yes,gm12-u4-11d,2026-11-16,used: 11D slides + worksheet
 VCAA 2025 NHT E1 Q32,,Do Now,yes,gm12-u4-11e,2026-11-16,reserved by AoS3 prefill
 VCAA 2025 E1 Q31,,Do Now,yes,gm12-u4-11e,2026-11-16,reserved by AoS3 prefill
 VCAA 2023 E2 Q11a,,Do Now,yes,gm12-u4-11e,2026-11-16,reserved by AoS3 prefill
@@ -804,3 +804,4 @@ Edrolo U3&4 7G WE5,,You try,no,gm12-u4-11c,2026-11-16,used: 11C slides + workshe
 Edrolo U3&4 7G WE7,,You try,no,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
 Edrolo U3&4 7G WE6,,You try,no,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
 Edrolo U3&4 7H WE1,,You try,no,gm12-u4-11c,2026-11-16,used: 11C slides + worksheet
+VCAA 2023 E1 Q32,,Do Now,yes,gm12-u4-11d,2026-11-16,used: 11D slides (replaces 2024 E1 Q32)
