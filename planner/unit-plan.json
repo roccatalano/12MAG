@@ -11986,7 +11986,33 @@
          "matrix-entry"
         ],
         "casYouTry": "Enter and store the Example 1 transition matrix (check each column adds to 1)",
-        "note": "Edrolo 7G WE1–2 (reading / constructing an initial state matrix) are spare You trys for the state-matrix idea."
+        "note": "Edrolo 7G WE1–2 (reading / constructing an initial state matrix) are spare You trys for the state-matrix idea.",
+        "materials": [
+         {
+          "kind": "Guided slides",
+          "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+          "status": "draft",
+          "file": "lessons/11A slides.html",
+          "pdf": "lessons/11A slides.pdf"
+         },
+         {
+          "kind": "Guided worksheet",
+          "desc": "4 pages, questions in slide order.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/11A worksheet.html",
+            "pdf": "lessons/11A worksheet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/11A worksheet solutions.html",
+            "pdf": "lessons/11A worksheet solutions.pdf"
+           }
+          ]
+         }
+        ]
        }
       },
       {

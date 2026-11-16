@@ -1,5 +1,7 @@
 # 12MAG handover — 15 Nov 2026 (updated 15:55)
 
+**16 Nov 12:05 (AoS3 #16):** Lesson 11A built (Draft): `tools/deck/gm12-u4-11a/` (build.py, worksheet.py, shoot.py, fig/ crops) → `lessons/11A slides` (21 slides: Do Now 2025 E1 Q25, 2023 E1 Q15, 2025 E2 Q11b, 2024 E2 Q2cii; APK Cambridge U1&2 4G #16 + VCAA 2019 E2 Q2b, Q3a; Examples 1–2 + You trys Edrolo 7I WE2a, 7G WE4 (transition matrices filled column by column); CAS matrix-entry; exit VCAA 2017 E2 Q2a,b) and `11A worksheet`/solutions (4 pages), on G: and the planner card; 7 ledger rows marked used. Next AoS 3 task: 11B.
+
 **16 Nov 11:30 (AoS2 #13):** Lesson l37 (8A) built (Draft): `tools/deck/gm12-u3-l37/` (build.py, worksheet.py, shoot.py) → `lessons/8A slides` (27 slides: Do Now 2026 E1 Q17, Q2, 2026 E2 Q8a, Q1a; APK Cambridge U1&2 3H #22 + VCAA 2017 E2 Q5c; Examples 1–5 + You trys (YT-8A-1/2/5 written, Edrolo 6F WE1a/b); CAS recursion-sequence; exits VCAA 2018 E1 Q17, Q18, 2021 E1 Q22) and `8A worksheet`/solutions (4 pages), on G: and the planner card; 8 ledger rows marked used. Next AoS 2 task: l38 (8B).
 
 **16 Nov 11:16 (AoS2 #12):** CFAT follow-ups for Ch 8: Jacaranda U3&4 (2023) 7.2–7.6 exercises on every CFAT 2.8.1/2.8.2 question (`fu`) + `followUp` lists in unit-plan.json. Jacaranda has no 'find the loan rate' question, so 2.8.1 Q6 points to the nearest Finance Solver practice (7.3 Q13–14).
