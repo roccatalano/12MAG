@@ -160,6 +160,18 @@ main{max-width:1200px;margin:0 auto;padding:16px 20px 80px}
 .cpl.cp3{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:6px;margin-top:4px}.cp3 .cpc{border-color:#c9d6ee}.ccr{display:flex;justify-content:space-between;align-items:center;gap:6px;margin-top:2px}.ccr>span:last-child{white-space:nowrap;display:flex;gap:3px}.ccr a{white-space:nowrap}.cp3 .cpc{gap:2px}.ccr .sub{font-size:11px;color:var(--muted)}
 .nest.n-ld{border-color:var(--lesson-i);background:#f3f6fc}.nest.n-ld>summary{color:var(--lesson-i)}.n-ld .detail{border:0;padding:0;background:transparent;grid-template-columns:1fr}.n-ld .detail h2,.n-ld .detail>div>.meta,.n-ld [data-nest="mat"]{display:none}
 .lcard.t-check .nest.n-ld{border-color:var(--sac-i);background:#fdf3f3}.lcard.t-check .nest.n-ld>summary{color:var(--sac-i)}
+/* Year plan calendar (Rocco, 16 Nov) */
+.cweek{display:grid;grid-template-columns:150px minmax(0,1fr);gap:10px;align-items:start;padding:8px 0;border-bottom:1px solid var(--line)}
+.cwl{display:flex;flex-direction:column;gap:3px;font-size:12px;color:var(--muted)}.cwl b{color:var(--ink);font-size:14px}
+.chip{font-size:11px;border-radius:7px;padding:2px 7px;line-height:1.3}.cbl{background:#efece4;color:#6b6656}.csac{background:#fbe3e3;color:#7a1f1f;font-weight:600}.cfx{background:#fdeee0;color:#8a4a12}.cex{background:#e7eafb;color:#2c3576}
+.cslots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.slot{border:1px solid var(--line);border-radius:10px;padding:9px 11px;min-height:86px;display:flex;flex-direction:column;gap:4px;background:var(--card)}
+.slot .sm{font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:6px}.slot .st{font-weight:600;line-height:1.3}
+.slesson{border-left:6px solid var(--ac);cursor:pointer}.slesson:hover{box-shadow:0 2px 8px rgba(0,0,0,.1)}.slesson.open{background:var(--acb);box-shadow:inset 0 0 0 2px var(--ac)}
+.slesson.scheck{border-left-color:#a32d2d;background:#fdf6f6}.stags{display:flex;gap:4px;flex-wrap:wrap;margin-top:auto}.stags .tag{font-size:11px;padding:1px 7px;border-radius:6px;background:#eef0f3;color:#555}.stags .tag.cfat{background:#efe9fb;color:#5b3fb0;font-weight:600}.stags .tag.chk{background:#fbe3e3;color:#a32d2d}
+.sbuf{border-style:dashed;background:transparent;color:var(--muted)}.sbuf .st{font-weight:500}
+.ssac{background:#fbeaea;border:1px dashed #d98c8c;color:#7a1f1f}.sfix{background:#fdf3e6;border:1px dashed #e0a96d;color:#7a4510}.snone{grid-column:1/-1;min-height:0;color:var(--muted);font-style:italic;border-style:dashed;background:transparent}
+.cdetail{margin:6px 0 10px 160px}@media(max-width:800px){.cweek{grid-template-columns:1fr}.cdetail{margin-left:0}.cslots{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -418,7 +430,7 @@ function flow(Y){
     for(const W of byWeek){wn++;const wk={mon:W.k,label:t.weekLabel?`${t.weekLabel} ${wn}`:`Week ${wn}`,term:t.name,first:iso(W.days[0]),last:iso(W.days[W.days.length-1]),slots:[]};weeks.push(wk);
       const school=W.days.filter(d=>d.getUTCDay()>=1&&d.getUTCDay()<=5),open=school.filter(d=>!blocked.has(iso(d)));
       let slotDays;
-      if(weekly){const n=Math.min(left,open.length,open.length>=5?R.fullWeek:R.shortWeek);left-=n;
+      if(weekly){const per=R.byDays?(R.byDays[Math.min(open.length,5)]??0):(open.length>=5?R.fullWeek:R.shortWeek),n=Math.min(left,open.length,per);left-=n;
         slotDays=n<=0?[]:n==1?[open[0]]:[...new Set(Array.from({length:n},(_,k)=>Math.round(k*(open.length-1)/(n-1))))].map(k=>open[k]);}
       else slotDays=open.filter(d=>days.has(d.getUTCDay()));
       const slotSet=new Set(slotDays.map(iso)),taken=new Map();
@@ -429,7 +441,7 @@ function flow(Y){
         if(!slotSet.has(s)||blocked.has(s)){anc()}
         if(blocked.has(s)&&d.getUTCDay()>=1&&d.getUTCDay()<=5&&(weekly||days.has(d.getUTCDay()))){wk.slots.push({id:'bl'+s,type:'blocked',section:fmt(d),title:blocked.get(s),n:''});continue}
         if(!slotSet.has(s))continue;
-        if(taken.has(s)){const a=taken.get(s);wk.slots.push({id:'an'+s,type:'anchor',section:fmt(d),title:a.label,n:'',when:fmt(d),date:s});anc();continue}
+        if(taken.has(s)){const a=taken.get(s);wk.slots.push({id:'an'+s,type:'anchor',section:fmt(d),title:a.label,n:'',when:fmt(d),date:s,slot:1,sac:/SAC/.test(a.label)});anc();continue}
         place(wk,s,d)=='used'?used++:buf++;anc()}
     }stats.push({name:t.name,used,buf})}
   /* teaching time per AoS: slots after the previous window anchor up to (and before) this one */
@@ -441,7 +453,7 @@ function renderYear(y){
   const Y=YD[y];
   if(!Y){$('#main').innerHTML=`<div class="placeholder">Could not read years/${esc(y)}.json</div>`;return}
   const missing=!(Y.terms&&Y.terms.length);
-  $('#subinfo').textContent=missing?'Dates not added yet':`${Y.terms.length} terms · `+((Y.teachingDays||[]).length?Y.teachingDays.join(', '):`${(Y.lessonRule||{}).fullWeek||3} lessons a full week, ${(Y.lessonRule||{}).shortWeek||2} a short week`);
+  $('#subinfo').textContent=missing?'Dates not added yet':`${Y.terms.length} terms · `+((Y.teachingDays||[]).length?Y.teachingDays.join(', '):((Y.lessonRule||{}).byDays?'5-day week = 3 lessons · 3–4 days = 2 · 1–2 days = 1':`${(Y.lessonRule||{}).fullWeek||3} lessons a full week, ${(Y.lessonRule||{}).shortWeek||2} a short week`));
   if(missing){$('#ctl').style.display='none';
     $('#main').innerHTML=`<div class="unit">Year plan ${esc(y)}</div><div class="placeholder"><h2>${esc(Y.status||'Dates not added yet')}</h2>
     Once <code>planner/years/${esc(y)}.json</code> has these, this tab fills itself in from the Course plan:
@@ -452,14 +464,25 @@ function renderYear(y){
   let h=`<div class="unit">Year plan ${esc(y)} <span class="scope">· ${stats.map(s=>`${esc(s.name)}: ${s.used} lessons, ${s.buf} buffers`).join(' · ')}</span></div>
    <div class="legend"><span class="t-lesson"><i></i>Lesson</span><span class="t-check"><i></i>Catch-up + coursework check (chapter test)</span><span class="t-anchor"><i></i>Fixed date</span><span><i style="background:var(--other-i)"></i>Buffer</span><span><i style="background:#8a6ad8"></i>CFAT</span></div>
    ${win.length?`<div class="scope" style="margin:4px 0 10px">Teaching time up to each SAC · ${win.map(esc).join(' · ')}</div>`:''}${warns.map(w=>`<div class="warn">${esc(w)}</div>`).join('')}`;
-  let lastT='',lastA='';
-  for(const w of weeks){const S=w.slots.filter(l=>!f||l.aos==f);if(!S.length)continue;
-    if(w.term!=lastT){lastT=w.term;h+=`<div class="aos"><b>${esc(w.term)}</b><span></span></div>`}
-    h+=`<div class="week"><div class="wl"><b>${esc(w.label)}</b>${esc(w.term)}<span class="wdates">${fmt(D(w.first))} – ${fmt(D(w.last))}</span></div>`;
-    for(const l of S)h+=card(l,l.when&&l.type!='blocked'&&l.type!='anchor'&&l.type!='buffer'?`<div class="sub">${esc(l.when)}</div>`:'');
-    S.filter(l=>l.aos&&(expandAll||l.id==openId)).forEach(l=>h+=detail(l));
-    h+='</div>'}
+  // Week-by-week calendar (Rocco, 16 Nov): each week = its lesson slots as big cards; days off, after-school SACs and fixed dates as chips.
+  const weeklyY=!(Y.teachingDays&&Y.teachingDays.length);
+  const merge=cs=>{const out=[];cs.forEach(c=>{const p=out[out.length-1];if(p&&p.title==c.title&&p.type==c.type){p.to=c.section}else out.push({...c,to:''})});return out};
+  const scard=l=>{
+    if(l.type=='buffer')return `<div class="slot sbuf"><div class="sm">${weeklyY?'':esc(l.section)}</div><div class="st">Spare</div><div class="sub">SAC prep, revision or catch-up</div></div>`;
+    if(l.slot)return `<div class="slot ${l.sac?'ssac':'sfix'}"><div class="sm">${weeklyY?'In class':esc(l.when)}</div><div class="st">${esc(l.title)}</div></div>`;
+    return `<div class="slot slesson a${l.aosN} ${l.type=='check'?'scheck':''} ${openId==l.id?'open':''}" data-id="${l.id}"><div class="sm"><span>L${l.n} · ${esc(l.section)}</span>${weeklyY?'':`<span>${esc(l.when)}</span>`}</div>
+      <div class="st">${esc(l.title)}</div><div class="stags"><span class="tag">Ch ${l.ch}</span>${cfs(l).length?`<span class="tag cfat">${cfs(l).length>1?cfs(l).length+' CFATs':'CFAT'}</span>`:''}${l.type=='check'?'<span class="tag chk">Catch-up + check</span>':''}</div></div>`};
+  let lastT='';
+  for(const w of weeks){const S=w.slots.filter(x=>x.type=='buffer'||x.slot||x.aos),chips=w.slots.filter(x=>x.type=='blocked'||(x.type=='anchor'&&!x.slot));
+    const S2=S.filter(x=>!f||x.aos==f||x.type=='buffer'||x.slot);if(f&&!S2.some(x=>x.aos==f))continue;
+    if(w.term!=lastT){lastT=w.term;const st=stats.find(s=>s.name==w.term);h+=`<div class="aos"><b>${esc(w.term)}</b><span>${st?`${st.used} lessons · ${st.buf} spare`:''}</span></div>`}
+    h+=`<div class="cweek"><div class="cwl"><b>${esc(w.label)}</b><span class="wdates">${fmt(D(w.first))} – ${fmt(D(w.last))}</span><span class="sub">${S.length} lesson${S.length==1?'':'s'}</span>
+      ${merge(chips).map(c=>`<span class="chip ${c.type=='blocked'?'cbl':/SAC/.test(c.title)?'csac':/exam/i.test(c.title)?'cex':'cfx'}">${esc(c.section)}${c.to?'–'+esc(c.to):''} · ${esc(c.title)}</span>`).join('')}</div>
+      <div class="cslots">${S2.map(scard).join('')||'<div class="slot snone">No lessons this week</div>'}</div></div>`;
+    S2.filter(l=>l.aos&&(expandAll||l.id==openId)).forEach(l=>h+=`<div class="cdetail">${detail(l)}</div>`);
+  }
   $('#main').innerHTML=h; wire(()=>renderYear(y));
+  $('#main').querySelectorAll('.slot[data-id]').forEach(el=>el.onclick=()=>{openId=openId==el.dataset.id?null:el.dataset.id;renderYear(y)});
 }
 /* ---------- tabs ---------- */
 function render(){

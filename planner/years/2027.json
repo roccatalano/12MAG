@@ -4,9 +4,14 @@
  "lessonsPerWeek": 3,
  "teachingDays": [],
  "lessonRule": {
-  "fullWeek": 3,
-  "shortWeek": 2,
-  "why": "Rocco, 16 Nov: timetables for the 4 classes aren't known yet. A full 5-day week = 3 lessons; any week with fewer than 5 student days = 2 lessons, so it evens out across classes."
+  "byDays": {
+   "5": 3,
+   "4": 2,
+   "3": 2,
+   "2": 1,
+   "1": 1
+  },
+  "why": "Rocco, 16 Nov: timetables for the 4 classes aren't known yet. Lessons per week by the number of student days in it: 5 days = 3, 3–4 days = 2, 1–2 days = 1, so it evens out across classes."
  },
  "terms": [
   {
