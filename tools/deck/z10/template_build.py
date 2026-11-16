@@ -55,3 +55,4 @@ LESSON_CSS = r'''
 LESSON_JS = r'''
 '''
 build('SX-slides.html', '12MAG SX · Formal topic title · Slides', css=LESSON_CSS, js=LESSON_JS)
+# Then: python3 tools/deck/z10/pdf.py lessons/SX-slides.html lessons/SX-slides.pdf   (vector PDF, the standard)

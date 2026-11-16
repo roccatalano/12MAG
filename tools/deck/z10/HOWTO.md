@@ -18,7 +18,7 @@ planner card is the basis, burnt items ledger).
 | `lib/normal.py` (+ `.css/.js`) | `ncurve` (normal curve), `sh()` shading, `mk()` marks; `window.ZN` exposes the curve maths to lesson interactives. |
 | `shell/` | The 10MA deck shell (navigation, help, toolbar, tile engine), CFU icons, coursework example page. Don't edit by hand. |
 | `check.py` | Click-through test: every slide, one click at a time; reports overflow/clipping and JS errors; saves a screenshot of every slide fully revealed. |
-| `pdf.py` | Slide PDF. |
+| `pdf.py` | Slide PDF: **vector print** (Chrome `page.pdf`, 1280×720 px pages, selectable text); 3× PNG fallback per page only. |
 | `chapter.py` | Chapter file: one HTML with a tab per lesson deck + one PDF. |
 
 Importing a module (`from lib.num import *`) is all it takes to add its CSS and JS to the deck.
@@ -36,8 +36,14 @@ Importing a module (`from lib.num import *`) is all it takes to add its CSS and 
    `python3 tools/deck/z10/check.py lessons/S<n>-slides.html /tmp/shots`. Fix every reported issue, then LOOK at the
    screenshots (every slide fully revealed) and at some mid-reveal states.
 5. PDF: `python3 tools/deck/z10/pdf.py lessons/S<n>-slides.html lessons/S<n>-slides.pdf` (question slides = 2 pages:
-   question only, then all steps; others = 1 page, all steps). Pages are 1.5× screenshots.
-6. Chapter file: `python3 tools/deck/z10/chapter.py <chapter> S<a> S<b> …` → `lessons/Ch<chapter>-slides.html` + `.pdf`.
+   question only, then all steps; others = 1 page, all steps). **Pages are vector prints (the standard):** the deck is loaded
+   at a true 1280×720 viewport (fit scripts measure real sizes), KaTeX and fonts are waited for, the `#stage`
+   translate/scale is switched off, and each state is printed to one 1280×720 px page (backgrounds on), then joined
+   with pypdf. Sharp at any zoom, text selectable, ~1/5 the size of the old screenshots. If a state won't print to exactly
+   one page, **that page only** falls back to a 3× PNG screenshot and the script logs it (`PNG fallback: …`): fix the
+   slide if you can. Check: `pdftoppm` a few pages and compare with the `check.py` screenshots; `pdftotext` gives the text.
+6. Chapter file: `python3 tools/deck/z10/chapter.py <chapter> S<a> S<b> …` → `lessons/Ch<chapter>-slides.html` + `.pdf`
+   (the PDF joins the lesson vector PDFs: run step 5 for every lesson first).
 7. Copy to G: `01 Lesson materials` as `<subs> slides.html/.pdf`; planner links `lessons/S<n>-slides.html/.pdf`.
 8. Changing the library: rebuild ALL decks and compare `check.py` screenshots before and after (pixel diff); nothing may
    change unless you meant it.

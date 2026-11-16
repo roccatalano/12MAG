@@ -5,7 +5,7 @@ r"""Chapter deck: one HTML file with a tab per lesson deck (lessons/Ch<n>-slides
 
 Each lesson deck (lessons/<S#>-slides.html) is embedded whole and LAZY-LOADED: its iframe gets the deck only when its
 tab is first shown. Never load them all at once: the decks' fit scripts (zstemfit, zfit, ...) measure the slides and
-give wrong sizes inside a hidden iframe. The PDF is the lesson PDFs (lessons/<S#>-slides.pdf) joined in order.
+give wrong sizes inside a hidden iframe. The PDF is the lesson PDFs (lessons/<S#>-slides.pdf, vector prints from pdf.py) joined in order.
 Rebuild the lesson decks (and their PDFs) first.
 """
 import json, os, sys
@@ -37,6 +37,7 @@ def chapter(n, lessons, pdf=True):
         for s in lessons:
             p = os.path.join(LESSONS, f'{s}-slides.pdf')
             for pg in PdfReader(p).pages: w.add_page(pg); k += 1
+        w.compress_identical_objects(remove_duplicates=True, remove_unreferenced=True)   # shared fonts once
         w.write(os.path.join(LESSONS, f'Ch{n}-slides.pdf'))
         print(k, 'pages ->', f'lessons/Ch{n}-slides.pdf')
 
