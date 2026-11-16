@@ -1,42 +1,154 @@
 {
  "year": 2027,
- "status": "Dates from the EKC School Planner 2027 + VCE term dates (Rocco, 16 Nov 2026). Timetable days unknown until early 2027.",
+ "status": "Dates from the EKC School Planner 2027 + VCE term dates (Rocco, 16 Nov 2026). Timetable days unknown until early 2027. Essendon campus only (Rocco, 16 Nov).",
  "lessonsPerWeek": 3,
  "teachingDays": [],
- "lessonRule": {"fullWeek": 3, "shortWeek": 2, "why": "Rocco, 16 Nov: timetables for the 4 classes aren't known yet. A full 5-day week = 3 lessons; any week with fewer than 5 student days = 2 lessons, so it evens out across classes."},
+ "lessonRule": {
+  "fullWeek": 3,
+  "shortWeek": 2,
+  "why": "Rocco, 16 Nov: timetables for the 4 classes aren't known yet. A full 5-day week = 3 lessons; any week with fewer than 5 student days = 2 lessons, so it evens out across classes."
+ },
  "terms": [
-  {"name": "Step-up", "weekLabel": "Step-up week", "start": "2026-11-19", "end": "2026-12-02", "lessons": 6},
-  {"name": "Term 1", "start": "2027-01-28", "end": "2027-03-25"},
-  {"name": "Term 2", "start": "2027-04-12", "end": "2027-06-25"},
-  {"name": "Term 3", "start": "2027-07-12", "end": "2027-09-17"},
-  {"name": "Term 4", "start": "2027-10-04", "end": "2027-10-14"}
+  {
+   "name": "Step-up",
+   "weekLabel": "Step-up week",
+   "start": "2026-11-19",
+   "end": "2026-12-02",
+   "lessons": 6
+  },
+  {
+   "name": "Term 1",
+   "start": "2027-01-28",
+   "end": "2027-03-25"
+  },
+  {
+   "name": "Term 2",
+   "start": "2027-04-12",
+   "end": "2027-06-25"
+  },
+  {
+   "name": "Term 3",
+   "start": "2027-07-12",
+   "end": "2027-09-17"
+  },
+  {
+   "name": "Term 4",
+   "start": "2027-10-04",
+   "end": "2027-10-14"
+  }
  ],
  "blocked": [
-  {"date": "2027-02-10", "reason": "Year 12 Study Camp"},
-  {"date": "2027-02-11", "reason": "Year 12 Study Camp"},
-  {"date": "2027-02-12", "reason": "Year 12 Study Camp"},
-  {"date": "2027-03-05", "reason": "Student-free day (College PL)"},
-  {"date": "2027-03-08", "reason": "Labour Day"},
-  {"date": "2027-06-11", "reason": "Student-free day"},
-  {"date": "2027-06-14", "reason": "King's Birthday"},
-  {"date": "2027-06-15", "reason": "Student-free day (Essendon campus only)"},
-  {"date": "2027-06-17", "reason": "VCAA GAT"},
-  {"date": "2027-07-12", "reason": "Student-free day (Niddrie campus only)"},
-  {"date": "2027-09-03", "reason": "Student-free day (Staff PL)"},
-  {"date": "2027-09-15", "reason": "Parent–teacher interviews (student-free)"},
-  {"date": "2027-10-04", "reason": "Unit 3/4 practice exams"},
-  {"date": "2027-10-05", "reason": "Unit 3/4 practice exams"},
-  {"date": "2027-10-06", "reason": "Unit 3/4 practice exams"}
+  {
+   "date": "2027-02-10",
+   "reason": "Year 12 Study Camp"
+  },
+  {
+   "date": "2027-02-11",
+   "reason": "Year 12 Study Camp"
+  },
+  {
+   "date": "2027-02-12",
+   "reason": "Year 12 Study Camp"
+  },
+  {
+   "date": "2027-03-05",
+   "reason": "Student-free day (College PL)"
+  },
+  {
+   "date": "2027-03-08",
+   "reason": "Labour Day"
+  },
+  {
+   "date": "2027-03-24",
+   "reason": "Parent–teacher interviews (student-free)"
+  },
+  {
+   "date": "2027-06-11",
+   "reason": "Student-free day"
+  },
+  {
+   "date": "2027-06-14",
+   "reason": "King's Birthday"
+  },
+  {
+   "date": "2027-06-15",
+   "reason": "Student-free day (Essendon campus)"
+  },
+  {
+   "date": "2027-06-17",
+   "reason": "VCAA GAT"
+  },
+  {
+   "date": "2027-09-03",
+   "reason": "Student-free day (Staff PL)"
+  },
+  {
+   "date": "2027-09-15",
+   "reason": "Parent–teacher interviews (student-free)"
+  },
+  {
+   "date": "2027-10-04",
+   "reason": "Unit 3/4 practice exams"
+  },
+  {
+   "date": "2027-10-05",
+   "reason": "Unit 3/4 practice exams"
+  },
+  {
+   "date": "2027-10-06",
+   "reason": "Unit 3/4 practice exams"
+  }
  ],
  "anchors": [
-  {"date": "2026-12-02", "label": "Step-up 6 (if there is one): CFAT 1.1.3 + holiday homework prep", "inClass": true},
-  {"date": "2027-04-14", "label": "AoS 1 SAC: Part 1 (after school)", "aos": 1, "afterSchool": true, "window": true},
-  {"date": "2027-04-21", "label": "AoS 1 SAC Part 2 (after school)", "aos": 1, "afterSchool": true},
-  {"date": "2027-04-22", "label": "AoS 1 SAC Part 3 (in class)", "aos": 1, "inClass": true},
-  {"date": "2027-06-02", "label": "AoS 2 SAC: Recursion and financial modelling (after school)", "aos": 2, "afterSchool": true, "window": true},
-  {"date": "2027-08-04", "label": "AoS 3 SAC: Matrices (after school)", "aos": 3, "afterSchool": true, "window": true},
-  {"date": "2027-09-16", "label": "AoS 4 SAC: Networks (after school; Wed 15 Sep is student-free)", "aos": 4, "afterSchool": true, "window": true},
-  {"date": "2027-10-14", "label": "Last Year 12 class (VCAA exams start Tue 26 Oct)"}
+  {
+   "date": "2026-12-02",
+   "label": "Step-up 6 (if there is one): CFAT 1.1.3 + holiday homework prep",
+   "inClass": true
+  },
+  {
+   "date": "2027-04-14",
+   "label": "AoS 1 SAC: Part 1 (after school)",
+   "aos": 1,
+   "afterSchool": true,
+   "window": true
+  },
+  {
+   "date": "2027-04-21",
+   "label": "AoS 1 SAC Part 2 (after school)",
+   "aos": 1,
+   "afterSchool": true
+  },
+  {
+   "date": "2027-04-22",
+   "label": "AoS 1 SAC Part 3 (in class)",
+   "aos": 1,
+   "inClass": true
+  },
+  {
+   "date": "2027-06-02",
+   "label": "AoS 2 SAC: Recursion and financial modelling (after school)",
+   "aos": 2,
+   "afterSchool": true,
+   "window": true
+  },
+  {
+   "date": "2027-08-04",
+   "label": "AoS 3 SAC: Matrices (after school)",
+   "aos": 3,
+   "afterSchool": true,
+   "window": true
+  },
+  {
+   "date": "2027-09-08",
+   "label": "AoS 4 SAC: Networks (after school)",
+   "aos": 4,
+   "afterSchool": true,
+   "window": true
+  },
+  {
+   "date": "2027-10-14",
+   "label": "Last Year 12 class (VCAA exams start Tue 26 Oct)"
+  }
  ],
  "_help": {
   "teachingDays": "weekdays the class has 12MAG, e.g. [\"Mon\",\"Wed\",\"Thu\"]. Leave empty to use lessonRule (lessons per week, no fixed days).",

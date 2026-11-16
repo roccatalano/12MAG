@@ -329,11 +329,12 @@ function flow(Y){
       anchors.filter(a=>a.inClass&&a.date>=wk.first&&a.date<=wk.last).forEach(a=>{const c=slotDays.map(iso).filter(x=>!taken.has(x));
         const pick=c.find(x=>x>=a.date)||c[c.length-1];if(pick)taken.set(pick,a)});
       for(const d of W.days){const s=iso(d);
-        anchors.filter(a=>a.date===s&&!a.inClass).forEach(a=>wk.slots.push({id:'an'+s+a.label,type:'anchor',section:fmt(d),title:a.label,n:'',when:fmt(d)}));
+        const anc=()=>anchors.filter(a=>a.date===s&&!a.inClass).forEach(a=>wk.slots.push({id:'an'+s+a.label,type:'anchor',section:fmt(d),title:a.label,n:'',when:fmt(d)}));
+        if(!slotSet.has(s)||blocked.has(s)){anc()}
         if(blocked.has(s)&&d.getUTCDay()>=1&&d.getUTCDay()<=5&&(weekly||days.has(d.getUTCDay()))){wk.slots.push({id:'bl'+s,type:'blocked',section:fmt(d),title:blocked.get(s),n:''});continue}
         if(!slotSet.has(s))continue;
-        if(taken.has(s)){const a=taken.get(s);wk.slots.push({id:'an'+s,type:'anchor',section:fmt(d),title:a.label,n:'',when:fmt(d),date:s});continue}
-        place(wk,s,d)=='used'?used++:buf++}
+        if(taken.has(s)){const a=taken.get(s);wk.slots.push({id:'an'+s,type:'anchor',section:fmt(d),title:a.label,n:'',when:fmt(d),date:s});anc();continue}
+        place(wk,s,d)=='used'?used++:buf++;anc()}
     }stats.push({name:t.name,used,buf})}
   /* teaching time per AoS: slots after the previous window anchor up to (and before) this one */
   anchors.filter(a=>a.window).forEach(a=>{const pa=anchors.filter(x=>lim(x)!=null&&lim(x)<lim(a)),prev=pa.length?pa[pa.length-1].date:'0000';let les=0,bf=0;weeks.forEach(w=>w.slots.forEach(x=>{if(!x.date||x.type=='anchor')return;

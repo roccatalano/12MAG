@@ -4721,56 +4721,6 @@
          }
         ]
        }
-      },
-      {
-       "id": "gm12-u3-ch3-test",
-       "kind": "check",
-       "subchapters": [],
-       "title": "Chapter 3 coursework check + test",
-       "card": {
-        "materials": [
-         {
-          "kind": "Coursework check",
-          "desc": "Double-sided A4. Front: students tick the coursework they have (guided notes, bound reference entries, CFATs, homework); teacher signs off. Back: chapter success criteria, ticked by the teacher when marking the test (Test Q column = which question tests it).",
-          "status": "todo",
-          "file": ""
-         },
-         {
-          "kind": "Chapter test",
-          "desc": "Mathspace Ch 3 topic assessment, regression Qs only (14 Qs, /28), verbatim.",
-          "status": "draft",
-          "copies": [
-           {
-            "label": "Student copy",
-            "file": "lessons/Ch3 test.html",
-            "pdf": "lessons/Ch3 test.pdf"
-           },
-           {
-            "label": "Solutions",
-            "file": "lessons/Ch3 test solutions.html",
-            "pdf": "lessons/Ch3 test solutions.pdf"
-           }
-          ]
-         },
-         {
-          "kind": "Revision booklet",
-          "desc": "Insight GM1 + GM2 regression questions, one section per subchapter (3A–3C) for gradual coursework.",
-          "status": "draft",
-          "copies": [
-           {
-            "label": "Student copy",
-            "file": "lessons/Ch3-revision-booklet.html",
-            "pdf": "lessons/Ch3-revision-booklet.pdf"
-           },
-           {
-            "label": "Solutions",
-            "file": "lessons/Ch3-revision-booklet-solutions.html",
-            "pdf": "lessons/Ch3-revision-booklet-solutions.pdf"
-           }
-          ]
-         }
-        ]
-       }
       }
      ]
     },
@@ -5638,17 +5588,34 @@
        "id": "gm12-u3-ch4-test",
        "kind": "check",
        "subchapters": [],
-       "title": "Chapter 4 coursework check + test",
+       "title": "Chapters 3 + 4 coursework check + test",
        "card": {
         "materials": [
          {
           "kind": "Coursework check",
-          "desc": "Double-sided A4. Front: students tick the coursework they have (guided notes, bound reference entries, CFATs, homework); teacher signs off. Back: chapter success criteria, ticked by the teacher when marking the test (Test Q column = which question tests it).",
+          "desc": "Double-sided A4. Covers Chapters 3 and 4. Front: students tick the coursework they have (guided notes, bound reference entries, CFATs, homework); teacher signs off. Back: chapter success criteria, ticked by the teacher when marking the test (Test Q column = which question tests it).",
           "status": "todo",
           "file": ""
          },
          {
-          "kind": "Chapter test",
+          "kind": "Chapter 3 test",
+          "desc": "Mathspace Ch 3 topic assessment, regression Qs only (14 Qs, /28), verbatim.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/Ch3 test.html",
+            "pdf": "lessons/Ch3 test.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/Ch3 test solutions.html",
+            "pdf": "lessons/Ch3 test solutions.pdf"
+           }
+          ]
+         },
+         {
+          "kind": "Chapter 4 test",
           "desc": "Mathspace Ch 3 topic assessment + Ch 3 review transformation Qs (12 Qs, /39), verbatim.",
           "status": "draft",
           "copies": [
@@ -5665,7 +5632,24 @@
           ]
          },
          {
-          "kind": "Revision booklet",
+          "kind": "Chapter 3 revision booklet",
+          "desc": "Insight GM1 + GM2 regression questions, one section per subchapter (3A–3C) for gradual coursework.",
+          "status": "draft",
+          "copies": [
+           {
+            "label": "Student copy",
+            "file": "lessons/Ch3-revision-booklet.html",
+            "pdf": "lessons/Ch3-revision-booklet.pdf"
+           },
+           {
+            "label": "Solutions",
+            "file": "lessons/Ch3-revision-booklet-solutions.html",
+            "pdf": "lessons/Ch3-revision-booklet-solutions.pdf"
+           }
+          ]
+         },
+         {
+          "kind": "Chapter 4 revision booklet",
           "desc": "Insight GM1 + GM2 transformation questions, one section per subchapter (4A–4D) for gradual coursework.",
           "status": "draft",
           "copies": [
@@ -5681,7 +5665,8 @@
            }
           ]
          }
-        ]
+        ],
+        "note": "Rocco, 16 Nov: Ch 3 and Ch 4 tests merged into one lesson so AoS 1 fits before SAC Part 1 (Mathspace treats them as one chapter). The two papers together are /67: trim or set one as homework if that is too long for a lesson."
        }
       }
      ]
