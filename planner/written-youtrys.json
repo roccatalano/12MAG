@@ -447,6 +447,38 @@
    },
    "text": "Water enters a network of pipes at either Source 1 or Source 2 and flows out at either Outlet 1 or Outlet 2.\nThe numbers next to the arrows represent the maximum rate, in kilolitres per minute, at which water can flow through each pipe.\nDetermine the maximum rate, in kilolitres per minute, at which water can flow from these pipes at Outlet 1 and at Outlet 2.",
    "answer": "Outlet 1: minimum cut through the two pipes into Outlet 1: 350 + 250 = 600 kilolitres per minute.\nOutlet 2: minimum cut through the two pipes into Outlet 2: 200 + 450 = 650 kilolitres per minute.\n(These cannot simply be added: both outlets may not reach their maximum at the same time.)"
+  },
+  {
+   "id": "YT-11E-10",
+   "pairs": "Cambridge U3&4 Example 10",
+   "sub": "11E",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 10)",
+   "text": "Information about a population of female rabbits is given in the following table. Age group (years): 0−1, 1−2, 2−3, 3−4. Initial population: 20, 30, 15, 10. Birth rates: 0, 1.2, 0.8, 0. Survival rates: 0.5, 0.6, 0.3, 0. a Write down the initial population state matrix, S0. b Using the information in the table above, write down a Leslie matrix to describe the change in population of female rabbits. c Construct a life cycle transition diagram for this Leslie matrix. d Determine the number of 3 − 4 year old female rabbits in the population after 3 years. Round your answer to the nearest whole number.",
+   "answer": "a S0 = [20; 30; 15; 10]. b L = [0 1.2 0.8 0; 0.5 0 0 0; 0 0.6 0 0; 0 0 0.3 0]. c Four circles 0−1 → 1−2 → 2−3 → 3−4 with survival arrows 0.5, 0.6, 0.3; birth arrows from 1−2 (1.2) and 2−3 (0.8) back to 0−1. d S3 = L³S0 = [33.6; 13.2; 14.4; 1.8]: about 2 female rabbits aged 3−4."
+  },
+  {
+   "id": "YT-11E-11",
+   "pairs": "Cambridge U3&4 Example 11",
+   "sub": "11E",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 11)",
+   "text": "Consider the following Leslie matrix L and initial population matrix S0: L = [0 3 3; 0.3 0 0; 0 0.5 0] and S0 = [1000; 0; 0]. a Find i S5 ii S10 iii S50. Premultiply each of these state matrices by [1 1 1] to calculate the total populations at each of these stages and comment. b Determine S25 and S26. Divide each age group population for S26 by the corresponding age group population for S25 and show that S26 ≈ 1.1381S25 and comment.",
+   "answer": "a i S5 = [810; 243; 67.5], total ≈ 1121 ii S10 ≈ [1575; 421; 180], total ≈ 2176 iii S50 ≈ [280 035; 73 813; 32 427], total ≈ 386 275: the population keeps increasing. b S25 ≈ [11 022; 2905; 1276], S26 ≈ [12 544; 3307; 1453]; each ratio ≈ 1.1381, so in the long term every age group (and the total) grows by about 13.8% each year."
+  },
+  {
+   "id": "YT-11E-12",
+   "pairs": "Cambridge U3&4 Example 12",
+   "sub": "11E",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 12)",
+   "text": "Consider the following Leslie matrix L and initial population matrix S0: L = [0 2 1; 0.6 0 0; 0 0.48 0] and S0 = [1000; 500; 200]. a Determine i S10 ii S14 iii S15. b The rate of increase of the population is a constant and each of the age group populations increase in the same way. Find this rate by comparing S14 and S15. c Confirm the ratio of the age group populations stays constant for S0, S1 and S10 at 10:5:2.",
+   "answer": "a i S10 ≈ [6192; 3096; 1238] ii S14 ≈ [12 839; 6420; 2568] iii S15 ≈ [15 407; 7704; 3081]. b 15 407 ÷ 12 839 ≈ 7704 ÷ 6420 ≈ 3081 ÷ 2568 ≈ 1.2: a 20% increase each period. c S0 = [1000; 500; 200], S1 = [1200; 600; 240], S10 ≈ [6192; 3096; 1238]: each is in the ratio 10:5:2."
+  },
+  {
+   "id": "YT-11E-13",
+   "pairs": "Cambridge U3&4 Example 13",
+   "sub": "11E",
+   "label": "Written for 12MAG (Claude, modelled on Cambridge Example 13)",
+   "text": "Consider the following Leslie matrix L and initial population matrix S0: L = [0 0 b3; 0.4 0 0; 0 0.5 0] and S0 = [500; 0; 0]. Investigate the long-term behaviour of the population if: a b3 = 5 b b3 = 3 c b3 = 8",
+   "answer": "S1 = [0; 200; 0], S2 = [0; 0; 100] each time, then S3 = [100b3; 0; 0]. a b3 = 5: S3 = S6 = S9 = [500; 0; 0]: periodic (repeats every 3 years). b b3 = 3: S3 = [300; 0; 0], S6 = [180; 0; 0], S9 = [108; 0; 0]: decreasing (× 0.6 every 3 years). c b3 = 8: S3 = [800; 0; 0], S6 = [1280; 0; 0], S9 = [2048; 0; 0]: increasing (× 1.6 every 3 years)."
   }
  ]
 }

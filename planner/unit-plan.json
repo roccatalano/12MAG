@@ -11867,7 +11867,74 @@
            "note": "The 11A section"
           }
          ]
-        }
+        },
+        "keyVocab": [
+         "Transition matrix T: shows the proportions moving from each state (columns: \"from\", this period) to each state (rows: \"to\", next period)",
+         "Each column of a transition matrix adds to 1 (100%)",
+         "Transition diagram: one point per state; arrows (including loops) show the % moving; the % leaving each point add to 100%",
+         "State matrix Sₙ: a column matrix of the numbers in each state after n periods"
+        ],
+        "weDo": [
+         {
+          "n": 1,
+          "sub": "11A",
+          "title": "Setting up a transition matrix (from a diagram)",
+          "youTry": "Edrolo 7I WE2a",
+          "video": "Cambridge GO · 11A Resources"
+         },
+         {
+          "n": 2,
+          "sub": "11A",
+          "title": "Setting up a transition matrix (from written information)",
+          "youTry": "Edrolo 7G WE4",
+          "video": "Cambridge GO · 11A Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 4G checklist #16",
+          "text": "I can set up a transition matrix."
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 5G Q11",
+          "text": "VCAA 2019 Exam 2 Matrices Q2b,3a (90%)"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 Exam 1 Q25",
+          "sec": "10F"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2023 Exam 1 Q15",
+          "sec": "5B"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2025 Exam 2 Q11b",
+          "sec": "10D"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2024 Exam 2 Q2cii",
+          "sec": "1G"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 7I Q14",
+          "src": "VCAA 2017 Exam 2 Matrices Q2a,b"
+         }
+        ],
+        "cas": [
+         "matrix-entry"
+        ],
+        "casYouTry": "Enter and store the Example 1 transition matrix (check each column adds to 1)",
+        "note": "Edrolo 7G WE1–2 (reading / constructing an initial state matrix) are spare You trys for the state-matrix idea."
        }
       },
       {
@@ -11921,7 +11988,58 @@
            "note": "The 11B section"
           }
          ]
-        }
+        },
+        "keyVocab": [
+         "tᵢⱼ = proportion in state j (column) this period that move to state i (row) next period",
+         "Leading-diagonal elements: the proportion that stay in the same state",
+         "Convert proportions to % (× 100) and to numbers (× the number in the \"from\" state)"
+        ],
+        "weDo": [
+         {
+          "n": 3,
+          "sub": "11B",
+          "title": "Interpreting a transition matrix",
+          "youTry": "Edrolo 7G WE3",
+          "video": "Cambridge GO · 11B Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 4G checklist #17",
+          "text": "I can interpret a transition matrix."
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2024 Exam 1 Q31",
+          "sec": "10G"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2024 Exam 1 Q2",
+          "sec": "1A"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2024 Exam 2 Q10a",
+          "sec": "10A"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2024 NHT Exam 2 Q12a",
+          "sec": "11A"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 7I Q16",
+          "src": "VCAA 2019 Exam 1 Matrices Q8"
+         }
+        ],
+        "cas": [],
+        "note": "Edrolo 7I WE1 (interpreting a transition diagram) and 7I WE2b (matrix → diagram) are spare You trys for Example 3."
        }
       },
       {
@@ -11984,7 +12102,105 @@
            "note": "The 11C section"
           }
          ]
-        }
+        },
+        "keyVocab": [
+         "Recurrence relation: S₀ = initial state matrix, Sₙ₊₁ = TSₙ",
+         "Rule: Sₙ = TⁿS₀",
+         "Going back a step: Sₙ = T⁻¹Sₙ₊₁",
+         "Steady state (equilibrium) S: for large n, Sₙ₊₁ ≈ Sₙ; find it by trying large n (e.g. 50, 51) until the state stops changing"
+        ],
+        "weDo": [
+         {
+          "n": 4,
+          "sub": "11C",
+          "title": "Using a recursion relation to calculate state matrices step-by-step",
+          "youTry": "Edrolo 7G WE5",
+          "video": "Cambridge GO · 11C Resources"
+         },
+         {
+          "n": 5,
+          "sub": "11C",
+          "title": "Determining the nth state of a system using the rule Sn = TⁿS0",
+          "youTry": "Edrolo 7G WE7",
+          "video": "Cambridge GO · 11C Resources"
+         },
+         {
+          "n": 6,
+          "sub": "11C",
+          "title": "Using the inverse of a transition matrix (going back a step)",
+          "youTry": "Edrolo 7G WE6",
+          "video": "Cambridge GO · 11C Resources"
+         },
+         {
+          "n": 7,
+          "sub": "11C",
+          "title": "Estimating the steady-state solution",
+          "youTry": "Edrolo 7H WE1",
+          "video": "Cambridge GO · 11C Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 4H checklist #18",
+          "text": "I can use recursion to generate a sequence state matrix."
+         },
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 4D checklist #10",
+          "text": "I can perform matrix multiplication using a CAS calculator."
+         },
+         {
+          "kind": "Exam",
+          "ref": "Edrolo U1&2 5G Q12",
+          "text": "VCAA 2021 Exam 2 Matrices Q3a (30%)"
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2023 Exam 1 Q27",
+          "sec": "11B"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2024 Exam 1 Q27",
+          "sec": "10E"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2025 Exam 2 Q13a",
+          "sec": "11B"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2025 Exam 2 Q5a",
+          "sec": "3A"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 7G Q19",
+          "src": "VCAA 2016 Exam 2 Matrices Q3a"
+         },
+         {
+          "ref": "Edrolo U3&4 7G Q20",
+          "src": "VCAA 2017 Exam 2 Matrices Q3"
+         },
+         {
+          "ref": "Edrolo U3&4 7H Q12",
+          "src": "VCAA 2018 Exam 1 Matrices Q8"
+         },
+         {
+          "ref": "Edrolo U3&4 7H Q14",
+          "src": "VCAA 2020 Exam 2 Matrices Q3d"
+         }
+        ],
+        "cas": [
+         "matrix-recurrence"
+        ],
+        "casYouTry": "Edrolo 7G WE7 (S10 = T¹⁰S0 on CAS)",
+        "note": "Edrolo 7H WE2 (interpreting the equilibrium state matrix) is a spare You try for Example 7. Spare exit (not reserved): Edrolo 7H Q13 (VCAA 2018 E2 Matrices Q3e, 39%)."
        }
       },
       {
@@ -12042,7 +12258,60 @@
            "note": "The 11D section"
           }
          ]
-        }
+        },
+        "keyVocab": [
+         "Sₙ₊₁ = TSₙ + B: B is a column matrix of the numbers added (+, restocking) or removed (−, culling) in each state every step",
+         "Work one step at a time: S₁ = TS₀ + B, S₂ = TS₁ + B, … (no shortcut Sₙ = TⁿS₀ + B)",
+         "The columns of T still add to 1; the total changes by the sum of the elements of B each step"
+        ],
+        "weDo": [
+         {
+          "n": 8,
+          "sub": "11D",
+          "title": "Determining state matrices using the rule Sn+1 = TSn + B",
+          "youTry": "Edrolo 7I WE3",
+          "video": "Cambridge GO · 11D Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 4H checklist #19",
+          "text": "I can determine what happens to a sequence of state matrices in the long term."
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2024 Exam 1 Q32",
+          "sec": "11C"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 Exam 1 Q15",
+          "sec": "5B"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2024 Exam 2 Q12a",
+          "sec": "11C"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2023 Exam 2 Q10a",
+          "sec": "10F"
+         }
+        ],
+        "exit": [
+         {
+          "ref": "Edrolo U3&4 7I Q15",
+          "src": "VCAA 2017 Exam 1 Matrices Q7"
+         }
+        ],
+        "cas": [
+         "matrix-recurrence"
+        ],
+        "casYouTry": "Cambridge Ex 8 on CAS (store S0, then repeat t·s+b with ans)"
        }
       },
       {
@@ -12107,7 +12376,86 @@
            "note": "The 11E section"
           }
          ]
-        }
+        },
+        "keyVocab": [
+         "Leslie matrix L: females only; top row = birth (fertility) rates of each age group; sub-diagonal = survival rates; zeros elsewhere",
+         "The columns of a Leslie matrix do NOT add to 1",
+         "Sₙ₊₁ = LSₙ, so Sₙ = LⁿS₀; total population = [1 1 … 1] × Sₙ",
+         "Life cycle diagram: one circle per age group; birth arrows back to group 1, survival arrows to the next group",
+         "Long term: the population grows (rate > 1), declines (< 1), stays constant or cycles (periodic); growth rate = Sₙ₊₁ ÷ Sₙ for large n"
+        ],
+        "weDo": [
+         {
+          "n": 9,
+          "sub": "11E",
+          "title": "Determining state matrices and life cycle diagrams",
+          "youTry": "Edrolo 7G WE8",
+          "video": "Cambridge GO · 11E Resources"
+         },
+         {
+          "n": 10,
+          "sub": "11E",
+          "title": "Entering information in a Leslie matrix and state matrix",
+          "youTry": "Written (modelled on Cambridge Ex 10) · YT-11E-10",
+          "video": "Cambridge GO · 11E Resources"
+         },
+         {
+          "n": 11,
+          "sub": "11E",
+          "title": "Limiting behaviour for Leslie matrices",
+          "youTry": "Written (modelled on Cambridge Ex 11) · YT-11E-11",
+          "video": "Cambridge GO · 11E Resources"
+         },
+         {
+          "n": 12,
+          "sub": "11E",
+          "title": "A Leslie matrix and state matrix with constant rate of increase",
+          "youTry": "Written (modelled on Cambridge Ex 12) · YT-11E-12",
+          "video": "Cambridge GO · 11E Resources"
+         },
+         {
+          "n": 13,
+          "sub": "11E",
+          "title": "Periodic, increasing and decreasing rates of change",
+          "youTry": "Written (modelled on Cambridge Ex 13) · YT-11E-13",
+          "video": "Cambridge GO · 11E Resources"
+         }
+        ],
+        "apk": [
+         {
+          "kind": "Skill",
+          "ref": "Cambridge U1&2 4D checklist #8",
+          "text": "I can determine the order of the resulting matrix formed under matrix multiplication."
+         }
+        ],
+        "doNow": [
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 NHT Exam 1 Q32",
+          "sec": "11D"
+         },
+         {
+          "exam": "Exam 1",
+          "ref": "VCAA 2025 Exam 1 Q31",
+          "sec": "10D"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2023 Exam 2 Q11a",
+          "sec": "11D"
+         },
+         {
+          "exam": "Exam 2",
+          "ref": "VCAA 2024 Exam 2 Q1e",
+          "sec": "2G"
+         }
+        ],
+        "exit": [],
+        "cas": [
+         "matrix-recurrence"
+        ],
+        "casYouTry": "Cambridge Ex 11 on CAS (L^n·s for n = 5, 10, 50)",
+        "note": "No exit tasks: Edrolo has no VCAA Leslie-matrix questions (new to the 2023 Study Design). Current-design Leslie items (e.g. VCAA 2024 E2 Q11, 2026 E1 Q31-32) are kept for Do Now / revision."
        }
       },
       {

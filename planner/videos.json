@@ -74,15 +74,6 @@
    "status": "approved"
   },
   {
-   "sub": "1I",
-   "title": "Populations and samples",
-   "channel": "MaffsGuru (Darren Smyth)",
-   "url": "https://www.youtube.com/watch?v=C3gQan_jMzU",
-   "length": "17:39",
-   "page": "https://www.maffsguru.com/videos/populations-and-samples-846791/",
-   "status": "approved"
-  },
-  {
    "sub": "1H",
    "title": "Calculating and understanding z-scores with TI-nspire",
    "channel": "Texas Instruments Australia",
@@ -91,6 +82,15 @@
    "page": "",
    "status": "approved",
    "note": "covers z-scores, which the MaffsGuru 1H video does not"
+  },
+  {
+   "sub": "1I",
+   "title": "Populations and samples",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "https://www.youtube.com/watch?v=C3gQan_jMzU",
+   "length": "17:39",
+   "page": "https://www.maffsguru.com/videos/populations-and-samples-846791/",
+   "status": "approved"
   },
   {
    "sub": "2A",
@@ -354,136 +354,6 @@
    "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
   },
   {
-   "sub": "10A",
-   "title": "What is a matrix?",
-   "channel": "MaffsGuru (Darren Smyth)",
-   "url": "",
-   "length": "",
-   "page": "",
-   "status": "draft",
-   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
-  },
-  {
-   "sub": "10B",
-   "title": "Using matrices to represent information",
-   "channel": "MaffsGuru (Darren Smyth)",
-   "url": "",
-   "length": "",
-   "page": "",
-   "status": "draft",
-   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
-  },
-  {
-   "sub": "10C",
-   "title": "Matrix arithmetic: addition, subtraction and scalar multiplication",
-   "channel": "MaffsGuru (Darren Smyth)",
-   "url": "",
-   "length": "",
-   "page": "",
-   "status": "draft",
-   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
-  },
-  {
-   "sub": "10D",
-   "title": "Matrix arithmetic: the product of two matrices",
-   "channel": "MaffsGuru (Darren Smyth)",
-   "url": "",
-   "length": "",
-   "page": "",
-   "status": "draft",
-   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
-  },
-  {
-   "sub": "10E",
-   "title": "Matrix inverse, the determinant and matrix equations",
-   "channel": "MaffsGuru (Darren Smyth)",
-   "url": "",
-   "length": "",
-   "page": "",
-   "status": "draft",
-   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
-  },
-  {
-   "sub": "10F",
-   "title": "Binary, permutation and communication matrices",
-   "channel": "MaffsGuru (Darren Smyth)",
-   "url": "",
-   "length": "",
-   "page": "",
-   "status": "draft",
-   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
-  },
-  {
-   "sub": "10G",
-   "title": "Dominance matrices",
-   "channel": "MaffsGuru (Darren Smyth)",
-   "url": "",
-   "length": "",
-   "page": "",
-   "status": "draft",
-   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
-  },
-  {
-   "sub": "13A",
-   "title": "Graphs and networks",
-   "channel": "MaffsGuru (Darren Smyth)",
-   "url": "",
-   "length": "",
-   "page": "",
-   "status": "draft",
-   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
-  },
-  {
-   "sub": "13B",
-   "title": "Adjacency matrices",
-   "channel": "MaffsGuru (Darren Smyth)",
-   "url": "",
-   "length": "",
-   "page": "",
-   "status": "draft",
-   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
-  },
-  {
-   "sub": "13C",
-   "title": "Exploring and travelling",
-   "channel": "MaffsGuru (Darren Smyth)",
-   "url": "",
-   "length": "",
-   "page": "",
-   "status": "draft",
-   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
-  },
-  {
-   "sub": "13D",
-   "title": "Weighted graphs and networks",
-   "channel": "MaffsGuru (Darren Smyth)",
-   "url": "",
-   "length": "",
-   "page": "",
-   "status": "draft",
-   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
-  },
-  {
-   "sub": "13E",
-   "title": "Dijkstra’s algorithm",
-   "channel": "MaffsGuru (Darren Smyth)",
-   "url": "",
-   "length": "",
-   "page": "",
-   "status": "draft",
-   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
-  },
-  {
-   "sub": "13F",
-   "title": "Trees and minimum connector problems",
-   "channel": "MaffsGuru (Darren Smyth)",
-   "url": "",
-   "length": "",
-   "page": "",
-   "status": "draft",
-   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
-  },
-  {
    "sub": "8A",
    "title": "Combining linear and geometric growth: investments with regular additions",
    "channel": "MaffsGuru (Darren Smyth)",
@@ -566,6 +436,186 @@
   {
    "sub": "8I",
    "title": "Perpetuities",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "",
+   "status": "draft",
+   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
+  },
+  {
+   "sub": "10A",
+   "title": "What is a matrix?",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "",
+   "status": "draft",
+   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
+  },
+  {
+   "sub": "10B",
+   "title": "Using matrices to represent information",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "",
+   "status": "draft",
+   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
+  },
+  {
+   "sub": "10C",
+   "title": "Matrix arithmetic: addition, subtraction and scalar multiplication",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "",
+   "status": "draft",
+   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
+  },
+  {
+   "sub": "10D",
+   "title": "Matrix arithmetic: the product of two matrices",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "",
+   "status": "draft",
+   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
+  },
+  {
+   "sub": "10E",
+   "title": "Matrix inverse, the determinant and matrix equations",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "",
+   "status": "draft",
+   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
+  },
+  {
+   "sub": "10F",
+   "title": "Binary, permutation and communication matrices",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "",
+   "status": "draft",
+   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
+  },
+  {
+   "sub": "10G",
+   "title": "Dominance matrices",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "",
+   "status": "draft",
+   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
+  },
+  {
+   "sub": "11A",
+   "title": "Transition matrices: setting up a transition matrix",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "",
+   "status": "draft",
+   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
+  },
+  {
+   "sub": "11B",
+   "title": "Interpreting transition matrices",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "",
+   "status": "draft",
+   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
+  },
+  {
+   "sub": "11C",
+   "title": "Transition matrices: recursion and the steady state",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "",
+   "status": "draft",
+   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
+  },
+  {
+   "sub": "11D",
+   "title": "Transition matrices: Sn+1 = TSn + B",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "",
+   "status": "draft",
+   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
+  },
+  {
+   "sub": "11E",
+   "title": "Leslie matrices",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "",
+   "status": "draft",
+   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
+  },
+  {
+   "sub": "13A",
+   "title": "Graphs and networks",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "",
+   "status": "draft",
+   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
+  },
+  {
+   "sub": "13B",
+   "title": "Adjacency matrices",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "",
+   "status": "draft",
+   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
+  },
+  {
+   "sub": "13C",
+   "title": "Exploring and travelling",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "",
+   "status": "draft",
+   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
+  },
+  {
+   "sub": "13D",
+   "title": "Weighted graphs and networks",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "",
+   "status": "draft",
+   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
+  },
+  {
+   "sub": "13E",
+   "title": "Dijkstra’s algorithm",
+   "channel": "MaffsGuru (Darren Smyth)",
+   "url": "",
+   "length": "",
+   "page": "",
+   "status": "draft",
+   "note": "find the matching MaffsGuru General Maths U3&4 video (link not checked yet)"
+  },
+  {
+   "sub": "13F",
+   "title": "Trees and minimum connector problems",
    "channel": "MaffsGuru (Darren Smyth)",
    "url": "",
    "length": "",

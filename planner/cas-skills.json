@@ -945,6 +945,35 @@
     "classpad": []
    },
    "checked": "Cambridge U3&4 8E–8I Examples 18–32 + Edrolo 6A WE2 (Draft, check against 02 Sources\\CAS guides)"
+  },
+  {
+   "id": "matrix-recurrence",
+   "skill": "Matrix recurrence: Sₙ = TⁿS₀, steady state, Sₙ₊₁ = TSₙ + B and Leslie matrices",
+   "subs": [
+    "11C",
+    "11D",
+    "11E"
+   ],
+   "ti": [
+    "Enter and store T (or L) and S₀ as t and s (see Entering and storing a matrix).",
+    "nth state: type t^n·s with the value of n (e.g. t^10·s) and press enter.",
+    "Steady state: try a large n (e.g. t^50·s, then t^51·s); when the answer stops changing, that is the steady state.",
+    "Step back: type t^-1·s to find the previous state.",
+    "With B: store b, type t·s+b and press enter; then type t·ans+b and press enter once for each further step."
+   ],
+   "classpad": [
+    "Enter and store T (or L) and S₀ as T and S (see Entering and storing a matrix).",
+    "nth state: type T^n×S with the value of n (e.g. T^10×S) and press EXE.",
+    "Steady state: try a large n (e.g. T^50×S, then T^51×S); when the answer stops changing, that is the steady state.",
+    "Step back: type T^-1×S to find the previous state.",
+    "With B: store B, type T×S+B and press EXE; then type T×ans+B and press EXE once for each further step."
+   ],
+   "tip": "TⁿS₀ only works without B: with additions or removals, step through one period at a time.",
+   "videos": {
+    "ti": [],
+    "classpad": []
+   },
+   "checked": "Cambridge U3&4 11C-11E CAS notes + Edrolo 7G WE7, 7I WE3 (Draft, check against 02 Sources\\CAS guides)"
   }
  ]
 }
