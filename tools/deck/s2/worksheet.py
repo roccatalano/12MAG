@@ -170,4 +170,5 @@ P.append(pair(box('Exit task 2 · VCAA 2016 Exam 1 Q3', q('The stem plot below d
 P.append(close(['I can construct a frequency table for discrete numerical data.', 'I can construct a grouped frequency table.', 'I can construct a histogram from a grouped frequency table.',
   'I can describe the features of a distribution from a histogram.', 'I can construct a dot plot.', 'I can construct a stem plot.', 'I can use a CAS calculator to find logs.', 'I can interpret a histogram with a log scale.'],
   [('1C', 'Q1–12'), ('1D', 'Q1–11'), ('1E', 'Q1–6')], ['1C', '1D', '1E']))
+if WB: P.append(practice(['1C', '1D', '1E']))  # workbook edition only: practice booklet sections flow on after the exits
 build('S2', '1C–1E', 'AoS 1 · Data analysis', P)

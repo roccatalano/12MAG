@@ -127,13 +127,78 @@ def report(toks):
     """Report template: text with boxed blanks (small label under each box; filled in red on the solutions copy)."""
     return '<p class="tpl">' + ''.join(t if isinstance(t, str) else f'<span class="bx"><u>{t[1]}</u><i>{t[0]}</i></span>' for t in toks) + '</p>'
 def lis(L): return box('Learning intentions', '<ul class="lis">' + ''.join(f'<li>{x}</li>' for x in L) + '</ul>').replace('class="box"', 'class="box lisbox"', 1)
+WB = os.environ.get('WS_WORKBOOK') == '1'  # chapter workbook edition: no skills checklist / coursework box (the workbook's coursework check covers them)
 def close(SC, cols, rev):
-    """Skills checklist, then coursework (stacked). cols: [(subchapter, questions)], e.g. [('1A', 'Q1–6')]; rev: revision booklet sections, one cell each, e.g. ['1A', '1B']."""
+    """In the chapter workbook edition (WS_WORKBOOK=1) this returns nothing.
+    Skills checklist, then coursework (stacked). cols: [(subchapter, questions)], e.g. [('1A', 'Q1–6')]; rev: revision booklet sections, one cell each, e.g. ['1A', '1B']."""
     ck = box('Skills checklist', '<div class="scg" style="grid-template-columns:1fr 1fr">' + ''.join(f'<div class="sc"><div class="tick"></div><div><b>{i}.</b> {s}</div></div>' for i, s in enumerate(SC, 1)) + '</div>', 'Tick when you can')
     cell = lambda h, t: f'<div><div class="hwh">{h}</div><div>{t}</div><div class="tick"></div><div class="due">Due <i></i></div></div>'
     cw = box('Coursework', f'<div class="hwg" style="grid-template-columns:repeat({len(cols)+len(rev)},1fr)">' + ''.join(cell(h, t) for h, t in cols) + ''.join(cell('Practice booklet', f'{r} section') for r in rev) + '</div>'
              '<div class="sig"><div class="stamp">Teacher stamp</div><div class="ln"><div><span>Student signature</span><i></i><span>Date</span><i class="d"></i></div><div><span>Parent signature</span><i></i><span>Date</span><i class="d"></i></div></div></div>', 'Tick when done')
-    return ck + cw
+    return '' if WB else ck + cw
+
+
+# ---------------------------------------------------------------- practice questions (workbook edition only)
+PRAC_PT = os.environ.get('WS_PRAC_PT')  # e.g. '9' for smaller practice text; default = full size
+def practice(subs):
+    """Workbook edition only (WS_WORKBOOK=1): the Chapter 1 practice booklet sections `subs` (e.g. ['1A', '1B']) flow on after the exits.
+    Returns a marker; build() swaps in the student or solutions copy (tools/revision/ch1/build.py: qdata.py + mc_box/sa_box, verbatim with Insight citations)."""
+    return f'<!--PRACTICE:{",".join(subs)}-->' if WB else ''
+def _booklet():
+    """Load tools/revision/ch1/build.py's question data and box functions without running its build."""
+    d = f'{ROOT}/tools/revision/ch1'; import sys, re as _re
+    src = open(f'{d}/build.py').read().split("os.makedirs('out'")[0]
+    cwd = os.getcwd(); sys.path.insert(0, d); g = {'__file__': f'{d}/build.py', '__name__': 'booklet'}
+    try: exec(compile(src, f'{d}/build.py', 'exec'), g)
+    finally: os.chdir(cwd)
+    def scope(css):  # prefix every selector with .prac so the booklet styles cannot touch the worksheet
+        css = _re.sub(r'/\*.*?\*/', '', css, flags=_re.S); out = []
+        for sel, body in _re.findall(r'([^{}]+)\{([^{}]*)\}', css):
+            sel = sel.strip()
+            if sel.startswith('@') or sel in ('*', 'body') or sel.startswith('.title') or sel.startswith('.cover') or sel.startswith('.secthd') or sel.startswith('.pagebreak') or sel.startswith('.brk'): continue
+            ss = []
+            for x in sel.split(','):
+                x = x.strip(); ss.append('.sol .prac ' + x[5:] if x.startswith('.sol ') else '.prac ' + x)
+            out.append(', '.join(ss) + ' {' + body + '}')
+        return '\n'.join(out)
+    g['CSS'] = scope(open(f'{d}/cfat.css').read() + g['EXTRA']) + (
+        f'\n.prac {{ font-size:{PRAC_PT}pt; }} .prac .box > .hd {{ font-size:{float(PRAC_PT)+.5}pt; }}' if PRAC_PT else '') + \
+        '\n.prac .subhd { margin:3mm 0 2mm; } .prac .subhd .c { font-size:15pt; } .prac .secthd { break-after:avoid; } .prac .qgrid { break-inside:avoid; }'
+    return g
+def _practice_html(subs, sol, B):
+    names = dict(B['SUBS']); out = ''; num = 0
+    for code in subs:
+        qs = [x for x in B['Q'] if x['sub'] == code]
+        mcs = [x for x in qs if x['kind'] == 'mc']; sas = [x for x in qs if x['kind'] == 'sa']
+        hd = (f'<div class="subhd"><div class="c">{code}</div><h2>Practice questions · {names[code]}</h2>'
+              '<div class="dn">Done <div class="tick"></div> Date <i></i></div></div>')
+        rows = []  # each row = one grid of boxes; the headings stay with the first row
+        if mcs:
+            rows.append(sect('Multiple choice', f'Circle one answer. {len(mcs)} mark{"s" if len(mcs) > 1 else ""}'))
+            for i in range(0, len(mcs), 2):
+                pr = mcs[i:i + 2]
+                one = any(x['opts'][0].startswith('[[') for x in pr)
+                for gq in ([[x] for x in pr] if one else [pr]):
+                    cells = ''
+                    for x in gq: num += 1; cells += B['mc_box'](x, num, sol)
+                    rows.append(f'<div class="qgrid{" one" if one else ""}">{cells}</div>')
+        if sas:
+            rows.append(sect('Short answer', f'Show your working. {sum(x["marks"] for x in sas)} marks'))
+            for x in sas: num += 1; rows.append(B['sa_box'](x, num, sol))
+        rows[0] = hd + rows[0]
+        k = 0  # glue every heading to the box after it
+        while k < len(rows) - 1:
+            if 'class="box"' not in rows[k]:  # a heading only
+                rows[k:k + 2] = [f'<div class="keep">{rows[k]}{rows[k + 1]}</div>']
+            k += 1
+        out += ''.join(rows)
+    return f'<div class="prac">{out}</div>'
+def _expand(html, sol):
+    import re as _re
+    if '<!--PRACTICE:' not in html: return html
+    B = _booklet()
+    html = _re.sub(r'<!--PRACTICE:([\w,]+)-->', lambda m: _practice_html(m.group(1).split(','), sol, B), html)
+    return html.replace('</style>', B['CSS'] + '\n.keep { break-inside:avoid; }</style>', 1)
 
 # ---------------------------------------------------------------- figures (static SVG)
 SHADE = ['#fff', '#bbb', '#555']
@@ -184,8 +249,8 @@ def build(name, page_title, aos, P):
     JS = ''.join(f'<script>{open(f"{ROOT}/lessons/{n}").read()}</script>' for n in ('a4view.js', 'paged.polyfill.min.js'))
     C = css(aos)
     def page(sol, screen=True):
-        return (f'<!DOCTYPE html><html><head><meta charset="utf-8"><title>{page_title} guided worksheet{" · solutions" if sol else ""}</title><style>{C}</style>{JS if screen else ""}</head>'
-                f'<body class="{"sol" if sol else ""}">' + pages(P) + '</body></html>')
+        return _expand(f'<!DOCTYPE html><html><head><meta charset="utf-8"><title>{page_title} guided worksheet{" · solutions" if sol else ""}</title><style>{C}</style>{JS if screen else ""}</head>'
+                f'<body class="{"sol" if sol else ""}">' + pages(P) + '</body></html>', sol)
     def pages(P):
         if PAGE not in P: return '\n'.join(P)
         out, cur = [], []
@@ -196,8 +261,9 @@ def build(name, page_title, aos, P):
             else: cur.append(x)
         return '\n'.join(out)
     fns = (f'{name}-worksheet', f'{name}-worksheet-solutions')
+    OUT = '/tmp/wb' if WB else f'{ROOT}/lessons'; os.makedirs(OUT, exist_ok=True)
     for sol, fn in enumerate(fns):
-        open(f'{ROOT}/lessons/{fn}.html', 'w').write(page(sol))
+        open(f'{OUT}/{fn}.html', 'w').write(page(sol))
         open(f'/tmp/{fn}.html', 'w').write(page(sol, False))
     from playwright.async_api import async_playwright
     async def pdf():
@@ -208,8 +274,8 @@ def build(name, page_title, aos, P):
                 await pg.emulate_media(media='print'); await pg.set_viewport_size({'width': int(186 * 3.78), 'height': 1100})
                 over = await pg.evaluate("[...document.querySelectorAll('.pg')].map((p,i)=>p.scrollHeight>p.clientHeight+2?i+1:0).filter(x=>x)")
                 if over: print('WARNING', fn, 'content cut off on page(s)', over)
-                await pg.pdf(path=f'{ROOT}/lessons/{fn}.pdf', prefer_css_page_size=True, print_background=True)
+                await pg.pdf(path=f'{OUT}/{fn}.pdf', prefer_css_page_size=True, print_background=True)
             await b.close()
     asyncio.run(pdf())
     from pypdf import PdfReader
-    print('built', name, [len(PdfReader(f'{ROOT}/lessons/{fn}.pdf').pages) for fn in fns], 'pages')
+    print('built', name, [len(PdfReader(f'{OUT}/{fn}.pdf').pages) for fn in fns], 'pages')

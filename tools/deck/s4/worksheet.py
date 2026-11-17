@@ -146,4 +146,5 @@ P.append(close(['I can construct a boxplot from a five-number summary.', 'I can 
   'I can read values from a boxplot.', 'I can estimate percentages from a boxplot.', 'I can use boxplots to describe a distribution without outliers.',
   'I can use boxplots to describe a distribution with outliers.', 'I can use boxplots to answer statistical questions.'],
   [('1G (part 1)', 'Q1–10'), ('1G (part 2)', 'Q11–20')], ['1G']).replace('>Revision booklet<', '>Practice booklet<'))  # deck coursework slide: Exercise 1G parts 1 and 2 + 'Practice booklet · 1G section'
+if WB: P.append(practice(['1G']))  # workbook edition only: practice booklet sections flow on after the exits
 build('S4', '1G', 'AoS 1 · Data analysis', P)
