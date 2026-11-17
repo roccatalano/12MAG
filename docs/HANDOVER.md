@@ -62,7 +62,7 @@
 **Content state:** every lesson, CFAT (+ follow-ups), revision booklet and chapter test for Ch 1–14 is built (Draft). Done 16 Nov evening: Ch 8 booklet + test, Ch 11 test (no 11E/Leslie question), Ch 14 test, CFAT 1.1.1–1.1.3 solutions (1.1.2 Q7b answer is ours). Content changes to fit 2027: tests merged (Ch 1+2, Ch 3+4, Ch 5 …), check lessons are "catch-up + coursework check" (tests are formative, shown with the CFATs), the two 5B lessons merged (gm12-u3-l18 removed). Course = 65 lessons.
 
 **Planner tabs**
-- **Course plan:** term rows of chapter cards (10MA style), AoS "Unit details" cards (SAC + formative), lesson cards with nested resources + "Lesson details", VCE exams row. Rocco wants this to become date-free later ("these are the planned lessons"); don't change it until he says.
+- **Course plan (17 Nov): date-free vertical list** of chapter cards per AoS (Unit details card first; SAC dates now only on the Year plan tabs), click a chapter for its suggested lessons + formative assessments. The year tabs do the calendar.
 - **2027 overview:** week-by-week calendar. Lessons per week by student days (5 = 3, 3–4 = 2, 1–2 = 1). Spare slots named SAC revision / Exam revision; after-school SACs and redemptions share the week's middle card (2/3 lesson, 1/3 red panel); a week with no lessons gets one wide card (e.g. "Unit 3 trial exam week").
 - **2027 classes:** teacher picker (All · Mrs Hamilton · Mr Duker (2 classes) · Mr Catalano), day grid, 4 sessions a day (3 on Wed). Data `planner/years/2027-timetable.json`, `slots` EMPTY.
 
