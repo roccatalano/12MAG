@@ -142,6 +142,7 @@ main{max-width:1200px;margin:0 auto;padding:16px 20px 80px}
 /* Course plan: date-free vertical list of chapter cards (Rocco 17 Nov); dates live on the Year plan tabs */
 .ctl2{display:flex;gap:8px;margin:14px 0 4px}.ctl2 button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);border-radius:8px;padding:5px 12px;cursor:pointer}
 .trow{margin:14px 0 18px}.trh{font-weight:700;font-size:15px;border-bottom:2px solid var(--ink);padding:4px 0;margin-bottom:10px;display:flex;justify-content:space-between}.trh span{font-weight:400;color:var(--muted);font-size:13px}.trh span.over{color:#a32d2d;font-weight:600}
+.udrow .nw{white-space:nowrap}
 .vlist{display:flex;flex-direction:column;gap:8px}.vlist>.udcard,.vlist>.ucard{width:auto;max-width:none;align-self:stretch}
 .ucards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
 .ucard{background:#fff;border:1px solid #ddd;border-left:6px solid var(--ac);border-radius:8px;padding:10px 12px;cursor:pointer;transition:box-shadow .15s}.ucard:hover{box-shadow:0 2px 8px rgba(0,0,0,.12)}
@@ -349,20 +350,20 @@ function unitBody(a,all,SACD,SACP){const A=all.filter(l=>l.aosN==a.n),S=a.sac||{
   const row=(t,v)=>`<div class="udrow"><span>${t}</span><span class="sub">${v}</span></div>`;
   const parts=(SACP[a.n]||[]).map((p,k)=>row(esc((S.parts||[])[k]||p.label.replace(/^AoS \d SAC:? ?/,'')),fmt(D(p.date))+(p.afterSchool?' · after school':p.inClass?' · in class':''))).join('');
   const mats=(S.materials||[]).map(m=>`<div class="udrow"><b>${esc(m.kind)}</b><span>${m.file?links(m):`<span class="ms">To make</span>`}</span></div>`).join('');
-  const sum=nest('sac-'+a.n,'SAC details',`${row('Task',esc(S.format||'To plan'))}${row('Weighting',esc(S.weight||''))}${row('Outcomes',esc(S.outcomes||''))}<h4>Dates</h4>${parts||'<div class="empty">Add the SAC to the year plan</div>'}${S.gaps&&S.gaps.length?`<h4>To decide</h4>${list(S.gaps)}`:''}<div class="sub" style="margin-top:6px">${esc(S.source||'')}</div>`,null,'n-test')
+  const sum=nest('sac-'+a.n,'SAC details',`${row('Task',esc(S.format||'To plan'))}${row('Weighting',esc(S.weight||''))}${row('Outcomes',esc(S.outcomes||''))}${S.gaps&&S.gaps.length?`<h4>To decide</h4>${list(S.gaps)}`:''}`,null,'n-test')
     +nest('sacm-'+a.n,'SAC materials',mats,(S.materials||[]).filter(m=>m.file).length+'/'+(S.materials||[]).length,'n-mat');
   const cf=[];A.forEach(l=>cfs(l).forEach(c=>{if(!cf.some(x=>x.c.id==c.id))cf.push({c,l})}));
   const cfr=cf.map(({c,l})=>`<div class="udrow"><span><b>${esc(c.id)}</b> · ${esc((c.covers||[]).join(', '))}<br><span class="sub">${esc(c.title||'')}</span></span><span class="sub">L${l.n} · ${esc(c.status||'')}${c.marks?' · /'+c.marks:''}</span></div>`).join('');
   const chk=A.filter(l=>l.type=='check'),cm=re=>chk.flatMap(l=>(l.materials||[]).filter(m=>re.test(m.kind)).map(m=>({m,l})));
   const mrow=({m,l})=>`<div class="udrow"><span><b>${/^Chapter \d/.test(m.kind)?esc(m.kind):'Ch '+l.ch+' '+esc(m.kind.toLowerCase())}</b> <span class="sub">L${l.n}</span></span><span>${m.copies?.length?m.copies.map(k=>`<span class="sub">${esc(k.label)}</span> ${links(k)}`).join(' '):m.file||m.pdf?links(m):`<span class="ms">${m.status=='todo'?'To make':esc(m.status||'')}</span>`}</span></div>`;
   const gaps=[...new Set(A.filter(l=>l.type=='lesson').flatMap(l=>l.subchapters))].filter(s=>!cf.some(({c})=>(c.covers||[]).some(v=>{const m=String(v).match(/^(\d+)([A-Z])(?:\s*[-–]\s*\d*([A-Z]))?/);if(!m)return false;const n=s.match(/^(\d+)([A-Z])/);return n&&n[1]==m[1]&&n[2]>=m[2]&&n[2]<=(m[3]||m[2])})));
-  const res=(a.resources||[]).map(m=>`<div class="udrow"><b>${esc(m.kind)}</b><span>${m.file||m.pdf?links({...m,file:m.file?'../'+m.file:m.file,pdf:m.pdf?'../'+m.pdf:m.pdf}):`<span class="ms">To make</span>`}</span></div>`).join('');
+  const up=m=>({...m,file:m.file?'../'+m.file:m.file,pdf:m.pdf?'../'+m.pdf:m.pdf});
+  const res=(a.resources||[]).map(m=>`<div class="udrow"><b>${esc(m.kind)}</b><span class="nw">${m.copies?.length?m.copies.map(k=>`<span class="sub">${esc(k.label)}</span> ${links(up(k))}`).join(' &nbsp; '):m.file||m.pdf?links(up(m)):`<span class="ms">To make</span>`}</span></div>`).join('');
   const form=(res?nest('ur-'+a.n,'Unit resources',res,(a.resources||[]).length,'n-mat'):'')+nest('cf-'+a.n,'CFATs',cfr+(gaps.length?`<div class="sub" style="margin-top:6px">Not covered by a CFAT: ${esc(gaps.join(', '))}</div>`:''),cf.length,'n-cfat')
     +nest('ct-'+a.n,'Chapter tests',cm(/test/i).map(mrow).join(''),cm(/test/i).length,'n-test')
-    +nest('rb-'+a.n,'Revision booklets',cm(/revision booklet/i).map(mrow).join(''),cm(/revision booklet/i).length)
     +nest('cc-'+a.n,'Coursework checks',cm(/coursework check/i).map(mrow).join(''),cm(/coursework check/i).length);
   const ex=a.n==UP.aos[UP.aos.length-1].n&&UP.exams?nest('exams','End-of-year exams',list(UP.exams.items)+`<div class="sub">${esc(UP.exams.source)}</div>`):'';
-  return `<div class="aos"><b>AoS ${a.n} · ${esc(a.title)} · Unit details</b><span>${A.filter(l=>l.type=='lesson').length} lessons · ${chk.length} test lesson${chk.length==1?'':'s'}</span></div>
+  return `<div class="aos"><b>AoS ${a.n} · ${esc(a.title)} · Unit details</b></div>
    <div class="udpanel"><div><h3>Summative</h3>${sum}${ex}</div><div><h3>Formative</h3>${form}</div></div>`}
 function renderCourse(){
   const all=lessons(),L=aosFilter(all),y=YEARS[YEARS.length-1],Y=y&&YD[y];

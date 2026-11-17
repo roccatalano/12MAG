@@ -7273,22 +7273,26 @@
       },
       "resources": [
         {
-          "kind": "Chapter 1 slides (all lessons, S1–S5)",
+          "kind": "Ch 1 slides",
           "status": "ready",
           "file": "lessons/Ch1-slides.html",
           "pdf": "lessons/Ch1-slides.pdf"
         },
         {
-          "kind": "Chapter 1 workbook (worksheets + practice questions + coursework check)",
+          "kind": "Ch 1 workbook",
           "status": "ready",
-          "file": "lessons/Ch1-workbook.pdf",
-          "pdf": "lessons/Ch1-workbook.pdf"
-        },
-        {
-          "kind": "Chapter 1 workbook solutions",
-          "status": "ready",
-          "file": "lessons/Ch1-workbook-solutions.pdf",
-          "pdf": "lessons/Ch1-workbook-solutions.pdf"
+          "copies": [
+            {
+              "label": "Student",
+              "file": "lessons/Ch1-workbook.pdf",
+              "pdf": "lessons/Ch1-workbook.pdf"
+            },
+            {
+              "label": "Solutions",
+              "file": "lessons/Ch1-workbook-solutions.pdf",
+              "pdf": "lessons/Ch1-workbook-solutions.pdf"
+            }
+          ]
         }
       ]
     },
