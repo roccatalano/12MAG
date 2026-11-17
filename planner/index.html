@@ -143,6 +143,7 @@ main{max-width:1200px;margin:0 auto;padding:16px 20px 80px}
 .ctl2{display:flex;gap:8px;margin:14px 0 4px}.ctl2 button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);border-radius:8px;padding:5px 12px;cursor:pointer}
 .trow{margin:14px 0 18px}.trh{font-weight:700;font-size:15px;border-bottom:2px solid var(--ink);padding:4px 0;margin-bottom:10px;display:flex;justify-content:space-between}.trh span{font-weight:400;color:var(--muted);font-size:13px}.trh span.over{color:#a32d2d;font-weight:600}
 .udrow .nw{white-space:nowrap}
+.nest.cfx>summary{text-transform:none;letter-spacing:0;font-size:13px;color:var(--ink);gap:8px}.nest.cfx>summary .cft{flex:1;font-weight:400}.nest.cfx>summary .ms{margin-left:auto;font-size:10.5px;font-weight:600;padding:1px 6px;border-radius:8px;background:#fbe7b5;color:#7a5a00}.nest.cfx>summary .ms.ready{background:#c9eedf;color:#14684f}
 .vlist{display:flex;flex-direction:column;gap:8px}.vlist>.udcard,.vlist>.ucard{width:auto;max-width:none;align-self:stretch}
 .ucards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
 .ucard{background:#fff;border:1px solid #ddd;border-left:6px solid var(--ac);border-radius:8px;padding:10px 12px;cursor:pointer;transition:box-shadow .15s}.ucard:hover{box-shadow:0 2px 8px rgba(0,0,0,.12)}
@@ -329,7 +330,7 @@ function formatives(C){const seen=new Set(),out=[];
     cfs(l).forEach(c=>{if(!seen.has(c.id)){seen.add(c.id);out.push({m:{kind:c.id,status:/ready/i.test(c.status)?'ready':/draft/i.test(c.status)?'draft':'',file:c.file},l})}})});
   out.sort((x,y)=>(/test/i.test(x.m.kind)&&!/^CFAT/.test(x.m.kind)?1:0)-(/test/i.test(y.m.kind)&&!/^CFAT/.test(y.m.kind)?1:0));
   return out.length?out.map(({m,l})=>{const test=/^Chapter( \d+)? test/i.test(m.kind),tc=test?testCh(m,l):0,c=cfs(l).find(x=>x.id==m.kind);
-    return `<div class="card fa ${test?'t-check':'t-cfat'}"><div class="meta"><span></span><span class="ms ${m.status}">${m.status=='ready'?'Ready':m.status=='draft'?'Draft':'To make'}</span></div>
+    return `<div class="card fa ${test?'t-check':'t-cfat'}"><div class="meta"><span></span><span class="ms ${m.status}">${m.status=='ready'?(test?'Ready':'Final'):m.status=='draft'?'Draft':'To make'}</span></div>
     <div class="ttl"><b>${test?'Chapter '+tc+' test':esc(m.kind)}${test?` <span class="sub">· L${l.n}</span>`:''}</b>${c&&c.title?' · '+esc(c.title):''}</div>
     <div class="cpl${m.copies?.length?' cp2':''}">${m.copies?.length?m.copies.map(k=>`<div class="cpc"><b>${esc(k.label)}</b><div>${k.file||k.pdf?links(k):'<span class="sub">To make</span>'}</div></div>`).join(''):links(m)}</div>${c?nest('cfat-'+c.id,'CFAT details',cfatDetails(c),null,'n-cfat'):test?(TESTS[tc]?nest('test-'+tc,'Test details',testDetails(TESTS[tc]),'/'+TESTS[tc].total,'n-test'):'<div class="empty" style="margin-top:6px">Test not built yet</div>'):''}</div>`}).join(''):'<div class="empty">None yet</div>'}
 /* ---------- Course plan ---------- */
@@ -353,7 +354,12 @@ function unitBody(a,all,SACD,SACP){const A=all.filter(l=>l.aosN==a.n),S=a.sac||{
   const sum=nest('sac-'+a.n,'SAC details',`${row('Task',esc(S.format||'To plan'))}${row('Weighting',esc(S.weight||''))}${row('Outcomes',esc(S.outcomes||''))}${S.gaps&&S.gaps.length?`<h4>To decide</h4>${list(S.gaps)}`:''}`,null,'n-test')
     +nest('sacm-'+a.n,'SAC materials',mats,(S.materials||[]).filter(m=>m.file).length+'/'+(S.materials||[]).length,'n-mat');
   const cf=[];A.forEach(l=>cfs(l).forEach(c=>{if(!cf.some(x=>x.c.id==c.id))cf.push({c,l})}));
-  const cfr=cf.map(({c,l})=>`<div class="udrow"><span><b>${esc(c.id)}</b> · ${esc((c.covers||[]).join(', '))}<br><span class="sub">${esc(c.title||'')}</span></span><span class="sub">L${l.n} · ${esc(c.status||'')}${c.marks?' · /'+c.marks:''}</span></div>`).join('');
+  const cmat=(l,c)=>(l.materials||[]).find(m=>m.kind==c.id)||{};
+  const cfc=c=>(String(c.id).match(/^CFAT \d+\.(\d+)\./)||[])[1];
+  const cfr=[...new Set(cf.map(({c})=>cfc(c)))].sort((a,b)=>a-b).map(ch=>{const H=cf.filter(({c,l})=>(String(c.id).match(/^CFAT \d+\.(\d+)\./)||[])[1]==String(ch));
+    return H.length?nest('cfch-'+ch,'Chapter '+ch,H.map(({c,l})=>{const m=cmat(l,c),fin=/final/i.test(c.status||'');
+      const body=`<div class="sub" style="margin-bottom:6px">${esc((c.covers||[]).join(', '))} · L${l.n}${c.marks?' · /'+c.marks:''}</div>`+(m.copies?.length?m.copies.map(k=>`<div class="udrow"><b>${esc(k.label)}</b><span class="nw">${k.file||k.pdf?links(k):'<span class="ms">To make</span>'}</span></div>`).join(''):'<div class="empty">Not built yet</div>');
+      return nest('cfx-'+c.id,`<span class="cft"><b>${esc(c.id)}</b> · ${esc(c.title||'')}</span><span class="ms ${fin?'ready':'draft'}">${esc(c.status||'')}</span>`,body,null,'n-cfat cfx')}).join(''),H.length,'n-cfat'):''}).join('');
   const chk=A.filter(l=>l.type=='check'),cm=re=>chk.flatMap(l=>(l.materials||[]).filter(m=>re.test(m.kind)).map(m=>({m,l})));
   const mrow=({m,l})=>`<div class="udrow"><span><b>${/^Chapter \d/.test(m.kind)?esc(m.kind):'Ch '+l.ch+' '+esc(m.kind.toLowerCase())}</b> <span class="sub">L${l.n}</span></span><span>${m.copies?.length?m.copies.map(k=>`<span class="sub">${esc(k.label)}</span> ${links(k)}`).join(' '):m.file||m.pdf?links(m):`<span class="ms">${m.status=='todo'?'To make':esc(m.status||'')}</span>`}</span></div>`;
   const gaps=[...new Set(A.filter(l=>l.type=='lesson').flatMap(l=>l.subchapters))].filter(s=>!cf.some(({c})=>(c.covers||[]).some(v=>{const m=String(v).match(/^(\d+)([A-Z])(?:\s*[-–]\s*\d*([A-Z]))?/);if(!m)return false;const n=s.match(/^(\d+)([A-Z])/);return n&&n[1]==m[1]&&n[2]>=m[2]&&n[2]<=(m[3]||m[2])})));

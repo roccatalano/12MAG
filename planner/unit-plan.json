@@ -771,7 +771,7 @@
                     ],
                     "format": "About 20 min · individual · CAS and single bound reference allowed",
                     "file": "lessons/CFAT 1.1.1 (1A-1E).html",
-                    "status": "Draft",
+                    "status": "Final",
                     "plan": "Start of Step-up lesson 3. Covers step-up week 1 (1A–1E).",
                     "sources": [
                       "Edrolo GM U3&4 2023 exercise questions (CFAT-only): 1A Q15, Q17 · 1B Q8, Q9 · 1C Q6, Q17 · 1D Q9, Q12, Q14"
@@ -1158,7 +1158,7 @@
                   {
                     "kind": "CFAT 1.1.1",
                     "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
-                    "status": "draft",
+                    "status": "ready",
                     "copies": [
                       {
                         "label": "Student copy",
@@ -1639,7 +1639,7 @@
                     ],
                     "format": "About 20 min · individual · CAS and single bound reference allowed",
                     "file": "lessons/CFAT 1.1.2 (1F-1G).html",
-                    "status": "Draft",
+                    "status": "Final",
                     "plan": "Start of Step-up lesson 5. Covers Step-up lessons 3–4 (1F, 1G).",
                     "sources": [
                       "Edrolo GM U3&4 2023 exercise questions (CFAT-only): 1E Q1, Q8, Q11, Q14, Q17, Q18 · 1F Q12, Q16, Q18, Q19"
@@ -2021,7 +2021,7 @@
                   {
                     "kind": "CFAT 1.1.2",
                     "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
-                    "status": "draft",
+                    "status": "ready",
                     "copies": [
                       {
                         "label": "Student copy",
@@ -3468,7 +3468,7 @@
                   {
                     "kind": "CFAT 1.1.3",
                     "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
-                    "status": "draft",
+                    "status": "ready",
                     "copies": [
                       {
                         "label": "Student copy",
@@ -3545,7 +3545,7 @@
                     ],
                     "format": "About 20 min · individual · CAS and single bound reference allowed",
                     "file": "lessons/CFAT 1.1.3 (1F-1I).html",
-                    "status": "Draft",
+                    "status": "Final",
                     "marks": 15,
                     "plan": "Summer holiday work: set in Step-up lesson 5, gone over in the Chapters 1 + 2 coursework check + test lesson.",
                     "sources": [

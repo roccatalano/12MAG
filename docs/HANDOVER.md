@@ -1,3 +1,5 @@
+**17 Nov 13:30 (Rocco):** CFAT 1.1.1–1.1.3 signed off: status Final on the planner (cfats[].status 'Final', material status 'ready'; no ledger overlap). Unit details → CFATs now nests by chapter (from the CFAT id), each CFAT with Student copy + Solutions rows. Unit details tidied: no SAC dates, no lesson counts, no source line, no revision booklets; Unit resources shortened (Ch 1 workbook has Student/Solutions copies).
+
 # 12MAG handover — 15 Nov 2026 (updated 15:55)
 
 **17 Nov (slides standard):** Chapter 1 decks S1–S5 are DONE in the new slide standard (`tools/deck/z10/HOWTO.md`, approved by Rocco) and replace the old decks: `lessons/S1-slides.html` … `S5-slides.html` + PDFs (built by `tools/deck/z10/s#_build.py` on the new library `tools/deck/z10/lib/`). Chapter file `lessons/Ch1-slides.html` (+ `.pdf`, S1–S5 tabs, lazy-loaded) by `tools/deck/z10/chapter.py`; linked from the AoS 1 resources in `planner/unit-plan.json` (replaces the old merged `Ch1 slides`). See "17 Nov — slide standard" at the end.
