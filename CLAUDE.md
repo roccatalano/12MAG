@@ -2,6 +2,8 @@
 
 Owner: Rocco (teacher). He is new to Claude Code and git: explain in plain words, ask before anything destructive, and never use jargon without a one-line explanation.
 
+**Pushing (Rocco, 17 Nov):** push finished changes straight to `main` (the live site). No branches or pull requests to merge.
+
 **New chat? Read `docs/HANDOVER.md` next** (latest state, decisions, open items). Background build queue: `docs/QUEUE.md`.
 
 ## What this repo is
