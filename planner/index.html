@@ -366,9 +366,9 @@ function unitBody(a,all,SACD,SACP){const A=all.filter(l=>l.aosN==a.n),S=a.sac||{
    <div class="udpanel"><div><h3>Summative</h3>${sum}${ex}</div><div><h3>Formative</h3>${form}</div></div>`}
 function renderCourse(){
   const all=lessons(),L=aosFilter(all),y=YEARS[YEARS.length-1],Y=y&&YD[y];
-  $('#subinfo').textContent=`${all.length} lessons · ${UP.aos.reduce((s,a)=>s+a.chapters.length,0)} chapters · suggested lessons from what we've made`;
-  let h=`<div class="unit">Course plan <span class="scope">· VCE General Mathematics Units 3&amp;4 · Cambridge teaching sequence · click a chapter for its suggested lessons (dates: see the Year plan tabs)</span></div>
-   <div class="legend">${UP.aos.map(a=>`<span class="a${a.n}"><i style="background:var(--ac)"></i>AoS ${a.n} ${esc(a.title)}</span>`).join('')}<span><i style="background:#8a6ad8"></i>CFAT</span></div>
+  $('#subinfo').textContent='';
+  let h=`<div class="unit">Course plan</div>
+   <div class="legend">${UP.aos.map(a=>`<span class="a${a.n}"><i style="background:var(--ac)"></i>AoS ${a.n} ${esc(a.title)}</span>`).join('')}</div>
    <div class="ctl2"><button id="uall">Open all chapters</button><button id="unone">Close all chapters</button></div>`;
   // date-free: one vertical list of chapter cards, grouped by AoS (Rocco 17 Nov: dates live on the Year plan tabs)
   const SACD={},SACP={};
