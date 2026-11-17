@@ -127,4 +127,5 @@ P.append(box('Exit task · VCAA 2020 Exam 2 Q4aii (adapted)', q('The body densit
 P.append(close(['I can find the median value in a data set.', 'I can find the median value from a dot plot.', 'I can find the median value from a stem plot.', 'I can find the range from a stem plot.',
   'I can find the IQR from a stem plot when n is even.', 'I can find the IQR from a stem plot when n is odd.', 'I can calculate the mean using the formula.', 'I can calculate the mean and standard deviation using the CAS calculator.'],
   [('1F', 'Q1–26')], ['1F']).replace('>Revision booklet<', '>Practice booklet<'))  # deck coursework slide: Cambridge Exercise 1F Q1–26 · Practice booklet 1F section
+if WB: P.append(practice(['1F']))  # workbook edition only: practice booklet sections flow on after the exits
 build('S3', '1F', 'AoS 1 · Data analysis', P)

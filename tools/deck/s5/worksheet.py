@@ -129,4 +129,5 @@ P.append(close(['I can apply the 68-95-99.7% rule.', 'I can calculate standardis
   'I can use standard scores to determine percentages.', 'I can convert standardised scores into actual scores.', 'I can solve for the values of the mean and standard deviation.',
   'I can explain the difference between a population and a sample.'],
   [('1H', 'Q1–23'), ('1I', 'Interactive Textbook (Cambridge GO)')], ['1H']).replace('>Revision booklet<', '>Practice booklet<'))  # deck coursework slide: 'Practice booklet · 1H section'
+if WB: P.append(practice(['1H']))  # workbook edition only: practice booklet sections flow on after the exits
 build('S5', '1H–1I', 'AoS 1 · Data analysis', P)

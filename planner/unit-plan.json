@@ -3517,23 +3517,6 @@
                     ]
                   },
                   {
-                    "kind": "Chapter 1 revision booklet",
-                    "desc": "Insight GM1 + GM2, one section per subchapter (1A–1H) for gradual homework.",
-                    "status": "draft",
-                    "copies": [
-                      {
-                        "label": "Student copy",
-                        "file": "lessons/Ch1-revision-booklet.html",
-                        "pdf": "lessons/Ch1-revision-booklet.pdf"
-                      },
-                      {
-                        "label": "Solutions",
-                        "file": "lessons/Ch1-revision-booklet-solutions.html",
-                        "pdf": "lessons/Ch1-revision-booklet-solutions.pdf"
-                      }
-                    ]
-                  },
-                  {
                     "kind": "Chapter 2 revision booklet",
                     "desc": "Insight GM1 + GM2 association questions, one section per subchapter (2A–2I) for gradual coursework.",
                     "status": "draft",
@@ -7296,7 +7279,7 @@
           "pdf": "lessons/Ch1-slides.pdf"
         },
         {
-          "kind": "Chapter 1 workbook (all worksheets, S1–S5)",
+          "kind": "Chapter 1 workbook (worksheets + practice questions + coursework check)",
           "status": "ready",
           "file": "lessons/Ch1-workbook.pdf",
           "pdf": "lessons/Ch1-workbook.pdf"
