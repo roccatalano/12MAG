@@ -1,3 +1,5 @@
+**17 Nov 13:36 (Rocco): CFAT follow-up resources ON HOLD.** Students don't have access to Jacaranda, so a reference-only follow-up sheet won't work for them. Options discussed: (A) 1-page sheet of Jacaranda references, (B) booklet with the Jacaranda questions copied in verbatim + solutions. Don't build either until Rocco says. Ch 1 CFAT 'fu' references already exist (12/14/15 questions).
+
 **17 Nov 13:30 (Rocco):** CFAT 1.1.1–1.1.3 signed off: status Final on the planner (cfats[].status 'Final', material status 'ready'; no ledger overlap). Unit details → CFATs now nests by chapter (from the CFAT id), each CFAT with Student copy + Solutions rows. Unit details tidied: no SAC dates, no lesson counts, no source line, no revision booklets; Unit resources shortened (Ch 1 workbook has Student/Solutions copies).
 
 # 12MAG handover — 15 Nov 2026 (updated 15:55)
