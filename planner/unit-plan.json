@@ -150,7 +150,7 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: APK, worked examples, you trys, exit tasks (no Do Now in Lesson 1).",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "ready",
                     "file": "lessons/S1-slides.html",
                     "pdf": "lessons/S1-slides.pdf"
@@ -455,15 +455,15 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
-                    "status": "draft",
+                    "desc": "Teach the new content and project every question, in lesson order.",
+                    "status": "ready",
                     "file": "lessons/S2-slides.html",
                     "pdf": "lessons/S2-slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
                     "desc": "Student companion to the slides, in the same order, with space to answer.",
-                    "status": "draft",
+                    "status": "ready",
                     "file": "lessons/S2-worksheet.html",
                     "pdf": "lessons/S2-worksheet.pdf",
                     "copies": [
@@ -1117,15 +1117,15 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
-                    "status": "draft",
+                    "desc": "Teach the new content and project every question, in lesson order.",
+                    "status": "ready",
                     "file": "lessons/S3-slides.html",
                     "pdf": "lessons/S3-slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
                     "desc": "Student companion to the slides, in the same order, with space to answer.",
-                    "status": "draft",
+                    "status": "ready",
                     "file": "lessons/S3-worksheet.html",
                     "pdf": "lessons/S3-worksheet.pdf",
                     "copies": [
@@ -1382,15 +1382,15 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
-                    "status": "draft",
+                    "desc": "Teach the new content and project every question, in lesson order.",
+                    "status": "ready",
                     "file": "lessons/S4-slides.html",
                     "pdf": "lessons/S4-slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
                     "desc": "Student companion to the slides, in the same order, with space to answer.",
-                    "status": "draft",
+                    "status": "ready",
                     "file": "lessons/S4-worksheet.html",
                     "pdf": "lessons/S4-worksheet.pdf",
                     "copies": [
@@ -1970,15 +1970,15 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
-                    "status": "draft",
+                    "desc": "Teach the new content and project every question, in lesson order.",
+                    "status": "ready",
                     "file": "lessons/S5-slides.html",
                     "pdf": "lessons/S5-slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
                     "desc": "Student companion to the slides, in the same order, with space to answer.",
-                    "status": "draft",
+                    "status": "ready",
                     "file": "lessons/S5-worksheet.html",
                     "pdf": "lessons/S5-worksheet.pdf",
                     "copies": [
@@ -2317,7 +2317,7 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/2A-2B slides.html",
                     "pdf": "lessons/2A-2B slides.pdf"
@@ -2641,14 +2641,14 @@
                   },
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/2C slides.html",
                     "pdf": "lessons/2C slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "5 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -2831,14 +2831,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/2D-2E slides.html",
                     "pdf": "lessons/2D-2E slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "4 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -3110,14 +3110,14 @@
                   },
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/2F slides.html",
                     "pdf": "lessons/2F slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "3 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -3322,14 +3322,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/2G-2H slides.html",
                     "pdf": "lessons/2G-2H slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "4 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -3426,14 +3426,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, Learn (which graph?).",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/2I slides.html",
                     "pdf": "lessons/2I slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "1 page: 'Which graph?' table to complete, checklist, coursework.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -3460,7 +3460,7 @@
                 "materials": [
                   {
                     "kind": "Coursework check",
-                    "desc": "Covers Chapters 1 and 2. Double-sided A4. Front: students tick the coursework they have (worksheets, bound reference entries, CFATs, coursework); teacher signs off. Back: chapter success criteria, ticked by the teacher when marking the test (Test Q column = which question tests it).",
+                    "desc": "Covers Chapters 1 and 2. Students tick the coursework they have; teacher signs off.",
                     "status": "draft",
                     "file": "lessons/Ch1-2 coursework check.html",
                     "pdf": "lessons/Ch1-2 coursework check.pdf"
@@ -4186,14 +4186,14 @@
                   },
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/3A slides.html",
                     "pdf": "lessons/3A slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "4 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -4368,14 +4368,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/3B slides.html",
                     "pdf": "lessons/3B slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "5 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -4697,14 +4697,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/3C slides.html",
                     "pdf": "lessons/3C slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "6 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -4977,14 +4977,14 @@
                   },
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, CAS.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/4A slides.html",
                     "pdf": "lessons/4A slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "3 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -5148,14 +5148,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, CAS, exits.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/4B slides.html",
                     "pdf": "lessons/4B slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "4 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -5424,14 +5424,14 @@
                   },
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, CAS, exit.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/4C slides.html",
                     "pdf": "lessons/4C slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "4 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -5576,14 +5576,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked example, you try, CAS, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/4D slides.html",
                     "pdf": "lessons/4D slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "3 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -5610,7 +5610,7 @@
                 "materials": [
                   {
                     "kind": "Coursework check",
-                    "desc": "Double-sided A4. Covers Chapters 3 and 4. Front: students tick the coursework they have (guided notes, bound reference entries, CFATs, homework); teacher signs off. Back: chapter success criteria, ticked by the teacher when marking the test (Test Q column = which question tests it).",
+                    "desc": "Covers Chapters 3 and 4. Students tick the coursework they have; teacher signs off.",
                     "status": "todo",
                     "file": ""
                   },
@@ -5838,16 +5838,6 @@
                 "cfats": [
                   {
                     "id": "CFAT 1.4.2",
-                    "title": "Choosing and using a transformation",
-                    "covers": [
-                      "4D"
-                    ],
-                    "format": "About 20 min · individual · CAS and single bound reference allowed",
-                    "status": "Planned",
-                    "plan": "Start of the 5A lesson (features of time series plots, a lighter lesson)."
-                  },
-                  {
-                    "id": "CFAT 1.4.2",
                     "title": "Reciprocal transformation; choosing and applying a transformation",
                     "covers": [
                       "4C",
@@ -6020,14 +6010,14 @@
                   },
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/5A slides.html",
                     "pdf": "lessons/5A slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "6 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -6202,14 +6192,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides · moving means",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/5B moving means slides.html",
                     "pdf": "lessons/5B moving means slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet · moving means",
-                    "desc": "3 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -6226,14 +6216,14 @@
                   },
                   {
                     "kind": "Guided slides · centring",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/5B centring slides.html",
                     "pdf": "lessons/5B centring slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet · centring",
-                    "desc": "3 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -6375,14 +6365,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/5C slides.html",
                     "pdf": "lessons/5C slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "3 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -6675,14 +6665,14 @@
                   },
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: CFAT, Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/5D seasonal indices slides.html",
                     "pdf": "lessons/5D seasonal indices slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "3 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -6832,14 +6822,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit task.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/5D deseasonalising slides.html",
                     "pdf": "lessons/5D deseasonalising slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "3 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -7137,14 +7127,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit task.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/5E slides.html",
                     "pdf": "lessons/5E slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "4 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -7188,7 +7178,7 @@
                 "materials": [
                   {
                     "kind": "Coursework check",
-                    "desc": "Double-sided A4. Front: students tick the coursework they have (guided notes, bound reference entries, CFATs, homework); teacher signs off. Back: chapter success criteria, ticked by the teacher when marking the test (Test Q column = which question tests it).",
+                    "desc": "Students tick the coursework they have; teacher signs off.",
                     "status": "todo",
                     "file": ""
                   },
@@ -7478,14 +7468,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/7A slides.html",
                     "pdf": "lessons/7A slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "3 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -7757,14 +7747,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/7B-7D slides.html",
                     "pdf": "lessons/7B-7D slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "8 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -8191,14 +8181,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: CFAT, Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/7C-7E slides.html",
                     "pdf": "lessons/7C-7E slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "8 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -8402,14 +8392,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/7F slides.html",
                     "pdf": "lessons/7F slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "4 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -8436,7 +8426,7 @@
                 "materials": [
                   {
                     "kind": "Coursework check",
-                    "desc": "Double-sided A4. Front: students tick the coursework they have (guided notes, bound reference entries, CFATs, homework); teacher signs off. Back: chapter success criteria, ticked by the teacher when marking the test (Test Q column = which question tests it).",
+                    "desc": "Students tick the coursework they have; teacher signs off.",
                     "status": "todo",
                     "file": ""
                   },
@@ -8803,14 +8793,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/8A slides.html",
                     "pdf": "lessons/8A slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "4 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -8979,14 +8969,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/8B slides.html",
                     "pdf": "lessons/8B slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "3 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -9167,14 +9157,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/8C slides.html",
                     "pdf": "lessons/8C slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "6 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -9483,14 +9473,14 @@
                   },
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/8D slides.html",
                     "pdf": "lessons/8D slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "4 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -9651,14 +9641,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/8E slides.html",
                     "pdf": "lessons/8E slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "3 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -9826,14 +9816,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/8F slides.html",
                     "pdf": "lessons/8F slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "5 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -9979,14 +9969,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/8G slides.html",
                     "pdf": "lessons/8G slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "3 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -10136,14 +10126,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/8H slides.html",
                     "pdf": "lessons/8H slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "2 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -10298,14 +10288,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/8I slides.html",
                     "pdf": "lessons/8I slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "3 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -10332,7 +10322,7 @@
                 "materials": [
                   {
                     "kind": "Coursework check",
-                    "desc": "Double-sided A4. Front: students tick the coursework they have (guided notes, bound reference entries, CFATs, homework); teacher signs off. Back: chapter success criteria, ticked by the teacher when marking the test (Test Q column = which question tests it).",
+                    "desc": "Students tick the coursework they have; teacher signs off.",
                     "status": "todo",
                     "file": ""
                   },
@@ -10802,14 +10792,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/10A-10B slides.html",
                     "pdf": "lessons/10A-10B slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "6 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -11003,14 +10993,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/10C slides.html",
                     "pdf": "lessons/10C slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "4 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -11329,14 +11319,14 @@
                   },
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: CFAT, Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/10D slides.html",
                     "pdf": "lessons/10D slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "5 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -11523,14 +11513,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/10E slides.html",
                     "pdf": "lessons/10E slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "4 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -11884,14 +11874,14 @@
                   },
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: CFAT, Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/10F-10G slides.html",
                     "pdf": "lessons/10F-10G slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "7 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -12192,14 +12182,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/11A slides.html",
                     "pdf": "lessons/11A slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "4 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -12323,14 +12313,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/11B slides.html",
                     "pdf": "lessons/11B slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "3 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -12601,15 +12591,32 @@
                 ],
                 "materials": [
                   {
+                    "kind": "CFAT 3.11.1",
+                    "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
+                    "status": "draft",
+                    "copies": [
+                      {
+                        "label": "Student copy",
+                        "file": "lessons/CFAT 3.11.1 (11A-11B).html",
+                        "pdf": "lessons/CFAT 3.11.1 (11A-11B).pdf"
+                      },
+                      {
+                        "label": "Solutions",
+                        "file": "lessons/CFAT 3.11.1 (11A-11B) solutions.html",
+                        "pdf": "lessons/CFAT 3.11.1 (11A-11B) solutions.pdf"
+                      }
+                    ]
+                  },
+                  {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: CFAT 3.11.1, Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/11C slides.html",
                     "pdf": "lessons/11C slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "7 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -12740,14 +12747,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked example, you try, CAS, exit task.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/11D slides.html",
                     "pdf": "lessons/11D slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "3 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -12910,14 +12917,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, CAS (no exit task).",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/11E slides.html",
                     "pdf": "lessons/11E slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "5 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -13063,6 +13070,23 @@
                     "desc": "Students tick the coursework they have; teacher signs off.",
                     "status": "todo",
                     "file": ""
+                  },
+                  {
+                    "kind": "CFAT 3.11.2",
+                    "desc": "Worksheet style, about 20 min, CAS and bound reference allowed.",
+                    "status": "draft",
+                    "copies": [
+                      {
+                        "label": "Student copy",
+                        "file": "lessons/CFAT 3.11.2 (11C-11E).html",
+                        "pdf": "lessons/CFAT 3.11.2 (11C-11E).pdf"
+                      },
+                      {
+                        "label": "Solutions",
+                        "file": "lessons/CFAT 3.11.2 (11C-11E) solutions.html",
+                        "pdf": "lessons/CFAT 3.11.2 (11C-11E) solutions.pdf"
+                      }
+                    ]
                   },
                   {
                     "kind": "Chapter 11 test",
@@ -13374,14 +13398,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/13A-13B slides.html",
                     "pdf": "lessons/13A-13B slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "6 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -13594,14 +13618,14 @@
                   },
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/13C slides.html",
                     "pdf": "lessons/13C slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "4 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -13771,14 +13795,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/13D-13E slides.html",
                     "pdf": "lessons/13D-13E slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "4 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -13980,14 +14004,14 @@
                   },
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/13F slides.html",
                     "pdf": "lessons/13F slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "4 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -14278,14 +14302,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/14A slides.html",
                     "pdf": "lessons/14A slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "7 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -14445,14 +14469,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/14B slides.html",
                     "pdf": "lessons/14B slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "5 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -14648,14 +14672,14 @@
                   },
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: CFAT, Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/14C slides.html",
                     "pdf": "lessons/14C slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "4 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -14812,14 +14836,14 @@
                 "materials": [
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: Do Now, APK, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/14D slides.html",
                     "pdf": "lessons/14D slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "5 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {
@@ -14998,14 +15022,14 @@
                   },
                   {
                     "kind": "Guided slides",
-                    "desc": "Teach the new content and project every question: CFAT, Do Now, worked examples, you trys, exit tasks.",
+                    "desc": "Teach the new content and project every question, in lesson order.",
                     "status": "draft",
                     "file": "lessons/14E slides.html",
                     "pdf": "lessons/14E slides.pdf"
                   },
                   {
                     "kind": "Guided worksheet",
-                    "desc": "4 pages, questions in slide order.",
+                    "desc": "Student companion to the slides, in the same order, with space to answer.",
                     "status": "draft",
                     "copies": [
                       {

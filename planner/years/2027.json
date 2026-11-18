@@ -123,7 +123,7 @@
  "anchors": [
   {
    "date": "2027-04-14",
-   "label": "AoS 1 SAC: Part 1 (after school)",
+   "label": "AoS 1 SAC Part 1 (after school)",
    "aos": 1,
    "afterSchool": true,
    "window": true
