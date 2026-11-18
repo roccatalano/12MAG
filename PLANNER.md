@@ -1,36 +1,43 @@
-# 12MAG course planner — spec (Rocco, 14 Nov 2026)
+# 12MAG course planner — spec (updated 18 Nov 2026)
 
-A standalone "Year 12 General Maths" course planner, refit each year by adding a year file, separate from Physics and from Rocco's personal dashboard.
-Two tabs: **Unit plan** (content, no dates, reusable every year) and **Year plan** (one tab per year, dates).
+A standalone Year 12 General Maths (VCE General Maths 3&4) course planner, reused each year by adding a year file. Separate from Physics and from Rocco's personal dashboard.
+Live site: https://roccatalano.github.io/12MAG/planner/ (capital MAG). "↻ Get latest" reloads past a cached copy.
 
-## Tab 1 — Unit plan (no dates)
-- 4 AoS cards → Cambridge chapters inside each → lessons inside each chapter.
+## Tabs
+### Course plan (no dates, the same every year)
+- One vertical list grouped by AoS (label them AoS 1–4, never "Unit"):
   - AoS 1 Data analysis: Ch 1–5 (Ch 6 = revision, practice only)
   - AoS 2 Recursion and financial modelling: Ch 7–8 (Ch 9 = revision)
   - AoS 3 Matrices: Ch 10–11 (Ch 12 = revision)
   - AoS 4 Networks and decision mathematics: Ch 13–14 (Ch 15 = revision)
-- **A chapter = its proposed teaching lessons + exactly one "Chapter n coursework check + test" lesson.** Nothing else (no SAC or revision lessons here).
-- **A lesson = a list of Cambridge subchapters** (e.g. `1C, 1D, 1E`, or half a subchapter: `5D (part 1)`) + its lesson card:
-  learning intentions · success criteria · Cambridge Examples + Edrolo You trys · APK · Do Now · exits · CAS · CFAT (if any) · materials (files in `01 Lesson materials`, named by subchapter range).
-- Planning happens one chapter at a time: split, merge or reorder lessons inside a chapter; other chapters are untouched.
-- First draft: Ch 1–5 from the current dashboard lessons (S1–S5, L03–L22, chapter tests); Ch 7–8 and Unit 4 chapters as shells with the proposed lesson count from the Cambridge sample planner (`00 Admin\Study Design\Sample-planner-and-timeline.docx`), to be planned later.
+- Each AoS starts with a **Unit details** card: SAC details (`aos[].sac`), SAC materials, Unit resources (e.g. Ch 1 slides, Ch 1 workbook), CFATs nested by chapter, and the subchapters no CFAT covers.
+- Chapter cards show progress badges (Slides, Worksheets, Bound ref, CFATs, Test, Booklet). Click a chapter to see its suggested lessons and its formative assessments (CFATs, chapter tests) underneath.
+- A lesson card shows its resources nested (Slides · Worksheet Student/Solutions · Bound reference per subchapter) and a "Lesson details" button for the full card.
+- A chapter = its teaching lessons + a "catch-up + coursework check" lesson. Some chapters share one: Ch 1 + 2 (on the Ch 2 card), Ch 3 + 4 (on the Ch 4 card). Chapter tests are formative and sit with the CFATs.
+- Course = 65 lessons.
 
-## Tab 2 — Year plan (one per year: 2027, 2028, …)
-- **Inputs (per year):** term start/end dates; teaching days (3 lessons/week, which weekdays); public holidays, pupil-free days, school events (blocked dates); optional pinned anchors (SAC dates, trial exams) — added later.
-- **Flow:** unit-plan lessons are placed in order into the free lesson slots. Lessons are never pinned to days.
-- **Buffers:** every slot left over (and any slot before a pinned anchor) shows as a buffer lesson — later filled with SAC, revision, catch-up.
-- **Warnings:** shows how many buffers remain per term, and flags when content runs past an anchor or past the end of a unit.
-- New year = add a new year tab with new dates; the unit plan re-flows unchanged.
+### <year> overview (e.g. 2027 overview)
+- A week-by-week calendar: the Course plan lessons flow in order into the year's lesson slots. Lessons are never pinned to days.
+- Lessons per week by number of student days (`lessonRule`): 5 days = 3, 3–4 days = 2, 1–2 days = 1. (Real timetables come later.)
+- Anchors (fixed dates): `afterSchool` (takes no lesson), `inClass` (takes one), `window` (marks the end of an AoS's teaching time), `redemption`, `exam`, plus the "Semester 2 starts" anchor that holds AoS 3 back until then.
+- Spare slots before a SAC become "SAC revision"; later ones "Exam revision". After-school SACs and redemptions share the week's card. A week with no lessons gets one wide card (e.g. "Unit 3 trial exam week").
+- The header shows lessons and buffers per term and the teaching time (planned + spare) up to each SAC.
 
-## Data (plain files, portable to the school Google account later)
-- `planner/unit-plan.json` — AoS → chapters → lessons (subchapters + card fields). The single source of truth for content.
-- `planner/years/2027.json` — terms, teaching weekdays, blocked dates, anchors.
-- `planner/index.html` — the planner page (both tabs), reads the JSON files. Staff-facing; no personal ticks.
-- Rocco's dashboard (`index.html`) reads the same files and adds his personal layer (ticks, notes, "taught on" dates for re-flowing from where the class actually is).
-- `tools/gm12/build_plan.py` is replaced by these files once the planner works; until then nothing on the dashboard changes.
+### <year> classes (e.g. 2027 classes)
+- Teacher picker and day grid, 4 sessions a day (3 on Wed). Data `years/<year>-timetable.json`; `slots` empty until the 2027 timetables arrive.
 
-## Build order (status 14 Nov: steps 1–3 done; 2027 dates still to come; step 4 waits for Rocco)
-1. Write `unit-plan.json` from the current dashboard data (Ch 1–5) + shells (Ch 7–8, 10–11, 13–14).
-2. Write `years/2027.json` from the 2027 term dates already in `build_plan.py` (T1 starts 25 Jan, students 28 Jan; T2 starts 12 Apr; Labour Day 8 Mar) — Rocco checks and adds Terms 3–4 and blocked dates.
-3. Build `planner/index.html` (Unit plan tab + 2027 tab), check it visually, push.
-4. Point the personal dashboard at the new files.
+## Data files (plain JSON, portable)
+- `planner/unit-plan.json` — AoS → chapters → lessons (subchapters + card). **The single source of truth for content: edit it directly.**
+- `planner/years/index.json` — list of years. `planner/years/<year>.json` — terms, `lessonRule`, blocked dates, anchors. `planner/years/<year>-timetable.json` — classes and sessions.
+- `planner/cas-skills.json` (CAS guide master list), `planner/videos.json` (self-study videos), `planner/tests.json` (chapter test details), `planner/written-youtrys.json`.
+- `planner/index.html` — the page; reads the files above. Staff-facing, no personal ticks.
+- `tools/build_plan.py` is the old dashboard builder, kept for reference only (the planner files replaced it).
+
+## Rules for changes
+- Keep the Cambridge suggested teaching sequence as the lesson order. No drag-and-drop or auto-built slides.
+- Plan one chapter at a time: split, merge or reorder lessons inside a chapter; other chapters are untouched.
+- New year = add `years/<year>.json` (+ timetable file) and list it in `years/index.json`; the Course plan re-flows unchanged.
+- Card text minimal: one-line descriptions; copies get a label and buttons only.
+
+## On hold
+- Pointing Rocco's personal dashboard (`roccatalano/teaching-dashboard-2027`) at these files: only when Rocco asks.

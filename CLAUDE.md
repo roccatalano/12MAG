@@ -4,13 +4,13 @@ Owner: Rocco (teacher). He is new to Claude Code and git: explain in plain words
 
 **Pushing (Rocco, 17 Nov):** push finished changes straight to `main` (the live site). No branches or pull requests to merge.
 
-**New chat? Read `docs/HANDOVER.md` next** (latest state, decisions, open items). Background build queue: `docs/QUEUE.md`.
+**New chat? Read `docs/HANDOVER.md` next** (one page: current state, open decisions, next jobs), then `docs/TODO.md`. History: `docs/LOG.md`. `docs/QUEUE.md` is the finished 15–16 Nov build queue (archive; no scheduled runners now).
 
 ## What this repo is
 The standalone **Year 12 General Maths (12MAG) course planner** (GitHub Pages: roccatalano.github.io/12MAG/ (capital MAG: the repo was renamed, the lowercase address now gives "Site not found")). Moved here 14 Nov 2026 from `roccatalano/teaching-dashboard-2027` (which still shows 12MAG on Rocco's personal dashboard for now — don't change that repo unless asked).
-- `PLANNER.md` — the planner spec. **Built 14 Nov:** `planner/index.html` (Course plan tab + one Year plan tab per year; same card/nested-section design as Rocco's dashboard, whose CSS and section code it copies; label the four groups AoS 1–4, never 'Unit'), data in `planner/unit-plan.json` (the single source of truth for content: edit it directly) and `planner/years/<year>.json` (+ `years/index.json` listing the years). 2027 is a blank tab until Rocco sends the term-dates file. The site root redirects to `planner/`.
+- `PLANNER.md` — the planner spec. **Built 14 Nov:** `planner/index.html` (Course plan tab + one Year plan tab per year; same card/nested-section design as Rocco's dashboard, whose CSS and section code it copies; label the four groups AoS 1–4, never 'Unit'), data in `planner/unit-plan.json` (the single source of truth for content: edit it directly) and `planner/years/<year>.json` (+ `years/index.json` listing the years). Tabs now: Course plan (date-free), 2027 overview, 2027 classes; 2027 dates are in (see PLANNER.md). The site root redirects to `planner/`.
 - `lessons/` — finished 12MAG materials (html + pdf), same files as `teaching-dashboard-2027/lessons/gm12/`.
-- `tools/` — current plan builder (`build_plan.py`, writes the dashboard JSON in the OTHER repo; to be replaced by planner data files), source indexes (`y12_edrolo_exam_practice.csv`, `y11_edrolo_exam_practice.csv`, `y11_cambridge_skills_checklist.csv`, `cambridge_go_videos.csv`, `sd.json`, `vcaa_donow_aos1.json`), and slide-deck build code (`deck/z10/` = the slide standard).
+- `tools/` — old plan builder `build_plan.py` (wrote the dashboard JSON in the OTHER repo; replaced by the planner data files, kept for reference only), source indexes (`y12_edrolo_exam_practice.csv`, `y11_edrolo_exam_practice.csv`, `y11_cambridge_skills_checklist.csv`, `cambridge_go_videos.csv`, `sd.json`, `vcaa_donow_aos1.json`), and slide-deck build code (`deck/z10/` = the slide standard).
 - `docs/CLEANUP.md` — history of the 14 Nov G: drive reorganisation.
 - Long-term idea (Rocco): a school-wide system where each teacher's dashboard picks the subjects they teach. Keep subject data self-contained and portable.
 

@@ -1,73 +1,52 @@
-# 12MAG to-do list (15 Nov 2026)
+# 12MAG to-do list (rebuilt 18 Nov 2026 from the planner audit)
 
-Tick items off here as they are done. Everything made so far is **Draft** on the planner; nothing goes to Ready until it has passed review.
+Tick items off here as they are done. Everything is **Draft** until it has passed review. The old 15 Nov list is in git history.
 
-## A. Create — Chapter 1 (finish the chapter)
-- [x] S1 (1A–1B) worksheet rebuilt with solutions copy (15 Nov)
-- [x] CFAT 1.1.1, 1.1.2, 1.1.3: solutions copies (16 Nov)
-- [ ] CFAT follow-ups (Jacaranda exercises) for each CFAT
-- [ ] Chapter 1 test (Mathspace topic assessment) — the only Ch 1 material still "To make"
-- [ ] Rebuild S2–S3 slides on the new templates (S1 done) (also fixes: 'Homework' → 'Coursework', S2 Do Now has 3 not 4, S3 extra exit, '?%' tiles)
-- [ ] "Videos that might help" cards on every deck (blank)
-- [ ] Item bank: save each used item (verbatim text, figure data, answer) to `03 Item bank` on G:
-- [ ] Ledger: check every Ch 1 item is logged (`tools/ledger.csv`)
+## A. Quick fixes (found in the 18 Nov audit)
+- [ ] CFAT 3.11.1 (on 11C) and 3.11.2 (on Ch 11 test) are on the cards but have no Student/Solutions material links on the planner (files exist in the repo and on G:)
+- [ ] CFAT 1.4.2 is listed twice on the 5A card (shows "2 CFATs" on the 2027 overview)
+- [ ] Copy the HTML versions to G: 01 Lesson materials (only PDFs there): CFAT 2.7.x, 2.8.x, 3.10.x, 4.14.x; Ch 10, 13, 14 revision booklets; Ch 10 test
+- [ ] Burnt twice — pick a replacement for one use of each: VCAA 2020 E2 Q4aii (S3 exit + old l18, now in 5B), VCAA 2017 E1 Q4 (CFAT 1.1.1 + 4B), VCAA 2012 E1 Q2 (1A Do Now row + 7C–7E); check VCAA 2024 NHT E1 Q2 and 2025 E2 Q1b (may only be duplicate ledger rows)
+- [ ] Ledger tidy: one style for the `where` column (lesson id), `Exit`/`exit` → one word, remove old "Deck Do Now/Exit" rows, re-point rows that still say l18
+- [ ] One status vocabulary: materials use draft/ready/todo, CFATs use Draft/Final
+- [ ] Planner descriptions: one line per material type, no page counts (they go stale); coursework-check descriptions still say "homework" and mention a success-criteria back page (dropped)
+- [ ] SAC anchor labels: "AoS 1 SAC: Part 1" vs "AoS 1 SAC Part 2" (pick one)
+- [ ] Old duplicate files in `lessons/` not linked anywhere: `CFAT-1.1.x`, `Ch1-coursework-check`, `Ch1-revision-booklet(-solutions)` (Claude can't delete on G:; repo copies can go if Rocco agrees)
 
-## B. Review — Chapter 1, one lesson at a time (fine-tooth comb)
-For each lesson: slides → worksheet (student + solutions) → bound reference → CFAT.
-
+## B. Review — Chapter 1 (Step-up from 19 Nov), one lesson at a time
 | Lesson | Slides | Worksheet | Bound reference | CFAT / other |
 |---|---|---|---|---|
-| L1 · 1A–1B | [x] | [x] | [ ] paused (Rocco rethinking bound references) | — |
+| L1 · 1A–1B | [x] | [x] | [ ] | — |
 | L2 · 1C–1E | [ ] | [ ] | [ ] | — |
-| L3 · 1F | [ ] | [ ] | [ ] | [ ] CFAT 1.1.1 |
+| L3 · 1F | [ ] | [ ] | [ ] | [x] CFAT 1.1.1 (Final) |
 | L4 · 1G | [ ] | [ ] | [ ] | — |
-| L5 · 1H–1I | [ ] | [ ] | [ ] | [ ] CFAT 1.1.2 |
-| L6 · check + test | — | — | — | [ ] CFAT 1.1.3 · [ ] coursework check · [ ] revision booklet |
+| L5 · 1H–1I | [ ] | [ ] | [ ] | [x] CFAT 1.1.2 (Final) |
+| Ch 1+2 check | — | — | — | [x] CFAT 1.1.3 (Final) · [ ] Ch 1 test · [ ] coursework check · [ ] Ch 1 workbook |
 
-**What every review checks**
-1. Wording: every question copied word for word from the source PDF (no paraphrase); anything changed is labelled "adapted".
-2. Sources: every item cited correctly (book, example / question number).
-3. % correct: matches the examiner report; missing reports flagged.
-4. Maths: every answer and working step right; numbers in figures match the data.
-5. Rules: lesson shape order, Do Now = 2 × Exam 1 + 2 × Exam 2 current VCAA, APK sources, You try = mapped Edrolo WE, exits = Edrolo VCAA reprints, nothing burnt twice.
-6. Writing: own-words notes short and plain; no filler, no "AI voice", no made-up claims.
-7. Layout: prints on A4, page limits (worksheet ≤ 1 double-sided sheet per subchapter), nothing cut off, every slide step checked visually.
-8. Consistency: slides, worksheet and bound reference say the same thing; planner links open the right files.
+What every review checks: verbatim wording (changes labelled "adapted") · sources cited · % correct from examiner reports · maths right · lesson shape and burnt rules · plain writing · prints on A4, nothing cut off · slides, worksheet and bound reference agree; planner links open the right files.
 
-**Known issues already found**
-- [ ] Worksheet page counts (new limit 2 pages per subchapter): 1C–1E 6 = OK; 1H–1I 5 (limit 4); 1G solutions 5 (limit 2). Rebuild S2–S5 worksheets on tools/deck/ws2.py (new style, no CAS/Key ideas)
-- [ ] 1G worksheet: red answers sit across the ruled lines (old layout; S2/S3/S5 fixed)
-- [ ] 1H–1I worksheet: Key ideas box and learning intentions are summaries, not slide text
-- [ ] 1I bound reference: thin half card (no examples or VCAA) — keep separate or merge into 1H?
-- [ ] Bound reference: lesson questions left off for space (1F: 2020 E2 Q4aii adapted; 1G: 2021 E2 Q1e, 2017 E1 Q2 adapted)
-- [ ] S2 slides: 2016 E1 Q3 tile says '?%' (index says 87%)
-- [ ] CFATs 1.1.1–1.1.3 use 13 VCAA reprints (against rule 8) — you said leave for now
-- [ ] Embedded YouTube cards show "Error 153" when opened from disk: check on GitHub Pages
-- [ ] Heptathlon exit slide (S4): table text small
+## C. Review — Chapters 2–14
+All built as Draft (slides, worksheets, CFATs, tests, booklets, coursework checks). Review chapter by chapter in teaching order, same checklist as B.
 
-## C. Create — Chapters 2–14 (the rest of the course)
-62 lessons across 10 chapters, each needing: slides, worksheet (+ solutions), bound reference cards, CFATs (+ solutions, follow-ups), revision booklet, coursework check, chapter test.
-- [ ] Ch 2 Associations between two variables (7 lessons)
-- [ ] Ch 3 Modelling linear associations (4)
-- [ ] Ch 4 Data transformation (5)
-- [ ] Ch 5 Time series (8)
-- [ ] Ch 7 Growth and decay using recursion (5)
-- [ ] Ch 8 Loans, annuities and investments (10)
-- [ ] Ch 10 Matrices (6)
-- [ ] Ch 11 Transition and Leslie matrices (6)
-- [ ] Ch 13 Graphs, networks and trees (5)
-- [ ] Ch 14 Flow, matching and scheduling (6)
+## D. Gaps against the rules
+- [ ] Bound reference entries for Ch 2–14 (rule 2: every lesson)
+- [ ] Chapter workbooks for Ch 2–14 (replace separate revision booklets on the planner)
+- [ ] Convert old-style decks (Ch 2–14) to the z10 slide standard when each lesson is next worked on
+- [ ] No exit task: 2I, 4A, 11E (no VCAA Leslie reprints)
+- [ ] No APK: 2I, 14E
+- [ ] No CFAT covers 2I, 8D, 8F, 8G
+- [ ] Self-study videos: 59 of 69 still draft (Ch 2–14); 8G, 8H, 8I have no URL yet
+- [ ] CAS guide: `transformed-lsrl` and `transformation-check` still draft
+- [ ] Ch 1 review videos (1A–1I, on G:) are not on the planner — add them, or leave off?
+- [ ] SAC tasks for AoS 2–4; Unit resources for AoS 2–4
+- [ ] CFATs 1.1.1–1.1.3 use 13 VCAA reprints (against rule 8) — Rocco: leave for now
+- [ ] Merged test lessons may be too long (Ch 1+2 test /78)
 
-## E. Self-study videos and CAS (Rocco, 15 Nov)
-- [x] Ch 1 videos checked (Rocco, 15 Nov)
-- [ ] Find videos for Ch 2–14 the same way (MaffsGuru course page lists one per subchapter)
-- [x] CAS guide Ch 1: one main video per calculator (+ More videos), all Ch 1 steps written, each ending with what to read off
-- [ ] Confirm: ClassPad has no dot plot graph type (noted on the dot plot card)
-- [ ] CAS guide (master list): write steps for Ch 2–5 skills and add recursion/finance, matrices and networks skills
-- [ ] Make slides / worksheets / bound reference cards read their CAS steps and videos from the master files
-
-## D. Planner and tools
-- [ ] 2027 term dates → `planner/years/2027.json` (waiting on your file)
-- [ ] Lesson shapes: fill in last (currently "To be filled in last")
+## E. Planner and tools
+- [ ] 2027 timetables → `planner/years/2027-timetable.json` (waiting on Rocco)
+- [ ] Idea: `tools/audit.py` one-click check (missing links, duplicate CFATs, burnt twice, G: files missing HTML, stale descriptions) before every push
+- [ ] Idea: review status per material (To make → Draft → Reviewed → Final) with a "review progress" filter
+- [ ] Idea: "What's next" bar on the year overview (next 3 lessons + whether each is Final)
+- [ ] Idea: show each lesson's gaps on its own card (No exit task, No bound ref)
 - [ ] Tag every VCAA index item with its command word; capture the VCAA glossary definitions
-- [ ] Point the teaching dashboard at the planner files (needs your go-ahead)
+- [ ] Point the teaching dashboard at the planner files — on hold until Rocco asks
