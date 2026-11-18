@@ -5,7 +5,7 @@ Tick items off here as they are done. Everything is **Draft** until it has passe
 ## A. Quick fixes (found in the 18 Nov audit)
 - [x] CFAT 3.11.1 / 3.11.2 material entries added to the 11C and Ch 11 test cards (18 Nov; the planner already listed them under Formative assessments)
 - [x] CFAT 1.4.2 listed twice on the 5A card: old 'Planned' copy removed (18 Nov) (shows "2 CFATs" on the 2027 overview)
-- [ ] Copy the HTML versions to G: 01 Lesson materials (only PDFs there; 18 Nov: copy was blocked by a permission check, Rocco to approve): CFAT 2.7.x, 2.8.x, 3.10.x, 4.14.x; Ch 10, 13, 14 revision booklets; Ch 10 test
+- [x] Copy the HTML versions to G: 01 Lesson materials — done 18 Nov (28 files): CFAT 2.7.x, 2.8.x, 3.10.x, 4.14.x; Ch 10, 13, 14 revision booklets; Ch 10 test
 - [ ] Burnt twice (checked 18 Nov), Rocco to choose replace or drop: VCAA 2020 E2 Q4aii (S3 exit, Final + 5B centring APK); VCAA 2017 E1 Q4 (CFAT 1.1.1 Q via Edrolo 1D Q14, Final + 4B APK, adapted). Not real clashes: 2012 E1 Q2, 2024 NHT E1 Q2, 2025 E2 Q1b (old archived HANDOFF rows only)
 - [ ] Ledger tidy: `exit` → `Exit` and l18 → l17 done in ledger_manual.csv (18 Nov). Still to do: one style for `where` (lesson id); the old archived HANDOFF rows in ledger.csv (made by build_ledger.py) double-count items
 - [x] Status words: checked 18 Nov, the planner shows both the same way (Draft / Final / To make); no change needed

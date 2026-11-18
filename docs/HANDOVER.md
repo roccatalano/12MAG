@@ -17,7 +17,7 @@ Short on purpose: the current state, open decisions, next jobs. History (all dat
 3. Order of the fixes in `docs/TODO.md` section A.
 
 ## Next jobs
-1. Rocco's call on the two burnt-twice items and on approving the G: HTML copies (TODO section A). Ch 1 bound reference cards + chapter tests to finalise.
+1. Rocco's call on the two burnt-twice items (TODO section A). Ch 1 bound reference cards + chapter tests to finalise.
 2. Quick fixes from the audit (TODO section A).
 3. Timetables: when Rocco uploads them, fill `slots` in `planner/years/2027-timetable.json` and compare each class with the 65 lessons.
 4. Bound reference entries for Ch 2–14; chapter workbooks for Ch 2–14; convert old decks to the new slide standard when each lesson is next worked on.
