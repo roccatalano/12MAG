@@ -136,7 +136,8 @@ SC = ['I can identify categorical and numerical variables in bivariate data.', '
       'I can percentage a two-way frequency table.', 'I can describe an association from a percentaged two-way frequency table.',
       'I can construct a segmented bar chart from a percentaged two-way frequency table.', 'I can describe an association from a percentaged segmented bar chart.']
 P.append(close(SC, [('2A', 'Q1–6'), ('2B', 'Q1–12')], ['2A', '2B']))
+if WB: P.append(practice(['2A', '2B']))  # workbook edition only: practice sections (Insight + Cambridge skill sheets) flow on after the exits
 build('l03', '2A–2B', 'AoS 1 · Data analysis', P)
 R = os.path.join(ws2.ROOT, 'lessons')
-for x, y in (('l03-worksheet', '2A-2B worksheet'), ('l03-worksheet-solutions', '2A-2B worksheet solutions')):
+for x, y in (() if WB else (('l03-worksheet', '2A-2B worksheet'), ('l03-worksheet-solutions', '2A-2B worksheet solutions'))):
     for ext in ('.html', '.pdf'): os.replace(f'{R}/{x}{ext}', f'{R}/{y}{ext}')

@@ -22,11 +22,18 @@ CHAPTERS = {
                      ('S3', '1F', 'Measures of centre and spread'),
                      ('S4', '1G', 'The five-number summary and the boxplot'),
                      ('S5', '1H–1I', 'The normal distribution and standardised scores')]),
+    2: dict(title='Investigating associations between two variables', aos='AoS 1 · Data analysis',
+            lessons=[('l03', '2A–2B', 'Investigating associations between two categorical variables'),
+                     ('l04', '2C', 'Investigating the association between a numerical and a categorical variable'),
+                     ('l05', '2D–2E', 'Investigating associations between two numerical variables'),
+                     ('l06', '2F', 'Strength of a linear relationship: the correlation coefficient'),
+                     ('l07', '2G–2H', 'The coefficient of determination and correlation and causality'),
+                     ('l08', '2I', 'Which graph?')]),
 }
 
 
 def cover_html(ch, C, rows, sol):
-    tr = ''.join(f'<tr><td class="nw">Lesson {s[1:]}</td><td>{c}</td><td>{t}</td><td class="nw">Worksheet p. {w} · Practice p. {p}</td></tr>' for s, c, t, w, p in rows)
+    tr = ''.join(f'<tr><td class="nw">Lesson {i}</td><td>{c}</td><td>{t}</td><td class="nw">Worksheet p. {w} · Practice p. {p}</td></tr>' for i, (s, c, t, w, p) in enumerate(rows, 1))  # lessons numbered within the chapter
     return f'''<!DOCTYPE html><html><head><meta charset="utf-8"><style>
 @page{{size:A4;margin:0}}body{{margin:0;font-family:Arial,"Liberation Sans",Helvetica,sans-serif}}
 .pg{{width:210mm;height:297mm;box-sizing:border-box;padding:18mm 18mm}}

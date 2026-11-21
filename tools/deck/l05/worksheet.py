@@ -82,7 +82,8 @@ P.append(box('Exit task 2 · VCAA 2016 Exam 2 Q3a', q('The data in the table bel
 
 SC = ['I can construct a scatterplot using a CAS calculator.', 'I can classify the direction, form and strength of an association from a scatterplot.']
 P.append(close(SC, [('2D', 'Q1–6'), ('2E', 'Q1–2')], ['2D', '2E']))
-build('l05', '2D-2E', 'AoS 1 · Data analysis', P)
+if WB: P.append(practice(['2D', '2E']))  # workbook edition only: practice sections (Insight + Cambridge skill sheets) flow on after the exits
+build('l05', '2D–2E', 'AoS 1 · Data analysis', P)
 R = os.path.join(ws2.ROOT, 'lessons')
-for x, y in (('l05-worksheet', '2D-2E worksheet'), ('l05-worksheet-solutions', '2D-2E worksheet solutions')):
+for x, y in (() if WB else (('l05-worksheet', '2D-2E worksheet'), ('l05-worksheet-solutions', '2D-2E worksheet solutions'))):
     for ext in ('.html', '.pdf'): os.replace(f'{R}/{x}{ext}', f'{R}/{y}{ext}')

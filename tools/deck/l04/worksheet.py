@@ -111,7 +111,8 @@ SC = ['I can use parallel dot plots to identify and describe the association bet
       'I can use back-to-back stem plots to display and describe the association between a numerical variable and a categorical variable.',
       'I can use parallel boxplots to display and describe the association between a numerical variable and a categorical variable.']
 P.append(close(SC, [('2C', 'Q1–10')], ['2C']))
+if WB: P.append(practice(['2C']))  # workbook edition only: practice sections (Insight + Cambridge skill sheets) flow on after the exits
 build('l04', '2C', 'AoS 1 · Data analysis', P)
 R = os.path.join(ws2.ROOT, 'lessons')
-for x, y in (('l04-worksheet', '2C worksheet'), ('l04-worksheet-solutions', '2C worksheet solutions')):
+for x, y in (() if WB else (('l04-worksheet', '2C worksheet'), ('l04-worksheet-solutions', '2C worksheet solutions'))):
     for ext in ('.html', '.pdf'): os.replace(f'{R}/{x}{ext}', f'{R}/{y}{ext}')

@@ -66,7 +66,8 @@ P.append(box('Exit task 2 · VCAA 2019 Exam 2 Q4c', HSTEM + q('c. Determine the 
 
 SC = ['I can calculate the value of the coefficient of determination.', 'I can use the coefficient of determination to assess the strength of the association in terms of the explained variation.', 'I understand that correlation does not imply causation.']
 P.append(close(SC, [('2G', 'Q1–8'), ('2H', 'Q1–8')], ['2G', '2H']))
+if WB: P.append(practice(['2G', '2H']))  # workbook edition only: practice sections (Insight + Cambridge skill sheets) flow on after the exits
 build('l07', '2G–2H', 'AoS 1 · Data analysis', P)
 R = os.path.join(ws2.ROOT, 'lessons')
-for x, y in (('l07-worksheet', '2G-2H worksheet'), ('l07-worksheet-solutions', '2G-2H worksheet solutions')):
+for x, y in (() if WB else (('l07-worksheet', '2G-2H worksheet'), ('l07-worksheet-solutions', '2G-2H worksheet solutions'))):
     for ext in ('.html', '.pdf'): os.replace(f'{R}/{x}{ext}', f'{R}/{y}{ext}')

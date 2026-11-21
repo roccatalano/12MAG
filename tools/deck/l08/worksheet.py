@@ -31,7 +31,8 @@ rows = [['Response variable', 'Explanatory variable', 'Graph'],
         ['Numerical', 'Numerical', a('Scatterplot')]]
 P.append(box('Which graph?', table(rows, cls='t fill', style='width:100%') ))
 P.append(close(SC, [('2I', 'Q1–3')], ['2I']))
+if WB: P.append(practice(['2I']))  # workbook edition only: practice sections (Insight + Cambridge skill sheets) flow on after the exits
 build('l08', '2I', 'AoS 1 · Data analysis', P)
 R = os.path.join(ws2.ROOT, 'lessons')
-for x, y in (('l08-worksheet', '2I worksheet'), ('l08-worksheet-solutions', '2I worksheet solutions')):
+for x, y in (() if WB else (('l08-worksheet', '2I worksheet'), ('l08-worksheet-solutions', '2I worksheet solutions'))):
     for ext in ('.html', '.pdf'): os.replace(f'{R}/{x}{ext}', f'{R}/{y}{ext}')

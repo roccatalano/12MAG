@@ -11,14 +11,14 @@ LOADER = ("document.addEventListener('DOMContentLoaded',()=>{if(!matchMedia('scr
           "d.textContent='Loading A4 pages…';document.documentElement.appendChild(d)});"
           "window.__a4done=()=>{const d=document.getElementById('a4load');if(d)d.remove()};")
 
-WID = {'g1q1': 95, 'g1q6': 80, 'g1q9': 62, 'g1q12': 64, 'g1q24': 66, 'g2q1': 110, 'g2q2': 100, 'g2q3': 110, 'g2q4': 110, 'g2q5': 90, 'g2q6': 80, 'g2q14': 140}
+WID = {'g1q1': 95, 'g1q6': 80, 'g1q9': 62, 'g1q12': 64, 'g1q24': 66, 'g2q1': 110, 'g2q2': 100, 'g2q3': 110, 'g2q4': 110, 'g2q5': 90, 'g2q6': 80, 'g2q14': 140, 'ss2b3': 95, 'ss2c1': 120, 'ss2c2': 130}
 
 def subfigs(html, sol, small=False):
     def r(m):
         k = m.group(1)
         if k == 'SEGBAR':
             return f'<div class="fig"><img src="data:image/svg+xml;base64,{base64.b64encode(segbar(sol).encode()).decode()}" style="width:95mm"></div>'
-        b = base64.b64encode(open(f'crops/{k}.png', 'rb').read()).decode()
+        b = base64.b64encode(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'crops', f'{k}.png'), 'rb').read()).decode()
         return f'<div class="fig"><img src="data:image/png;base64,{b}" style="width:{WID[k]}mm;max-width:100%"></div>'
     return re.sub(r'\[\[(\w+)\]\]', r, html)
 
@@ -37,9 +37,9 @@ u{text-decoration:none;color:#c00;visibility:hidden} .sol u{visibility:visible}
 table.fill td{height:6mm}
 .mc .ok{display:none} .sol .mc .right .ok{display:inline;color:#c00;font-weight:bold}
 .sol .mc .right span{color:#c00}
-.why{display:none;color:#c00;font-size:9pt;margin-top:1mm} .sol .why{display:block}
+.why{display:block;visibility:hidden;color:#c00;font-size:9pt;margin-top:1mm} .sol .why{visibility:visible}
+.sa .blank .ans{display:block;visibility:hidden;margin-top:1mm} .sol .sa .blank .ans{visibility:visible}
 .sa .part .ans{margin-top:1mm}
-.sol .blank{min-height:2mm!important}
 .fill{font-size:9pt;width:100%} .fill th,.fill td{padding:.4mm 1mm!important;min-width:0!important}
 .qgrid table.t{font-size:8.5pt} .qgrid table.t th,.qgrid table.t td{padding:.4mm 1.2mm}
 .secthd{break-after:avoid} .box{break-inside:avoid}
@@ -74,14 +74,14 @@ def sa_box(q, num, sol):
     parts = ''
     for lab, txt, ans, sp, mk in q['parts']:
         labh = f'<b>{lab}</b>' if lab else ''
-        a = f'<div class="ans">{ans}</div>' if ans else ''
-        parts += (f'<div class="part" style="flex:{max(sp,4)}"><div class="pq">{labh}<span>{subfigs(txt, sol)}</span>'
-                  f'<span style="margin-left:auto;white-space:nowrap;font-size:8.5pt;color:#444">{mk} mark{"s" if mk > 1 else ""}</span></div>'
-                  f'{a}<div class="blank" style="min-height:{sp*1.5:.0f}mm"></div></div>')
+        a = f'<div class="ans">{ans}</div>' if ans else ''  # sits inside the blank: same space in both copies (as Ch 1)
+        mkh = f'<span style="margin-left:auto;white-space:nowrap;font-size:8.5pt;color:#444">{mk} mark{"s" if mk > 1 else ""}</span>' if mk else ''
+        parts += (f'<div class="part" style="flex:{max(sp,4)}"><div class="pq">{labh}<span>{subfigs(txt, sol)}</span>{mkh}</div>'
+                  f'<div class="blank" style="min-height:{sp*1.5:.0f}mm">{a}</div></div>')
     why = f'<div class="why">{q["why"]}</div>' if q.get('why') else ''
     if q.get('note'): why += f'<div class="cite" style="font-style:italic">{q["note"]}</div>'
-    m = q['marks']
-    return (f'<div class="box"><div class="hd">Question {num}<span>{m} mark{"s" if m > 1 else ""}</span></div><div class="sa">'
+    m = q['marks']; mh = f'{m} mark{"s" if m > 1 else ""}' if m else ''
+    return (f'<div class="box"><div class="hd">Question {num}<span>{mh}</span></div><div class="sa">'
             f'<div class="stem">{subfigs(q["stem"], sol)}{why}<div class="cite">{q["src"]}</div></div>'
             f'<div class="parts">{parts}</div></div></div>')
 

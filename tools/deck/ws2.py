@@ -144,9 +144,10 @@ def practice(subs):
     """Workbook edition only (WS_WORKBOOK=1): the Chapter 1 practice booklet sections `subs` (e.g. ['1A', '1B']) flow on after the exits.
     Returns a marker; build() swaps in the student or solutions copy (tools/revision/ch1/build.py: qdata.py + mc_box/sa_box, verbatim with Insight citations)."""
     return f'<!--PRACTICE:{",".join(subs)}-->' if WB else ''
-def _booklet():
-    """Load tools/revision/ch1/build.py's question data and box functions without running its build."""
-    d = f'{ROOT}/tools/revision/ch1'; import sys, re as _re
+def _booklet(ch=1):
+    """Load tools/revision/ch<ch>/build.py's question data and box functions without running its build."""
+    d = f'{ROOT}/tools/revision/ch{ch}'; import sys, re as _re
+    for m in ('qdata',): sys.modules.pop(m, None)
     src = open(f'{d}/build.py').read().split("os.makedirs('out'")[0]
     cwd = os.getcwd(); sys.path.insert(0, d); g = {'__file__': f'{d}/build.py', '__name__': 'booklet'}
     try: exec(compile(src, f'{d}/build.py', 'exec'), g)
@@ -169,7 +170,8 @@ def _practice_html(subs, sol, B):
     names = dict(B['SUBS']); out = ''; num = 0
     for code in subs:
         qs = [x for x in B['Q'] if x['sub'] == code]
-        mcs = [x for x in qs if x['kind'] == 'mc']; sas = [x for x in qs if x['kind'] == 'sa']
+        mcs = [x for x in qs if x['kind'] == 'mc']; sas = [x for x in qs if x['kind'] == 'sa']; sss = [x for x in qs if x['kind'] == 'ss']
+        if not (mcs or sas or sss): continue
         hd = (f'<div class="subhd"><div class="c">{code}</div><h2>Practice questions · {names[code]}</h2>'
               '<div class="dn">Done <div class="tick"></div> Date <i></i></div></div>')
         rows = []  # each row = one grid of boxes; the headings stay with the first row
@@ -185,6 +187,9 @@ def _practice_html(subs, sol, B):
         if sas:
             rows.append(sect('Short answer', f'Show your working. {sum(x["marks"] for x in sas)} marks'))
             for x in sas: num += 1; rows.append(B['sa_box'](x, num, sol))
+        if sss:  # Cambridge skill sheet questions (Ch 2 on): after the Insight questions, no marks
+            rows.append(sect('Cambridge skill sheet', 'Show your working.'))
+            for x in sss: num += 1; rows.append(B['sa_box'](x, num, sol))
         rows[0] = hd + rows[0]
         k = 0  # glue every heading to the box after it
         while k < len(rows) - 1:
@@ -196,7 +201,7 @@ def _practice_html(subs, sol, B):
 def _expand(html, sol):
     import re as _re
     if '<!--PRACTICE:' not in html: return html
-    B = _booklet()
+    ch = int(_re.search(r'<!--PRACTICE:(\d+)', html).group(1)); B = _booklet(ch)
     html = _re.sub(r'<!--PRACTICE:([\w,]+)-->', lambda m: _practice_html(m.group(1).split(','), sol, B), html)
     return html.replace('</style>', B['CSS'] + '\n.keep { break-inside:avoid; }</style>', 1)
 

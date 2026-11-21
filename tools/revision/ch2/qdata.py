@@ -10,6 +10,9 @@ def tbl(head, rows, cls='t'):
     return h + '</table>'
 
 def across(lab, cols):  # a long two/three-column table laid out across the page (same data)
+    if len(cols) > 10:  # too wide for a half-page column (workbook): same data in two stacked tables
+        g = -(-len(cols) // 8); k = -(-len(cols) // g)  # equal chunks of at most 8 columns
+        return ''.join(across(lab, cols[i:i + k]) for i in range(0, len(cols), k))
     h = '<table class="t sm">'
     for i, l in enumerate(lab):
         h += f'<tr><th>{l}</th>' + ''.join(f'<td>{c[i]}</td>' for c in cols) + '</tr>'
@@ -183,3 +186,64 @@ SUBS = [('2A', 'Response and explanatory variables'), ('2B', 'Investigating asso
         ('2C', 'Investigating the association between a numerical and a categorical variable'), ('2D', 'Investigating associations between two numerical variables'),
         ('2E', 'How to interpret a scatterplot'), ('2F', 'Strength of a linear relationship: the correlation coefficient'),
         ('2G', 'The coefficient of determination'), ('2H', 'Correlation and causality'), ('2I', 'Which graph?')]
+
+# ---- Cambridge skill sheets (added 21 Nov 2026, Rocco: in the Ch 2 workbook practice section after the Insight questions)
+# Cambridge Senior Mathematics VCE General Mathematics Units 3&4 (2nd ed.), Chapter 2 Skillsheets 2B, 2C, 2F
+# (02 Sources\Textbooks\Cambridge U3&4\Skillsheets). Questions verbatim; figures cropped from the sheets (crops/ss*.png).
+# Answers from the sheets' answer pages, checked by Claude: 2B Q1 answer tables have rows/columns swapped (values right);
+# 2C Q2b 'Ned skewed' and 2C Q2c 'Methods 1 and 3 were the same' corrected (Methods 1 and 2). 2F values re-computed (all agree).
+# Skill sheets carry no marks: kind 'ss' boxes show no marks.
+CS = 'Cambridge U3&4 Skillsheet'
+def SS(n, sub, stem_, parts, why=None, note=None):
+    return dict(kind='ss', n=n, sub=sub, marks=0, stem=stem_, parts=[p + (0,) for p in parts], why=why, note=note, src=f'{CS} {sub} Q{n}')
+
+def u(x): return f'<u>{x}</u>'
+def gtab(cols, rows):  # 'Group' two-way table exactly as on the sheet
+    return tbl([''] + cols, rows)
+
+FISH = [('A', 'juvenile', 'B', 'adult'), ('B', 'adult', 'A', 'juvenile'), ('A', 'adult', 'B', 'adult'), ('A', 'juvenile', 'A', 'adult'),
+        ('B', 'adult', 'B', 'juvenile'), ('B', 'adult', 'A', 'adult'), ('A', 'juvenile', 'A', 'adult'), ('A', 'adult', 'B', 'adult'),
+        ('A', 'adult', 'A', 'juvenile'), ('A', 'adult', 'B', 'juvenile')]
+
+Q += [
+ SS(1, '2B', '<p class="q">Calculate column percentages for each of the following two-way frequency tables. Give values as percentages rounded to one decimal place.</p>',
+    [('a', gtab(['Group 1', 'Group 2'], [['<b>Type A</b>', '35', '40'], ['<b>Type B</b>', '32', '21']]),
+      'Group 1: 35 ÷ 67 = 52.2%, 32 ÷ 67 = 47.8%. Group 2: 40 ÷ 61 = 65.6%, 21 ÷ 61 = 34.4%.', 14),
+     ('b', gtab(['Group 1', 'Group 2', 'Group 3'], [['<b>Type A</b>', '34', '42', '16'], ['<b>Type B</b>', '21', '45', '56']]),
+      'Group 1: 34 ÷ 55 = 61.8%, 38.2%. Group 2: 42 ÷ 87 = 48.3%, 51.7%. Group 3: 16 ÷ 72 = 22.2%, 77.8%.', 14),
+     ('c', gtab(['Group 1', 'Group 2', 'Group 3'], [['<b>Type A</b>', '65', '67', '99'], ['<b>Type B</b>', '37', '101', '102'], ['<b>Type C</b>', '44', '19', '46']]),
+      'Group 1 (146): A 44.5%, B 25.3%, C 30.1% (total 99.9% from rounding). Group 2 (187): A 35.8%, B 54.0%, C 10.2%. Group 3 (247): A 40.1%, B 41.3%, C 18.6%.', 16)],
+    note='Answers on the sheet have rows and columns swapped; values agree.'),
+ SS(2, '2B', '<p class="q">The following data were obtained when a sample of 20 fish were caught in a lake. The fish were classified according to their species (A or B) and their age (juvenile, or adult).</p>'
+    + tbl(['Species', 'Age', 'Species', 'Age'], [list(r) for r in FISH]).replace('<table class="t">', '<table class="t sm">'),
+    [('a', 'Using species as the explanatory variable, and age as the response variable, create a two-way frequency table, with the values of the explanatory variable labelling the columns.',
+      'Columns Species A, B. Adult: 7, 6. Juvenile: 5, 2. Total: 12, 8.', 18),
+     ('b', 'Calculate columns percentages for the table.', 'Adult: 7 ÷ 12 = 58.3%, 6 ÷ 8 = 75.0%. Juvenile: 41.7%, 25.0%. Total 100% each.', 14),
+     ('c', 'Is there an association between species and age? Write a brief report, quoting appropriate percentages.',
+      'There is an association between species and age. In this sample 41.7% of species A fish were juvenile, compared to only 25.0% of the species B fish that were juvenile.', 14)]),
+ SS(3, '2B', '<p class="q">A much larger sample of 200 fish was selected from the same lake, and the data collected are summarised in the following percentaged segmented bar chart.</p>[[ss2b3]]',
+    [('a', 'What percentage of the Species A fish in this sample are adults?', '50%', 6),
+     ('b', 'What percentage of the Species B fish in this sample are juvenile?', '20%', 6),
+     ('c', 'Does this data support the contention that there is an association between species and age? Write a brief report quoting appropriate percentages.',
+      'Yes. There is an association between species and age. In this sample 50.0% of species A fish were juvenile, compared to only 20.0% of the species B fish that were juvenile.', 14)]),
+ SS(1, '2C', '<p class="q">To investigate the effect of time of day (<i>time</i>) on students’ learning ability, scores (<i>score</i>) on a task were recorded for two group of students. One of the groups undertook their training for the task during the day and the other in the evening. Their results are summarised in the following dot plots:</p>[[ss2c1]]',
+    [('a', 'Which of these variables is numerical, and which is categorical?', '<i>time</i> is categorical, <i>score</i> is numerical.', 6),
+     ('b', 'Use the dot plots to complete the following table:' + tbl(['<i>Time</i>', 'median', 'IQR'], [['Day', u('7.5'), u('3.5')], ['Evening', u('5.5'), u('3.5')]]).replace('<table class="t">', '<table class="t fill" style="width:60%">'),
+      'Day (n = 12): M = (7 + 8) ÷ 2 = 7.5, Q<sub>1</sub> = 6, Q<sub>3</sub> = 9.5. Evening (n = 12): M = 5.5, Q<sub>1</sub> = 4, Q<sub>3</sub> = 7.5.', 4),
+     ('c', 'Is there an association between <i>time</i> and <i>score</i>? Use the parallel dot plots to compare the distributions for the two different training times.',
+      'There is an association between time and score. The median score for the Day group (M = 7.5) is higher than the median score for the Evening group (M = 5.5). The variability in the scores is the same for both groups (IQR = 3.5).', 16)]),
+ SS(2, '2C', '<p class="q">To investigate the differing teaching methods (<i>method</i>) on students’ learning ability, scores (<i>score</i>) on a task were recorded for three group of students. One of the groups undertook their training using Method 1, a second group using Method 2, and a third group using Method 3. Their results are summarised in the following parallel boxplots:</p>[[ss2c2]]',
+    [('a', 'Which of these variables is numerical, and which is categorical?', '<i>method</i> is categorical, <i>score</i> is numerical.', 6),
+     ('b', 'Use the boxplots to complete the following table:' + tbl(['Method', 'median', 'IQR', 'shape'], [['1', u('4.5'), u('2.5'), u('neg. skewed')], ['2', u('4.5'), u('3.0'), u('pos. skewed')], ['3', u('8.5'), u('2.0'), u('neg. skewed')]]).replace('<table class="t">', '<table class="t fill" style="width:80%">'),
+      '', 2),
+     ('c', 'Is there an association between time and score? Use the parallel boxplots to compare the distributions for the three different training methods.',
+      'There is an association between method and score. The highest median score was achieved using Method 3 (M = 8.5), whilst the median scores for Methods 1 and 2 were the same (M = 4.5). The scores using this Method were also the least variable (IQR = 2.0), compared to the Method 1 (IQR = 2.5) and Method 2 (IQR = 3.0). The shapes of the distribution of scores also differed, being negatively skewed for Methods 1 and 3, and positively skewed for Method 2.', 20)],
+    note='Part c is worded ‘time and score’ on the sheet (it means method and score). Answer corrected: the sheet says Methods 1 and 3 had the same median.'),
+ SS(1, '2F', '<p class="q">Calculate the correlation coefficient for each of the following data sets. Give answers rounded to 4 decimal places.</p>',
+    [('a', across(['Height (<i>x</i>)', 'Weight (<i>y</i>)'], list(zip([190, 183, 176, 178, 185, 160, 185, 163], [77, 73, 70, 65, 65, 75, 74, 54]))), '<i>r</i> = 0.4175', 5),
+     ('b', across(['Wife’s age (<i>x</i>)', 'Husband’s age (<i>y</i>)'], list(zip([26, 29, 27, 21, 23, 31, 27, 20, 22, 17, 22], [29, 43, 33, 22, 27, 36, 26, 25, 26, 21, 24]))), '<i>r</i> = 0.8399', 5),
+     ('c', across(['Number of seats (<i>x</i>)', 'Airspeed (<i>y</i>)'], list(zip([405, 296, 288, 258, 240, 193, 188, 148, 122], [830, 797, 774, 736, 757, 765, 760, 718, 378]))), '<i>r</i> = 0.6655', 5),
+     ('d', across(['Inside 50 m (<i>x</i>)', 'Score (<i>y</i>)'], list(zip([64, 57, 34, 61, 51, 52, 53, 51, 64], [90, 134, 76, 92, 93, 45, 120, 66, 105]))), '<i>r</i> = 0.3494', 5),
+     ('e', across(['Income (<i>x</i>)', 'Food cost (<i>y</i>)'], list(zip([150, 250, 300, 300, 450, 600, 850, 950, 1000], [40, 60, 70, 130, 150, 260, 120, 460, 200]))), '<i>r</i> = 0.7111', 5)],
+    why='CAS: enter x and y in lists, then two-variable statistics (TI-Nspire: LinRegMx; ClassPad: LinearReg) and read r.'),
+]

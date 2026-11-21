@@ -61,7 +61,8 @@ P.append(box('Exit task 1 · VCAA 2020 Exam 2 Q6b', q('The table below shows the
 
 SC = ['I can use technology to determine the value of the correlation coefficient r.', 'I can classify the strength of a linear association as weak, moderate or strong based on the value of the correlation coefficient r.']
 P.append(close(SC, [('2F', 'Q1–4')], ['2F']))
+if WB: P.append(practice(['2F']))  # workbook edition only: practice sections (Insight + Cambridge skill sheets) flow on after the exits
 build('l06', '2F', 'AoS 1 · Data analysis', P)
 R = os.path.join(ws2.ROOT, 'lessons')
-for x, y in (('l06-worksheet', '2F worksheet'), ('l06-worksheet-solutions', '2F worksheet solutions')):
+for x, y in (() if WB else (('l06-worksheet', '2F worksheet'), ('l06-worksheet-solutions', '2F worksheet solutions'))):
     for ext in ('.html', '.pdf'): os.replace(f'{R}/{x}{ext}', f'{R}/{y}{ext}')

@@ -489,3 +489,9 @@ Chapter 3 revision booklet + solutions built (`tools/revision/ch3/`, 16 pages ea
 - `tools/deck/chapter_workbook.py 1` → `lessons/Ch1-workbook.pdf` + solutions, 48 pp (12 A3 sheets in booklet mode): cover + contents, Ch 1 coursework check (`tools/coursework/ch1.py`, I check / Teacher check, Ch 1 review row), then S1–S5 workbook-edition worksheets with their Insight practice questions flowing on after the exits.
 - Chapter 1 revision booklet removed from the planner (its questions are in the workbook). Ch 2 still uses its revision booklet + the Ch 1–2 coursework check until a Ch 2 workbook is built.
 - Open: lesson worksheets' coursework boxes still say "Practice booklet · 1A section" (= the practice questions in the workbook); the Ch 1 test success-criteria table should move to the chapter test.
+
+## 21 Nov 2026
+- Rocco moved Step Up to `AOS 1\Chapter 1 [Step Up]` on G: and made the AoS folders the final home of all resources. Chapter 2 rebuilt to match Chapter 1:
+  slides converted to z10 (S6–S11 + `lib/assoc.py`: two-way tables, grouped bars, scatterplots, back-to-back stem plots, parallel dot/box plots; Do Now and video slides dropped per the z10 rules);
+  Ch 2 workbook (`chapter_workbook.py 2`, `tools/coursework/ch2.py`), practice = Insight + Cambridge skill sheets 2B, 2C, 2F (verbatim; sheet answer errors corrected and noted in qdata.py).
+  Ch 2 revision booklet answers now sit inside their blanks (same page count both copies, as Ch 1). Wide Insight tables split into stacked chunks of ≤ 8 columns.

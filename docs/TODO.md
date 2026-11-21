@@ -31,8 +31,8 @@ All built as Draft (slides, worksheets, CFATs, tests, booklets, coursework check
 
 ## D. Gaps against the rules
 - [ ] Bound reference entries for Ch 2–14 (rule 2: every lesson)
-- [ ] Chapter workbooks for Ch 2–14 (replace separate revision booklets on the planner)
-- [ ] Convert old-style decks (Ch 2–14) to the z10 slide standard when each lesson is next worked on
+- [ ] Chapter workbooks for Ch 3–14 (replace separate revision booklets on the planner). Ch 2 built 21 Nov (Draft): Insight + Cambridge skill sheets 2B, 2C, 2F in the practice sections
+- [ ] Convert old-style decks (Ch 3–14) to the z10 slide standard when each lesson is next worked on. Ch 2 done 21 Nov (S6–S11, Draft; Ch2-slides chapter file)
 - [ ] No exit task: 2I, 4A, 11E (no VCAA Leslie reprints)
 - [ ] No APK: 2I, 14E
 - [ ] No CFAT covers 2I, 8D, 8F, 8G
